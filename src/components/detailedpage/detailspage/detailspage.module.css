@@ -1,0 +1,135 @@
+.heroimage {
+  width: 60%;
+}
+.detail_div {
+  width: 60%;
+  margin-left: 10%;
+}
+.breadcrumb {
+  margin-left: -13%;
+}
+.a_div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.a_div a {
+  font-size: 16px;
+  color: #3640dc;
+}
+.a_div a:hover {
+  font-size: 16px;
+  color: #3640dc;
+}
+.a_div h2 {
+  font-size: 16px;
+  margin: 0px;
+}
+.horizontal_line {
+  width: 100%;
+  height: 8px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #000000a1,
+    #0000009b 1px,
+    transparent 2px,
+    transparent 3px
+  );
+  margin: 20px 0px;
+}
+.h1_tag {
+  font-size: 50px;
+  margin: 0px;
+}
+.p_tag {
+  margin: 0px;
+  font-weight: 500;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 30px 0px;
+}
+.h5_tag {
+  margin: 0px;
+}
+/* ================================================================================== */
+.tables {
+  margin-top: 20px;
+  overflow-x: auto;
+  /* border-bottom: 1px solid #ddd; For horizontal scrolling if needed */
+}
+
+.tables table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-bottom: 1px solid #ddd;
+}
+.tables th {
+  background-color: rgba(223, 223, 223, 0.389);
+}
+.tables th,
+.tables td {
+  /* Border for table cells */
+  padding: 4px 10px;
+  text-align: left; /* Align text to the left */
+  border-bottom: 1px solid #ddd;
+  color: #3b3d52;
+  font-size: 14px;
+  font-weight: 600;
+}
+.tables th:nth-child(2),
+.tables td:nth-child(2) {
+  text-align: right;
+  /* Align text to the right for the second column */
+}
+.stickyBanner {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  margin: 0px;
+  width: 30%;
+  padding: 0px;
+  margin-right: 10%;
+  margin-top: 3%;
+  border-radius: 15px;
+}
+
+.stick_div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  /* background-color: salmon; */
+}
+@keyframes smoothScrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-400px); /* Adjust the distance as needed */
+  }
+}
+
+@keyframes smoothScrollRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(400px); /* Adjust the distance as needed */
+  }
+}
+
+.scroll-left {
+  animation: smoothScrollLeft 0.5s ease; /* Adjust duration and timing function as needed */
+}
+
+.scroll-right {
+  animation: smoothScrollRight 0.5s ease; /* Adjust duration and timing function as needed */
+}

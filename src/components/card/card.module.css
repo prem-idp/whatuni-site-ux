@@ -1,0 +1,89 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7777771a;
+  margin-top: 10px;
+}
+.head_cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: aqua; */
+  width: 82%;
+}
+.head_cards h4 {
+  padding: 0px;
+  margin: 0px;
+}
+.sortoptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.sortoptions h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+.sortoptions select {
+  border: none;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+}
+.sortoptions option {
+  background-color: white;
+  padding: 20px;
+  width: 20%;
+}
+.sortoptions option:hover {
+  background-color: none;
+}
+.subject_guide_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: 10px 100px;
+  /* background-color: #777; */
+}
+
+.subject_guide_items {
+  background: #ffffff;
+  border: 1px solid #dddddd5c;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-decoration: none;
+}
+.subject_guide_items:hover {
+  cursor: pointer;
+}
+
+.subject_guide_image {
+  height: 220px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+
+  /* margin-bottom: 16px; */
+}
+
+.cardh3 {
+  font-size: 1.2em;
+  margin: 0px;
+  padding: 0px 0px 20px 10px;
+  color: black;
+}
+
+.cardp {
+  font-size: 12px;
+  color: #777;
+  margin: 0px;
+  padding: 10px 0px 0px 10px;
+}

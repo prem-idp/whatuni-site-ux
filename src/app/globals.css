@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Poppins-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/Poppins-Regular.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/assets/fonts/Poppins-SemiBold.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "Poppins-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/assets/fonts/Poppins-Bold.otf") format("opentype");
+  }
+}
+@layer components {
+  .btn {
+    @apply rounded-[24px] w-auto px-[10px] py-[16px] text-generic-white;
+  }
+  .btn-primary {
+    @apply bg-secondary-500 hover:bg-secondary-600 focus:bg-secondary-600;
+  }
+  .btn-warning {
+    @apply bg-warning-700 hover:bg-warning-800 focus:bg-warning-800;
+  }
+  .btn-success {
+    @apply bg-success-500 hover:bg-success-600 focus:bg-success-800;
+  }
+}
+
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins-Regular", sans-serif;
+}
+/* typograpy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.02em;
+}
+.h1-xl {
+  @apply text-heading-xl;
+}
+.h1-lg {
+  @apply text-heading-lg;
+}
+h1,
+.h1 {
+  @apply text-heading2 lg:text-heading1;
+}
+h2,
+.h2 {
+  @apply text-heading3 lg:text-heading2;
+}
+h3,
+.h3 {
+  @apply text-heading4 lg:text-heading3;
+}
+h4,
+.h4 {
+  @apply text-heading5 lg:text-heading4;
+}
+h5,
+.h5 {
+  @apply text-heading6 lg:text-heading5;
+}
+h6,
+.h6 {
+  @apply text-para-lg lg:text-heading6;
+}
+.para-lg {
+  @apply text-para-lg;
+}
+p,
+.para {
+  @apply text-para;
+}
+.small {
+  @apply text-small;
+}
+.x-small {
+  @apply text-x-small;
+}
+/* typograpy */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

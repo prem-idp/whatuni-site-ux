@@ -1,0 +1,129 @@
+.pop_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #00000070;
+}
+
+.pop_up {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 38%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttons_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.nonactive_button {
+  padding: 7px 15px;
+  border-radius: 30px;
+  color: #0f172a;
+  background-color: white;
+  border: 1px solid #0f172a;
+  font-weight: 780;
+  margin: 3px;
+}
+.nonactive_button:hover {
+  padding: 7px 15px;
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: #0f172a;
+  border: 1px solid #0f172a;
+  font-weight: 780;
+  margin: 3px;
+}
+.active_button {
+  padding: 7px 15px;
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: #0f172a;
+  border: 1px solid #0f172a;
+  font-weight: 780;
+  margin: 3px;
+}
+.search_input_bar {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 50%;
+  padding: 5px 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62);
+  border-radius: 30px;
+}
+.search_button_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 8px 13px;
+  background-color: #1740b2;
+
+  border: none;
+  border-radius: 30px;
+}
+.search_button_div button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+}
+.course_options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  /* background-color: aquamarine; */
+  /* width: 120%; */
+}
+.course_options select {
+  border: none;
+  padding: 10px 20px;
+}
+.course_options input {
+  padding: 10px 20px;
+  border: 1px solid #70707070;
+  border-bottom: none;
+  border-top: none;
+  margin: 0px 2px;
+  outline: none;
+}
+.universities_options input {
+  width: 550px;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+.advice_options input {
+  width: 550px;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+.bottom_link {
+  color: #1740b2;
+  font-weight: 700;
+  margin: 40px 10px;
+}
+.bottom_link:hover {
+  color: #1740b2;
+  font-weight: 700;
+  margin: 40px 10px;
+}
+.bottom_bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

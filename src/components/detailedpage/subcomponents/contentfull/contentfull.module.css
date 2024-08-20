@@ -1,0 +1,25 @@
+.ContentFull ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.ContentFull h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.ContentFull h3 {
+  font-size: 1.2em;
+  margin-top: 1em;
+  color: rgba(0, 0, 0, 0.719);
+}
+
+.ContentFull p {
+  margin-bottom: 0.5em;
+}
+
+.ContentFull li {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  color: #373636;
+}

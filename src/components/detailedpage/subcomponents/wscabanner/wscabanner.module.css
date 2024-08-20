@@ -1,0 +1,45 @@
+.p_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #00bafdc3;
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  margin: 20px 0px;
+}
+
+.c1_div {
+  max-width: 50%;
+  position: absolute;
+}
+.dummy {
+  width: 50%;
+}
+.c1_div h1 {
+  font-size: 2rem;
+  margin: 0px;
+}
+
+.c1_div p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  max-width: 65%;
+}
+
+.c1_div a {
+  display: flex;
+  width: 150px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.c1_div a:hover {
+  background-color: #0056b3;
+}
