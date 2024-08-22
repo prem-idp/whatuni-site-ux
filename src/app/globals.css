@@ -4,21 +4,21 @@
 
 @layer base {
   @font-face {
-    font-family: "Poppins-Regular";
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url("/assets/fonts/Poppins-Regular.otf") format("opentype");
   }
   @font-face {
-    font-family: "Poppins-SemiBold";
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
     font-display: swap;
     src: url("/assets/fonts/Poppins-SemiBold.otf") format("opentype");
   }
   @font-face {
-    font-family: "Poppins-Bold";
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -47,20 +47,14 @@
   :root {
   }
 }
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 body {
-  font-family: "Poppins-Regular", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 /* typograpy */
 h1,
@@ -116,8 +110,4 @@ p,
 }
 /* typograpy */
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+@layer utilities {}
