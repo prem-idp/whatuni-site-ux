@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
+import OpenDays from "./components/open-days/opendays";
+import Countries from "./components/countries/countries";
 
 //const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-      <Header />
-        {children}
-      <Footer />  
+       <body>
+        <Header />
+        <main>
+          <OpenDays />
+          <section className="bg-neutral-50">
+            <div className="max-w-container mx-auto">
+              <Countries />
+              {children}
+            </div>
+          </section>
+        </main>
+        <Footer />
       </body>
     </html>
   );
