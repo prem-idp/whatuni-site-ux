@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 //import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import OpenDays from "./components/open-days/opendays";
-import Countries from "./components/countries/countries";
+import Header from "./common/header/header";
+import Footer from "./common/footer/footer";
+import OpenDays from "./common/open-days/opendays";
+import Countries from "./common/countries/countries";
 
 //const inter = Inter({ subsets: ["latin"] });
 

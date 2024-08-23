@@ -1,6 +1,6 @@
 
+import AdviceCourseSlider from '@/app/common/slider/advice-course-slider';
 import Subjectareas from '@/app/pages/findacourse/components/subjectareas';
-import AdviceCourseSlider from '@/app/components/slider/advice-course-slider';
 import React from 'react';
 
 const Findcourse = () => {
