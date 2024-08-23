@@ -8,21 +8,24 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/assets/fonts/Poppins-Regular.otf") format("opentype");
+    src: url("/assets/fonts/Poppins-Regular.woff") format("woff"),
+         url("/assets/fonts/Poppins-Regular.woff2") format("woff2"); 
   }
   @font-face {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url("/assets/fonts/Poppins-SemiBold.otf") format("opentype");
+    src: url("/assets/fonts/Poppins-SemiBold.woff") format("woff"),
+         url("/assets/fonts/Poppins-SemiBold.woff2") format("woff2");
   }
   @font-face {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url("/assets/fonts/Poppins-Bold.otf") format("opentype");
+    src: url("/assets/fonts/Poppins-Bold.woff") format("woff"),
+         url("/assets/fonts/Poppins-Bold.woff2") format("woff2");
   }
 }
 
@@ -53,9 +56,9 @@
   }
 }
 
-/* html {
+html {
   font-size: 62.5%;
-} */
+}
 
 body {
   font-family: "Poppins", sans-serif;

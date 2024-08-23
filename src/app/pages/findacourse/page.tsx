@@ -1,5 +1,5 @@
 
-import Subjectareas from '@/app/components/findacourse/subjectareas';
+import Subjectareas from '@/app/pages/findacourse/components/subjectareas';
 import AdviceCourseSlider from '@/app/components/slider/advice-course-slider';
 import React from 'react';
 
