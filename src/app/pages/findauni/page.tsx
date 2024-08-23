@@ -1,6 +1,6 @@
 
-import Unisearchresults from '@/app/components/findauni/unisearchresults';
 import React from 'react';
+import Unisearchresults from './components/unisearchresults';
 
 const Findcourse = () => {
   return (
