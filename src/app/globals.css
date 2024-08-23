@@ -10,7 +10,6 @@
     font-display: swap;
     src: url("/assets/fonts/Poppins-Regular.otf") format("opentype");
   }
-
   @font-face {
     font-family: "Poppins";
     font-style: normal;
@@ -18,7 +17,6 @@
     font-display: swap;
     src: url("/assets/fonts/Poppins-SemiBold.otf") format("opentype");
   }
-
   @font-face {
     font-family: "Poppins";
     font-style: normal;
@@ -26,20 +24,12 @@
     font-display: swap;
     src: url("/assets/fonts/Poppins-Bold.otf") format("opentype");
   }
-
-  @font-face {
-    font-family: "Poppins";
-    font-style: normal;
-    font-display: swap;
-    src: url("/assets/fonts/Poppins-Regular.otf") format("opentype");
-  }
-
 }
 
 @layer components {
 
   .btn {
-    @apply rounded-[24px] w-auto px-[10px] py-[16px] text-generic-white;
+    @apply rounded-[24px] w-auto px-[10px] py-[16px] text-white;
   }
 
   .btn-primary {
@@ -55,18 +45,17 @@
   }
 
   .btn-neutral-outline {
-    @apply bg-transparent border-neutral-900 text-neutral-900 border rounded-[20px] px-[12px] py-[8px] hover:bg-neutral-900 hover:text-generic-white font-semibold;
+    @apply bg-transparent border-neutral-900 text-neutral-900 border rounded-[20px] px-[12px] py-[8px] hover:bg-neutral-900 hover:text-white font-semibold;
   }
 
   .btn-secondary-outline {
-    @apply bg-transparent border-secondary-500 text-secondary-500 border rounded-[24px] px-[16px] py-[8px] hover:bg-secondary-500 hover:text-generic-white font-semibold;
+    @apply bg-transparent border-secondary-500 text-secondary-500 border rounded-[24px] px-[16px] py-[8px] hover:bg-secondary-500 hover:text-white font-semibold;
   }
-
 }
 
-html {
+/* html {
   font-size: 62.5%;
-}
+} */
 
 body {
   font-family: "Poppins", sans-serif;
