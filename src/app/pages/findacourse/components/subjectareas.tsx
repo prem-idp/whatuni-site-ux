@@ -6,38 +6,38 @@ const Subjectareas = () => {
         <h2 className='font-bold text-heading4'>Subject areas</h2>
         <div className='subject-alphabets'>
           <ul className='flex flex-row gap-[6px] mt-[10px] mb-[30px]'>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">A</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">B</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">C</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">D</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">E</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">F</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">G</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">H</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">I</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">J</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">K</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">L</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">M</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">N</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">O</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">P</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">Q</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">R</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">S</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">T</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">U</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">V</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">W</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">X</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">Y</a></li>
-            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-generic-white active:bg-secondary-500 active:text-generic-white rounded-[24px] px-[9px] py-[2px]">Z</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">A</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">B</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">C</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">D</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">E</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">F</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">G</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">H</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">I</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">J</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">K</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">L</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">M</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">N</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">O</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">P</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">Q</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">R</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">S</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">T</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">U</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">V</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">W</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">X</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">Y</a></li>
+            <li><a href="#" className="block font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">Z</a></li>
           </ul>
         </div>
         <div className='subjectarea-inner-wrap'>
           <div className='subjectarea-pod shadow-[0px 1px 3px 0px rgba(16, 24, 40, 0.1)] rounded-[4px]'>
             <div className='subjectarea-header'>
-              <h3 className='font-semibold para text-generic-white bg-secondary-700 p-[16px]'>Architecture and Design</h3>
+              <h3 className='font-semibold para text-white bg-secondary-700 p-[16px]'>Architecture and Design</h3>
             </div>
             <div className='subjectarea-body'>
               <ul className='flex flex-col gap-[3px] p-[16px]'>

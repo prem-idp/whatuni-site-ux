@@ -12,7 +12,7 @@ const config: Config = {
       container: "1216px",
     },
     screens: {
-      xs: "350px",
+      xs: "320px",
       sm: "575px",
       md: "768px",
       lg: "992px",
@@ -41,9 +41,9 @@ const config: Config = {
     },  
     extend: {
       colors: {
-        generic: {
-          "grey-500": "#767676",
-          "grey-400": "#707070",
+        gray: {
+          400: "#707070",
+          500: "#767676",
         },
         neutral: {
           0: "#334155",
@@ -118,22 +118,20 @@ const config: Config = {
           800: "#991B1B",
           900: "#7F1D1D",
         },
-        linearGradient: {
-          1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
-          2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
-          3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
-          4: "linear-gradient(98.41deg, #0A28A3 0%, #34D399 100%)",
-          5: "linear-gradient(98.41deg, #FCD34D 0%, #69D8FF 100%)",
-          6: "linear-gradient(98.41deg, #87E0FF 0%, #FEF3C7 100%)",
-          7: "linear-gradient(98.41deg, #6EE7B7 0%, #BAEDFF 100%)",
-          8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
-          9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
-          10: " linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
-        },
-      },      
+      },
       backgroundImage: {
-        'footer-border-pattern': "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgNCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMiIgaGVpZ2h0PSI4IiBmaWxsPSIjMDBCQkZEIi8+CjxyZWN0IHg9IjIiIHdpZHRoPSIyIiBoZWlnaHQ9IjgiIGZpbGw9IiNCQUVERkYiLz4KPC9zdmc+Cg==')",
-      }
+        linearGradientBlack: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",       
+        linearGradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
+        linearGradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
+        linearGradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
+        linearGradient4: "linear-gradient(98.41deg, #0A28A3 0%, #34D399 100%)",
+        linearGradient5: "linear-gradient(98.41deg, #FCD34D 0%, #69D8FF 100%)",
+        linearGradient6: "linear-gradient(98.41deg, #87E0FF 0%, #FEF3C7 100%)",
+        linearGradient7: "linear-gradient(98.41deg, #6EE7B7 0%, #BAEDFF 100%)",
+        linearGradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
+        linearGradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
+        linearGradient10: " linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
+      },      
     },
   },
   plugins: [],
