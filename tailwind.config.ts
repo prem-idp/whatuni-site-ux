@@ -26,18 +26,18 @@ const config: Config = {
       poppins: ["Poppins", "sans-serif"],
     },
     fontSize: {
-      "heading-xl": ["5.2rem", "1.3"], //'52px','56px'
-      "heading-lg": ["4.4rem", "1.3"], //'44px','48px'
-      heading1: ["2.5rem", "1.3"], //'40px','48px'
-      heading2: ["3.6rem", "1.3"], //'36px','44px'
-      heading3: ["3.2rem", "1.3"], //'32px','40px'
-      heading4: ["2.8rem", "1.3"], //'28px', '36px'
-      heading5: ["2.4rem", "1.3"], //'24px', '32px'
-      heading6: ["2rem", "1.3"], //'20px', '28px'
-      "para-lg": ["1.8rem", "1.3"], //'18px', '24px'
-      para: ["1.6rem", "1.5"], //'16px', '24px'
-      small: ["1.4rem", "1.5"], //'14px', '20px'
-      "x-small": ["1.2rem", "1.5"], //'12px','18px'
+      "heading-xl": ["5.2rem", "5.6rem"], //'52px','56px'
+      "heading-lg": ["4.4rem", "4.8rem"], //'44px','48px'
+      heading1: ["4rem", "4.8rem"], //'40px','48px'
+      heading2: ["3.6rem", "4.4rem"], //'36px','44px'
+      heading3: ["3.2rem", "4rem"], //'32px','40px'
+      heading4: ["2.8rem", "3.6rem"], //'28px', '36px'
+      heading5: ["2.4rem", "3.2rem"], //'24px', '32px'
+      heading6: ["2rem", "2.8rem"], //'20px', '28px'
+      "para-lg": ["1.8rem", "2.4rem"], //'18px', '24px'
+      para: ["1.6rem", "2.4rem"], //'16px', '24px'
+      small: ["1.4rem", "2rem"], //'14px', '20px'
+      "x-small": ["1.2rem", "1.8rem"], //'12px','18px'
     },  
     extend: {
       colors: {
