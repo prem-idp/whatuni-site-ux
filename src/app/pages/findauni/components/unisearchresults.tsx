@@ -37,7 +37,7 @@ const Unisearchresults = () => {
           <div className='uniresults-inner-wrap'>
             <div className='uniresults-left relative'>
               <img src='/assets/images/uni_tile1.jpg' alt='university thumb'></img>
-              <div className='overlay absolute top-0 left-0 right-0 bottom-0 bg-linearGradientBlack opacity-[30%]'></div>
+              <div className='overlay absolute top-0 left-0 right-0 bottom-0 bg-gradientBlack opacity-[30%]'></div>
             </div>
             <div className='uniresults-center text-heading-lg'>left</div>
             <div className='uniresults-right'>left</div>
