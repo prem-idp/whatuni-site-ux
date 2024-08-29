@@ -32,7 +32,7 @@
 @layer components {
 
   .btn {
-    @apply rounded-[24px] w-auto px-[10px] py-[16px] text-white;
+    @apply font-semibold small text-white rounded-[24px] px-[20px] py-[8px];
   }
 
   .btn-primary {
@@ -48,11 +48,11 @@
   }
 
   .btn-neutral-outline {
-    @apply bg-transparent border-neutral-900 text-neutral-900 border rounded-[20px] px-[12px] py-[8px] hover:bg-neutral-900 hover:text-white font-semibold;
+    @apply bg-transparent border-neutral-900 text-neutral-900 border rounded-[20px] px-[12px] py-[7px] hover:bg-neutral-900 hover:text-white font-semibold;
   }
 
   .btn-secondary-outline {
-    @apply bg-transparent border-secondary-500 text-secondary-500 border rounded-[24px] px-[16px] py-[8px] hover:bg-secondary-500 hover:text-white font-semibold;
+    @apply bg-transparent border-secondary-500 text-secondary-500 border rounded-[24px] px-[16px] py-[7px] hover:bg-secondary-500 hover:text-white font-semibold;
   }
 }
 
