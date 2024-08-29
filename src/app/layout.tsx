@@ -26,7 +26,6 @@ export default function RootLayout({
           <OpenDays />
           <section className="bg-neutral-50">
             <div className="max-w-container mx-auto">
-              <Countries />
               {children}
             </div>
           </section>

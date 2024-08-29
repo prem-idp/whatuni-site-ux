@@ -38,6 +38,7 @@ const config: Config = {
       para: ["1.6rem", "2.4rem"], //'16px', '24px'
       small: ["1.4rem", "2rem"], //'14px', '20px'
       "x-small": ["1.2rem", "1.8rem"], //'12px','18px'
+      "overline": ["1.4rem", "1.2rem"] //'14px', '12px'
     },  
     extend: {
       colors: {
@@ -120,17 +121,17 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        linearGradientBlack: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",       
-        linearGradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
-        linearGradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
-        linearGradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
-        linearGradient4: "linear-gradient(98.41deg, #0A28A3 0%, #34D399 100%)",
-        linearGradient5: "linear-gradient(98.41deg, #FCD34D 0%, #69D8FF 100%)",
-        linearGradient6: "linear-gradient(98.41deg, #87E0FF 0%, #FEF3C7 100%)",
-        linearGradient7: "linear-gradient(98.41deg, #6EE7B7 0%, #BAEDFF 100%)",
-        linearGradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
-        linearGradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
-        linearGradient10: " linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
+        gradientBlack: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",       
+        gradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
+        gradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
+        gradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
+        gradient4: "linear-gradient(98.41deg, #0A28A3 0%, #34D399 100%)",
+        gradient5: "linear-gradient(98.41deg, #FCD34D 0%, #69D8FF 100%)",
+        gradient6: "linear-gradient(98.41deg, #87E0FF 0%, #FEF3C7 100%)",
+        gradient7: "linear-gradient(98.41deg, #6EE7B7 0%, #BAEDFF 100%)",
+        gradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
+        gradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
+        gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
       },      
     },
   },

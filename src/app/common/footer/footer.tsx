@@ -502,7 +502,7 @@ const Footer = () => {
               Quick links
             </p>
             <div className="flex flex-col">
-              <ul className="flex flex-col gap-[8px]">
+              <ul className="flex flex-col gap-[4px]">
                 <li>
                   <a
                     href="#"
@@ -585,7 +585,7 @@ const Footer = () => {
               Browse
             </p>
             <div className="flex flex-col">
-              <ul className="flex flex-col gap-[8px]">
+              <ul className="flex flex-col gap-[4px]">
                 <li>
                   <a href="#" className="small text-neutral-900 hover:underline">Courses</a>
                 </li>
@@ -623,7 +623,7 @@ const Footer = () => {
               Popular subjects
             </p>
             <div className="flex flex-col">
-              <ul className="flex flex-col gap-[8px]">
+              <ul className="flex flex-col gap-[4px]">
                 <li>
                   <a href="#" className="small text-neutral-900 hover:underline">Popular subjects</a>
                 </li>
