@@ -38,6 +38,7 @@ const config: Config = {
       para: ["1.6rem", "2.4rem"], //'16px', '24px'
       small: ["1.4rem", "2rem"], //'14px', '20px'
       "x-small": ["1.2rem", "1.8rem"], //'12px','18px'
+      "overline": ["1.4rem", "1.2rem"] //'14px', '12px'
     },  
     extend: {
       colors: {
@@ -130,7 +131,7 @@ const config: Config = {
         gradient7: "linear-gradient(98.41deg, #6EE7B7 0%, #BAEDFF 100%)",
         gradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
         gradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
-        gradient10: " linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
+        gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
       },      
     },
   },
