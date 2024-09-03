@@ -1,15 +1,23 @@
 
 import React from 'react';
 import Unisearchresults from './components/unisearchresults';
+import Countries from '@/app/common/countries/countries';
+import AlphabetsCard from '../../common/alphabets-card/alphabetscard';
+import UniversityFinder from '@/app/common/university-finder/universityfinder';
 
 const Findcourse = () => {
   return (
     <>
-      <main>
-        <div className='max-w-container mx-auto'>
-        <Unisearchresults />
+    <div className='find_a_uni'>
+    <UniversityFinder/>
+      <div className='uniresults-container px-[24px] pt-[92px] xl2:px-[0]'>
+        <div className="max-w-container mx-auto">
+          <Countries/>
+          <AlphabetsCard/>
+          <Unisearchresults />
         </div>
-      </main>  
+      </div> 
+    </div>
     </>
   )
 }

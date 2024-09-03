@@ -25,9 +25,7 @@ export default function RootLayout({
         <main>
           <OpenDays />
           <section className="bg-neutral-50">
-            <div className="max-w-container mx-auto">
               {children}
-            </div>
           </section>
         </main>
         <Footer />

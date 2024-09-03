@@ -12,7 +12,7 @@ const config: Config = {
       container: "1216px",
     },
     screens: {
-      xs: "320px",
+      xs: "350px",
       sm: "575px",
       md: "768px",
       lg: "992px",
@@ -23,7 +23,7 @@ const config: Config = {
       xxxl: "1920px",
     },
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
+      primary: ["Poppins", "sans-serif"],
     },
     fontSize: {
       "heading-xl": ["5.2rem", "5.6rem"], //'52px','56px'
@@ -37,7 +37,7 @@ const config: Config = {
       "para-lg": ["1.8rem", "2.4rem"], //'18px', '24px'
       para: ["1.6rem", "2.4rem"], //'16px', '24px'
       small: ["1.4rem", "2rem"], //'14px', '20px'
-      "x-small": ["1.2rem", "1.8rem"], //'12px','18px'
+      "x-small": ["1.2rem", "2rem"], //'12px','20px'
       "overline": ["1.4rem", "1.2rem"] //'14px', '12px'
     },  
     extend: {

@@ -1,0 +1,38 @@
+import React from 'react'
+
+const AlphabetsCard = () => {
+  return (
+    <div className='uni-alphabets'>
+          <ul className='flex flex-row gap-[6px] mt-[10px] mb-[20px]'>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">A</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">B</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">C</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">D</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">E</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">F</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">G</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">H</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">I</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">J</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">K</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">L</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">M</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">N</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">O</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">P</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">Q</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">R</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">S</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">T</a></li>
+            <li className='w-[28px] h-[28px] flex '><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">U</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">V</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">W</a></li>
+            <li className='w-[28px] h-[28px] flex '><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">X</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">Y</a></li>
+            <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px]">Z</a></li>
+          </ul>
+        </div>
+  )
+}
+
+export default AlphabetsCard

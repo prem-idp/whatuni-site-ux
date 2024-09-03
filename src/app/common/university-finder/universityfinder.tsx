@@ -1,0 +1,34 @@
+import React from 'react'
+
+const UniversityFinder = () => {
+  return (
+    <div className='find-card-container bg-primary-500 px-[24px] py-[36px] xl2:px-[0]'>
+        <div className="max-w-container mx-auto">
+            <div className='find-card-inner w-[568px] p-[24px] flex flex-col gap-[8px] shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)] bg-white -mb-[128px]'>
+                <nav aria-label="breadcrumb">
+                    <ol className="breadcrumb flex items-center gap-[10px]">
+                        <li className="breadcrumb-item"><a href="#"><img src='/assets/icons/breadcrumbs-home-icon.svg' alt='home icon' /></a>
+                        </li>
+                        <li className="breadcrumb-item"><a href="#" className='font-normal x-small text-neutral-900'>/</a></li>
+                        <li className="breadcrumb-item"><a href="#" className='font-normal x-small text-neutral-900 hover:text-secondary-600'>Find a uni</a></li>
+                    </ol>
+                </nav>
+                <div className='findbar-card-container flex flex-col'>
+                <h3 className='findbar-card-title font-bold text-neutral-900'>University finder</h3>
+                <p className='font-normal para text-neutral-900 mb-[8px]'>Know which uni you’re looking for?</p>
+                    <div className='findbar-card-body rounded-[32px] border-[1px] border-solid border-neutral-300 p-[8px]  bg-white hover:border-secondary-500 shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)]'>                        
+                        <div className='findbar-card-input-group flex items-center justify-between'>
+                        <div className='findbar-card-input flex gap-[8px] justify-between w-[100%]'>              
+                            <input type="text" className="form-control w-[calc(100%-114px)] focus:outline-none font-normal small text-neutral-900 placeholder:text-gray-500 pl-[16px] rounded-tl-[24px] rounded-bl-[24px]" aria-label="" placeholder='Enter uni name' />
+                            <button type='submit' className='btn btn-primary flex items-center gap-[6px] p-[12px]'><img src='/assets/icons/search_icon.svg' alt="search icon" /></button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+    </div>
+  )
+}
+
+export default UniversityFinder
