@@ -31,7 +31,7 @@
 
 @layer components {
   .btn {
-    @apply font-semibold small text-white rounded-[24px] px-[20px] py-[8px];
+    @apply font-semibold small text-white rounded-[24px] px-[16px] py-[8px];
   }
 
   .btn-primary {
@@ -72,7 +72,7 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02rem;
 }
 
 .h1-xl {

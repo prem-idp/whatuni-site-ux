@@ -10,10 +10,10 @@ const Findcourse = () => {
     <>
     <div className='find_a_course'>
       <CourseFinder />
-      <div className='findcourse-container px-[24px] pt-[92px] xl2:px-[0]'>
+      <div className='findcourse-container pt-[108px] xl2:px-[0]'>
         <div className="max-w-container mx-auto">
-          <div className='content-card-container pt-[24px] pb-[38px]'>
-            <div className="content-card w-[780px]">
+          <div className='content-card-container px-[16px] md:px-[24px] mt-[24px] mb-[38px]'>
+            <div className="content-card w-full lg:w-[780px]">
                 <div className="card-body flex flex-col gap-[8px]">
                   <h4 className="card-title font-bold text-neutral-900">What will you study at uni?</h4>
                   <p className="card-text font-normal small text-neutral-700">With loads of unis and undergraduate courses in the UK, finding your perfect course can be a hassle. Luckily, we've got plenty of ways to help you in your search to find a university course</p>
