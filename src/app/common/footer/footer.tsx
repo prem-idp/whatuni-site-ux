@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer bg-primary-200 before:bg-[url('/assets/images/footer_border_img.svg')] before:block before:h-[8px]">
-      <div className="container max-w-container mx-auto px-[20px] pt-[34px] pb-[40px] lg:px-[0]">
+      <div className="container max-w-container mx-auto px-[16px] md:px-[24px] pt-[34px] pb-[40px] xl:px-[0]">
         <div className="footer-inner-wrap grid xs:grid-cols-1 xs:gap-[40px] md:grid-cols-4 lg:gap-[16px]">
           {/* pod 1 */}
           <div className="flex flex-col gap-[16px]">

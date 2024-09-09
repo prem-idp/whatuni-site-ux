@@ -10,7 +10,7 @@ const Findcourse = () => {
     <>
     <div className='find_a_uni'>
     <UniversityFinder/>
-      <div className='uniresults-container px-[24px] pt-[92px] xl2:px-[0]'>
+      <div className='uniresults-container pt-[108px] xl2:px-[0]'>
         <div className="max-w-container mx-auto">
           <Countries/>
           <AlphabetsCard/>

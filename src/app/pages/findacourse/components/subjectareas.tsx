@@ -4,9 +4,9 @@ import AlphabetsCard from '../../../common/alphabets-card/alphabetscard'
 const Subjectareas = () => {
   return (
     <div className='subject-areas-container'>
-        <h2 className='font-bold text-heading4'>Subject areas</h2>
+        <h2 className='font-bold text-heading4 px-[16px] md:px-[24px]'>Subject areas</h2>
         <AlphabetsCard/>
-      <div className='subjectarea-inner-container'>
+      <div className='subjectarea-inner-container px-[16px] md:px-[24px]'>
         <div className='subjectarea-inner-wrap grid grid-cols-1 gap-[16px] md:grid-cols-2 lg:grid-cols-3'>
         {/* 1 */}
           <div className='subjectarea-pod shadow-[0px_1px_2px_-1px_rgba(16,24,40,0.1),0px_1px_3px_0px_rgba(16,24,40,0.1)] rounded-[4px] overflow-hidden'>
