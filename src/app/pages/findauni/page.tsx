@@ -1,9 +1,9 @@
 
 import React from 'react';
 import Unisearchresults from './components/unisearchresults';
-import Countries from '@/app/common/countries/countries';
-import AlphabetsCard from '../../common/alphabets-card/alphabetscard';
-import UniversityFinder from '@/app/common/university-finder/universityfinder';
+import Countries from '@/app/common/countries-card/countriescard';
+import AlphabetsCard from '@/app/common/alphabets-card/alphabetscard';
+import UniversityFinder from '@/app/common/university-finder-card/universityfindercard';
 
 const Findcourse = () => {
   return (
