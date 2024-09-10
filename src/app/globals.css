@@ -132,3 +132,15 @@ p,
 /* typograpy */
 
 @layer utilities {}
+
+/* Swiper */
+.swiper-button-prev, .swiper-button-next{@apply !w-[40px] !h-[40px]}
+.swiper-button-prev:after, .swiper-button-next:after{content: ''!important}
+.swiper-button-prev:after, .swiper-button-next:after{@apply w-full h-full rounded-[24px] p-[10px] border-[1px] border-solid border-secondary-500 bg-white bg-[url(/assets/icons/arrow-left.svg)] bg-no-repeat bg-center}
+.swiper-button-next:after{@apply rotate-[180deg]}
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled{@apply !opacity-[1]}
+@media screen and (max-width: 767px) {
+.adviceCourseSlider{@apply !px-[0] !py-[16px]}
+.swiper-button-prev,.swiper-button-next{@apply !hidden}
+}
+/* Swiper */

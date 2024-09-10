@@ -1,18 +1,18 @@
-import React from "react";
 
-import CourseFinder from "@/app/common/course-finder/coursefinder";
-import Subjectareas from "@/app/pages/findacourse/components/subjectareas";
-import AdviceCourseSlider from "@/app/common/slider/advice-course-slider";
+import CourseFinder from '@/app/common/course-finder-card/coursefindercard';
+import AdviceCourseSlider from '@/app/common/slider/advice-course-slider';
+import Subjectareas from '@/app/pages/findacourse/components/subjectareas';
+import React from 'react';
 
 const Findcourse = () => {
   return (
     <>
-      <div className="find_a_course">
-        <CourseFinder />
-        <div className="findcourse-container pt-[108px] xl2:px-[0]">
-          <div className="max-w-container mx-auto">
-            <div className="content-card-container px-[16px] md:px-[24px] mt-[24px] mb-[38px]">
-              <div className="content-card w-full lg:w-[780px]">
+    <div className='find_a_course'>
+      <CourseFinder />
+      <div className='findcourse-container pt-[108px] pb-[40px]'>
+        <div className="max-w-container mx-auto">
+          <div className='content-card-container px-[16px] md:px-[24px] xl2:px-[0] mt-[24px] mb-[38px]'>
+            <div className="content-card w-full lg:w-[780px]">
                 <div className="card-body flex flex-col gap-[8px]">
                   <h4 className="card-title font-bold text-neutral-900">
                     What will you study at uni?

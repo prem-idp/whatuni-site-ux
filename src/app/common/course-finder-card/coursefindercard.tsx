@@ -12,7 +12,7 @@ const CourseFinder = () => {
                     <div className='findbar-card-body rounded-[32px] border-[1px] border-solid border-neutral-300 p-[16px]  bg-white hover:border-secondary-500 shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)] md:p-[8px]'>                        
                         <div className='findbar-card-input-group flex flex-col items-start justify-between md:flex-row md:items-center divide-y md:divide-y-0 md:divide-x divide-neutral-200'>
                             <div className='findbar-card-dropdown w-full md:w-fit md:mr-[16px] mb-[14px] md:mb-[0]'>
-                                <button className="btn btn-outline-secondary w-full font-normal small text-neutral-900 text-left bg-[url('/assets/icons/arrow_down_black.svg')] bg-no-repeat bg-right pl-[0px] md:pl-[20px]" type="button">Undergraduate</button>
+                                <button className="btn btn-outline-secondary w-full font-normal small text-neutral-900 flex items-center justify-between gap-[8px] text-left pl-[0px] md:pl-[20px]" type="button">Undergraduate <img src="/assets/icons/arrow_down_black.svg" alt='arrow down' /></button>
                                 {/* <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
