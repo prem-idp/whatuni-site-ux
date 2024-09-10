@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "./common/header/header";
 import Footer from "./common/footer/footer";
 import OpenDays from "./common/open-days/opendays";
-import Countries from "./common/countries/countries";
+import Countries from "./common/countries-card/countriescard";
 
 //const inter = Inter({ subsets: ["latin"] });
 
