@@ -59,7 +59,7 @@ const Header = () => {
                 <Image
                   width={70}
                   height={76}
-                  src="assets/images/whatuni-logo.svg"
+                  src="/assets/images/whatuni-logo.svg"
                   alt="Whatuni Logo"
                 />
               </a>
