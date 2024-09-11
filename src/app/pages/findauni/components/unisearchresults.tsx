@@ -14,4 +14,4 @@ const Unisearchresults = () => {
   )
 }
 
-export default Unisearchresults
+export default Unisearchresults;

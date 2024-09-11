@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -50,7 +49,7 @@ const AdviceCourseSlider = () => {
     </Swiper>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AdviceCourseSlider
+export default AdviceCourseSlider;

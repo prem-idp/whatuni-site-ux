@@ -1,18 +1,12 @@
 import React from 'react'
+import BreadCrumbs from '../breadcrumb/breadcrumb'
 
 const CourseFinder = () => {
   return (
     <div className='find-card-container bg-primary-500 p-[16px] md:p-[24px] lg:py-[36px] xl2:px-[0]'>
         <div className="max-w-container mx-auto">
             <div className='find-card-inner w-full md:w-[568px] p-[16px] lg:p-[24px] flex flex-col gap-[8px] shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)] bg-white -mb-[128px]'>
-                <nav className='hidden lg:block' aria-label="breadcrumb">
-                    <ol className="breadcrumb flex items-center gap-[10px]">
-                        <li className="breadcrumb-item"><a href="#"><img src='/assets/icons/breadcrumbs-home-icon.svg' alt='home icon' /></a>
-                        </li>
-                        <li className="breadcrumb-item"><a href="#" className='font-normal x-small text-neutral-900'>/</a></li>
-                        <li className="breadcrumb-item"><a href="#" className='font-normal x-small text-neutral-900 hover:text-secondary-600'>Find a course</a></li>
-                    </ol>
-                </nav>
+                <BreadCrumbs/>
                 <div className='findbar-card-container'>
                 <h3 className='findbar-card-title font-bold text-neutral-900 mb-[4px]'>Find a course</h3>
                     <div className='findbar-card-body rounded-[32px] border-[1px] border-solid border-neutral-300 p-[16px]  bg-white hover:border-secondary-500 shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)] md:p-[8px]'>                        
