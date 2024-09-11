@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Unisearchresults from './components/unisearchresults';
+import Unisearchresults from '@/app/pages/findauni/components/unisearchresults';
 import Countries from '@/app/common/countries-card/countriescard';
 import AlphabetsCard from '@/app/common/alphabets-card/alphabetscard';
 import UniversityFinder from '@/app/common/university-finder-card/universityfindercard';
