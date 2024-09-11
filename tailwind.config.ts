@@ -42,7 +42,7 @@ const config: Config = {
     },  
     extend: {
       colors: {
-        gray: {
+        grey: {
           400: "#707070",
           500: "#767676",
         },
@@ -133,6 +133,11 @@ const config: Config = {
         gradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
         gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
       },      
+      boxShadow:{
+        "shadow-1":'0px_2px_4px_-2px_rgba(16,24,40,0.1)',
+        "shadow-2":'0px_4px_6px_-1px_rgba(16,24,40,0.1)',
+      }
+      
     },
   },
   plugins: [],
