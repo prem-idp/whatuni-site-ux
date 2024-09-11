@@ -54,6 +54,9 @@ const UniversityFinder = () => {
                 </div>
               </div>
             </div>
+            <div className='validation-card error'>
+              <p className='text-small font-normal mt-[16px]'>Please enter a valid subject</p>
+            </div> 
           </div>
         </div>
       </div>
