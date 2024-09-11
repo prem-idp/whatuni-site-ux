@@ -4,11 +4,11 @@ import Getprospectus from '../interaction-button/getprospectus'
 
 const Findauniresultscard = () => {
   return (
-    <div className='uniresults-inner-wrap flex flex-col md:flex-row shadow-custom-3 rounded-[8px]'>
-    <div className='uniresults-left relative rounded-t-[8px] md:rounded-s-[8px] md:rounded-t-[0] overflow-hidden'>
+    <div className='uniresults-inner-wrap flex flex-col md:flex-row shadow-[0px_1px_2px_-1px_rgba(16,24,40,0.1),0px_1px_3px_0px_rgba(16,24,40,0.1)] rounded-[8px]'>
+    <div className='uniresults-left relative z-0 rounded-t-[8px] md:rounded-s-[8px] md:rounded-t-[0] overflow-hidden'>
       <img className='block w-full' src='/assets/images/uni_tile1.jpg' alt='university thumb'/>
-      <div className='overlay absolute top-0 left-0 right-0 bottom-0 bg-gradientBlack opacity-[30%]'></div>
-      <div className='absolute top-[8px] left-[8px] rounded-[8px] overflow-hidden'><img src='/assets/images/uni_logo_tile1.jpg' alt='university logo'></img></div>
+      <div className='overlay absolute z-0 top-0 left-0 right-0 bottom-0 bg-gradientBlack opacity-[30%]'></div>
+      <div className='absolute z-0 top-[8px] left-[8px] rounded-[8px] overflow-hidden'><img src='/assets/images/uni_logo_tile1.jpg' alt='university logo'></img></div>
     </div>
     <div className='uniresults-right flex flex-col justify-between p-[16px] w-full md:w-[calc(100%_-_200px)] gap-[16px] md:flex-row'>
       <div className='uniresults-content-left flex flex-col gap-[3px] w-full md:w-[calc(100%_-_334px)]'>
