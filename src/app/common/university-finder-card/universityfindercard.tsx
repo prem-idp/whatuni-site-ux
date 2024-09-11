@@ -16,7 +16,7 @@ const UniversityFinder = () => {
             </p>
             <div className="findbar-card-body rounded-[32px] border-[1px] border-solid border-neutral-300 p-[8px]  bg-white hover:border-secondary-500 shadow-custom-1">
               <div className="findbar-card-input-group flex items-center justify-between">
-                <div className="findbar-card-input flex justify-between w-[100%]">
+                <div className="findbar-card-input flex justify-between w-[100%] relative">
                   <div className="flex items-center w-[calc(100%-44px)]">
                     <input
                       type="text"
@@ -35,6 +35,21 @@ const UniversityFinder = () => {
                         alt="search icon"
                       />
                     </button>
+                  </div>
+                  <div className='dropdown-menu flex flex-col w-[calc(100%+16px)] absolute z-[1] bg-white shadow-[0px_1px_2px_-1px_rgba(16,24,40,0.1),0px_1px_3px_0px_rgba(16,24,40,0.1)] rounded-[8px] left-[-8px] top-[53px] overflow-hidden hidden'>
+                    <div className="x-small font-semibold uppercase px-[16px] py-[10px] text-neutral-700 bg-neutral-50">UNIVERSITIES</div>
+                      <ul className='custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]'>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">University of Law</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">University of Manchester</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">University of Liverpool</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">University of Barnsley</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">University of Burnley</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">Bristol, University of the West of England</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">INTO Manchester (The University of Manchester)</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">Courtauld Institute of Art, University of London</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">Cardiff Metropolitan University</a></li>
+                          <li className="px-[16px] py-[10px]"><a className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline" href="#">Institute of Advanced Legal Studies, School of Advanced Study, University of London</a></li>                        
+                      </ul>
                   </div>
                 </div>
               </div>
