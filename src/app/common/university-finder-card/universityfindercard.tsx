@@ -5,7 +5,7 @@ const UniversityFinder = () => {
   return (
     <div className="find-card-container bg-primary-500 p-[16px] md:p-[24px] lg:py-[36px] xl2:px-[0]">
       <div className="max-w-container mx-auto">
-        <div className="find-card-inner w-full md:w-[568px] p-[16px] lg:p-[24px] flex flex-col gap-[8px] shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)] bg-white -mb-[128px]">
+        <div className="find-card-inner w-full md:w-[568px] p-[16px] lg:p-[24px] flex flex-col gap-[8px] shadow-custom-1 bg-white -mb-[128px]">
           <BreadCrumbs />
           <div className="findbar-card-container flex flex-col">
             <h3 className="findbar-card-title font-bold text-neutral-900">
@@ -14,7 +14,7 @@ const UniversityFinder = () => {
             <p className="font-normal para text-neutral-900 mb-[8px]">
               Know which uni you’re looking for?
             </p>
-            <div className="findbar-card-body rounded-[32px] border-[1px] border-solid border-neutral-300 p-[8px]  bg-white hover:border-secondary-500 shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)]">
+            <div className="findbar-card-body rounded-[32px] border-[1px] border-solid border-neutral-300 p-[8px]  bg-white hover:border-secondary-500 shadow-custom-1">
               <div className="findbar-card-input-group flex items-center justify-between">
                 <div className="findbar-card-input flex justify-between w-[100%]">
                   <div className="flex items-center w-[calc(100%-44px)]">

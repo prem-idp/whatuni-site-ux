@@ -38,8 +38,8 @@ const config: Config = {
       para: ["1.6rem", "2.4rem"], //'16px', '24px'
       small: ["1.4rem", "2rem"], //'14px', '20px'
       "x-small": ["1.2rem", "2rem"], //'12px','20px'
-      "overline": ["1.4rem", "1.2rem"] //'14px', '12px'
-    },  
+      overline: ["1.4rem", "1.2rem"], //'14px', '12px'
+    },
     extend: {
       colors: {
         grey: {
@@ -121,7 +121,8 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        gradientBlack: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",       
+        gradientBlack:
+          "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
         gradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
         gradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
         gradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
@@ -132,12 +133,14 @@ const config: Config = {
         gradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
         gradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
         gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
-      },      
-      boxShadow:{
-        "shadow-1":'0px_2px_4px_-2px_rgba(16,24,40,0.1)',
-        "shadow-2":'0px_4px_6px_-1px_rgba(16,24,40,0.1)',
-      }
-      
+      },
+      boxShadow: {
+        "custom-1": "0px 2px 4px -2px rgba(16, 24, 40, 0.1), 0px 4px 6px -1px rgba(16, 24, 40, 0.1)",
+        "custom-2": "0px 1px 2px 0px rgba(16,24,40,0.05)",
+        "custom-3": "0px 1px 2px -1px rgba(16, 24, 40, 0.1), 0px 1px 3px 0px rgba(16, 24, 40, 0.1)",
+        "custom-4": "0px 2px 4px -2px rgba(16, 24, 40, 0.1),0px -2px 6px -1px rgba(16,24,40,0.07)",
+        "custom-5": "",
+      },
     },
   },
   plugins: [],
