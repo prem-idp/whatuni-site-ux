@@ -16,9 +16,9 @@ const OpenDays = () => {
             <path
               d="M12.2797 4.55566L17.7241 10.0001M17.7241 10.0001L12.2797 15.4446M17.7241 10.0001L3.72412 10.0001"
               stroke="white"
-              stroke-width="1.67"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.67"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </a>
