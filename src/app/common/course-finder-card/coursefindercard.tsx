@@ -5,11 +5,11 @@ const CourseFinder = () => {
   return (
     <div className='find-card-container bg-primary-500 p-[16px] md:p-[24px] lg:py-[36px] xl2:px-[0]'>
         <div className="max-w-container mx-auto">
-            <div className='find-card-inner w-full md:w-[568px] p-[16px] lg:p-[24px] flex flex-col gap-[8px] shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)] bg-white -mb-[128px]'>
+            <div className='find-card-inner w-full md:w-[568px] p-[16px] lg:p-[24px] flex flex-col gap-[8px] shadow-["shadow-1","shadow-2"] bg-white -mb-[128px]'>
                 <BreadCrumbs/>
                 <div className='findbar-card-container'>
                 <h3 className='findbar-card-title font-bold text-neutral-900 mb-[4px]'>Find a course</h3>
-                    <div className='findbar-card-body rounded-[32px] border-[1px] border-solid border-neutral-300 p-[16px]  bg-white hover:border-secondary-500 shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)] md:p-[8px]'>                        
+                    <div className='findbar-card-body rounded-[32px] border-[1px] border-solid border-neutral-300 p-[16px]  bg-white hover:border-secondary-500 shadow-[shadow-1,shadow-2] md:p-[8px]'>                        
                         <div className='findbar-card-input-group flex flex-col items-start justify-between md:flex-row md:items-center divide-y md:divide-y-0 md:divide-x divide-neutral-200'>
                             <div className='findbar-card-dropdown w-full md:w-fit md:mr-[16px] mb-[14px] md:mb-[0]'>
                                 <button className="btn btn-outline-secondary w-full font-normal small text-neutral-900 flex items-center justify-between gap-[8px] text-left pl-[0px] md:pl-[20px]" type="button">Undergraduate <img src="/assets/icons/arrow_down_black.svg" alt='arrow down' /></button>
