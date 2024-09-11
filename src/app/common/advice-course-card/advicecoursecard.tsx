@@ -4,7 +4,7 @@ const AdviceCourseCard = () => {
   return (
     <div className='advice-course-container'>
         <div className='advicecourse-inner-wrap'>
-            <div className='card flex flex-col bg-white rounded-[8px] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]'>
+            <div className='card flex flex-col bg-white rounded-[8px] shadow-custom-2'>
                 <div className='card-header'>
                     <img src='/assets/images/article_image1.jpg' width='100%' height='auto' className='block w-full h-auto' alt='Article_image'/>
                 </div>            
