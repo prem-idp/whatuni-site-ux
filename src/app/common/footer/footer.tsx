@@ -90,7 +90,7 @@ const Footer = () => {
               </ul>
               <ul className="flex flex-col gap-[16px]">
                 <li>
-                  <a href="">
+                  <a href="#" aria-label="App Store">
                     <svg
                       width="120"
                       height="41"
@@ -210,7 +210,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#" aria-label="Google Play">
                     <svg
                       width="135"
                       height="41"
