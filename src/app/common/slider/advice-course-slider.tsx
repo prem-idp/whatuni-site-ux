@@ -13,10 +13,7 @@ const AdviceCourseSlider = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    initialSlide: 0,
-    lazyLoad: true,
-    centerMode: true,
-    centerPadding: "32px",
+    initialSlide: 0, 
     responsive: [
       {
         breakpoint: 993,
@@ -24,6 +21,7 @@ const AdviceCourseSlider = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           arrows : false,
+          centerPadding: "32px",
         }
       },
       {
@@ -32,6 +30,8 @@ const AdviceCourseSlider = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows : false,
+          centerMode: true,
+          centerPadding: "16px",
         }
       },
     ]
