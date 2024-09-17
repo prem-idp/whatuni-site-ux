@@ -172,3 +172,16 @@ p,
 }
 
 /* Swiper */
+/* Slick slider */
+/* .slick-slide{@apply -mx-[15px]}
+.slick-slide{@apply mx-[15px]} */
+.slick-list {@apply !-mx-[8px]}
+.slick-slide > div {@apply !px-[8px]}
+.slick-prev,.slick-next{@apply flex !w-[40px] !h-[40px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-secondary-500 !bg-white hover:!bg-secondary-500  !bg-no-repeat !bg-center z-[2] !top-[66%]}
+.slick-prev::before,.slick-next::before{content:''!important}
+.slick-prev{@apply !left-[-20px]}
+.slick-prev{@apply !bg-[url(/assets/icons/arrow-left.svg)] hover:!bg-[url(/assets/icons/arrow-left-white.svg)]}
+.slick-next{@apply !bg-[url(/assets/icons/arrow-right.svg)] hover:!bg-[url(/assets/icons/arrow-right-white.svg)]}
+.slick-disabled{@apply !border-neutral-300 !bg-neutral-100 pointer-events-none}
+.slick-prev.slick-disabled{@apply !bg-[url(/assets/icons/arrow-left-grey.svg)]}
+.slick-next.slick-disabled{@apply !bg-[url(/assets/icons/arrow-right-grey.svg)]}
