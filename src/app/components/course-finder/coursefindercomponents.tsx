@@ -1,5 +1,5 @@
 import React from "react";
-import BreadCrumbs from "../breadcrumb/breadcrumb";
+import BreadCrumbs from "../breadcrumb/breadcrumbcomponents";
 
 const CourseFinder = () => {
   return (

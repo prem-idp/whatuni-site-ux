@@ -1,6 +1,6 @@
 
-import CourseFinder from '@/app/common/course-finder-card/coursefindercard';
-import AdviceCourseSlider from '@/app/common/slider/advice-course-slider';
+import CourseFinder from '@/app/components/course-finder/coursefindercomponents';
+import AdviceCourseSlider from '@/app/components/slider/advicecourseslidercomponents';
 import Subjectareas from '@/app/pages/findacourse/components/subjectareas';
 import React from 'react';
 

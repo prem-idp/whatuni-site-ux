@@ -1,4 +1,5 @@
-import Findauniresultscard from '@/app/common/find-a-uni-results-card/findauniresultscard'
+import Findauniresultscard from '@/app/components/cards/find-a-uni-results/findauniresultscard'
+import Findauniresultsskeleton from '@/app/components/skeleton/findauniresultsskeleton';
 import React from 'react'
 
 const Unisearchresults = () => {
@@ -9,6 +10,7 @@ const Unisearchresults = () => {
           <Findauniresultscard />
           <Findauniresultscard />
           <Findauniresultscard />
+          <Findauniresultsskeleton />
           <Findauniresultscard />                                  
         </div>
   )
