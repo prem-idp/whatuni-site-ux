@@ -38,6 +38,7 @@ const config: Config = {
       para: ["1.6rem", "2.4rem"], //'16px', '24px'
       small: ["1.4rem", "2rem"], //'14px', '20px'
       "x-small": ["1.2rem", "2rem"], //'12px','20px'
+      "xs-small": ["1rem", "2rem"], //'10px','20px'
       overline: ["1.4rem", "1.2rem"], //'14px', '12px'
     },
     extend: {
