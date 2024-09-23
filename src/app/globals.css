@@ -138,43 +138,12 @@ p,
 
 @layer utilities {}
 
-/* Swiper */
-.swiper-button-prev,
-.swiper-button-next {
-  @apply !w-[40px] !h-[40px]
-}
-
-.swiper-button-prev:after, .swiper-button-next:after {
-  content: '' !important
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  @apply w-full h-full rounded-[24px] p-[10px] border-[1px] border-solid border-secondary-500 bg-white bg-[url(/assets/icons/arrow-left.svg)] bg-no-repeat bg-center
-}
-
-.swiper-button-next:after {
-  @apply rotate-[180deg]
-}
-
-.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
-  @apply !opacity-[1]
-}
-
 @media screen and (max-width: 767px) {
-  .adviceCourseSlider {
-    @apply !px-[0] !py-[16px]
-  }
-
-  .swiper-button-prev, .swiper-button-next {
-    @apply !hidden
-  }
+  .adviceCourseSlider{@apply !px-[0] !py-[16px]}
 }
 
-/* Swiper */
+
 /* Slick slider */
-/* .slick-slide{@apply -mx-[15px]}
-.slick-slide{@apply mx-[15px]} */
 .slick-list {@apply !-mx-[8px]}
 .slick-slide > div {@apply !px-[8px]}
 .slick-prev,.slick-next{@apply flex !w-[40px] !h-[40px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-secondary-500 !bg-white hover:!bg-secondary-500  !bg-no-repeat !bg-center z-[2] !top-[66%]}
@@ -185,3 +154,34 @@ p,
 .slick-disabled{@apply !border-neutral-300 !bg-neutral-100 pointer-events-none}
 .slick-prev.slick-disabled{@apply !bg-[url(/assets/icons/arrow-left-grey.svg)]}
 .slick-next.slick-disabled{@apply !bg-[url(/assets/icons/arrow-right-grey.svg)]}
+/* Slick slider */
+
+/* Skeleton styles */
+.skeleton{@apply w-full h-[10px] leading-[10px] rounded-[24px] my-[6px] bg-neutral-300}
+.skeleton-thumb-img{@apply w-full h-[150px] rounded-t-[8px] rounded-b-[0] m-0}
+.skeleton-square-img{@apply w-[64px] h-[64px] rounded-[8px]}
+.skeleton-circle-img{@apply w-[64px] h-[64px] rounded-[64px]}
+.large_heading{@apply h-[24px]}
+.small_heading{@apply h-[20px]}
+.page_heading{@apply h-[18px]}
+.heading {@apply h-[14px]}
+.title{@apply h-[12px]}
+.descrip{@apply h-[10px]}
+.skeleton-text-animated{background: linear-gradient(to right, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.065) 8%, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.135) 18%, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.065) 33%);
+  @apply relative bg-[length:800px_104px];animation: skeletonLoader 1.5s  linear infinite forwards}
+.skeleton_btn{@apply min-w-[148px] h-[40px]}
+@keyframes skeletonLoader {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+/* Skeleton styles */
+
+
+
+
+
+
