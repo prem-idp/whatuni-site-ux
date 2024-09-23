@@ -1,6 +1,7 @@
 import React from 'react'
-import AlphabetsCard from '@/app/common/alphabets-card/alphabetscard'
-import Findsubjectareascard from '@/app/common/find-subject-areas-card/findsubjectareascard'
+import AlphabetsCard from '@/app/components/alphabets/alphabetscomponents'
+import Findsubjectareascard from '@/app/components/cards/find-subject-areas/findsubjectareascard'
+import Findsubjectareascardskeleton from '@/app/components/skeleton/findsubjectareascardskeleton'
 
 const Subjectareas = () => {
   return (
@@ -16,7 +17,7 @@ const Subjectareas = () => {
           <Findsubjectareascard />
           <Findsubjectareascard />
           <Findsubjectareascard />
-          <Findsubjectareascard />
+          <Findsubjectareascardskeleton />
           <Findsubjectareascard />
       </div> 
       <div className='flex justify-center mt-[40px]'>

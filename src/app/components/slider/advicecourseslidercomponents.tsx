@@ -1,10 +1,11 @@
 "use client";
 
 import React from 'react';
-import AdviceCourseCard from '../advice-course-card/advicecoursecard';
+import AdviceCourseCard from '../cards/advice-course/advicecoursecard';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AdviceCourseCardSkeleton from '../skeleton/advicecoursecardskeleton';
 
 const AdviceCourseSlider = () => {
   var settings = {
@@ -62,7 +63,7 @@ const AdviceCourseSlider = () => {
             <AdviceCourseCard />
             </div>
             <div>
-            <AdviceCourseCard />
+            <AdviceCourseCardSkeleton />
             </div>
             <div>
             <AdviceCourseCard />

@@ -1,5 +1,5 @@
 import React from "react";
-import BreadCrumbs from "@/app/common/breadcrumb/breadcrumb";
+import BreadCrumbs from "@/app/components/breadcrumb/breadcrumbcomponents";
 
 const UniversityFinder = () => {
   return (
