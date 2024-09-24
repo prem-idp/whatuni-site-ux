@@ -1,5 +1,6 @@
 import React from "react";
 import BreadCrumbs from "@/app/components/breadcrumb/breadcrumbcomponents";
+import Image from "next/image";
 
 const UniversityFinder = () => {
   return (
@@ -30,10 +31,7 @@ const UniversityFinder = () => {
                       type="submit"
                       className="btn btn-primary w-full h-[100%] flex items-center justify-center p-[12px]"
                     >
-                      <img
-                        src="/assets/icons/search_icon.svg"
-                        alt="search icon"
-                      />
+                      <Image src="/assets/icons/search_icon.svg" width="18" height="18" alt="Search icon" />
                     </button>
                   </div>
                   <div className='dropdown-menu flex flex-col w-[calc(100%+16px)] absolute z-[1] bg-white shadow-[0px_1px_2px_-1px_rgba(16,24,40,0.1),0px_1px_3px_0px_rgba(16,24,40,0.1)] rounded-[8px] left-[-8px] top-[53px] overflow-hidden hidden'>

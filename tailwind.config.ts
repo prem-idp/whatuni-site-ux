@@ -38,6 +38,7 @@ const config: Config = {
       para: ["1.6rem", "2.4rem"], //'16px', '24px'
       small: ["1.4rem", "2rem"], //'14px', '20px'
       "x-small": ["1.2rem", "2rem"], //'12px','20px'
+      "xs-small": ["1rem", "2rem"], //'10px','20px'
       overline: ["1.4rem", "1.2rem"], //'14px', '12px'
     },
     extend: {
@@ -122,8 +123,7 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        gradientBlack:
-          "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
+        gradientBlack: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
         gradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
         gradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
         gradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
