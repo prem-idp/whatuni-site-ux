@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const BreadCrumbs = () => {
   return (
@@ -7,10 +8,7 @@ const BreadCrumbs = () => {
         <ol className="breadcrumb flex items-center gap-[10px]">
           <li className="breadcrumb-item">
             <a href="#">
-              <img
-                src="/assets/icons/breadcrumbs-home-icon.svg"
-                alt="home icon"
-              />
+              <Image src="/assets/icons/breadcrumbs-home-icon.svg" width="17" height="18" alt="home icon" />
             </a>
           </li>
           <li className="breadcrumb-item">
