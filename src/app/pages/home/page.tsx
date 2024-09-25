@@ -2,7 +2,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>home</div>
+    <div className='text-heading-xl h1'>home</div>
+
   )
 }
 

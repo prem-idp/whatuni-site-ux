@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 //import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
+import Header from "./components/header/headercomponents";
+import Footer from "./components/footer/footercomponents";
+import OpenDays from "./components/open-days/opendayscomponents";
 
 //const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <Header />
-        {children}
-      <Footer />  
+        <Header />
+        <main>
+          <OpenDays />
+          <section className="bg-neutral-50">{children}</section>
+        </main>
+        <Footer />
       </body>
     </html>
   );
