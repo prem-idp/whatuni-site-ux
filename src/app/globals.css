@@ -8,7 +8,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/assets/fonts/poppins-regular.woff2") format("woff2"),
+    src: url("/assets/fonts/poppins-Regular.woff2") format("woff2"),
       url("/assets/fonts/Poppins-Regular.woff") format("woff");
   }
 
@@ -17,7 +17,7 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url("/assets/fonts/Poppins-semiBold.woff2") format("woff2"),
+    src: url("/assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
       url("/assets/fonts/Poppins-SemiBold.woff") format("woff");
   }
 
@@ -57,10 +57,7 @@
   }
 
 /* scrollbar styles */
-.scrollbar-hidden {
-  scrollbar-width: none
-}
-
+.scrollbar-hidden{scrollbar-width: none}
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
   width: 0 !important;
