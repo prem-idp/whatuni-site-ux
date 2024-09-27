@@ -3,7 +3,7 @@ import React from "react";
 const OpenDays = () => {
   return (
     <>
-      <section className="text-white text-small font-bold pt-[12px] pb-[13px] leading-[20px]">
+      <section className="text-red text-small font-bold pt-[12px] pb-[13px] leading-[20px]">
         <a className="flex items-center justify-center gap-[7px] cursor-pointer">
           Check upcoming open days and book your place
           <svg
