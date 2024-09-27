@@ -44,9 +44,7 @@
     @apply bg-warning-700 hover:bg-warning-800 focus:bg-warning-800;
   }
 
-  .btn-success {
-    @apply bg-success-500 hover:bg-success-600 focus:bg-success-800;
-  }
+  .btn-success {@apply bg-success-500 hover:bg-success-600 focus:bg-success-800;}
 
   .btn-neutral-outline {
     @apply bg-transparent border-neutral-900 text-neutral-900 border rounded-[20px] px-[12px] py-[7px] hover:bg-neutral-900 hover:text-white font-semibold select-none;
