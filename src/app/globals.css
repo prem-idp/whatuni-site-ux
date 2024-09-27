@@ -71,9 +71,7 @@ body{@apply font-primary font-normal text-para text-neutral-900}
 h1,h2,h3,h4,h5,h6{letter-spacing: -0.02rem}
 .h1-xl { @apply text-heading-xl;}
 
-.h1-lg {
-  @apply text-heading-lg;
-}
+.h1-lg { @apply text-heading-lg;}
 
 h1,
 .h1 {
