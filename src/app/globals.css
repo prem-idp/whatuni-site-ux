@@ -8,7 +8,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/assets/fonts/poppins-regular.woff2") format("woff2"),
+    src: url("/assets/fonts/poppins-Regular.woff2") format("woff2"),
       url("/assets/fonts/Poppins-Regular.woff") format("woff");
   }
 
@@ -17,7 +17,7 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url("/assets/fonts/Poppins-semiBold.woff2") format("woff2"),
+    src: url("/assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
       url("/assets/fonts/Poppins-SemiBold.woff") format("woff");
   }
 
@@ -57,42 +57,18 @@
   }
 
 /* scrollbar styles */
-.scrollbar-hidden {
-  scrollbar-width: none
-}
-
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-  width: 0 !important;
-  height: 0 !important;
-  -webkit-appearance: none;
-  background: transparent
-}
-
+  .scrollbar-hidden{scrollbar-width:none}
+  .scrollbar-hidden::-webkit-scrollbar{display:none;width:0!important;height:0!important;-webkit-appearance:none;background:transparent}
   .custom-vertical-scrollbar::-webkit-scrollbar{@apply w-[5px]}
   .custom-vertical-scrollbar::-webkit-scrollbar-track{@apply bg-transparent my-[8px]}
   .custom-vertical-scrollbar::-webkit-scrollbar-thumb{@apply bg-neutral-200 hover:bg-neutral-200 rounded-[10px]}
   .error p{@apply text-error-500}
   .success p{@apply text-success-500}
  }
-html {
-  font-size: 62.5%;
-}
-
-body {
-  @apply font-primary font-normal text-para text-neutral-900;
-}
-
+html{font-size: 62.5%}
+body{@apply font-primary font-normal text-para text-neutral-900}
 /* typograpy */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -0.02rem;
-}
-
+h1,h2,h3,h4,h5,h6{letter-spacing: -0.02rem}
 .h1-xl {
   @apply text-heading-xl;
 }
