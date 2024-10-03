@@ -3,32 +3,56 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/assets/fonts/poppins-regular.woff2") format("woff2"),
-      url("/assets/fonts/Poppins-Regular.woff") format("woff");
-  }
+/* Font farro starts*/
+@font-face {
+  font-family: "Farro";
+  src:
+    url("/assets/fonts/Farro-Medium.woff2") format("woff2"),
+    url("/assets/fonts/Farro-Medium.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
 
-  @font-face {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url("/assets/fonts/Poppins-semiBold.woff2") format("woff2"),
-      url("/assets/fonts/Poppins-SemiBold.woff") format("woff");
-  }
-
-  @font-face {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url("/assets/fonts/Poppins-Bold.woff2") format("woff2"),
-      url("/assets/fonts/Poppins-Bold.woff") format("woff");
-  }
+@font-face {
+  font-family: "Farro";
+  src:
+    url("/assets/fonts/Farro-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Farro-Bold.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+/* Font farro ends*/
+/* inter starts*/
+@font-face {
+  font-family: "Inter";
+  src:
+    url("/assets/fonts/Inter-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Inter-Regular.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src:
+    url("/assets/fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/Inter-SemiBold.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src:
+    url("/assets/fonts/Inter-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Inter-Bold.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+/* inter ends*/ 
 }
 
 @layer components {
@@ -78,12 +102,12 @@
 html {
   font-size: 62.5%;
 }
-
 body {
-  @apply font-primary font-normal text-para text-neutral-900;
+  @apply font-inter font-normal text-para text-neutral-900;
 }
 
 /* typograpy */
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{@apply font-farro}
 h1,
 h2,
 h3,

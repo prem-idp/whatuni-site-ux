@@ -3,7 +3,7 @@ import React from 'react'
 const AlphabetsCard = () => {
   return (
     <div className='uni-alphabets px-[16px] scrollbar-hidden overflow-x-auto whitespace-nowrap snap-x snap-mandatory scroll-px-[24px] md:px-[24px] xl2:px-[0]'>
-          <ul className='flex flex-row gap-[6px] mt-[12px] mb-[20px]'>
+          <ul className='w-fit flex flex-row gap-[6px] mt-[12px] mb-[20px]'>
             <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px] select-none">A</a></li>
             <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px] select-none">B</a></li>
             <li className='w-[28px] h-[28px] flex'><a href="#" className="w-full flex items-center justify-center font-regular para text-secondary-500 hover:bg-secondary-500 hover:text-white active:bg-secondary-500 active:text-white rounded-[24px] px-[9px] py-[2px] select-none">C</a></li>

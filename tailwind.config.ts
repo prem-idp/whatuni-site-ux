@@ -23,7 +23,8 @@ const config: Config = {
       xxxl: "1920px",
     },
     fontFamily: {
-      primary: ["Poppins", "sans-serif"],
+      farro: ["Farro", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
     },
     fontSize: {
       "heading-xl": ["5.2rem", "5.6rem"], //'52px','56px'
