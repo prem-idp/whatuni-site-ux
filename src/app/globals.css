@@ -68,9 +68,7 @@
     @apply bg-warning-700 hover:bg-warning-800 focus:bg-warning-800;
   }
 
-  .btn-success {
-    @apply bg-success-500 hover:bg-success-600 focus:bg-success-800;
-  }
+  .btn-success {@apply bg-success-500 hover:bg-success-600 focus:bg-success-800;}
 
   .btn-neutral-outline {
     @apply bg-transparent border-neutral-900 text-neutral-900 border rounded-[20px] px-[12px] py-[7px] hover:bg-neutral-900 hover:text-white font-semibold select-none;
@@ -81,18 +79,8 @@
   }
 
 /* scrollbar styles */
-.scrollbar-hidden {
-  scrollbar-width: none
-}
-
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-  width: 0 !important;
-  height: 0 !important;
-  -webkit-appearance: none;
-  background: transparent
-}
-
+  .scrollbar-hidden{scrollbar-width:none}
+  .scrollbar-hidden::-webkit-scrollbar{display:none;width:0!important;height:0!important;-webkit-appearance:none;background:transparent}
   .custom-vertical-scrollbar::-webkit-scrollbar{@apply w-[5px]}
   .custom-vertical-scrollbar::-webkit-scrollbar-track{@apply bg-transparent my-[8px]}
   .custom-vertical-scrollbar::-webkit-scrollbar-thumb{@apply bg-neutral-200 hover:bg-neutral-200 rounded-[10px]}
@@ -117,13 +105,7 @@ h6 {
   letter-spacing: -0.02rem;
 }
 
-.h1-xl {
-  @apply text-heading-xl;
-}
-
-.h1-lg {
-  @apply text-heading-lg;
-}
+.h1-lg { @apply text-heading-lg;}
 
 h1,
 .h1 {
