@@ -1,18 +1,25 @@
-
-import CourseFinder from '@/app/components/course-finder/coursefindercomponents';
-import AdviceCourseSlider from '@/app/components/slider/advicecourseslidercomponents';
-import Subjectareas from '@/app/pages/findacourse/components/subjectareas';
-import React from 'react';
+import Carousel from "@/app/components/carousel";
+import CourseFinder from "@/app/components/course-finder/coursefindercomponents";
+import AdviceCourseSlider from "@/app/components/slider/advicecourseslidercomponents";
+import Subjectareas from "@/app/pages/findacourse/components/subjectareas";
+import React from "react";
+import {
+  videoArticleContents,
+  destinationItems,
+  subjectItems,
+  articleItems,
+  courseCardContents,
+} from "@/app/services/carouselContents";
 
 const Findcourse = () => {
   return (
     <>
-    <div className='find_a_course'>
-      <CourseFinder />
-      <div className='findcourse-container pt-[108px] pb-[40px]'>
-        <div className="max-w-container mx-auto">
-          <div className='content-card-container px-[16px] md:px-[24px] xl2:px-[0] mt-[24px] mb-[38px]'>
-            <div className="content-card w-full lg:w-[780px]">
+      <div className="find_a_course">
+        <CourseFinder />
+        <div className="findcourse-container pt-[108px] pb-[40px]">
+          <div className="max-w-container mx-auto">
+            <div className="content-card-container px-[16px] md:px-[24px] xl2:px-[0] mt-[24px] mb-[38px]">
+              <div className="content-card w-full lg:w-[780px]">
                 <div className="card-body flex flex-col gap-[8px]">
                   <h4 className="card-title font-bold text-neutral-900">
                     What will you study at uni?
@@ -32,7 +39,8 @@ const Findcourse = () => {
                 </div>
               </div>
             </div>
-            <Subjectareas></Subjectareas>
+            <Subjectareas />
+            <Carousel items={destinationItems} />
             <AdviceCourseSlider />
           </div>
         </div>

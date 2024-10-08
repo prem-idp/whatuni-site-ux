@@ -2,8 +2,9 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='text-heading-xl h1'>home</div>
-
+    <>
+    <h1>hi</h1>
+    </>
   )
 }
 
