@@ -89,46 +89,18 @@ body {
 
 /* typograpy */
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{@apply font-farro;letter-spacing: -0.02rem}
+.h1-xl {@apply text-heading-xl}
 .h1-lg {@apply text-heading-lg}
 h1,.h1 {@apply text-heading2 lg:text-heading1}
 h2,.h2 {@apply text-heading3 lg:text-heading2}
-
-h3,
-.h3 {
-  @apply text-heading4 lg:text-heading3;
-}
-
-h4,
-.h4 {
-  @apply text-heading5 lg:text-heading4;
-}
-
-h5,
-.h5 {
-  @apply text-heading6 lg:text-heading5;
-}
-
-h6,
-.h6 {
-  @apply text-para-lg lg:text-heading6;
-}
-
-.para-lg {
-  @apply text-para-lg;
-}
-
-p,
-.para {
-  @apply text-para;
-}
-
-.small {
-  @apply text-small;
-}
-
-.x-small {
-  @apply text-x-small;
-}
+h3,.h3 {@apply text-heading4 lg:text-heading3}
+h4,.h4 {@apply text-heading5 lg:text-heading4}
+h5,.h5 {@apply text-heading6 lg:text-heading5}
+h6,.h6 {@apply text-para-lg lg:text-heading6}
+.para-lg {@apply text-para-lg}
+p,.para {@apply text-para}
+.small {@apply text-small}
+.x-small {@apply text-x-small}
 
 /* typograpy */
 

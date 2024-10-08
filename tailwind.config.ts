@@ -27,18 +27,18 @@ const config: Config = {
       inter: ["Inter", "sans-serif"],
     },
     fontSize: {
-      "heading-xl": ["5.2rem", "5.6rem"], //'52px','56px'
-      "heading-lg": ["4.4rem", "4.8rem"], //'44px','48px'
-      heading1: ["4rem", "4.8rem"], //'40px','48px'
-      heading2: ["3.6rem", "4.4rem"], //'36px','44px'
-      heading3: ["3.2rem", "4rem"], //'32px','40px'
+      "heading-xl": ["5.2rem", "6.7rem"], //'52px','67px'
+      "heading-lg": ["4.4rem", "5.7rem"], //'44px','57px'
+      heading1: ["4rem", "5.2rem"], //'40px','52px'
+      heading2: ["3.6rem", "4.7rem"], //'36px','47px'
+      heading3: ["3.2rem", "4.2rem"], //'32px','42px'
       heading4: ["2.8rem", "3.6rem"], //'28px', '36px'
-      heading5: ["2.4rem", "3.2rem"], //'24px', '32px'
-      heading6: ["2rem", "2.8rem"], //'20px', '28px'
+      heading5: ["2.4rem", "3.1rem"], //'24px', '31px'
+      heading6: ["2rem", "2.6rem"], //'20px', '26 px'
       "para-lg": ["1.8rem", "2.4rem"], //'18px', '24px'
       para: ["1.6rem", "2.4rem"], //'16px', '24px'
-      small: ["1.4rem", "2rem"], //'14px', '20px'
-      "x-small": ["1.2rem", "2rem"], //'12px','20px'
+      small: ["1.4rem", "2.1rem"], //'14px', '21px'
+      "x-small": ["1.2rem", "1.8rem"], //'12px','18px'
       "xs-small": ["1rem", "2rem"], //'10px','20px'
       overline: ["1.4rem", "1.2rem"], //'14px', '12px'
     },
@@ -99,6 +99,7 @@ const config: Config = {
       },
       backgroundImage: {
         gradientBlack: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
+        gradientBlack1: "linear-gradient(180deg, rgba(0,0,0,0) 50.5%, rgba(0,0,0,1) 100%)",
         gradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
         gradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
         gradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
@@ -116,6 +117,7 @@ const config: Config = {
         "custom-3": "0px 1px 2px -1px rgba(16, 24, 40, 0.1), 0px 1px 3px 0px rgba(16, 24, 40, 0.1)",
         "custom-4": "0px 2px 4px -2px rgba(16, 24, 40, 0.1),0px -2px 6px -1px rgba(16,24,40,0.07)",
         "custom-5": "0px 4px 6px -4px rgba(16,24,40,0.1),0px 10px 15px -3px rgba(16,24,40,0.1)",
+        "custom-6": "0px 25px 50px -12px rgba(16, 24, 40, 0.25)",
       },
       
     },
