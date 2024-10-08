@@ -1,12 +1,11 @@
 import Image from "next/image";
-import AdviceCourseCardSkeleton from "./components/skeleton/advicecoursecardskeleton";
+import Hero from "./pages/home/hero";
 
 export default function Home() {
   return (
-   <div>
-    <AdviceCourseCardSkeleton></AdviceCourseCardSkeleton>
-    <p>hello</p>
-
-   </div>
+   <>
+   <Hero/>
+   <div className="bg-white p-[50px]"></div>
+   </>
   );
 }

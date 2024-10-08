@@ -88,7 +88,7 @@ body {
 }
 
 /* typograpy */
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{@apply font-farro;}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{@apply font-farro;letter-spacing: -0.02rem}
 .h1-lg {@apply text-heading-lg}
 h1,.h1 {@apply text-heading2 lg:text-heading1}
 h2,.h2 {@apply text-heading3 lg:text-heading2}
@@ -129,6 +129,52 @@ p,
 .x-small {
   @apply text-x-small;
 }
+
+/* typograpy */
+
+@layer utilities {}
+
+@media screen and (max-width: 767px) {
+  .adviceCourseSlider{@apply !px-[0] !py-[16px]}
+}
+
+/* Slick slider */
+.slick-list {@apply !-mx-[8px]}
+.slick-slide > div {@apply !px-[8px]}
+.slick-prev,.slick-next{@apply flex !w-[40px] !h-[40px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-secondary-500 !bg-white hover:!bg-secondary-500  !bg-no-repeat !bg-center z-[2] !top-[66%]}
+.slick-prev::before,.slick-next::before{content:''!important}
+.slick-prev{@apply !left-[-20px]}
+.slick-prev{@apply !bg-[url(/assets/icons/arrow-left.svg)] hover:!bg-[url(/assets/icons/arrow-left-white.svg)]}
+.slick-next{@apply !bg-[url(/assets/icons/arrow-right.svg)] hover:!bg-[url(/assets/icons/arrow-right-white.svg)]}
+.slick-disabled{@apply !border-neutral-300 !bg-neutral-100 pointer-events-none}
+.slick-prev.slick-disabled{@apply !bg-[url(/assets/icons/arrow-left-grey.svg)]}
+.slick-next.slick-disabled{@apply !bg-[url(/assets/icons/arrow-right-grey.svg)]}
+/* Slick slider */
+
+/* Skeleton styles */
+.skeleton{@apply w-full h-[10px] leading-[10px] rounded-[24px] my-[6px] bg-neutral-300}
+.skeleton-thumb-img{@apply w-full h-[150px] rounded-t-[8px] rounded-b-[0] m-0}
+.skeleton-square-img{@apply w-[64px] h-[64px] rounded-[8px]}
+.skeleton-circle-img{@apply w-[64px] h-[64px] rounded-[64px]}
+.large_heading{@apply h-[24px]}
+.small_heading{@apply h-[20px]}
+.page_heading{@apply h-[18px]}
+.heading {@apply h-[14px]}
+.title{@apply h-[12px]}
+.descrip{@apply h-[10px]}
+.skeleton-text-animated{background: linear-gradient(to right, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.065) 8%, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.135) 18%, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.065) 33%);
+  @apply relative bg-[length:800px_104px];animation: skeletonLoader 1.5s  linear infinite forwards}
+.skeleton_btn{@apply min-w-[148px] h-[40px]}
+@keyframes skeletonLoader {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+/* Skeleton styles */
+
 
 
 
