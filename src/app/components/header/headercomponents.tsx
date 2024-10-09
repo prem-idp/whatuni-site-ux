@@ -2,8 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import Menucategory1components from "../megamenu/menucategory1components";
+import Menucategory2components from "../megamenu/menucategory2components";
+import Menucategory3components from "../megamenu/menucategory3components";
+import Menucategory4components from "../megamenu/menucategory4components";
 import Link from "next/link";
-import { useState } from "react";
 
 const Header = () => {
   // Toggle Menu
@@ -679,6 +683,20 @@ const Header = () => {
             Compare
           </Link>
         </div>
+        {/* megamenu */}
+        <div className='megamenu bg-neutral-50 lg:bg-white shadow-custom-5'> 
+          <div className='max-w-container mx-auto'>
+            <section className='grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]'>
+              <Menucategory1components />
+              <Menucategory2components />
+              <Menucategory3components />
+              <Menucategory4components />
+            </section>
+          </div>
+        </div>
+        {/* megamenu */}
+        
+      </header>
       )}
     </>
   );
