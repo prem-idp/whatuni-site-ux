@@ -184,6 +184,18 @@ const Header = () => {
             </Link>
           </div>
         </div>
+        {/* megamenu */}
+                <div className='megamenu bg-neutral-50 lg:bg-white shadow-custom-5'> 
+          <div className='max-w-container mx-auto'>
+            <section className='grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]'>
+              <Menucategory1components />
+              <Menucategory2components />
+              <Menucategory3components />
+              <Menucategory4components />
+            </section>
+          </div>
+        </div>
+        {/* megamenu */}
       </header>
       
       {/* course tab section */}
@@ -683,20 +695,8 @@ const Header = () => {
             Compare
           </Link>
         </div>
-        {/* megamenu */}
-        <div className='megamenu bg-neutral-50 lg:bg-white shadow-custom-5'> 
-          <div className='max-w-container mx-auto'>
-            <section className='grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]'>
-              <Menucategory1components />
-              <Menucategory2components />
-              <Menucategory3components />
-              <Menucategory4components />
-            </section>
-          </div>
-        </div>
-        {/* megamenu */}
+
         
-      </header>
       )}
     </>
   );
