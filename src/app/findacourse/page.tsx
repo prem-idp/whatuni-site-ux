@@ -1,7 +1,6 @@
 import Carousel from "@/app/components/carousel";
 import CourseFinder from "@/app/components/course-finder/coursefindercomponents";
 import AdviceCourseSlider from "@/app/components/slider/advicecourseslidercomponents";
-import Subjectareas from "@/app/pages/findacourse/components/subjectareas";
 import React from "react";
 import {
   videoArticleContents,
@@ -10,6 +9,7 @@ import {
   articleItems,
   courseCardContents,
 } from "@/app/services/carouselContents";
+import Subjectareas from "./components/subjectareas";
 
 const Findcourse = () => {
   return (

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Hero = () => {
+const Herocomponents = () => {
   // course tab
   const [activeTab, setActiveTab] = useState("tab1");
   const searchTabClick = (tabName: any) => {
@@ -507,4 +507,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Herocomponents;

@@ -1,11 +1,15 @@
 import Image from "next/image";
-import Hero from "./pages/home/hero";
+import Herocomponents from "./home/herocomponents";
+import Wuscascomponents from "./home/wuscas/wuscascomponents";
+import Discovercomponents from "./home/discover/discovercomponents";
+
 
 export default function Home() {
   return (
    <>
-   <Hero/>
-   <div className="bg-violet-300 p-[50px]"></div>
+    <Herocomponents />
+    <Wuscascomponents />
+    <Discovercomponents />
    </>
   );
 }
