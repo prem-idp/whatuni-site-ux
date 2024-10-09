@@ -46,7 +46,7 @@ const config: Config = {
       colors: {
         "success-400": "#34D399",
         "success-700": "#047857",
-        "secondary-500": "#3460DC",
+        "blue-500": "#3460DC",
         "blue-200": "#0FBEFD",
         "neutral-200":"#E2E8F0",
         "blue-100":"#C8F0F5",
