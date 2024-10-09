@@ -5,7 +5,7 @@ export default function Home() {
   return (
    <>
    <Hero/>
-   <div className="bg-white p-[50px]"></div>
+   <div className="bg-violet-300 p-[50px]"></div>
    </>
   );
 }
