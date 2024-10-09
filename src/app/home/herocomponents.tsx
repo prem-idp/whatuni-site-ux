@@ -12,10 +12,15 @@ const Herocomponents = () => {
   };
   return (
     <>
-      <div className="bg-blue-200 pt-[40px] px-[10px] lg:p-0">
+      <div className="bg-blue-200 pt-[40px] px-[10px] lg:p-0 min-h-[483px]">
         <div className="max-w-container mx-auto">
-          <div className="flex justify-between">
-            <div className="py-0 lg:py-[64px] w-[calc(100%-578px)]">
+          <div className="flex justify-between gap-[16px]">
+            <div className="py-0 lg:py-[64px] w-[701px]">
+              <div className="flex items-center gap-[4px] mb-[16px]">
+                <div className="bg-primary-500 w-[16px] h-[8px] rounded-[4px]"></div>
+                <div className="bg-blue-100 w-[8px] h-[8px] rounded-[4px]"></div>
+                <div className="bg-blue-100 w-[8px] h-[8px] rounded-[4px]"></div>
+              </div>
               <h1 className="font-farro font-bold text-heading-lg mb-[4px] leading-[57px] lg:text-heading-xl">
                 Nam vitae porttitor lorem. Vestibulum vel felis
               </h1>
@@ -46,78 +51,24 @@ const Herocomponents = () => {
                 </svg>
               </Link>
             </div>
-            <div className="flex items-end justify-end pt-[40px]">
-              <Image
-                src="/assets/images/hero-banner.png"
-                width={362}
-                height={420}
-                alt="Here Banner"
-              />
+            <div className="w-[495px] pt-[15px] px-[37px]">
+              <div className="flex items-center justify-end">
+                <Image
+                  src="/assets/images/hero-banner.png"
+                  width={362}
+                  height={420}
+                  alt="Here Banner"
+                />
+              </div>
             </div>
           </div>
-
-          <div className="bg-violet-200 rounded-none p-[16px] mx-[-16px] lg:rounded-[32px] lg:p-[24px] min-h-[160px] z-0 relative shadow-custom-5 mb-[-80px]">
-            <div className="grid grid-cols-3">
-              <div>test</div>
-              <div>test</div>
-              <div>test</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-lime-200 pt-[40px] px-[16px] lg:p-0">
-        <div className="max-w-container mx-auto lg:relative">
-          <div className="flex justify-between">
-            <div className="py-0 lg:py-[64px] w-[calc(100%-578px)]">
-              <h1 className="font-farro font-bold text-heading-lg mb-[4px] leading-[57px] lg:text-heading-xl">
-                Nam vitae porttitor lorem. Vestibulum vel felis
-              </h1>
-              <p className="font-inter font-normal text-para-lg mb-[16px] leading-[24px] lg:text-para">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                vestibulum neque lectus, molestie congue risus
-              </p>
-
-              <Link
-                href="#"
-                className="flex items-center gap-[6px] w-fit bg-primary-400 text-white rounded-[20px] font-inter font-semibold text-small px-[20px] py-[10px]"
-              >
-                Learn more
-                <svg
-                  width="16"
-                  height="14"
-                  viewBox="0 0 16 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.55556 1.55554L15 6.99999M15 6.99999L9.55555 12.4444M15 6.99999L1 6.99999"
-                    stroke="#fff"
-                    strokeWidth="1.67"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-            </div>
-            <div className="hidden md:block pt-[15px] px-[37px]">
-              <Image
-                className="object-cover"
-                src="/assets/images/hero-banner.png"
-                width={362}
-                height={420}
-                alt="Here Banner"
-              />
-            </div>
-          </div>
-
-          <div className="bg-white rounded-none p-[16px] mx-[-16px] lg:rounded-[32px] lg:p-[24px] min-h-[160px] shadow-custom-5 lg:absolute lg:bottom-[-70px] lg:w-full">
+          <div className="bg-white rounded-none p-[16px] mx-[-16px] lg:rounded-[32px] lg:p-[24px] min-h-[160px] z-0 relative mt-[-80px] shadow-custom-5 mb-[-80px]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[16px]">
               <ul className="flex gap-[4px] justify-center md:justify-start">
                 <li role="button">
                   <Link
                     href="#"
-                    className={`rounded-[20px] px-[12px] py-[8px] text-small font-inter font-semibold ${
+                    className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
                       activeTab === "tab1"
                         ? "bg-neutral-900 text-white"
                         : "bg-white text-neutral-900 border border-neutral-900"
@@ -130,7 +81,7 @@ const Herocomponents = () => {
                 <li role="button">
                   <Link
                     href="#"
-                    className={`rounded-[20px] px-[12px] py-[8px] text-small font-inter font-semibold ${
+                    className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
                       activeTab === "tab2"
                         ? "bg-neutral-900 text-white"
                         : "bg-white text-neutral-900 border border-neutral-900"
@@ -143,7 +94,7 @@ const Herocomponents = () => {
                 <li role="button">
                   <Link
                     href="#"
-                    className={`rounded-[20px] px-[12px] py-[8px] text-small font-inter font-semibold ${
+                    className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
                       activeTab === "tab3"
                         ? "bg-neutral-900 text-white"
                         : "bg-white text-neutral-900 border border-neutral-900"
@@ -154,9 +105,27 @@ const Herocomponents = () => {
                   </Link>
                 </li>
               </ul>
-              <div className="flex items-center gap-[6px] justify-center lg:justify-end">
+              <Link
+                href="#"
+                className="flex items-center gap-[6px] justify-end text-primary-400 lg:justify-end"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.66678 6.11111H12.3334M12.3334 13.8889V11.5556M10.0001 13.8889H10.0079M7.66678 13.8889H7.67456M7.66678 11.5556H7.67456M10.0001 11.5556H10.0079M12.3334 9.22222H12.3412M10.0001 9.22222H10.0079M7.66678 9.22222H7.67456M6.11122 17H13.889C14.7481 17 15.4446 16.3036 15.4446 15.4444V4.55556C15.4446 3.69645 14.7481 3 13.889 3H6.11122C5.25211 3 4.55566 3.69645 4.55566 4.55556V15.4444C4.55566 16.3036 5.25211 17 6.11122 17Z"
+                    stroke="#4664DC"
+                    strokeWidth="1.67"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
                 Calculate your UCAS points
-              </div>
+              </Link>
               <div className="row-start-2 md:col-span-2">
                 {activeTab === "tab1" && (
                   <div className="flex flex-col gap-[24px]">
@@ -290,7 +259,7 @@ const Herocomponents = () => {
                             <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Law
@@ -298,7 +267,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Manchester
@@ -306,7 +275,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Liverpool
@@ -314,7 +283,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Barnsley
@@ -322,7 +291,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Burnley
@@ -330,7 +299,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Bristol, University of the West of England
@@ -338,7 +307,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   INTO Manchester (The University of Manchester)
@@ -346,7 +315,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Courtauld Institute of Art, University of
@@ -355,7 +324,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Cardiff Metropolitan University
@@ -363,7 +332,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Institute of Advanced Legal Studies, School of
@@ -411,7 +380,7 @@ const Herocomponents = () => {
                             <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Law
@@ -419,7 +388,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Manchester
@@ -427,7 +396,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Liverpool
@@ -435,7 +404,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Barnsley
@@ -443,7 +412,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Burnley
@@ -451,7 +420,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Bristol, University of the West of England
@@ -459,7 +428,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   INTO Manchester (The University of Manchester)
@@ -467,7 +436,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Courtauld Institute of Art, University of
@@ -476,7 +445,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Cardiff Metropolitan University
@@ -484,7 +453,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small font-normal text-neutral-900 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Institute of Advanced Legal Studies, School of

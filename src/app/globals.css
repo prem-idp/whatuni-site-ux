@@ -101,6 +101,7 @@ h6,.h6 {@apply text-para-lg lg:text-heading6}
 p,.para {@apply text-para}
 .small {@apply text-small}
 .x-small {@apply text-x-small}
+.xs-small {@apply text-xs-small}
 
 /* typograpy */
 
