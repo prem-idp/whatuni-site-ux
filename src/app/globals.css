@@ -74,12 +74,13 @@
 /* scrollbar styles */
   .scrollbar-hidden{scrollbar-width:none}
   .scrollbar-hidden::-webkit-scrollbar{display:none;width:0!important;height:0!important;-webkit-appearance:none;background:transparent}
-  .custom-vertical-scrollbar::-webkit-scrollbar{@apply w-[5px]}
-  .custom-vertical-scrollbar::-webkit-scrollbar-track{@apply bg-transparent my-[8px]}
-  .custom-vertical-scrollbar::-webkit-scrollbar-thumb{@apply bg-neutral-200 hover:bg-neutral-200 rounded-[10px]}
-  /* .error p{@apply text-error-500}
-  .success p{@apply text-success-500} */
- }
+  .custom-horizontal-scrollbar::-webkit-scrollbar{@apply w-[5px]}
+  .custom-horizontal-scrollbar::-webkit-scrollbar-track{@apply bg-transparent my-[8px]}
+  .custom-horizontal-scrollbar::-webkit-scrollbar-thumb{@apply bg-neutral-200 hover:bg-neutral-200 rounded-[10px]}
+  .custom-vertical-scrollbar::-webkit-scrollbar{@apply w-[8px] }
+  .custom-vertical-scrollbar::-webkit-scrollbar-track{	@apply rounded-[4px] bg-transparent}
+  .custom-vertical-scrollbar::-webkit-scrollbar-thumb{@apply rounded-[4px] bg-neutral-400}
+}
 html {
   font-size: 62.5%;
 }

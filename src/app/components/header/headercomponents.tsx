@@ -4,6 +4,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Menucategory1components from "../megamenu/menucategory1components";
+import Menucategory2components from "../megamenu/menucategory2components";
+import Menucategory3components from "../megamenu/menucategory3components";
+import Menucategory4components from "../megamenu/menucategory4components";
 
 const Header = () => {
   // Toggle Menu
@@ -17,24 +21,54 @@ const Header = () => {
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const searchClick = () => {
     setIsSearchClicked(!isSearchClicked);
+    setIsUserClicked(false);
+    setIsShortlistClicked(false);
   };
 
   // user click
   const [isUserClicked, setIsUserClicked] = useState(false);
   const userClick = () => {
     setIsUserClicked(!isUserClicked);
+    setIsSearchClicked(false);
+    setIsShortlistClicked(false);
   };
 
   // shortlist click
   const [isShortlistClicked, setIsShortlistClicked] = useState(false);
   const shortlistClick = () => {
     setIsShortlistClicked(!isShortlistClicked);
+    setIsSearchClicked(false);
+    setIsUserClicked(false);
   };
 
   // course tab
   const [activeTab, setActiveTab] = useState("tab1");
   const searchTabClick = (tabName: any) => {
     setActiveTab(tabName);
+  };
+
+  // undergratuate click
+  const [isUndergratuateClicked, setIsUndergratuateClicked] = useState(false);
+  const undergratuateClick = () => {
+    setIsUndergratuateClicked(!isUndergratuateClicked);
+    setIsSubjectClicked(false);
+    setIsLocationClicked(false);
+  };
+
+  // subject click
+  const [isSubjectClicked, setIsSubjectClicked] = useState(false);
+  const subjectClick = () => {
+    setIsSubjectClicked(!isSubjectClicked);
+    setIsUndergratuateClicked(false);
+    setIsLocationClicked(false);
+  };
+
+  // location click
+  const [isLocationClicked, setIsLocationClicked] = useState(false);
+  const locationClick = () => {
+    setIsLocationClicked(!isLocationClicked);
+    setIsUndergratuateClicked(false);
+    setIsSubjectClicked(false);
   };
 
   return (
@@ -174,18 +208,30 @@ const Header = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <div className="absolute inline-flex items-center justify-center w-[16px] h-[16px] rounded-[8px] top-[10px] left-[13px] bg-success-400 text-neutral-900 font-inter font-semibold text-xs-small px-[5px] py-[2px]">
+              <div className="absolute inline-flex items-center justify-center w-[16px] h-[16px] rounded-[8px] top-[10px] left-[13px] bg-success-400 text-black font-inter font-semibold text-xs-small px-[5px] py-[2px]">
                 2
               </div>
             </Link>
           </div>
         </div>
       </header>
+      {/* megamenu */}
+      <div className="megamenu bg-neutral-50 lg:bg-white shadow-custom-5">
+        <div className="max-w-container mx-auto">
+          <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
+            <Menucategory1components />
+            <Menucategory2components />
+            <Menucategory3components />
+            <Menucategory4components />
+          </section>
+        </div>
+      </div>
+      {/* megamenu */}
       {/* course tab section */}
       {isSearchClicked && (
-        <div className="bg-white absolute left-0 right-0 z-10">
-          <div className="max-w-container w-full mx-auto flex flex-col p-[19px]">
-            <div className="flex justify-end">
+        <div className="bg-white absolute top-[94px] left-0 right-0 z-10">
+          <div className="max-w-container w-full mx-auto flex flex-col py-[16px] cursor-pointer">
+            <div className="flex justify-end" onClick={searchClick}>
               <svg
                 width="32"
                 height="32"
@@ -202,15 +248,15 @@ const Header = () => {
                 />
               </svg>
             </div>
-            <div className="flex flex-col items-center justify-center gap-y-[16px]">
+            <div className="flex flex-col items-center justify-center gap-y-[16px] mt-[-16px]">
               <ul className="flex items-center gap-[4px]">
                 <li role="button">
                   <Link
                     href="#"
-                    className={`rounded-[20px] px-[12px] py-[8px] text-small font-inter font-semibold ${
+                    className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
                       activeTab === "tab1"
-                        ? "bg-neutral-900 text-white"
-                        : "bg-white text-neutral-900 border border-neutral-900"
+                        ? "bg-black text-white"
+                        : "bg-white text-black border border-neutral-500"
                     }`}
                     onClick={() => searchTabClick("tab1")}
                   >
@@ -220,10 +266,10 @@ const Header = () => {
                 <li role="button">
                   <Link
                     href="#"
-                    className={`rounded-[20px] px-[12px] py-[8px] text-small font-inter font-semibold ${
+                    className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
                       activeTab === "tab2"
-                        ? "bg-neutral-900 text-white"
-                        : "bg-white text-neutral-900 border border-neutral-900"
+                        ? "bg-black text-white"
+                        : "bg-white text-black border border-neutral-500"
                     }`}
                     onClick={() => searchTabClick("tab2")}
                   >
@@ -233,10 +279,10 @@ const Header = () => {
                 <li role="button">
                   <Link
                     href="#"
-                    className={`rounded-[20px] px-[12px] py-[8px] text-small font-inter font-semibold ${
+                    className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
                       activeTab === "tab3"
-                        ? "bg-neutral-900 text-white"
-                        : "bg-white text-neutral-900 border border-neutral-900"
+                        ? "bg-black text-white"
+                        : "bg-white text-black border border-neutral-500"
                     }`}
                     onClick={() => searchTabClick("tab3")}
                   >
@@ -247,97 +293,217 @@ const Header = () => {
               <div className="w-full lg:w-[804px]">
                 {activeTab === "tab1" && (
                   <div className="flex flex-col gap-[24px]">
-                    <div className="bg-white rounded-[32px] p-[16px] border-[1px] border-solid border-neutral-300 hover:border-secondary-500 shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.1),0px_4px_6px_-1px_rgba(16,24,40,0.1)] md:p-[8px]">
-                      <div className="flex flex-col items-start justify-between divide-y divide-neutral-200 md:flex-row md:items-center md:divide-y-0 md:divide-x">
+                    <div className="bg-white rounded-[32px] p-[10px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 md:p-[8px]">
+                      <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
                         <div className="w-full relative mb-[14px] md:w-fit md:mr-[16px] md:mb-[0] ">
                           <button
-                            className="btn btn-outline-secondary w-full font-normal small text-neutral-900 flex items-center justify-between gap-[8px] text-left pl-[0px] md:pl-[20px]"
+                            onClick={undergratuateClick}
+                            className="flex items-center justify-between gap-[4px] w-full small text-black pl-[0px] md:pl-[20px] md:pr-[17px]"
                             type="button"
                           >
                             Undergraduate
                             <Image
                               src="/assets/icons/arrow_down_black.svg"
-                              width="12"
-                              height="7"
+                              width="20"
+                              height="20"
                               alt="Search icon"
                             />
                           </button>
-                          <div className="dropdown-menu w-full md:w-[185px] z-[1] bg-white shadow-[0px_1px_2px_-1px_rgba(16,24,40,0.1),0px_1px_3px_0px_rgba(16,24,40,0.1)] rounded-[8px] absolute left-[-8px] top-[49px] overflow-hidden">
-                            <ul>
-                              <li>
-                                <Link
-                                  href="#"
-                                  className="dropdown-item block small font-normal px-[16px] py-[10px] hover:bg-secondary-50"
-                                >
-                                  Undergraduate
-                                </Link>
-                              </li>
-                              <li>
-                                <a
-                                  className="dropdown-item block small font-normal px-[16px] py-[10px] hover:bg-secondary-50"
-                                  href="#"
-                                >
-                                  HND / HNC
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  className="dropdown-item block smal font-normall px-[16px] py-[10px] hover:bg-secondary-50"
-                                  href="#"
-                                >
-                                  Foundation degree
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  className="dropdown-item block small font-normal px-[16px] py-[10px] hover:bg-secondary-50"
-                                  href="#"
-                                >
-                                  Access & foundation
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  className="dropdown-item block small font-normal px-[16px] py-[10px] hover:bg-secondary-50"
-                                  href="#"
-                                >
-                                  Postgraduate
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
+                          {isUndergratuateClicked && (
+                            <div className="w-full md:w-[230px] z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-[-8px] top-[40px] overflow-hidden">
+                              <ul>
+                                <li>
+                                  <Link
+                                    href="#"
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                  >
+                                    Undergraduate
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    HND / HNC
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Foundation degree
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Access & foundation
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Postgraduate
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                          )}
                         </div>
-                        <div className="findbar-card-input flex flex-col justify-between w-[100%] md:flex-row divide-y md:divide-y-0 divide-neutral-200">
-                          <div className="flex items-center w-full my-[12px] md:my-[0]">
+                        <div
+                          className="w-full relative md:w-fit"
+                          onClick={subjectClick}
+                        >
+                          <div className="flex items-center w-full my-[12px] md:my-[0] border-l-0 lg:border-l border-neutral-200">
                             <input
                               type="text"
-                              className="form-control w-full focus:outline-none font-normal small text-neutral-900 placeholder:text-gray-500 px-[0] py-[11px] md:px-[16px]"
+                              className="form-control w-full focus:outline-none small text-black placeholder:text-gray-500 px-[0] py-[11px] md:px-[16px]"
                               aria-label=""
                               placeholder="Enter subject"
                             />
                           </div>
+                          {isSubjectClicked && (
+                            <div className="w-full md:w-[253px] z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-[8px] top-[50px] max-h-[311px] overflow-y-scroll custom-vertical-scrollbar overflow-hidden">
+                              <Link href="">
+                                <div className="px-[16px] py-[12px]">
+                                  <p className="x-small font-semibold text-black tracking-[1px] leading-[18px]">
+                                    KEYWORD SEARCH FOR
+                                  </p>
+                                  <p className="small text-primary-400">Law</p>
+                                </div>
+                              </Link>
+                              <ul>
+                                <li>
+                                  <Link
+                                    href="#"
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                  >
+                                    Law
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Law / Legal Studies
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Law (Specific Statutes)
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Asian Law
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Civil Law
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Family Law
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                        <div
+                          className="w-full relative md:w-fit"
+                          onClick={locationClick}
+                        >
                           <div className="flex items-center w-full my-[12px] md:my-[0] border-l-0 lg:border-l border-neutral-200">
                             <input
                               type="text"
-                              className="form-control w-full focus:outline-none font-normal small text-neutral-900 placeholder:text-gray-500 px-[0] py-[11px] md:px-[16px]"
+                              className="form-control w-full focus:outline-none small text-black placeholder:text-gray-500 px-[0] py-[11px] md:px-[16px]"
                               aria-label=""
                               placeholder="Location (optional)"
                             />
                           </div>
-                          <div className="search-btn pt-[24px] md:pt-[0]">
-                            <button
-                              type="submit"
-                              className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] min-w-[136px]"
-                            >
-                              <Image
-                                src="/assets/icons/search_icon.svg"
-                                width="18"
-                                height="18"
-                                alt="Search icon"
-                              />
-                              Search
-                            </button>
-                          </div>
+                          {isLocationClicked && (
+                            <div className="w-full md:w-[253px] z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-[18px] top-[50px] overflow-hidden">
+                              <ul>
+                                <li>
+                                  <Link
+                                    href="#"
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                  >
+                                    Undergraduate
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    HND / HNC
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Foundation degree
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Access & foundation
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Postgraduate
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="search-btn pt-[24px] md:pt-[0]">
+                          <button
+                            type="submit"
+                            className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] min-w-[138px]"
+                          >
+                            <Image
+                              src="/assets/icons/search_icon.svg"
+                              width="18"
+                              height="18"
+                              alt="Search icon"
+                            />
+                            Search
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -374,7 +540,7 @@ const Header = () => {
                           <div className="flex items-center">
                             <input
                               type="text"
-                              className="form-control w-full focus:outline-none font-normal small text-neutral-900 placeholder:text-gray-500 rounded-tl-[24px] rounded-bl-[24px] px-[16px] py-[10px]"
+                              className="form-control w-full focus:outline-none small text-black placeholder:text-gray-500 rounded-tl-[24px] rounded-bl-[24px] px-[16px] py-[10px]"
                               aria-label=""
                               placeholder="University name"
                             />
@@ -399,93 +565,93 @@ const Header = () => {
                             </div>
                             <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Law
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Manchester
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Liverpool
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Barnsley
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Burnley
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Bristol, University of the West of England
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   INTO Manchester (The University of Manchester)
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Courtauld Institute of Art, University of
                                   London
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Cardiff Metropolitan University
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Institute of Advanced Legal Studies, School of
                                   Advanced Study, University of London
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center gap-[4px] text-blue-500 text-small font-inter font-semibold">
+                    <div className="flex items-center justify-center gap-[4px] text-blue-500 small font-semibold">
                       Browse unis A-Z
                       <Image
                         src="/assets/icons/arrow-right.svg"
@@ -504,7 +670,7 @@ const Header = () => {
                           <div className="flex items-center w-[calc(100%-44px)]">
                             <input
                               type="text"
-                              className="form-control w-full focus:outline-none font-normal small text-neutral-900 placeholder:text-gray-500 rounded-tl-[24px] rounded-bl-[24px] px-[16px] py-[10px]"
+                              className="form-control w-full focus:outline-none small text-black placeholder:text-gray-500 rounded-tl-[24px] rounded-bl-[24px] px-[16px] py-[10px]"
                               aria-label=""
                               placeholder="Enter keyword"
                             />
@@ -529,93 +695,93 @@ const Header = () => {
                             </div>
                             <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Law
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Manchester
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Liverpool
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Barnsley
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   University of Burnley
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Bristol, University of the West of England
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   INTO Manchester (The University of Manchester)
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Courtauld Institute of Art, University of
                                   London
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Cardiff Metropolitan University
-                                </a>
+                                </Link>
                               </li>
                               <li className="px-[16px] py-[10px]">
-                                <a
+                                <Link
                                   className="dropdown-item w-fit block small text-grey-300 hover:underline"
                                   href="#"
                                 >
                                   Institute of Advanced Legal Studies, School of
                                   Advanced Study, University of London
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center gap-[4px] text-blue-500 text-small font-inter font-semibold">
+                    <div className="flex items-center justify-center gap-[4px] text-blue-500 small font-semibold inline-block">
                       Browse advice
                       <Image
                         src="/assets/icons/arrow-right.svg"
@@ -633,7 +799,7 @@ const Header = () => {
       )}
       {/* user section */}
       {isUserClicked && (
-        <div className="flex justify-between p-[16px] absolute right-[85px] z-10 bg-white min-w-[339px] rounded-[4px]">
+        <div className="flex justify-between p-[16px] absolute top-[94px] right-[85px] z-10 bg-white min-w-[339px] rounded-[4px]">
           <ul className="small">
             <li className="mb-[16px] hover:underline">
               <Link href="#">My profile</Link>
@@ -659,28 +825,28 @@ const Header = () => {
 
       {/* shortlist section */}
       {isShortlistClicked && (
-        <div className="flex justify-between p-[16px] absolute right-0 z-10 bg-white min-w-[339px] rounded-[4px]">
+        <div className="flex justify-between p-[16px] absolute top-[94px] right-0 z-10 bg-white min-w-[339px] rounded-[4px]">
           <ul className="small">
             <li className="mb-[16px] hover:underline">
               <Link href="#">
-                Favourites{" "}
-                <span className="w-[16px] h-[16px] rounded-[8px] bg-success-400 ml-[8px] text-neutral-900 font-semibold xs-small px-[5px] py-[2px]">
+                Favourites
+                <span className="w-[16px] h-[16px] rounded-[8px] bg-success-400 ml-[8px] text-black font-semibold xs-small px-[5px] py-[2px]">
                   5
                 </span>
               </Link>
             </li>
             <li className="mb-[16px] hover:underline">
               <Link href="#">
-                Courses{" "}
-                <span className="w-[16px] h-[16px] rounded-[8px] bg-success-400 ml-[8px] text-neutral-900 font-semibold xs-small px-[5px] py-[2px]">
+                Courses
+                <span className="w-[16px] h-[16px] rounded-[8px] bg-success-400 ml-[8px] text-black font-semibold xs-small px-[5px] py-[2px]">
                   2
                 </span>
               </Link>
             </li>
             <li className="mb-[16px] hover:underline">
               <Link href="#">
-                Universities{" "}
-                <span className="w-[16px] h-[16px] rounded-[8px] bg-success-400 ml-[8px] text-neutral-900 font-semibold xs-small px-[5px] py-[2px]">
+                Universities
+                <span className="w-[16px] h-[16px] rounded-[8px] bg-success-400 ml-[8px] text-black font-semibold xs-small px-[5px] py-[2px]">
                   3
                 </span>
               </Link>
