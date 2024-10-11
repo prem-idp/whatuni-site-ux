@@ -22,7 +22,7 @@ export default function RootLayout({
       <body>
         <Header />
         <main>
-          <section className="bg-neutral-50">{children}</section>
+          {children}
         </main>
         <Footer />
       </body>

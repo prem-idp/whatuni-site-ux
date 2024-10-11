@@ -48,9 +48,12 @@ const config: Config = {
         "success-700": "#047857",
         "blue-500": "#3460DC",
         "blue-200": "#0FBEFD",
-        "neutral-200":"#E2E8F0",
-        "blue-100":"#C8F0F5",
-          grey: {
+        "neutral-200": "#E2E8F0",
+        "neutral-300": "#CBD5E1",
+        "blue-50":"#EDFCFF",
+        "blue-100": "#C8F0F5",
+        black: "#333",
+        grey: {
           300: "#333",
           400: "#707070",
           500: "#767676",
@@ -102,10 +105,8 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        gradientBlack:
-          "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
-        gradientBlack1:
-          "linear-gradient(180deg, rgba(0,0,0,0) 50.5%, rgba(0,0,0,1) 100%)",
+        gradientBlack:"linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
+        gradientBlack1:"linear-gradient(180deg, rgba(0,0,0,0) 50.5%, rgba(0,0,0,1) 100%)",
         gradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
         gradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
         gradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
@@ -118,15 +119,11 @@ const config: Config = {
         gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
       },
       boxShadow: {
-        "custom-1":
-          "0px 2px 4px -2px rgba(16, 24, 40, 0.1), 0px 4px 6px -1px rgba(16, 24, 40, 0.1)",
-        "custom-2": "0px 1px 2px 0px rgba(16,24,40,0.05)",
-        "custom-3":
-          "0px 1px 2px -1px rgba(16, 24, 40, 0.1), 0px 1px 3px 0px rgba(16, 24, 40, 0.1)",
-        "custom-4":
-          "0px 2px 4px -2px rgba(16, 24, 40, 0.1),0px -2px 6px -1px rgba(16,24,40,0.07)",
-        "custom-5":
-          "0px 4px 6px -4px rgba(16,24,40,0.1),0px 10px 15px -3px rgba(16,24,40,0.1)",
+        "custom-1":"0px 2px 4px -2px rgba(16, 24, 40, 0.1), 0px 4px 6px -1px rgba(16, 24, 40, 0.1)",
+        "custom-2":"0px 1px 2px 0px rgba(16,24,40,0.05)",
+        "custom-3":"0px 1px 2px -1px rgba(16, 24, 40, 0.1), 0px 1px 3px 0px rgba(16, 24, 40, 0.1)",
+        "custom-4":"0px 2px 4px -2px rgba(16, 24, 40, 0.1),0px -2px 6px -1px rgba(16,24,40,0.07)",
+        "custom-5":"0px 4px 6px -4px rgba(16,24,40,0.1),0px 10px 15px -3px rgba(16,24,40,0.1)",
         "custom-6": "0px 25px 50px -12px rgba(16, 24, 40, 0.25)",
       },
     },
