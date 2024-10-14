@@ -78,7 +78,7 @@ const CourseCard = ({
             )}
             <Link
               href="/"
-              className="text-para font-semibold text-primary400 lg:text-darkGrey lg:hover:text-primary400"
+              className="text-para font-semibold text-primary400 lg:text-darkGrey lg:hover:text-primary-400"
             >
               {courseTitle}
             </Link>

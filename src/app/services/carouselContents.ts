@@ -98,57 +98,51 @@ export const subjectItems: CarouselItem[] = [
 export const articleItems: CarouselItem[] = [
   {
     type: "articleCard",
-    articleImg: "",
-    articleTag: "Visa Guides",
-    articleTitle: "Applying for a student visa: top tips",
+    articleImg: "/assets/images/article_image1.jpg",
+    articleTitle: "Everything you need to know about University Open Days",
     articleContent:
-      "Making a student visa application can feel like a big challenge, but it is one that you can make a success. Start with our advice on the process",
-    articlePostedDate: "15/08/2024",
+      "You’ve probably heard from your teachers, friends or parents about university open days and campus tou",
+    articlePostedDate: "11 Oct 2023",
   },
   {
     type: "articleCard",
-    articleImg: "/images/article.jpg",
-    articleTag: "Visa Guides",
-    articleTitle: "Applying for a student visa: top tips",
+    articleImg: "/assets/images/article_image1.jpg",
+    articleTitle: "Everything you need to know about University Open Days",
     articleContent:
-      "Making a student visa application can feel like a big challenge, but it is one that you can make a success. Start with our advice on the process – ",
-    articlePostedDate: "15/08/2024",
+      "You’ve probably heard from your teachers, friends or parents about university open days and campus tou – ",
+    articlePostedDate: "11 Oct 2023",
   },
   {
     type: "articleCard",
-    articleImg: "/images/article.jpg",
-    articleTag: "Visa Guides",
-    articleTitle: "Applying for a student visa: top tips",
+    articleImg: "/assets/images/article_image1.jpg",
+    articleTitle: "Everything you need to know about University Open Days",
     articleContent:
-      "Making a student visa application can feel like a big challenge, but it is one that you can make a success. Start with our advice on the process – ",
-    articlePostedDate: "15/08/2024",
+      "You’ve probably heard from your teachers, friends or parents about university open days and campus tou – ",
+    articlePostedDate: "11 Oct 2023",
   },
   {
     type: "articleCard",
-    articleImg: "/images/article.jpg",
-    articleTag: "Visa Guides",
-    articleTitle: "Applying for a student visa: top tips",
+    articleImg: "/assets/images/article_image1.jpg",
+    articleTitle: "Everything you need to know about University Open Days",
     articleContent:
-      "Making a student visa application can feel like a big challenge, but it is one that you can make a success. Start with our advice on the process – ",
-    articlePostedDate: "15/08/2024",
+      "You’ve probably heard from your teachers, friends or parents about university open days and campus tou – ",
+    articlePostedDate: "11 Oct 2023",
   },
   {
     type: "articleCard",
-    articleImg: "/images/article.jpg",
-    articleTag: "Visa Guides",
-    articleTitle: "Applying for a student visa: top tips",
+    articleImg: "/assets/images/article_image1.jpg",
+    articleTitle: "Everything you need to know about University Open Days",
     articleContent:
-      "Making a student visa application can feel like a big challenge, but it is one that you can make a success. Start with our advice on the process – ",
-    articlePostedDate: "15/08/2024",
+      "You’ve probably heard from your teachers, friends or parents about university open days and campus tou – ",
+    articlePostedDate: "11 Oct 2023",
   },
   {
     type: "articleCard",
-    articleImg: "/images/article.jpg",
-    articleTag: "Visa Guides",
-    articleTitle: "Applying for a student visa: top tips",
+    articleImg: "/assets/images/article_image1.jpg",
+    articleTitle: "Everything you need to know about University Open Days",
     articleContent:
-      "Making a student visa application can feel like a big challenge, but it is one that you can make a success. Start with our advice on the process – ",
-    articlePostedDate: "15/08/2024",
+      "You’ve probably heard from your teachers, friends or parents about university open days and campus tou – ",
+    articlePostedDate: "11 Oct 2023",
   },
 ];
 

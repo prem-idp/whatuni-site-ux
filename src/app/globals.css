@@ -112,6 +112,23 @@ p,.para {@apply text-para}
   .adviceCourseSlider{@apply !px-[0] !py-[16px]}
 }
 
+.animate-scroll {
+  @apply flex w-max;
+  animation: scroll 40s linear infinite; 
+}
+.carousel-container:hover .carousel {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 /* Slick slider */
 .slick-list {@apply !-mx-[8px]}
 .slick-slide > div {@apply !px-[8px]}

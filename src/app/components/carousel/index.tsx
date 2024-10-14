@@ -122,12 +122,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       case "articleCard":
         return (
           <div
-            className={`min-w-[245px] lg:min-w-[289px] relative overflow-hidden rounded-[4px] me-[20px] last:me-0`}
+            className={`min-w-[245px] lg:min-w-[392px] relative overflow-hidden rounded-[4px] me-[20px] last:me-0`}
           >
             <ArticleCard
               key={index}
               articleImg={item.articleImg || "/images/article.jpg"}
-              articleTag={item.articleTag || ""}
               articleTitle={item.articleTitle || ""}
               articleContent={item.articleContent || ""}
               articlePostedDate={item.articlePostedDate || ""}
