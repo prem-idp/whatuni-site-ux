@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
 
-const Menucategory4components = () => {
+const Menucategory4card = () => {
   return (
     <div className="dropdown-content-col flex flex-col gap-[8px] lg:gap-[16px]">
       <div className='font-semibold x-small text-neutral-500 uppercase px-[16px] pt-[32px] lg:p-[0]'>Category heading</div>
@@ -30,4 +30,4 @@ const Menucategory4components = () => {
   )
 }
 
-export default Menucategory4components
+export default Menucategory4card
