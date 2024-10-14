@@ -15,16 +15,16 @@ const Megamenucomponents = () => {
         setOpenMenu(openMenu === menuId ? null : menuId);
     };
   return (
-    <div className='megamenu-container fixed top-0 left-0 right-0 z-[1] lg:static h-[100vh] lg:h-auto bg-neutral400 lg:bg-transparent'>
+    <div className='megamenu-container fixed top-0 left-0 right-0 z-[1] lg:static h-[100vh] lg:h-auto bg-neutral400 lg:bg-transparent lg:flex-row '>
         {/* <div className='back-navigation flex items-center gap-[10px] p-[16px] border-b border-b-neutral300'>
             <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.44444 12.4444L1 6.99999M1 6.99999L6.44444 1.55554M1 6.99999L15 6.99999" stroke="#0F172A" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             Link 1
         </div> */}
-        <div className='flex'>
+        <div className="flex justify-center">
         <nav className="p-[16px] w-[335px] h-[100vh] bg-white lg:w-fit lg:h-auto">
-            <ul className="flex flex-col lg:flex-row gap-[10px] lg:gap-[24px] justify-center">
+            <ul className="flex gap-[10px] lg:gap-[24px] justify-center">
                 <li>
                     <Link onClick={() => toggleMenu('menu1')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey-300 bg-neutral100 lg:bg-transparent 
                         lg:hover:shadow-custom-7 ${openMenu === "menu1" ? 'menu-active' : ''}`}>Find a course

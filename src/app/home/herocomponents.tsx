@@ -31,7 +31,7 @@ const Herocomponents = () => {
 
               <Link
                 href="#"
-                className="flex items-center gap-[6px] w-fit bg-primary-400 text-white rounded-[20px] font-inter font-semibold text-small px-[20px] py-[10px]"
+                className="flex items-center gap-[6px] w-fit bg-primary-400 hover:bg-primary-500 text-white rounded-[20px] font-inter font-semibold text-small px-[20px] py-[10px]"
               >
                 Learn more
                 <svg
@@ -107,7 +107,7 @@ const Herocomponents = () => {
               </ul>
               <Link
                 href="#"
-                className="flex items-center gap-[6px] justify-end text-primary-400 lg:justify-end"
+                className="flex items-center gap-[6px] justify-end text-primary-400 hover:underline lg:justify-end"
               >
                 <svg
                   width="20"

@@ -12,7 +12,6 @@ export interface CarouselItem {
   dayPosted?: string;
   uniName?: string;
   articleImg?: string;
-  articleTag?: string;
   articleTitle?: string;
   articleContent?: string;
   articlePostedDate?: string;
