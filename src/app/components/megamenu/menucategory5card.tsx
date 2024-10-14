@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Menucategory5components = () => {
+const Menucategory5card = () => {
   return (
     <div className='megamenu bg-neutral-50 lg:bg-white shadow-custom-5'> 
         <div className='max-w-container mx-auto'>
@@ -12,4 +12,4 @@ const Menucategory5components = () => {
   )
 }
 
-export default Menucategory5components
+export default Menucategory5card

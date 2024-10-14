@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Menucategory1components = () => {
+const Menucategory1card = () => {
   return (
     <div className="dropdown-content-col flex flex-col gap-[8px] lg:gap-[16px]">
         <div className='font-semibold x-small text-neutral-500 uppercase px-[16px] pt-[32px] lg:p-[0]'>Category heading</div>
@@ -17,4 +17,4 @@ const Menucategory1components = () => {
   )
 }
 
-export default Menucategory1components
+export default Menucategory1card

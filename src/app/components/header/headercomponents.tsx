@@ -4,10 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Menucategory1components from "../megamenu/menucategory1components";
-import Menucategory2components from "../megamenu/menucategory2components";
-import Menucategory3components from "../megamenu/menucategory3components";
-import Menucategory4components from "../megamenu/menucategory4components";
+import Megamenucomponents from "../topnav/megamenucomponents";
 
 const Header = () => {
   // Toggle Menu
@@ -88,11 +85,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="order-1 md:grow md:basis-[100%] lg:order-2 lg:grow-1 lg:basis-0">
-            <button
-              className="mr-[16px] block lg:hidden"
-              onClick={handleToggle}
-              aria-label="Mobile Toggle"
-            >
+            <button className="mr-[16px] block lg:hidden" onClick={handleToggle} aria-label="Mobile Toggle">
               {isOpen ? (
                 <svg
                   width="24"
@@ -127,17 +120,7 @@ const Header = () => {
                 </svg>
               )}
             </button>
-            <div className="hidden lg:block">
-              <ul className="flex gap-[10px] justify-center">
-                <li>Find a course</li>
-                <li>Find a uni</li>
-                <li>Careers</li>
-                <li>Prospectuses</li>
-                <li>Open days</li>
-                <li>Rankings</li>
-                <li>Advice</li>
-              </ul>
-            </div>
+              <Megamenucomponents />
           </div>
           <div className="flex items-center justify-end gap-[10px] order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
             <Link
@@ -215,18 +198,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      {/* megamenu */}
-      <div className="megamenu bg-neutral-50 lg:bg-white shadow-custom-5">
-        <div className="max-w-container mx-auto">
-          <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
-            <Menucategory1components />
-            <Menucategory2components />
-            <Menucategory3components />
-            <Menucategory4components />
-          </section>
-        </div>
-      </div>
-      {/* megamenu */}
       {/* course tab section */}
       {isSearchClicked && (
         <div className="bg-white absolute top-[94px] left-0 right-0 z-10">
