@@ -10,7 +10,7 @@ const Header = () => {
   // Toggle Menu
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const handleToggle = () => {
+  const mobileToggleOpen = () => {
     setIsOpen(!isOpen);
   };
 
@@ -85,11 +85,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="order-1 md:grow md:basis-[100%] lg:order-2 lg:grow-1 lg:basis-0">
-            <button
-              className="mr-[16px] block lg:hidden"
-              onClick={handleToggle}
-              aria-label="Mobile Toggle"
-            >
+            <button className="mr-[16px] block lg:hidden" onClick={mobileToggleOpen} aria-label="Mobile Toggle">
               {isOpen ? (
                 <svg
                   width="24"
@@ -124,7 +120,10 @@ const Header = () => {
                 </svg>
               )}
             </button>
-            <Megamenucomponents />
+               <div className={`megamenu-container fixed top-0 left-0 right-0 z-[1] lg:static h-[100vh] lg:h-auto bg-neutral400 lg:bg-transparent lg:block transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} `}>
+              <Megamenucomponents />
+              </div>
+
           </div>
           <div className="flex items-center justify-end gap-[10px] order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
             <Link

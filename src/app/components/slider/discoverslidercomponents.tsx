@@ -20,12 +20,11 @@ const Discoverslidercomponents = () => {
       {
         breakpoint: 993,
         settings: {
-            infinite: true,
-        centerMode: true,
+            infinite: false,
+            centerMode: false,
           slidesToShow: 2,
           slidesToScroll: 1,
-          centerPadding: "20px",
-          dots: true,
+          centerPadding: "24px",
         }
       },
       {

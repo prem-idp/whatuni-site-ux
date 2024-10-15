@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="footer-inner-wrap grid xs:grid-cols-1 xs:gap-[40px] md:grid-cols-4 lg:gap-[16px]">
           {/* pod 1 */}
           <div className="flex flex-col gap-[16px]">
-            <p className="footer_title font-semibold text-grey-300 x-small uppercase">
+            <p className="footer_title font-semibold text-grey300 x-small uppercase">
               Connect
             </p>
             <div className="flex flex-col gap-[16px]">
@@ -515,53 +515,53 @@ const Footer = () => {
           {/* pod 1 */}
           {/* pod 2 */}
           <div className="flex flex-col gap-[16px]">
-            <p className="footer_title font-semibold text-grey-300 x-small uppercase">
+            <p className="footer_title font-semibold text-grey300 x-small uppercase">
               Quick links
             </p>
             <div className="flex flex-col">
               <ul className="flex flex-col gap-[4px]">
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Editor@whatuni.com
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Contact us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     About Whatuni
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Student Choice Awards
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     The Whatuni Team
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Our Partners
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Terms & Conditions
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Privacy Notice
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Cookies Notice
                   </a>
                 </li>
@@ -571,53 +571,53 @@ const Footer = () => {
           {/* pod 2 */}
           {/* pod 3 */}
           <div className="flex flex-col gap-[16px]">
-            <p className="footer_title font-semibold text-grey-300 x-small uppercase">
+            <p className="footer_title font-semibold text-grey300 x-small uppercase">
               Browse
             </p>
             <div className="flex flex-col">
               <ul className="flex flex-col gap-[4px]">
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Courses
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Universities
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Degree subject guides
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Student Choice Awards
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Advertisers
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     UCAS Tariff Calculator
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Terms & Conditions
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Sitemap
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Whatuni App
                   </a>
                 </li>
@@ -627,58 +627,58 @@ const Footer = () => {
           {/* pod 3 */}
           {/* pod 4 */}
           <div className="flex flex-col gap-[16px]">
-            <p className="footer_title font-semibold text-grey-300 x-small uppercase">
+            <p className="footer_title font-semibold text-grey300 x-small uppercase">
               Popular subjects
             </p>
             <div className="flex flex-col">
               <ul className="flex flex-col gap-[4px]">
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Popular subjects
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Acting
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Physics
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Art Drawing
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Biology
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Business
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     Chemical engineering
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     English language
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     English law
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="small text-grey-300 hover:underline">
+                  <a href="#" className="small text-grey300 hover:underline">
                     English literature
                   </a>
                 </li>
@@ -689,7 +689,7 @@ const Footer = () => {
         </div>
         {/* Copy rights */}
         <div className="copyrights mt-[40px]">
-          <p className="x-small text-grey-300 text-center">
+          <p className="x-small text-grey300 text-center">
             © 2007-2023 IDP Connect Ltd. All rights reserved
           </p>
         </div>

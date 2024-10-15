@@ -55,12 +55,10 @@ const config: Config = {
         "grey500": "#767676",
         "grey600": "#e6e6e6",
         "grey900": "#0F172A",
-        neutral: {
-          "neutral100": "#F1F5F9",
-          "neutral200": "#E2E8F0",
-          "neutral300": "#CBD5E1",
-          "neutral400": "#94A3B8",
-        },
+        "neutral100": "#F1F5F9",
+        "neutral200": "#E2E8F0",
+        "neutral300": "#CBD5E1",
+        "neutral400": "#94A3B8",
         grey: {
           50: "#F9FAFB",
           100: "#F2F2F2",
