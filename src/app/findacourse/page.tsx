@@ -1,4 +1,4 @@
-import Carousel from "@/app/components/carousel";
+import Carousel from "@/app/components/carousel/carouselcomponent";
 import CourseFinder from "@/app/components/course-finder/coursefindercomponents";
 import AdviceCourseSlider from "@/app/components/slider/advicecourseslidercomponents";
 import React from "react";
