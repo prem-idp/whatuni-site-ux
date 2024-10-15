@@ -5,7 +5,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { CarouselItem } from "@/app/types/types";
 import PictureCard from "../cards/pictureCard";
 import CourseCard from "../cards/course-card";
-import ArticleCard from "../cards/articleCard";
+import ArticleCardComponent from "../cards/articleCard/articlecardcomponent";
 
 interface CarouselProps {
   items: CarouselItem[];
@@ -122,9 +122,9 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       case "articleCard":
         return (
           <div
-            className={`min-w-[245px] lg:min-w-[392px] relative overflow-hidden rounded-[4px] me-[20px] last:me-0`}
+            className={`min-w-[245px] lg:min-w-[392px] relative overflow-hidden rounded-[4px] me-[20px] last:me-0 shadow-custom-2`}
           >
-            <ArticleCard
+            <ArticleCardComponent
               key={index}
               articleImg={item.articleImg || "/images/article.jpg"}
               articleTitle={item.articleTitle || ""}
@@ -162,24 +162,25 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       {isPrevVisible && (
         <button
           onClick={scrollPrev}
-          className="hidden xl:flex rotate-180 justify-center items-center absolute z-10 -left-8 top-[50%] transform -translate-y-1/2 border border-grey500 hover:border hover:border-white group bg-white shadow-custom-sm p-[10px] rounded-[28px] w-[40px] h-[40px] hover:bg-primary500 "
+          className="hidden xl:flex rotate-180 justify-center items-center absolute z-10 -left-8 top-[50%] transform -translate-y-1/2 border border-grey-500 hover:border hover:border-white group bg-white shadow-custom-sm p-[10px] rounded-[28px] w-[40px] h-[40px] hover:bg-primary-500"
           style={{ top: getButtonTopPosition(items[0].type) }}
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
-            viewBox="0 0 7 13"
+            viewBox="0 0 20 20"
             fill="none"
             className="transition-colors duration-200"
             style={{ stroke: "#5C656E" }}
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M1 1.5L6 6.5L1 11.5"
+              d="M11.9812 5.31445L17.1663 10.4996M17.1663 10.4996L11.9812 15.6848M17.1663 10.4996L3.83301 10.4996"
               className="group-hover:stroke-white"
-              stroke-width="1.67"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              stroke="#5C656E"
+              strokeWidth="1.77778"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>
@@ -187,24 +188,24 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       {isNextVisible && (
         <button
           onClick={scrollNext}
-          className="hidden xl:flex justify-center items-center absolute z-10 -right-8 top-[50%] bg-white transform -translate-y-1/2 border border-grey500 hover:border hover:border-white shadow-custom-sm p-[10px] rounded-[28px]  w-[40px] h-[40px] hover:bg-[#0657AD] group"
+          className="hidden xl:flex justify-center items-center absolute z-10 -right-8 top-[50%] bg-white transform -translate-y-1/2 border border-grey-500 hover:border hover:border-white shadow-custom-sm p-[10px] rounded-[28px]  w-[40px] h-[40px] hover:bg-primary-500 group"
           style={{ top: getButtonTopPosition(items[0].type) }}
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
-            viewBox="0 0 7 13"
+            viewBox="0 0 20 20"
             fill="none"
             className="transition-colors duration-200"
-            style={{ stroke: "#5C656E" }}
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M1 1.5L6 6.5L1 11.5"
+              d="M11.9812 5.31445L17.1663 10.4996M17.1663 10.4996L11.9812 15.6848M17.1663 10.4996L3.83301 10.4996"
               className="group-hover:stroke-white"
-              stroke-width="1.67"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              stroke="#5C656E"
+              strokeWidth="1.77778"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>
