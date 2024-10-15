@@ -1,6 +1,6 @@
 import { FastlaneCardProps } from "@/component/Call-to-action/fastlaneCta";
 import { ScholarshipCardProps } from "@/component/Call-to-action/scholarshipCta";
-import { CheckboxOption, homepageBanner } from "../types/types";
+import {  homepageBanner } from "../types/types";
 
 export const homepageBannerContents: homepageBanner[] = [
   {

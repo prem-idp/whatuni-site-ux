@@ -12,7 +12,7 @@ export const Logoslider = ({ imgSrc }: logoSliderProps) => {
     <div className="relative overflow-hidden carousel-container">
       <ul
         ref={carouselRef}
-        className="inline-flex items-center gap-[64px] lg:gap-[80px] animate-scroll carousel"
+        className="inline-flex items-center gap-[16px] md:gap-[86px] lg:gap-[64px] animate-scroll carousel mt-[32px]"
       >
         {/* original logos */}
         {imgSrc.map((Src, index) => (

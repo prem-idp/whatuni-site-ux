@@ -126,6 +126,7 @@ const config: Config = {
         "custom-5":"0px 4px 6px -4px rgba(16,24,40,0.1),0px 10px 15px -3px rgba(16,24,40,0.1)",
         "custom-6":"0px 25px 50px -12px rgba(16, 24, 40, 0.25)",
         "custom-7":"inset 0 -4px 0 0 rgba(15,190,253,1)",
+        
       },
       
     },
