@@ -19,7 +19,6 @@ const Megamenucomponents = () => {
     const [isOpen, setIsOpen] = useState(false);
 
   return (
-    
     <>
         {/* <div className='back-navigation flex items-center gap-[10px] p-[16px] border-b border-b-neutral300'>
             <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +26,7 @@ const Megamenucomponents = () => {
             </svg>
             Link 1
         </div> */}
-        <div className='flex'>
+        <div className='flex lg:items-center lg:justify-center'>
         <nav className="p-[16px] w-[335px] h-[100vh] bg-white lg:w-fit lg:h-auto">
             <ul className="flex flex-col lg:flex-row gap-[10px] lg:gap-[24px] justify-center">
                 <li>
@@ -159,7 +158,7 @@ const Megamenucomponents = () => {
                 </svg>
             </div>
         </div>
-    </div> 
+    </div>
     </> 
   )
 }

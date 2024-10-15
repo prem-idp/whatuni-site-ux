@@ -124,13 +124,9 @@ const Header = () => {
                 </svg>
               )}
             </button>
-            <div
-              className={`megamenu-container fixed top-0 left-0 right-0 z-[1] lg:static h-[100vh] lg:h-auto bg-neutral400 lg:bg-transparent lg:block transition-all duration-300 ease-in-out ${
-                isOpen ? "translate-x-0" : "-translate-x-full"
-              } `}
-            >
-              <Megamenucomponents />
-            </div>
+            <div className={`megamenu-container h-[100vh] lg:h-auto bg-neutral400 lg:bg-transparent lg:block transition-all duration-300 ease-in-out`}>
+                <Megamenucomponents />
+            </div>  
           </div>
           <div className="order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
             <ul className="flex items-center justify-end gap-[10px]">
@@ -501,7 +497,7 @@ const Header = () => {
                                       <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Law
@@ -509,7 +505,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Manchester
@@ -517,7 +513,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Liverpool
@@ -525,7 +521,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Barnsley
@@ -533,7 +529,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Burnley
@@ -541,7 +537,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             Bristol, University of the West of
@@ -550,7 +546,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             INTO Manchester (The University of
@@ -559,7 +555,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             Courtauld Institute of Art,
@@ -568,7 +564,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             Cardiff Metropolitan University
@@ -576,7 +572,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             Institute of Advanced Legal Studies,
@@ -634,7 +630,7 @@ const Header = () => {
                                       <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Law
@@ -642,7 +638,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Manchester
@@ -650,7 +646,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Liverpool
@@ -658,7 +654,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Barnsley
@@ -666,7 +662,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             University of Burnley
@@ -674,7 +670,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             Bristol, University of the West of
@@ -683,7 +679,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             INTO Manchester (The University of
@@ -692,7 +688,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             Courtauld Institute of Art,
@@ -701,7 +697,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             Cardiff Metropolitan University
@@ -709,7 +705,7 @@ const Header = () => {
                                         </li>
                                         <li className="px-[16px] py-[10px]">
                                           <Link
-                                            className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                            className="dropdown-item w-fit block small text-grey300 hover:underline"
                                             href="#"
                                           >
                                             Institute of Advanced Legal Studies,
