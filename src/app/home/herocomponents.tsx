@@ -259,7 +259,7 @@ const Herocomponents = () => {
                             <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Law
@@ -267,7 +267,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Manchester
@@ -275,7 +275,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Liverpool
@@ -283,7 +283,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Barnsley
@@ -291,7 +291,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Burnley
@@ -299,7 +299,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   Bristol, University of the West of England
@@ -307,7 +307,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   INTO Manchester (The University of Manchester)
@@ -315,7 +315,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   Courtauld Institute of Art, University of
@@ -324,7 +324,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   Cardiff Metropolitan University
@@ -332,7 +332,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   Institute of Advanced Legal Studies, School of
@@ -380,7 +380,7 @@ const Herocomponents = () => {
                             <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Law
@@ -388,7 +388,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Manchester
@@ -396,7 +396,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Liverpool
@@ -404,7 +404,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Barnsley
@@ -412,7 +412,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   University of Burnley
@@ -420,7 +420,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   Bristol, University of the West of England
@@ -428,7 +428,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   INTO Manchester (The University of Manchester)
@@ -436,7 +436,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   Courtauld Institute of Art, University of
@@ -445,7 +445,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   Cardiff Metropolitan University
@@ -453,7 +453,7 @@ const Herocomponents = () => {
                               </li>
                               <li className="px-[16px] py-[10px]">
                                 <a
-                                  className="dropdown-item w-fit block small text-grey-300 hover:underline"
+                                  className="dropdown-item w-fit block small text-grey300 hover:underline"
                                   href="#"
                                 >
                                   Institute of Advanced Legal Studies, School of

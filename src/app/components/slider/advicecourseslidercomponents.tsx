@@ -1,11 +1,22 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import AdviceCourseCard from '../cards/advice-course/advicecoursecard';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AdviceCourseCardSkeleton from '../skeleton/advicecoursecardskeleton';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Navigation, Pagination} from 'swiper/modules';
 
 const AdviceCourseSlider = () => {
   var settings = {
@@ -39,7 +50,7 @@ const AdviceCourseSlider = () => {
   };
   return (
     <>
-      <div className='advice-course-container px-[0] md:px-[24px] xl2:px-[0]  mt-[48px]'>
+      <div className='advice-course-container px-[0] xl2:px-[0]  mt-[48px]'>
         <h4 className='font-bold text-neutral-900 mb-[16px] px-[16px] md:px-[24px] xl2:px-[0]'>Advice on choosing a course</h4>
         
         <div className="slider-container">
@@ -78,6 +89,46 @@ const AdviceCourseSlider = () => {
             </a>
           </div> 
         </div>
+
+
+        <Swiper
+        freeMode={true}
+        navigation={true}
+        pagination={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
+        modules={[Navigation, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <AdviceCourseCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <AdviceCourseCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <AdviceCourseCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <AdviceCourseCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <AdviceCourseCard />
+        </SwiperSlide>
+
+      </Swiper>
       </div>
     </>
   );

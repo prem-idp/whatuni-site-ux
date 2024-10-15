@@ -11,22 +11,27 @@ import Menucategory1x1card from '../megamenu/menucategory1x1card';
 
 const Megamenucomponents = () => {
     const [openMenu, setOpenMenu] = useState<string | null>(null);
-    const toggleMenu = (menuId: string) => {
+    const megaMenu = (menuId: string) => {
         setOpenMenu(openMenu === menuId ? null : menuId);
     };
+
+    // Menu open/close state
+    const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className='megamenu-container fixed top-0 left-0 right-0 z-[1] lg:static h-[100vh] lg:h-auto bg-neutral400 lg:bg-transparent lg:flex-row '>
+    
+    <>
         {/* <div className='back-navigation flex items-center gap-[10px] p-[16px] border-b border-b-neutral300'>
             <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.44444 12.4444L1 6.99999M1 6.99999L6.44444 1.55554M1 6.99999L15 6.99999" stroke="#0F172A" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             Link 1
         </div> */}
-        <div className="flex justify-center">
+        <div className='flex'>
         <nav className="p-[16px] w-[335px] h-[100vh] bg-white lg:w-fit lg:h-auto">
-            <ul className="flex gap-[10px] lg:gap-[24px] justify-center">
+            <ul className="flex flex-col lg:flex-row gap-[10px] lg:gap-[24px] justify-center">
                 <li>
-                    <Link onClick={() => toggleMenu('menu1')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey-300 bg-neutral100 lg:bg-transparent 
+                    <Link onClick={() => megaMenu('menu1')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey300 bg-neutral100 lg:bg-transparent 
                         lg:hover:shadow-custom-7 ${openMenu === "menu1" ? 'menu-active' : ''}`}>Find a course
                     <Image className="block lg:hidden rounded-[24px] outline outline-1 outline-neutral-200 outline-offset-2 !h-[44px]" src="/assets/images/megamenu/category-thumb-img1.png" width="44" height="44" quality={100} alt="Megamenu thumb" />
                     </Link>
@@ -45,7 +50,7 @@ const Megamenucomponents = () => {
                     )}
                 </li>
                 <li>
-                    <Link onClick={() => toggleMenu('menu2')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey-300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu2" ? 'menu-active' : ''}`}>Find a uni
+                    <Link onClick={() => megaMenu('menu2')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu2" ? 'menu-active' : ''}`}>Find a uni
                     <Image className="block lg:hidden rounded-[24px] outline outline-1 outline-neutral-200 outline-offset-2 !h-[44px]" src="/assets/images/megamenu/category-thumb-img2.png" width="44" height="44" quality={100} alt="Megamenu thumb" />
                     </Link>
                     {openMenu === 'menu2' && (
@@ -61,7 +66,7 @@ const Megamenucomponents = () => {
                     )}
                 </li>
                 <li>
-                    <Link onClick={() => toggleMenu('menu3')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey-300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu3" ? 'menu-active' : ''}`}>Careers
+                    <Link onClick={() => megaMenu('menu3')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu3" ? 'menu-active' : ''}`}>Careers
                     <Image className="block lg:hidden rounded-[24px] outline outline-1 outline-neutral-200 outline-offset-2 !h-[44px]" src="/assets/images/megamenu/category-thumb-img3.png" width="44" height="44" quality={100} alt="Megamenu thumb" />
                     </Link>
                     {openMenu === 'menu3' && (
@@ -78,7 +83,7 @@ const Megamenucomponents = () => {
                     )}    
                 </li>
                 <li>
-                    <Link onClick={() => toggleMenu('menu4')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey-300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu4" ? 'menu-active' : ''}`}>Prospectuses
+                    <Link onClick={() => megaMenu('menu4')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu4" ? 'menu-active' : ''}`}>Prospectuses
                     <Image className="block lg:hidden rounded-[24px] outline outline-1 outline-neutral-200 outline-offset-2 !h-[44px]" src="/assets/images/megamenu/category-thumb-img4.png" width="44" height="44" quality={100} alt="Megamenu thumb" />
                     </Link>
                     {openMenu === 'menu4' && (
@@ -95,7 +100,7 @@ const Megamenucomponents = () => {
                     )} 
                 </li>
                 <li>
-                    <Link onClick={() => toggleMenu('menu5')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey-300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu5" ? 'menu-active' : ''}`}>Open days
+                    <Link onClick={() => megaMenu('menu5')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu5" ? 'menu-active' : ''}`}>Open days
                     <Image className="block lg:hidden rounded-[24px] outline outline-1 outline-neutral-200 outline-offset-2 !h-[44px]" src="/assets/images/megamenu/category-thumb-img1.png" width="44" height="44" quality={100} alt="Megamenu thumb" />
                     </Link>
                     {openMenu === 'menu5' && (
@@ -112,7 +117,7 @@ const Megamenucomponents = () => {
                     )} 
                 </li>
                 <li>
-                    <Link onClick={() => toggleMenu('menu6')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey-300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu6" ? 'menu-active' : ''}`}>Rankings
+                    <Link onClick={() => megaMenu('menu6')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu6" ? 'menu-active' : ''}`}>Rankings
                     <Image className="block lg:hidden rounded-[24px] outline outline-1 outline-neutral-200 outline-offset-2 !h-[44px]" src="/assets/images/megamenu/category-thumb-img1.png" width="44" height="44" quality={100} alt="Megamenu thumb" />
                     </Link>
                     {openMenu === 'menu6' && (
@@ -128,7 +133,7 @@ const Megamenucomponents = () => {
                     </div>
                     )} 
                 </li>
-                <li><Link onClick={() => toggleMenu('menu7')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey-300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu7" ? 'menu-active' : ''}`}>Advice
+                <li><Link onClick={() => megaMenu('menu7')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey300 bg-neutral100 lg:bg-transparent lg:hover:shadow-custom-7 ${openMenu === "menu7" ? 'menu-active' : ''}`}>Advice
                 <Image className="block lg:hidden rounded-[24px] outline outline-1 outline-neutral-200 outline-offset-2 !h-[44px]" src="/assets/images/megamenu/category-thumb-img1.png" width="44" height="44" quality={100} alt="Megamenu thumb" />
                 </Link>
                 {openMenu === 'menu7' && (
@@ -146,16 +151,16 @@ const Megamenucomponents = () => {
                 </li>
             </ul>
         </nav>
-        <div className='menu-close-card lg:hidden'>
+        <div className='menu-close-card lg:hidden' onClick={()=>setIsOpen(isOpen)}>
             <div className='menu-close bg-neutral-900 p-[8px]'>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 6L6 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             </div>
         </div>
-    </div>
-    </div>         
+    </div> 
+    </> 
   )
 }
 

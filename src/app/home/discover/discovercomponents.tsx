@@ -1,5 +1,6 @@
 import React from 'react'
 import Discoverslidercomponents from '@/app/components/slider/discoverslidercomponents'
+import Discoverslidercomponents1 from '@/app/components/slider/discoverslidercomponents1'
 
 const Discovercomponents = () => {
   return (
@@ -12,6 +13,7 @@ const Discovercomponents = () => {
               </div>
                 <div className="discover-inner-wrap"> 
                   <Discoverslidercomponents />
+                  {/* <Discoverslidercomponents1 /> */}
                   <div className='flex justify-center mt-[34px]'>
                   <a href='#' className='flex items-center w-fit font-semibold para text-primary-400 hover:underline gap-[8px]'>
                   View more
