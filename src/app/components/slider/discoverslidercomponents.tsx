@@ -2,47 +2,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Discovercard from '../cards/discover/discovercard';
 
 const Discoverslidercomponents = () => {
-  var settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 0,
-    initialSlide: 0,
-    arrows : false, 
-    responsive: [
-      {
-        breakpoint: 993,
-        settings: {
-            infinite: false,
-            centerMode: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          centerPadding: "24px",
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows : false,
-          centerMode: true,
-          centerPadding: "16px",
-        }
-      },
-    ]
-  };
   return (
     <> 
         <div className="slider-container">
-          <Slider {...settings}>
             <div>
             <div className="discover-card">
                 <Link href="#" className='block bg-primary-100 rounded-[8px] overflow-hidden'>
@@ -121,7 +86,6 @@ const Discoverslidercomponents = () => {
                 </Link>
                 </div> 
             </div>
-          </Slider>
           </div>
     </>
   );
