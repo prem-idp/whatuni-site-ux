@@ -1,18 +1,36 @@
 "use client";
 
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import Megamenucomponents from "../topnav/megamenucomponents";
 
 const Header = () => {
   // Toggle Menu
+  const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const mobileToggleOpen = () => {
     setIsOpen(!isOpen);
   };
 
+// Check screen width
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 991);
+  };
+
+  // Initial check
+  handleResize();
+  // Add event listener on resize
+  window.addEventListener('resize', handleResize);
+
+  // Cleanup event listener on unmount
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
+  // search click
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const [isUserClicked, setIsUserClicked] = useState(false);
   const [isShortlistClicked, setIsShortlistClicked] = useState(false);
@@ -33,30 +51,6 @@ const Header = () => {
       setIsUserClicked(false);
     }
   };
-
-  // search click
-  // const [isSearchClicked, setIsSearchClicked] = useState(false);
-  // const searchClick = () => {
-  //   setIsSearchClicked(!isSearchClicked);
-  //   setIsUserClicked(false);
-  //   setIsShortlistClicked(false);
-  // };
-
-  // user click
-  // const [isUserClicked, setIsUserClicked] = useState(false);
-  // const userClick = () => {
-  //   setIsUserClicked(!isUserClicked);
-  //   setIsSearchClicked(false);
-  //   setIsShortlistClicked(false);
-  // };
-
-  // shortlist click
-  // const [isShortlistClicked, setIsShortlistClicked] = useState(false);
-  // const shortlistClick = () => {
-  //   setIsShortlistClicked(!isShortlistClicked);
-  //   setIsSearchClicked(false);
-  //   setIsUserClicked(false);
-  // };
 
   // course tab click
   const [activeTab, setActiveTab] = useState("tab1");
@@ -104,31 +98,6 @@ const Header = () => {
       setIsUniversityClicked(false);
     }
   };
-
-  // undergratuate click
-  // const [isUndergratuateClicked, setIsUndergratuateClicked] = useState(false);
-  // const undergratuateClick = () => {
-  //   setIsUndergratuateClicked(!isUndergratuateClicked);
-  //   setIsSubjectClicked(false);
-  //   setIsLocationClicked(false);
-  // };
-
-  // subject click
-  // const [isSubjectClicked, setIsSubjectClicked] = useState(false);
-  // const subjectClick = () => {
-  //   setIsSubjectClicked(!isSubjectClicked);
-  //   setIsUndergratuateClicked(false);
-  //   setIsLocationClicked(false);
-  // };
-
-  // location click
-  // const [isLocationClicked, setIsLocationClicked] = useState(false);
-  // const locationClick = () => {
-  //   setIsLocationClicked(!isLocationClicked);
-  //   setIsUndergratuateClicked(false);
-  //   setIsSubjectClicked(false);
-  // };
-
   return (
     <>
       <header className="bg-white pl-[16px] pr-[21px] py-[4px] xl:px-0 xl:py-[8px]">
@@ -146,12 +115,8 @@ const Header = () => {
             </Link>
           </div>
           <div className="order-1 md:grow md:basis-[100%] lg:order-2 lg:grow-1 lg:basis-0">
-            <button
-              className="mr-[16px] block lg:hidden"
-              onClick={mobileToggleOpen}
-              aria-label="Mobile Toggle"
-            >
-              {isOpen ? (
+            {isMobile && (
+            <button className="mr-[16px] block lg:hidden" onClick={mobileToggleOpen} aria-label="Mobile Toggle">
                 <svg
                   width="24"
                   height="24"
@@ -167,31 +132,21 @@ const Header = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              ) : (
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 6H20M4 12H20M4 18H20"
-                    stroke="#333F48"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              )}
             </button>
-            <div
-              className={`megamenu-container fixed top-0 left-0 right-0 z-[1] lg:static h-[100vh] lg:h-auto bg-neutral400 lg:bg-transparent lg:block transition-all duration-300 ease-in-out ${
-                isOpen ? "translate-x-0" : "-translate-x-full"
-              } `}
-            >
-              <Megamenucomponents />
+            )}
+            {isMobile ? (
+               <div className={`megamenu-container fixed left-0 top-0 z-[1] w-full h-[100vh] lg:h-auto bg-neutral400 lg:bg-transparent lg:block transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 ' :'-translate-x-full'}`}>
+              <Fragment>
+              { isOpen && (
+                <div>
+                  <Megamenucomponents />
+                </div>                            
+               )}                         
+            </Fragment>
             </div>
+              ) : (
+                <Megamenucomponents />
+              )}
           </div>
           <div className="order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
             <ul className="flex items-center justify-end gap-[10px]">
