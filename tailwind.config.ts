@@ -49,6 +49,7 @@ const config: Config = {
         "blue-50":"#EDFCFF",
         "blue-100": "#C8F0F5",
         "blue-200": "#0FBEFD",
+        "blue-300": "#0086F8",
         "blue-500": "#3460DC",
         "grey300": "#333",
         "grey400": "#707070",
