@@ -4,10 +4,10 @@ import React from 'react'
 
 const Wuscascomponents = () => {
   return (
-    <section className='bg-neutral-50'>
+    <section className='wusca-container bg-neutral-50'>
       <div className="max-w-container mx-auto">
         {/* container */}
-          <div className="wusca-container grid  xs:grid-rows-[3_minmax(0_auto)] md:grid-cols-[auto_minmax(352px,_1fr)] lg:grid-cols-[auto_minmax(598px,_1fr)] px-[16px] py-[40px] md:px-[20px] md:pt-[50px] md:pb-[64px] lg:pt-[80px] lg:p-[0] xs:gap-[24px] md:gap-[20px] lg:gap-[16px]">
+          <div className="wusca-card-container grid  xs:grid-rows-[3_minmax(0_auto)] md:grid-cols-[auto_minmax(352px,_1fr)] lg:grid-cols-[auto_minmax(598px,_1fr)] px-[16px] py-[40px] md:px-[20px] md:pt-[50px] md:pb-[64px] lg:pt-[80px] lg:p-[0] xs:gap-[24px] md:gap-[20px] lg:gap-[16px]">
             <div className="wusca-content flex flex-col justify-center col-start-1 row-start-2 md:row-start-1 lg:col-span-1 gap-[16px] md:gap-[12px]">
               <h2 className="font-bold">Nam vitae porttitor lorem.</h2>
               <p className="font-normal">Sed ac neque at magna sagittis rhoncus nec vel magna. Duis ac urna in sem sollicitudin efficitur eleifend ultrices velit.</p>
