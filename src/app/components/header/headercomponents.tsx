@@ -14,7 +14,6 @@ const Header = () => {
   const mobileToggleOpen = () => {
     setIsOpen(!isOpen);
   };
-
 // Check screen width
 useEffect(() => {
   const handleResize = () => {

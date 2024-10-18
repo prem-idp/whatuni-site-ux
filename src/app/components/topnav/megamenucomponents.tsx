@@ -16,7 +16,6 @@ const Megamenucomponents = () => {
     };
     // Menu open/close state
     const [isOpen, setIsOpen] = useState(false);
-
     const closeMegamenu = () => {
         setIsOpen(isOpen)
      }
