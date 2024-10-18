@@ -2,26 +2,17 @@
 
 import React, { useRef, useState } from 'react';
 import AdviceCourseCard from '../cards/advice-course/advicecoursecard';
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import AdviceCourseCardSkeleton from '../skeleton/advicecoursecardskeleton';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-// import required modules
 import { FreeMode, Navigation, Pagination} from 'swiper/modules';
-
 const Advicecourseslidercomponents = () => {
   return (
     <>
-      <div className='advice-course-container px-[0] xl2:px-[0]  mt-[48px]'>
         <div className="slider-container">
         <Swiper
-        freeMode={true}
         pagination={true}
         navigation={true}
         breakpoints={{
@@ -35,12 +26,11 @@ const Advicecourseslidercomponents = () => {
           },
           1200: {
             slidesPerView: 3,
-            spaceBetween: 20,
-            
+            spaceBetween: 20,            
           },
         }}
-        modules={[FreeMode, Pagination, Navigation]}
-        className="mySwiper">
+        modules={[FreeMode, Pagination, Navigation]} 
+        className="MultiSwiper">
             <SwiperSlide>
               <AdviceCourseCard />
             </SwiperSlide>
@@ -56,9 +46,11 @@ const Advicecourseslidercomponents = () => {
             <SwiperSlide>
               <AdviceCourseCard />
             </SwiperSlide>
+            <SwiperSlide>
+              <AdviceCourseCard />
+            </SwiperSlide>            
           </Swiper>
         </div>
-      </div>
     </>
   );
 };
