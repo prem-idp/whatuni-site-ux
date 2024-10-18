@@ -137,7 +137,7 @@ useEffect(() => {
             {isMobile ? (
               <>
               <div className={`${isOpen ? 'animate-fadeIn block' : 'hidden'} bg-neutral400 lg:bg-transparent fixed top-0 left-0 right-0 bottom-0 z-[5]`}></div>
-               <div className={`megamenu-container fixed left-0 top-0 z-[6] w-full h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0' :'-translate-x-full'}`}>
+               <div className={`megamenu-container fixed left-0 top-0 z-[6] w-full h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${isOpen ? 'animate-fadeInLeft' :'-translate-x-full'}`}>
                 
               <Fragment>
               { isOpen && (
