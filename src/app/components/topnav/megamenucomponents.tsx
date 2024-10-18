@@ -63,7 +63,7 @@ const Megamenucomponents = () => {
                     : (
                         <>    
                         {openMenu === 'menu1' && (
-                        <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] lg:border-t lg:border-grey-300`}>
+                        <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
 
                          <div className="max-w-container mx-auto">
                             <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
@@ -102,7 +102,7 @@ const Megamenucomponents = () => {
                     :(
                     <>    
                         {openMenu === 'menu2' && (    
-                        <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] lg:border-t lg:border-grey-300`}>
+                        <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                             <div className="max-w-container mx-auto">
                                 <section className="grid grid-cols-1 lg:grid-cols-[610px_auto_auto] lg:gap-[16px] p-[0] lg:p-[24px]">
                                     <Menucategory1x2card />
@@ -139,7 +139,7 @@ const Megamenucomponents = () => {
                     ):(
                         <>    
                             {openMenu === 'menu3' && (    
-                                <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] lg:border-t lg:border-grey-300`}>
+                                <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
                                             <Menucategory1card />
@@ -177,7 +177,7 @@ const Megamenucomponents = () => {
                     ):(
                         <>    
                             {openMenu === 'menu4' && (    
-                            <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] lg:border-t lg:border-grey-300`}>
+                            <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                 <div className="max-w-container mx-auto">
                                     <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
                                         <Menucategory1card />
@@ -215,7 +215,7 @@ const Megamenucomponents = () => {
                     ):(
                         <>    
                             {openMenu === 'menu5' && (    
-                                <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] lg:border-t lg:border-grey-300`}>
+                                <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
                                             <Menucategory1card />
@@ -253,7 +253,7 @@ const Megamenucomponents = () => {
                     ):(
                         <>    
                             {openMenu === 'menu6' && (    
-                                <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] lg:border-t lg:border-grey-300`}>
+                                <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
                                             <Menucategory1card />
@@ -290,7 +290,7 @@ const Megamenucomponents = () => {
                     ):(
                         <>    
                             {openMenu === 'menu7' && (    
-                                <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] lg:border-t lg:border-grey-300`}>
+                                <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[94px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
                                             <Menucategory1card />

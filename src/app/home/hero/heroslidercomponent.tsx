@@ -92,7 +92,7 @@ const HeroSliderComponent = () => {
         </div>
       </div>
       <div className="pb-[12px] md:px-[16px]">
-        <div className="bg-white w-full rounded-none max-w-container mx-auto p-[16px] mt-0 min-h-[160px] relative z-10 md:shadow-custom-5 md:rounded-[32px] md:p-[24px] md:mt-[-82px]">
+        <div className="bg-white w-full rounded-none max-w-container mx-auto p-[16px] mt-0 min-h-[160px] relative z-3 md:shadow-custom-5 md:rounded-[32px] md:p-[24px] md:mt-[-82px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[16px]">
             <ul className="flex gap-[4px] justify-center md:justify-start">
               <li role="button">
