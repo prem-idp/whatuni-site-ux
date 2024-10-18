@@ -6,7 +6,7 @@ const AdviceCourseCardSkeleton = () => {
         <div className='advicecourse-inner-wrap'>
             <div className='card flex flex-col bg-white rounded-[8px] shadow-custom-2'>
                 <div className='card-header'>
-                    <div className='skeleton skeleton-thumb-img skeleton-text-animated min-h-[185px]'></div>
+                    <div className='skeleton skeleton-thumb-img skeleton-text-animated min-h-[221px]'></div>
                 </div>            
                 <div className='card-body flex flex-col gap-[10px] p-[16px]'>
                     <h5 className='card-title'>

@@ -61,6 +61,19 @@ const dropdownData = {
 
 export default dropdownData;
 
+// export const optionsStep1: CheckboxOption[] = [
+//   { id: "postgraduate", label: "Postgraduate" },
+//   { id: "undergraduate", label: "Undergraduate" },
+//   { id: "premasters", label: "Pre-masters and Vocational" },
+// ];
+// export const optionsStep3: CheckboxOption[] = [
+//   { id: "australia", label: "Australia" },
+//   { id: "canada", label: "Canada" },
+//   { id: "ireland", label: "Ireland" },
+//   { id: "newzealand", label: "New Zealand" },
+//   { id: "uk", label: "UK" },
+//   { id: "usa", label: "USA" },
+// ];
 export const optionsStep4 = [
   {
     title: "Speak to an expert",
