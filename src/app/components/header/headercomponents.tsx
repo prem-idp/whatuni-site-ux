@@ -14,16 +14,16 @@ const Header = () => {
   const mobileToggleOpen = () => {
     setIsOpen(!isOpen);
   };
-useEffect(() => {
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 991);
-  };
-   handleResize();
-  window.addEventListener('resize', handleResize);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 991);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-  // Cleanup event listener on unmount
-  return () => window.removeEventListener('resize', handleResize);
-}, []);
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // search click
   const [isSearchClicked, setIsSearchClicked] = useState(false);
@@ -95,7 +95,7 @@ useEffect(() => {
   };
   return (
     <>
-      <header className="bg-white pl-[16px] pr-[21px] py-[4px] xl:px-0 xl:py-[8px]">
+      <header className="bg-white pl-[16px] pr-[21px] py-[4px] xl2:px-0 xl2:py-[8px]">
         <div className="max-w-container mx-auto flex items-center ">
           <div className="order-2 md:grow md:basis-[100%] lg:order-1 lg:grow-0 lg:basis-[70px]">
             <Link href="#">
@@ -111,7 +111,11 @@ useEffect(() => {
           </div>
           <div className="order-1 md:grow md:basis-[100%] lg:order-2 lg:grow-1 lg:basis-0">
             {isMobile && (
-            <button className="mr-[16px] block lg:hidden" onClick={mobileToggleOpen} aria-label="Mobile Toggle">
+              <button
+                className="mr-[16px] block lg:hidden"
+                onClick={mobileToggleOpen}
+                aria-label="Mobile Toggle"
+              >
                 <svg
                   width="24"
                   height="24"
@@ -127,33 +131,61 @@ useEffect(() => {
                     strokeLinejoin="round"
                   />
                 </svg>
-            </button>
+              </button>
             )}
             {isMobile ? (
               <>
-              <div className={`${isOpen ? 'animate-fadeIn block' : 'hidden'} bg-neutral400 lg:bg-transparent fixed top-0 left-0 right-0 bottom-0 z-[5]`}></div>
-               <div className={`megamenu-container fixed left-0 top-0 z-[6] w-full h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${isOpen ? 'animate-fadeInLeft' :'-translate-x-full'}`}>
-                
-              <Fragment>
-              { isOpen && (
-                <div className="relative z-[6] w-fit">
-                    <div onClick={mobileToggleOpen} className={`menu-close-card lg:hidden absolute right-[-40px]`}>
-                      <div className='menu-close bg-neutral-900 p-[8px]'>
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 6L6 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <path d="M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
+                <div
+                  className={`${
+                    isOpen ? "animate-fadeIn block" : "hidden"
+                  } bg-neutral400 lg:bg-transparent fixed top-0 left-0 right-0 bottom-0 z-[5]`}
+                ></div>
+                <div
+                  className={`megamenu-container fixed left-0 top-0 z-[6] w-full h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${
+                    isOpen ? "animate-fadeInLeft" : "-translate-x-full"
+                  }`}
+                >
+                  <Fragment>
+                    {isOpen && (
+                      <div className="relative z-[6] w-fit">
+                        <div
+                          onClick={mobileToggleOpen}
+                          className={`menu-close-card lg:hidden absolute right-[-40px]`}
+                        >
+                          <div className="menu-close bg-neutral-900 p-[8px]">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M18 6L6 18"
+                                stroke="white"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                              <path
+                                d="M6 6L18 18"
+                                stroke="white"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <Megamenucomponents />
                       </div>
-                  </div>
-                  <Megamenucomponents/>
-                </div>                         
-               )}                         
-            </Fragment>
-            </div>
-            </>
-              ) : (
-                <Megamenucomponents />
-              )}
+                    )}
+                  </Fragment>
+                </div>
+              </>
+            ) : (
+              <Megamenucomponents />
+            )}
           </div>
           <div className="order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
             <ul className="flex items-center justify-end gap-[10px]">
@@ -182,7 +214,7 @@ useEffect(() => {
                 </Link>
                 {/* course tab section */}
                 {isSearchClicked && (
-                  <div className="bg-white absolute top-0 left-0 right-0 min-h-[222px] z-10 lg:top-[94px]">
+                  <div className="bg-white absolute top-0 left-0 right-0 min-h-[222px] z-10 lg:top-[86px] xl:top-[94px]">
                     <div className="max-w-container w-full mx-auto flex flex-col px-[16px] py-[8px] cursor-pointer lg:py-[16px]">
                       <div
                         className="flex justify-end mr-[-8px]"
@@ -246,18 +278,18 @@ useEffect(() => {
                             </Link>
                           </li>
                         </ul>
-                        <div className="w-full lg:max-w-[804px]">
+                        <div className="w-full lg:max-w-[800px]">
                           {activeTab === "tab1" && (
-                            <div className="flex flex-col gap-[24px]">
-                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:pr-[10px] md:py-[7px]">
+                            <div className="flex flex-col gap-[24px] min-h-[60px]">
+                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 lg:pl-[24px] lg:p-[10px]">
                                 <div className="flex flex-col items-stretch md:flex-row md:items-center">
-                                  <div className="relative mb-[24px] md:mb-[0]">
+                                  <div className="relative mb-[24px] md:mb-[0] shrink-0">
                                     <button
                                       onClick={() => courseActions("UG")}
-                                      className="flex items-center justify-between gap-[4px] mr-0 w-full small text-black md:w-[124px] md:mr-[16px]"
+                                      className="flex items-center justify-between gap-[4px] mr-0 w-full small text-black md:w-[160px] md:mr-[16px]"
                                       type="button"
                                     >
-                                      Undergraduate
+                                      Access & foundation
                                       <Image
                                         src="/assets/icons/arrow_down_black.svg"
                                         width="20"
@@ -266,7 +298,7 @@ useEffect(() => {
                                       />
                                     </button>
                                     {isUndergratuateClicked && (
-                                      <div className="w-full z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-0 top-[40px] overflow-hidden lg:w-[230px]">
+                                      <div className="w-full z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-[-16px] top-[43px] overflow-hidden lg:w-[192px]">
                                         <ul>
                                           <li>
                                             <Link
@@ -316,16 +348,16 @@ useEffect(() => {
                                     className="w-full relative border-y-[1px] border-neutral200 grow md:border-l md:border-y-0"
                                     onClick={() => courseActions("Subject")}
                                   >
-                                    <div className="flex items-center w-full my-[12px] md:my-[0]">
+                                    <div className="flex items-center my-[12px] md:my-[0]">
                                       <input
                                         type="text"
                                         className="form-control w-full focus:outline-none small text-black placeholder:text-gray-500 px-[0] py-[11px] md:px-[16px]"
-                                        aria-label=""
+                                        aria-label="submenu"
                                         placeholder="Enter subject"
                                       />
                                     </div>
                                     {isSubjectClicked && (
-                                      <div className="w-full md:w-[253px] z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-0 top-[50px] max-h-[311px] overflow-y-scroll custom-vertical-scrollbar overflow-hidden">
+                                      <div className="w-full z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-0 top-[54px] max-h-[311px] overflow-y-scroll custom-scrollbar-2 overflow-hidden">
                                         <Link href="">
                                           <div className="px-[16px] py-[12px]">
                                             <p className="x-small font-semibold text-black tracking-[1px] leading-[18px]">
@@ -393,16 +425,16 @@ useEffect(() => {
                                     className="w-full relative grow md:border-l border-neutral200"
                                     onClick={() => courseActions("Location")}
                                   >
-                                    <div className="flex items-center w-full my-[12px] md:my-[0] border-l-0 lg:border-l border-neutral-200">
+                                    <div className="flex items-center my-[12px] md:my-[0]">
                                       <input
                                         type="text"
                                         className="form-control w-full focus:outline-none small text-black placeholder:text-gray-500 px-[0] py-[11px] md:px-[16px]"
-                                        aria-label=""
+                                        aria-label="submenu"
                                         placeholder="Location (optional)"
                                       />
                                     </div>
                                     {isLocationClicked && (
-                                      <div className="w-full md:w-[253px] z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-0 top-[50px] overflow-hidden">
+                                      <div className="w-full z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left-0 top-[54px] overflow-hidden">
                                         <ul>
                                           <li>
                                             <Link
@@ -464,7 +496,7 @@ useEffect(() => {
                                   </div>
                                 </div>
                               </div>
-                              <div className="flex items-center justify-center gap-[4px] small">
+                              <div className="flex items-center justify-center gap-[4px] small cursor-default">
                                 <svg
                                   width="20"
                                   height="20"
@@ -493,24 +525,118 @@ useEffect(() => {
                             </div>
                           )}
                           {activeTab === "tab2" && (
-                            <div className="flex flex-col gap-[24px]">
-                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 lg:pl-[24px] lg:p-[8px]">
-                                <div className="flex flex-col gap-x-[10px] justify-between relative lg:flex-row">
-                                  <div className="grow">
+                            <div className="flex flex-col gap-[24px] min-h-[60px]">
+                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 lg:pl-[24px] lg:p-[10px]">
+                                <div className="flex flex-col gap-x-[10px] justify-between lg:flex-row">
+                                  <div className="relative grow">
                                     <input
                                       onClick={() =>
                                         courseActions("University")
                                       }
                                       type="text"
-                                      className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 lg:py-[10px] border-b border-neutral-400 lg:border-none"
-                                      aria-label=""
+                                      className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 lg:py-[10px] border-b border-neutral200 lg:border-none"
+                                      aria-label="submenu"
                                       placeholder="University name"
                                     />
+                                    {isUniversityClicked && (
+                                      <div className="flex flex-col w-full absolute z-[1] bg-white shadow-custom-3 rounded-[8px] left-[-16px] top-[52px] overflow-hidden">
+                                        <div className="x-small font-semibold uppercase px-[16px] py-[10px] text-neutral-700 bg-neutral-50">
+                                          UNIVERSITIES
+                                        </div>
+                                        <ul className="custom-scrollbar-2 max-h-[205px] overflow-y-scroll mr-[4px]">
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Law
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Manchester
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Liverpool
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Barnsley
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Burnley
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              Bristol, University of the West of
+                                              England
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              INTO Manchester (The University of
+                                              Manchester)
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              Courtauld Institute of Art,
+                                              University of London
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              Cardiff Metropolitan University
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              Institute of Advanced Legal
+                                              Studies, School of Advanced Study,
+                                              University of London
+                                            </Link>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    )}
                                   </div>
                                   <div className="pt-[16px] md:pt-[0]">
                                     <button
                                       type="submit"
-                                      className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] min-w-[136px]"
+                                      className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[138px]"
                                     >
                                       <Image
                                         src="/assets/icons/search_icon.svg"
@@ -521,133 +647,135 @@ useEffect(() => {
                                       Search
                                     </button>
                                   </div>
-                                  {isUniversityClicked && (
-                                    <div className="flex flex-col w-[calc(100%+16px)] absolute z-[1] bg-white shadow-custom-3 rounded-[8px] left-[-8px] top-[53px] overflow-hidden">
-                                      <div className="x-small font-semibold uppercase px-[16px] py-[10px] text-neutral-700 bg-neutral-50">
-                                        UNIVERSITIES
-                                      </div>
-                                      <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Law
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Manchester
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Liverpool
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Barnsley
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Burnley
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            Bristol, University of the West of
-                                            England
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            INTO Manchester (The University of
-                                            Manchester)
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            Courtauld Institute of Art,
-                                            University of London
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            Cardiff Metropolitan University
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            Institute of Advanced Legal Studies,
-                                            School of Advanced Study, University
-                                            of London
-                                          </Link>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  )}
                                 </div>
                               </div>
-                              <Link
-                                href="#"
-                                className="flex items-center justify-center gap-[4px] text-blue-500 small font-semibold hover:underline"
-                              >
-                                Browse unis A-Z
-                                <Image
-                                  src="/assets/icons/arrow-right.svg"
-                                  width={20}
-                                  height={20}
-                                  alt="Right Arrow"
-                                />
-                              </Link>
+                              <div className="flex justify-center cursor-default">
+                                <Link
+                                  href="#"
+                                  className="flex items-center gap-[4px] text-blue-500 small font-semibold hover:underline"
+                                >
+                                  Browse unis A-Z
+                                  <Image
+                                    src="/assets/icons/arrow-right.svg"
+                                    width={20}
+                                    height={20}
+                                    alt="Right Arrow"
+                                  />
+                                </Link>
+                              </div>
                             </div>
                           )}
                           {activeTab === "tab3" && (
-                            <div className="flex flex-col gap-[24px]">
-                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 lg:pl-[24px] lg:p-[8px]">
-                                <div className="flex flex-col gap-x-[10px] justify-between relative lg:flex-row">
-                                  <div className="grow">
+                            <div className="flex flex-col gap-[24px] min-h-[60px]">
+                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 lg:pl-[24px] lg:p-[10px]">
+                                <div className="flex flex-col gap-x-[10px] justify-between lg:flex-row">
+                                  <div className="relative grow">
                                     <input
                                       onClick={() => courseActions("Advice")}
                                       type="text"
-                                      className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 lg:py-[10px] border-b border-neutral-400 lg:border-none"
-                                      aria-label=""
+                                      className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 lg:py-[10px] border-b border-neutral200 lg:border-none"
+                                      aria-label="submenu"
                                       placeholder="Enter keyword"
                                     />
+                                    {isAdviceClicked && (
+                                      <div className="flex flex-col w-full absolute z-[1] bg-white shadow-custom-3 rounded-[8px] left-[-16px] top-[53px] overflow-hidden">
+                                        <div className="x-small font-semibold uppercase px-[16px] py-[10px] text-neutral-700 bg-neutral-50">
+                                          UNIVERSITIES
+                                        </div>
+                                        <ul className="custom-scrollbar-2 max-h-[205px] overflow-y-scroll mr-[4px]">
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Law
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Manchester
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Liverpool
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Barnsley
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              University of Burnley
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              Bristol, University of the West of
+                                              England
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              INTO Manchester (The University of
+                                              Manchester)
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              Courtauld Institute of Art,
+                                              University of London
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              Cardiff Metropolitan University
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link
+                                              className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
+                                              href="#"
+                                            >
+                                              Institute of Advanced Legal
+                                              Studies, School of Advanced Study,
+                                              University of London
+                                            </Link>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    )}
                                   </div>
                                   <div className="pt-[16px] md:pt-[0]">
                                     <button
                                       type="submit"
-                                      className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] min-w-[136px]"
+                                      className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[138px]"
                                     >
                                       <Image
                                         src="/assets/icons/search_icon.svg"
@@ -658,114 +786,22 @@ useEffect(() => {
                                       Search
                                     </button>
                                   </div>
-                                  {isAdviceClicked && (
-                                    <div className="flex flex-col w-[calc(100%+16px)] absolute z-[1] bg-white shadow-custom-3 rounded-[8px] left-[-8px] top-[53px] overflow-hidden">
-                                      <div className="x-small font-semibold uppercase px-[16px] py-[10px] text-neutral-700 bg-neutral-50">
-                                        UNIVERSITIES
-                                      </div>
-                                      <ul className="custom-vertical-scrollbar max-h-[205px] overflow-y-scroll mr-[4px]">
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Law
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Manchester
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Liverpool
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Barnsley
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            University of Burnley
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            Bristol, University of the West of
-                                            England
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            INTO Manchester (The University of
-                                            Manchester)
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            Courtauld Institute of Art,
-                                            University of London
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            Cardiff Metropolitan University
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link
-                                            className="px-[16px] py-[10px] block small hover:bg-blue-50 hover:underline"
-                                            href="#"
-                                          >
-                                            Institute of Advanced Legal Studies,
-                                            School of Advanced Study, University
-                                            of London
-                                          </Link>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  )}
                                 </div>
                               </div>
-                              <Link
-                                href="#"
-                                className="flex items-center justify-center gap-[4px] text-blue-500 small font-semibold hover:underline"
-                              >
-                                Browse advice
-                                <Image
-                                  src="/assets/icons/arrow-right.svg"
-                                  width={20}
-                                  height={20}
-                                  alt="Right Arrow"
-                                />
-                              </Link>
+                              <div className="flex justify-center cursor-default">
+                                <Link
+                                  href="#"
+                                  className="flex items-center gap-[4px] text-blue-500 small font-semibold hover:underline"
+                                >
+                                  Browse advice
+                                  <Image
+                                    src="/assets/icons/arrow-right.svg"
+                                    width={20}
+                                    height={20}
+                                    alt="Right Arrow"
+                                  />
+                                </Link>
+                              </div>
                             </div>
                           )}
                         </div>
@@ -806,7 +842,7 @@ useEffect(() => {
                 </Link>
                 {/* user section */}
                 {isUserClicked && (
-                  <div className="flex justify-between p-[16px] absolute top-[56px] right-[-39px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] lg:top-[71px] lg:right-0">
+                  <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-39px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] lg:top-[67px] xl:top-[71px] lg:right-0">
                     <ul className="small">
                       <li className="mb-[16px] hover:underline">
                         <Link href="#">My profile</Link>
@@ -859,7 +895,7 @@ useEffect(() => {
 
                 {/* shortlist section */}
                 {isShortlistClicked && (
-                  <div className="flex justify-between p-[16px] absolute top-[56px] right-[-5px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] lg:top-[71px]">
+                  <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-5px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] lg:top-[67px] xl:top-[71px]">
                     <ul className="small">
                       <li className="mb-[16px] hover:underline">
                         <Link href="#">
