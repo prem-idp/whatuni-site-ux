@@ -2,19 +2,12 @@
 
 import React, { useRef, useState } from 'react';
 import AdviceCourseCard from '../cards/advice-course/advicecoursecard';
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import AdviceCourseCardSkeleton from '../skeleton/advicecoursecardskeleton';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-// import required modules
 import { FreeMode, Navigation, Pagination} from 'swiper/modules';
-
 const Advicecourseslidercomponents = () => {
   return (
     <>
