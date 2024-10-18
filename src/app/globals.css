@@ -192,9 +192,61 @@ p,.para {@apply text-para}
 .swiper-pagination-bullet{@apply !bg-grey-200 !opacity-[1] !mx-[2px]}
 .swiper-pagination-bullet-active{@apply !bg-blue-300} 
 /* Swiper Styles */
+.animate-fadeIn{
+  animation: fadeIn .2s ease-in;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate-fadeOut{
+  animation: fadeIn .2s ease-out;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.animate-fadeInLeft{
+  animation: fadeInLeft .3s;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate-fadeOutLeft{
+  animation: fadeOutLeft 0.3s;
+}
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
 
 /* For testing purpose */
-
-/* .wusca-container, .reviews-container {@apply bg-black} */
+/* .wusca-container, .reviews-container, .advice-container {@apply bg-black}
+.discover-container, .testimonials-container{@apply bg-neutral-300} */
 
 

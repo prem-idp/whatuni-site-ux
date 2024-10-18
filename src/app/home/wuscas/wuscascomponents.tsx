@@ -130,7 +130,6 @@ const Wuscascomponents = () => {
                       </linearGradient>
                       </defs>
                       </svg>
-
                     </a>
                   </li>
                 </ul>

@@ -14,10 +14,9 @@ const Megamenucomponents = () => {
     const megaMenu = (menuId: string) => {
         setOpenMenu(openMenu === menuId ? null : menuId);
     };
-
+    
     // Menu open/close state
     const [isOpen, setIsOpen] = useState(false);
-
     const closeMegamenu = () => {
         setIsOpen(isOpen)
      }
