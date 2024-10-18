@@ -218,6 +218,7 @@ p,.para {@apply text-para}
     transform: translate3d(-100%, 0, 0);
   }
 }
+
 /* For testing purpose */
 /* .wusca-container, .reviews-container, .advice-container {@apply bg-black}
 .discover-container, .testimonials-container{@apply bg-neutral-300} */

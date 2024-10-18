@@ -19,7 +19,6 @@ useEffect(() => {
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 991);
   };
-
   // Initial check
   handleResize();
   // Add event listener on resize
