@@ -19,7 +19,6 @@ useEffect(() => {
     setIsMobile(window.innerWidth <= 991);
   };
    handleResize();
-  // Add event listener on resize
   window.addEventListener('resize', handleResize);
 
   // Cleanup event listener on unmount
