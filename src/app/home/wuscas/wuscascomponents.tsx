@@ -7,11 +7,13 @@ const Wuscascomponents = () => {
     <section className='wusca-container bg-neutral-50'>
       <div className="max-w-container mx-auto">
         {/* container */}
-        <div className="wusca-card-container grid  xs:grid-rows-[3_minmax(0_auto)] md:grid-cols-[auto_minmax(352px,_1fr)] lg:grid-cols-[auto_minmax(598px,_1fr)] px-[16px] py-[40px] md:px-[20px] md:pt-[50px] md:pb-[64px] lg:p-[0] xs:gap-[24px] md:gap-[20px] lg:gap-[16px]">
-          <div className="wusca-content flex flex-col justify-center col-start-1 row-start-2 md:row-start-1 lg:col-span-1 gap-[16px] md:gap-[12px]">
-              <h2 className="font-bold">Nam vitae porttitor lorem.</h2>
-              <p className="font-normal">Sed ac neque at magna sagittis rhoncus nec vel magna. Duis ac urna in sem sollicitudin efficitur eleifend ultrices velit.</p>
-              <Link href="#" className="flex items-center gap-[6px] w-fit bg-primary-400 hover:bg-primary-500 text-white rounded-[20px] font-inter font-semibold text-small px-[20px] py-[10px] my-[0] md:mt-[10px] md:mb-[16px]">
+        <div className="wusca-card-container grid  xs:grid-rows-[3_minmax(0_auto)] md:grid-cols-[auto_minmax(352px,_1fr)] xl:grid-cols-[auto_minmax(598px,_1fr)] px-[16px] py-[40px] md:px-[20px] md:pt-[0] md:pb-[64px] xl:p-[0] xs:gap-[24px] md:gap-[20px] xl:gap-x-[20px] xl:gap-y-[24px]">
+          <div className="wusca-content flex flex-col justify-center xl:justify-end col-start-1 row-start-2 md:row-start-1 xl:col-span-1 gap-[16px] md:gap-[24px]">
+              <div className='flex flex-col gap-[8px]'>
+                <h2 className="font-bold">Nam vitae porttitor lorem.</h2>
+                <p className="font-normal">Sed ac neque at magna sagittis rhoncus nec vel magna. Duis ac urna in sem sollicitudin efficitur eleifend ultrices velit.</p>
+              </div>
+              <Link href="#" className="flex items-center gap-[6px] w-fit bg-primary-400 hover:bg-primary-500 text-white rounded-[20px] font-inter font-semibold text-small px-[20px] py-[10px]">
                 Learn more
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.55556 1.55554L15 6.99999M15 6.99999L9.55555 12.4444M15 6.99999L1 6.99999"
@@ -19,7 +21,7 @@ const Wuscascomponents = () => {
                 </svg>
               </Link>
               <div className='app-store-container '>
-                <ul className="flex gap-[16px] lg:gap-[24px]">
+                <ul className="flex gap-[16px] xl:gap-[24px]">
                   <li>
                     <a href="#" aria-label="App Store">
                     <svg width="120" height="41" viewBox="0 0 120 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +137,7 @@ const Wuscascomponents = () => {
                 </ul>
               </div>              
             </div>
-            <div className='wusca-highlights grid grid-cols-3 items-baseline gap-[8px] row-start-3 row-end-4 col-start-1 col-end-2 md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-3  lg:col-end-2 '> 
+            <div className='wusca-highlights grid grid-cols-3 items-baseline gap-[8px] row-start-3 row-end-4 col-start-1 col-end-2 md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-3  xl:col-end-2 '> 
                 <div className='wusca-card flex items-center flex-col md:flex-row gap-[8px] px-[16px] py-[12px] rounded-[4px] border border-grey-300'>
                   <Image className='w-[32px] h-[32px]' src="/assets/images/wusca/icon-building-outlined-grey.svg" width="32" height="32"  alt="wusca chat icon" />
                   <div className='wusca-content text-center md:text-left'>
@@ -158,7 +160,7 @@ const Wuscascomponents = () => {
                   </div>
                 </div>
               </div>
-              <div className="grid px-[20px] md:px-[16px] lg:px-[98px] md:py-[36px] row-start-1 row-end-2 lg:row-end-3 col-start-2 -col-end-1">
+              <div className="grid justify-center px-[20px] md:px-[16px] md:py-[36px] xl:px-[0] row-start-1 row-end-2 xl:row-end-3 col-start-2 -col-end-1">
               <Image src="/assets/images/wusca/wusca-image.png" width={402} height={401} alt="wusca" />
             </div>
           </div>

@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
-//import { Inter } from "next/font/google";
+import customFont from "next/font/local"
 import "./globals.css";
 import Header from "./components/header/headercomponents";
 import Footer from "./components/footer/footercomponents";
-import OpenDays from "./components/open-days/opendayscomponents";
 
-//const inter = Inter({ subsets: ["latin"] });
+// const farroMedium = customFont({
+//   src: [{
+//     path: '../../public/assets/fonts/Farro-Medium.woff2', 
+//     weight: '500',
+//   }],
+//   display: 'swap',
+//   variable: "--farro"  
+// });
+// const farroBold = customFont({
+//   src: '../../public/assets/fonts/Farro-Bold.woff2', 
+//   weight: '700',
+//   display: 'swap',
+//   variable: "--farro" 
+// });
 
 export const metadata: Metadata = {
   title: "Compare the Best University Degrees Courses UK | Whatuni",
