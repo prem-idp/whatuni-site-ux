@@ -34,7 +34,7 @@ const Megamenucomponents = () => {
   return (
     <>
         <div className='flex lg:items-center lg:justify-center'>
-        <nav className="p-[16px] w-[335px] h-[100vh] overflow-y-scroll bg-white lg:w-fit lg:h-auto lg:overflow-y-visible">
+        <nav className="p-[16px] w-[335px] h-[100vh] overflow-y-scroll bg-white lg:p-0 lg:w-fit lg:h-auto lg:overflow-y-visible">
             <ul className="flex flex-col lg:flex-row gap-[10px] lg:gap-[24px] justify-center">
                 <li>
                     <Link onClick={() => megaMenu('menu1')} href="" className={`flex justify-between items-center px-[16px] py-[10px] lg:px-[0] font-semibold para text-grey300 bg-neutral100 lg:bg-transparent 
