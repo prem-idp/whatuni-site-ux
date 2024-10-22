@@ -142,11 +142,9 @@ const Header = () => {
                 ></div>
                 <div
                   className={`megamenu-container fixed left-0 top-0 z-[6] w-full h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${
-                    isOpen ? "animate-fadeInLeft" : "-translate-x-full"
+                    isOpen ? "animate-fadeInLeft" : "-translate-x-full duration-300"
                   }`}
                 >
-                  <Fragment>
-                    {isOpen && (
                       <div className="relative z-[6] w-fit">
                         <div
                           onClick={mobileToggleOpen}
@@ -179,8 +177,6 @@ const Header = () => {
                         </div>
                         <Megamenucomponents />
                       </div>
-                    )}
-                  </Fragment>
                 </div>
               </>
             ) : (

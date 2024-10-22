@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Reviewscard = () => {
   return (
     <div className="reviews-card bg-white p-[16px] rounded-[8px] box-shadow-custom-2">
-    <div className="review-card-header flex gap-[8px] border-b border-neutrale-200 pb-[16px]">
+    <div className="review-card-header flex items-center gap-[8px] border-b border-neutrale-200 pb-[16px]">
         <h6 className="review-box__avatar flex justify-center items-center text-white w-[48px] h-[48px] bg-primary-400 rounded-[100px]">MW</h6>
         <div className="review-box__details flex flex-col justify-center w-[calc(100%_-_48px)]">
           <div className="review-box__name font-semibold small text-grey300 line-clamp-1">Archie Kinkead</div>
