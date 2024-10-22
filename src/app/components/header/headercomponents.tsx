@@ -95,7 +95,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="bg-white pl-[16px] pr-[21px] py-[4px] xl2:px-0 xl2:py-[8px]">
+      <header className="bg-white pl-[16px] pr-[21px] py-[4px] md:px-[20px] xl2:px-0 xl2:py-[8px]">
         <div className="max-w-container mx-auto flex items-center ">
           <div className="order-2 md:grow md:basis-[100%] lg:order-1 lg:grow-0 lg:basis-[70px]">
             <Link href="#">

@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main>
+        <main className="bg-neutral-50">
           {children}
         </main>
         <Footer />
