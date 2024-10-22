@@ -5,8 +5,8 @@ const Tagcloudcomponents = () => {
   return (
     <div className='tag-cloud-container bg-white'> 
     <div className="max-w-container mx-auto">
-        <div className='tag-cloud-card-container px-[0] py-[34px] lg:py-[60px]'>
-            <div className='tag-cloud-header px-[20px] lg:px-[0] mb-[26px] md:mb-[32px]'>
+        <div className='tag-cloud-card-container px-[20px] lg:px-[0] py-[34px] lg:py-[60px]'>
+            <div className='tag-cloud-header mb-[26px] md:mb-[32px]'>
                 <h2 className='font-bold'>Tag cloud heading</h2>
             </div>
               <div className="tag-cloud-inner-wrap"> 
