@@ -1,4 +1,3 @@
-import { Container } from "postcss";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -23,6 +22,7 @@ const config: Config = {
       xxxl: "1920px",
     },
     fontFamily: {
+      // farro: ["var(--farro)"],
       farro: ["Farro", "sans-serif"],
       inter: ["Inter", "sans-serif"],
     },
@@ -71,7 +71,7 @@ const config: Config = {
           700: "#767676",
         },
         primary: {
-          50: "#EDF7FF",
+          50: "#EDFCFF",
           100: "#E6F1FB",
           200: "#E6F1FB",
           300: "#0086F8",

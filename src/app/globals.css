@@ -90,7 +90,7 @@ body {
 }
 
 /* typograpy */
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{@apply font-farro;letter-spacing: -0.02rem}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{@apply font-farro; letter-spacing: -0.02rem}
 .h1-xl {@apply text-heading-xl}
 .h1-lg {@apply text-heading-lg}
 h1,.h1 {@apply text-heading2 lg:text-heading1}
@@ -104,7 +104,6 @@ p,.para {@apply text-para}
 .small {@apply text-small}
 .x-small {@apply text-x-small}
 .xs-small {@apply text-xs-small}
-
 /* typograpy */
 
 @layer utilities {}
@@ -169,7 +168,7 @@ p,.para {@apply text-para}
 .MultiSwiper .swiper-pagination-bullet-active{@apply !bg-blue-300} 
 /* Swiper Styles */
 .animate-fadeIn{
-  animation: fadeIn .2s ease-in;
+  animation: fadeIn .3s ease-in;
 }
 @keyframes fadeIn {
   0% {
@@ -180,7 +179,7 @@ p,.para {@apply text-para}
   }
 }
 .animate-fadeOut{
-  animation: fadeIn .2s ease-out;
+  animation: fadeIn .3s ease-out;
 }
 @keyframes fadeOut {
   0% {
@@ -191,7 +190,7 @@ p,.para {@apply text-para}
   }
 }
 .animate-fadeInLeft{
-  animation: fadeInLeft .3s;
+  animation: fadeInLeft .5s;
 }
 @keyframes fadeInLeft {
   from {
@@ -222,15 +221,15 @@ p,.para {@apply text-para}
 }
 
 /* For testing purposee */
-/* .wusca-container, .reviews-container, .advice-container {@apply bg-black}
+ /* .wusca-container, .reviews-container, .advice-container {@apply bg-black}
 .discover-container, .testimonials-container{@apply bg-neutral-300} */
 
 /* hero slider styles */
-.hero .swiper-pagination {@apply !top-[40px] !left-0 text-left}
+.hero .swiper-pagination {@apply !top-[40px] !left-0 text-left !bottom-auto}
 .hero .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,.hero .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{@apply !ml-0}
 .hero .swiper-pagination-bullet {@apply bg-blue-100 w-[8px] h-[8px] rounded-[4px] !opacity-90}
 .hero .swiper-pagination-bullet-active { @apply !bg-primary-500 !w-[16px] !h-[8px] rounded-[4px] !opacity-90}
 /* partner slider styles */
-.partner{ @apply !pb-[30px]}
+.partner{@apply !pb-[30px]}
 .partner .swiper-pagination { @apply !bottom-0}
 .partner .swiper-pagination { @apply lg:!hidden}

@@ -1,7 +1,24 @@
 import Discoverslidercomponents from '@/app/components/slider/discoverslidercomponents'
 import React from 'react'
+import customFont from "next/font/local"
+
+// const farroMedium = customFont({
+//   src: [{
+//     path: '../../../../public/assets/fonts/Farro-Medium.woff2', 
+//     weight: '500',
+//   }],
+//   display: 'swap',
+//   variable: "--farro"  
+// });
+// const farroBold = customFont({
+//   src: '../../../../public/assets/fonts/Farro-Bold.woff2', 
+//   weight: '700',
+//   display: 'swap',
+//   variable: "--farro" 
+// });
 
 const Discovercomponents = () => {
+  
   return (
     <div className='discover-container bg-white'> 
       <div className="max-w-container mx-auto">
