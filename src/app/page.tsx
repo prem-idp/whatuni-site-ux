@@ -22,7 +22,6 @@ export default function Home() {
       <HeroSliderComponent/>
       <Wuscascomponents />
       <Discovercomponents />
-      <Tagcloudcomponents />
       <Advicecomponents />
       <Testimonialcomponents />
       <Reviewscomponents />

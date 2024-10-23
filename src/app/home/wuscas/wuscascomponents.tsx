@@ -138,21 +138,21 @@ const Wuscascomponents = () => {
               </div>              
             </div>
             <div className='wusca-highlights grid grid-cols-3 items-baseline gap-[8px] row-start-3 row-end-4 col-start-1 col-end-2 md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-3  xl:col-end-2 '> 
-                <div className='wusca-card flex items-center flex-col md:flex-row gap-[8px] px-[16px] py-[12px] rounded-[4px] border border-grey-300'>
+                <div className='wusca-card flex items-center flex-col md:flex-row gap-[8px] px-[16px] py-[12px] rounded-[4px] border border-grey300'>
                   <Image className='w-[32px] h-[32px]' src="/assets/images/wusca/icon-building-outlined-grey.svg" width="32" height="32"  alt="wusca chat icon" />
                   <div className='wusca-content text-center md:text-left'>
                     <h3 className='font-bold'>101</h3>
                     <div className='font-semibold small'>UK universities</div>
                   </div> 
                 </div>
-                <div className='wusca-card flex items-center flex-col md:flex-row gap-[8px] px-[16px] py-[12px] rounded-[4px] border border-grey-300'>
+                <div className='wusca-card flex items-center flex-col md:flex-row gap-[8px] px-[16px] py-[12px] rounded-[4px] border border-grey300'>
                   <Image className="w-[32px] h-[32px]'" src="/assets/images/wusca/icon-chat-outlined-grey.svg" width="32" height="32"  alt="wusca chat icon" />
                   <div className='wusca-content text-center md:text-left'>
                     <h3 className='font-bold'>38,000</h3>
                     <div className='font-semibold small'>Student reviews</div>
                   </div>
                 </div>
-                <div className='wusca-card flex items-center flex-col md:flex-row gap-[8px] px-[16px] py-[12px] rounded-[4px] border border-grey-300'>
+                <div className='wusca-card flex items-center flex-col md:flex-row gap-[8px] px-[16px] py-[12px] rounded-[4px] border border-grey300'>
                   <Image className='w-[32px] h-[32px]' src="/assets/images/wusca/icon-shine-outlined-grey.svg" width="32" height="32"  alt="wusca chat icon" />
                   <div className='wusca-content text-center md:text-left'>
                     <h3 className='font-bold'>12</h3>
