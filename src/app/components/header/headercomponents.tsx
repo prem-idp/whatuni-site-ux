@@ -277,7 +277,7 @@ const Header = () => {
                         <div className="w-full lg:max-w-[800px]">
                           {activeTab === "tab1" && (
                             <div className="flex flex-col gap-[24px] min-h-[60px]">
-                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 lg:pl-[24px] lg:p-[10px]">
+                              <div className="bg-white rounded-[32px] px-[16px] py-[24px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
                                 <div className="flex flex-col items-stretch md:flex-row md:items-center">
                                   <div className="relative mb-[24px] md:mb-[0] shrink-0">
                                     <button
@@ -522,7 +522,7 @@ const Header = () => {
                           )}
                           {activeTab === "tab2" && (
                             <div className="flex flex-col gap-[24px] min-h-[60px]">
-                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 lg:pl-[24px] lg:p-[10px]">
+                              <div className="bg-white rounded-[32px] px-[16px] py-[24px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
                                 <div className="flex flex-col gap-x-[10px] justify-between lg:flex-row">
                                   <div className="relative grow">
                                     <input
@@ -663,7 +663,7 @@ const Header = () => {
                           )}
                           {activeTab === "tab3" && (
                             <div className="flex flex-col gap-[24px] min-h-[60px]">
-                              <div className="bg-white rounded-[32px] p-[16px] border border-neutral-300 hover:border-primary-500 shadow-custom-1 lg:pl-[24px] lg:p-[10px]">
+                              <div className="bg-white rounded-[32px] px-[16px] py-[24px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
                                 <div className="flex flex-col gap-x-[10px] justify-between lg:flex-row">
                                   <div className="relative grow">
                                     <input
