@@ -395,7 +395,7 @@ const HeroSliderComponent = () => {
                       <div className="pt-[2px] md:pt-[0]">
                         <button
                           type="submit"
-                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[138px]"
+                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] para-lg px-[24px] py-[10px] md:w-[138px]"
                         >
                           <Image
                             src="/assets/icons/search_icon.svg"

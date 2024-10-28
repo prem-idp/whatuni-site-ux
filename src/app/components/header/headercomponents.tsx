@@ -142,41 +142,43 @@ const Header = () => {
                 ></div>
                 <div
                   className={`megamenu-container fixed left-0 top-0 z-[6] w-full h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${
-                    isOpen ? "animate-fadeInLeft" : "-translate-x-full duration-300"
+                    isOpen
+                      ? "animate-fadeInLeft"
+                      : "-translate-x-full duration-300"
                   }`}
                 >
-                      <div className="relative z-[6] w-fit">
-                        <div
-                          onClick={mobileToggleOpen}
-                          className={`menu-close-card lg:hidden absolute right-[-40px]`}
+                  <div className="relative z-[6] w-fit">
+                    <div
+                      onClick={mobileToggleOpen}
+                      className={`menu-close-card lg:hidden absolute right-[-40px]`}
+                    >
+                      <div className="menu-close bg-neutral-900 p-[8px]">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <div className="menu-close bg-neutral-900 p-[8px]">
-                            <svg
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M18 6L6 18"
-                                stroke="white"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                              <path
-                                d="M6 6L18 18"
-                                stroke="white"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        <Megamenucomponents />
+                          <path
+                            d="M18 6L6 18"
+                            stroke="white"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M6 6L18 18"
+                            stroke="white"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
                       </div>
+                    </div>
+                    <Megamenucomponents />
+                  </div>
                 </div>
               </>
             ) : (
@@ -184,30 +186,27 @@ const Header = () => {
             )}
           </div>
           <div className="order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
-            <ul className="flex items-center justify-end gap-[10px]">
-              <li>
-                <Link
-                  onClick={() => rightMenuAction("SEARCH")}
-                  href="#"
-                  aria-label="Search"
-                  className="border border-gray-500 rounded-[34px] p-[14px] w-[48px] h-[48px] block"
+            <ul className="flex items-center justify-end gap-[10px] rightmenu">
+              <li
+                onClick={() => rightMenuAction("SEARCH")}
+                aria-label="Search"
+                className="border border-gray-500 rounded-[34px] flex items-center justify-center w-[48px] h-[48px] cursor-pointer hover:border-primary-500 hover:bg-primary-500"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.5 17.5L12.5 12.5M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z"
-                      stroke="#5C656E"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Link>
+                  <path
+                    d="M17.5 17.5L12.5 12.5M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z"
+                    stroke="#5C656E"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
                 {/* course tab section */}
                 {isSearchClicked && (
                   <div className="bg-white absolute top-0 left-0 right-0 min-h-[222px] z-10 lg:top-[86px] xl:top-[94px]">
@@ -233,47 +232,38 @@ const Header = () => {
                         </svg>
                       </div>
                       <div className="flex flex-col items-center justify-center gap-y-[16px] mt-[16px] lg:mt-[-16px]">
-                        <ul className="flex items-center gap-[4px]">
-                          <li role="button">
-                            <Link
-                              href="#"
-                              className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
-                                activeTab === "tab1"
-                                  ? "bg-black text-white"
-                                  : "bg-white text-black border border-neutral-500"
-                              }`}
-                              onClick={() => searchTabClick("tab1")}
-                            >
-                              Courses
-                            </Link>
-                          </li>
-                          <li role="button">
-                            <Link
-                              href="#"
-                              className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
-                                activeTab === "tab2"
-                                  ? "bg-black text-white"
-                                  : "bg-white text-black border border-neutral-500"
-                              }`}
-                              onClick={() => searchTabClick("tab2")}
-                            >
-                              Universities
-                            </Link>
-                          </li>
-                          <li role="button">
-                            <Link
-                              href="#"
-                              className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
-                                activeTab === "tab3"
-                                  ? "bg-black text-white"
-                                  : "bg-white text-black border border-neutral-500"
-                              }`}
-                              onClick={() => searchTabClick("tab3")}
-                            >
-                              Advice
-                            </Link>
-                          </li>
-                        </ul>
+                        <div className="flex items-center gap-[4px]">
+                          <button
+                            className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
+                              activeTab === "tab1"
+                                ? "bg-black text-white"
+                                : "bg-white text-black border border-neutral-500"
+                            }`}
+                            onClick={() => searchTabClick("tab1")}
+                          >
+                            Courses
+                          </button>
+                          <button
+                            className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
+                              activeTab === "tab2"
+                                ? "bg-black text-white"
+                                : "bg-white text-black border border-neutral-500"
+                            }`}
+                            onClick={() => searchTabClick("tab2")}
+                          >
+                            Universities
+                          </button>
+                          <button
+                            className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
+                              activeTab === "tab3"
+                                ? "bg-black text-white"
+                                : "bg-white text-black border border-neutral-500"
+                            }`}
+                            onClick={() => searchTabClick("tab3")}
+                          >
+                            Advice
+                          </button>
+                        </div>
                         <div className="w-full lg:max-w-[800px]">
                           {activeTab === "tab1" && (
                             <div className="flex flex-col gap-[24px] min-h-[60px]">
@@ -806,36 +796,33 @@ const Header = () => {
                   </div>
                 )}
               </li>
-              <li className="relative">
-                <Link
-                  onClick={() => rightMenuAction("USER")}
-                  href="#"
-                  aria-label="User"
-                  className="border border-gray-500 rounded-[34px] p-[14px] w-[48px] h-[48px] block"
+              <li
+                onClick={() => rightMenuAction("USER")}
+                aria-label="User"
+                className="relative border border-gray-500 rounded-[34px] flex items-center justify-center w-[48px] h-[48px] cursor-pointer hover:border-primary-500 hover:bg-primary-500"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.3332 5.83333C13.3332 7.67428 11.8408 9.16667 9.99984 9.16667C8.15889 9.16667 6.6665 7.67428 6.6665 5.83333C6.6665 3.99238 8.15889 2.5 9.99984 2.5C11.8408 2.5 13.3332 3.99238 13.3332 5.83333Z"
-                      stroke="#5C656E"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9.99984 11.6667C6.77818 11.6667 4.1665 14.2783 4.1665 17.5H15.8332C15.8332 14.2783 13.2215 11.6667 9.99984 11.6667Z"
-                      stroke="#5C656E"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Link>
+                  <path
+                    d="M13.3332 5.83333C13.3332 7.67428 11.8408 9.16667 9.99984 9.16667C8.15889 9.16667 6.6665 7.67428 6.6665 5.83333C6.6665 3.99238 8.15889 2.5 9.99984 2.5C11.8408 2.5 13.3332 3.99238 13.3332 5.83333Z"
+                    stroke="#5C656E"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M9.99984 11.6667C6.77818 11.6667 4.1665 14.2783 4.1665 17.5H15.8332C15.8332 14.2783 13.2215 11.6667 9.99984 11.6667Z"
+                    stroke="#5C656E"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
                 {/* user section */}
                 {isUserClicked && (
                   <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-39px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] lg:top-[67px] xl:top-[71px] lg:right-0">
@@ -862,33 +849,29 @@ const Header = () => {
                   </div>
                 )}
               </li>
-              <li className="relative min-h-[48px] flex items-center">
-                <Link
-                  onClick={() => rightMenuAction("SHORTLIST")}
-                  href="#"
-                  className="relative block"
+              <li
+                onClick={() => rightMenuAction("SHORTLIST")}
+                className="relative rounded-[34px] flex items-center justify-center w-[48px] h-[48px] cursor-pointer hover:border-primary-500 hover:bg-primary-500"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4.31802 6.31802C2.56066 8.07538 2.56066 10.9246 4.31802 12.682L12.0001 20.364L19.682 12.682C21.4393 10.9246 21.4393 8.07538 19.682 6.31802C17.9246 4.56066 15.0754 4.56066 13.318 6.31802L12.0001 7.63609L10.682 6.31802C8.92462 4.56066 6.07538 4.56066 4.31802 6.31802Z"
-                      fill="#00BBFD"
-                      stroke="#3460DC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <div className="absolute inline-flex items-center justify-center w-[16px] h-[16px] rounded-[8px] top-[10px] left-[13px] bg-success-400 text-black font-inter font-semibold text-xs-small px-[5px] py-[2px]">
-                    2
-                  </div>
-                </Link>
-
+                  <path
+                    d="M4.31802 6.31802C2.56066 8.07538 2.56066 10.9246 4.31802 12.682L12.0001 20.364L19.682 12.682C21.4393 10.9246 21.4393 8.07538 19.682 6.31802C17.9246 4.56066 15.0754 4.56066 13.318 6.31802L12.0001 7.63609L10.682 6.31802C8.92462 4.56066 6.07538 4.56066 4.31802 6.31802Z"
+                    fill="#00BBFD"
+                    stroke="#3460DC"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div className="absolute inline-flex items-center justify-center w-[16px] h-[16px] rounded-[8px] top-[22px] right-[6px] bg-success-400 text-black font-inter font-semibold xs-small px-[5px] py-[2px]">
+                  2
+                </div>
                 {/* shortlist section */}
                 {isShortlistClicked && (
                   <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-5px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] lg:top-[67px] xl:top-[71px]">
@@ -909,7 +892,7 @@ const Header = () => {
                           </span>
                         </Link>
                       </li>
-                      <li className="mb-[16px] hover:underline">
+                      <li className="hover:underline">
                         <Link href="#">
                           Universities
                           <span className="w-[16px] h-[16px] rounded-[8px] bg-success-400 ml-[8px] text-black font-semibold xs-small px-[5px] py-[2px]">
@@ -920,7 +903,7 @@ const Header = () => {
                     </ul>
                     <Link
                       href="#"
-                      className="font-semibold small bg-primary-400 text-white px-[16px] py-[8px] rounded-[18px] self-start"
+                      className="font-semibold small bg-primary-400 text-white px-[16px] py-[8px] rounded-[18px] self-start hover:bg-primary-500"
                     >
                       Compare
                     </Link>
