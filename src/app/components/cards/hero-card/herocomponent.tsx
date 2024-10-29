@@ -6,11 +6,11 @@ const HeroComponent = () => {
   return (
     <>
       <div className="flex justify-between gap-[16px]">
-        <div className="w-full pt-[64px] pb-[40px] md:pt-[68px] md:pb-[108px] lg:py-[64px]">
-          <h1 className="font-farro font-bold text-heading-lg mb-[4px]">
+        <div className="w-full pt-[64px] pb-[40px] md:pt-[68px] md:pb-[108px] lg:py-[88px]">
+          <h1 className="text-heading-lg mb-[4px]">
             Nam vitae porttitor lorem. Vestibulum vel felis
           </h1>
-          <p className="text-para-lg mb-[16px]">
+          <p className="para-lg mb-[16px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
             vestibulum neque lectus, molestie congue risus
           </p>
