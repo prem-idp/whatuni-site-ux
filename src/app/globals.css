@@ -167,6 +167,9 @@ p,.para {@apply text-para}
 .MultiSwiper .swiper-pagination-bullet{@apply !bg-grey-200 !opacity-[1] !mx-[2px]}
 .MultiSwiper .swiper-pagination-bullet-active{@apply !bg-blue-300} 
 /* Swiper Styles */
+/* Backgrop shadow */
+.backdrop-shadow{background: rgba(51, 63, 72, .8);-webkit-backdrop-filter: blur(4px);backdrop-filter: blur(4px)}
+/* Backgrop shadow */
 .animate-fadeIn{
   animation: fadeIn .2s ease-in;
 }
@@ -225,7 +228,7 @@ p,.para {@apply text-para}
 .discover-container, .testimonials-container{@apply bg-neutral-300} */
 
 /* hero slider styles */
-.hero .swiper-pagination {@apply !top-[60px] !left-0 text-left !bottom-auto}
+.hero .swiper-pagination {@apply lg:!top-[64px] !left-0 text-left !bottom-auto xs:!top-[40px]}
 .hero .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,.hero .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{@apply !ml-0}
 .hero .swiper-pagination-bullet {@apply bg-blue-100 w-[8px] h-[8px] rounded-[4px] !opacity-90}
 .hero .swiper-pagination-bullet-active { @apply !bg-primary-500 !w-[16px] !h-[8px] rounded-[4px] !opacity-90}
@@ -234,9 +237,6 @@ p,.para {@apply text-para}
 .partner .swiper-pagination { @apply !bottom-0}
 .partner .swiper-pagination { @apply lg:!hidden}
 
-.rightmenu li:hover path{
+.rightmenu li:not(:last-child) span:hover > svg path{
   stroke: white;
-}
-.rightmenu li:last-child:hover path{
-  fill: none;
 }

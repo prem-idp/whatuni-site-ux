@@ -94,49 +94,40 @@ const HeroSliderComponent = () => {
       <div className="pb-[12px] md:px-[16px]">
         <div className="bg-white w-full rounded-none max-w-container mx-auto p-[16px] mt-0 min-h-[160px] relative z-3 md:shadow-custom-5 md:rounded-[32px] md:p-[24px] md:mt-[-82px]">
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <ul className="flex gap-[4px] justify-center md:justify-start">
-              <li role="button">
-                <Link
-                  href="#"
-                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
-                    activeTab === "tab1"
-                      ? "bg-neutral-900 text-white"
-                      : "bg-white text-neutral-900 border border-neutral-900"
-                  }`}
-                  onClick={() => searchTabClick("tab1")}
-                >
-                  Courses
-                </Link>
+            <ul className="flex gap-[4px] justify-center cursor-pointer md:justify-start">
+              <li
+                className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-neutral-900 hover:bg-neutral-900 hover:text-white ${
+                  activeTab === "tab1"
+                    ? "bg-neutral-900 text-white"
+                    : "bg-white text-neutral-900"
+                }`}
+                onClick={() => searchTabClick("tab1")}
+              >
+                Courses
               </li>
-              <li role="button">
-                <Link
-                  href="#"
-                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
-                    activeTab === "tab2"
-                      ? "bg-neutral-900 text-white"
-                      : "bg-white text-neutral-900 border border-neutral-900"
-                  }`}
-                  onClick={() => searchTabClick("tab2")}
-                >
-                  Universities
-                </Link>
+              <li
+                className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-neutral-900 hover:bg-neutral-900 hover:text-white ${
+                  activeTab === "tab2"
+                    ? "bg-neutral-900 text-white"
+                    : "bg-white text-neutral-900 border border-neutral-900"
+                }`}
+                onClick={() => searchTabClick("tab2")}
+              >
+                Universities
               </li>
-              <li role="button">
-                <Link
-                  href="#"
-                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block ${
-                    activeTab === "tab3"
-                      ? "bg-neutral-900 text-white"
-                      : "bg-white text-neutral-900 border border-neutral-900"
-                  }`}
-                  onClick={() => searchTabClick("tab3")}
-                >
-                  Advice
-                </Link>
+              <li
+                className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-neutral-900 hover:bg-neutral-900 hover:text-white ${
+                  activeTab === "tab3"
+                    ? "bg-neutral-900 text-white"
+                    : "bg-white text-neutral-900 border border-neutral-900"
+                }`}
+                onClick={() => searchTabClick("tab3")}
+              >
+                Advice
               </li>
             </ul>
             {activeTab == "tab1" && (
-              <div className="flex justify-center cursor-default md:justify-end my-[24px] md:my-0">
+              <div className="flex justify-center md:justify-end my-[24px] md:my-0">
                 <Link
                   href="#"
                   className="flex items-center gap-[6px] text-primary-400 font-semibold small hover:underline"
@@ -161,7 +152,7 @@ const HeroSliderComponent = () => {
               </div>
             )}
             {activeTab == "tab2" && (
-              <div className="flex justify-center cursor-default md:justify-end">
+              <div className="flex justify-center md:justify-end my-[24px] md:my-0">
                 <Link
                   href="#"
                   className="flex items-center gap-[6px] text-primary-400 font-semibold small hover:underline"
@@ -177,7 +168,7 @@ const HeroSliderComponent = () => {
               </div>
             )}
             {activeTab == "tab3" && (
-              <div className="flex justify-center cursor-default md:justify-end">
+              <div className="flex justify-center md:justify-end my-[24px] md:my-0">
                 <Link
                   href="#"
                   className="flex items-center gap-[6px] text-primary-400 font-semibold small hover:underline"
@@ -195,7 +186,7 @@ const HeroSliderComponent = () => {
             <div className="row-start-2 md:col-span-2 mt-[16px]">
               {activeTab === "tab1" && (
                 <div className="flex flex-col gap-[24px] min-h-[60px]">
-                  <div className="bg-white rounded-[32px] px-[16px] py-[24px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                  <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
                     <div className="flex flex-col items-stretch md:flex-row md:items-center">
                       <div className="relative mb-[24px] md:mb-[0] shrink-0">
                         <button
@@ -395,7 +386,7 @@ const HeroSliderComponent = () => {
                       <div className="pt-[2px] md:pt-[0]">
                         <button
                           type="submit"
-                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] para-lg px-[24px] py-[10px] md:w-[138px]"
+                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[138px]"
                         >
                           <Image
                             src="/assets/icons/search_icon.svg"
@@ -412,13 +403,13 @@ const HeroSliderComponent = () => {
               )}
               {activeTab === "tab2" && (
                 <div className="flex flex-col gap-[24px] min-h-[60px]">
-                  <div className="bg-white rounded-[32px] px-[16px] py-[24px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
-                    <div className="flex flex-col gap-x-[10px] justify-between lg:flex-row">
+                  <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                    <div className="flex flex-col gap-x-[10px] justify-between md:flex-row">
                       <div className="relative grow">
                         <input
                           onClick={() => courseActions("University")}
                           type="text"
-                          className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 lg:py-[10px] border-b border-neutral200 lg:border-none"
+                          className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 md:py-[10px] border-b border-neutral200 md:border-none"
                           aria-label="submenu"
                           placeholder="University name"
                         />
@@ -534,13 +525,13 @@ const HeroSliderComponent = () => {
               )}
               {activeTab === "tab3" && (
                 <div className="flex flex-col gap-[24px] min-h-[60px]">
-                  <div className="bg-white rounded-[32px] px-[16px] py-[24px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
-                    <div className="flex flex-col gap-x-[10px] justify-between lg:flex-row">
+                  <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                    <div className="flex flex-col gap-x-[10px] justify-between md:flex-row">
                       <div className="relative grow">
                         <input
                           onClick={() => courseActions("Advice")}
                           type="text"
-                          className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 lg:py-[10px] border-b border-neutral200 lg:border-none"
+                          className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 md:py-[10px] border-b border-neutral200 md:border-none"
                           aria-label="submenu"
                           placeholder="Enter keyword"
                         />
