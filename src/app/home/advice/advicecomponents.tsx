@@ -25,6 +25,7 @@ const Advicecomponents = () => {
                 <h2 className="font-bold">Latest advice</h2>
                 <p className='font-normal small mt-[8px]'>Subheading</p>
             </div>
+            <div className='advice-course-container'>
               <div className="advice-inner-wrap"> 
                 <Advicecourseslidercomponents />
                 <div className='flex justify-center mt-[16px] lg:mt-[28px]'>
@@ -34,8 +35,9 @@ const Advicecomponents = () => {
                   <path d="M9.4814 0.814819L14.6666 6M14.6666 6L9.4814 11.1852M14.6666 6L1.33325 6" stroke="#3460DC" strokeWidth="1.48148" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   </a>
-              </div> 
+                </div> 
               </div>
+            </div>
           </div>
     </div>
   </div>

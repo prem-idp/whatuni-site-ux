@@ -12,7 +12,7 @@ const Testimonialcomponents = () => {
                     </div>
                     <div className='testimonials-inner-wrap grid grid-cols-1 lg:grid-cols-2 gap-[16px]'>
                         <div className='video-container flex justify-center items-center rounded-[8px] overflow-hidden relative'>
-                            <img className='block w-full'  src='/assets/images/testimonials/video_thumb_img.jpg' width={600} height={316} />
+                            <img className='block w-full'  src='/assets/images/testimonials/video_thumb_img.jpg' alt="video thumbnail image" width={600} height={316} />
                             <div className='video-play-icon absolute cursor-pointer'>
                                 <Image src="/assets/icons/video_play_icon.svg" width="52" height="52" alt="" />                                                           
                             </div>

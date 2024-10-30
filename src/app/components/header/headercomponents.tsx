@@ -104,7 +104,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="bg-white pl-[16px] pr-[21px] py-[4px] md:px-[20px] xl2:px-0 xl2:py-[8px]">
+      <header className="bg-white pl-[16px] pr-[21px] py-[4px] md:px-[20px] xl2:px-0 lg:py-[8px]">
         <div className="max-w-container mx-auto flex items-center ">
           <div className="order-2 md:grow md:basis-[100%] lg:order-1 lg:grow-0 lg:basis-[54px]">
             <Link href="#">
@@ -144,16 +144,14 @@ const Header = () => {
             )}
             {isMobile ? (
               <>
-                <div
+                <div onClick={mobileToggleOpen}
                   className={`${
                     isOpen ? "animate-fadeIn block" : "hidden"
-                  } bg-neutral400 lg:bg-transparent fixed top-0 left-0 right-0 bottom-0 z-[5]`}
+                  } backdrop-shadow lg:bg-transparent fixed top-0 left-0 right-0 bottom-0 z-[5]`}
                 ></div>
                 <div
-                  className={`megamenu-container fixed left-0 top-0 z-[6] w-full h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${
-                    isOpen
-                      ? "animate-fadeInLeft"
-                      : "-translate-x-full duration-300"
+                  className={`megamenu-container fixed left-0 top-0 z-[6] w-[376px] h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${
+                    isOpen ? "animate-fadeInLeft" : "-translate-x-full duration-300"
                   }`}
                 >
                   <div className="relative z-[6] w-fit">
@@ -841,9 +839,9 @@ const Header = () => {
                 {isUserClicked && (
                   <>
                     <div
-                      className={`backdrop-shadow fixed top-[64px] left-0 right-0 bottom-0 z-[5] md:top-[84px] lg:top-[68px] xl:top-[76px]`}
+                      className={`backdrop-shadow fixed top-[64px] left-0 right-0 bottom-0 z-[5] md:top-[84px] lg:top-[76px]`}
                     ></div>
-                    <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-39px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] md:top-[65px] lg:top-[58px] xl:top-[62px] lg:right-0">
+                    <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-39px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] md:top-[65px] lg:top-[62px] lg:right-0">
                       <ul className="small">
                         <li className="mb-[16px] hover:underline">
                           <Link href="#">My profile</Link>
@@ -869,37 +867,38 @@ const Header = () => {
                 )}
               </li>
               <li aria-label="Shortlist" className="relative">
-                <span
-                  onClick={() => rightMenuAction("SHORTLIST")}
-                  className="flex items-center justify-center min-h-[48px] cursor-pointer"
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div className="cursor-pointer" onClick={() => rightMenuAction("SHORTLIST")}>
+                  <span                    
+                    className="flex items-center justify-center min-h-[48px]"
                   >
-                    <path
-                      d="M4.31802 6.31802C2.56066 8.07538 2.56066 10.9246 4.31802 12.682L12.0001 20.364L19.682 12.682C21.4393 10.9246 21.4393 8.07538 19.682 6.31802C17.9246 4.56066 15.0754 4.56066 13.318 6.31802L12.0001 7.63609L10.682 6.31802C8.92462 4.56066 6.07538 4.56066 4.31802 6.31802Z"
-                      fill="#00BBFD"
-                      stroke="#3460DC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <div className="absolute flex items-center justify-center min-w-[16px] h-[16px] rounded-[8px] top-[22px] left-[13px] bg-success-400 text-black font-inter font-semibold xs-small px-[5px] py-[2px]">
-                  2
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.31802 6.31802C2.56066 8.07538 2.56066 10.9246 4.31802 12.682L12.0001 20.364L19.682 12.682C21.4393 10.9246 21.4393 8.07538 19.682 6.31802C17.9246 4.56066 15.0754 4.56066 13.318 6.31802L12.0001 7.63609L10.682 6.31802C8.92462 4.56066 6.07538 4.56066 4.31802 6.31802Z"
+                        fill="#00BBFD"
+                        stroke="#3460DC"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <div className="absolute flex items-center justify-center min-w-[16px] h-[16px] rounded-[8px] top-[22px] left-[13px] bg-success-400 text-black font-inter font-semibold xs-small px-[5px] py-[2px]">
+                    2
+                  </div>
                 </div>
                 {/* shortlist section */}
                 {isShortlistClicked && (
                   <>
                     <div
-                      className={`backdrop-shadow fixed top-[64px] left-0 right-0 bottom-0 z-[5] md:top-[84px] lg:top-[68px] xl:top-[76px]`}
+                      className={`backdrop-shadow fixed top-[64px] left-0 right-0 bottom-0 z-[5] md:top-[84px] lg:top-[76px]`}
                     ></div>
-                    <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-5px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] md:top-[65px] lg:top-[58px] xl:top-[62px]">
+                    <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-5px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] md:top-[65px] lg:top-[62px]">
                       <ul className="small">
                         <li className="mb-[16px] hover:underline">
                           <Link href="#">
