@@ -13,13 +13,14 @@ const Megamenucomponents = () => {
     const [openMenu, setOpenMenu] = useState<string | boolean>(false);
     const megaMenu = (menuId: string) => {
         setOpenMenu(openMenu === menuId ?  false: menuId);
+        if (openMenu === menuId ?  false: menuId){
+            document.body.classList.add("overflow-y-hidden");
+        }
+        else{
+            document.body.classList.remove("overflow-y-hidden");
+        }
+       
     };
-    
-    // MegaMenu open/close state
-    const [isOpen, setIsOpen] = useState(false);
-    const closeMegamenu = () => {
-        setIsOpen(isOpen)
-     }
 
      const [isMobile, setIsMobile] = useState(false);
      useEffect(() => {
@@ -29,6 +30,7 @@ const Megamenucomponents = () => {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+
     }, []);
 
   return (
@@ -64,7 +66,7 @@ const Megamenucomponents = () => {
                         <>    
                         {openMenu === 'menu1' && (
                             <>
-                        <div className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] pointer-events-none`}></div>
+                        <div onClick={() => megaMenu('menu1')} className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh]`}></div>
                         <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[76px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                             <div className="max-w-container mx-auto">
                                 <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
@@ -105,7 +107,7 @@ const Megamenucomponents = () => {
                     <>    
                         {openMenu === 'menu2' && (
                         <>
-                        <div className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] pointer-events-none`}></div>       
+                        <div onClick={() => megaMenu('menu2')} className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] `}></div>       
                         <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[76px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                             <div className="max-w-container mx-auto">
                                 <section className="grid grid-cols-1 lg:grid-cols-[610px_auto_auto] lg:gap-[16px] p-[0] lg:p-[24px]">
@@ -145,7 +147,7 @@ const Megamenucomponents = () => {
                         <>    
                             {openMenu === 'menu3' && (
                             <>
-                                <div className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] pointer-events-none`}></div>    
+                                <div onClick={() => megaMenu('menu3')} className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] `}></div>    
                                 <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[76px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
@@ -186,7 +188,7 @@ const Megamenucomponents = () => {
                         <>    
                             {openMenu === 'menu4' && (    
                             <>
-                                <div className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] pointer-events-none`}></div>
+                                <div onClick={() => megaMenu('menu4')} className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] `}></div>
                                 <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[76px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
@@ -227,7 +229,7 @@ const Megamenucomponents = () => {
                         <>    
                             {openMenu === 'menu5' && (
                             <>
-                                <div className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] pointer-events-none`}></div>    
+                                <div onClick={() => megaMenu('menu5')} className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] `}></div>    
                                 <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[76px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
@@ -268,7 +270,7 @@ const Megamenucomponents = () => {
                         <>    
                             {openMenu === 'menu6' && (
                             <>
-                            <div className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] pointer-events-none`}></div>    
+                            <div onClick={() => megaMenu('menu6')} className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] `}></div>    
                                 <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[76px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
@@ -308,7 +310,7 @@ const Megamenucomponents = () => {
                         <>    
                             {openMenu === 'menu7' && (
                             <>
-                                <div className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] pointer-events-none`}></div>    
+                                <div onClick={() => megaMenu('menu7')} className={`${openMenu ? "animate-fadeIn block" : "hidden"} backdrop-shadow absolute top-[76px] left-0 right-0 bottom-0 z-[5] h-[100vh] `}></div>    
                                 <div className={`${openMenu ? 'block animate-fadeIn' : 'hidden animate-fadeOut'} megamenu bg-neutral-50 lg:bg-white shadow-custom-5 lg:absolute lg:top-[76px] left-[0] right-[0] z-[5] lg:border-t lg:border-grey-300`}>
                                     <div className="max-w-container mx-auto">
                                         <section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-[16px] p-[0] lg:p-[24px]">
