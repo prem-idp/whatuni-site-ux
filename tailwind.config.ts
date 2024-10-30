@@ -21,8 +21,7 @@ const config: Config = {
       xxl2: "1600px",
       xxxl: "1920px",
     },
-    fontFamily: {
-      // farro: ["var(--farro)"],
+    fontFamily: {   
       farro: ["Farro", "sans-serif"],
       inter: ["Inter", "sans-serif"],
     },
