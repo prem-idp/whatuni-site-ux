@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Reviewscard = () => {
   return (
-    <Link href="javascript:void(0)" className="reviews-card flex flex-col bg-white p-[16px] rounded-[8px] bg-white border border-grey-200 hover:border-primary-400 shadow-custom-2">
+    <Link href="" className="reviews-card flex flex-col bg-white p-[16px] rounded-[8px] bg-white border border-grey-200 hover:border-primary-400 shadow-custom-2">
     <div className="review-card-header flex items-center gap-[8px] border-b border-neutrale-200 pb-[16px]">
         <h6 className="review-box__avatar flex justify-center items-center text-white w-[48px] h-[48px] bg-primary-400 rounded-[100px]">MW</h6>
         <div className="review-box__details flex flex-col justify-center w-[calc(100%_-_48px)]">
