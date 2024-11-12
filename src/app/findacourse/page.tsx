@@ -1,8 +1,6 @@
-import Carousel from "@/app/components/carousel/carouselcomponent";
 import CourseFinder from "@/app/components/course-finder/coursefindercomponents";
 import AdviceCourseSlider from "@/app/components/slider/advicecourseslidercomponents";
 import React from "react";
-import {destinationItems} from "@/app/services/carouselContents";
 import Subjectareas from "./components/subjectareas";
 
 const Findcourse = () => {
@@ -34,7 +32,6 @@ const Findcourse = () => {
               </div>
             </div>
             <Subjectareas />
-            <Carousel items={destinationItems} />
             <AdviceCourseSlider />
           </div>
         </div>
