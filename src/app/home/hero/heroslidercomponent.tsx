@@ -167,7 +167,7 @@ const HeroSliderComponent = () => {
 
                 <UcasComponent
                   onClose={ucasClose}
-                  isuCsaOpen={isUcasPopupOpen}
+                  isUcasOpen={isUcasPopupOpen}
                 />
               </div>
             )}
