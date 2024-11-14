@@ -69,6 +69,8 @@ const HeroSliderComponent = () => {
   const [isUcasPopupOpen, SetIsUcasPopupOpen] = useState(false);
   const ucasClick = () => {
     SetIsUcasPopupOpen(true);
+    const body = document.body;
+    body.classList.add("overflow-y-hidden");
   };
 
   const ucasClose = () => {
@@ -76,7 +78,7 @@ const HeroSliderComponent = () => {
     SetIsUcasPopupOpen(false);
     body.classList.remove("overflow-y-hidden");
   };
-  
+
   return (
     <>
       <div className="bg-blue-200 px-[16px] md:px-[20px] xl2:px-0">
@@ -162,7 +164,11 @@ const HeroSliderComponent = () => {
                   </svg>
                   Calculate your UCAS points
                 </div>
-                {isUcasPopupOpen && <UcasComponent onClose={ucasClose} />}
+
+                <UcasComponent
+                  onClose={ucasClose}
+                  isuCsaOpen={isUcasPopupOpen}
+                />
               </div>
             )}
             {activeTab == "tab2" && (
