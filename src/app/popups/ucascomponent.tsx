@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const UcasComponent = ({ onClose, isuCsaOpen }: any) => {
+const UcasComponent = ({ onClose, isUcasOpen }: any) => {
   const levels = ["A*", "A", "B", "C", "D", "E"];
   const grades = [
     "A*A*",
@@ -79,13 +79,13 @@ const UcasComponent = ({ onClose, isuCsaOpen }: any) => {
     <>
       <div
         className={`fixed top-0 left-0 w-full h-full bg-grey-600 backdrop-blur-custom-1 opacity-[80%] z-10  ${
-          isuCsaOpen ? "animate-fadeIn block" : "animate-fadeOut hidden"
+          isUcasOpen ? "animate-fadeIn block" : "animate-fadeOut hidden"
         }`}
       ></div>
 
       <div
         className={`bg-white fixed top-0 left-0 h-full w-[375px] z-10 transition-all duration-300 ease-in-out ${
-          isuCsaOpen ? "translate-x-0" : "-translate-x-full"
+          isUcasOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="p-[16px]">
