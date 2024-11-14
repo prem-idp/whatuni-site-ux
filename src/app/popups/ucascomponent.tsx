@@ -702,9 +702,9 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                 <path
                   d="M8 2V15M14.5 8.5L1.5 8.5"
                   stroke="#4664DC"
-                  stroke-width="1.335"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.335"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
               Add a qualification
