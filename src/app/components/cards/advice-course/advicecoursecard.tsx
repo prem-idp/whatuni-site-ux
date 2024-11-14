@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const AdviceCourseCard = () => {
   return (
-    <Link href="javascript:void(0)" className='card flex flex-col bg-white border border-grey-200 hover:border-primary-400 rounded-[8px] shadow-custom-2 overflow-hidden'>
+    <Link href="" className='card flex flex-col bg-white border border-grey-200 hover:border-primary-400 rounded-[8px] shadow-custom-2 overflow-hidden'>
         <div className='card-header'>
             <Image src="/assets/images/article_image1.jpg" width="392" height="221" className='block w-full h-auto min-h-[185px]' alt='Article_image' />
         </div>   
