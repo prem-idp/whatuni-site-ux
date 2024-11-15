@@ -117,8 +117,8 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
             Calculate your ucas points
           </h6>
         </div>
-        <div className="flex flex-col gap-[32px] h-[310px] overflow-y-auto custom-scrollbar-2">
-          <div className="flex flex-col gap-[16px] px-[16px]">
+        <div className="flex flex-col gap-[32px] h-[calc(100%-210px)] overflow-y-auto custom-scrollbar-2">
+          <div className="flex flex-col gap-[16px] px-[16px] pb-[32px]">
             <div className="relative">
               <div
                 onClick={toggleDropdown}
@@ -133,7 +133,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                 />
               </div>
               {isDropdownOpen && (
-                <div className="absolute top-[46px] left-0 max-h-[343px] overflow-y-auto w-full bg-white border border-neutral-300 rounded-[8px] small shadow-custom-9 custom-scrollbar-2">
+                <div className="absolute top-[46px] left-0 max-h-[343px] overflow-y-auto w-full bg-white border border-neutral-300 rounded-[8px] small shadow-custom-9 custom-scrollbar-2 z-10">
                   <ul>
                     <li className="py-[10px] px-[16px] font-semibold x-small uppercase bg-neutral50 text-grey500 tracking-[1px]">
                       A Levels
@@ -428,7 +428,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                         />
                       </div>
                       {isSecondDropdownOpen && (
-                        <div className="absolute top-[46px] left-0 max-h-[343px] overflow-y-auto w-full bg-white border border-neutral-300 rounded-[8px] small shadow-custom-9 custom-scrollbar-2">
+                        <div className="absolute top-[46px] left-0 max-h-[343px] overflow-y-auto bg-white border border-neutral-300 rounded-[8px] small shadow-custom-9 custom-scrollbar-2 w-[calc(100%+30px)]">
                           <ul>
                             <li className="py-[10px] px-[16px] font-semibold x-small uppercase bg-neutral50 text-grey500 tracking-[1px]">
                               A Levels
