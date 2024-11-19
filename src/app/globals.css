@@ -231,4 +231,4 @@ p,.para {@apply text-para}
 .partner .swiper-pagination { @apply !bottom-0}
 .partner .swiper-pagination { @apply lg:!hidden}
 .rightmenu li:not(:last-child) span:hover > svg path{stroke: white}
-.decrease svg path{stroke:  #4664DC;}
+.decrease svg path{stroke: #4664DC}
