@@ -55,6 +55,7 @@ const config: Config = {
         "grey500": "#767676",
         "grey600": "#e6e6e6",
         "grey900": "#0F172A",
+        "neutral50": "#F8FAFC",
         "neutral100": "#F1F5F9",
         "neutral200": "#E2E8F0",
         "neutral300": "#CBD5E1",
@@ -117,6 +118,8 @@ const config: Config = {
         gradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
         gradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
         gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
+
+        
       },
       boxShadow: {
         "custom-1":"0px 2px 4px -2px rgba(16, 24, 40, 0.1), 0px 4px 6px -1px rgba(16, 24, 40, 0.1)",
@@ -128,7 +131,6 @@ const config: Config = {
         "custom-7":"inset 0 -4px 0 0 rgba(15,190,253,1)",
         "custom-8":"0px 6px 12px 0px rgba(0, 0, 0, 0.11)",
       },
-      
     },
   },
   plugins: [],
