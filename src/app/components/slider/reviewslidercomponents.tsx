@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import {FreeMode, Navigation, Pagination} from 'swiper/modules';
 
 import Reviewscard from '../cards/reviews-card/reviewscard';
+import Reviewscardskeleton from '../skeleton/reviewscardskeleton';
 
 const Reviewslidercomponents = () => {
   return (
@@ -41,7 +42,7 @@ const Reviewslidercomponents = () => {
                   <Reviewscard />
               </SwiperSlide>
               <SwiperSlide>
-                  <Reviewscard />
+                  <Reviewscardskeleton />
               </SwiperSlide>
               <SwiperSlide>
                   <Reviewscard />
