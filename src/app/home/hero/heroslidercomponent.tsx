@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,6 +15,7 @@ import "swiper/css/effect-fade";
 // import required modules
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import HeroComponent from "@/app/components/cards/hero-card/herocomponent";
+import UcasComponent from "@/app/popups/ucascomponent";
 
 const HeroSliderComponent = () => {
   // course tab
@@ -62,6 +63,20 @@ const HeroSliderComponent = () => {
       setIsLocationClicked(false);
       setIsUniversityClicked(false);
     }
+  };
+
+  // ucas calculateOverrideValues
+  const [isUcasPopupOpen, SetIsUcasPopupOpen] = useState(false);
+  const ucasClick = () => {
+    SetIsUcasPopupOpen(true);
+    const body = document.body;
+    body.classList.add("overflow-y-hidden");
+  };
+
+  const ucasClose = () => {
+    const body = document.body;
+    SetIsUcasPopupOpen(false);
+    body.classList.remove("overflow-y-hidden");
   };
 
   return (
@@ -128,9 +143,9 @@ const HeroSliderComponent = () => {
             </ul>
             {activeTab == "tab1" && (
               <div className="flex justify-center md:justify-end my-[24px] md:my-0">
-                <Link
-                  href="#"
-                  className="flex items-center gap-[6px] text-primary-400 font-semibold small hover:underline"
+                <div
+                  onClick={ucasClick}
+                  className="flex items-center gap-[6px] text-primary-400 font-semibold small cursor-pointer hover:underline"
                 >
                   <svg
                     width="20"
@@ -148,7 +163,12 @@ const HeroSliderComponent = () => {
                     />
                   </svg>
                   Calculate your UCAS points
-                </Link>
+                </div>
+
+                <UcasComponent
+                  onClose={ucasClose}
+                  isUcasOpen={isUcasPopupOpen}
+                />
               </div>
             )}
             {activeTab == "tab2" && (
@@ -663,7 +683,6 @@ const HeroSliderComponent = () => {
                 strokeLinejoin="round"
               />
             </svg>
-
             <div className="x-small">
               More than
               <span className="font-semibold"> 5 million people </span> come to

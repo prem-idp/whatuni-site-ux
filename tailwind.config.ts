@@ -55,7 +55,7 @@ const config: Config = {
         "grey500": "#767676",
         "grey600": "#e6e6e6",
         "grey900": "#0F172A",
-        "neutral50": "#F8FAFC",
+        "neutral50":"#F8FAFC",
         "neutral100": "#F1F5F9",
         "neutral200": "#E2E8F0",
         "neutral300": "#CBD5E1",
@@ -130,7 +130,12 @@ const config: Config = {
         "custom-6":"0px 25px 50px -12px rgba(16, 24, 40, 0.25)",
         "custom-7":"inset 0 -4px 0 0 rgba(15,190,253,1)",
         "custom-8":"0px 6px 12px 0px rgba(0, 0, 0, 0.11)",
+        "custom-9":"0px 4px 6px -4px rgba(16, 24, 40, 0.1), 0px 10px 15px -3px rgba(16, 24, 40, 0.1)",
+        "custom-10":"0px 1px 2px -1px rgba(16, 24, 40, 0.1), 0px -2px 3px 0px rgba(16, 24, 40, 0.1)",
       },
+      backdropBlur:{
+        "custom-1":"261px"
+      }
     },
   },
   plugins: [],

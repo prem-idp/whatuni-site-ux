@@ -225,8 +225,10 @@ p,.para {@apply text-para}
 .hero .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,.hero .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{@apply !ml-0}
 .hero .swiper-pagination-bullet {@apply bg-blue-100 w-[8px] h-[8px] rounded-[4px] !opacity-90}
 .hero .swiper-pagination-bullet-active { @apply !bg-primary-500 !w-[16px] !h-[8px] rounded-[4px] !opacity-90}
+.hero .swiper-slide-prev{@apply !opacity-0}
 /* partner slider styles */
 .partner{@apply !pb-[30px]}
 .partner .swiper-pagination { @apply !bottom-0}
 .partner .swiper-pagination { @apply lg:!hidden}
 .rightmenu li:not(:last-child) span:hover > svg path{stroke: white}
+.decrease svg path{stroke:  #4664DC;}
