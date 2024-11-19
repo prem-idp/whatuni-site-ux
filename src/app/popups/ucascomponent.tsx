@@ -114,7 +114,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
             />
           </svg>
           <h6 className="text-heading5 font-bold mt-[-8px]">
-            Calculate your ucas points
+            Calculate your UCAS points
           </h6>
         </div>
         <div className="flex flex-col gap-[32px] h-[calc(100%-210px)] overflow-y-auto custom-scrollbar-2">
@@ -217,6 +217,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                       {item}
                     </label>
                     <button
+                      aria-label="decrement"
                       onClick={decrement}
                       className={`${
                         count ? "decrease cursor-pointer" : "cursor-not-allowed"
@@ -248,7 +249,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                     <span className="text-grey300 min-w-[24px] block text-center">
                       {count}
                     </span>
-                    <button onClick={increment}>
+                    <button aria-label="increment" onClick={increment}>
                       <svg
                         width="40"
                         height="40"
@@ -298,6 +299,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                       {item}
                     </label>
                     <button
+                      aria-label="decrement"
                       onClick={decrement}
                       className={`${
                         count ? "decrease cursor-pointer" : "cursor-not-allowed"
@@ -329,7 +331,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                     <span className="text-grey300 min-w-[24px] block text-center">
                       {count}
                     </span>
-                    <button onClick={increment}>
+                    <button aria-label="increment" onClick={increment}>
                       <svg
                         width="40"
                         height="40"
@@ -712,7 +714,11 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-[10px] p-[16px] fixed w-[375px] bottom-0 shadow-custom-10 bg-white">
+        <div
+          className={`flex flex-col gap-[10px] p-[16px] fixed w-[375px] bottom-0 shadow-custom-10 bg-white ${
+            count ? "block" : "hidden"
+          }`}
+        >
           <div className="flex items-center justify-center gap-[8px] min-h-[42px]">
             <p className="small text-grey300 small">Your UCAS points</p>
             <div className="flex items-center min-w-[36px] py-[6px] px-[14px] rounded-[4px] bg-grey-100 text-grey300 font-semibold cursor-pointer hover:bg-positive-default hover:text-white">
@@ -727,7 +733,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
             >
               Reset
             </Link>
-            <button className="bg-grey-300 text-white rounded-[24px] py-[10px] px-[16px] min-w-[200px] font-semibold hover:bg-primary-400">
+            <button className="bg-primary-400 text-white rounded-[24px] py-[10px] px-[16px] min-w-[200px] font-semibold hover:bg-primary-500">
               Apply
             </button>
           </div>

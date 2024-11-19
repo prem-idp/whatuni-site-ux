@@ -36,11 +36,12 @@ const HeroComponent = () => {
             </svg>
           </Link>
         </div>
-        <div className="md:w-[354px] lg:w-[495px] shrink-0 self-end md:pb-[80px] lg:pb-0 hidden md:block">
-          <Image
+        <div className="md:w-[354px] lg:w-[495px] lg:min-h-[483px] shrink-0 self-end hidden md:flex justify-center md:pb-[80px] md:px-[21px] lg:pb-0 lg:pt-[38px]">
+          <Image 
             src="/assets/images/hero-banner.png"
-            width={495}
-            height={483}
+            width={365}
+            height={445}
+            priority
             alt="Here Banner"
           />
         </div>

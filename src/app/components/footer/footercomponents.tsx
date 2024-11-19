@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer bg-blue-100">
       <div className="container max-w-container mx-auto px-[16px] md:px-[24px] pt-[34px] pb-[40px] xl:px-[0]">
         <div className="footer-inner-wrap grid xs:grid-cols-1 xs:gap-[40px] md:grid-cols-4 lg:gap-[16px]">
-          {/* pod 1 */}
+          {/* pod 1 */}     
           <div className="flex flex-col gap-[16px]">
             <p className="footer_title font-semibold text-grey300 x-small uppercase">
               Connect
@@ -105,7 +105,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-              <ul className="flex flex-col gap-[16px]">
+              <ul className="flex flex-row md:flex-col gap-[16px]">
                 <li>
                   <a href="#" aria-label="App Store">
                     <svg

@@ -118,6 +118,8 @@ const config: Config = {
         gradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
         gradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
         gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
+
+        
       },
       boxShadow: {
         "custom-1":"0px 2px 4px -2px rgba(16, 24, 40, 0.1), 0px 4px 6px -1px rgba(16, 24, 40, 0.1)",

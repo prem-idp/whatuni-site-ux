@@ -4,12 +4,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { isMobile } from 'react-device-detect';
 import Megamenucomponents from "../topnav/megamenucomponents";
 
-const Header = () => {
+declare global {
+  interface Window {
+    resizedFinished?: ReturnType<typeof setTimeout>;
+  }
+}
 
-   // Toggle Menu
+const Header = () => {
+    // Toggle Menu
   const [isMobileView, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
     
@@ -17,9 +21,14 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   useEffect(() => {
+    let isMobile = window.innerWidth <= 991;
     setIsMobile(isMobile);
-    const handleResize = () => {
-      setIsMobile(isMobile);
+    const handleResize = () => {   
+      setIsMobile(isMobile);  
+      clearTimeout(window.resizedFinished);
+      window.resizedFinished = setTimeout(() => {
+        window.location.reload();
+      }, 0);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -104,12 +113,12 @@ const Header = () => {
   };
   return (
     <>
-      <header className="bg-white pl-[16px] pr-[21px] py-[4px] md:px-[20px] xl2:px-0 lg:py-[8px]">
+      <header className="bg-white pl-[16px] pr-[21px]  md:px-[20px] xl2:px-0">
         <div className="max-w-container mx-auto flex items-center ">
-          <div className="order-2 md:grow md:basis-[100%] lg:order-1 lg:grow-0 lg:basis-[54px]">
+          <div className="order-2 md:grow md:basis-[100%] lg:order-1 lg:grow-0 lg:basis-[54px] py-[4px] lg:py-[8px]">
             <Link href="#">
               <Image
-                className="md:mx-auto lg:mx-0"
+                className="md:w-[54px] lg:w-full md:mx-auto lg:mx-0"
                 src="/assets/images/whatuni-logo.svg"
                 alt="Whatuni Logo"
                 priority
@@ -193,7 +202,7 @@ const Header = () => {
             )}
           </div>
           <div className="order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
-            <ul className="flex items-center justify-end gap-[10px] rightmenu">
+            <ul className="flex items-center justify-end gap-[10px] rightmenu py-[4px] lg:py-[8px]">
               <li aria-label="Search">
                 <span
                   onClick={() => rightMenuAction("SEARCH")}
@@ -222,7 +231,7 @@ const Header = () => {
                   >
                     <div className="bg-white absolute top-0 left-0 right-0 z-10 lg:min-h-[222px]">
                       <div className="max-w-container w-full mx-auto flex flex-col px-[16px] pt-[8px] pb-[56px] md:pt-[16px] md:pb-[32px]">
-                        <div className="flex justify-end relative">
+                        <div className="flex justify-end">
                           <svg
                             className="cursor-pointer"
                             onClick={() => rightMenuAction("SEARCH")}
