@@ -109,7 +109,7 @@ const HeroSliderComponent = () => {
       <div className="pb-[12px] md:px-[16px]">
         <div className="bg-white w-full rounded-none max-w-container mx-auto p-[16px] mt-0 min-h-[160px] relative z-3 md:shadow-custom-5 md:rounded-[32px] md:p-[24px] md:mt-[-82px]">
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <ul className="flex gap-[4px] justify-center cursor-pointer md:justify-start">
+            <ul className="flex gap-[8px] justify-center cursor-pointer md:justify-start">
               <li
                 className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-neutral-900 hover:bg-neutral-900 hover:text-white ${
                   activeTab === "tab1"
@@ -406,7 +406,7 @@ const HeroSliderComponent = () => {
                       <div className="pt-[2px] md:pt-[0]">
                         <button
                           type="submit"
-                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[138px]"
+                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[114px]"
                         >
                           <Image
                             src="/assets/icons/search_icon.svg"
@@ -528,7 +528,7 @@ const HeroSliderComponent = () => {
                       <div className="pt-[16px] md:pt-[0]">
                         <button
                           type="submit"
-                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[138px]"
+                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[114px]"
                         >
                           <Image
                             src="/assets/icons/search_icon.svg"
@@ -650,7 +650,7 @@ const HeroSliderComponent = () => {
                       <div className="pt-[16px] md:pt-[0]">
                         <button
                           type="submit"
-                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[138px]"
+                          className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[114px]"
                         >
                           <Image
                             src="/assets/icons/search_icon.svg"
