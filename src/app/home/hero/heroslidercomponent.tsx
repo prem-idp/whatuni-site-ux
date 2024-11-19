@@ -66,7 +66,7 @@ const HeroSliderComponent = () => {
   };
 
   // ucas calculateOverrideValues
-  const [isUcasPopupOpen, SetIsUcasPopupOpen] = useState(true);
+  const [isUcasPopupOpen, SetIsUcasPopupOpen] = useState(false);
   const ucasClick = () => {
     SetIsUcasPopupOpen(true);
     const body = document.body;
