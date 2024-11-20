@@ -63,7 +63,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
 
   const [addSelectedLevelName, setAddSelectedLevelName] = useState("");
   const [addSelectedLevelDesc, setAddSelectedLevelDesc] =
-    useState("Please Select");
+    useState("Please select");
   const addLevelSelected = (actionName: string, actionDesc: string) => {
     setIsSecondDropdownOpen(false);
     setAddSelectedLevelName(actionName);
@@ -692,7 +692,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
             )}
             <div
               onClick={addClick}
-              className="flex items-center gap-[4px] text-primary-400 font-semibold cursor-pointer"
+              className="flex items-center gap-[4px] text-primary-400 font-semibold cursor-pointer hover:underline"
             >
               <svg
                 width="16"
@@ -721,7 +721,11 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
         >
           <div className="flex items-center justify-center gap-[8px] min-h-[42px]">
             <p className="small text-grey300 small">Your UCAS points</p>
-            <div className="flex items-center min-w-[36px] py-[6px] px-[14px] rounded-[4px] bg-grey-100 text-grey300 font-semibold cursor-pointer hover:bg-positive-default hover:text-white">
+            <div
+              className={`flex items-center min-w-[36px] py-[6px] px-[14px] rounded-[4px] bg-grey-100 text-grey300 font-semibold cursor-pointer ${
+                count ? "bg-positive-default text-white" : ""
+              }`}
+            >
               150
             </div>
           </div>
