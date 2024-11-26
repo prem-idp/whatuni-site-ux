@@ -25,10 +25,10 @@ const Header = () => {
     setIsMobile(isMobile);
     const handleResize = () => {   
       setIsMobile(isMobile);  
-      clearTimeout(window.resizedFinished);
-      window.resizedFinished = setTimeout(() => {
-        window.location.reload();
-      }, 0);
+      // clearTimeout(window.resizedFinished);
+      // window.resizedFinished = setTimeout(() => {
+      //   window.location.reload();
+      // }, 0);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

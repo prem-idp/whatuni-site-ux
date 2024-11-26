@@ -10,21 +10,25 @@ import Testimonialcardskeleton from "./components/skeleton/testimonialcardskelet
 import Tagcloudcardskeleton from "./components/skeleton/tagcloudcardskeleton";
 import Discovercardskeleton from "./components/skeleton/discovercardskeleton";
 import Tagcloudcomponents from "./home/tag-cloud/tagcloudcomponents";
+import HeroSliderComponentSkeleton from "./components/skeleton/heroslidercomponentskeleton";
+import PartnerSliderComponentSkeleton from "./components/skeleton/partnerslidercomponentskeleton";
 
 export default function Home() {
   return (
     <>
       <HeroSliderComponent />
+      {/* <HeroSliderComponentSkeleton/> */}
       <Wuscascomponents />
-      <Wuscacomponentskeleton />
+      {/* <Wuscacomponentskeleton /> */}
       <Discovercomponents />
       <Tagcloudcomponents />
       {/* <Discovercardskeleton /> */}
       <Advicecomponents />
       <Testimonialcomponents />
-      <Testimonialcardskeleton />
+      {/* <Testimonialcardskeleton /> */}
       <Reviewscomponents />
       <OurPartnerComponent />
+      <PartnerSliderComponentSkeleton/>
     </>
   );
 }
