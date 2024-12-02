@@ -10,6 +10,7 @@ import Testimonialcardskeleton from "./components/skeleton/testimonialcardskelet
 import Tagcloudcardskeleton from "./components/skeleton/tagcloudcardskeleton";
 import Discovercardskeleton from "./components/skeleton/discovercardskeleton";
 import Tagcloudcomponents from "./home/tag-cloud/tagcloudcomponents";
+import Registerationcomponents from "./components/registeration/registerationcomponents";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Testimonialcardskeleton />
       <Reviewscomponents />
       <OurPartnerComponent />
+      <Registerationcomponents />
     </>
   );
 }

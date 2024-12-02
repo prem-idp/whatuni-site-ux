@@ -45,11 +45,11 @@ const config: Config = {
       colors: {
         "success-400": "#34D399",
         "success-700": "#047857",
-        "blue-50":"#EDFCFF",
-        "blue-100": "#C8F0F5",
-        "blue-200": "#0FBEFD",
-        "blue-300": "#0086F8",
-        "blue-500": "#3460DC",
+        //"blue-50":"#EDFCFF",
+        //"blue-100": "#C8F0F5",
+        //"blue-200": "#0FBEFD",
+        //"blue-300": "#0086F8",
+        //"blue-500": "#3460DC",
         "grey300": "#333",
         "grey400": "#707070",
         "grey500": "#767676",
@@ -60,6 +60,13 @@ const config: Config = {
         "neutral200": "#E2E8F0",
         "neutral300": "#CBD5E1",
         "neutral400": "#94A3B8",
+        blue:{
+          50:"#EDFCFF",
+          100: "#C8F0F5",
+          200: "#0FBEFD",
+          300: "#0086F8",
+          500: "#3460DC",
+        },
         grey: {
           50: "#F9FAFB",
           100: "#F2F2F2",
@@ -69,6 +76,10 @@ const config: Config = {
           500: "#5C656E",
           600: "#333F48",
           700: "#767676",
+        },
+        neutral: {
+          100: "#EFEFF1",
+          700: "#3B3D52",
         },
         primary: {
           50: "#EDFCFF",
@@ -94,6 +105,9 @@ const config: Config = {
           500: "#973A14",
           600: "#BC5B00",
         },
+        orange: {
+          200: "#FFD700",
+        },
         positive: {
           default: "#168721",
           light: "#EEF2C0",
@@ -104,6 +118,9 @@ const config: Config = {
           light: "#FFEEEE",
           dark: "#800101",
         },
+        desturctive: {
+          600: "#B01030",
+        }
       },
       backgroundImage: {
         gradientBlack:"linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
@@ -117,9 +134,7 @@ const config: Config = {
         gradient7: "linear-gradient(98.41deg, #6EE7B7 0%, #BAEDFF 100%)",
         gradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
         gradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
-        gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
-
-        
+        gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)", 
       },
       boxShadow: {
         "custom-1":"0px 2px 4px -2px rgba(16, 24, 40, 0.1), 0px 4px 6px -1px rgba(16, 24, 40, 0.1)",
@@ -132,6 +147,7 @@ const config: Config = {
         "custom-8":"0px 6px 12px 0px rgba(0, 0, 0, 0.11)",
         "custom-9":"0px 4px 6px -4px rgba(16, 24, 40, 0.1), 0px 10px 15px -3px rgba(16, 24, 40, 0.1)",
         "custom-10":"0px 1px 2px -1px rgba(16, 24, 40, 0.1), 0px -2px 3px 0px rgba(16, 24, 40, 0.1)",
+        "custom-11":"0px 2px 3px 0px rgba(0, 0, 0, 0.168), 0px 0px 3px 0px rgba(0, 0, 0, 0.084)",
       },
       backdropBlur:{
         "custom-1":"261px"
@@ -141,3 +157,4 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
