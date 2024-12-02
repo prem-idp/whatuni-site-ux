@@ -30,6 +30,8 @@ const HeroSliderComponent = () => {
   const [isLocationClicked, setIsLocationClicked] = useState(false);
   const [isUniversityClicked, setIsUniversityClicked] = useState(false);
   const [isAdviceClicked, setIsAdviceClicked] = useState(false);
+  const [isPgsUniversityClicked, setIsPgsUniversityClicked] = useState(false);
+  const [isPgsSearched, setIsPgsSearched] = useState(false);
 
   const courseActions = (tabName: string) => {
     if (tabName == "UG") {
@@ -62,11 +64,26 @@ const HeroSliderComponent = () => {
       setIsSubjectClicked(false);
       setIsLocationClicked(false);
       setIsUniversityClicked(false);
+    } else if (tabName == "PGSUniversity") {
+      setIsPgsUniversityClicked(!isPgsUniversityClicked);
+      setIsAdviceClicked(false);
+      setIsUndergratuateClicked(false);
+      setIsSubjectClicked(false);
+      setIsLocationClicked(false);
+      setIsUniversityClicked(false);
+    } else if (tabName == "KeyUpSearch") {
+      setIsPgsSearched(false);
+      setIsPgsUniversityClicked(false);
+      setIsAdviceClicked(false);
+      setIsUndergratuateClicked(false);
+      setIsSubjectClicked(false);
+      setIsLocationClicked(false);
+      setIsUniversityClicked(false);
     }
   };
 
   // ucas calculate
-  const [isUcasPopupOpen, SetIsUcasPopupOpen] = useState(true);
+  const [isUcasPopupOpen, SetIsUcasPopupOpen] = useState(false);
   const ucasClick = () => {
     SetIsUcasPopupOpen(true);
     const body = document.body;
@@ -78,6 +95,9 @@ const HeroSliderComponent = () => {
     SetIsUcasPopupOpen(false);
     body.classList.remove("overflow-y-hidden");
   };
+
+  // PGS SearchBox
+  const search = ["Masters", "PhD", "PGCert", "PGDip", "MBA", "PGCE"];
 
   return (
     <>
@@ -107,7 +127,7 @@ const HeroSliderComponent = () => {
             </Swiper>
           </div>
         </div>
-        <div className="pb-[12px] md:px-[16px]">
+        {/* <div className="md:px-[16px] xl:px-0">
           <div className="bg-white w-full rounded-none max-w-container mx-auto p-[16px] mt-0 min-h-[160px] relative z-3 md:shadow-custom-5 md:rounded-[32px] md:p-[24px] md:mt-[-82px]">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <ul className="flex gap-[8px] justify-center md:justify-start">
@@ -692,8 +712,76 @@ const HeroSliderComponent = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
+      {/* PGS SEARCH */}
+      <div className="max-w-container mx-auto ">
+        <div className="px-[16px] py-[16px] xl:p-0 flex flex-col gap-[16px]">
+          <div className="bg-white rounded-[24px] p-[16px] border border-grey-200 hover:border-primary-500 shadow-custom-1 md:rounded-[32px] md:mt-[-28px] md:pl-[24px] md:p-[10px]">
+            <div className="flex flex-col gap-[16px] small md:flex-row">
+              <div className="relative grow">
+                <input
+                  onClick={() => courseActions("PGSUniversity")}
+                  onKeyUp={() => courseActions("KeyUpSearch")}
+                  type="text"
+                  className="w-full focus:outline-none pt-0 pb-[16px] text-black placeholder:text-gray-500 border-b border-grey-200 md:py-[10px] md:border-none"
+                  aria-label="submenu"
+                  placeholder="Subject, qualification or university"
+                />
+                {isPgsUniversityClicked && (
+                  <div className="flex flex-col w-[calc(100%+32px)] absolute z-[1] bg-white shadow-custom-3 rounded-[8px] left-[-8px] top-[53px] md:w-[345px]">
+                    <div className="x-small font-semibold uppercase px-[16px] py-[10px] text-neutral-700 bg-neutral-50">
+                      QUALIFICATION
+                    </div>
+                    <ul>
+                      {search.map((item, index) => (
+                        <li
+                          key={index}
+                          className="px-[16px] py-[10px] block hover:bg-blue-50 hover:underline cursor-pointer"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {isPgsSearched && (
+                  <div className="flex flex-col w-[calc(100%+32px)] absolute z-[1] bg-white shadow-custom-3 rounded-[8px] left-[-8px] top-[53px] md:w-[345px]">
+                    <div className="x-small font-semibold uppercase px-[16px] py-[10px] text-neutral-700 bg-neutral-50">
+                      QUALIFICATION
+                    </div>
+                    <ul>
+                      {search.map((item, index) => (
+                        <li
+                          key={index}
+                          className="px-[16px] py-[10px] block hover:bg-blue-50 hover:underline cursor-pointer"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+              <button
+                type="submit"
+                className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] md:w-[114px]"
+              >
+                <Image
+                  src="/assets/icons/search_icon.svg"
+                  width="18"
+                  height="18"
+                  alt="Search icon"
+                />
+                Search
+              </button>
+            </div>
+          </div>
+          <p className="small text-negative-default">
+            Please select university from dropdown
+          </p>
+        </div>
+      </div>
     </>
   );
 };
