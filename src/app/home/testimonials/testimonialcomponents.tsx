@@ -11,9 +11,8 @@ const Testimonialcomponents = () => {
                         <p className='font-normal small mt-[8px]'>Subheading</p>
                     </div>
                     <div className='testimonials-inner-wrap grid grid-cols-1 lg:grid-cols-2 gap-[16px]'>
-                        
                         <div className='video-container flex justify-center items-center lg:items-start xl:items-center rounded-[8px] overflow-hidden relative'>
-                            <div className='video w-full '>
+                            <div className='video w-full'>
                                 <video className="w-full" src="https://videos.ctfassets.net/szez98lehkfm/55B87nXDB6elXrfpVzAN2f/cb43e059d141307aed6dd617a202a86f/wuscas_2024_video.mp4" width="600" height="316"  controls
                                 ></video>
                             </div>
