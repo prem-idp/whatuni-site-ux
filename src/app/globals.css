@@ -86,11 +86,12 @@
   .scrollbar-hidden::-webkit-scrollbar{display:none;width:0!important;height:0!important;-webkit-appearance:none;background:transparent}
   .custom-horizontal-scrollbar::-webkit-scrollbar{@apply w-[5px]}
   .custom-horizontal-scrollbar::-webkit-scrollbar-track{@apply bg-transparent my-[8px]}
-  .custom-horizontal-scrollbar::-webkit-scrollbar-thumb{@apply bg-neutral-200 hover:bg-neutral-200 rounded-[10px]}
-  .custom-scrollbar-2::-webkit-scrollbar{@apply w-[8px] h-[8px]}
-  .custom-scrollbar-2::-webkit-scrollbar-track{	@apply bg-grey-200 rounded-[4px]}
-  .custom-scrollbar-2::-webkit-scrollbar-thumb{@apply bg-grey-300 rounded-[4px]}
+  .custom-horizontal-scrollbar::-webkit-scrollbar-thumb{@apply bg-neutral-200 hover:bg-neutral-200 rounded-[10px]  border-primary-400}
+  .custom-scrollbar-2::-webkit-scrollbar{@apply w-[8px] h-[8px] border }
+  .custom-scrollbar-2::-webkit-scrollbar-track{	@apply bg-grey-200 rounded-[2px]}
+  .custom-scrollbar-2::-webkit-scrollbar-thumb{@apply bg-grey-300 rounded-[2px]}
   .custom-scrollbar-2::-webkit-scrollbar-thumb:hover{@apply bg-grey-400}
+  .signup_form .form_container::-webkit-scrollbar{@apply w-[5px]}
 }
 html{font-size: 62.5%}
 body {@apply font-inter font-normal text-para text-grey300;}
@@ -174,7 +175,9 @@ p,.para {@apply text-para}
 .MultiSwiper .swiper-pagination-bullet-active{@apply !bg-blue-300} 
 /* Swiper Styles */
 /* Backgrop shadow */
-.backdrop-shadow{background: rgba(51, 63, 72, .8);-webkit-backdrop-filter: blur(4px);backdrop-filter: blur(4px)}
+.backdrop-shadow{@apply backdrop-blur-sm bg-grey-600/80}
+.backdrop-shadow-white{@apply backdrop-blur-sm bg-white/50}
+
 /* Backgrop shadow */
 .animate-fadeIn{
   animation: fadeIn .2s ease-in;
@@ -229,7 +232,7 @@ p,.para {@apply text-para}
   }
 }
 /* For testing purposee */
- /* .wusca-container, .reviews-container, .advice-container {@apply bg-black}
+/* .wusca-container, .reviews-container, .advice-container {@apply bg-black}
 .discover-container, .testimonials-container{@apply bg-neutral-300} */
 /* hero slider styles */
 .hero .swiper-pagination {@apply lg:!top-[64px] !left-0 text-left !bottom-auto xs:!top-[40px]}
@@ -238,9 +241,28 @@ p,.para {@apply text-para}
 .hero .swiper-pagination-bullet-active { @apply !bg-primary-500 !w-[16px] !h-[8px] rounded-[4px] !opacity-90}
 .hero .swiper-slide-prev{@apply !opacity-0}
 /* partner slider styles */
-.partner{@apply !pb-[50px] !px-[16px]}
-.partner .swiper-pagination { @apply !bottom-0 lg:!hidden}
-.partner .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev, .partner .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next, .partner .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next, .partner .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev { @apply !scale-[1]}
-.rightmenu li:not(:last-child) span:hover > svg path{stroke: white}
-.decrease svg path{stroke:  #4664DC;}
+.partner{@apply !pb-[30px]}
+.partner .swiper-pagination { @apply !bottom-0}
+.partner .swiper-pagination { @apply lg:!hidden}
+.rightmenu li:not(:last-child) span:hover > svg path,.continue_email:hover svg path{stroke: white}
+.decrease svg path{stroke: #4664DC}
+/* partner slider styles */
+/* Registeration */
+.form_radio .form-check-input:checked + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
+.form_check .form-checkbox:checked + label, .form_radio .form-radio:checked + label{@apply text-white bg-primary-400 border-primary-400 cursor-pointer}
+.error .form-control{@apply border border-negative-default}
+.err_msg{display: none}
+.error .err_msg{display: block}
+/* Registeration */
+/* COLC */
+.accordion-header .accord_uni_list svg:hover path{fill:#4664DC}
+.favourites_added{@apply border border-primary-400}
+.favourites_added + .favourites_added{@apply border-t-0}
+.favourites_added .accord_uni_list svg path{fill:#4664DC}
+.expanded{@apply border-l-2 border-l-primary-400}
+.expanded:hover{@apply !bg-transparent}
+.pagination li.active a{@apply bg-primary-400 text-white}
+/* COLC */
+
+
 

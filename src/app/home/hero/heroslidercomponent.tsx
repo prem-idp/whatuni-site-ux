@@ -715,7 +715,7 @@ const HeroSliderComponent = () => {
         </div> */}
       </section>
       {/* PGS SEARCH */}
-      <div className="max-w-container mx-auto ">
+      {/* <div className="max-w-container mx-auto ">
         <div className="px-[16px] py-[16px] xl:p-0 flex flex-col gap-[16px]">
           <div className="bg-white rounded-[24px] p-[16px] border border-grey-200 hover:border-primary-500 shadow-custom-1 md:rounded-[32px] md:mt-[-28px] md:pl-[24px] md:p-[10px]">
             <div className="flex flex-col gap-[16px] small md:flex-row">
@@ -781,7 +781,7 @@ const HeroSliderComponent = () => {
             Please select university from dropdown
           </p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

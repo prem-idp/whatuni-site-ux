@@ -303,9 +303,9 @@ const Food = ({ title, content }: any) => {
                 <path
                   d="M6 14.5L12 8.5L18 14.5"
                   stroke="#333333"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
@@ -459,9 +459,9 @@ const Food = ({ title, content }: any) => {
                 <path
                   d="M6 14.5L12 8.5L18 14.5"
                   stroke="#333333"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
@@ -569,9 +569,9 @@ const Food = ({ title, content }: any) => {
                 <path
                   d="M6 14.5L12 8.5L18 14.5"
                   stroke="#333333"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>

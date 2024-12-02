@@ -12,6 +12,7 @@ import Discovercardskeleton from "./components/skeleton/discovercardskeleton";
 import Tagcloudcomponents from "./home/tag-cloud/tagcloudcomponents";
 import HeroSliderComponentSkeleton from "./components/skeleton/heroslidercomponentskeleton";
 import PartnerSliderComponentSkeleton from "./components/skeleton/partnerslidercomponentskeleton";
+import Registerationcomponents from "./components/registeration/registerationcomponents";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <Reviewscomponents />
       <OurPartnerComponent />
       <PartnerSliderComponentSkeleton/>
+      <Registerationcomponents />
     </>
   );
 }
