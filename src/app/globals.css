@@ -217,20 +217,7 @@ p,.para {@apply text-para}
     transform: translate3d(0, 0, 0);
   }
 }
-.animate-fadeOutLeft{
-  animation: fadeOutLeft 0.3s;
-}
-@keyframes fadeOutLeft {
-  from {
-    opacity: 1;
-  }
 
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
 /* For testing purposee */
 /* .wusca-container, .reviews-container, .advice-container {@apply bg-black}
 .discover-container, .testimonials-container{@apply bg-neutral-300} */
@@ -262,6 +249,8 @@ p,.para {@apply text-para}
 .expanded{@apply border-l-2 border-l-primary-400}
 .expanded:hover{@apply !bg-transparent}
 .pagination li.active a{@apply bg-primary-400 text-white}
+.collapsed{max-height: 0;opacity: 0;transition: max-height .3s ease-in-out}
+.expanded{@apply max-h-[1000px] transition-all border-l-0 opacity-[1]}
 /* COLC */
 
 
