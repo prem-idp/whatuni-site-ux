@@ -5,6 +5,7 @@ import Advicecomponents from '../home/advice/advicecomponents'
 import Faqcomponents from '../components/faq/faqcomponents'
 
 const page = () => {
+
   return (
     <div className='colc_results bg-white'>
         <section className="bg-blue-100 min-h-[194px]">
@@ -29,8 +30,8 @@ const page = () => {
         <div className='max-w-container mx-auto'>
             <div className='results_container flex flex-col lg:flex-row gap-[20px] md:pt-[40px] md:px-[20px] md:pb-[20px]'>
                 <section className='results_card flex flex-col  w-full md:rounded-t-[8px] overflow-hidden'>
-                    <div className='edit_results_card flex flex-row-reverse md:flex-row justify-between items-center gap-[24px] bg-orange-200 px-[24px] py-[12px]'>
-                        <div className='results_img max-w-[97px]'>
+                    <div className='edit_results_card flex flex-row-reverse md:flex-row justify-between items-center gap-[24px] bg-orange-200 px-[24px] py-[24px] md:py-[12px]'>
+                        <div className='results_img w-[169px] md:w-[97px]'>
                         <Image className='block' src="/assets/images/registeration/regist_hero_image.png" width="97" height="129"  alt='hero image'/>
                         </div>
                         <div className='results_edit flex flex-col gap-[16px] md:gap-[0] md:flex-row  justify-between items-start md:items-center w-full'>
@@ -45,7 +46,7 @@ const page = () => {
                     </div>
                     <div className='cost_living_container flex flex-col gap-[24px] px-[16px] md:px-[24px] py-[24px] bg-white rounded-b-[8px] overflow-hidden md:border md:border-grey-200 shadow-custom-3'>
                         <div className='average_cost_card flex flex-col gap-[16px]'>
-                            <h6>Your average cost of living in the UK</h6>
+                            <h5 className='text-heading6'>Your average cost of living in the UK</h5>
                             <div className='average_cost_breakdown flex flex-col rounded-[8px] border-[3px] border-grey-600'>
                                 <div className='flex justify-between gap-[24px] px-[16px] py-[16px] bg-grey-600'>
                                     <div className='para-lg font-semibold text-white'>UK Average</div>
@@ -89,7 +90,7 @@ const page = () => {
                             </div>
                         </div>
                         <div className='your_cost_card flex flex-col gap-[16px]'>
-                            <h6>Your cost of living around the UK</h6>
+                            <h5 className='text-heading6'>Your cost of living around the UK</h5>
                             <div className='your_cost_of_living flex flex-col gap-[8px]'>
                                 <ul className="flex items-center gap-[8px] cursor-pointer">
                                     <li className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500`}>
@@ -137,9 +138,9 @@ const page = () => {
                                             <div className='flex items-center gap-[8px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
@@ -430,7 +431,7 @@ const page = () => {
                                     </div>
                                     {/* accordion start */}                                                                                                  <nav aria-label="navigation">
                                         <ul className="pagination flex justify-center items-center gap-[8px] px-[24px] pt-[24px]">
-                                            <li className="page-item"><Link className="page-link flex items-center justify-center px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]" href="#">
+                                            <li className="page-item"><Link className="page-link flex items-center justify-center px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]" href="#" title="" aria-label='Previous'>
                                                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M6 11L1 6L6 1" stroke="#333F48" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
                                                 </svg></Link>
@@ -442,7 +443,7 @@ const page = () => {
                                             <li className="page-item"><a className="page-link hidden md:block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50" href="#">5</a></li>
                                             <li className="page-item"><a className="page-link flex items-center justify-center small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]" href="#">...</a></li>
                                             <li className="page-item"><a className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50" href="#">25</a></li>
-                                            <li className="page-item"><a className="page-link flex items-center justify-center px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]" href="#">
+                                            <li className="page-item"><a className="page-link flex items-center justify-center px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]" href="#" title='' aria-label='Next'>
                                                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 1L6 6L1 11" stroke="#333F48" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
                                                 </svg></a>
@@ -466,9 +467,9 @@ const page = () => {
                         </div>
                     </div>
                 </section>
-                <aside className='promotion_pod w-full md:min-w-[392px]'>
-                <Image className='block w-full md:hidden lg:block' src="/assets/images/colc/promotion_app_img.svg" alt="" width="392" height="403" />
-                <Image className='hidden w-full md:block lg:hidden' src="/assets/images/colc/promotion_app_img_1.svg" alt="" width="728" height="226" />
+                <aside className='promotion_pod w-full lg:min-w-[392px] lg:w-[392px]'>
+                <Image className='block w-full md:hidden lg:block' src="/assets/images/colc/promotion_app_img.jpg" alt="" width="392" height="403" />
+                <Image className='hidden w-full md:block lg:hidden' src="/assets/images/colc/promotion_app_img_1.jpg" alt="" width="728" height="226" />
                 </aside>
             </div>
         </div>
