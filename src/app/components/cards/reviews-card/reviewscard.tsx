@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 const Reviewscard = () => {
   return (
-    <Link href="" className="reviews-card flex flex-col bg-white p-[16px] rounded-[8px] bg-white border border-grey-200 hover:border-primary-400 shadow-custom-2">
-      <div className="review-card-header flex items-center gap-[8px] border-b border-neutrale-200 pb-[16px]">
+    <Link href="" className="reviews-card flex flex-col bg-white p-[16px] rounded-[8px] border border-grey-200 hover:border-primary-400 shadow-custom-2 min-h-[297px]">
+      <div className="review-card-header flex items-center gap-[8px] border-b border-neutrale-200 pb-[16px] min-h-[83px]">
           <h6 className="review-box__avatar flex justify-center items-center text-white w-[48px] h-[48px] bg-primary-400 rounded-[100px]">MW</h6>
           <div className="review-box__details flex flex-col justify-center w-[calc(100%_-_48px)]">
             <div className="review-box__name font-semibold small text-grey300 line-clamp-1">Archie Kinkead</div>
