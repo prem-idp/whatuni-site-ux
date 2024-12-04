@@ -2,13 +2,21 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const Housing = () => {
-  const housing = [
-    "At home",
-    "University halls",
-    "Shared house (private)",
-    "Live alone (private)",
+const Clothing = () => {
+  const clothing = [
+    "£ - Budget clothing",
+    "££ - Mid range clothing",
+    "£££ - Designer labels",
   ];
+  const clothMonthly = [
+    "No items",
+    "1 item",
+    "2 item",
+    "3 item",
+    "4 item",
+    "5 item",
+  ];
+
   //checkbox
   const [isChecked, setIsChecked] = useState(true);
   const handleCheck = () => {
@@ -19,68 +27,55 @@ const Housing = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
-  const housingqus = [
+
+  const clothingqus = [
     {
-      name: "At home",
-      list: "- staying where you currently are. This will likely be the cheapest option. ",
+      list: "£ - charity shop/budget clothing store like Primark or Penneys",
     },
     {
-      name: "University halls",
-      list: "- Apply via uni. This will likely be the cheapest option if you want to move away from home.",
+      list: "££ - Mid range clothing store like Next or Zara",
     },
     {
-      name: "Shared or single private rental",
-      list: "- via and estate agent. This will generally be the most expensive option. If you already know the cost of your accommodation tick the box above and enter the amount.",
+      list: "£££ - High end stores or Designer labels like Selfridges or Harrods).",
     },
   ];
+
   //dropdowns
   const [isCostDropdownOpened, SetIsCostDropdownOpened] = useState(false);
-  const [isLivingDropdownOpened, SetIsLivingDropdownOpened] = useState(false);
   const CostDropdownClicked = (dropdownType: string) => {
     if (dropdownType == "COST") {
       SetIsCostDropdownOpened(!isCostDropdownOpened);
-      SetIsLivingDropdownOpened(false);
-    } else if (dropdownType == "LIVING") {
-      SetIsCostDropdownOpened(false);
-      SetIsLivingDropdownOpened(!isLivingDropdownOpened);
     }
   };
   const dropdown = ["Monthly", "Weekly", "Yearly"];
-  const livingdropdown = [
-    "At home",
-    "University halls",
-    "Shared house (private)",
-    "Live alone (private)",
-  ];
+  const vehicle = ["No", "Yes"];
+
   return (
     <>
       <div className="flex flex-col gap-[16px]">
+        <div className="border-b-[2px] border-grey-200"></div>
         <div className="flex items-center gap-[12px]">
           <div className="bg-blue-200 rounded-tl-[24px] rounded-br-[24px] p-[12px] w-[48px] h-[48px] flex items-center justify-center">
             <Image
-              src="/assets/icons/colc/housing.svg"
-              alt="Housing"
+              src="/assets/icons/colc/clothing.svg"
+              alt="Travel"
               width={24}
               height={24}
             />
           </div>
-          <h2 className="text-heading5 md:text-heading4">Housing</h2>
+          <h2 className="text-heading5 md:text-heading4">Clothing</h2>
         </div>
-        <p className="small">
-          Accommodation costs vary based on location, type and availability.
-          These are average estimates for catered and non-catered options.
-        </p>
         <div className="border-l-[8px] border-grey-200">
           <div className="ml-[16px]">
             <h3 className="text-para-lg font-medium mb-[8px]">
-              Where do you plan on living while at university?
+              How expensive is the clothing you usually buy?
               <span className="text-negative-default">*</span>
             </h3>
             <p className="uppercase text-grey-700 mb-[4px] xs-small font-semibold">
-              Choose One
+              CHOOSE an option
             </p>
             <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
-              {housing.map((item, index) => (
+              {clothing.map((item, index) => (
                 <li
                   key={index}
                   className="btn btn-primary-outline small cursor-pointer"
@@ -91,6 +86,31 @@ const Housing = () => {
             </ul>
           </div>
         </div>
+        <div className="border-l-[8px] border-grey-200">
+          <div className="ml-[16px]">
+            <h3 className="text-para-lg font-medium mb-[8px]">
+              How many items of clothing do you buy monthly?
+              <span className="text-negative-default">*</span>
+            </h3>
+            <p className="uppercase text-grey-700 mb-[4px] xs-small font-semibold">
+              CHOOSE an option
+            </p>
+            <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
+              {clothMonthly.map((item, index) => (
+                <li
+                  key={index}
+                  className="btn btn-primary-outline small cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
+              <li className="btn btn-primary-outline small cursor-pointer">
+                6 item +
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="bg-grey-50 border border-grey-300 rounded-[4px] p-[16px] flex flex-col text-neutral900">
           <div className="flex items-center gap-[12px]">
             <input
@@ -101,7 +121,7 @@ const Housing = () => {
               className="accent-primary-400 text-white w-[16px] h-[16px]"
             />
             <label className="cursor-pointer font-medium">
-              I already know my housing costs
+              I already know how much I spend
             </label>
           </div>
           <div
@@ -109,13 +129,13 @@ const Housing = () => {
               isChecked ? "block" : "hidden"
             }`}
           >
-            <div className="border-t border-grey-300 pt-[12px] mt-[12px] grid grid-cols-1 items-center justify-between gap-[12px] md:grid-cols-2">
+            <div className="border-t border-grey-300 pt-[12px] mt-[12px] grid grid-cols-1 items-center justify-between gap-[24px]">
               <div>
                 <label
                   htmlFor="inputId"
                   className="block font-semibold mb-[8px]"
                 >
-                  What are your housing costs?
+                  What are your clothing costs?
                 </label>
                 <div className="flex items-center gap-[8px]">
                   <input
@@ -124,10 +144,11 @@ const Housing = () => {
                     className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
                     placeholder="£0"
                   />
+
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
-                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-[111px] font-semibold"
+                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
                       type="button"
                     >
                       Monthly
@@ -155,43 +176,6 @@ const Housing = () => {
                   </div>
                 </div>
               </div>
-              <div>
-                <label
-                  htmlFor="inputId"
-                  className="block font-semibold mb-[8px]"
-                >
-                  I’ll be living...
-                </label>
-                <div className="relative">
-                  <button
-                    onClick={() => CostDropdownClicked("LIVING")}
-                    className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
-                    type="button"
-                  >
-                    Please choose
-                    <Image
-                      src="/assets/icons/arrow_down_black.svg"
-                      width="20"
-                      height="20"
-                      alt="Down Arrow"
-                    />
-                  </button>
-                  {isLivingDropdownOpened && (
-                    <div className="w-full z-[1] bg-white shadow-custom-3 rounded-[4px] absolute top-[46px] overflow-hidden">
-                      <ul>
-                        {livingdropdown.map((item, index) => (
-                          <li
-                            key={index}
-                            className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline cursor-pointer"
-                          >
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -211,8 +195,9 @@ const Housing = () => {
               strokeLinejoin="round"
             />
           </svg>
-          Please enter your housing costs
+          Please enter your clothing costs
         </div>
+
         <div className="border-l-[2px] border-primary-400 bg-grey-50 px-[16px] py-[10px]">
           <button
             className="flex items-center justify-between w-full font-semibold small"
@@ -244,27 +229,32 @@ const Housing = () => {
             }`}
           >
             <div className="flex flex-col gap-[4px] mt-[10px] x-small">
-              <div className="font-semibold">Housing</div>
-              <ul>
-                {housingqus.map((item, index) => (
-                  <li
-                    key={index}
-                    className="list-disc ml-[22px] mb-[10px] last:mb-0"
-                  >
-                    <span className="font-semibold">{item.name}</span>
-                    {item.list}
-                  </li>
-                ))}
-              </ul>
-              <div>
-                <span className="font-semibold">Tip:</span> Whether you’re just
-                starting your journey to university or already planning your
-                move, keep in mind that your exact costs can vary. The estimates
-                here are based on average prices for catered and non-catered
-                accommodation. If you're considering living at home or in
-                private housing, these averages may not reflect your actual
-                expenses. You can come back and adjust these figures whenever
-                you need to!
+              <div className="font-semibold">Clothing</div>
+              <div className="flex flex-col gap-[16px]">
+                <div>
+                  If you already know how much you spend per month on clothes,
+                  please enter the amount by ticking he box next to 'I already
+                  know how much I spend'.
+                </div>
+                <ul>
+                  <div className="mb-[16px]">
+                    If not, please select the usual price range of the clothes
+                    you purchase (e.g.)
+                  </div>
+                  {clothingqus.map((item, index) => (
+                    <li
+                      key={index}
+                      className="list-disc ml-[22px] mb-[10px] last:mb-0"
+                    >
+                      {item.list}
+                    </li>
+                  ))}
+                </ul>
+                <div>
+                  Then select how many items you buy per month. The calculator
+                  will estimate a cost based on your answers and UK averages for
+                  each price band.
+                </div>
               </div>
             </div>
           </div>
@@ -274,4 +264,4 @@ const Housing = () => {
   );
 };
 
-export default Housing;
+export default Clothing;
