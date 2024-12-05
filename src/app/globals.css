@@ -243,14 +243,17 @@ p,.para {@apply text-para}
 /* Registeration */
 /* COLC */
 .accordion-header .accord_uni_list svg:hover path{fill:#4664DC}
-.favourites_added{@apply border border-primary-400}
+.favourites_added{@apply border border-primary-400 !bg-transparent}
 .favourites_added + .favourites_added{@apply border-t-0}
 .favourites_added .accord_uni_list svg path{fill:#4664DC}
 .expanded{@apply border-l-2 border-l-primary-400}
 .expanded:hover{@apply !bg-transparent}
 .pagination li.active a{@apply bg-primary-400 text-white}
-.collapsed{max-height: 0;opacity: 0;transition: max-height .3s ease-in-out}
-.expanded{@apply max-h-[1000px] transition-all border-l-0 opacity-[1]}
+.collapsed{transition: max-height .3s ease-in-out}
+.expanded{@apply transition-all opacity-[1]}
+.faq-card-container .expanded{@apply border-l-0}
+.validation-negative > div{@apply text-desturctive-600}
+.validation-positive > div{@apply text-positive-dark}
 /* COLC */
 
 

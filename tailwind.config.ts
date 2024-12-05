@@ -21,7 +21,7 @@ const config: Config = {
       xxl2: "1600px",
       xxxl: "1920px",
     },
-    fontFamily: {
+    fontFamily: {   
       farro: ["Farro", "sans-serif"],
       inter: ["Inter", "sans-serif"],
     },
@@ -65,7 +65,18 @@ const config: Config = {
           100: "#C8F0F5",
           200: "#0FBEFD",
           300: "#0086F8",
+          400: "#4664DC",
           500: "#3460DC",
+        },
+        green:{
+          50: "#F1F4FD",
+          100: "#FDFAAF",
+          200: "#B4E646",
+        },
+        orange: {
+          50: "#FFF7E0",
+          100: "#FFF0BE",
+          200: "#FFD700",
         },
         grey: {
           50: "#F9FAFB",
@@ -90,7 +101,6 @@ const config: Config = {
           500: "#0657AD",
         },
         secondary: {
-          50: "#F1F4FD",
           100: "#FDFAAF",
           200: "#B4E646",
           300: "#51C21A",
@@ -105,9 +115,6 @@ const config: Config = {
           400: "#FF8300",
           500: "#973A14",
           600: "#BC5B00",
-        },
-        orange: {
-          200: "#FFD700",
         },
         positive: {
           default: "#168721",
@@ -124,10 +131,8 @@ const config: Config = {
         }
       },
       backgroundImage: {
-        gradientBlack:
-          "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
-        gradientBlack1:
-          "linear-gradient(180deg, rgba(0,0,0,0) 50.5%, rgba(0,0,0,1) 100%)",
+        gradientBlack:"linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
+        gradientBlack1:"linear-gradient(180deg, rgba(0,0,0,0) 50.5%, rgba(0,0,0,1) 100%)",
         gradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
         gradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
         gradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
@@ -152,12 +157,13 @@ const config: Config = {
         "custom-10":"0px 1px 2px -1px rgba(16, 24, 40, 0.1), 0px -2px 3px 0px rgba(16, 24, 40, 0.1)",
         "custom-11":"0px 2px 3px 0px rgba(0, 0, 0, 0.168), 0px 0px 3px 0px rgba(0, 0, 0, 0.084)",
       },
-      backdropBlur: {
-        "custom-1": "261px",
-      },
+      backdropBlur:{
+        "custom-1":"261px"
+      }
     },
   },
   plugins: [],
 };
 export default config;
+
 

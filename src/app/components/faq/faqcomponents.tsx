@@ -36,10 +36,10 @@ const Faqcomponents = () => {
         },
       ];
   return (
-    <div className="reviews-container bg-white">
+    <div className="faq-container bg-white">
       <div className="max-w-container mx-auto">
-            <div className="reviews-card-container px-[20px] py-[34px] lg:py-[60px] lg:px-[0]">
-                <div className="reviews-header mb-[26px]  md:px-[20px] xl:px-[0] xl:mb-[32px]">
+            <div className="faq-card-container px-[20px] py-[34px] lg:py-[60px] lg:px-[0]">
+                <div className="faq-header mb-[26px]  md:px-[20px] xl:px-[0] xl:mb-[32px]">
                     <h2 className="font-bold">Frequently asked questions</h2>
                     <p className="font-normal small mt-[8px]">Subheading</p>
                 </div>
@@ -49,12 +49,19 @@ const Faqcomponents = () => {
                         <div className='accordion-header flex items-center justify-between gap-[48px] para font-semibold text-grey300' onClick={() => toggleAccordion(index)}>
                             {item.title}
                             <span>
-                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 1L6 6L1 1" stroke="#82898F" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
+                            {openIndex === index ? (
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 6L6 1L1 6" stroke="#82898F" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            ):(
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="#82898F" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            )}
+
                             </span>
                         </div>
-                        <div className={`accordion-body  ${openIndex === index ? 'expanded' : 'collapsed'}`}>{item.content}</div>
+                        <div className={`accordion-body  ${openIndex === index ? 'expanded flex' : 'collapsed hidden'}`}>{item.content}</div>
                                                   
                     </div>
                 ))}
