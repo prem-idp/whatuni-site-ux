@@ -8,9 +8,9 @@ const page = () => {
 
   return (
     <div className='colc_results bg-white'>
-        <section className="bg-blue-100 min-h-[194px]">
+        <section className="bg-blue-100">
             <div className="max-w-container mx-auto">
-            <div className="flex flex-col-reverse md:flex-row justify-between gap-[16px] px-[20px] lg:px-[0] py-[20px] lg:py-[0]">
+            <div className="flex flex-col-reverse md:flex-row justify-between gap-[16px] px-[20px] lg:px-[0] py-[20px] lg:py-[0] min-h-[194px]">
                 <div className="flex flex-col gap-[4px] self-center">
                     <h1 className="text-heading1 md:text-heading-xl">Student cost of living calculator</h1>
                     <p className="small">Answer the questions below to get an idea of your monthly spend at university</p>
@@ -107,7 +107,7 @@ const page = () => {
                                     <input type='text' placeholder='Search' className='w-full small font-normal text-grey300 py-[10px] pl-[10px] pr-[36px] border border-grey-500 rounded-[4px] outline-none focus:border focus:border-primary-400' />
                                     <span className='absolute right-[12px] top-[12px]'>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.5 17.5L12.5 12.5M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.5 17.5L12.5 12.5M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                     </span>
                                 </div>
