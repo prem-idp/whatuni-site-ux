@@ -61,7 +61,7 @@ const Faqcomponents = () => {
 
                             </span>
                         </div>
-                        <div className={`accordion-body  ${openIndex === index ? 'expanded flex' : 'collapsed hidden'}`}>{item.content}</div>
+                        <div className={`accordion-body mt-[16px] ${openIndex === index ? 'expanded flex' : 'collapsed hidden'}`}>{item.content}</div>
                                                   
                     </div>
                 ))}
