@@ -91,7 +91,7 @@ const page = () => {
                         </div>
                         <div className='your_cost_card flex flex-col gap-[16px]'>
                             <h5 className='text-heading6'>Your cost of living around the UK</h5>
-                            <div className='your_cost_of_living flex flex-col gap-[8px]'>
+                            <div className='your_cost_of_living flex flex-col gap-[16px] md:gap-[8px] md:flex-row md:items-center justify-between '>
                                 <ul className="flex items-center gap-[8px] cursor-pointer">
                                     <li className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500`}>
                                         University
@@ -103,6 +103,14 @@ const page = () => {
                                         Region
                                     </li>
                                 </ul>
+                                <div className='relative'>
+                                    <input type='text' placeholder='Search' className='w-full small font-normal text-grey300 py-[10px] pl-[10px] pr-[36px] border border-grey-500 rounded-[4px] outline-none focus:border focus:border-primary-400' />
+                                    <span className='absolute right-[12px] top-[12px]'>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.5 17.5L12.5 12.5M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    </span>
+                                </div>
                             </div>
                             <div className="accordion">
                                 <div className='accordion-item-caption flex gap-[8px] justify-between py-[16px] pl-[16px] pr-[16px] md:pr-[24px] bg-grey-100'>
@@ -137,7 +145,7 @@ const page = () => {
                                             </div>
                                             <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
-                                                <span>
+                                                <span className='cursor-pointer'>
                                                 <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                                 </svg>
@@ -148,7 +156,7 @@ const page = () => {
                                     </div>
                                     {/* accordion start */}
                                     {/* accordion start */}
-                                    <div className='accordion-header expanded flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                    <div className='accordion-header expanded flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                             <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                     <span className='cursor-pointer'>
@@ -160,7 +168,7 @@ const page = () => {
                                                 </div>
                                                 <div className='flex items-center gap-[24px] '>
                                                     <span className='small font-semibold text-grey300'>£1,500pcm</span>
-                                                    <span>
+                                                    <span className='cursor-pointer'>
                                                         <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                                         </svg>
