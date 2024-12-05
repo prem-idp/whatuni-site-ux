@@ -10,7 +10,7 @@ const page = () => {
     <div className='colc_results bg-white'>
         <section className="bg-blue-100 min-h-[194px]">
             <div className="max-w-container mx-auto">
-            <div className="flex flex-col-reverse md:flex-row justify-between gap-[16px] px-[20px] py-[20px]">
+            <div className="flex flex-col-reverse md:flex-row justify-between gap-[16px] px-[20px] lg:px-[0] py-[20px] lg:py-[0]">
                 <div className="flex flex-col gap-[4px] self-center">
                     <h1 className="text-heading1 md:text-heading-xl">Student cost of living calculator</h1>
                     <p className="small">Answer the questions below to get an idea of your monthly spend at university</p>
@@ -28,7 +28,7 @@ const page = () => {
             </div>
         </section>
         <div className='max-w-container mx-auto'>
-            <div className='results_container flex flex-col lg:flex-row gap-[20px] md:pt-[40px] md:px-[20px] md:pb-[20px]'>
+            <div className='results_container flex flex-col lg:flex-row gap-[20px]  md:px-[20px] lg:px-[0] py-[40px]'>
                 <section className='results_card flex flex-col  w-full md:rounded-t-[8px] overflow-hidden'>
                     <div className='edit_results_card flex flex-row-reverse md:flex-row justify-between items-center gap-[24px] bg-orange-200 px-[24px] py-[24px] md:py-[12px]'>
                         <div className='results_img w-[169px] md:w-[97px]'>
@@ -52,8 +52,8 @@ const page = () => {
                                     <div className='para-lg font-semibold text-white'>UK Average</div>
                                     <div className='para-lg font-semibold text-white'>£1,500pcm</div>
                                 </div>
-                                <div className='flex flex-col gap-[8px] px-[16px] py-[16px] md:py-[8px] bg-grey-600'>
-                                    <div className='small font-semibold text-white'>COST OF LIVING BREAKDOWN</div>
+                                <div className='flex flex-col gap-[8px] px-[16px] py-[8px] md:py-[16px] bg-grey-600'>
+                                    <div className='x-small font-semibold text-white'>COST OF LIVING BREAKDOWN</div>
                                     <div className='flex flex-wrap md:flex-nowrap justify-between gap-[16px]'>
                                         <div className='flex flex-col gap-[4px] basis-[47%] md:basis-[20%]'>
                                             <div className='small font-semibold text-white'>Housing</div>
@@ -82,9 +82,9 @@ const page = () => {
                                         <div className='small font-semibold text-neutral-700'>Income</div>
                                         <div className='small font-normal text-neutral-700'>£1,612pcm</div>
                                     </div>
-                                    <div className='flex flex-col gap-[4px] basis-[50%]'>
-                                        <div className='small font-semibold text-desturctive-600'>Deficit</div>
-                                        <div className='small font-normal text-desturctive-600'>-£1,612pcm</div>
+                                    <div className='flex flex-col gap-[4px] basis-[50%] validation-negative'>
+                                        <div className='small font-semibold'>Deficit</div>
+                                        <div className='small font-normal'>-£1,612pcm</div>
                                     </div>
                                 </div>
                             </div>
@@ -125,9 +125,9 @@ const page = () => {
                                 </div>
                                 <div className="accordion-item">
                                     {/* accordion start */}
-                                    <div className='accordion-header favourites_added py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 hover:bg-primary-50 first:border-t'>
-                                        <div className='flex gap-[8px] justify-between'>
-                                        <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
+                                    <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 hover:bg-primary-50 first:border-t'>
+                                        <div className='flex w-full gap-[8px] justify-between'>
+                                            <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
                                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z" stroke="#4664DC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -135,7 +135,7 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Abertay University</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
                                                 <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,32 +144,33 @@ const page = () => {
                                                 </span>
                                             </div>
                                         </div>
+                                        <div className="accordion-body hidden mt-[16px] mb-[8px] md:mb-[0]"></div>
                                     </div>
                                     {/* accordion start */}
                                     {/* accordion start */}
-                                    <div className='accordion-header expanded flex flex-col gap-[16px] py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                    <div className='accordion-header expanded flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
-                                        <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
-                                                <span className='cursor-pointer'>
-                                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z" stroke="#4664DC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                                <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Arts University Plymouth</Link>                                            
+                                            <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
+                                                    <span className='cursor-pointer'>
+                                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z" stroke="#4664DC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                        </svg>
+                                                    </span>
+                                                    <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Arts University Plymouth</Link>                                            
+                                                </div>
+                                                <div className='flex items-center gap-[24px] '>
+                                                    <span className='small font-semibold text-grey300'>£1,500pcm</span>
+                                                    <span>
+                                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                        </svg>
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
-                                                <span className='small font-semibold text-grey300'>£1,500pcm</span>
-                                                <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div className="accordion-body">
+                                        <div className="accordion-body mt-[16px] mb-[8px] md:mb-[0]">
                                             <div className='average_cost_breakdown flex flex-col rounded-[8px] overflow-hidden'>
-                                                <div className='flex flex-col gap-[8px] px-[16px] py-[16px] md:py-[8px] bg-grey-50'>
-                                                    <div className='small font-semibold text-grey300'>COST OF LIVING BREAKDOWN</div>
+                                                <div className='flex flex-col gap-[8px] px-[16px] py-[16px] bg-grey-50'>
+                                                    <div className='x-small font-semibold text-grey300'>COST OF LIVING BREAKDOWN</div>
                                                     <div className='flex flex-wrap md:flex-nowrap justify-between gap-[16px]'>
                                                         <div className='flex flex-col gap-[4px] basis-[47%] md:basis-[20%]'>
                                                             <div className='small font-semibold text-grey300'>Housing</div>
@@ -198,17 +199,32 @@ const page = () => {
                                                         <div className='small font-semibold text-grey300'>Income</div>
                                                         <div className='small font-normal text-grey300'>£1,612pcm</div>
                                                     </div>
-                                                    <div className='flex flex-col gap-[4px] basis-[50%]'>
-                                                        <div className='small font-semibold text-desturctive-600'>Deficit</div>
-                                                        <div className='small font-normal text-desturctive-600'>-£1,612pcm</div>
+                                                    <div className='flex flex-col gap-[4px] basis-[50%] validation-positive'>
+                                                        <div className='small font-semibold'>Deficit</div>
+                                                        <div className='small font-normal'>-£1,612pcm</div>
                                                     </div>
                                                 </div>
                                             </div>
+                                             {/* near by universities */}
+                                            <div className='find_out_more flex flex-col gap-[8px] mt-[16px]'>
+                                                <div className='x-small font-semibold text-grey300 uppercase'>Nearby universities</div>
+                                                <ul className='flex flex-col gap-[8px] pl-[18px] *:list-disc *:text-[18px] *:text-primary-400'>
+                                                    <li><Link href={''} className='small font-normal hover:underline'>Abertay University</Link></li>
+                                                    <li><Link href={''} className='small font-normal hover:underline'>Aberstwyth University</Link></li>
+                                                    <li><Link href={''} className='small font-normal hover:underline'>Anglia Ruskin University</Link></li>
+                                                    <li><Link href={''} className='small font-normal hover:underline'>Aston University</Link></li>
+                                                    <li><Link href={''} className='small font-normal hover:underline'>Bangor University</Link></li>
+                                                </ul>
+                                                <div className='view_more'>
+                                                    <Link href={''} className='small font-semibold text-primary-400 hover:text-primary-500 hover:underline'><span className='text-[20px]'>+</span> View more</Link>
+                                                </div>
+                                            </div>
+                                            {/* near by universities */}
                                         </div>
                                     </div>
                                     {/* accordion start */}
                                     {/* accordion start */}
-                                    <div className='accordion-header py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                    <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                         <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -218,19 +234,19 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Aston University</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* accordion start */}
                                   {/* accordion start */}
-                                  <div className='accordion-header py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                  <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                             <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -240,19 +256,19 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Birkbeck University of London Birkbeck University of London Birkbeck University of London</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* accordion start */} 
                                   {/* accordion start */}
-                                  <div className='accordion-header py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                  <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                         <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -262,19 +278,19 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Birmingham City University</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* accordion start */} 
                                   {/* accordion start */}
-                                  <div className='accordion-header favourites_added py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                  <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] favourites_added pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                         <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -284,19 +300,19 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Birmingham Newman University</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* accordion start */}
                                     {/* accordion start */}
-                                    <div className='accordion-header favourites_added py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                    <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] favourites_added pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                         <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -306,19 +322,19 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Abertay University</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* accordion start */}
                                     {/* accordion start */}
-                                    <div className='accordion-header py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                    <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                         <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -328,22 +344,22 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Arts University Plymouth</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
-                                        <div className="accordion-body hidden">
+                                        <div className="accordion-body mt-[16px] mb-[8px] md:mb-[0] hidden">
                                             <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classNamees that we use to style each element. These classNamees control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                                         </div>
                                     </div>
                                     {/* accordion start */}
                                     {/* accordion start */}
-                                    <div className='accordion-header py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                    <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                         <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -353,19 +369,19 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Aston University</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* accordion start */}
                                   {/* accordion start */}
-                                  <div className='accordion-header py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                  <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                             <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -375,19 +391,19 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Birkbeck University of London Birkbeck University of London Birkbeck University of London</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* accordion start */} 
                                   {/* accordion start */}
-                                  <div className='accordion-header py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                  <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                         <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -397,19 +413,19 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Birmingham City University</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* accordion start */} 
                                   {/* accordion start */}
-                                  <div className='accordion-header py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
+                                  <div className='accordion-header flex flex-col justify-center min-h-[56px] py-[8px] md:py-[16px] pl-[16px] pr-[16px] md:pr-[24px] border-t-0 border-b border-grey-200 cursor-pointer hover:bg-primary-50 first:border-t'>
                                         <div className='flex gap-[8px] justify-between'>
                                         <div className='accord_uni_list flex items-center gap-[6px] md:w-[calc(100%_-_200px)]'>
                                                 <span className='cursor-pointer'>
@@ -419,17 +435,18 @@ const page = () => {
                                                 </span>
                                                 <Link className='small font-semibold text-primary-400 hover:text-primary-500 line-clamp-2 lg:line-clamp-1' href={''}>Birmingham Newman University</Link>                                            
                                             </div>
-                                            <div className='flex items-center gap-[8px] '>
+                                            <div className='flex items-center gap-[24px] '>
                                                 <span className='small font-semibold text-grey300'>£1,500pcm</span>
                                                 <span>
-                                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7 1.5L13 7.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
+                                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 1.5L7 7.5L1 1.5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                </svg>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-                                    {/* accordion start */}                                                                                                  <nav aria-label="navigation">
+                                    {/* accordion start */}                                                                                                  
+                                    <nav aria-label="navigation">
                                         <ul className="pagination flex justify-center items-center gap-[8px] px-[24px] pt-[24px]">
                                             <li className="page-item"><Link className="page-link flex items-center justify-center px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]" href="#" title="" aria-label='Previous'>
                                                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -467,7 +484,7 @@ const page = () => {
                         </div>
                     </div>
                 </section>
-                <aside className='promotion_pod w-full lg:min-w-[392px] lg:w-[392px]'>
+                <aside className='promotion_pod w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px]'>
                 <Image className='block w-full md:hidden lg:block' src="/assets/images/colc/promotion_app_img.jpg" alt="" width="392" height="403" />
                 <Image className='hidden w-full md:block lg:hidden' src="/assets/images/colc/promotion_app_img_1.jpg" alt="" width="728" height="226" />
                 </aside>

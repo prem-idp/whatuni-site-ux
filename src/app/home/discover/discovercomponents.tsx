@@ -1,4 +1,4 @@
-import Discoverslidercomponents from '@/app/components/slider/discoverslidercomponents'
+import Discoverslidercomponents from '../../components/slider/discoverslidercomponents'
 import React from 'react'
 import Tagcloudcomponents from '../tag-cloud/tagcloudcomponents'
 import Tagcloudcardskeleton from '@/app/components/skeleton/tagcloudcardskeleton'
