@@ -76,9 +76,9 @@ const ErrorList = () => {
           {errors.map((item, index) => (
             <li
               key={index}
-              className="text-negative-default list-disc ml-[22px] mb-[10px] last:mb-0 x-small"
+              className="text-negative-default list-disc ml-[22px] mb-[10px] last:mb-0 small"
             >
-              {item.name}
+              {item.name} &nbsp;
               <Link href="#" className="underline">
                 {item.link}
               </Link>
@@ -87,7 +87,6 @@ const ErrorList = () => {
         </ul>
         <div className="border-b-[2px] border-grey-200 pt-[24px]"></div>
       </div>
-      
     </>
   );
 };

@@ -79,16 +79,24 @@ const Housing = () => {
             <p className="uppercase text-grey-700 mb-[4px] xs-small font-semibold">
               Choose One
             </p>
-            <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
+            <div className="flex flex-row flex-wrap gap-[8px]">
               {housing.map((item, index) => (
-                <li
-                  key={index}
-                  className="btn btn-primary-outline small cursor-pointer"
-                >
-                  {item}
-                </li>
+                <div className="flex relative" key={index}>
+                  <input defaultValue={"At home"}
+                    type="radio"
+                    name="uni"
+                    className="rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
+                    id="At home"
+                  />
+                  <label
+                    htmlFor="At home"
+                    className="btn btn-primary-outline small cursor-pointer"
+                  >
+                    {item}
+                  </label>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
         <div className="bg-grey-50 border border-grey-300 rounded-[4px] p-[16px] flex flex-col text-neutral900">
@@ -118,12 +126,17 @@ const Housing = () => {
                   What are your housing costs?
                 </label>
                 <div className="flex items-center gap-[8px]">
-                  <input
-                    type="text"
-                    id="inputId"
-                    className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                    placeholder="£0"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="inputId"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      placeholder="0"
+                    />
+                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
