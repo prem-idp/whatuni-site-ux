@@ -164,7 +164,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
             <div className="relative">
               <div
                 onClick={toggleDropdown}
-                className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] h-[37px] font-semibold small cursor-pointer"
+                className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] p-[8px] font-semibold small cursor-pointer"
               >
                 <span>{selectedLevelDesc}</span>
                 <Image
@@ -469,7 +469,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                       <div className="relative">
                         <div
                           onClick={toggleDistinctionDropdown}
-                          className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] h-[37px] font-semibold small cursor-pointer"
+                          className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] p-[8px] font-semibold small cursor-pointer"
                         >
                           <span>0 credits</span>
                           <Image
@@ -502,7 +502,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                       <div className="relative">
                         <div
                           onClick={toggleMeritDropdown}
-                          className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] h-[37px] font-semibold small cursor-pointer"
+                          className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] p-[8px] font-semibold small cursor-pointer"
                         >
                           <span>0 credits</span>
                           <Image
@@ -535,7 +535,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                       <div className="relative">
                         <div
                           onClick={togglePassDropdown}
-                          className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] h-[37px] font-semibold small cursor-pointer"
+                          className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] p-[8px] font-semibold small cursor-pointer"
                         >
                           <span>0 credits</span>
                           <Image
@@ -581,7 +581,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
                     <div className="relative w-full">
                       <div
                         onClick={toggleSecondDropdown}
-                        className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] h-[37px] font-semibold small cursor-pointer"
+                        className="border border-grey300 text-grey300 rounded-[20px] flex items-center justify-center gap-[4px] p-[8px] font-semibold small cursor-pointer"
                       >
                         <span>{addSelectedLevelDesc}</span>
                         <Image
