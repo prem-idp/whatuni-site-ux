@@ -348,18 +348,20 @@ const Food = () => {
                     takeaway? Select your frequency for breakfast, lunch and
                     dinner.
                   </div>
-                  <ul>
+                  <div>
                     <div className="font-semibold">Pick your spots:</div>
-                    {eatoutqus.map((item, index) => (
-                      <li
-                        key={index}
-                        className="list-disc ml-[22px] mb-[10px] last:mb-0"
-                      >
-                        <span className="font-semibold">{item.name}</span>
-                        {item.list}
-                      </li>
-                    ))}
-                  </ul>
+                    <ul>
+                      {eatoutqus.map((item, index) => (
+                        <li
+                          key={index}
+                          className="list-disc ml-[22px] mb-[10px] last:mb-0"
+                        >
+                          <span className="font-semibold">{item.name}</span>
+                          {item.list}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <div>
                     If you know your spending already, just tick the box and
                     enter the amount.

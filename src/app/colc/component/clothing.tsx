@@ -241,11 +241,11 @@ const Clothing = () => {
                   please enter the amount by ticking he box next to 'I already
                   know how much I spend'.
                 </div>
+                <div>
+                  If not, please select the usual price range of the clothes you
+                  purchase (e.g.)
+                </div>
                 <ul>
-                  <div className="mb-[16px]">
-                    If not, please select the usual price range of the clothes
-                    you purchase (e.g.)
-                  </div>
                   {clothingqus.map((item, index) => (
                     <li
                       key={index}
