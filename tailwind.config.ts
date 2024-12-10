@@ -94,8 +94,8 @@ const config: Config = {
         },
         primary: {
           50: "#EDFCFF",
-          100: "#E6F1FB",
-          200: "#E6F1FB",
+          100: "#C8F0F5",
+          200: "#0FBEFD",
           300: "#0086F8",
           400: "#4664DC",
           500: "#0657AD",
@@ -156,6 +156,7 @@ const config: Config = {
         "custom-9":"0px 4px 6px -4px rgba(16, 24, 40, 0.1), 0px 10px 15px -3px rgba(16, 24, 40, 0.1)",
         "custom-10":"0px 1px 2px -1px rgba(16, 24, 40, 0.1), 0px -2px 3px 0px rgba(16, 24, 40, 0.1)",
         "custom-11":"0px 2px 3px 0px rgba(0, 0, 0, 0.168), 0px 0px 3px 0px rgba(0, 0, 0, 0.084)",
+        "custom-12": "0 10px 15px -3px rgba(16, 24, 40, 0.102",
       },
       backdropBlur:{
         "custom-1":"261px"

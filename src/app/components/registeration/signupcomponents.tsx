@@ -1,8 +1,13 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Signupcomponents = () => {
+    useEffect(() => {
+        const body = document.body;
+      body.classList.add("overflow-y-hidden");
+    }, [])
   return (
         <div className='registeration-container flex flex-col md:flex-row h-[100vh] overflow-auto md:h-[100%]'>
             <div className='regist-col min-w-[309px] w-full md:w-[309px]  flex flex-col justify-center gap-[20px] md:gap-[24px]  px-[24px] py-[24px] md:py-[45px] bg-blue-200 hidden md:flex'>
@@ -87,7 +92,13 @@ const Signupcomponents = () => {
                                 </div>
                                 <div className="col  flex flex-col basis-6/12 justify-end gap-[4px]">
                                     <div className='postalcode hints'>
-                                        <Link href="" className='small font-normal text-primary-400 underline'>Why do we need your postcode?</Link>
+                                        <Link href="" className='tooltip group/item relative small font-normal text-primary-400 underline'>Why do we need your postcode?
+                                            <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                        shadow-custom-12 mt-[3px] absolute right-[-76px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[60%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']">                        
+                                                <span className="font-semibold tooltip-head">Why do we need your postcode?</span>
+                                                <p className="x-small">We use this information to help assess the reach of our products. This is completely optional.</p>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +171,7 @@ const Signupcomponents = () => {
                                 </div>           
                             </div>
                         </div>
-                        <div className='signup_btn px-[16px] md:px-[24px] py-[16px] w-full fixed md:absolute bottom-0 left-0 border-t border-t-grey-200 bg-white'>
+                        <div className='signup_btn px-[16px] md:px-[24px] py-[16px] w-full fixed md:absolute bottom-0 left-0 z-[2] border-t border-t-grey-200 bg-white'>
                             <button type="submit" className="btn btn-primary w-full flex items-center justify-center gap-[8px]">Sign up <Image src="/assets/icons/right_white_arrow.svg" width="17" height="14" alt="arrow icon" /></button>
                         </div>            
                     </form>
