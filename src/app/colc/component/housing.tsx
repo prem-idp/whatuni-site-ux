@@ -64,7 +64,7 @@ const Housing = () => {
               height={24}
             />
           </div>
-          <h2 className="text-heading4"> Housing</h2>
+          <h2 className="text-heading5 md:text-heading4">Housing</h2>
         </div>
         <p className="small">
           Accommodation costs vary based on location, type and availability.
@@ -72,29 +72,37 @@ const Housing = () => {
         </p>
         <div className="border-l-[8px] border-grey-200">
           <div className="ml-[16px]">
-            <h4 className="text-para-lg font-medium mb-[8px]">
+            <h3 className="text-para-lg font-medium mb-[8px]">
               Where do you plan on living while at university?
               <span className="text-negative-default">*</span>
-            </h4>
+            </h3>
             <p className="uppercase text-grey-700 mb-[4px] xs-small font-semibold">
               Choose One
             </p>
-            <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
+            <div className="flex flex-row flex-wrap gap-[8px]">
               {housing.map((item, index) => (
-                <li
-                  key={index}
-                  className="btn btn-primary-outline small cursor-pointer"
-                >
-                  {item}
-                </li>
+                <div className="flex relative" key={index}>
+                  <input defaultValue={"At home"}
+                    type="radio"
+                    name="uni"
+                    className="rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
+                    id="At home"
+                  />
+                  <label
+                    htmlFor="At home"
+                    className="btn btn-primary-outline small cursor-pointer"
+                  >
+                    {item}
+                  </label>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
-
         <div className="bg-grey-50 border border-grey-300 rounded-[4px] p-[16px] flex flex-col text-neutral900">
           <div className="flex items-center gap-[12px]">
             <input
+              aria-label="checkbox"
               type="checkbox"
               checked={isChecked}
               onChange={handleCheck}
@@ -109,7 +117,7 @@ const Housing = () => {
               isChecked ? "block" : "hidden"
             }`}
           >
-            <div className="border-t border-grey-300 pt-[12px] mt-[12px] grid grid-cols-2 items-center justify-between gap-[24px]">
+            <div className="border-t border-grey-300 pt-[12px] mt-[12px] grid grid-cols-1 items-center justify-between gap-[12px] md:grid-cols-2">
               <div>
                 <label
                   htmlFor="inputId"
@@ -118,16 +126,21 @@ const Housing = () => {
                   What are your housing costs?
                 </label>
                 <div className="flex items-center gap-[8px]">
-                  <input
-                    type="text"
-                    id="inputId"
-                    className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                    placeholder="£0"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="inputId"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      placeholder="0"
+                    />
+                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
-                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-[111px] font-semibold"
                       type="button"
                     >
                       Monthly
@@ -195,7 +208,24 @@ const Housing = () => {
             </div>
           </div>
         </div>
-
+        <div className="flex items-center gap-[4px] text-negative-default x-small">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 6.8805V8.00017M8 10.2395H8.0056M4.12134 12.4789H11.8787C12.7406 12.4789 13.2793 11.5458 12.8483 10.7994L8.96966 4.08132C8.5387 3.33487 7.4613 3.33487 7.03034 4.08132L3.15168 10.7994C2.72072 11.5458 3.25942 12.4789 4.12134 12.4789Z"
+              stroke="#BC0000"
+              strokeWidth="1.13"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          Please enter your housing costs
+        </div>
         <div className="border-l-[2px] border-primary-400 bg-grey-50 px-[16px] py-[10px]">
           <button
             className="flex items-center justify-between w-full font-semibold small"
@@ -203,7 +233,9 @@ const Housing = () => {
           >
             How to answer this question
             <svg
-              className={`${isOpen ? "rotate-180" : ""}`}
+              className={`transition-transform duration-300 ${
+                isOpen ? "rotate-180" : ""
+              }`}
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -224,17 +256,20 @@ const Housing = () => {
               isOpen ? "block" : "hidden"
             }`}
           >
-            <div className="flex flex-col gap-[4px] mt-[10px]">
-              <div className="x-small font-semibold">Housing</div>
+            <div className="flex flex-col gap-[4px] mt-[10px] x-small">
+              <div className="font-semibold">Housing</div>
               <ul>
                 {housingqus.map((item, index) => (
-                  <li className="x-small list-disc ml-[22px] mb-[10px] last:mb-0">
+                  <li
+                    key={index}
+                    className="list-disc ml-[22px] mb-[10px] last:mb-0"
+                  >
                     <span className="font-semibold">{item.name}</span>
                     {item.list}
                   </li>
                 ))}
               </ul>
-              <div className="x-small">
+              <div>
                 <span className="font-semibold">Tip:</span> Whether you’re just
                 starting your journey to university or already planning your
                 move, keep in mind that your exact costs can vary. The estimates

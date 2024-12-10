@@ -60,6 +60,7 @@ const config: Config = {
         "neutral200": "#E2E8F0",
         "neutral300": "#CBD5E1",
         "neutral400": "#94A3B8",
+        "green200":"#B4E646",
         blue:{
           50:"#EDFCFF",
           100: "#C8F0F5",
@@ -101,6 +102,7 @@ const config: Config = {
           500: "#0657AD",
         },
         secondary: {
+          50: "#F1F4FD",
           100: "#FDFAAF",
           200: "#B4E646",
           300: "#51C21A",
