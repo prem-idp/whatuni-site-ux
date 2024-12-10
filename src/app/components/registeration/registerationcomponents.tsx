@@ -1,5 +1,5 @@
 "use client"
-import React, {useState}  from 'react'
+import React, {useEffect, useState}  from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Signincomponents from './signincomponents'
@@ -8,6 +8,7 @@ import Signedupcomponents from './signedupcomponents'
 import Socialsignincomponent from './socialsignincomponent'
 
 const Registerationcomponents = () => {
+    const [isOpen,setIsOpen] = useState(true);
     const [isVisible, setIsVisible] = useState<string | boolean>(true);
     const showSignupComp = (compName: string) => {
         setIsVisible(isVisible === compName ? false : compName);
@@ -15,6 +16,10 @@ const Registerationcomponents = () => {
         //     setIsVisible(false);
         // }      
     };
+    useEffect(() => {
+        const body = document.body;
+      body.classList.add("overflow-y-hidden");
+    }, [])
   return (
     <div className='modal modal-container flex  justify-center items-start md:items-center backdrop-shadow-white fixed top-0 right-0 left-0 bottom-0 bg-white'>
     <div className='modal-box shadow-custom-6 w-full md:w-[728px] bg-white md:rounded-[8px] overflow-hidden relative'>
