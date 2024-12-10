@@ -82,7 +82,8 @@ const Housing = () => {
             <div className="flex flex-row flex-wrap gap-[8px]">
               {housing.map((item, index) => (
                 <div className="flex relative" key={index}>
-                  <input defaultValue={"At home"}
+                  <input
+                    defaultValue={"At home"}
                     type="radio"
                     name="uni"
                     className="rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
@@ -130,7 +131,7 @@ const Housing = () => {
                     <input
                       type="text"
                       id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
                       placeholder="0"
                     />
                     <div className="absolute inset-y-0 left-[12px] flex items-center">

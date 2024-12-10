@@ -122,12 +122,17 @@ const DailyLife = () => {
                     What are your socialising costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
+                  <div className="relative">
                     <input
                       type="text"
                       id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                      placeholder="£0"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      placeholder="0"
                     />
+                     <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
 
                     <div className="relative">
                       <button
@@ -294,13 +299,17 @@ const DailyLife = () => {
                     What are your streaming and app costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
+                  <div className="relative">
                     <input
                       type="text"
                       id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                      placeholder="£0"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      placeholder="0"
                     />
-
+ <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
@@ -422,12 +431,17 @@ const DailyLife = () => {
               </h3>
               <div className="grid grid-cols-1 items-center justify-between gap-[24px]">
                 <div className="flex items-center gap-[8px]">
+                <div className="relative">
                   <input
                     type="text"
                     id="Mobile"
-                    className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                    placeholder="£0"
+                    className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                    placeholder="0"
                   />
+                   <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
@@ -568,12 +582,17 @@ const DailyLife = () => {
                     What are your sport / exercise costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
+                  <div className="relative">
                     <input
                       type="text"
                       id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                      placeholder="£0"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      placeholder="0"
                     />
+                     <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
 
                     <div className="relative">
                       <button
@@ -695,14 +714,17 @@ const DailyLife = () => {
                   >
                     Name
                   </label>
-                  
+                  <div className="relative">
                     <input
                       type="text"
                       id="Name"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-full"
-                      placeholder="£0"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-full"
+                      placeholder="0"
                     />
-                 
+                  <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <label
@@ -712,12 +734,17 @@ const DailyLife = () => {
                     Cost
                   </label>
                   <div className="flex items-center gap-[4px]">
+                     <div className="relative">
                     <input
                       type="text"
                       id="Cost"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[100px] md:w-[64px]"
-                      placeholder="£0"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[100px] md:w-[64px]"
+                      placeholder="0"
                     />
+                     <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
 
                     <div className="relative w-full">
                       <button
