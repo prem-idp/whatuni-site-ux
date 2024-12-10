@@ -253,7 +253,7 @@ p,.para {@apply text-para}
 .faq-card-container .expanded{@apply border-l-0}
 .validation-negative > div{@apply text-desturctive-600}
 .validation-positive > div{@apply text-positive-dark}
-.your_cost_card ul li.active{@apply bg-black text-white}
+.your_cost_of_living ul li.active{@apply bg-black text-white}
 /* COLC */
 
 
