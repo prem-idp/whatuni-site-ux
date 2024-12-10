@@ -138,12 +138,17 @@ const Clothing = () => {
                   What are your clothing costs?
                 </label>
                 <div className="flex items-center gap-[8px]">
-                  <input
-                    type="text"
-                    id="inputId"
-                    className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                    placeholder="£0"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="inputId"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      placeholder="0"
+                    />
+                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
 
                   <div className="relative">
                     <button
