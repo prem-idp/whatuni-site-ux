@@ -785,12 +785,41 @@ const HeroSliderComponent = () => {
                           key={index}
                           className="px-[16px] py-[10px] block hover:bg-blue-50 cursor-pointer"
                         >
-                        <span className="text-grey900 underline">{item.name}</span> <span className="text-grey-700">{item.course}</span>  
+                          <span className="text-grey900 underline">
+                            {item.name}
+                          </span>{" "}
+                          <span className="text-grey-700">{item.course}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
+              </div>
+              <div className="flex items-center justify-between gap-[4px] bg-gray-100 text-grey-500 font-semibold px-[12px] py-[8px] rounded-[4px]">
+                <span>sdsd</span>
+                <svg
+                  className="cursor-pointer"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 6L6 18"
+                    stroke="#5c655e"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M6 6L18 18"
+                    stroke="#1f2937"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
               <button
                 type="submit"

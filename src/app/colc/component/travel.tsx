@@ -24,7 +24,7 @@ const Travel = () => {
   };
   const dropdown = ["Monthly", "Weekly", "Yearly"];
   //vehicle
-const [isYesSelected, SetIsYesSelected] = useState(false);
+  const [isYesSelected, SetIsYesSelected] = useState(false);
   const vehicle = ["No", "Yes"];
 
   return (
@@ -91,12 +91,17 @@ const [isYesSelected, SetIsYesSelected] = useState(false);
                     What are your public transport costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
-                    <input
-                      type="text"
-                      id="costs"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                      placeholder="£0"
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="costs"
+                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                        placeholder="0"
+                      />
+                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                        <span className="text-grey500">£</span>
+                      </div>
+                    </div>
 
                     <div className="relative">
                       <button
@@ -204,11 +209,25 @@ const [isYesSelected, SetIsYesSelected] = useState(false);
                 CHOOSE an option
               </p>
               <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
-                <li className={`btn btn-primary-outline small cursor-pointer ${!isYesSelected ? "bg-primary-500 border-primary-500 text-white": ""}`} onClick={() => SetIsYesSelected(false)}>
+                <li
+                  className={`btn btn-primary-outline small cursor-pointer ${
+                    !isYesSelected
+                      ? "bg-primary-500 border-primary-500 text-white"
+                      : ""
+                  }`}
+                  onClick={() => SetIsYesSelected(false)}
+                >
                   No
                 </li>
-                
-                <li className={`btn btn-primary-outline small cursor-pointer ${isYesSelected ? "bg-primary-500 border-primary-500 text-white": ""}`} onClick={() => SetIsYesSelected(true)}>
+
+                <li
+                  className={`btn btn-primary-outline small cursor-pointer ${
+                    isYesSelected
+                      ? "bg-primary-500 border-primary-500 text-white"
+                      : ""
+                  }`}
+                  onClick={() => SetIsYesSelected(true)}
+                >
                   Yes
                 </li>
               </ul>
@@ -228,13 +247,17 @@ const [isYesSelected, SetIsYesSelected] = useState(false);
                     Insurance
                   </label>
                   <div className="flex items-center gap-[8px]">
-                    <input
-                      type="text"
-                      id="Insurance"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-full md:w-[127px]"
-                      placeholder="£0"
-                    />
-
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="Insurance"
+                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-full md:w-[127px]"
+                        placeholder="0"
+                      />
+                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                        <span className="text-grey500">£</span>
+                      </div>
+                    </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
@@ -274,13 +297,17 @@ const [isYesSelected, SetIsYesSelected] = useState(false);
                     Petrol
                   </label>
                   <div className="flex items-center gap-[8px]">
-                    <input
-                      type="text"
-                      id="Petrol"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-full md:w-[127px]"
-                      placeholder="£0"
-                    />
-
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="Petrol"
+                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-full md:w-[127px]"
+                        placeholder="0"
+                      />
+                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                        <span className="text-grey500">£</span>
+                      </div>
+                    </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
@@ -320,12 +347,17 @@ const [isYesSelected, SetIsYesSelected] = useState(false);
                     Road tax
                   </label>
                   <div className="flex items-center gap-[8px]">
-                    <input
-                      type="text"
-                      id="Road tax"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-full md:w-[127px]"
-                      placeholder="£0"
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="Road tax"
+                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-full md:w-[127px]"
+                        placeholder="0"
+                      />
+                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                        <span className="text-grey500">£</span>
+                      </div>
+                    </div>
 
                     <div className="relative">
                       <button
@@ -433,12 +465,17 @@ const [isYesSelected, SetIsYesSelected] = useState(false);
               </h3>
               <div className="grid grid-cols-1 items-center justify-between gap-[24px]">
                 <div className="flex items-center gap-[8px]">
-                  <input
-                    type="text"
-                    id="friends"
-                    className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                    placeholder="£0"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="friends"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      placeholder="0"
+                    />
+                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
