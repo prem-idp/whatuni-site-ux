@@ -1,8 +1,13 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Signincomponents = () => {
+    useEffect(() => {
+        const body = document.body;
+      body.classList.add("overflow-y-hidden");
+    }, [])
   return (
             <div className='registeration-container flex flex-col md:flex-row h-[100vh] overflow-auto md:h-[100%]'>
                 <div className='regist-col w-full flex items-center relative'>

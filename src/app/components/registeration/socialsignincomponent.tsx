@@ -1,10 +1,15 @@
-import React, {useState} from 'react'
+"use client"
+import React, {useEffect, useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 type ChildComponentProps = {
     $showSignupComp: (compName: string) => void;
   };
 const Socialsignincomponent: React.FC<ChildComponentProps> = ({$showSignupComp}) => {
+    useEffect(() => {
+        const body = document.body;
+      body.classList.add("overflow-y-hidden");
+    }, [])
   return (
         <div className='registeration-container flex flex-col md:flex-row h-[100vh] overflow-auto md:h-[100%]'>
             <div className='regist-col min-w-[309px] w-full md:w-[309px]  flex flex-col justify-center gap-[20px] md:gap-[24px]  px-[24px] py-[24px] md:py-[45px] bg-blue-200'>

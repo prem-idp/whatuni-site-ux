@@ -246,12 +246,17 @@ const Food = () => {
                     What are your eating out / takeaway costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
-                    <input
-                      type="text"
-                      id="costs"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                      placeholder="£0"
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="costs"
+                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                        placeholder="0"
+                      />
+                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                        <span className="text-grey500">£</span>
+                      </div>
+                    </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
@@ -343,18 +348,20 @@ const Food = () => {
                     takeaway? Select your frequency for breakfast, lunch and
                     dinner.
                   </div>
-                  <ul>
+                  <div>
                     <div className="font-semibold">Pick your spots:</div>
-                    {eatoutqus.map((item, index) => (
-                      <li
-                        key={index}
-                        className="list-disc ml-[22px] mb-[10px] last:mb-0"
-                      >
-                        <span className="font-semibold">{item.name}</span>
-                        {item.list}
-                      </li>
-                    ))}
-                  </ul>
+                    <ul>
+                      {eatoutqus.map((item, index) => (
+                        <li
+                          key={index}
+                          className="list-disc ml-[22px] mb-[10px] last:mb-0"
+                        >
+                          <span className="font-semibold">{item.name}</span>
+                          {item.list}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <div>
                     If you know your spending already, just tick the box and
                     enter the amount.
@@ -419,12 +426,17 @@ const Food = () => {
                     What are your food shopping costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
-                    <input
-                      type="text"
-                      id="shopping"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                      placeholder="£0"
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="shopping"
+                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                        placeholder="0"
+                      />
+                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                        <span className="text-grey500">£</span>
+                      </div>
+                    </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
@@ -550,12 +562,17 @@ const Food = () => {
               </h3>
               <div className="grid grid-cols-1 items-center justify-between gap-[24px]">
                 <div className="flex items-center gap-[8px]">
-                  <input
-                    type="text"
-                    id="products"
-                    className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 text-grey500 px-[12px] py-[10px] w-[160px]"
-                    placeholder="£0"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="products"
+                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      placeholder="0"
+                    />
+                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <span className="text-grey500">£</span>
+                    </div>
+                  </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}

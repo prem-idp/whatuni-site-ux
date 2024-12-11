@@ -235,17 +235,16 @@ p,.para {@apply text-para}
 .decrease svg path{stroke: #4664DC}
 /* partner slider styles */
 /* Registeration */
-.form_radio .form-check-input:checked + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
+.form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
 .form_check .form-checkbox:checked + label, .form_radio .form-radio:checked + label{@apply text-white bg-primary-400 border-primary-400 cursor-pointer}
 .error .form-control{@apply border border-negative-default}
 .err_msg{display: none}
 .error .err_msg{display: block}
 /* Registeration */
 /* COLC */
-.accordion-header .accord_uni_list svg:hover path{fill:#4664DC}
+.accordion-header .accord_uni_list svg:hover path,.favourites_added .accord_uni_list svg path{ @apply fill-primary-400}
 .favourites_added{@apply border border-primary-400 !bg-transparent}
 .favourites_added + .favourites_added{@apply border-t-0}
-.favourites_added .accord_uni_list svg path{fill:#4664DC}
 .expanded{@apply border-l-2 border-l-primary-400}
 .expanded:hover{@apply !bg-transparent}
 .pagination li.active a{@apply bg-primary-400 text-white}
@@ -254,6 +253,7 @@ p,.para {@apply text-para}
 .faq-card-container .expanded{@apply border-l-0}
 .validation-negative > div{@apply text-desturctive-600}
 .validation-positive > div{@apply text-positive-dark}
+.your_cost_of_living ul li.active{@apply bg-black text-white}
 /* COLC */
 
 

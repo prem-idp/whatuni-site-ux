@@ -30,8 +30,8 @@ const page = () => {
         <div className='max-w-container mx-auto'>
             <div className='results_container flex flex-col lg:flex-row md:gap-[40px] lg:gap-[20px] md:px-[20px] lg:px-[0] pb-[40px] md:py-[40px]'>
                 <section className='results_card flex flex-col  w-full md:rounded-t-[8px] overflow-hidden'>
-                    <div className='edit_results_card flex flex-row-reverse md:flex-row justify-between items-center gap-[24px] bg-orange-200 px-[24px] py-[24px] md:py-[12px]'>
-                        <div className='results_img w-[169px] md:w-[97px]'>
+                    <div className='edit_results_card flex flex-row-reverse md:flex-row justify-between items-center gap-[24px] bg-orange-200 px-[16px] md:px-[24px] py-[24px] md:py-[12px]'>
+                        <div className='results_img w-[133px] md:w-[97px]'>
                         <Image className='block' src="/assets/images/registeration/regist_hero_image.png" width="97" height="129"  alt='hero image'/>
                         </div>
                         <div className='results_edit flex flex-col gap-[16px] md:gap-[0] md:flex-row  justify-between items-start md:items-center w-full'>
@@ -44,7 +44,7 @@ const page = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='cost_living_container flex flex-col gap-[24px] px-[16px] md:px-[24px] py-[24px] bg-white rounded-b-[8px] overflow-hidden md:border md:border-grey-200 shadow-custom-3'>
+                    <div className='cost_living_container flex flex-col gap-[24px] px-[16px] md:px-[24px] py-[24px] bg-white rounded-b-[8px] overflow-hidden md:border md:border-grey-200 md:shadow-custom-3'>
                         <div className='average_cost_card flex flex-col gap-[16px]'>
                             <h5 className='text-heading6'>Your average cost of living in the UK</h5>
                             <div className='average_cost_breakdown flex flex-col rounded-[8px] border-[3px] border-grey-600'>
@@ -93,10 +93,10 @@ const page = () => {
                             <h5 className='text-heading6'>Your cost of living around the UK</h5>
                             <div className='your_cost_of_living flex flex-col gap-[16px] md:gap-[8px] md:flex-row md:items-center justify-between '>
                                 <ul className="flex items-center gap-[8px] cursor-pointer">
-                                    <li className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500`}>
+                                    <li className={`active rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500`}>
                                         University
                                     </li>
-                                    <li className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500`}>
+                                    <li className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500 `}>
                                         City
                                     </li>
                                     <li className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500`}>
@@ -479,7 +479,33 @@ const page = () => {
                             </div>                                
                         </div>                     
                     </div>
-                    <div className='uni_compare flex flex-col gap-[16px] px-[16px] pt-[40px] pb-[40px] md:px-[0] md:pb-[0]'>
+                    <aside className='promotion_pod w-full lg:hidden md:pt-[40px]'>
+                    <div className='advert_card w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] flex flex-col md:flex-row flex-col justify-between md:items-start items-center gap-[24px] md:rounded-[8px] bg-blue-200 px-[24px] pt-[24px]'>
+                            <div className='advert_header_card flex flex-col gap-[16px]'>
+                                <div className='advert_content_card flex flex-col gap-[4px]'>
+                                    <h4 className='md:text-heading4 lg:text-heading5'>Unlock your uni journey with the Whatuni app.</h4>
+                                    <p className='small font-normal'>Access university rankings, student reviews, and everything you need to make informed choices—all in one place!</p>
+                                </div>
+                                <ul className="flex flex-row gap-[16px]">
+                                    <li>
+                                    <a href="#" aria-label="App Store">
+                                        <Image src="/assets/images/app_store.svg" alt="" width="120" height="40" />
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a href="#" aria-label="Google Play">
+                                    <Image src="/assets/images/google_play_store.svg" alt="" width="135" height="40" />              
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='advert_media_card min-w-[204px] w-[204px] flex md:self-end'>
+                                <Image className='block md:hidden w-full md:rounded-[8px]' src="/assets/images/colc/promotion_app_img_v1.png" alt="" width="392" height="403" />
+                                <Image className='hidden md:block lg:hidden w-full' src="/assets/images/colc/promotion_app_img.png" alt="" width="612" height="606" />
+                            </div>
+                        </div>
+                    </aside>
+                    <div className='uni_compare flex flex-col gap-[16px] px-[16px] pt-[40px] md:px-[0]'>
                         <h5>How this calculator can help you</h5>
                         <p>Plan your budget with our new Cost of Living Calculator. Compare uni cities across the UK, see all expenses in one place, and avoid surprises. Make informed choices to ensure the best uni experience—both academically and financially.</p>
                         <div className='find_out_more flex flex-col gap-[8px] bg-grey-50 border-l-4 border-l-grey-500 px-[16px] py-[16px]'>
@@ -492,9 +518,30 @@ const page = () => {
                         </div>
                     </div>
                 </section>
-                <aside className='promotion_pod w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px]'>
-                <Image className='block w-full md:hidden lg:block' src="/assets/images/colc/promotion_app_img.jpg" alt="" width="392" height="403" />
-                <Image className='hidden w-full md:block lg:hidden' src="/assets/images/colc/promotion_app_img_1.jpg" alt="" width="728" height="226" />
+                <aside className='promotion_pod w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] hidden lg:block'>
+                        <div className='advert_card flex flex-col justify-between items-center gap-[24px] rounded-[8px] bg-blue-200 px-[24px] pt-[24px]'>
+                            <div className='advert_header_card flex flex-col gap-[16px]'>
+                                <div className='advert_content_card flex flex-col gap-[4px]'>
+                                    <h4>Unlock your uni journey with the Whatuni app.</h4>
+                                    <p className='small font-normal'>Access university rankings, student reviews, and everything you need to make informed choices—all in one place!</p>
+                                </div>
+                                <ul className="flex flex-row gap-[16px]">
+                                    <li>
+                                    <a href="#" aria-label="App Store">
+                                        <Image src="/assets/images/app_store.svg" alt="" width="120" height="40" />
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a href="#" aria-label="Google Play">
+                                    <Image src="/assets/images/google_play_store.svg" alt="" width="135" height="40" />              
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='advert_media_card lg:h-[178px] lg:overflow-hidden'>
+                                <Image src="/assets/images/colc/promotion_app_img.png" alt='Promotion app image' width={204} height={168} />
+                            </div>
+                        </div>
                 </aside>
             </div>
         </div>

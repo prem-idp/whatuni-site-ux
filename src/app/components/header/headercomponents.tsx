@@ -13,18 +13,18 @@ declare global {
 }
 
 const Header = () => {
-    // Toggle Menu
+  // Toggle Menu
   const [isMobileView, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-    
+
   const mobileToggleOpen = () => {
     setIsOpen(!isOpen);
   };
   useEffect(() => {
     let isMobile = window.innerWidth <= 991;
     setIsMobile(isMobile);
-    const handleResize = () => {   
-      setIsMobile(isMobile);  
+    const handleResize = () => {
+      setIsMobile(isMobile);
       // clearTimeout(window.resizedFinished);
       // window.resizedFinished = setTimeout(() => {
       //   window.location.reload();
@@ -113,7 +113,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="bg-white shadow-custom-3 pl-[16px] pr-[21px]  md:px-[20px] xl2:px-0 relative z-0">
+      <header className="bg-white shadow-custom-3 pl-[16px] pr-[21px]  md:px-[20px] xl2:px-0 relative">
         <div className="max-w-container mx-auto flex items-center ">
           <div className="order-2 md:grow md:basis-[100%] lg:order-1 lg:grow-0 lg:basis-[54px] py-[4px] lg:py-[8px]">
             <Link href="#">
@@ -153,14 +153,17 @@ const Header = () => {
             )}
             {isMobileView ? (
               <>
-                <div onClick={mobileToggleOpen}
+                <div
+                  onClick={mobileToggleOpen}
                   className={`${
                     isOpen ? "animate-fadeIn block" : "hidden"
                   } backdrop-shadow lg:bg-transparent fixed top-0 left-0 right-0 bottom-0 z-[5]`}
                 ></div>
                 <div
                   className={`megamenu-container fixed left-0 top-0 z-[6] w-[376px] h-[100vh] lg:h-auto transition-all duration-300 ease-in-out ${
-                    isOpen ? "animate-fadeInLeft" : "-translate-x-full duration-300"
+                    isOpen
+                      ? "animate-fadeInLeft"
+                      : "-translate-x-full duration-300"
                   }`}
                 >
                   <div className="relative z-[6] w-fit">
@@ -527,6 +530,20 @@ const Header = () => {
                                     Calculate them
                                   </Link>
                                 </div>
+                                {/* <div className="flex items-center justify-center small">
+                                  <p className="small text-grey300 small">
+                                    Your UCAS points
+                                  </p>
+                                  <div className="flex items-center min-w-[36px] py-[6px] px-[14px] ml-[8px] mr-[16px] rounded-[4px] font-semibold cursor-pointer bg-positive-default text-white">
+                                    150
+                                  </div>
+                                  <Link
+                                    href="#"
+                                    className="text-blue-500 font-semibold hover:underline"
+                                  >
+                                    Recalculate
+                                  </Link>
+                                </div> */}
                               </div>
                             )}
                             {activeTab === "tab2" && (
@@ -876,10 +893,11 @@ const Header = () => {
                 )}
               </li>
               <li aria-label="Shortlist" className="relative">
-                <div className="cursor-pointer" onClick={() => rightMenuAction("SHORTLIST")}>
-                  <span                    
-                    className="flex items-center justify-center min-h-[48px]"
-                  >
+                <div
+                  className="cursor-pointer"
+                  onClick={() => rightMenuAction("SHORTLIST")}
+                >
+                  <span className="flex items-center justify-center min-h-[48px]">
                     <svg
                       width="24"
                       height="24"
