@@ -49,7 +49,7 @@ const Faqcomponents = () => {
             <h2 className="font-bold">Frequently asked questions</h2>
             <p className="font-normal small mt-[8px]">Subheading</p>
           </div>
-          <div className="accordion flex flex-col rounded-[6px] border border-grey-200 px-[16px]">
+          <div className="accordion flex flex-col rounded-[6px] bg-white border border-grey-200 px-[16px]">
             {faq_items.map((item, index) => (
               <div
                 className="accordion-item flex flex-col gap-[8px] py-[16px] border-b border-b-grey-200 last:border-b-0 cursor-pointer"
