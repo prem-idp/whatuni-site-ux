@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import UcasComponentSkeleton from "../components/skeleton/ucascomponentskeleton";
 
 const UcasComponent = ({ onClose, isUcasOpen }: any) => {
   const levels = ["A*", "A", "B", "C", "D", "E"];
@@ -905,6 +906,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
           </div>
         </div>
       </div>
+      {/* <UcasComponentSkeleton/> */}
     </>
   );
 };
