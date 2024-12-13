@@ -105,7 +105,7 @@ const Food = () => {
               Food and shopping
             </h2>
           </div>
-          <div className="border-l-[8px] border-grey-200">
+          <div className="border-l-[8px] border-grey-200 mb-[8px]">
             <div className="ml-[16px]">
               <h3 className="text-para-lg font-medium mb-[8px]">
                 Where will you eat out / order takeaways from?
@@ -118,7 +118,7 @@ const Food = () => {
                 {food.map((item, index) => (
                   <li
                     key={index}
-                    className="btn btn-primary-outline small cursor-pointer"
+                    className="btn btn-primary-outline"
                   >
                     {item}
                   </li>
@@ -132,7 +132,7 @@ const Food = () => {
                 How many days a week will you eat out / order takeaways?
                 <span className="text-negative-default">*</span>
               </h3>
-              <div className="flex items-center justify-between gap-[16px] flex-wrap md:gap-[32px] md:pl-[8px]">
+              <div className="flex items-center xl:justify-between gap-[16px] flex-wrap md:gap-[32px] md:pl-[8px]">
                 {eating.map((item, index) => (
                   <div
                     key={index + 1}
@@ -250,17 +250,17 @@ const Food = () => {
                       <input
                         type="text"
                         id="costs"
-                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                        className="colc-input w-[160px]"
                         placeholder="0"
                       />
-                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <div className="colc-dollar">
                         <span className="text-grey500">£</span>
                       </div>
                     </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-[111px] font-semibold"
+                        className="colc-select w-[111px]"
                         type="button"
                       >
                         Monthly
@@ -335,8 +335,8 @@ const Food = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
@@ -391,7 +391,7 @@ const Food = () => {
                 {grocery.map((item, index) => (
                   <li
                     key={index}
-                    className="btn btn-primary-outline small cursor-pointer"
+                    className="btn btn-primary-outline"
                   >
                     {item}
                   </li>
@@ -430,17 +430,17 @@ const Food = () => {
                       <input
                         type="text"
                         id="shopping"
-                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                        className="colc-input w-[160px]"
                         placeholder="0"
                       />
-                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <div className="colc-dollar">
                         <span className="text-grey500">£</span>
                       </div>
                     </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                        className="colc-select w-full"
                         type="button"
                       >
                         Monthly
@@ -515,8 +515,8 @@ const Food = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
@@ -566,17 +566,17 @@ const Food = () => {
                     <input
                       type="text"
                       id="products"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      className="colc-input w-[160px]"
                       placeholder="0"
                     />
-                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                    <div className="colc-dollar">
                       <span className="text-grey500">£</span>
                     </div>
                   </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
-                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                      className="colc-select w-full"
                       type="button"
                     >
                       Monthly
@@ -650,8 +650,8 @@ const Food = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">

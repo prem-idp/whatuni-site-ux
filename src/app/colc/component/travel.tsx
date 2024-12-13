@@ -56,7 +56,7 @@ const Travel = () => {
                 {travel.map((item, index) => (
                   <li
                     key={index}
-                    className="btn btn-primary-outline small cursor-pointer"
+                    className="btn btn-primary-outline"
                   >
                     {item}
                   </li>
@@ -95,10 +95,10 @@ const Travel = () => {
                       <input
                         type="text"
                         id="costs"
-                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                        className="colc-input w-[160px]"
                         placeholder="0"
                       />
-                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <div className="colc-dollar">
                         <span className="text-grey500">£</span>
                       </div>
                     </div>
@@ -106,7 +106,7 @@ const Travel = () => {
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                        className="colc-select w-full"
                         type="button"
                       >
                         Monthly
@@ -181,8 +181,8 @@ const Travel = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
@@ -210,7 +210,7 @@ const Travel = () => {
               </p>
               <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
                 <li
-                  className={`btn btn-primary-outline small cursor-pointer ${
+                  className={`btn btn-primary-outline ${
                     !isYesSelected
                       ? "bg-primary-500 border-primary-500 text-white"
                       : ""
@@ -221,7 +221,7 @@ const Travel = () => {
                 </li>
 
                 <li
-                  className={`btn btn-primary-outline small cursor-pointer ${
+                  className={`btn btn-primary-outline ${
                     isYesSelected
                       ? "bg-primary-500 border-primary-500 text-white"
                       : ""
@@ -251,17 +251,17 @@ const Travel = () => {
                       <input
                         type="text"
                         id="Insurance"
-                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-full md:w-[127px]"
+                        className="colc-input w-full md:w-[127px]"
                         placeholder="0"
                       />
-                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <div className="colc-dollar">
                         <span className="text-grey500">£</span>
                       </div>
                     </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-[111px] font-semibold"
+                        className="colc-select w-[111px]"
                         type="button"
                       >
                         Monthly
@@ -301,17 +301,17 @@ const Travel = () => {
                       <input
                         type="text"
                         id="Petrol"
-                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-full md:w-[127px]"
+                        className="colc-input w-full md:w-[127px]"
                         placeholder="0"
                       />
-                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <div className="colc-dollar">
                         <span className="text-grey500">£</span>
                       </div>
                     </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-[111px] font-semibold"
+                        className="colc-select w-[111px]"
                         type="button"
                       >
                         Monthly
@@ -351,10 +351,10 @@ const Travel = () => {
                       <input
                         type="text"
                         id="Road tax"
-                        className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-full md:w-[127px]"
+                        className="colc-input w-full md:w-[127px]"
                         placeholder="0"
                       />
-                      <div className="absolute inset-y-0 left-[12px] flex items-center">
+                      <div className="colc-dollar">
                         <span className="text-grey500">£</span>
                       </div>
                     </div>
@@ -362,7 +362,7 @@ const Travel = () => {
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-[111px] font-semibold"
+                        className="colc-select w-[111px]"
                         type="button"
                       >
                         Monthly
@@ -438,18 +438,16 @@ const Travel = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
                 <div className="font-semibold">
-                  Travel to family and friends
+                Vehicles
                 </div>
                 <div>
-                  Enter what you think it will cost to travel to see your
-                  friends and family. Select from the drop down if you will
-                  travel weekly, monthly or quarterly (in uni holidays only).
+                If you'll own/drive a car, moped, motorcycle or any vehicle while at uni that requires fuel, insurance and tax, enter the monthly amounts in the boxes provided.
                 </div>
               </div>
             </div>
@@ -469,17 +467,17 @@ const Travel = () => {
                     <input
                       type="text"
                       id="friends"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      className="colc-input w-[160px]"
                       placeholder="0"
                     />
-                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                    <div className="colc-dollar">
                       <span className="text-grey500">£</span>
                     </div>
                   </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
-                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                      className="colc-select w-full"
                       type="button"
                     >
                       Monthly
@@ -553,8 +551,8 @@ const Travel = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
