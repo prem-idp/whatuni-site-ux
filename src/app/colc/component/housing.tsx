@@ -81,18 +81,15 @@ const Housing = () => {
             </p>
             <div className="flex flex-row flex-wrap gap-[8px]">
               {housing.map((item, index) => (
-                <div className="flex relative" key={index}>
+                <div className="form_radio flex relative" key={index}>
                   <input
                     defaultValue={"At home"}
                     type="radio"
                     name="uni"
-                    className="rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
-                    id="At home"
+                    className="form-check-input rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
+                    id={item}
                   />
-                  <label
-                    htmlFor="At home"
-                    className="btn btn-primary-outline small cursor-pointer"
-                  >
+                  <label htmlFor={item} className="btn btn-primary-outline">
                     {item}
                   </label>
                 </div>
@@ -131,17 +128,17 @@ const Housing = () => {
                     <input
                       type="text"
                       id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      className="colc-input w-[160px]"
                       placeholder="0"
                     />
-                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                    <div className="colc-dollar">
                       <span className="text-grey500">£</span>
                     </div>
                   </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
-                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-[111px] font-semibold"
+                      className="colc-select w-[111px]"
                       type="button"
                     >
                       Monthly
@@ -179,7 +176,7 @@ const Housing = () => {
                 <div className="relative">
                   <button
                     onClick={() => CostDropdownClicked("LIVING")}
-                    className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                    className="colc-select w-full"
                     type="button"
                   >
                     Please choose
@@ -227,6 +224,7 @@ const Housing = () => {
           </svg>
           Please enter your housing costs
         </div>
+
         <div className="border-l-[2px] border-primary-400 bg-grey-50 px-[16px] py-[10px]">
           <button
             className="flex items-center justify-between w-full font-semibold small"
@@ -253,8 +251,8 @@ const Housing = () => {
             </svg>
           </button>
           <div
-            className={`transition-all duration-300 ${
-              isOpen ? "block" : "hidden"
+            className={`transition-all duration-300 overflow-hidden ${
+              isOpen ? "max-h-screen" : "max-h-0"
             }`}
           >
             <div className="flex flex-col gap-[4px] mt-[10px] x-small">
