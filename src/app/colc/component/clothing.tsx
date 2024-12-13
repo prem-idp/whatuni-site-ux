@@ -65,7 +65,7 @@ const Clothing = () => {
           </div>
           <h2 className="text-heading5 md:text-heading4">Clothing</h2>
         </div>
-        <div className="border-l-[8px] border-grey-200">
+        <div className="border-l-[8px] border-grey-200 mb-[8px]">
           <div className="ml-[16px]">
             <h3 className="text-para-lg font-medium mb-[8px]">
               How expensive is the clothing you usually buy?
@@ -78,7 +78,7 @@ const Clothing = () => {
               {clothing.map((item, index) => (
                 <li
                   key={index}
-                  className="btn btn-primary-outline small cursor-pointer"
+                  className="btn btn-primary-outline"
                 >
                   {item}
                 </li>
@@ -99,12 +99,12 @@ const Clothing = () => {
               {clothMonthly.map((item, index) => (
                 <li
                   key={index}
-                  className="btn btn-primary-outline small cursor-pointer"
+                  className="btn btn-primary-outline"
                 >
                   {item}
                 </li>
               ))}
-              <li className="btn btn-primary-outline small cursor-pointer">
+              <li className="btn btn-primary-outline">
                 6 item +
               </li>
             </ul>
@@ -142,10 +142,10 @@ const Clothing = () => {
                     <input
                       type="text"
                       id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
+                      className="colc-input w-[160px]"
                       placeholder="0"
                     />
-                    <div className="absolute inset-y-0 left-[12px] flex items-center">
+                    <div className="colc-dollar">
                       <span className="text-grey500">£</span>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ const Clothing = () => {
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
-                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                      className="colc-select"
                       type="button"
                     >
                       Monthly
@@ -229,8 +229,8 @@ const Clothing = () => {
             </svg>
           </button>
           <div
-            className={`transition-all duration-300 ${
-              isOpen ? "block" : "hidden"
+            className={`transition-all duration-300 overflow-hidden ${
+              isOpen ? "max-h-screen" : "max-h-0"
             }`}
           >
             <div className="flex flex-col gap-[4px] mt-[10px] x-small">

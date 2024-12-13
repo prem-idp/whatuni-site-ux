@@ -6,7 +6,7 @@ const DailyLife = () => {
   const dailyLife = [
     "Never",
     "Once a month",
-    "£Occassionally",
+    "Occassionally",
     "Once a week",
     "More and once a week",
   ];
@@ -86,7 +86,7 @@ const DailyLife = () => {
                 {dailyLife.map((item, index) => (
                   <li
                     key={index}
-                    className="btn btn-primary-outline small cursor-pointer"
+                    className="btn btn-primary-outline"
                   >
                     {item}
                   </li>
@@ -122,22 +122,22 @@ const DailyLife = () => {
                     What are your socialising costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
-                      placeholder="0"
-                    />
-                     <div className="absolute inset-y-0 left-[12px] flex items-center">
-                      <span className="text-grey500">£</span>
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="inputId"
+                        className="colc-input w-[160px]"
+                        placeholder="0"
+                      />
+                      <div className="colc-dollar">
+                        <span className="text-grey500">£</span>
+                      </div>
                     </div>
-                  </div>
 
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                        className="colc-select"
                         type="button"
                       >
                         Monthly
@@ -212,8 +212,8 @@ const DailyLife = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
@@ -242,17 +242,25 @@ const DailyLife = () => {
               <p className="uppercase text-grey-700 mb-[4px] xs-small font-semibold">
                 CHOOSE an option
               </p>
-              <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
+              <div className="flex flex-row flex-wrap gap-[8px]">
                 {apps.map((item, index) => (
-                  <li
-                    key={index}
-                    className="btn btn-primary-outline small cursor-pointer"
-                  >
-                    {item}
-                  </li>
+                  <div className="form_check flex relative" key={index}>
+                    <input
+                      defaultValue={"Amazon Prime"}
+                      type="checkbox"
+                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none checked:bg-red-400 checked:border-primary-500"
+                      id={item}
+                    />
+                    <label
+                      htmlFor={item}
+                      className="btn btn-primary-outline"
+                    >
+                      {item}
+                    </label>
+                  </div>
                 ))}
-              </ul>
-              <div className="flex items-center gap-[4px] mt-[8px] font-semibold text-primary-400 cursor-pointer hover:underline">
+              </div>
+              <div className="flex items-center gap-[4px] mt-[8px] py-[6px] small font-semibold text-primary-400 cursor-pointer hover:underline">
                 <svg
                   width="20"
                   height="21"
@@ -299,21 +307,21 @@ const DailyLife = () => {
                     What are your streaming and app costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
-                      placeholder="0"
-                    />
- <div className="absolute inset-y-0 left-[12px] flex items-center">
-                      <span className="text-grey500">£</span>
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="inputId"
+                        className="colc-input w-[160px]"
+                        placeholder="0"
+                      />
+                      <div className="colc-dollar">
+                        <span className="text-grey500">£</span>
+                      </div>
                     </div>
-                  </div>
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                        className="colc-select"
                         type="button"
                       >
                         Monthly
@@ -389,8 +397,8 @@ const DailyLife = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
@@ -431,21 +439,21 @@ const DailyLife = () => {
               </h3>
               <div className="grid grid-cols-1 items-center justify-between gap-[24px]">
                 <div className="flex items-center gap-[8px]">
-                <div className="relative">
-                  <input
-                    type="text"
-                    id="Mobile"
-                    className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
-                    placeholder="0"
-                  />
-                   <div className="absolute inset-y-0 left-[12px] flex items-center">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="Mobile"
+                      className="colc-input w-[160px]"
+                      placeholder="0"
+                    />
+                    <div className="colc-dollar">
                       <span className="text-grey500">£</span>
                     </div>
                   </div>
                   <div className="relative">
                     <button
                       onClick={() => CostDropdownClicked("COST")}
-                      className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                      className="colc-select"
                       type="button"
                     >
                       Monthly
@@ -519,8 +527,8 @@ const DailyLife = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
@@ -547,7 +555,7 @@ const DailyLife = () => {
                 {sports.map((item, index) => (
                   <li
                     key={index}
-                    className="btn btn-primary-outline small cursor-pointer"
+                    className="btn btn-primary-outline"
                   >
                     {item}
                   </li>
@@ -582,22 +590,22 @@ const DailyLife = () => {
                     What are your sport / exercise costs?
                   </label>
                   <div className="flex items-center gap-[8px]">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="inputId"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[160px]"
-                      placeholder="0"
-                    />
-                     <div className="absolute inset-y-0 left-[12px] flex items-center">
-                      <span className="text-grey500">£</span>
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="inputId"
+                        className="colc-input w-[160px]"
+                        placeholder="0"
+                      />
+                      <div className="colc-dollar">
+                        <span className="text-grey500">£</span>
+                      </div>
                     </div>
-                  </div>
 
                     <div className="relative">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full font-semibold"
+                        className="colc-select"
                         type="button"
                       >
                         Monthly
@@ -672,8 +680,8 @@ const DailyLife = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">
@@ -699,9 +707,9 @@ const DailyLife = () => {
           <div className="border-l-[8px] border-grey-200">
             <div className="ml-[16px]">
               <h3 className="text-para-lg font-medium mb-[8px]">
-                Are there any other costs you would like to add?
+                Are there any other costs you would like to add? 
                 <span className="text-small font-inter font-normal text-grey500">
-                  (optional)
+                  &nbsp;(optional)
                 </span>
                 <span className="text-negative-default">*</span>
               </h3>
@@ -718,10 +726,10 @@ const DailyLife = () => {
                     <input
                       type="text"
                       id="Name"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-full"
+                      className="colc-input w-full"
                       placeholder="0"
                     />
-                  <div className="absolute inset-y-0 left-[12px] flex items-center">
+                    <div className="colc-dollar">
                       <span className="text-grey500">£</span>
                     </div>
                   </div>
@@ -734,22 +742,22 @@ const DailyLife = () => {
                     Cost
                   </label>
                   <div className="flex items-center gap-[4px]">
-                     <div className="relative">
-                    <input
-                      type="text"
-                      id="Cost"
-                      className="bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] w-[100px] md:w-[64px]"
-                      placeholder="0"
-                    />
-                     <div className="absolute inset-y-0 left-[12px] flex items-center">
-                      <span className="text-grey500">£</span>
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="Cost"
+                        className="colc-input w-[100px] md:w-[64px]"
+                        placeholder="0"
+                      />
+                      <div className="colc-dollar">
+                        <span className="text-grey500">£</span>
+                      </div>
                     </div>
-                  </div>
 
                     <div className="relative w-full">
                       <button
                         onClick={() => CostDropdownClicked("COST")}
-                        className="flex items-center justify-between gap-[4px] bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] w-full md:w-[111px] font-semibold"
+                        className="colc-select w-full"
                         type="button"
                       >
                         Monthly
@@ -778,7 +786,7 @@ const DailyLife = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-[4px] mt-[8px] font-semibold text-primary-400 cursor-pointer hover:underline">
+              <div className="flex items-center gap-[4px] mt-[8px] py-[6px] small font-semibold text-primary-400 cursor-pointer hover:underline">
                 <svg
                   width="20"
                   height="21"
@@ -842,8 +850,8 @@ const DailyLife = () => {
               </svg>
             </button>
             <div
-              className={`transition-all duration-300 ${
-                isOpen ? "block" : "hidden"
+              className={`transition-all duration-300 overflow-hidden ${
+                isOpen ? "max-h-screen" : "max-h-0"
               }`}
             >
               <div className="flex flex-col gap-[4px] mt-[10px] x-small">

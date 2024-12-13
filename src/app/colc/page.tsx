@@ -8,34 +8,12 @@ import DailyLife from "./component/dailylife";
 import Income from "./component/income";
 import ErrorList from "./component/error";
 import Faqcomponents from "../components/faq/faqcomponents";
+import ColcBanner from "../components/colc-banner/colc-banner";
 
 const Colc = () => {
   return (
     <>
-      <section className="bg-blue-100 min-h-[194px]">
-        <div className="max-w-container mx-auto">
-          <div className="flex flex-col-reverse md:flex-row justify-between gap-[16px] p-[16px] pb-[24px] md:pb-[16px] lg:py-0 xl:px-0">
-            <div className="flex flex-col gap-[4px] self-center lg:py-[16px]">
-              <h1 className="text-heading1 md:text-heading-xl">
-                Student cost of living calculator
-              </h1>
-              <p className="small">
-                Answer the questions below to get an idea of your monthly spend
-                at university
-              </p>
-            </div>
-            <div className="flex self-end justify-center w-full shrink-0 md:w-[219px] lg:w-[392px] lg:pt-[10px]">
-              <Image
-                src="/assets/images/colc/colc-banner.png"
-                width={146}
-                height={185}
-                priority
-                alt="Here Banner"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ColcBanner/>
       <section className="bg-white px-[16px] py-[32px] md:py-[64px] xl:px-0">
         <div className="max-w-container mx-auto">
           <div className="flex flex-col gap-[16px] justify-between lg:flex-row">
@@ -68,7 +46,7 @@ const Colc = () => {
             </div>
             <div className="flex flex-col p-[16px] shrink-0 w-full bg-grey300 rounded-0 text-white fixed bottom-0 mx-[-16px] md:items-center lg:items-start lg:p-[24px] lg:mx-0 lg:self-start lg:rounded-[8px] lg:sticky lg:top-[40px] lg:w-[392px]">
               <div className="small font-semibold">Monthly living costs</div>
-              <p className="text-heading4 font-bold md:text-heading1">£0</p>
+              <div className="text-heading4 font-bold font-farro md:text-heading1">£0</div>
             </div>
           </div>
         </div>

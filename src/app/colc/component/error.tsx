@@ -54,7 +54,7 @@ const ErrorList = () => {
   return (
     <>
       <div className="flex flex-col gap-[16px]">
-        <div className="flex items-center gap-[8px] p-[16px] rounded-[6px] font-semibold border border-negative-default bg-negative-light text-negative-dark">
+        <div className="flex items-center gap-[8px] p-[16px] rounded-[6px] small font-semibold border border-negative-default bg-negative-light text-negative-dark">
           <svg
             width="20"
             height="20"
