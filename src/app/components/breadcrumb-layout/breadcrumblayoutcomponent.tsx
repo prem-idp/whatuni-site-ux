@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Breadcrumblayoutcomponent = ({ data }) => {
+const Breadcrumblayoutcomponent = ({ data } : { data:any }) => {
 
   const breadcrumbList = data.map((breadcrumbData:any) => (
     <li className="inter small" key={breadcrumbData.label}>
@@ -19,7 +19,7 @@ const Breadcrumblayoutcomponent = ({ data }) => {
   ));
 
   return (    
-    <nav aria-label="breadcrumb" className="px-[16px] lg:px-[0]">
+    <nav aria-label="breadcrumb">
       <ul className="flex flex-wrap gap-[20px]">{breadcrumbList}</ul>
     </nav>
 );

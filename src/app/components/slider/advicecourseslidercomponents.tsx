@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { FreeMode, Navigation, Pagination} from 'swiper/modules';
-const Advicecourseslidercomponents = () => {
+const Advicecourseslidercomponents = ({categoryTag} : { categoryTag: boolean }) => {
   return (
     <>
         <div className="slider-container">
@@ -32,22 +32,22 @@ const Advicecourseslidercomponents = () => {
         modules={[FreeMode, Pagination, Navigation]} 
         className="MultiSwiper">
             <SwiperSlide>
-              <AdviceCourseCard />
+              <AdviceCourseCard categoryTag={categoryTag} />
             </SwiperSlide>
             <SwiperSlide>
-              <AdviceCourseCard />
+              <AdviceCourseCard categoryTag={categoryTag} />
             </SwiperSlide>
             <SwiperSlide>
-              <AdviceCourseCard />
+              <AdviceCourseCard categoryTag={categoryTag} />
             </SwiperSlide>
             <SwiperSlide>
-            <AdviceCourseCard />
+            <AdviceCourseCard categoryTag={categoryTag} />
             </SwiperSlide>
             <SwiperSlide>
-              <AdviceCourseCard />
+              <AdviceCourseCard categoryTag={categoryTag} />
             </SwiperSlide>
             <SwiperSlide>
-              <AdviceCourseCard />
+              <AdviceCourseCard categoryTag={categoryTag} />
             </SwiperSlide>            
           </Swiper>
         </div>
