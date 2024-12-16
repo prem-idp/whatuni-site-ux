@@ -28,7 +28,7 @@ const page = () => {
             </div>
         </section>
         <div className='max-w-container mx-auto'>
-            <div className='results_container flex flex-col lg:flex-row md:gap-[40px] lg:gap-[20px] md:px-[20px] lg:px-[0] pb-[40px] md:py-[40px]'>
+            <div className='results_container flex flex-col lg:flex-row md:gap-[40px] lg:gap-[20px] md:px-[20px] xl:px-[0] pb-[40px] md:py-[40px]'>
                 <section className='results_card flex flex-col  w-full md:rounded-t-[8px] overflow-hidden'>
                     <div className='edit_results_card flex flex-row-reverse md:flex-row justify-between items-center gap-[24px] bg-orange-200 px-[16px] md:px-[24px] py-[24px] md:py-[12px]'>
                         <div className='results_img w-[133px] md:w-[97px]'>
