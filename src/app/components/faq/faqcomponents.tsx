@@ -1,42 +1,48 @@
-"use client"
-import React, {useState} from 'react'
-import Link from 'next/link'
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
 
 const Faqcomponents = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-    const toggleAccordion = (index: number) => {
-      setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
-    };
+  const toggleAccordion = (index: number) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
-    const faq_items = [
-        { 
-            title: "How can I see my existing clients through Designership?", 
-            content: "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth." 
-        },
-        { 
-            title: "How does Designership attract clients?", 
-            content: "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth." 
-        },
-        { 
-            title: "What type of support does Designership provide?", 
-            content: "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth." 
-        },
-        { 
-            title: "How can I see my existing clients through Designership?", 
-            content: "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth." 
-        },
-        { 
-            title: "How does Designership attract clients?", 
-            content: "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth." 
-        },
-        { 
-            title: "What type of support does Designership provide?", 
-            content: "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth." 
-        },
-      ];
+  const faq_items = [
+    {
+      title: "How can I see my existing clients through Designership?",
+      content:
+        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+    },
+    {
+      title: "How does Designership attract clients?",
+      content:
+        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+    },
+    {
+      title: "What type of support does Designership provide?",
+      content:
+        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+    },
+    {
+      title: "How can I see my existing clients through Designership?",
+      content:
+        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+    },
+    {
+      title: "How does Designership attract clients?",
+      content:
+        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+    },
+    {
+      title: "What type of support does Designership provide?",
+      content:
+        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+    },
+  ];
   return (
-    <div className="faq-container bg-white">
+    <div className="faq-container bg-grey-50">
       <div className="max-w-container mx-auto">
             <div className="faq-card-container px-[16px] py-[34px] lg:py-[60px] lg:px-[20px] xl:px-[0]">
                 <div className="faq-header mb-[26px]  lg:px-[20px] xl:px-[0] xl:mb-[32px]">
@@ -72,4 +78,4 @@ const Faqcomponents = () => {
   )
 }
 
-export default Faqcomponents
+export default Faqcomponents;

@@ -4,12 +4,13 @@ import React from 'react'
 import Advicecomponents from '../home/advice/advicecomponents'
 import Faqcomponents from '../components/faq/faqcomponents'
 import Registerationcomponents from '../components/registeration/registerationcomponents'
+import ColcBanner from '../components/colc-banner/colc-banner'
 
 const page = () => {
 
   return (
     <div className='colc_results bg-white'>
-        <section className="bg-blue-100">
+        {/* <section className="bg-blue-100">
             <div className="max-w-container mx-auto">
             <div className="flex flex-col-reverse md:flex-row justify-between gap-[16px] px-[20px] lg:px-[0] py-[20px] lg:py-[0] min-h-[194px]">
                 <div className="flex flex-col gap-[4px] self-center">
@@ -27,7 +28,8 @@ const page = () => {
                 </div>
             </div>
             </div>
-        </section>
+        </section> */}
+        <ColcBanner/>
         <div className='max-w-container mx-auto'>
             <div className='results_container flex flex-col lg:flex-row md:gap-[40px] lg:gap-[20px] md:px-[20px] lg:px-[0] pb-[40px] md:py-[40px]'>
                 <section className='results_card flex flex-col  w-full md:rounded-t-[8px] overflow-hidden'>
