@@ -262,7 +262,7 @@ p,.para {@apply text-para}
 .your_cost_of_living ul li.active{@apply bg-black text-white}
 /* COLC */
 /* colc question */
-.colc-input{@apply bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[21px] pr-[12px] py-[10px] small h-[41px]}
+.colc-input{@apply bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 placeholder:text-grey500 text-grey500 pl-[20px] pr-[12px] py-[10px] small h-[41px]}
 .colc-select{@apply flex items-center justify-between gap-[10px] small bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] font-semibold small h-[41px]}
 .colc-dollar{@apply absolute inset-y-0 left-[12px] flex items-center small}
 /* colc question */

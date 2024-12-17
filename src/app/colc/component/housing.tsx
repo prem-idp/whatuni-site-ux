@@ -86,7 +86,7 @@ const Housing = () => {
                     defaultValue={"At home"}
                     type="radio"
                     name="uni"
-                    className="form-check-input rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
+                    className="form-check-input rounded-[4px] outline-none absolute"
                     id={item}
                   />
                   <label htmlFor={item} className="btn btn-primary-outline">
