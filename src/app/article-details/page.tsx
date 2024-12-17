@@ -10,6 +10,10 @@ const page = () => {
   const breadcrumbData = [
     {
       url: "#",
+      Imgurl: "/assets/icons/breadcrumbs-home-icon.svg"
+    },
+    {
+      url: "#",
       label: "Home",
     },
     {

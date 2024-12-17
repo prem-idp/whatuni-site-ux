@@ -266,3 +266,9 @@ p,.para {@apply text-para}
 .colc-select{@apply flex items-center justify-between gap-[10px] small bg-white border border-gray-500 rounded-[4px] shadow-custom-2 focus:outline-none focus:ring-primary-400 focus:border-primary-400 px-[12px] py-[10px] font-semibold small h-[41px]}
 .colc-dollar{@apply absolute inset-y-0 left-[12px] flex items-center small}
 /* colc question */
+
+/* Article details  */
+.pull-quotes {
+  quotes: '"' "”";
+}
+/* Article details END  */
