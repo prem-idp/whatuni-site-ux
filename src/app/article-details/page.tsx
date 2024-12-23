@@ -8,10 +8,10 @@ import Advicecomponents from '../home/advice/advicecomponents';
 
 const page = () => {
   const breadcrumbData = [
-    {
-      url: "#",
-      Imgurl: "/assets/icons/breadcrumbs-home-icon.svg"
-    },
+    // {
+    //   url: "#",
+    //   Imgurl: "/assets/icons/breadcrumbs-home-icon.svg"
+    // },
     {
       url: "#",
       label: "Home",
