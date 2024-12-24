@@ -84,10 +84,7 @@ const DailyLife = () => {
               </p>
               <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
                 {dailyLife.map((item, index) => (
-                  <li
-                    key={index}
-                    className="btn btn-primary-outline"
-                  >
+                  <li key={index} className="btn btn-primary-outline">
                     {item}
                   </li>
                 ))}
@@ -251,10 +248,7 @@ const DailyLife = () => {
                       className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none checked:bg-red-400 checked:border-primary-500"
                       id={item}
                     />
-                    <label
-                      htmlFor={item}
-                      className="btn btn-primary-outline"
-                    >
+                    <label htmlFor={item} className="btn btn-primary-outline">
                       {item}
                     </label>
                   </div>
@@ -553,10 +547,7 @@ const DailyLife = () => {
               </p>
               <ul className="flex flex-row flex-wrap gap-[8px] w-fit">
                 {sports.map((item, index) => (
-                  <li
-                    key={index}
-                    className="btn btn-primary-outline"
-                  >
+                  <li key={index} className="btn btn-primary-outline">
                     {item}
                   </li>
                 ))}
@@ -707,7 +698,7 @@ const DailyLife = () => {
           <div className="border-l-[8px] border-grey-200">
             <div className="ml-[16px]">
               <h3 className="text-para-lg font-medium mb-[8px]">
-                Are there any other costs you would like to add? 
+                Are there any other costs you would like to add?
                 <span className="text-small font-inter font-normal text-grey500">
                   &nbsp;(optional)
                 </span>
@@ -722,17 +713,12 @@ const DailyLife = () => {
                   >
                     Name
                   </label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="Name"
-                      className="colc-input w-full"
-                      placeholder="0"
-                    />
-                    <div className="colc-dollar">
-                      <span className="text-grey500">£</span>
-                    </div>
-                  </div>
+                  <input
+                    type="text"
+                    id="Name"
+                    className="colc-input w-full !pl-[12px]"
+                    placeholder="Please enter"
+                  />
                 </div>
                 <div>
                   <label

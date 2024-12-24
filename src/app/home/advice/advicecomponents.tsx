@@ -16,9 +16,9 @@ const farroBold = customFont({
   variable: "--farro" 
 });
 
-const Advicecomponents = () => {
+const Advicecomponents = ({categoryTag, adviceBgWhite} : { categoryTag: boolean, adviceBgWhite: boolean }) => {
   return (
-    <div className='advice-container bg-grey-50' > 
+    <div className={`advice-container ${adviceBgWhite ? "bg-white" : "bg-grey-50"}`} > 
     <div className="max-w-container mx-auto">
         <div className='advice-card-container px-[0] py-[34px] md:py-[64px]'>
             <div className='advice-header px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]'>
@@ -27,7 +27,7 @@ const Advicecomponents = () => {
             </div>
             <div className='advice-course-container '>
               <div className="advice-inner-wrap"> 
-                <Advicecourseslidercomponents />
+                <Advicecourseslidercomponents categoryTag={categoryTag} />
                 <div className='flex justify-center mt-[16px] lg:mt-[28px]'>
                   <a href='#' className='flex items-center w-fit font-semibold small text-primary-400 hover:underline gap-[8px]'>
                   View more
