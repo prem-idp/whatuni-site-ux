@@ -42,7 +42,7 @@ const Faqcomponents = () => {
     },
   ];
   return (
-    <div className="faq-container bg-grey-50">
+    <div className="faq-container bg-white">
       <div className="max-w-container mx-auto">
             <div className="faq-card-container px-[16px] py-[34px] lg:py-[60px] lg:px-[20px] xl:px-[0]">
                 <div className="faq-header mb-[26px]  lg:px-[20px] xl:px-[0] xl:mb-[32px]">
