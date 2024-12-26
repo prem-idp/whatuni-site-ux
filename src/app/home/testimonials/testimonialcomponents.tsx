@@ -16,7 +16,7 @@ const Testimonialcomponents = () => {
                                 <video className="w-full" src="https://videos.ctfassets.net/szez98lehkfm/55B87nXDB6elXrfpVzAN2f/cb43e059d141307aed6dd617a202a86f/wuscas_2024_video.mp4" width="600" height="316"  controls
                                 ></video>
                             </div>
-                            <div className='block'>
+                            <div className='rounded-[8px] relative overflow-hidden w-[600px]'>
                                 <img className='block w-full'  src='/assets/images/testimonials/video_thumb_img.jpg' alt="video thumbnail image" width={600} height={316} />
                                 <div className='video-play-icon absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer'>
                                     <Image src="/assets/icons/video_play_icon.svg" width="52" height="52" alt="" />                                                           

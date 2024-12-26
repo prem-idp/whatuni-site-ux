@@ -1,14 +1,13 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
-import AdviceCourseCard from '../cards/advice-course/advicecoursecard';
-import AdviceCourseCardSkeleton from '../skeleton/advicecoursecardskeleton';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { FreeMode, Navigation, Pagination} from 'swiper/modules';
-const Advicecourseslidercomponents = ({categoryTag} : { categoryTag: boolean }) => {
+import Scholarshipunicard from '../cards/scholarshipuniversities/scholarshipunicard';
+const Scholarshipunislidercomponents = () => {
   return (
     <>
         <div className="slider-container">
@@ -32,22 +31,22 @@ const Advicecourseslidercomponents = ({categoryTag} : { categoryTag: boolean }) 
         modules={[FreeMode, Pagination, Navigation]} 
         className="MultiSwiper">
             <SwiperSlide>
-              <AdviceCourseCard categoryTag={categoryTag} />
+              <Scholarshipunicard />
             </SwiperSlide>
             <SwiperSlide>
-              <AdviceCourseCard categoryTag={categoryTag} />
+                <Scholarshipunicard />
             </SwiperSlide>
             <SwiperSlide>
-              <AdviceCourseCard categoryTag={categoryTag} />
+                <Scholarshipunicard />
             </SwiperSlide>
             <SwiperSlide>
-            <AdviceCourseCard categoryTag={categoryTag} />
+                <Scholarshipunicard />
             </SwiperSlide>
             <SwiperSlide>
-              <AdviceCourseCard categoryTag={categoryTag} />
+                <Scholarshipunicard />
             </SwiperSlide>
             <SwiperSlide>
-              <AdviceCourseCard categoryTag={categoryTag} />
+                <Scholarshipunicard />
             </SwiperSlide>            
           </Swiper>
         </div>
@@ -55,4 +54,4 @@ const Advicecourseslidercomponents = ({categoryTag} : { categoryTag: boolean }) 
   );
 };
 
-export default Advicecourseslidercomponents;
+export default Scholarshipunislidercomponents;
