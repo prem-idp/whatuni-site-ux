@@ -3,7 +3,12 @@ import AdviceCourseSlider from "@/app/components/slider/advicecourseslidercompon
 import React from "react";
 import Subjectareas from "./components/subjectareas";
 
-const Findcourse = () => {
+interface AdviceCourseSliderProps {
+  categoryTag: boolean;
+}
+
+const Findcourse: React.FC<AdviceCourseSliderProps> = ({ categoryTag }) => {
+ 
   return (
     <>
       <div className="find_a_course">
