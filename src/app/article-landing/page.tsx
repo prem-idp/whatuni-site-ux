@@ -17,7 +17,7 @@ const page = () => {
       <Scholarshipunicomponents />
       <Eligibilitycriteriacomponents />
       <Faqcomponents />
-      <Advicecomponents />
+      <Advicecomponents categoryTag={false} adviceBgWhite={false} />
       <Subscribecomponents />
     </div>
   )
