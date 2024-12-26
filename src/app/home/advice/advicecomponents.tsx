@@ -18,7 +18,7 @@ const farroBold = customFont({
 
 const Advicecomponents = ({categoryTag, adviceBgWhite} : { categoryTag: boolean, adviceBgWhite: boolean }) => {
   return (
-    <div className={`advice-container ${adviceBgWhite ? "bg-white" : "bg-grey-50"}`} > 
+    <div className={`advice-container ${adviceBgWhite ? "bg-white" : "bg-grey-50"}`} >
     <div className="max-w-container mx-auto">
         <div className='advice-card-container px-[0] py-[34px] md:py-[64px]'>
             <div className='advice-header px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]'>
