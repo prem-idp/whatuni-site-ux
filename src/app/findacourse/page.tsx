@@ -3,7 +3,7 @@ import AdviceCourseSlider from "@/app/components/slider/advicecourseslidercompon
 import React from "react";
 import Subjectareas from "./components/subjectareas";
 
-const Findcourse = () => {
+const Findcourse = ({categoryTag} : { categoryTag: boolean}) => {
   return (
     <>
       <div className="find_a_course">
@@ -32,7 +32,7 @@ const Findcourse = () => {
               </div>
             </div>
             <Subjectareas />
-            <AdviceCourseSlider />
+            <AdviceCourseSlider categoryTag={categoryTag} />
           </div>
         </div>
       </div>
