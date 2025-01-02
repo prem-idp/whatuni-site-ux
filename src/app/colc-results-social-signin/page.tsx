@@ -504,7 +504,7 @@ const page = () => {
                 </aside>
             </div>
         </div>
-        <Advicecomponents />
+        <Advicecomponents categoryTag={false} adviceBgWhite={false} />
         <Faqcomponents />
         <Registerationcomponents />
     </div>
