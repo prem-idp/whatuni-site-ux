@@ -1101,7 +1101,7 @@ const page = () => {
               </div>
             </div>
             <aside className="promotion_pod w-full lg:hidden md:pt-[40px]">
-              <div className="advert_card w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] flex flex-col md:flex-row flex-col justify-between md:items-start items-center gap-[24px] md:rounded-[8px] bg-blue-200 px-[24px] pt-[24px]">
+              <div className="advert_card w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] flex flex-col md:flex-row justify-between md:items-start items-center gap-[24px] md:rounded-[8px] bg-blue-200 px-[24px] pt-[24px]">
                 <div className="advert_header_card flex flex-col gap-[16px]">
                   <div className="advert_content_card flex flex-col gap-[4px]">
                     <h4 className="md:text-heading4 lg:text-heading5">
