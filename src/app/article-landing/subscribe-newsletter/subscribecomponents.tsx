@@ -10,7 +10,7 @@ const Subscribecomponents = () => {
     <div className="max-w-container mx-auto">
         <div className='subscribe-card-container flex flex-col md:items-center gap-[24px] px-[16px] md:px-[20px] py-[40px] md:py-[64px]'>
             <div className='subscribe-header flex flex-col gap-[4px]'>
-                <div className="h2 font-bold md:text-center">Subscribe to our newsletter</div>
+                <div className="text-heading3 md:h2 font-bold md:text-center">Subscribe to our newsletter</div>
                 <p className='font-normal small md:text-center'>Get the latest updates with hints, tips and guidance for your journey to university - from application to enrolment.</p>
             </div>
             <div className='successfull_cont w-full md:w-[714px] flex  gap-[8px] bg-positive-light border border-positive-dark rounded-[6px] p-[16px]'>                
@@ -25,13 +25,13 @@ const Subscribecomponents = () => {
                     </div>
                 </div>
             <div className='subscribe-form-control w-full lg:w-[714px]'>
-                <input type="text" className="form-control w-full focus:outline-none p-[11px_10px_11px_24px] small text-grey-900 placeholder:text-grey-700  border border-grey-200 rounded-[30px] shadow-custom-1 hover:border-primary-400" aria-label="email address field" placeholder="Enter Enter your email address" />
+                <input type="text" className="form-control w-full focus:outline-none p-[11px_10px_11px_24px] small text-grey-900 placeholder:text-grey-700  border border-grey-200 rounded-[30px] shadow-custom-1 hover:border-primary-400" aria-label="email address field" placeholder="Enter your email address" />
                 <div className='error mt-[8px]'>
                     <p className='x-small font-regular text md:text-center text-negative-default'>Please enter a valid email address</p>
                 </div>
             </div>
             <div className="col form_check relative">
-                <div className='flex items-start gap-[12px]'>
+                <div className='flex items-start gap-[8px]'>
                     <div className='checkbox_card'>
                         <input type="checkbox" className="form-checkbox hidden" id="newsletters" />
                         <label htmlFor='newsletters' className='flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border border-grey-400 my-[2px] group-checked:bg-primary-400'>

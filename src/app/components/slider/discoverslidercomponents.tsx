@@ -43,7 +43,7 @@ return () => window.removeEventListener('resize', handleResize);
      },
      768: {
        slidesPerView: 2,
-       spaceBetween: 16,
+       spaceBetween: 10,
      },
    }}
    modules={[FreeMode, Pagination]}
