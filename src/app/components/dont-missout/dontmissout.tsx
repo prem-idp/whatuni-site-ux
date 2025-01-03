@@ -78,20 +78,20 @@ const Dontmissout = () => {
           {/* radio box  */}
           <div className="flex flex-col gap-[4px]">
             <label className="small font-semibold font-inter text-grey300">When would you like to start?*</label>
-            <div className="flex gap-[24px]">
-              <div className="flex gap-[16px] items-center">
+            <div className="flex gap-[16px] md:gap-[24px]">
+              <div className="flex gap-[4px] md:gap-[16px] items-center">
                 <input type="radio" className="w-[16px] h-[16px]" name="newsletter-starting" id="2025" />
                 <label className="select-none cursor-pointer" htmlFor="2025">2025</label>
               </div>
-              <div className="flex gap-[16px] items-center">
+              <div className="flex gap-[4px] md:gap-[16px] items-center">
                 <input type="radio" className="w-[16px] h-[16px]" name="newsletter-starting" id="2026" />
                 <label className="select-none cursor-pointer" htmlFor="2026">2026</label>
               </div>
-              <div className="flex gap-[16px] items-center">
+              <div className="flex gap-[4px] md:gap-[16px] items-center">
                 <input type="radio" className="w-[16px] h-[16px]" name="newsletter-starting" id="2027" />
                 <label className="select-none cursor-pointer" htmlFor="2027">2027</label>
               </div>
-              <div className="flex gap-[16px] items-center">
+              <div className="flex gap-[4px] md:gap-[16px] items-center">
                 <input type="radio" className="w-[16px] h-[16px]" name="newsletter-starting" id="2028" />
                 <label className="select-none cursor-pointer" htmlFor="2028">2028</label>
               </div>
