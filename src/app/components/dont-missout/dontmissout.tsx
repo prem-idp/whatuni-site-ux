@@ -49,7 +49,7 @@ const Dontmissout = () => {
                 className="form-control w-full small font-normal text-grey300 px-[12px] py-[10px] border border-negative-default rounded-[4px] outline-none shadow-custom-2"
               />
               <span className="x-small font-normal text-negative-default">
-                Please enter a valid First name
+              Please enter your first name
               </span>
             </div>
             <div className="flex flex-col gap-[4px]">
@@ -60,18 +60,18 @@ const Dontmissout = () => {
                 className="form-control w-full small font-normal text-grey300 px-[12px] py-[10px] border border-grey-500 rounded-[4px] outline-none shadow-custom-2"
               />
               <span className="x-small font-normal text-negative-default">
-                Please enter a valid Last name
+              Please enter your last name
               </span>
             </div>
-            <div className="flex flex-col gap-[4px]">
+            <div className="md:col-span-2 lg:col-span-1 grid gap-[4px]">
               <input
                 type="email"
                 required
                 placeholder="Email address*"
-                className="md:col-span-2 lg:col-span-1 form-control w-full small font-normal text-grey300 px-[12px] py-[10px] border border-grey-500 rounded-[4px] outline-none shadow-custom-2"
+                className="form-control w-full small font-normal text-grey300 px-[12px] py-[10px] border border-grey-500 rounded-[4px] outline-none shadow-custom-2"
               />
               <span className="x-small font-normal text-negative-default">
-                Please enter a valid email address
+              Please enter your email address
               </span>
             </div>
           </div>

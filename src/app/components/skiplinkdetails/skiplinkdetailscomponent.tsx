@@ -85,7 +85,7 @@ const toggleFunc = () => {
             {/* RTF content  */}
             <section className="pb-[40px]">
               <div className="rtf-innerstyle flex flex-col gap-[16px]">
-                <h1>Level 1 heading</h1>
+                <h1>Level 1 heading</h1>                
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   placerat lectus nec suscipit faucibus. Vestibulum arcu urna,
