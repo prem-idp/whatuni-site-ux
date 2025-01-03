@@ -78,6 +78,7 @@ const config: Config = {
           50: "#FFF7E0",
           100: "#FFF0BE",
           200: "#FFD700",
+          600:"#C5422B"
         },
         grey: {
           50: "#F9FAFB",
@@ -145,7 +146,8 @@ const config: Config = {
         gradient7: "linear-gradient(98.41deg, #6EE7B7 0%, #BAEDFF 100%)",
         gradient8: "linear-gradient(98.41deg, #D97706 0%, #87E0FF 100%)",
         gradient9: "linear-gradient(98.41deg, #0A28A3 0%, #00A4DD 100%)",
-        gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)", 
+        gradient10: "linear-gradient(98.41deg, #34D399 0%, #059669 100%)",
+        gradient11: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 58.78%)",
       },
       boxShadow: {
         "custom-1":"0px 2px 4px -2px rgba(16, 24, 40, 0.1), 0px 4px 6px -1px rgba(16, 24, 40, 0.1)",
@@ -169,5 +171,3 @@ const config: Config = {
   plugins: [],
 };
 export default config;
-
-
