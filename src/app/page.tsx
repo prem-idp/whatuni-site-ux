@@ -24,7 +24,7 @@ export default function Home() {
       <Discovercomponents />
       <Tagcloudcomponents />
       {/* <Discovercardskeleton /> */}
-      <Advicecomponents />
+      <Advicecomponents categoryTag={false} adviceBgWhite={false} />
       <Testimonialcomponents />
       {/* <Testimonialcardskeleton /> */}
       <Reviewscomponents />

@@ -4,6 +4,7 @@ import React from "react";
 import Subjectareas from "./components/subjectareas";
 
 const Findcourse = () => {
+ 
   return (
     <>
       <div className="find_a_course">
@@ -32,7 +33,7 @@ const Findcourse = () => {
               </div>
             </div>
             <Subjectareas />
-            <AdviceCourseSlider />
+            {/* <AdviceCourseSlider categoryTag={false} /> */}
           </div>
         </div>
       </div>

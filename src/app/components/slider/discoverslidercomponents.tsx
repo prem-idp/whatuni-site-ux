@@ -43,7 +43,7 @@ return () => window.removeEventListener('resize', handleResize);
      },
      768: {
        slidesPerView: 2,
-       spaceBetween: 16,
+       spaceBetween: 10,
      },
    }}
    modules={[FreeMode, Pagination]}
@@ -129,70 +129,82 @@ return () => window.removeEventListener('resize', handleResize);
        </Swiper>
        </div>
     ) : (
-            <div className='discover grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-[20px]'>
+            <div className='discover grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-[20px] lg:px-[20px] xl-px-[0]'>
               <div className="discover">
-                <Link href="" className='block bg-blue-100 hover:outline-2 hover:outline hover:outline-primary-400 rounded-[8px] overflow-hidden'>
-                    <div className='discover-card flex justify-between gap-[8px]'>
-                        <div className="flex flex-col justify-between p-[20px] pr-[0]">
+                <Link href="" className='h-[200px] block bg-blue-100 hover:outline-2 hover:outline hover:outline-primary-400 rounded-[8px] overflow-hidden'>
+                    <div className='discover-card flex justify-between gap-[8px] h-[100%]'>
+                        <div className="flex flex-col justify-between p-[20px] pr-[0] lg:w-[calc(100%_-_145px)] xl:w-[calc(100%_-_194px)]">
                             <div className='w-fit uppercase font-bold x-small text-primary-500 bg-white/[.6] px-[6px] py-[2px] rounded-[4px]'>courses</div>
                             <h5 className='font-bold'>Looking for courses?</h5>
                         </div>
-                        <Image src="/assets/images/discover/discover-feature-image1x3x.png" width="186" height="200"  alt='discover'/>
+                        <div className='discover_media flex self-end lg:w-[145px] xl:w-[186px]'>
+                          <Image className='w-full h-auto' src="/assets/images/discover/discover-feature-image1x3x.png" width="186" height="200"  alt='discover'/>
+                        </div>
                     </div>
                 </Link>                                                  
                 </div>
               <div className="discover">
                 <Link href="" className='block bg-secondary-200 hover:outline-2 hover:outline hover:outline-primary-400 rounded-[8px] overflow-hidden'>    
                         <div className='discover-card flex justify-between gap-[8px]'>
-                        <div className="flex flex-col justify-between p-[20px] pr-[0]">
+                        <div className="flex flex-col justify-between p-[20px] pr-[0] lg:w-[calc(100%_-_145px)] xl:w-[calc(100%_-_194px)]">
                             <div className='w-fit uppercase font-bold x-small text-positive-dark bg-white/[.6] px-[6px] py-[2px] rounded-[4px]'>universities</div>
                             <h5 className='font-bold'>Pick your perfect uni</h5>
                         </div>
-                        <Image src="/assets/images/discover/discover-feature-image2x3x.png" width="186" height="200"  alt='discover'/>
+                        <div className='discover_media lg:w-[145px] xl:w-[186px]'>
+                          <Image className='w-full h-auto' src="/assets/images/discover/discover-feature-image2x3x.png" width="186" height="200"  alt='discover'/>
+                        </div>
                     </div>
                 </Link>
                 </div>
               <div className="discover">
-                <Link href="" className='block bg-tertiary-100 hover:outline-2 hover:outline hover:outline-primary-400 rounded-[8px] overflow-hidden'> 
-                    <div className='discover-card flex justify-between gap-[8px]'>
-                        <div className="flex flex-col justify-between p-[20px] pr-[0]">
+                <Link href="" className='block h-[200px] bg-tertiary-100 hover:outline-2 hover:outline hover:outline-primary-400 rounded-[8px] overflow-hidden'> 
+                    <div className='discover-card flex justify-between gap-[8px] h-[100%]'>
+                        <div className="flex flex-col justify-between p-[20px] pr-[0] lg:w-[calc(100%_-_145px)] xl:w-[calc(100%_-_194px)]">
                             <div className='w-fit uppercase font-bold x-small text-negative-dark bg-white/[.6] px-[6px] py-[2px] rounded-[4px]'>career</div>
                             <h5 className='font-bold'>Take our careers quiz</h5>
                         </div>
-                        <Image src="/assets/images/discover/discover-feature-image3x3x.png" width="186" height="200"  alt='discover'/>
+                        <div className='discover_media flex self-end lg:w-[145px] xl:w-[186px]'>
+                          <Image className='w-full h-auto' src="/assets/images/discover/discover-feature-image3x3x.png" width="186" height="200"  alt='discover'/>
+                        </div>
                     </div>
                 </Link>
                 </div>
               <div className="discover">
                 <Link href="" className='block bg-blue-100 hover:outline-2 hover:outline hover:outline-primary-400 rounded-[8px] overflow-hidden'>    
                     <div className='discover-card flex justify-between gap-[8px]'>
-                        <div className="flex flex-col justify-between p-[20px] pr-[0]">
+                        <div className="flex flex-col justify-between p-[20px] pr-[0] lg:w-[calc(100%_-_145px)] xl:w-[calc(100%_-_194px)]">
                             <div className='w-fit uppercase font-bold x-small text-primary-500 bg-white/[.6] px-[6px] py-[2px] rounded-[4px]'>Subject guides</div>
                             <h5 className='font-bold'>Find out what to study</h5>
                         </div>
-                        <Image src="/assets/images/discover/discover-feature-image1x3x.png" width="186" height="200"  alt='discover'/>
+                        <div className='discover_media lg:w-[145px] xl:w-[186px]'>
+                          <Image className='w-full h-auto' src="/assets/images/discover/discover-feature-image1x3x.png" width="186" height="200"  alt='discover'/>
+                        </div>
                     </div>
                 </Link>
                 </div>
               <div className="discover">
                 <Link href="" className='block bg-secondary-200 hover:outline-2 hover:outline hover:outline-primary-400 rounded-[8px] overflow-hidden'>    
                     <div className='discover-card flex justify-between gap-[8px]'>
-                        <div className="flex flex-col justify-between p-[20px] pr-[0]">
+                        <div className="flex flex-col justify-between p-[20px] pr-[0] lg:w-[calc(100%_-_145px)] xl:w-[calc(100%_-_194px)]">
                             <div className='w-fit uppercase font-bold x-small text-positive-dark bg-white/[.6] px-[6px] py-[2px] rounded-[4px]'>open days</div>
                             <h5 className='font-bold'>Find an open day</h5>
                         </div>
-                        <Image src="/assets/images/discover/discover-feature-image2x3x.png" width="186" height="200"  alt='discover'/>
+                        <div className='discover_media lg:w-[145px] xl:w-[186px]'>
+                          <Image className='w-full h-auto' src="/assets/images/discover/discover-feature-image2x3x.png" width="186" height="200"  alt='discover'/>
+                        </div>
                     </div>
                 </Link>
                 </div>
               <div className="discover">
                 <Link href="" className='block bg-tertiary-100 hover:outline-2 hover:outline hover:outline-primary-400 rounded-[8px] overflow-hidden'>    
                     <div className='discover-card flex justify-between gap-[8px]'>
-                        <div className="flex flex-col justify-between p-[20px] pr-[0]">
+                        <div className="flex flex-col justify-between p-[20px] pr-[0] lg:w-[calc(100%_-_145px)] xl:w-[calc(100%_-_194px)]">
                             <div className='w-fit uppercase font-bold x-small text-negative-dark bg-white/[.6] px-[6px] py-[2px] rounded-[4px]'>app</div>
                             <h5 className='font-bold'>Download the app</h5>
                         </div>
-                        <Image src="/assets/images/discover/discover-feature-image3x3x.png" width="186" height="200"  alt='discover'/>
+                        <div className='discover_media lg:w-[145px] xl:w-[186px]'>
+                          <Image className='w-full h-auto' src="/assets/images/discover/discover-feature-image3x3x.png" width="186" height="200"  alt='discover'/>
+                        </div>
                     </div>
                 </Link>
                 </div>
