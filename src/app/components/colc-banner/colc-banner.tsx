@@ -15,7 +15,7 @@ const ColcBanner = () => {
               <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
                 <div className="flex flex-col gap-x-[10px] justify-between md:flex-row">
                         <div className="relative grow">
-                          <input type="text" className="form-control w-full focus:outline-none pb-[16px] small text-black placeholder:text-gray-500 md:py-[10px] border-b border-neutral200 md:border-none" aria-label="enter keyword" placeholder="Text goes here"
+                          <input type="text" className="form-control w-full focus:outline-none pb-[18px] small text-black placeholder:text-gray-500 md:py-[10px] border-b border-neutral200 md:border-none" aria-label="enter keyword" placeholder="Text goes here"
                           />
                         </div>
                         <div className="pt-[16px] md:pt-[0]">
