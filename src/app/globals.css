@@ -174,7 +174,7 @@ p,.para {@apply text-para}
 .MultiSwiper .swiper-button-prev{@apply !bg-[url(/assets/icons/arrow-left-dgrey.svg)] hover:!bg-[url(/assets/icons/arrow-left-white.svg)] !left-0}
 .MultiSwiper .swiper-button-next{@apply !bg-[url(/assets/icons/arrow-right-dgrey.svg)] hover:!bg-[url(/assets/icons/arrow-right-white.svg)] !right-0}
 .MultiSwiper .swiper-button-disabled{visibility: hidden}
-.MultiSwiper .swiper-button-prev,.MultiSwiper .swiper-button-next{@apply flex !w-[40px] !h-[40px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-grey-500 !bg-white hover:!bg-primary-500 hover:!border-primary-500 !bg-no-repeat !bg-center z-[2] !top-[32%]
+.MultiSwiper .swiper-button-prev,.MultiSwiper .swiper-button-next{@apply flex !w-[48px] !h-[48px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-grey-500 !bg-white hover:!bg-primary-500 hover:!border-primary-500 !bg-no-repeat !bg-center z-[2] !top-[32%]
 !m-[0] translate-y-[-32%] !hidden lg:!block}
 .MultiSwiper .swiper-pagination{@apply !bottom-[0]}
 .MultiSwiper .swiper-pagination-bullet{@apply !bg-grey-200 !opacity-[1] !mx-[2px]}

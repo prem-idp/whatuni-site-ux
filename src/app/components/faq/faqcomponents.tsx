@@ -44,15 +44,15 @@ const Faqcomponents = () => {
   return (
     <div className="faq-container bg-white">
       <div className="max-w-container mx-auto">
-            <div className="faq-card-container px-[16px] py-[34px] lg:py-[60px] lg:px-[20px] xl:px-[0]">
-                <div className="faq-header mb-[26px]  lg:px-[20px] xl:px-[0] xl:mb-[32px]">
-                    <h2 className="font-bold">Frequently asked questions</h2>
-                    <p className="font-normal small mt-[8px]">Subheading</p>
+            <div className="faq-card-container flex flex-col gap-[32px] px-[16px] py-[34px] lg:py-[64px] lg:px-[20px] xl:px-[0]">
+                <div className="faq-header flex flex-col gap-[4px]">                
+                    <div className="text-heading3 md:h2 font-bold">Heading</div>
+                    <p className="font-normal small">Subheading</p>
                 </div>
                 <div className="accordion flex flex-col rounded-[6px] border border-grey-200 px-[16px]">
                 {faq_items.map((item,index) => (
                     <div className="accordion-item flex flex-col gap-[8px] py-[16px] border-b border-b-grey-200 last:border-b-0 cursor-pointer" key={index}>
-                        <div className='accordion-header flex items-center justify-between gap-[48px] para font-semibold text-grey300' onClick={() => toggleAccordion(index)}>
+                        <div className='accordion-header flex items-center justify-between gap-[48px] para font-semibold text-grey-600' onClick={() => toggleAccordion(index)}>
                             {item.title}
                             <span>
                             {openIndex === index ? (
