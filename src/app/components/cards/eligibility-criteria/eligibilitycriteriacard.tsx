@@ -10,7 +10,7 @@ const Eligibilitycriteriacard = () => {
           <div className='card-header w-[48px]'>
               <Image src="/assets/images/article/eligibility_criteria_thumb_image.svg" width="48" height="48" className='block w-full h-auto min-h-[48px]' alt='Article_image' />
           </div> 
-          <h5 className='card-title font-semibold text-para-lg text-grey300 line-clamp-2'>Subheading</h5>
+          <div className='card-title h5 font-semibold text-para-lg text-grey300 line-clamp-2'>Subheading</div>
           <p className='card-description font-normal small text-grey300 line-clamp-2'>Review the eligibility criteria for your chosen scholarship.</p>
       </div>
       <Ctabutton />
