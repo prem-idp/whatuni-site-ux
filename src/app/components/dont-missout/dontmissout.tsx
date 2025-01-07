@@ -7,7 +7,7 @@ const Dontmissout = () => {
     <div className="bg-blue-100 p-[24px] flex flex-col gap-[16px] rounded-[8px]">
       <div className="">
         <div className="h4">Don't miss out!</div>
-        <span>
+        <span className="small font-inter font-normal text-grey300">
           Receive a monthly newsletter packed with useful tips and updates to
           help you find the right uni.
         </span>
