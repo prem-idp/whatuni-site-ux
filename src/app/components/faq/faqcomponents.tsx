@@ -44,7 +44,7 @@ const Faqcomponents = () => {
   return (
     <div className="faq-container bg-white">
       <div className="max-w-container mx-auto">
-            <div className="faq-card-container flex flex-col gap-[32px] px-[16px] py-[34px] lg:py-[64px] lg:px-[20px] xl:px-[0]">
+            <div className="faq-card-container flex flex-col gap-[32px] px-[16px] py-[40px] md:py-[64px] lg:px-[20px] xl:px-[0]">
                 <div className="faq-header flex flex-col gap-[4px]">                
                     <div className="text-heading3 md:h2 font-bold">Heading</div>
                     <p className="font-normal small">Subheading</p>
