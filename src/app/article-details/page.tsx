@@ -34,7 +34,7 @@ const page = () => {
 
   return (
     <>
-      <div>
+      <div className='bg-white'>
         {/* breadcrumb  */}
       <section className="pt-[16px] pb-[40px]">
           <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
@@ -50,7 +50,7 @@ const page = () => {
         </section>
         {/* Article card END  */}
         {/* Author profile  */}
-        <section className='pb-[40px]'>          
+        <section className='lg:pb-[40px]'>          
         <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
         <Authorprofile />
           </div>
@@ -64,7 +64,7 @@ const page = () => {
         </section>
         {/* skiplink article details END */}
          {/* Slider section  */}
-         <section>
+         <section className='bg-grey-50'>
         <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
         <Advicecomponents categoryTag={false} adviceBgWhite={false} />
           </div>
@@ -78,7 +78,7 @@ const page = () => {
         </section>
         {/* Slider section END */}
         {/* Slider section  */}
-        <section>
+        <section className='bg-grey-50'>
         <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
         <Advicecomponents categoryTag={true} adviceBgWhite={false} />
           </div>

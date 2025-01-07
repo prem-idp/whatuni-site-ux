@@ -15,7 +15,7 @@ const Articledescription = () => {
           CATEGORY
         </span>
         <h1 className="font-farro text-heading1 text-grey900">Article title</h1>
-        <p className="text-para-lg max-w-[907px] w-full text-grey900 text-inter">
+        <p className="text-para-lg max-w-[907px] w-full text-grey300 text-inter">
           Class aptent taciti sociosqu ad litora torquent per conubia nostra,
           per inceptos himenaeos. Nulla pharetra posuere ligula, eget commodo
           turpis semper a. Phasellus t
