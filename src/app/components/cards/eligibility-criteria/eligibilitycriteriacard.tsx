@@ -5,7 +5,7 @@ import Ctabutton from '../interaction-button/ctabutton'
 
 const Eligibilitycriteriacard = () => {
   return (
-    <Link href="" className='card group flex flex-col bg-white border border-grey-200 hover:border-primary-400 rounded-[8px] shadow-custom-2 overflow-hidden p-[16px] gap-[16px]'> 
+    <Link href="" className='card group flex flex-col bg-white border border-grey-200 lg:hover:border-primary-400 rounded-[8px] shadow-custom-2 overflow-hidden p-[16px] gap-[16px]'> 
       <div className='card-body flex flex-col gap-[8px]'>
           <div className='card-header w-[48px]'>
               <Image src="/assets/images/article/eligibility_criteria_thumb_image.svg" width="48" height="48" className='block w-full h-auto min-h-[48px]' alt='Article_image' />
