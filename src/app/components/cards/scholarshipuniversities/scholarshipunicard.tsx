@@ -13,7 +13,7 @@ const Scholarshipunicard = () => {
         </div>   
         <div className='card-body flex flex-col justify-between gap-[30px] p-[16px] min-h-[106px]'>
             <div className='flex flex-col gap-[8px] w-full'>
-                <div className='h6 card-title font-bold text-para-lg text-grey300 line-clamp-1'>Uni name</div>
+                <div className='card-title font-farro para-lg font-bold text-grey300 line-clamp-1'>Uni name</div>
                 <div className='rating-pod flex items-center gap-[8px]'>
                     <div className='rating-card flex items-center gap-[4px]'>
                         <Image src="/assets/icons/blue-star-icon.svg" width="24" height="24" alt="Rating icon" />
