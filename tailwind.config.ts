@@ -78,7 +78,8 @@ const config: Config = {
           50: "#FFF7E0",
           100: "#FFF0BE",
           200: "#FFD700",
-          600:"#C5422B"
+          600:"#C5422B",
+          700:"#992f1d"
         },
         grey: {
           50: "#F9FAFB",

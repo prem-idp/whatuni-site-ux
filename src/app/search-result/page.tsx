@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import BreadCrumbs from "../components/breadcrumb/breadcrumbcomponents";
@@ -10,9 +10,24 @@ import RequestInfo from "../components/cards/interaction-button/requestinfo";
 import Paginations from "../components/paginations/paginations";
 import Faqcomponents from "../components/faq/faqcomponents";
 import Subscribecomponents from "../article-landing/subscribe-newsletter/subscribecomponents";
+import SearchFilterComponent from "../popups/searchfiltercomponent";
 
 const SearchResult = () => {
   //read more
+
+  // search filter
+  const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(true);
+  const searchClick = () => {
+    setIsSearchFilterOpen(true);
+    const body = document.body;
+    body.classList.add("overflow-y-hidden");
+  };
+
+  const filterClose = () => {
+    const body = document.body;
+    setIsSearchFilterOpen(false);
+    body.classList.remove("overflow-y-hidden");
+  };
 
   const faqData = [
     {
@@ -44,8 +59,8 @@ const SearchResult = () => {
       title: "What type of support does Designership provide?",
       content:
         "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
-    }
-  ]; 
+    },
+  ];
 
   return (
     <>
@@ -80,7 +95,10 @@ const SearchResult = () => {
             </svg>
             Add my grades
           </div>
-          <div className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-blue-100 text-grey300 lg:grow-0">
+          <div
+            onClick={searchClick}
+            className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-blue-100 text-grey300 lg:grow-0"
+          >
             <svg
               width="20"
               height="20"
@@ -97,6 +115,18 @@ const SearchResult = () => {
               />
             </svg>
             Filter (2)
+            <div>
+              <SearchFilterComponent
+                onClose={filterClose}
+                isFilterOpen={isSearchFilterOpen}
+              />
+            </div>
+          </div>
+          <div>
+            <SearchFilterComponent
+              onClose={filterClose}
+              isFilterOpen={isSearchFilterOpen}
+            />
           </div>
           <div className="hidden lg:flex items-center justify-center gap-[8px]">
             <div className="flex items-center gap-[8px] btn w-fit bg-white text-grey300">
@@ -375,14 +405,15 @@ const SearchResult = () => {
               </div>
               <div className="flex flex-col gap-[4px]">
                 <div className="para-lg font-bold font-farro">
-                No exact matches, but we're close
+                  No exact matches, but we're close
                 </div>
                 <div className="small">
-                We couldn’t find an exact match but here are some options related to [search terms]. Or try modifying the filters to find what you need
+                  We couldn’t find an exact match but here are some options
+                  related to [search terms]. Or try modifying the filters to
+                  find what you need
                 </div>
               </div>
             </div>
-           
           </div>
           <div className="ml-auto w-fit">
             <div className="flex items-center gap-[4px] px-[4px] py-[16px] small text-grey300 cursor-pointer">
@@ -696,7 +727,7 @@ const SearchResult = () => {
                     </svg>
                     Modules
                   </div>
-                  <div className="grid  gap-[8px] md:grid-flow-row lg:grid-flow-col">
+                  <div className="grid gap-[8px] md:grid-flow-row lg:grid-flow-col">
                     <Getprospectus />
                     <Visitwebsite />
                     <BookOpenDay />
@@ -817,7 +848,8 @@ const SearchResult = () => {
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M8.23798 2.55048C8.55528 2.23317 9.06972 2.23317 9.38702 2.55048L14.262 7.42548C14.5793 7.74278 14.5793 8.25722 14.262 8.57452L9.38702 13.4495C9.06972 13.7668 8.55528 13.7668 8.23798 13.4495C7.92067 13.1322 7.92067 12.6178 8.23798 12.3005L11.726 8.8125L2.3125 8.8125C1.86377 8.8125 1.5 8.44873 1.5 8C1.5 7.55127 1.86377 7.1875 2.3125 7.1875H11.726L8.23798 3.69952C7.92067 3.38222 7.92067 2.86778 8.23798 2.55048Z"
-                      fill="#4664DC" className="flex-1"
+                      fill="#4664DC"
+                      className="flex-1"
                     />
                   </svg>
                 </Link>
