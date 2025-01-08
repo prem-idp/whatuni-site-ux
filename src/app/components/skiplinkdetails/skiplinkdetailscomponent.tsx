@@ -52,7 +52,7 @@ const toggleFunc = () => {
   ));
   return (
     <>
-      <div className="pb-[16px] border-b border-grey-200 lg:hidden mb-[40px]">
+      <div className="py-[16px] border-b border-grey-200 lg:hidden mb-[40px]">
       <div className={`bg-blue-400 rounded-[4px] overflow-hidden border-b relative border-grey-200 skiplinkoption ${modelOpen ? "active" : ""}`}>
         <div className="">
                   <div onClick={toggleFunc} className="bg-blue-400 cursor-pointer flex justify-between p-[18px]">

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Scholarshipunicard = () => {
   return (
-    <Link href="" className='card flex flex-col bg-white border border-grey-200 hover:border-primary-400 rounded-[8px] shadow-custom-2 overflow-hidden'>
+    <Link href="" className='card flex flex-col bg-white border border-grey-200 lg:hover:border-primary-400 rounded-[8px] shadow-custom-2 overflow-hidden'>
         <div className='card-header relative min-h-[190px] bg-grey-200'>
             <Image src="/assets/images/article_image1.jpg" width="392" height="221" className='block w-full h-auto min-h-[185px]' alt='Article_image' />
                 <div className='absolute z-0 top-[8px] left-[8px] rounded-[8px] overflow-hidden'>
@@ -13,7 +13,7 @@ const Scholarshipunicard = () => {
         </div>   
         <div className='card-body flex flex-col justify-between gap-[30px] p-[16px] min-h-[106px]'>
             <div className='flex flex-col gap-[8px] w-full'>
-                <div className='h6 card-title font-bold text-para-lg text-grey300 line-clamp-1'>Uni name</div>
+                <div className='card-title font-farro para-lg font-bold text-grey300 line-clamp-1'>Uni name</div>
                 <div className='rating-pod flex items-center gap-[8px]'>
                     <div className='rating-card flex items-center gap-[4px]'>
                         <Image src="/assets/icons/blue-star-icon.svg" width="24" height="24" alt="Rating icon" />

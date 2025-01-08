@@ -892,6 +892,14 @@ const Header = () => {
                   </>
                 )}
               </li>
+              <li aria-label="User" className="relative">
+                <span
+                  className="relative para font-semibold text-white rounded-[34px] flex items-center justify-center w-[48px] h-[48px] cursor-pointer bg-primary-400 hover:bg-primary-500"
+                >
+                MP
+                </span>
+
+              </li>
               <li aria-label="Shortlist" className="relative">
                 <div
                   className="cursor-pointer"
