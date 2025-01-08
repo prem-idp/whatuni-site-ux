@@ -1,9 +1,9 @@
 import React from 'react'
 
-const requestinfo = () => {
+const RequestInfo = () => {
   return (
-    <div>requestinfo</div>
+    <button type='button' className='btn btn-blue'>Request info</button>
   )
 }
 
-export default requestinfo
+export default RequestInfo
