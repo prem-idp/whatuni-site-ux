@@ -61,10 +61,10 @@ const Food = () => {
     },
   ];
   //dropdowns
-  const [isCostDropdownOpened, SetIsCostDropdownOpened] = useState(false);
+  const [isCostDropdownOpened, setIsCostDropdownOpened] = useState(false);
   const CostDropdownClicked = (dropdownType: string) => {
     if (dropdownType == "COST") {
-      SetIsCostDropdownOpened(!isCostDropdownOpened);
+      setIsCostDropdownOpened(!isCostDropdownOpened);
     }
   };
   const dropdown = ["Monthly", "Weekly", "Yearly"];

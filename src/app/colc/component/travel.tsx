@@ -16,15 +16,15 @@ const Travel = () => {
   };
 
   //dropdowns
-  const [isCostDropdownOpened, SetIsCostDropdownOpened] = useState(false);
+  const [isCostDropdownOpened, setIsCostDropdownOpened] = useState(false);
   const CostDropdownClicked = (dropdownType: string) => {
     if (dropdownType == "COST") {
-      SetIsCostDropdownOpened(!isCostDropdownOpened);
+      setIsCostDropdownOpened(!isCostDropdownOpened);
     }
   };
   const dropdown = ["Monthly", "Weekly", "Yearly"];
   //vehicle
-  const [isYesSelected, SetIsYesSelected] = useState(false);
+  const [isYesSelected, setIsYesSelected] = useState(false);
   const vehicle = ["No", "Yes"];
 
   return (
@@ -215,7 +215,7 @@ const Travel = () => {
                       ? "bg-primary-500 border-primary-500 text-white"
                       : ""
                   }`}
-                  onClick={() => SetIsYesSelected(false)}
+                  onClick={() => setIsYesSelected(false)}
                 >
                   No
                 </li>
@@ -226,7 +226,7 @@ const Travel = () => {
                       ? "bg-primary-500 border-primary-500 text-white"
                       : ""
                   }`}
-                  onClick={() => SetIsYesSelected(true)}
+                  onClick={() => setIsYesSelected(true)}
                 >
                   Yes
                 </li>

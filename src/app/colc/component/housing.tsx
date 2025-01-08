@@ -34,15 +34,15 @@ const Housing = () => {
     },
   ];
   //dropdowns
-  const [isCostDropdownOpened, SetIsCostDropdownOpened] = useState(false);
-  const [isLivingDropdownOpened, SetIsLivingDropdownOpened] = useState(false);
+  const [isCostDropdownOpened, setIsCostDropdownOpened] = useState(false);
+  const [isLivingDropdownOpened, setIsLivingDropdownOpened] = useState(false);
   const CostDropdownClicked = (dropdownType: string) => {
     if (dropdownType == "COST") {
-      SetIsCostDropdownOpened(!isCostDropdownOpened);
-      SetIsLivingDropdownOpened(false);
+      setIsCostDropdownOpened(!isCostDropdownOpened);
+      setIsLivingDropdownOpened(false);
     } else if (dropdownType == "LIVING") {
-      SetIsCostDropdownOpened(false);
-      SetIsLivingDropdownOpened(!isLivingDropdownOpened);
+      setIsCostDropdownOpened(false);
+      setIsLivingDropdownOpened(!isLivingDropdownOpened);
     }
   };
   const dropdown = ["Monthly", "Weekly", "Yearly"];
