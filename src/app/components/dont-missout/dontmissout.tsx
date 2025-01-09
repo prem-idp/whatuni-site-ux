@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Dontmissout = () => {
   return (
-    <div className="bg-blue-100 p-[24px] flex flex-col gap-[16px] rounded-[8px]">
+    <div className="bg-blue-100 p-[16px] md:p-[24px] flex flex-col gap-[16px] rounded-[8px]">
       <div className="">
         <div className="h4">Don't miss out!</div>
         <span className="small font-inter font-normal text-grey300">
@@ -138,21 +138,21 @@ const Dontmissout = () => {
                   <p className="select-none small font-normal text-grey-600">
                     I confirm I’m over 13 and agree to the
                     <Link
-                      className="text-primary-500 hover:underline pl-[4px]"
+                      className="text-primary-500 underline pl-[4px]"
                       href="#"
                     >
                       terms and conditions&nbsp;    
                     </Link> 
                       and
                     <Link
-                      className="text-primary-500 hover:underline pl-[4px]"
+                      className="text-primary-500 underline pl-[4px]"
                       href="#"
                     >
                       privacy notice
                     </Link>
                     , and agree to become a member of the
                     <Link
-                      className="text-primary-500 hover:underline pl-[4px]"
+                      className="text-primary-500 underline pl-[4px]"
                       href="#"
                     >
                       Whatuni community
