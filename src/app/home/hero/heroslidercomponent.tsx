@@ -75,16 +75,16 @@ const HeroSliderComponent = () => {
   };
 
   // ucas calculate
-  const [isUcasPopupOpen, SetIsUcasPopupOpen] = useState(false);
+  const [isUcasPopupOpen, setIsUcasPopupOpen] = useState(false);
   const ucasClick = () => {
-    SetIsUcasPopupOpen(true);
+    setIsUcasPopupOpen(true);
     const body = document.body;
     body.classList.add("overflow-y-hidden");
   };
 
   const ucasClose = () => {
     const body = document.body;
-    SetIsUcasPopupOpen(false);
+    setIsUcasPopupOpen(false);
     body.classList.remove("overflow-y-hidden");
   };
 

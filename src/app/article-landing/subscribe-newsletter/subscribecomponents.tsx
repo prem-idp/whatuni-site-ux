@@ -6,11 +6,11 @@ Link
 
 const Subscribecomponents = () => {
   return (
-    <div className='subscribe-container bg-primary-50'> 
+    <div className='subscribe-container bg-primary-50'>
     <div className="max-w-container mx-auto">
         <div className='subscribe-card-container flex flex-col md:items-center gap-[24px] px-[16px] md:px-[20px] py-[40px] md:py-[64px]'>
             <div className='subscribe-header flex flex-col gap-[4px]'>
-                <div className="text-heading3 md:h2 font-bold md:text-center">Subscribe to our newsletter</div>
+                <div className="h2 font-bold md:text-center">Subscribe to our newsletter</div>
                 <p className='font-normal small md:text-center'>Get the latest updates with hints, tips and guidance for your journey to university - from application to enrolment.</p>
             </div>
             <div className='successfull_cont w-full md:w-[714px] flex  gap-[8px] bg-positive-light border border-positive-dark rounded-[6px] p-[16px]'>                
@@ -30,8 +30,8 @@ const Subscribecomponents = () => {
                     <p className='x-small font-regular text md:text-center text-negative-default'>Please enter a valid email address</p>
                 </div>
             </div>
-            <div className="col form_check relative">
-                <div className='flex items-start gap-[8px]'>
+            <div className="col form_check relative w-full lg:w-[714px]">
+                <div className='flex items-start justify-center gap-[8px]'>
                     <div className='checkbox_card'>
                         <input type="checkbox" className="form-checkbox hidden" id="newsletters" />
                         <label htmlFor='newsletters' className='flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border border-grey-400 my-[2px] group-checked:bg-primary-400'>
@@ -40,8 +40,8 @@ const Subscribecomponents = () => {
                         </svg>
                         </label>
                     </div>
-                    <label htmlFor="newsletters" className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]">
-                        I confirm I am over 16 and agree to the <Link href="" className='text-primary-400 hover:text-primary-500 hover:underline' title="">terms and conditions</Link> and <Link href="" className='text-primary-400 hover:text-primary-500 hover:underline' title="">privacy notice</Link>
+                    <label htmlFor="newsletters" className="check-label small font-normal text-grey300">
+                        I confirm I am over 16 and agree to the <Link href="" className='text-primary-400 hover:text-primary-500 underline' title="">terms and conditions</Link> and <Link href="" className='text-primary-400 hover:text-primary-500 underline' title="">privacy notice</Link>
                     </label>
                 </div>
                 <div className='error  mt-[8px]'>

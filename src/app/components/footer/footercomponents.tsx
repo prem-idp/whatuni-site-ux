@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex flex-col gap-[16px]">
               <ul className="flex flex-row gap-[16px]">
                 <li>
-                  <a
+                  <a className="flex items-center w-[24px] h-[24px]"
                     href="https://www.facebook.com/whatuni"
                     aria-label="facebook"
                   >
@@ -40,7 +40,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/whatuni" aria-label="twitter">
+                  <a className="flex items-center w-[24px] h-[24px]" href="https://twitter.com/whatuni" aria-label="twitter">
                     <svg
                       width="24"
                       height="24"
@@ -56,7 +56,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a
+                  <a className="flex items-center w-[24px] h-[24px]"
                     href="https://www.instagram.com/whatuni/?hl=en"
                     aria-label="instagram"
                   >
@@ -90,7 +90,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tiktok.com/@whatuni" aria-label="tiktok">
+                  <a className="flex items-center w-[24px] h-[24px]" href="https://www.tiktok.com/@whatuni" aria-label="tiktok">
                     <svg
                       width="24"
                       height="24"

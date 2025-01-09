@@ -48,10 +48,10 @@ const DailyLife = () => {
   };
 
   //dropdowns
-  const [isCostDropdownOpened, SetIsCostDropdownOpened] = useState(false);
+  const [isCostDropdownOpened, setIsCostDropdownOpened] = useState(false);
   const CostDropdownClicked = (dropdownType: string) => {
     if (dropdownType == "COST") {
-      SetIsCostDropdownOpened(!isCostDropdownOpened);
+      setIsCostDropdownOpened(!isCostDropdownOpened);
     }
   };
   const dropdown = ["Monthly", "Weekly", "Yearly"];
@@ -245,7 +245,7 @@ const DailyLife = () => {
                     <input
                       defaultValue={"Amazon Prime"}
                       type="checkbox"
-                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none checked:bg-red-400 checked:border-primary-500"
+                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
                       id={item}
                     />
                     <label htmlFor={item} className="btn btn-primary-outline">

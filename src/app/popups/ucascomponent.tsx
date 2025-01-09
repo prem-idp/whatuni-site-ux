@@ -42,11 +42,11 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
     "20 credits",
   ];
 
-  const [isUcasPopupOpen, SetIsUcasPopupOpen] = useState(false);
+  const [isUcasPopupOpen, setIsUcasPopupOpen] = useState(false);
 
   const ucasHandleClose = () => {
     onClose();
-    SetIsUcasPopupOpen(!isUcasPopupOpen);
+    setIsUcasPopupOpen(!isUcasPopupOpen);
   };
 
   // UCAS dropdown actions
@@ -74,9 +74,9 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
   };
 
   // add qualification actions
-  const [isAddQualification, SetIsAddQualification] = useState(false);
+  const [isAddQualification, setIsAddQualification] = useState(false);
   const addClick = () => {
-    SetIsAddQualification(!isAddQualification);
+    setIsAddQualification(!isAddQualification);
   };
 
   // add qualification dropdown actions
@@ -96,7 +96,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
 
   // delete actions
   const deleteClicked = () => {
-    SetIsAddQualification(!isAddQualification);
+    setIsAddQualification(!isAddQualification);
   };
 
   // Access to HE Diploma dropdown actions
