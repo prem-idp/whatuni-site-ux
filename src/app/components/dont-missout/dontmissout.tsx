@@ -141,9 +141,9 @@ const Dontmissout = () => {
                       className="text-primary-500 underline pl-[4px]"
                       href="#"
                     >
-                      terms and conditions&nbsp;    
+                      terms and conditions    
                     </Link> 
-                      and
+                    &nbsp;and
                     <Link
                       className="text-primary-500 underline pl-[4px]"
                       href="#"
