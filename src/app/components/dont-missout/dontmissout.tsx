@@ -95,7 +95,7 @@ const Dontmissout = () => {
                 <input type="radio" className="w-[16px] h-[16px]" name="newsletter-starting" id="2028" />
                 <label className="select-none cursor-pointer" htmlFor="2028">2028</label>
               </div>
-            </div>
+            </div>           
           </div>
           {/* terms and condition  */}
           <div className="form_check flex flex-col gap-[4px]">
@@ -138,21 +138,21 @@ const Dontmissout = () => {
                   <p className="select-none small font-normal text-grey-600">
                     I confirm I’m over 13 and agree to the
                     <Link
-                      className="text-blue-400 hover:underline pl-[4px]"
+                      className="text-primary-500 hover:underline pl-[4px]"
                       href="#"
                     >
-                      terms and conditions
-                    </Link>
-                    and
+                      terms and conditions&nbsp;    
+                    </Link> 
+                      and
                     <Link
-                      className="text-blue-400 hover:underline pl-[4px]"
+                      className="text-primary-500 hover:underline pl-[4px]"
                       href="#"
                     >
                       privacy notice
                     </Link>
                     , and agree to become a member of the
                     <Link
-                      className="text-blue-400 hover:underline pl-[4px]"
+                      className="text-primary-500 hover:underline pl-[4px]"
                       href="#"
                     >
                       Whatuni community
@@ -161,10 +161,12 @@ const Dontmissout = () => {
                   </p>
                 </label>
               </div>
+              <span className="x-small font-normal text-negative-default">Please agree to our terms and conditions and privacy notice</span>
             </div>
+          
           </div>
           <div className="flex justify-end">
-            <button className="btn btn-grey-400 h-[41px] px-[20px] py-[10px] flex justify-end gap-[10px] items-center">
+            <button className="btn btn-primary h-[41px] px-[20px] py-[10px] flex justify-end gap-[10px] items-center">
               Get free newsletters
               <Image
                 src="/assets/icons/arrow-right-white.svg"
