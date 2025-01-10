@@ -4,11 +4,13 @@ import React from "react";
 import Advicecomponents from "../home/advice/advicecomponents";
 import Faqcomponents from "../components/faq/faqcomponents";
 import ColcBanner from "../components/colc-banner/colc-banner";
+import ColcResultsSkeleton from "../components/skeleton/colcresultsskeleton";
 
 const page = () => {
   return (
     <div className="colc_results bg-white">
-      <ColcBanner/>
+      <ColcBanner />
+      <ColcResultsSkeleton />
       <div className="max-w-container mx-auto">
         <div className="results_container flex flex-col lg:flex-row md:gap-[40px] lg:gap-[20px] md:px-[20px] lg:px-[0] pb-[40px] md:py-[40px]">
           <section className="results_card flex flex-col  w-full md:rounded-t-[8px] overflow-hidden">
@@ -160,6 +162,23 @@ const page = () => {
                           strokeLinejoin="round"
                         />
                       </svg>
+                      {/* close icon */}
+                      {/* <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 18L18 6M6 6L18 18"
+                          stroke="#333F48"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg> */}
+                      {/* close icon */}
                     </span>
                   </div>
                 </div>
@@ -169,20 +188,36 @@ const page = () => {
                       <span className="x-small font-semibold text-grey300 uppercase tracking-[1px]">
                         University
                       </span>
-                      <span>
+                      <span className="flex flex-col gap-[4px] cursor-pointer">
                         <svg
                           width="10"
-                          height="16"
-                          viewBox="0 0 10 16"
+                          height="6"
+                          viewBox="0 0 12 7"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M1 5L5 1L9 5M9 11L5 15L1 11"
+                            d="M11 6L6 1L1 6"
                             stroke="#ADB2B6"
-                            strokeWidth="1.67"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                            stroke-width="1.67"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          className="sort-active"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 12 7"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11 1L6 6L1 1"
+                            stroke="#ADB2B6"
+                            stroke-width="1.67"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                           />
                         </svg>
                       </span>
@@ -191,20 +226,36 @@ const page = () => {
                       <span className="x-small font-semibold text-grey300 uppercase tracking-[1px]">
                         TOTAL COST
                       </span>
-                      <span>
+                      <span className="flex flex-col gap-[4px] cursor-pointer">
                         <svg
                           width="10"
-                          height="16"
-                          viewBox="0 0 10 16"
+                          height="6"
+                          viewBox="0 0 12 7"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M1 5L5 1L9 5M9 11L5 15L1 11"
+                            d="M11 6L6 1L1 6"
                             stroke="#ADB2B6"
-                            strokeWidth="1.67"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                            stroke-width="1.67"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          className="sort-active"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 12 7"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11 1L6 6L1 1"
+                            stroke="#ADB2B6"
+                            stroke-width="1.67"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                           />
                         </svg>
                       </span>
