@@ -9,16 +9,19 @@ import Income from "./component/income";
 import ErrorList from "./component/error";
 import Faqcomponents from "../components/faq/faqcomponents";
 import ColcBanner from "../components/colc-banner/colc-banner";
+import HousingSkeleton from "../components/skeleton/housingskeleton";
+import TotalCostSkeleton from "../components/skeleton/totalcostskeleton";
 
 const Colc = () => {
   return (
     <>
-      <ColcBanner/>
+      <ColcBanner />
       <section className="bg-white px-[16px] py-[32px] md:py-[64px] xl:px-0">
         <div className="max-w-container mx-auto">
           <div className="flex flex-col gap-[16px] justify-between lg:flex-row">
             <div className="flex flex-col gap-[40px] w-full grow">
               <Housing />
+              <HousingSkeleton />
               <Food />
               <Travel />
               <Clothing />
@@ -44,9 +47,28 @@ const Colc = () => {
                 Calculate my results
               </div>
             </div>
-            <div className="flex flex-col p-[16px] shrink-0 w-full bg-grey300 rounded-0 text-white fixed bottom-0 mx-[-16px] md:items-center lg:items-start lg:p-[24px] lg:mx-0 lg:self-start lg:rounded-[8px] lg:sticky lg:top-[40px] lg:w-[392px]">
-              <div className="small font-semibold">Monthly living costs</div>
-              <div className="text-heading4 font-bold font-farro md:text-heading1">£0</div>
+            <div className="shrink-0 w-full fixed bottom-0 left-0 lg:self-start lg:sticky lg:top-[40px] lg:w-[392px]">
+              <div className="p-[16px] bg-grey300 rounded-none lg:p-[24px] lg:rounded-[8px]">
+                <div className="flex justify-between">
+                  <div className="flex flex-col text-white">
+                    <div className="small font-semibold">
+                      Monthly living costs
+                    </div>
+                    <div className="text-heading4 font-bold font-farro md:text-heading1">
+                      £0
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end text-grey-300">
+                    <div className="small font-semibold">
+                      Monthly living costs
+                    </div>
+                    <div className="text-heading4 font-bold font-farro md:text-heading1">
+                      £0
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <TotalCostSkeleton/> */}
             </div>
           </div>
         </div>
