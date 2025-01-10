@@ -30,7 +30,7 @@ export default function Home() {
       <Reviewscomponents />
       <OurPartnerComponent />
       <PartnerSliderComponentSkeleton/>
-      {/* <Registerationcomponents /> */}
+      <Registerationcomponents />
     </>
   );
 }

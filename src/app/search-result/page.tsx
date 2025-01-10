@@ -11,6 +11,7 @@ import Paginations from "../components/paginations/paginations";
 import Faqcomponents from "../components/faq/faqcomponents";
 import Subscribecomponents from "../article-landing/subscribe-newsletter/subscribecomponents";
 import SearchFilterComponent from "../popups/searchfiltercomponent";
+import Breadcrumblayoutcomponent from "../components/breadcrumb-layout/breadcrumblayoutcomponent";
 
 const SearchResult = () => {
   //read more
@@ -27,6 +28,32 @@ const SearchResult = () => {
     const body = document.body;
     setIsSearchFilterOpen(false);
     body.classList.remove("overflow-y-hidden");
+  };
+
+  const breadcrumbData = [
+    {
+      url: "#",
+      Imgurl: "/assets/icons/breadcrumbs-home-icon.svg",
+    },
+    {
+      url: "#",
+      label: "Home",
+    },
+    {
+      url: "#",
+      label: "Scholarships",
+    },
+    {
+      url: "",
+      label: "Search results",
+    },
+  ];
+
+  // module
+  const [isModuleOpen, setIsModuleOpen] = useState(false);
+
+  const moduleToggle = () => {
+    setIsModuleOpen(!isModuleOpen);
   };
 
   const faqData = [
@@ -66,8 +93,12 @@ const SearchResult = () => {
     <>
       <section className="px-[16px] xl:px-0">
         <div className="max-w-container mx-auto">
-          <BreadCrumbs />
-          <div className="text-grey300 py-[16px]">
+          {/* breadcrumb  */}
+          <div className="px-[16px] xl:px-[0] md:p-[24px_0_8px]">
+            <Breadcrumblayoutcomponent data={breadcrumbData} />
+          </div>
+          {/* breadcrumb  */}
+          <div className="py-[16px]">
             <div className="h5 mb-[4px]">
               Top Law, Engineering & Architecture subjects for you
             </div>
@@ -77,8 +108,8 @@ const SearchResult = () => {
       </section>
 
       <section className="bg-grey-600 px-[12px] py-[16px]">
-        <div className="max-w-container mx-auto flex flex-wrap gap-[8px]">
-          <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0">
+        <div className="max-w-container mx-auto flex gap-[8px] small">
+          <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0 lg:shrink-0">
             <svg
               width="20"
               height="20"
@@ -97,7 +128,7 @@ const SearchResult = () => {
           </div>
           <div
             onClick={searchClick}
-            className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-blue-100 text-grey300 lg:grow-0"
+            className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-blue-100 text-grey300 lg:grow-0 lg:shrink-0"
           >
             <svg
               width="20"
@@ -122,13 +153,11 @@ const SearchResult = () => {
               />
             </div>
           </div>
-          <div>
-            <SearchFilterComponent
-              onClose={filterClose}
-              isFilterOpen={isSearchFilterOpen}
-            />
-          </div>
-          <div className="hidden lg:flex items-center justify-center gap-[8px]">
+          <SearchFilterComponent
+            onClose={filterClose}
+            isFilterOpen={isSearchFilterOpen}
+          />
+          <div className="hidden lg:flex items-center justify-center gap-[8px] lg:shrink-0">
             <div className="flex items-center gap-[8px] btn w-fit bg-white text-grey300">
               Study level
               <svg
@@ -220,7 +249,7 @@ const SearchResult = () => {
               </svg>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-[8px] px-0 text-grey-50 lg:px-[16px]">
+          <div className="flex items-center justify-center gap-[4px] cursor-pointer px-0 text-grey-50 xl:px-[16px] lg:shrink-0">
             <svg
               width="16"
               height="16"
@@ -526,9 +555,9 @@ const SearchResult = () => {
                   alt="University"
                   width={500}
                   height={376}
-                  className="rounded-t-[16px] md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]"
+                  className="rounded-t-[16px] md:w-[280px] h-full object-cover lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]"
                 />
-                <div className="absolute bg-gradient11 rounded-t-[16px] top-0 left-0 p-[24px] w-full h-full md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-full lg:h-full">
+                <div className="absolute bg-gradient11 rounded-t-[16px] top-0 left-0 p-[16px] w-full h-full md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-full lg:h-full lg:p-[24px]">
                   <div className="flex flex-col justify-between h-full">
                     <div className="flex justify-between">
                       <div className="flex items-start gap-[8px]">
@@ -547,7 +576,7 @@ const SearchResult = () => {
                           sponsored
                         </div>
                       </div>
-                      <div className="heart w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer">
+                      <div className="heart w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
                         <svg
                           width="20"
                           height="20"
@@ -643,9 +672,9 @@ const SearchResult = () => {
               </div>
             </div>
             <div className="flex flex-col">
-              <div className="bg-white p-[20px] border border-grey-200 rounded-b-[16px] shadow-custom-3 lg:rounded-tr-[16px] lg:rounded-b-[16px]">
+              <div className="bg-white p-[16px] border border-grey-200 rounded-b-[16px] shadow-custom-3 lg:rounded-tr-[16px] lg:rounded-b-[16px] lg:p-[20px]">
                 <div className="bg-grey-100 p-[12px] rounded-[8px] flex items-center gap-[4px]">
-                  <div className="text-heading1">“</div>
+                  <div className="text-heading1 relative top-[12px]">“</div>
                   <div className="flex flex-col gap-[4px]">
                     <Link
                       href=""
@@ -653,16 +682,27 @@ const SearchResult = () => {
                     >
                       What students think
                     </Link>
-                    <div className="x-small text-grey300 line-clamp-2">
-                      I never thought I’f find myself in a position where I
-                      would feel empowered to be a lawyer, I wanted to go into
-                      teaching but then realised after visiting Kent’s
-                      facilities this would be the right plac... Read full
-                      review
+
+                    <div className="relative x-small">
+                      <div className="text-grey300 line-clamp-2">
+                        I never thought I’f find myself in a position where I
+                        would feel empowered to be a lawyer, I wanted to go into
+                        teaching but then realised after visiting Kent’s
+                        facilities this would be the right plac
+                      </div>
+                      <div className="absolute bottom-0 right-[60px]">
+                        <span>... </span>
+                        <Link
+                          href=""
+                          className="text-blue-400 cursor-pointer hover:underline"
+                        >
+                          Read full review
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="border-b-[1px] border-grey-300 -mx-[20px] pt-[20px] mb-[20px]"></div>
+                <div className="border-b-[1px] border-grey-200 -mx-[16px] pt-[20px] mb-[20px] lg:mx-[16px]"></div>
                 <div className="flex flex-col gap-[16px]">
                   <div className="flex items-start justify-between">
                     <div className="flex flex-col gap-[8px]">
@@ -710,22 +750,165 @@ const SearchResult = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="flex items-center gap-[4px] text-primary-400 small font-semibold">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M10 1.875C10.641 1.875 11.1607 2.39467 11.1607 3.03571V8.83929H16.9643C17.6053 8.83929 18.125 9.35895 18.125 10C18.125 10.641 17.6053 11.1607 16.9643 11.1607H11.1607V16.9643C11.1607 17.6053 10.641 18.125 10 18.125C9.35895 18.125 8.83929 17.6053 8.83929 16.9643V11.1607H3.03571C2.39467 11.1607 1.875 10.641 1.875 10C1.875 9.35895 2.39467 8.83928 3.03571 8.83928L8.83929 8.83929V3.03571C8.83929 2.39467 9.35895 1.875 10 1.875Z"
-                        fill="#4664DC"
-                      />
-                    </svg>
+                  <div className="flex flex-col gap-[4px">
+                  <div 
+                    onClick={moduleToggle}
+                    className="flex items-center gap-[4px] text-primary-400 small font-semibold cursor-pointer"
+                  >
+                    {isModuleOpen ? (
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.5 8.49986C1.5 7.98702 1.91574 7.57129 2.42857 7.57129L13.5714 7.57129C14.0843 7.57129 14.5 7.98703 14.5 8.49986C14.5 9.0127 14.0843 9.42843 13.5714 9.42843L2.42857 9.42843C1.91574 9.42843 1.5 9.0127 1.5 8.49986Z"
+                          fill="#4664DC"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10 1.875C10.641 1.875 11.1607 2.39467 11.1607 3.03571V8.83929H16.9643C17.6053 8.83929 18.125 9.35895 18.125 10C18.125 10.641 17.6053 11.1607 16.9643 11.1607H11.1607V16.9643C11.1607 17.6053 10.641 18.125 10 18.125C9.35895 18.125 8.83929 17.6053 8.83929 16.9643V11.1607H3.03571C2.39467 11.1607 1.875 10.641 1.875 10C1.875 9.35895 2.39467 8.83928 3.03571 8.83928L8.83929 8.83929V3.03571C8.83929 2.39467 9.35895 1.875 10 1.875Z"
+                          fill="#4664DC"
+                        />
+                      </svg>
+                    )}
                     Modules
+                  </div>
+                  {isModuleOpen && (
+                    <div
+                      className={`transition-all duration-300 ease-in-out ${
+                        isModuleOpen ? "max-h-screen" : "max-h-0"
+                      }`}
+                    >
+                      <div className="text-black x-small">
+                        <div className="font-semibold">Year 1</div>
+                        <ul className="list-disc pl-[20px] flex flex-col gap-[4px]">
+                          <li>Becoming a Criminologist</li>
+                          <li>Introduction to Law and its Study</li>
+                          <li>Social Research in Practice</li>
+                          <li>Criminology in Late Modernity</li>
+                          <li>Criminal Law</li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  </div>
+                  <div className="grid gap-[8px] md:grid-flow-row lg:grid-flow-col">
+                    <Getprospectus />
+                    <Visitwebsite />
+                    <BookOpenDay />
+                    <RequestInfo />
+                  </div>
+                </div>
+                <div className="border-b-[1px] border-grey-200 -mx-[16px] pt-[20px] mb-[20px] lg:mx-[16px]"></div>
+                <div className="flex flex-col gap-[16px]">
+                  <div className="flex items-start justify-between">
+                    <div className="flex flex-col gap-[8px]">
+                      <div className="text-primary-400 font-semibold">
+                        Course name
+                      </div>
+                      <div className="flex gap-[4px] text-grey-500">
+                        <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold">
+                          <Image
+                            className="hidden md:block"
+                            src="/assets/icons/search/calender-grey.svg"
+                            alt="Lecturers and Teaching"
+                            width={16}
+                            height={16}
+                          />
+                          164-112 ucas points
+                        </div>
+                        <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold">
+                          <Image
+                            className="hidden md:block"
+                            src="/assets/icons/search/time-grey.svg"
+                            alt="Lecturers and Teaching"
+                            width={16}
+                            height={16}
+                          />
+                          164-112 ucas points
+                        </div>
+                      </div>
+                    </div>
+                    <div className="heart w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
+                          stroke="#4664DC"
+                          strokeWidth="1.67"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-[4px">
+                    <div
+                      onClick={moduleToggle}
+                      className="flex items-center gap-[4px] text-primary-400 small font-semibold cursor-pointer"
+                    >
+                      {isModuleOpen ? (
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M1.5 8.49986C1.5 7.98702 1.91574 7.57129 2.42857 7.57129L13.5714 7.57129C14.0843 7.57129 14.5 7.98703 14.5 8.49986C14.5 9.0127 14.0843 9.42843 13.5714 9.42843L2.42857 9.42843C1.91574 9.42843 1.5 9.0127 1.5 8.49986Z"
+                            fill="#4664DC"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M10 1.875C10.641 1.875 11.1607 2.39467 11.1607 3.03571V8.83929H16.9643C17.6053 8.83929 18.125 9.35895 18.125 10C18.125 10.641 17.6053 11.1607 16.9643 11.1607H11.1607V16.9643C11.1607 17.6053 10.641 18.125 10 18.125C9.35895 18.125 8.83929 17.6053 8.83929 16.9643V11.1607H3.03571C2.39467 11.1607 1.875 10.641 1.875 10C1.875 9.35895 2.39467 8.83928 3.03571 8.83928L8.83929 8.83929V3.03571C8.83929 2.39467 9.35895 1.875 10 1.875Z"
+                            fill="#4664DC"
+                          />
+                        </svg>
+                      )}
+                      Modules
+                    </div>
+                    {isModuleOpen && (
+                      <div
+                        className={`transition-all duration-300 ease-in-out ${
+                          isModuleOpen ? "max-h-screen" : "max-h-0"
+                        }`}
+                      >
+                        Tes
+                      </div>
+                    )}
                   </div>
                   <div className="grid gap-[8px] md:grid-flow-row lg:grid-flow-col">
                     <Getprospectus />
@@ -757,23 +940,23 @@ const SearchResult = () => {
               </Link>
             </div>
           </div>
-          <div className="pt-[24px] pb-[64px]">
+          <div className="pt-[24px] pb-[40px] md:pb-[64px]">
             <Paginations />
           </div>
         </div>
       </section>
       <section className="bg-white p-[16px] lg:py-[28px] xl:p-0">
         <div className="max-w-container mx-auto">
-          <div className="h1 pt-[12px] pb-[40px]">Explore more about law</div>
-          <div className="flex flex-col gap-[40px]">
+          <div className="h1 py-[40px]">Explore more about law</div>
+          <div className="flex flex-col gap-[40px] md:gap-[80px]">
             <div className="flex flex-col item-center lg:flex-row">
-              <div className="w-full lg:w-[392px] shrink-0">
+              <div className="w-full md:h-[193px] lg:h-[221px] lg:w-[392px] shrink-0">
                 <Image
                   src="/assets/images/search-results/article1.png"
                   width={392}
                   height={221}
                   alt="Article"
-                  className="w-full rounded-t-[8px] lg:w-[392px] lg:rounded-l-[8px] lg:rounded-tr-none"
+                  className="w-full h-full object-cover rounded-t-[8px] lg:w-[392px] lg:rounded-l-[8px] lg:rounded-tr-none"
                 />
               </div>
               <div className="p-[16px] shadow-custom-2 flex flex-col gap-[8px] text-grey300 border border-t-0 border-grey-200 rounded-[0_0_8px_8px] lg:rounded-[0_8px_8px_0] lg:border-l-0 lg:border-t-[1px] lg:px-[24px] lg:py-[32px]">
@@ -811,13 +994,13 @@ const SearchResult = () => {
               </div>
             </div>
             <div className="flex flex-col item-center lg:flex-row">
-              <div className="w-full lg:w-[392px] shrink-0">
+              <div className="w-full md:h-[193px] lg:h-[221px] lg:w-[392px] shrink-0">
                 <Image
                   src="/assets/images/search-results/article2.jpg"
                   width={392}
                   height={221}
                   alt="Article"
-                  className="w-full rounded-t-[8px] lg:w-[392px] lg:rounded-l-[8px] lg:rounded-tr-none"
+                  className="w-full h-full object-cover rounded-t-[8px] lg:w-[392px] lg:rounded-l-[8px] lg:rounded-tr-none"
                 />
               </div>
               <div className="p-[16px] shadow-custom-2 flex flex-col gap-[8px] text-grey300 border border-t-0 border-grey-200 rounded-[0_0_8px_8px] lg:rounded-[0_8px_8px_0] lg:border-l-0 lg:border-t-[1px] lg:px-[24px] lg:py-[32px]">

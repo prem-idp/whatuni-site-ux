@@ -72,7 +72,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
     "Universities Q - U",
     "Universities V - Z",
   ];
-  const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(true);
+  const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(false);
   const searchClick = () => {
     setIsSearchFilterOpen(true);
     const body = document.body;
@@ -80,9 +80,9 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
   };
   const [isSubjectOpen, setIsSubjectOpen] = useState(false);
 
-  const subjectClicked ={
-
-  }
+  const subjectClicked = () => {
+    setIsSubjectOpen(!isSubjectOpen);
+  };
 
   // university list
   const universityList = [
@@ -108,7 +108,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
       ></div>
 
       <div
-        className={`bg-white fixed top-0 left-0 h-full w-[768px] z-10 transition-all duration-300 ease-in-out ${
+        className={`bg-white fixed top-0 left-0 h-full w-[768px] z-10 transition-all duration-300 ease-in-out cursor-pointer ${
           isFilterOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -152,22 +152,24 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 <div className="x-small font-semibold text-black uppercase">
                   Choose one or more
                 </div>
+                <div>
+</div>
                 <div className="flex flex-wrap gap-[8px]">
-                  <div className="form_check_black flex relative">
-                    <input
+                  <div className="form-black flex relative">
+                    <input 
                       defaultValue={"Online"}
                       type="checkbox"
-                      className="form-check-input rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
+                      className="rounded-[4px] outline-none absolute opacity-0"
                       id="Online"
                     />
                     <label htmlFor="Online" className="btn btn-black-outline">
                       Online
                     </label>
                   </div>
-                  <div className="form_check_black flex relative">
+                  <div className="form-black flex relative">
                     <input
                       type="checkbox"
-                      className="form-check-input rounded-[4px] outline-none absolute opacity-0 pointer-events-none"
+                      className=" rounded-[4px] outline-none absolute opacity-0"
                       id="In-person"
                     />
                     <label
@@ -186,10 +188,10 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 </div>
                 <div className="flex flex-row flex-wrap gap-[8px]">
                   <div className="form_check_black flex relative">
-                    <input
+                    <input 
                       defaultValue={"Full time"}
                       type="checkbox"
-                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none"
+                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0"
                       id="Full time"
                     />
                     <label
@@ -200,9 +202,9 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                     </label>
                   </div>
                   <div className="form_check_black flex relative">
-                    <input
+                    <input 
                       type="checkbox"
-                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none"
+                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0"
                       id="Sandwich"
                     />
                     <label htmlFor="Sandwich" className="btn btn-black-outline">
@@ -212,7 +214,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                   <div className="form_check_black flex relative">
                     <input
                       type="checkbox"
-                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none"
+                      className="form-checkbox rounded-[4px] outline-none absolute opacity-0"
                       id="Part time"
                     />
                     <label
@@ -236,7 +238,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                         defaultValue={"Undergraduate"}
                         type="radio"
                         name="Undergraduate"
-                        className="form-check-input rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none"
+                        className="form-check-input rounded-[4px] outline-none absolute opacity-0"
                         id={item}
                       />
                       <label htmlFor={item} className="btn btn-black-outline">
@@ -271,196 +273,212 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col gap-[12px]">
-                  {subjectArea.map((item, index) => (
-                    <div className="relative" key={index}>
-                      <div className="flex items-center gap-[4px] text-blue-400 small font-semibold cursor-pointer hover:underline">
-                        {item}
-                        <svg
-                          width="16"
-                          height="17"
-                          viewBox="0 0 16 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                <div className="relative">
+                  <div className="flex flex-col gap-[12px]">
+                    {subjectArea.map((item, index) => (
+                      <div className="relative" key={index}>
+                        <div
+                          onClick={subjectClicked}
+                          className="flex items-center gap-[4px] text-blue-400 small font-semibold cursor-pointer hover:underline"
                         >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M4.48037 14.6192C3.97269 14.1116 3.97269 13.2884 4.48037 12.7808L8.76113 8.5L4.48037 4.21924C3.97269 3.71156 3.97269 2.88844 4.48037 2.38076C4.98805 1.87308 5.81117 1.87308 6.31885 2.38076L11.5188 7.58076C12.0265 8.08844 12.0265 8.91156 11.5188 9.41924L6.31885 14.6192C5.81117 15.1269 4.98805 15.1269 4.48037 14.6192Z"
-                            fill="#4664DC"
-                          />
-                        </svg>
+                          {item}
+                          <svg
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M4.48037 14.6192C3.97269 14.1116 3.97269 13.2884 4.48037 12.7808L8.76113 8.5L4.48037 4.21924C3.97269 3.71156 3.97269 2.88844 4.48037 2.38076C4.98805 1.87308 5.81117 1.87308 6.31885 2.38076L11.5188 7.58076C12.0265 8.08844 12.0265 8.91156 11.5188 9.41924L6.31885 14.6192C5.81117 15.1269 4.98805 15.1269 4.48037 14.6192Z"
+                              fill="#4664DC"
+                            />
+                          </svg>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col gap-[16px]">
-                  <ul className="flex flex-wrap gap-[8px] uppercase">
-                    <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
-                      Business LAw
-                    </li>
-                    <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
-                      Child Law
-                    </li>
-                    <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                      Educational Law
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4 12L12 4M4 4L12 12"
-                          stroke="#3460DC"
-                          strokeWidth="1.13"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </li>
-                    <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                      Full time
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4 12L12 4M4 4L12 12"
-                          stroke="#3460DC"
-                          strokeWidth="1.13"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </li>
-                    <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                      Full time
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4 12L12 4M4 4L12 12"
-                          stroke="#3460DC"
-                          strokeWidth="1.13"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </li>
-                    <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                      South East England
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4 12L12 4M4 4L12 12"
-                          stroke="#3460DC"
-                          strokeWidth="1.13"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </li>
-                    <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[4px]  font-semibold x-small flex items-center gap-[2px]">
-                      <Link href="">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M9 11L6 8L9 5"
-                            stroke="#3460DC"
-                            stroke-width="1.13"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </Link>
-                    </li>
-                  </ul>
-                  <div className="flex flex-col gap-[12px] max-h-[255px] overflow-y-auto custom-scrollbar-2">
-                    <div className="flex items-center gap-[4px] text-blue-400 font-semibold">
-                      <svg
-                        className="rotate-180"
-                        width="16"
-                        height="17"
-                        viewBox="0 0 16 17"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M4.48037 14.6192C3.97269 14.1116 3.97269 13.2884 4.48037 12.7808L8.76113 8.5L4.48037 4.21924C3.97269 3.71156 3.97269 2.88844 4.48037 2.38076C4.98805 1.87308 5.81117 1.87308 6.31885 2.38076L11.5188 7.58076C12.0265 8.08844 12.0265 8.91156 11.5188 9.41924L6.31885 14.6192C5.81117 15.1269 4.98805 15.1269 4.48037 14.6192Z"
-                          fill="#4664DC"
-                        />
-                      </svg>
-                      Choose a different subject
-                    </div>
-                    <div className="flex flex-col gap-[12px]">
-                      <div className="small font-bold">Law</div>
-                      <div className="flex flex-col gap-[12px]">
-                        {law.map((item, index) => (
-                          <div className="col form_check relative" key={index}>
-                            <div className="flex items-start gap-[8px]">
-                              <div className="checkbox_card">
-                                <input
-                                  type="checkbox"
-                                  className="form-checkbox hidden"
-                                  id={item}
-                                />
-                                <label
-                                  htmlFor={item}
-                                  className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
-                                >
-                                  <svg
-                                    width="10"
-                                    height="8"
-                                    viewBox="0 0 10 8"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      fillRule="evenodd"
-                                      clipRule="evenodd"
-                                      d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
-                                      fill="white"
-                                      stroke="white"
-                                      strokeWidth="0.666667"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </svg>
-                                </label>
-                              </div>
-                              <label
-                                htmlFor={item}
-                                className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
+                    ))}
+                  </div>
+                  {isSubjectOpen && (
+                    <div
+                      className={`bg-white absolute top-0 left-0 h-full z-10 transition-all duration-300 ease-in-out ${
+                        isSubjectOpen ? "translate-x-0" : "-translate-x-full"
+                      }`}
+                    >
+                      <div className="flex flex-col gap-[16px]">
+                        <ul className="flex flex-wrap gap-[8px] uppercase">
+                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
+                            Business LAw
+                          </li>
+                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
+                            Child Law
+                          </li>
+                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+                            Educational Law
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4 12L12 4M4 4L12 12"
+                                stroke="#3460DC"
+                                strokeWidth="1.13"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </li>
+                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+                            Full time
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4 12L12 4M4 4L12 12"
+                                stroke="#3460DC"
+                                strokeWidth="1.13"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </li>
+                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+                            Full time
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4 12L12 4M4 4L12 12"
+                                stroke="#3460DC"
+                                strokeWidth="1.13"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </li>
+                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+                            South East England
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4 12L12 4M4 4L12 12"
+                                stroke="#3460DC"
+                                strokeWidth="1.13"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </li>
+                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[4px]  font-semibold x-small flex items-center gap-[2px]">
+                            <Link href="">
+                              <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
-                                {item}
-                              </label>
+                                <path
+                                  d="M9 11L6 8L9 5"
+                                  stroke="#3460DC"
+                                  strokeWidth="1.13"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </Link>
+                          </li>
+                        </ul>
+                        <div className="flex flex-col gap-[12px] max-h-[255px] overflow-y-auto custom-scrollbar-2">
+                          <div onClick={subjectClicked} className="flex items-center gap-[4px] text-blue-400 font-semibold">
+                            <svg
+                              className="rotate-180"
+                              width="16"
+                              height="17"
+                              viewBox="0 0 16 17"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                clipRule="evenodd"
+                                d="M4.48037 14.6192C3.97269 14.1116 3.97269 13.2884 4.48037 12.7808L8.76113 8.5L4.48037 4.21924C3.97269 3.71156 3.97269 2.88844 4.48037 2.38076C4.98805 1.87308 5.81117 1.87308 6.31885 2.38076L11.5188 7.58076C12.0265 8.08844 12.0265 8.91156 11.5188 9.41924L6.31885 14.6192C5.81117 15.1269 4.98805 15.1269 4.48037 14.6192Z"
+                                fill="#4664DC"
+                              />
+                            </svg>
+                            Choose a different subject
+                          </div>
+                          <div className="flex flex-col gap-[12px]">
+                            <div className="small font-bold">Law</div>
+                            <div className="flex flex-col gap-[12px]">
+                              {law.map((item, index) => (
+                                <div
+                                  className="col form_check relative"
+                                  key={index}
+                                >
+                                  <div className="flex items-start gap-[8px]">
+                                    <div className="checkbox_card">
+                                      <input
+                                        type="checkbox"
+                                        className="form-checkbox hidden"
+                                        id={item}
+                                      />
+                                      <label
+                                        htmlFor={item}
+                                        className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
+                                      >
+                                        <svg
+                                          width="10"
+                                          height="8"
+                                          viewBox="0 0 10 8"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            clipRule="evenodd"
+                                            d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
+                                            fill="white"
+                                            stroke="white"
+                                            strokeWidth="0.666667"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                          />
+                                        </svg>
+                                      </label>
+                                    </div>
+                                    <label
+                                      htmlFor={item}
+                                      className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
+                                    >
+                                      {item}
+                                    </label>
+                                  </div>
+                                </div>
+                              ))}
                             </div>
                           </div>
-                        ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -479,7 +497,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                       defaultValue={"2024"}
                       type="radio"
                       name="2024"
-                      className="form-check-input rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none"
+                      className="form-check-input rounded-[4px] outline-none absolute opacity-0"
                       id={item}
                     />
                     <label htmlFor={item} className="btn btn-black-outline">
@@ -495,7 +513,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                       defaultValue={"All Months"}
                       type="radio"
                       name="All Months"
-                      className="form-check-input rounded-[4px] outline-none absolute opacity-0 pointer-events-none appearance-none"
+                      className="form-check-input rounded-[4px] outline-none absolute opacity-0"
                       id={item}
                     />
                     <label
@@ -550,8 +568,8 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
                           d="M4.48037 14.6192C3.97269 14.1116 3.97269 13.2884 4.48037 12.7808L8.76113 8.5L4.48037 4.21924C3.97269 3.71156 3.97269 2.88844 4.48037 2.38076C4.98805 1.87308 5.81117 1.87308 6.31885 2.38076L11.5188 7.58076C12.0265 8.08844 12.0265 8.91156 11.5188 9.41924L6.31885 14.6192C5.81117 15.1269 4.98805 15.1269 4.48037 14.6192Z"
                           fill="#4664DC"
                         />
@@ -577,8 +595,8 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M4.48037 14.6192C3.97269 14.1116 3.97269 13.2884 4.48037 12.7808L8.76113 8.5L4.48037 4.21924C3.97269 3.71156 3.97269 2.88844 4.48037 2.38076C4.98805 1.87308 5.81117 1.87308 6.31885 2.38076L11.5188 7.58076C12.0265 8.08844 12.0265 8.91156 11.5188 9.41924L6.31885 14.6192C5.81117 15.1269 4.98805 15.1269 4.48037 14.6192Z"
                         fill="#4664DC"
                       />

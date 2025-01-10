@@ -46,7 +46,7 @@ const Accordion = ({ title, children }: any) => {
         )}
       </button>
       <div
-        className={`transition-all duration-300 overflow-hidden ease-in-out ${
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${
           isOpen ? "" : "max-h-0"
         }`}
       >
