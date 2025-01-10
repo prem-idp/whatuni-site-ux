@@ -18,7 +18,7 @@ const Reviewslidercomponents = () => {
     <div className='slider-container'>
       <Swiper
         pagination={true}
-        navigation= {true}
+          navigation={true}         
         breakpoints={{
           320: {
             slidesPerView: 1,
@@ -29,7 +29,7 @@ const Reviewslidercomponents = () => {
             spaceBetween: 16,
           },
           1200: {
-            slidesPerView: 3,
+            slidesPerView: 2.3,
             spaceBetween: 20,
           },
         }}
