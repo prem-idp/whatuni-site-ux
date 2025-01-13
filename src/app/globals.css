@@ -373,6 +373,32 @@ p,.para {@apply text-para}
 }
 /* RTF END */
 /* sr */
+.form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
+.form_check .form-checkbox:checked + label, .form_radio .form-radio:checked + label{@apply text-white bg-primary-400 border-primary-400 cursor-pointer}
+
 .form_radio_black .form-check-input:checked + label,.form_radio_black .form-check-input:hover + label{@apply text-white bg-grey300 border-grey300 cursor-pointer}
 .form_check_black .form-checkbox:checked + label, .form_radio_black .form_radio_black:checked + label{@apply text-white bg-grey300 border-grey300 cursor-pointer}
+.heart:hover svg{ fill:#0FBEFD}
 /* sr */
+
+.form-black input[type="radio"]:checked + label,
+.form-black input[type="checkbox"]:checked + label
+{
+  @apply bg-blue-500 text-white; 
+}
+
+.form-black input[type="radio"]:checked + label:hover,
+.form-black input[type="checkbox"]:checked + label:hover
+{
+  @apply bg-yellow-500 text-white; 
+}
+.decrease svg path {
+  stroke: #4664dc;
+}
+.increment svg path {
+  stroke: #adb2b6;
+}
+
+.sort-active path{
+  stroke: #333;
+}
