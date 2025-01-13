@@ -21,13 +21,31 @@ const page = () => {
           url: "",
           label: "Search results",
         },
-      ];
+    ];
+    const providerList = [
+        {
+            title: "Architecture & Design",
+            provideFav: false,
+            title: "Architecture & Design",
+            title: "Architecture & Design",
+            title: "Architecture & Design",
+            title: "Architecture & Design",
+        },
+    ]
   return (
       <>
-          <section>
-        <Breadcrumblayoutcomponent data={breadcrumbData} />
-          </section>
-       <Subscribecomponents/>
+          <div>
+                 {/* breadcrumb  */}
+      <section>
+          <div className="max-w-container mx-auto">
+          <Breadcrumblayoutcomponent data={breadcrumbData} />
+          </div>
+        </section>
+              {/* breadcrumb  */}
+              <Subscribecomponents/>
+          </div>
+     
+      
       </>
   )
 }
