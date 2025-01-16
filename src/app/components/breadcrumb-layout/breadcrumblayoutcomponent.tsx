@@ -5,7 +5,7 @@ import Image from "next/image";
 const Breadcrumblayoutcomponent = ({ data } : { data:any }) => {
 
   const breadcrumbList = data.map((breadcrumbData:any) => (
-    <li className="inter small" key={breadcrumbData.label}>
+    <li className="small" key={breadcrumbData.label}>
       {breadcrumbData.url && !breadcrumbData.Imgurl ? (
         <Link
           className='text-primary-400 hover:underline after:absolute after:content-["/"] after:w-[20px] after:h-[20px] after:text-center after:text-grey-300'
@@ -21,7 +21,7 @@ const Breadcrumblayoutcomponent = ({ data } : { data:any }) => {
           <Image src={breadcrumbData.Imgurl} width="17" className="inline-block" height="18" alt="breadcrumb icon" />
         </Link>
       ) : (
-        <span className="text-grey-400">{breadcrumbData.label}</span>
+        <span className="text-grey300">{breadcrumbData.label}</span>
       )}
     </li>
   ));

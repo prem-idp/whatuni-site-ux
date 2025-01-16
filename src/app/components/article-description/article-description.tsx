@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Articledescription = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -10,9 +11,11 @@ const Articledescription = () => {
   };
   return (
     <>
-      <div className="flex flex-col gap-[8px]">
+      <div className="flex flex-col gap-[8px]">        
         <span className="x-small font-inter tracking-[1px] text-blue-400">
+          <Link className='hover:underline' href="#">
           CATEGORY
+          </Link>         
         </span>
         <h1 className="font-farro text-heading1 text-grey900">Article title</h1>
         <p className="text-para-lg max-w-[907px] w-full text-grey300 text-inter">

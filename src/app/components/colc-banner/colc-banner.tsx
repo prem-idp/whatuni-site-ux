@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ColcBannerSkeleton from "../skeleton/colcbannerskeleton";
 
 const ColcBanner = () => {
   return (
@@ -57,6 +58,7 @@ const ColcBanner = () => {
           </div>
         </div>
       </section>
+      {/* <ColcBannerSkeleton /> */}
     </>
   );
 };
