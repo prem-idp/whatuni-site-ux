@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 
-const Accordion = ({ title, children }: any) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ClickAndShow = ({ children }: any) => {
+  // module
+  const [isModuleOpen, setIsModuleOpen] = useState(false);
 
+  const moduleToggle = () => {
+    setIsModuleOpen(!isModuleOpen);
+  };
   return (
-    <div className="mx-[32px] py-[24px] border-t borde-grey-300">
-      <button
-        type="button"
-        className="flex items-center justify-between w-full font-semibold small"
-        onClick={() => setIsOpen(!isOpen)}
+    <div className="flex flex-col gap-[4px">
+      <div
+        onClick={moduleToggle}
+        className="flex items-center gap-[4px] text-primary-400 small font-semibold cursor-pointer"
       >
-        <span className="h5 text-blue-400">{title}</span>
-        {isOpen ? (
+        {isModuleOpen ? (
           <svg
-            className="transition-all duration-300"
             width="16"
-            height="17"
-            viewBox="0 0 16 17"
+            height="16"
+            viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -29,9 +30,8 @@ const Accordion = ({ title, children }: any) => {
           </svg>
         ) : (
           <svg
-            className="transition-all duration-300"
             width="16"
-            height="17"
+            height="16"
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -44,16 +44,19 @@ const Accordion = ({ title, children }: any) => {
             />
           </svg>
         )}
-      </button>
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? "" : "max-h-0"
-        }`}
-      >
-        {children}
+        Modules
       </div>
+      {isModuleOpen && (
+        <div
+          className={`transition-all duration-300 ease-in-out ${
+            isModuleOpen ? "max-h-screen" : "max-h-0"
+          }`}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };
 
-export default Accordion;
+export default ClickAndShow;
