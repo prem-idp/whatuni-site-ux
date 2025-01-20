@@ -19,7 +19,7 @@ const Scholarshipunicard = () => {
                         <Image src="/assets/icons/blue-star-icon.svg" width="24" height="24" alt="Rating icon" />
                         <span className='font-normal small text-grey300'>4.6</span>
                     </div>
-                    <span className='reviewLink b k font-normal small text-primary-400 hover:text-primary-500 hover:underline'>400 reviews</span>
+                    <span className='reviewLink block font-normal small text-primary-400 hover:text-primary-500 hover:underline'>400 reviews</span>
                 </div>
             </div>
             <p className='card-date font-normal small text-grey-700'>00 Scholarships</p>
