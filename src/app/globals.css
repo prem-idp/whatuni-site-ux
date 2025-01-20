@@ -400,3 +400,6 @@ p,.para {@apply text-para}
 .sort-active path{
   stroke: #333;
 }
+/* Course Details */
+.year-of-entry .form-check-input:checked + label,.year-of-entry .form-check-input:hover + label{@apply text-grey300 bg-white border-white}
+/* Course Details */
