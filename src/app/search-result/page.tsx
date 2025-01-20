@@ -2,22 +2,17 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BreadCrumbs from "../components/breadcrumb/breadcrumbcomponents";
-import Getprospectus from "../components/cards/interaction-button/getprospectus";
-import Visitwebsite from "../components/cards/interaction-button/visitwebsite";
-import BookOpenDay from "../components/cards/interaction-button/bookopenday";
-import RequestInfo from "../components/cards/interaction-button/requestinfo";
 import Paginations from "../components/paginations/paginations";
 import Faqcomponents from "../components/faq/faqcomponents";
 import Subscribecomponents from "../article-landing/subscribe-newsletter/subscribecomponents";
 import SearchFilterComponent from "../popups/searchfiltercomponent";
 import Breadcrumblayoutcomponent from "../components/breadcrumb-layout/breadcrumblayoutcomponent";
+import ClickAndShow from "../click-show/click-show";
 
 const SearchResult = () => {
-  //read more
-
   // search filter
-  const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(true);
+  const initBroucherVal = 1;
+  const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(false);
   const searchClick = () => {
     setIsSearchFilterOpen(true);
     const body = document.body;
@@ -49,13 +44,6 @@ const SearchResult = () => {
     },
   ];
 
-  // module
-  const [isModuleOpen, setIsModuleOpen] = useState(false);
-
-  const moduleToggle = () => {
-    setIsModuleOpen(!isModuleOpen);
-  };
-
   const faqData = [
     {
       title: "How can I see my existing clients through Designership?",
@@ -86,6 +74,84 @@ const SearchResult = () => {
       title: "What type of support does Designership provide?",
       content:
         "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+    },
+  ];
+
+  const unicard = [
+    {
+      showprospect: true,
+      showvisit: true,
+      showBooking: true,
+      showRequest: true,
+      showImage: true,
+      course: [
+        {
+          buttonCount: 4,
+        },
+        {
+          buttonCount: 4,
+        },
+      ],
+    },
+    {
+      showprospect: false,
+      showvisit: false,
+      showBooking: false,
+      showRequest: false,
+      showImage: false,
+      course: [
+        {
+          buttonCount: 0,
+        },
+        {
+          buttonCount: 0,
+        },
+      ],
+    },
+    {
+      showprospect: true,
+      showvisit: true,
+      showBooking: false,
+      showRequest: true,
+      showImage: false,
+      course: [
+        {
+          buttonCount: 3,
+        },
+        {
+          buttonCount: 3,
+        },
+      ],
+    },
+    {
+      showprospect: false,
+      showvisit: true,
+      showBooking: false,
+      showRequest: true,
+      showImage: false,
+      course: [
+        {
+          buttonCount: 2,
+        },
+        {
+          buttonCount: 2,
+        },
+      ],
+    },
+    {
+      showprospect: false,
+      showvisit: false,
+      showBooking: false,
+      showRequest: true,
+      showImage: false,
+      course: [
+        {
+          buttonCount: 1,
+        },
+        {
+          buttonCount: 1,
+        },
+      ],
     },
   ];
 
@@ -547,399 +613,291 @@ const SearchResult = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-between py-[24px] md:flex-row">
-            <div className="w-full rounded-t-[16px] overflow-hidden shrink-0 md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]">
-              <div className="relative bg-blue-400 md:w-[280px] md:h-[316px] lg:w-[500px] lg:h-[376px]">
-                <Image
-                  src="/assets/images/search-results/university.jpg"
-                  alt="University"
-                  width={500}
-                  height={376}
-                  className="rounded-t-[16px] md:w-[280px] h-full object-cover lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]"
-                />
-                <div className="absolute bg-gradient11 rounded-t-[16px] top-0 left-0 p-[16px] w-full h-full md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-full lg:h-full lg:p-[24px]">
-                  <div className="flex flex-col justify-between h-full">
-                    <div className="flex justify-between">
-                      <div className="flex items-start gap-[8px]">
-                        <Link
-                          href=""
-                          className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-white hidden lg:block"
-                        >
-                          <Image
-                            src="/assets/icons/search/kent.png"
-                            alt="University logo"
-                            width={56}
-                            height={56}
-                          />
-                        </Link>
-                        <div className="bg-grey-100 text-grey-500 uppercase rounded-[4px] px-[8px] xs-small font-semibold">
-                          sponsored
-                        </div>
-                      </div>
-                      <div className="heart w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
-                            stroke="#4664DC"
-                            strokeWidth="1.67"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-[4px] text-white">
-                      <div className="h5">University of Kent</div>
-                      <div className="x-small font-semibold">
-                        12 engineering courses
-                      </div>
-                      <div className="flex items-center gap-[8px] text-grey-50 small">
-                        <div className="flex items-center gap-[4px]">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z"
-                              fill="#0FBEFD"
-                            />
-                          </svg>
-                          4.6
-                        </div>
-                        <Link href="" className="underline">
-                          400 reviews
-                        </Link>
-                      </div>
-                      <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
-                        <div className="bg-grey-100 text-grey-500 px-[8px] rounded-[4px]">
-                          REGION
-                        </div>
-                        <div className="flex items-center justify-center gap-[2px] bg-positive-light text-positive-default px-[8px] rounded-[4px]">
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10.929 10.0711C10.5878 10.4122 9.98482 11.0152 9.41426 11.5858C8.63321 12.3668 7.36696 12.3669 6.58591 11.5859C6.02667 11.0266 5.43232 10.4323 5.07111 10.0711C3.45351 8.45346 3.45351 5.83081 5.07111 4.2132C6.68872 2.5956 9.31137 2.5956 10.929 4.2132C12.5466 5.83081 12.5466 8.45346 10.929 10.0711Z"
-                              stroke="#168721"
-                              strokeWidth="1.13"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M9.55335 7.14214C9.55335 8 8.85791 8.69544 8.00005 8.69544C7.14218 8.69544 6.44675 8 6.44675 7.14214C6.44675 6.28427 7.14218 5.58884 8.00005 5.58884C8.85791 5.58884 9.55335 6.28427 9.55335 7.14214Z"
-                              stroke="#168721"
-                              strokeWidth="1.13"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                          18.1 Miles from you
-                        </div>
-                      </div>
-                      <Link href="" className="x-small underline">
-                        WUSCA rank: 18th
-                      </Link>
-                      <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
-                        <div className="flex items-center gap-[2px] bg-positive-light text-positive-default px-[8px] rounded-[4px]">
-                          <Image
-                            src="/assets/icons/search/lectures-green.svg"
-                            alt="Lecturers and Teaching"
-                            width={12}
-                            height={12}
-                          />
-                          Lecturers and Teaching
-                        </div>
-                        <div className="bg-primary-400 px-[8px] rounded-[4px]">
-                          + 2 more
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div className="bg-white p-[16px] border border-grey-200 rounded-b-[16px] shadow-custom-3 lg:rounded-tr-[16px] lg:rounded-b-[16px] lg:p-[20px]">
-                <div className="bg-grey-100 p-[12px] rounded-[8px] flex items-center gap-[4px]">
-                  <div className="text-heading1 relative top-[12px]">“</div>
-                  <div className="flex flex-col gap-[4px]">
-                    <Link
-                      href=""
-                      className="text-primary-400 underline x-small font-semibold"
-                    >
-                      What students think
-                    </Link>
+          {unicard.map((item, index) => (
+            <div className="flex flex-col justify-between py-[24px] md:flex-row" key={index}>
+              <div className="w-full rounded-t-[16px] overflow-hidden shrink-0 md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]">
+                <div className="relative bg-blue-400 md:w-[280px] md:h-[316px] lg:w-[500px] lg:h-[376px]">
+                  {item.showImage ? (
+                    <Image
+                      src="/assets/images/search-results/university.jpg"
+                      alt="University"
+                      width={500}
+                      height={376}
+                      className="rounded-t-[16px] md:w-[280px] h-full object-cover lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]"
+                    />
+                  ) : null}
 
-                    <div className="relative x-small">
-                      <div className="text-grey300 line-clamp-2">
-                        I never thought I’f find myself in a position where I
-                        would feel empowered to be a lawyer, I wanted to go into
-                        teaching but then realised after visiting Kent’s
-                        facilities this would be the right plac
+                  <div className="absolute bg-gradient11 rounded-t-[16px] top-0 left-0 p-[16px] w-full h-full md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-full lg:h-full lg:p-[24px]">
+                    <div className="flex flex-col justify-between h-full">
+                      <div className="flex justify-between">
+                        <div className="flex items-start gap-[8px]">
+                          <Link
+                            href=""
+                            className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-white hidden lg:block"
+                          >
+                            <Image
+                              src="/assets/icons/search/kent.png"
+                              alt="University logo"
+                              width={56}
+                              height={56}
+                            />
+                          </Link>
+                          <div className="bg-grey-100 text-grey-500 uppercase rounded-[4px] px-[8px] xs-small font-semibold">
+                            sponsored
+                          </div>
+                        </div>
+                        <div className="heart w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
+                              stroke="#4664DC"
+                              strokeWidth="1.67"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
                       </div>
-                      <div className="absolute bottom-0 right-[60px]">
-                        <span>... </span>
-                        <Link
-                          href=""
-                          className="text-blue-400 cursor-pointer hover:underline"
-                        >
-                          Read full review
+                      <div className="flex flex-col gap-[4px] text-white">
+                        <div className="h5">University of Kent</div>
+                        <div className="x-small font-semibold">
+                          12 engineering courses
+                        </div>
+                        <div className="flex items-center gap-[8px] text-grey-50 small">
+                          <div className="flex items-center gap-[4px]">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z"
+                                fill="#0FBEFD"
+                              />
+                            </svg>
+                            4.6
+                          </div>
+                          <Link href="" className="underline">
+                            400 reviews
+                          </Link>
+                        </div>
+                        <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
+                          <div className="bg-grey-100 text-grey-500 px-[8px] rounded-[4px]">
+                            REGION
+                          </div>
+                          <div className="flex items-center justify-center gap-[2px] bg-positive-light text-positive-default px-[8px] rounded-[4px]">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10.929 10.0711C10.5878 10.4122 9.98482 11.0152 9.41426 11.5858C8.63321 12.3668 7.36696 12.3669 6.58591 11.5859C6.02667 11.0266 5.43232 10.4323 5.07111 10.0711C3.45351 8.45346 3.45351 5.83081 5.07111 4.2132C6.68872 2.5956 9.31137 2.5956 10.929 4.2132C12.5466 5.83081 12.5466 8.45346 10.929 10.0711Z"
+                                stroke="#168721"
+                                strokeWidth="1.13"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                              <path
+                                d="M9.55335 7.14214C9.55335 8 8.85791 8.69544 8.00005 8.69544C7.14218 8.69544 6.44675 8 6.44675 7.14214C6.44675 6.28427 7.14218 5.58884 8.00005 5.58884C8.85791 5.58884 9.55335 6.28427 9.55335 7.14214Z"
+                                stroke="#168721"
+                                strokeWidth="1.13"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                            18.1 Miles from you
+                          </div>
+                        </div>
+                        <Link href="" className="x-small underline">
+                          WUSCA rank: 18th
                         </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="border-b-[1px] border-grey-200 -mx-[16px] pt-[20px] mb-[20px] lg:mx-[16px]"></div>
-                <div className="flex flex-col gap-[16px]">
-                  <div className="flex items-start justify-between">
-                    <div className="flex flex-col gap-[8px]">
-                      <div className="text-primary-400 font-semibold">
-                        Course name
-                      </div>
-                      <div className="flex gap-[4px] text-grey-500">
-                        <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold">
-                          <Image
-                            className="hidden md:block"
-                            src="/assets/icons/search/calender-grey.svg"
-                            alt="Lecturers and Teaching"
-                            width={16}
-                            height={16}
-                          />
-                          164-112 ucas points
-                        </div>
-                        <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold">
-                          <Image
-                            className="hidden md:block"
-                            src="/assets/icons/search/time-grey.svg"
-                            alt="Lecturers and Teaching"
-                            width={16}
-                            height={16}
-                          />
-                          164-112 ucas points
+                        <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
+                          <div className="flex items-center gap-[2px] bg-positive-light text-positive-default px-[8px] rounded-[4px]">
+                            <Image
+                              src="/assets/icons/search/lectures-green.svg"
+                              alt="Lecturers and Teaching"
+                              width={12}
+                              height={12}
+                            />
+                            Lecturers and Teaching
+                          </div>
+                          <div className="bg-primary-400 px-[8px] rounded-[4px]">
+                            + 2 more
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="heart w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
-                          stroke="#4664DC"
-                          strokeWidth="1.67"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-[4px">
-                  <div 
-                    onClick={moduleToggle}
-                    className="flex items-center gap-[4px] text-primary-400 small font-semibold cursor-pointer"
-                  >
-                    {isModuleOpen ? (
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M1.5 8.49986C1.5 7.98702 1.91574 7.57129 2.42857 7.57129L13.5714 7.57129C14.0843 7.57129 14.5 7.98703 14.5 8.49986C14.5 9.0127 14.0843 9.42843 13.5714 9.42843L2.42857 9.42843C1.91574 9.42843 1.5 9.0127 1.5 8.49986Z"
-                          fill="#4664DC"
-                        />
-                      </svg>
-                    ) : (
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M10 1.875C10.641 1.875 11.1607 2.39467 11.1607 3.03571V8.83929H16.9643C17.6053 8.83929 18.125 9.35895 18.125 10C18.125 10.641 17.6053 11.1607 16.9643 11.1607H11.1607V16.9643C11.1607 17.6053 10.641 18.125 10 18.125C9.35895 18.125 8.83929 17.6053 8.83929 16.9643V11.1607H3.03571C2.39467 11.1607 1.875 10.641 1.875 10C1.875 9.35895 2.39467 8.83928 3.03571 8.83928L8.83929 8.83929V3.03571C8.83929 2.39467 9.35895 1.875 10 1.875Z"
-                          fill="#4664DC"
-                        />
-                      </svg>
-                    )}
-                    Modules
-                  </div>
-                  {isModuleOpen && (
-                    <div
-                      className={`transition-all duration-300 ease-in-out ${
-                        isModuleOpen ? "max-h-screen" : "max-h-0"
-                      }`}
-                    >
-                      <div className="text-black x-small">
-                        <div className="font-semibold">Year 1</div>
-                        <ul className="list-disc pl-[20px] flex flex-col gap-[4px]">
-                          <li>Becoming a Criminologist</li>
-                          <li>Introduction to Law and its Study</li>
-                          <li>Social Research in Practice</li>
-                          <li>Criminology in Late Modernity</li>
-                          <li>Criminal Law</li>
-                        </ul>
-                      </div>
-                    </div>
-                  )}
-                  </div>
-                  <div className="grid gap-[8px] md:grid-flow-row lg:grid-flow-col">
-                    <Getprospectus />
-                    <Visitwebsite />
-                    <BookOpenDay />
-                    <RequestInfo />
-                  </div>
-                </div>
-                <div className="border-b-[1px] border-grey-200 -mx-[16px] pt-[20px] mb-[20px] lg:mx-[16px]"></div>
-                <div className="flex flex-col gap-[16px]">
-                  <div className="flex items-start justify-between">
-                    <div className="flex flex-col gap-[8px]">
-                      <div className="text-primary-400 font-semibold">
-                        Course name
-                      </div>
-                      <div className="flex gap-[4px] text-grey-500">
-                        <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold">
-                          <Image
-                            className="hidden md:block"
-                            src="/assets/icons/search/calender-grey.svg"
-                            alt="Lecturers and Teaching"
-                            width={16}
-                            height={16}
-                          />
-                          164-112 ucas points
-                        </div>
-                        <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold">
-                          <Image
-                            className="hidden md:block"
-                            src="/assets/icons/search/time-grey.svg"
-                            alt="Lecturers and Teaching"
-                            width={16}
-                            height={16}
-                          />
-                          164-112 ucas points
-                        </div>
-                      </div>
-                    </div>
-                    <div className="heart w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
-                          stroke="#4664DC"
-                          strokeWidth="1.67"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-[4px">
-                    <div
-                      onClick={moduleToggle}
-                      className="flex items-center gap-[4px] text-primary-400 small font-semibold cursor-pointer"
-                    >
-                      {isModuleOpen ? (
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M1.5 8.49986C1.5 7.98702 1.91574 7.57129 2.42857 7.57129L13.5714 7.57129C14.0843 7.57129 14.5 7.98703 14.5 8.49986C14.5 9.0127 14.0843 9.42843 13.5714 9.42843L2.42857 9.42843C1.91574 9.42843 1.5 9.0127 1.5 8.49986Z"
-                            fill="#4664DC"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M10 1.875C10.641 1.875 11.1607 2.39467 11.1607 3.03571V8.83929H16.9643C17.6053 8.83929 18.125 9.35895 18.125 10C18.125 10.641 17.6053 11.1607 16.9643 11.1607H11.1607V16.9643C11.1607 17.6053 10.641 18.125 10 18.125C9.35895 18.125 8.83929 17.6053 8.83929 16.9643V11.1607H3.03571C2.39467 11.1607 1.875 10.641 1.875 10C1.875 9.35895 2.39467 8.83928 3.03571 8.83928L8.83929 8.83929V3.03571C8.83929 2.39467 9.35895 1.875 10 1.875Z"
-                            fill="#4664DC"
-                          />
-                        </svg>
-                      )}
-                      Modules
-                    </div>
-                    {isModuleOpen && (
-                      <div
-                        className={`transition-all duration-300 ease-in-out ${
-                          isModuleOpen ? "max-h-screen" : "max-h-0"
-                        }`}
-                      >
-                        Tes
-                      </div>
-                    )}
-                  </div>
-                  <div className="grid gap-[8px] md:grid-flow-row lg:grid-flow-col">
-                    <Getprospectus />
-                    <Visitwebsite />
-                    <BookOpenDay />
-                    <RequestInfo />
                   </div>
                 </div>
               </div>
-              <Link
-                href=""
-                className="flex items-center justify-center gap-[4px] text-primary-400 small font-semibold mt-[16px] hover:underline"
-              >
-                View 99 related courses
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div className="flex flex-col">
+                <div className="bg-white p-[16px] border border-grey-200 rounded-b-[16px] shadow-custom-3 lg:rounded-tr-[16px] lg:rounded-b-[16px] lg:p-[20px]">
+                  <div className="bg-grey-100 p-[12px] rounded-[8px] flex items-center gap-[4px]">
+                    <div className="text-heading1 relative top-[12px]">“</div>
+                    <div className="flex flex-col gap-[4px]">
+                      <Link
+                        href=""
+                        className="text-primary-400 underline x-small font-semibold"
+                      >
+                        What students think
+                      </Link>
+
+                      <div className="relative x-small">
+                        <div className="text-grey300 line-clamp-2">
+                          I never thought I’f find myself in a position where I
+                          would feel empowered to be a lawyer, I wanted to go
+                          into teaching but then realised after visiting Kent’s
+                          facilities this would be the right plac
+                        </div>
+                        <div className="absolute bottom-0 right-[60px]">
+                          <span>... </span>
+                          <Link
+                            href=""
+                            className="text-blue-400 cursor-pointer hover:underline"
+                          >
+                            Read full review
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {item.course.map((chitem, index) => (
+                    <>
+                      <div className="border-b-[1px] border-grey-200 -mx-[16px] pt-[20px] mb-[20px]"></div>
+                      <div className="flex flex-col gap-[16px]" key={index}>
+                        <div className="flex items-start justify-between">
+                          <div className="flex flex-col gap-[8px]">
+                            <div className="text-primary-400 font-semibold">
+                              Course name
+                            </div>
+                            <div className="flex gap-[4px] text-grey-500">
+                              <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold">
+                                <Image
+                                  className="hidden md:block"
+                                  src="/assets/icons/search/calender-grey.svg"
+                                  alt="Lecturers and Teaching"
+                                  width={16}
+                                  height={16}
+                                />
+                                164-112 ucas points
+                              </div>
+                              <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold">
+                                <Image
+                                  className="hidden md:block"
+                                  src="/assets/icons/search/time-grey.svg"
+                                  alt="Lecturers and Teaching"
+                                  width={16}
+                                  height={16}
+                                />
+                                3 years full time
+                              </div>
+                            </div>
+                          </div>
+                          <div className="heart w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer">
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
+                                stroke="#4664DC"
+                                strokeWidth="1.67"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <ClickAndShow>
+                          <div className="text-black x-small">
+                            <div className="font-semibold">Year 1</div>
+                            <ul className="list-disc pl-[20px] flex flex-col gap-[4px]">
+                              <li>Becoming a Criminologist</li>
+                              <li>Introduction to Law and its Study</li>
+                              <li>Social Research in Practice</li>
+                              <li>Criminology in Late Modernity</li>
+                              <li>Criminal Law</li>
+                            </ul>
+                          </div>
+                        </ClickAndShow>
+
+                        <div className={`grid grid-cols-1 justify-items-stretch gap-[8px] grid-flow-row auto-cols-fr lg:grid-rows-1 lg:grid-flow-col ${
+                                chitem.buttonCount == 4
+                                  ? "md:grid-rows-2 md:grid-flow-col"
+                                  : "md:grid-cols-1 md:grid-flow-row"
+                              }`}>
+                          {item.showprospect ? (
+                            <button type="button" className="btn btn-orange">
+                              Get Prospectus
+                            </button>
+                          ) : null}
+
+                          {item.showvisit ? (
+                            <button type="button" className="btn btn-grey">
+                              Visit website
+                            </button>
+                          ) : null}
+
+                          {item.showBooking ? (
+                            <button type="button" className="btn btn-green">
+                              Book open day
+                            </button>
+                          ) : null}
+
+                          {item.showRequest ? (
+                            <button
+                              type="button"
+                              className={`btn btn-blue ${
+                                chitem.buttonCount == 1
+                                  ? "justify-self-end w-full lg:w-[162px]"
+                                  : ""
+                              }`}
+                            >
+                              Request info
+                            </button>
+                          ) : null}
+                        </div>
+                      </div>
+                    </>
+                  ))}
+                </div>
+                <Link
+                  href=""
+                  className="flex items-center justify-center gap-[4px] text-primary-400 small font-semibold mt-[16px] hover:underline"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.23798 2.55048C8.55528 2.23317 9.06972 2.23317 9.38702 2.55048L14.262 7.42548C14.5793 7.74278 14.5793 8.25722 14.262 8.57452L9.38702 13.4495C9.06972 13.7668 8.55528 13.7668 8.23798 13.4495C7.92067 13.1322 7.92067 12.6178 8.23798 12.3005L11.726 8.8125L2.3125 8.8125C1.86377 8.8125 1.5 8.44873 1.5 8C1.5 7.55127 1.86377 7.1875 2.3125 7.1875H11.726L8.23798 3.69952C7.92067 3.38222 7.92067 2.86778 8.23798 2.55048Z"
-                    fill="#4664DC"
-                  />
-                </svg>
-              </Link>
+                  View 99 related courses
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.23798 2.55048C8.55528 2.23317 9.06972 2.23317 9.38702 2.55048L14.262 7.42548C14.5793 7.74278 14.5793 8.25722 14.262 8.57452L9.38702 13.4495C9.06972 13.7668 8.55528 13.7668 8.23798 13.4495C7.92067 13.1322 7.92067 12.6178 8.23798 12.3005L11.726 8.8125L2.3125 8.8125C1.86377 8.8125 1.5 8.44873 1.5 8C1.5 7.55127 1.86377 7.1875 2.3125 7.1875H11.726L8.23798 3.69952C7.92067 3.38222 7.92067 2.86778 8.23798 2.55048Z"
+                      fill="#4664DC"
+                    />
+                  </svg>
+                </Link>
+              </div>
             </div>
-          </div>
+          ))}
           <div className="pt-[24px] pb-[40px] md:pb-[64px]">
             <Paginations />
           </div>

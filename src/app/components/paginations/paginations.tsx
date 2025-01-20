@@ -31,63 +31,63 @@ const Paginations = () => {
             </Link>
           </li>
           <li className="page-item active">
-            <a
+            <Link
               className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
               href="#"
             >
               1
-            </a>
+            </Link>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
               href="#"
             >
               2
-            </a>
+            </Link>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
               href="#"
             >
               3
-            </a>
+            </Link>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link hidden md:block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
               href="#"
             >
               4
-            </a>
+            </Link>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link hidden md:block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
               href="#"
             >
               5
-            </a>
+            </Link>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link flex items-center justify-center small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]"
               href="#"
             >
               ...
-            </a>
+            </Link>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
               href="#"
             >
               25
-            </a>
+            </Link>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link flex items-center justify-center px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]"
               href="#"
               title=""
@@ -108,7 +108,7 @@ const Paginations = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

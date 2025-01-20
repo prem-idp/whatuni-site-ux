@@ -93,11 +93,11 @@ const Signupcomponents = () => {
                                 <div className="col  flex flex-col basis-6/12 justify-end gap-[4px]">
                                     <div className='postalcode hints'>
                                         <Link href="" className='tooltip group/item relative small font-normal text-primary-400 underline'>Why do we need your postcode?
-                                            <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
-                                        shadow-custom-12 mt-[3px] absolute right-[-76px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[60%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']">                        
-                                                <span className="font-semibold tooltip-head">Why do we need your postcode?</span>
-                                                <p className="x-small">We use this information to help assess the reach of our products. This is completely optional.</p>
-                                            </div>
+                                                <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[3px] absolute right-[-76px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[60%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']">                        
+                                                    <span className="font-semibold tooltip-head">Why do we need your postcode?</span>
+                                                    <p className="x-small">We use this information to help assess the reach of our products. This is completely optional.</p>
+                                                </div>
                                         </Link>
                                     </div>
                                 </div>

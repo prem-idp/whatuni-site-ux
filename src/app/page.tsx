@@ -29,8 +29,8 @@ export default function Home() {
       {/* <Testimonialcardskeleton /> */}
       <Reviewscomponents />
       <OurPartnerComponent />
-      <PartnerSliderComponentSkeleton/>
-      <Registerationcomponents />
+      <PartnerSliderComponentSkeleton />
+      {/* <Registerationcomponents /> */}
     </>
   );
 }
