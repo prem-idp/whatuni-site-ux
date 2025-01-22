@@ -124,7 +124,7 @@ const page = () => {
         </div>
       </div>
       <div className="flex p-[16px] flex-col gap-[16px] h-full justify-between">
-        <div className="flex flex-col gap-[16px] min-h-[240px]">
+        <div className="flex flex-col gap-[16px] md:min-h-[240px]">
           <div className="h6 font-farro text-blue-400">{items.title}</div>
           <ul className="flex flex-wrap gap-[4px]">
             <li className="flex gap-[2px] bg-grey-100 text-grey-500 font-semibold x-small px-[8px] rounded-[4px]">
