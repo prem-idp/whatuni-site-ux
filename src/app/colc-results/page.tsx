@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, {useState} from "react";
 import Advicecomponents from "../home/advice/advicecomponents";
 import Faqcomponents from "../components/faq/faqcomponents";
 import ColcBanner from "../components/colc-banner/colc-banner";
@@ -1151,13 +1151,13 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <aside className="promotion_pod w-full lg:hidden md:pt-[40px]">
-              <div className="advert_card w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] flex flex-col md:flex-row justify-between md:items-start items-center gap-[24px] md:rounded-[8px] bg-blue-200 px-[24px] pt-[24px]">
+            <aside className="promotion_pod w-full md:pt-[40px] lg:pt-[0]">
+              <div className="advert_card w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] flex flex-col md:flex-row lg:flex-col justify-between md:items-start items-center gap-[24px] md:rounded-[8px] bg-blue-200 px-[24px] pt-[24px]">
                 <div className="advert_header_card flex flex-col gap-[16px]">
                   <div className="advert_content_card flex flex-col gap-[4px]">
-                    <h4 className="md:text-heading4 lg:text-heading5">
+                    <div className="h4">
                       Unlock your uni journey with the Whatuni app.
-                    </h4>
+                    </div>
                     <p className="small font-normal">
                       Access university rankings, student reviews, and
                       everything you need to make informed choices—all in one
@@ -1187,7 +1187,7 @@ const page = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="advert_media_card min-w-[204px] w-[204px] flex md:self-end">
+                <div className="advert_media_card min-w-[204px] w-[204px] flex md:self-end lg:h-[178px] lg:overflow-hidden">
                   <Image
                     className="block md:hidden w-full md:rounded-[8px]"
                     src="/assets/images/colc/promotion_app_img_v1.png"
@@ -1246,7 +1246,61 @@ const page = () => {
               </div>
             </div>
           </section>
-          <aside className="promotion_pod w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] hidden lg:block">
+          <aside className="promotion_pod w-full md:pt-[40px] lg:pt-[0]">
+              <div className="advert_card w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] flex flex-col md:flex-row lg:flex-col justify-between md:items-start items-center gap-[24px] md:rounded-[8px] bg-blue-200 px-[24px] pt-[24px]">
+                <div className="advert_header_card flex flex-col gap-[16px]">
+                  <div className="advert_content_card flex flex-col gap-[4px]">
+                    <div className="h4">
+                      Unlock your uni journey with the Whatuni app.
+                    </div>
+                    <p className="small font-normal">
+                      Access university rankings, student reviews, and
+                      everything you need to make informed choices—all in one
+                      place!
+                    </p>
+                  </div>
+                  <ul className="flex flex-row gap-[16px]">
+                    <li>
+                      <a href="#" aria-label="App Store">
+                        <Image
+                          src="/assets/images/app_store.svg"
+                          alt=""
+                          width="120"
+                          height="40"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Google Play">
+                        <Image
+                          src="/assets/images/google_play_store.svg"
+                          alt=""
+                          width="135"
+                          height="40"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="advert_media_card min-w-[204px] w-[204px] flex md:self-end lg:h-[178px] lg:overflow-hidden">
+                  <Image
+                    className="block md:hidden w-full md:rounded-[8px]"
+                    src="/assets/images/colc/promotion_app_img_v1.png"
+                    alt=""
+                    width="392"
+                    height="403"
+                  />
+                  <Image
+                    className="hidden md:block lg:hidden w-full"
+                    src="/assets/images/colc/promotion_app_img.png"
+                    alt=""
+                    width="612"
+                    height="606"
+                  />
+                </div>
+              </div>
+            </aside>
+          {/* <aside className="promotion_pod w-full lg:min-w-[392px] lg:w-[392px] min-h-[226px] lg:min-h-[403px] hidden lg:block">
             <div className="advert_card flex flex-col justify-between items-center gap-[24px] rounded-[8px] bg-blue-200 px-[24px] pt-[24px]">
               <div className="advert_header_card flex flex-col gap-[16px]">
                 <div className="advert_content_card flex flex-col gap-[4px]">
@@ -1288,7 +1342,7 @@ const page = () => {
                 />
               </div>
             </div>
-          </aside>
+          </aside> */}
         </div>
       </div>
       <Advicecomponents categoryTag={false} adviceBgWhite={false} />

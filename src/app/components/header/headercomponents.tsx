@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Megamenucomponents from "../topnav/megamenucomponents";
+import { AnimatePresence, motion } from "motion/react"
 
 declare global {
   interface Window {
@@ -228,11 +229,17 @@ const Header = () => {
                   </svg>
                 </span>
                 {/* course tab section */}
+                <AnimatePresence>
                 {isSearchClicked && (
                   <div
                     className={`backdrop-shadow fixed top-0 left-0 right-0 bottom-0 z-[5]`}
                   >
-                    <div className="bg-white absolute top-0 left-0 right-0 z-10 lg:min-h-[222px]">
+                    <motion.div
+                      initial={{y: -40,opacity:0}}
+                      animate={{y:0,opacity:1}}
+                      exit = {{y: -40,opacity:0}} 
+                      transition= {{duration: 0.25, ease: "easeInOut"}}
+                    className="bg-white absolute top-0 left-0 right-0 z-10 lg:min-h-[222px]">
                       <div className="max-w-container w-full mx-auto flex flex-col px-[16px] pt-[8px] pb-[56px] md:pt-[16px] md:pb-[32px]">
                         <div className="flex justify-end">
                           <svg
@@ -829,9 +836,10 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 )}
+                </AnimatePresence>
               </li>
               <li aria-label="User" className="relative">
                 <span

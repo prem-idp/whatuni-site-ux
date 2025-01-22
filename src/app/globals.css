@@ -80,10 +80,10 @@
   .btn-grey-400 {
     @apply bg-grey-400 hover:bg-grey-500;
   }
-  .btn-orange{@apply bg-orange-600 min-w-[148px] hover:bg-orange-700;}
-  .btn-grey{@apply bg-grey-500 min-w-[148px] hover:bg-grey-600;}
-  .btn-green{@apply bg-positive-default min-w-[148px] hover:bg-positive-dark;}
-  .btn-blue{@apply bg-blue-400 min-w-[148px] hover:bg-blue-500;}
+  .btn-orange{@apply bg-orange-600  hover:bg-orange-700;}
+  .btn-grey{@apply bg-grey-500  hover:bg-grey-600;}
+  .btn-green{@apply bg-positive-default  hover:bg-positive-dark;}
+  .btn-blue{@apply bg-blue-400  hover:bg-blue-500;}
   .btn-neutral-outline {
     @apply bg-transparent border-primary-400 text-neutral-900 border rounded-[20px] px-[12px] py-[7px] hover:bg-primary-500 hover:text-white font-semibold select-none;
   }
@@ -194,7 +194,6 @@ p,.para {@apply text-para}
 .backdrop-shadow{@apply backdrop-blur-sm bg-grey-600/80}
 .backdrop-shadow-white{@apply backdrop-blur-sm bg-white/50}
 .backdrop-shadow-black{@apply backdrop-blur-sm bg-black/50}
-
 /* Backgrop shadow */
 .animate-fadeIn{
   animation: fadeIn .2s ease-in;
@@ -318,6 +317,10 @@ p,.para {@apply text-para}
   }
 }
 /* Article details END  */
+/* Article landing START  */
+.checkbox_card .form-checkbox + label svg{@apply hidden}
+.checkbox_card .form-checkbox:checked + label svg{@apply block}
+/* Article landing END  */
 /* RTF  */
 /* .rtf-innerstyle { } */
 .rtf-innerstyle p {
@@ -373,28 +376,23 @@ p,.para {@apply text-para}
 }
 /* RTF END */
 /* sr */
-.form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
+/* .form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
 .form_check .form-checkbox:checked + label, .form_radio .form-radio:checked + label{@apply text-white bg-primary-400 border-primary-400 cursor-pointer}
+.year-of-entry .form-check-input:checked + label,.year-of-entry .form-check-input:hover + label{@apply text-grey300 bg-white border-white}
 
 .form_radio_black .form-check-input:checked + label,.form_radio_black .form-check-input:hover + label{@apply text-white bg-grey300 border-grey300 cursor-pointer}
-.form_check_black .form-checkbox:checked + label, .form_radio_black .form_radio_black:checked + label{@apply text-white bg-grey300 border-grey300 cursor-pointer}
+.form_check_black .form-checkbox:checked + label, .form_radio_black .form_radio_black:checked + label{@apply text-white bg-grey300 border-grey300 cursor-pointer} */
 .heart:hover svg{ fill:#0FBEFD}
 /* sr */
-
-.form-black input[type="radio"]:checked + label,
-.form-black input[type="checkbox"]:checked + label
-{
-  @apply bg-blue-500 text-white; 
+.form-black input[type="radio"]:checked+label,
+.form-black input[type="checkbox"]:checked+label {
+  @apply text-white bg-grey300 border-grey300 cursor-pointer
 }
 
-.form-black input[type="radio"]:checked + label:hover,
-.form-black input[type="checkbox"]:checked + label:hover
-{
-  @apply bg-yellow-500 text-white; 
-}
 .decrease svg path {
   stroke: #4664dc;
 }
+
 .increment svg path {
   stroke: #adb2b6;
 }
@@ -402,3 +400,6 @@ p,.para {@apply text-para}
 .sort-active path{
   stroke: #333;
 }
+/* Course Details */
+.year-of-entry .form-check-input:checked + label,.year-of-entry .form-check-input:hover + label{@apply text-grey300 bg-white border-white}
+/* Course Details */
