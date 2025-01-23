@@ -202,7 +202,7 @@ const page = () => {
       {/* University details  */}
       <section className="bg-white">
         <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-          <div className="flex flex-col-reverse md:flex-row justify-between max-w-[100%] w-[1145px]  py-[16px]">
+          <div className="flex flex-col-reverse gap-[5px] md:gap-[0] md:flex-row justify-between max-w-[100%] w-[1145px]  py-[16px]">
             <div className="flex gap-[17px]">
               <span className="p-[4px] bg-white rounded-[8px] hidden md:block shadow-custom-1 min-w-[64px] h-[64px]">
                 <Image
@@ -257,8 +257,12 @@ const page = () => {
                 </ul>
               </div>
             </div>
-            <div className="">
-              <span>Favourite</span>
+            <div>
+              <Link href="#" className="flex gap-[8px]">
+              <Image src="./assets/icons/heart-grey.svg" alt="heart icon" width="19" height="19" />
+              <span className="small text-grey300 underline">Favourite</span>
+              </Link>
+            
             </div>
           </div>
         </div>
