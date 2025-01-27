@@ -7,6 +7,10 @@ import Subscribecomponents from "../article-landing/subscribe-newsletter/subscri
 import Breadcrumblayoutcomponent from "../components/breadcrumb-layout/breadcrumblayoutcomponent";
 import Paginations from "../components/paginations/paginations";
 import Tagcloudcomponents from "../home/tag-cloud/tagcloudcomponents";
+import RequestInfo from "../components/cards/interaction-button/requestinfo";
+import Getprospectus from "../components/cards/interaction-button/getprospectus";
+import Visitwebsite from "../components/cards/interaction-button/visitwebsite";
+import BookOpenDay from "../components/cards/interaction-button/bookopenday";
 
 const page = () => {
   const breadcrumbData = [
@@ -156,7 +160,7 @@ const page = () => {
           )}
           {items.modulesList && (
             <>
-              <span onClick={visbleModule} className="text-blue-400 font-semibold small cursor-pointer transition-all delay-0 duration-300 ease-linear pl-[20px] relative before:absolute before:content-[''] before:w-[11px] before:h-[2px] before:bg-blue-400 before:rounded-[2px] before:left-[2px] before:top-[10px] after:absolute after:content-[''] after:w-[11px] after:h-[2px] after:bg-blue-400 after:rounded-[2px] after:left-[2px] after:top-[10px] after:rotate-[90deg] after:transition-all after:delay-0 after:duration-300 after:ease-linear">
+              <span onClick={visbleModule} className="text-blue-400 select-none font-semibold small cursor-pointer transition-all delay-0 duration-300 ease-linear pl-[20px] relative before:absolute before:content-[''] before:w-[11px] before:h-[2px] before:bg-blue-400 before:rounded-[2px] before:left-[2px] before:top-[10px] after:absolute after:content-[''] after:w-[11px] after:h-[2px] after:bg-blue-400 after:rounded-[2px] after:left-[2px] after:top-[10px] after:rotate-[90deg] after:transition-all after:delay-0 after:duration-300 after:ease-linear">
                 Modules
               </span>
               <ul className="p-[0_16px_0_18px] flex flex-col gap-[8px] list-disc">
@@ -175,18 +179,10 @@ const page = () => {
         </div>
 
         <div className="w-full flex flex-col gap-[8px]">
-          <Link href="#" className="w-full text-center btn btn-orange">
-            Get prospectus
-          </Link>
-          <Link href="#" className="w-full text-center btn btn-grey">
-            Visit website
-          </Link>
-          <Link href="#" className="w-full text-center btn btn-green">
-            Book open day
-          </Link>
-          <Link href="#" className="w-full text-center btn btn-primary ">
-            Request info
-          </Link>
+          <Getprospectus/>
+          <Visitwebsite/>
+          <BookOpenDay/>
+          <RequestInfo/>         
         </div>
       </div>
     </div>
@@ -386,7 +382,7 @@ const page = () => {
       </section>
       {/* Provider Result card list END */}
 
-      <section className="bg-white">
+      {/* <section className="bg-white">
         <div className="max-w-container mx-auto px-[16px] md:px-[20px] lg:-px-[0]">
           <div className="flex flex-col py-[40px] gap-[32px]">
             <div className="h2 font-farro heading2 text-grey300">
@@ -420,8 +416,8 @@ const page = () => {
             </ul>
           </div>
         </div>
-      </section>
-      <Tagcloudcomponents />
+      </section> */}
+      <Tagcloudcomponents routerUrl={ true } />
       <Subscribecomponents />
     </>
   );
