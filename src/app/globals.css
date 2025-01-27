@@ -83,7 +83,7 @@
   .btn-orange{@apply bg-orange-600  hover:bg-orange-700}
   .btn-grey{@apply bg-grey-500  hover:bg-grey-600}
   .btn-green{@apply bg-positive-default  hover:bg-positive-dark}
-  .btn-blue{@apply bg-blue-400  hover:bg-blue-500}
+  .btn-blue{@apply bg-primary-400  hover:bg-primary-500}
   .btn-negative-default{@apply bg-negative-default  hover:bg-negative-dark}
 
   .btn-neutral-outline {
