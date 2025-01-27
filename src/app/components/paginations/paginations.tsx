@@ -6,11 +6,10 @@ const Paginations = () => {
     <>
       <nav aria-label="navigation">
         <ul className="pagination flex justify-center items-center gap-[8px]">
-          <li className="page-item">
-            <Link
-              className="page-link flex items-center justify-center px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]"
-              href="#"
-              title=""
+          <li>
+            <span
+              className="cursor-pointer flex items-center justify-center px-[14px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
+            
               aria-label="Previous"
             >
               <svg
@@ -28,69 +27,65 @@ const Paginations = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </Link>
+            </span>
           </li>
-          <li className="page-item active">
+          <li className="">
             <Link
-              className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
+              className="block small w-[36px] h-[36px] font-normal px-[14px] py-[8px] rounded-[4px] bg-primary-400 text-white"
               href="#"
             >
               1
             </Link>
           </li>
-          <li className="page-item">
+          <li>
             <Link
-              className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
+              className="block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               2
             </Link>
           </li>
-          <li className="page-item">
+          <li>
             <Link
-              className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
+              className="block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               3
             </Link>
           </li>
-          <li className="page-item">
+          <li>
             <Link
-              className="page-link hidden md:block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
+              className="hidden md:block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               4
             </Link>
           </li>
-          <li className="page-item">
+          <li>
             <Link
-              className="page-link hidden md:block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
+              className="hidden md:block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               5
             </Link>
           </li>
-          <li className="page-item">
-            <Link
-              className="page-link flex items-center justify-center small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]"
-              href="#"
-            >
+          <li>
+            <span
+              className="select-none flex items-center justify-center small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400 " >
               ...
-            </Link>
+            </span>
           </li>
-          <li className="page-item">
+          <li>
             <Link
-              className="page-link block small font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50"
+              className="block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               25
             </Link>
           </li>
-          <li className="page-item">
-            <Link
-              className="page-link flex items-center justify-center px-[14px] py-[8px] rounded-[4px] hover:bg-primary-50 w-[36px] h-[36px]"
-              href="#"
-              title=""
+          <li>
+            <span
+              className="cursor-pointer flex items-center justify-center px-[14px] py-[8px] rounded-[4px] w-[36px] h-[36px]"             
               aria-label="Next"
             >
               <svg
@@ -108,7 +103,7 @@ const Paginations = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </Link>
+            </span>
           </li>
         </ul>
       </nav>
