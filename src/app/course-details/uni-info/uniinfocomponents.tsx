@@ -18,10 +18,20 @@ const Uniinfocomponents = () => {
                   <div className='course-card flex flex-col gap-[16px] w-full border border-grey-200 rounded-[8px] bg-white p-[16px] md:p-[24px]'>                  
                     {/* -- */}
                     <div className='uniresults-inner flex flex-col md:flex-row gap-[24px]'>
-                        <div className='uniresults-left'>
+                        <div className='uniresults-left flex flex-col gap-[24px]'>
                           <div className="univ__logo bg-white p-[4px] w-[120px] shadow-custom-4 overflow-hidden">
                             <Image className='w-full' src="/assets/images/myhc_252670.jpg" alt="uni logo" width={112} height={112}  />
                           </div>
+                          <div className='favorite'>
+                            <a className="flex gap-[8px] group" href="#">
+                            <svg 
+                            className='group-hover:fill-primary-400'
+                            width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path 
+                              className='group-hover:stroke-primary-400'
+                              d="M17.1437 9.79631C14.9739 12.3161 10.419 16.1896 9.71263 16.7861C9.65686 16.8332 9.5823 16.8337 9.52591 16.7873C8.74209 16.1434 3.27771 11.6293 1.86774 9.79631C0.849038 8.47199 0.501753 7.22424 0.955741 5.61631C1.44629 3.87887 2.53272 2.79441 4.29974 2.42431C5.66722 2.13788 6.55457 2.54278 7.79574 3.18431C8.42503 3.50957 9.20753 4.18317 9.50113 4.44496C9.56628 4.50304 9.66668 4.49637 9.72424 4.43077C10.0058 4.10994 10.807 3.2403 11.5197 2.88031C12.6437 2.31262 13.4599 2.11874 14.7117 2.42431C16.3644 2.8277 17.4948 3.69343 17.9797 5.38831C18.4377 6.98881 18.2563 8.50431 17.1437 9.79631Z" stroke="#333333" stroke-width="1.52"/>
+                              </svg>
+                            <span className="small text-grey300 group-hover:underline group-hover:text-primary-400">Favourite</span></a></div>
                         </div>
                         <div className='uniresults-right flex flex-col gap-[16px]'>
                             <div className='uni-info-card flex flex-col gap-[8px]'>
