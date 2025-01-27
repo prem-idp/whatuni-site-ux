@@ -6,6 +6,7 @@ import Link from "next/link";
 import Subscribecomponents from "../article-landing/subscribe-newsletter/subscribecomponents";
 import Breadcrumblayoutcomponent from "../components/breadcrumb-layout/breadcrumblayoutcomponent";
 import Paginations from "../components/paginations/paginations";
+import Tagcloudcomponents from "../home/tag-cloud/tagcloudcomponents";
 
 const page = () => {
   const breadcrumbData = [
@@ -386,7 +387,7 @@ const page = () => {
       {/* Provider Result card list END */}
 
       <section className="bg-white">
-        <div className="max-w-container mx-auto px-[16px] md:px-[20px] xl:-px-[0]">
+        <div className="max-w-container mx-auto px-[16px] md:px-[20px] lg:-px-[0]">
           <div className="flex flex-col py-[40px] gap-[32px]">
             <div className="h2 font-farro heading2 text-grey300">
               Scholarships at this uni
@@ -420,6 +421,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      <Tagcloudcomponents />
       <Subscribecomponents />
     </>
   );
