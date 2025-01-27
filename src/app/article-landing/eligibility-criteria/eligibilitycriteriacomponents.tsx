@@ -11,7 +11,7 @@ const Eligibilitycriteriacomponents = () => {
                 <p className='font-normal small'>Subheading</p>
             </div>
             <div className='eligibility-course-container '>
-              <div className="eligibility-inner-wrap grid grid-col-1 md:grid-cols-3 gap-[8px] md:gap-[16px] lg:gap-[20px]"> 
+              <div className="eligibility-inner-wrap grid grid-col-1 md:grid-cols-3 gap-[16px]"> 
                   <Eligibilitycriteriacard />
                   <Eligibilitycriteriacard />
                   <Eligibilitycriteriacard />

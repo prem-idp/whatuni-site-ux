@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { AnimatePresence, motion } from "motion/react"
 
 const Faqcomponents = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -54,21 +55,24 @@ const Faqcomponents = () => {
                     <div className="accordion-item flex flex-col gap-[8px] py-[16px] border-b border-b-grey-200 last:border-b-0 cursor-pointer" key={index}>
                         <div className='accordion-header flex items-center justify-between gap-[48px] para font-semibold text-grey-600' onClick={() => toggleAccordion(index)}>
                             {item.title}
-                            <span>
-                            {openIndex === index ? (
-                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 6L6 1L1 6" stroke="#82898F" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                            ):(
-                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 1L6 6L1 1" stroke="#82898F" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                            )}
-
-                            </span>
+                            <motion.span animate={{rotate: openIndex === index ? 180: 0}}>
+                              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1L6 6L1 1" stroke="#82898F" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>                           
+                            </motion.span>
                         </div>
-                        <div className={`accordion-body mt-[16px] ${openIndex === index ? 'expanded flex' : 'collapsed hidden'}`}>{item.content}</div>
-                                                  
+                        <AnimatePresence>
+                        {openIndex === index && (
+                          <motion.div 
+                          initial = {{height: 0, opacity: 0}}
+                          animate = {{height: 'auto', opacity: 1}}
+                          exit = {{height: 0, opacity: 0, transition: {duration: 0.25, ease: "easeInOut"}}}
+                          
+                          className={`accordion-body `}>
+                              <div className="mt-[16px]">{item.content}</div>                              
+                          </motion.div>
+                        )}
+                        </AnimatePresence>                       
                     </div>
                 ))}
                 </div>

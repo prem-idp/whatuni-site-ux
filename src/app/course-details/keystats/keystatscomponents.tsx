@@ -1,0 +1,101 @@
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+
+const Keystatscomponents = () => {
+  return (
+    <>
+    <div className='keystats-container bg-grey-600 p-[24px] md:p-[32px] flex flex-col gap-[32px] rounded-[8px]'>
+      <div className='keystats-inner-row flex flex-col gap-[8px]'>
+          <div className='keystats-inner-header flex flex-col md:flex-row items-start md:items-center justify-between  gap-[16px] md:gap-[8px]'>
+            <div className='h4 text-white'>Key stats</div>
+            <div className='flex items-center gap-[8px] para font-semibold text-white underline cursor-pointer'>Art & design 
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 1.38477L6 6.38477L1 1.38477" stroke="#fff" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div className='keystats-body grid grid-cols-1 md:grid-cols-3 gap-[16px]'>
+            <div className="course-highlight__option flex items-start gap-[8px]">
+              <Image src="assets/icons/course-details/wusca_ranking_stats_icon.svg" alt="academic-cap" width="32" height="32" />
+              <div className="flex flex-col gap-[4px] *:text-white">
+                <div className="para-lg font-semibold">WUSCA ranking</div>
+                <p className="small underline">59/81</p>
+              </div>
+            </div>
+            <div className="course-highlight__option flex items-start gap-[8px]">
+              <Image src="assets/icons/course-details/cug_subject_stats_icon.svg" alt="academic-cap" width="32" height="32" />
+              <div className="flex flex-col gap-[4px] *:text-white">
+                <div className="para-lg font-semibold">CUG Subject ranking</div>
+                <p className="small underline">59/81</p>
+              </div>
+            </div>
+            <div className="course-highlight__option flex items-start gap-[8px]">
+              <Image src="assets/icons/course-details/cug_ranking_stats_icon.svg" alt="academic-cap" width="32" height="32" />
+              <div className="flex flex-col gap-[4px] *:text-white">
+                <div className="para-lg font-semibold">CUG ranking</div>
+                <p className="small underline">51th</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div className='keystats-inner-row flex flex-col gap-[8px]'>
+          <div className='keystats-inner-header flex flex-col gap-[16px] md:gap-[8px]'>
+            <div className='h4 text-white'>Animation</div>
+            <div className='flex flex-col md:flex-row justify-between gap-[16px] w-full *:text-small *:text-white'>
+              <div className='w-full flex flex-col justify-between gap-[4px]'>
+                <div className='flex items-center justify-between'>
+                  <div>
+                    <span>Drop-out rate</span>
+                  </div>
+                  <span>89%</span>
+                </div>
+                <div className=" progess-bar bg-primary-400 rounded-[8px] h-[8px] overflow-hidden">
+                  <div className="progess-bar__line transition-all duration-[3s] bg-primary-200 h-[8px] w-[80%]"></div>
+                </div>
+              </div>
+              <div className='w-full flex flex-col justify-between gap-[4px]'>
+                <div className='flex items-center justify-between'>
+                  <div>
+                    <span>Employment rate</span>
+                  </div>
+                  <span>89%</span>
+                </div>
+                <div className=" progess-bar bg-primary-400 rounded-[8px] h-[8px] overflow-hidden">
+                  <div className="progess-bar__line transition-all duration-[3s] bg-primary-200 h-[8px] w-[40%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div className='keystats-inner-row flex flex-col gap-[8px]'>
+          <div className='keystats-inner-header flex flex-col gap-[16px] md:gap-[8px]'>
+            <div className='h4 text-white'>Average salary</div>
+          </div>
+          <div className='keystats-body grid grid-cols-1 md:grid-cols-2 gap-[16px]'>
+            <div className="course-highlight__option flex items-start">
+              <div className="flex flex-col gap-[4px] *:text-white">
+                <div className="para-lg font-semibold">Politics graduate salary at this uni</div>
+                <p className="small underline">£22,000</p>
+              </div>
+            </div>
+            <div className="course-highlight__option flex items-start">
+              <div className="flex flex-col gap-[4px] *:text-white">
+                <div className="para-lg font-semibold">UK politics graduate salary</div>
+                <p className="small underline">£21,000</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div className='keystats-inner-row'>
+          <div className='flex items-center gap-[4px] *:text-x-small *:font-semibold *:tracking-[1px]'>
+            <div className='text-white'>SOURCE:</div>
+            <Link href='#' className='uppercase text-white underline'>UNISTATS / UCAS / HESA</Link>
+          </div>
+      </div>
+    </div>
+    </>
+  )
+}
+
+export default Keystatscomponents
