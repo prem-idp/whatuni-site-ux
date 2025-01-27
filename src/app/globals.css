@@ -80,10 +80,12 @@
   .btn-grey-400 {
     @apply bg-grey-400 hover:bg-grey-500;
   }
-  .btn-orange{@apply bg-orange-600  hover:bg-orange-700;}
-  .btn-grey{@apply bg-grey-500  hover:bg-grey-600;}
-  .btn-green{@apply bg-positive-default  hover:bg-positive-dark;}
-  .btn-blue{@apply bg-blue-400  hover:bg-blue-500;}
+  .btn-orange{@apply bg-orange-600  hover:bg-orange-700}
+  .btn-grey{@apply bg-grey-500  hover:bg-grey-600}
+  .btn-green{@apply bg-positive-default  hover:bg-positive-dark}
+  .btn-blue{@apply bg-primary-400  hover:bg-primary-500}
+  .btn-negative-default{@apply bg-negative-default  hover:bg-negative-dark}
+
   .btn-neutral-outline {
     @apply bg-transparent border-primary-400 text-neutral-900 border rounded-[20px] px-[12px] py-[7px] hover:bg-primary-500 hover:text-white font-semibold select-none;
   }
@@ -331,9 +333,14 @@ p,.para {@apply text-para}
  }
  .rtf-innerstyle a {
   @apply text-blue-400 hover:underline;
- }
- 
- .rtf-innerstyle figure {
+}
+.rtf-innerstyle a.rtfcustom-link {
+  color: #fff;
+}
+.rtf-innerstyle a.rtfcustom-link:hover {
+  text-decoration: none;
+}
+.rtf-innerstyle figure {
   border: 1px solid #d6d9da;
   padding: 10px;
   border-radius: 3px;
@@ -374,12 +381,18 @@ p,.para {@apply text-para}
   list-style: inside disc;
   font-size: 14px;
 }
+.rtf-innerstyle > div:has([id]) > div:not([class]) :where(*),.rtf-innerstyle > div:has([id]) > * {
+  @apply m-[16px_0]
+}
+.rtf-innerstyle p:empty{@apply hidden}
 /* RTF END */
-/* sr */
-/* .form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
+.form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
 .form_check .form-checkbox:checked + label, .form_radio .form-radio:checked + label{@apply text-white bg-primary-400 border-primary-400 cursor-pointer}
+/* Course Details */
 .year-of-entry .form-check-input:checked + label,.year-of-entry .form-check-input:hover + label{@apply text-grey300 bg-white border-white}
-
+/* Course Details */
+/* sr */
+/*
 .form_radio_black .form-check-input:checked + label,.form_radio_black .form-check-input:hover + label{@apply text-white bg-grey300 border-grey300 cursor-pointer}
 .form_check_black .form-checkbox:checked + label, .form_radio_black .form_radio_black:checked + label{@apply text-white bg-grey300 border-grey300 cursor-pointer} */
 .heart:hover svg{ fill:#0FBEFD}
@@ -400,6 +413,3 @@ p,.para {@apply text-para}
 .sort-active path{
   stroke: #333;
 }
-/* Course Details */
-.year-of-entry .form-check-input:checked + label,.year-of-entry .form-check-input:hover + label{@apply text-grey300 bg-white border-white}
-/* Course Details */
