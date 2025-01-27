@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Getprospectus = () => {
+const Getprospectus = ({pageName}:any) => {
   return (
-    <button type='button' className='btn btn-orange'>Get Prospectus</button>
+    <>
+    {pageName == 'courseDetails' ? 
+      <button type='button' className={'btn btn-negative-default w-full'}>Get Prospectus</button>
+      :
+      <button type='button' className='btn btn-orange '>Get Prospectus {pageName}</button> 
+    }
+    
+    </>
   )
 }
 
