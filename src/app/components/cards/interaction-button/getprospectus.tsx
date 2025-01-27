@@ -6,7 +6,7 @@ const Getprospectus = ({pageName}:any) => {
     {pageName == 'courseDetails' ? 
       <button type='button' className={'btn btn-negative-default w-full'}>Get Prospectus</button>
       :
-      <button type='button' className='btn btn-orange '>Get Prospectus {pageName}</button> 
+      <button type='button' className='btn btn-orange w-full'>Get Prospectus {pageName}</button> 
     }
     
     </>
