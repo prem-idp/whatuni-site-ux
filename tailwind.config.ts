@@ -60,6 +60,7 @@ const config: Config = {
         "neutral200": "#E2E8F0",
         "neutral300": "#CBD5E1",
         "neutral400": "#94A3B8",
+        "neutral600": "#475569",
         "green200":"#B4E646",
         blue:{
           50:"#EDFCFF",
@@ -172,3 +173,4 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
