@@ -254,13 +254,23 @@ const page = () => {
                 </ul>
               </div>
             </div>
-            <div>
-              <Link href="#" className="flex gap-[8px]">
-              <Image src="./assets/icons/heart-grey.svg" alt="heart icon" width="19" height="19" />
-              <span className="small text-grey300 underline">Favourite</span>
-              </Link>
-            
-            </div>
+            <div className="heart group w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-primary-400 hover:cursor-pointer">
+          <svg className="group-hover:fill-primary-400"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path className="group-hover:stroke-white"
+              d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
+              stroke="#4664DC"
+              strokeWidth="1.67"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
           </div>
         </div>
       </section>
