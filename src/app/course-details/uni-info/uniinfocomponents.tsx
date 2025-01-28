@@ -78,8 +78,7 @@ const Uniinfocomponents = () => {
                               <Getprospectus pageName={"courseDetails"} />
                             </div>
                           </div> 
-                        </div>    
-                
+                        </div>                    
                     </div>
                     {/* -- */}
                   </div>
