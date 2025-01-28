@@ -13,6 +13,7 @@ import Uniinfocomponents from './uni-info/uniinfocomponents';
 import Findacoursecomponents from './findacourse/findacoursecomponents';
 import Similarcoursecomponents from './similar-course/similarcoursecomponents';
 import Courseheaderinfocomponents from './course-header-info/courseheaderinfocomponents';
+import Subjectmodalcomponents from './Modal/subjectmodalcomponents';
 
 const page = () => {
   const breadcrumbData = [
@@ -29,6 +30,8 @@ const page = () => {
       label: "Insert level",
     },
   ];
+
+
   return (
     <>
     <section className="px-[16px] md:px-[20px] xl:px-[0] pt-[22px]">
@@ -72,6 +75,7 @@ const page = () => {
     <Similarcoursecomponents />
     <Findacoursecomponents />
     <Subscribecomponents />
+    {/* <Subjectmodalcomponents /> */}
     </>
   )
 }

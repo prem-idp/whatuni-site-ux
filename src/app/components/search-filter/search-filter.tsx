@@ -24,7 +24,7 @@ const SearchFilter = () => {
             Add my grades
           </div>
           <div
-            onClick={searchClick}
+
             className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-blue-100 text-grey300 lg:grow-0"
           >
             <svg
@@ -45,15 +45,15 @@ const SearchFilter = () => {
             Filter (2)
             <div>
               <SearchFilterComponent
-                onClose={filterClose}
-                isFilterOpen={isSearchFilterOpen}
+                // onClose={filterClose}
+                // isFilterOpen={isSearchFilterOpen}
               />
             </div>
           </div>
           <div>
             <SearchFilterComponent
-              onClose={filterClose}
-              isFilterOpen={isSearchFilterOpen}
+              // onClose={filterClose}
+              // isFilterOpen={isSearchFilterOpen}
             />
           </div>
           <div className="hidden lg:flex items-center justify-center gap-[8px]">
