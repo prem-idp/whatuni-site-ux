@@ -21,7 +21,28 @@ const Courseheaderinfocomponents = () => {
                         </div>
                         <div className='uniresults-right flex flex-col flex-1 gap-[16px]'>
                             <div className='uni-info-card flex flex-col gap-[8px]'>
-                              <div className='h5 text-grey300'>Animation BA (Hons)</div>
+                              <div className='flex justify-between items-start h5 text-grey300'>
+                                <span>Animation BA (Hons)</span>
+                                <span className="favorite group items-center justify-center flex min-w-[48px] w-[48px] h-[48px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
+                                    <svg
+                                      className='group-hover:fill-primary-400'
+                                      width="20"
+                                      height="18"
+                                      viewBox="0 0 20 18"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                      className='group-hover:stroke-white'
+                                        d="M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z"
+                                        stroke="#4664DC"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                      />
+                                    </svg>
+                                  </span>
+                              </div>
                             <a href="#" className='block w-fit para-lg font-semibold text-primary-400 hover:text-primary-500 hover:underline line-clamp-1'>Norwich University of the Arts</a>
                             <div className='flex'>
                               <div className='rating-pod flex items-center gap-[8px]'>
@@ -54,7 +75,7 @@ const Courseheaderinfocomponents = () => {
                             <p className='small text-grey300 line-clamp-3 md:line-clamp-2'>Want to know what it's like to study this course at uni? We've got all the key info, from entry requirements to the modules on offer. If that all sounds good, why not check out reviews from real students or even book onto an upcoming open day?</p>                        
                             </div>
                             <div className='uniresults-content-right flex items-end'>
-                              <div className='btn-pod w-full grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-[8px]'>
+                              <div className='btn-pod w-full grid grid-col-1 md:grid-cols-2 lg:flex lg:grid-cols-none gap-[8px]'>
                                 <Getprospectus pageName={"courseDetails"} />
                                 <Visitwebsite />
                                 <BookEvent />

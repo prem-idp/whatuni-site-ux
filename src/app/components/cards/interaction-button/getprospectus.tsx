@@ -8,7 +8,6 @@ const Getprospectus = ({pageName}:any) => {
       :
       <button type='button' className='btn btn-orange w-full'>Get Prospectus {pageName}</button> 
     }
-    
     </>
   )
 }
