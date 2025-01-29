@@ -13,7 +13,7 @@ const ColcResultsSkeleton = () => {
               <div className="results_edit flex flex-col gap-[16px] md:gap-[0] md:flex-row  justify-between items-start md:items-center w-full">
                 <div className="flex flex-col">
                   <div className="skeleton skeleton-text-animated small_heading !w-[200px]"></div>
-                  <div className="skeleton skeleton-text-animated descrip !w-[300px]"></div>
+                  <div className="skeleton skeleton-text-animated descrip !w-[200px]"></div>
                 </div>
                 <div className="edit_answers">
                   <div className="skeleton skeleton_btn skeleton-text-animated !min-w-[153px]"></div>

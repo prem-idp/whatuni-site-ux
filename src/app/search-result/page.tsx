@@ -8,10 +8,13 @@ import Subscribecomponents from "../article-landing/subscribe-newsletter/subscri
 import SearchFilterComponent from "../popups/searchfiltercomponent";
 import Breadcrumblayoutcomponent from "../components/breadcrumb-layout/breadcrumblayoutcomponent";
 import ClickAndShow from "../click-show/click-show";
+import Getprospectus from "../components/cards/interaction-button/getprospectus";
+import Visitwebsite from "../components/cards/interaction-button/visitwebsite";
+import BookOpenDay from "../components/cards/interaction-button/bookopenday";
+import RequestInfo from "../components/cards/interaction-button/requestinfo";
 
-const SearchResult = () => {
+const SearchResult = ({ title, content }: any) => {
   // search filter
-  const initBroucherVal = 1;
   const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(false);
   const searchClick = () => {
     setIsSearchFilterOpen(true);
@@ -46,12 +49,12 @@ const SearchResult = () => {
 
   const faqData = [
     {
-      title: "How can I see my existing clients through Designership?",
+      title: "1",
       content:
         "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
     },
     {
-      title: "How does Designership attract clients?",
+      title: "2",
       content:
         "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
     },
@@ -212,12 +215,6 @@ const SearchResult = () => {
               />
             </svg>
             Filter (2)
-            <div>
-              <SearchFilterComponent
-                onClose={filterClose}
-                isFilterOpen={isSearchFilterOpen}
-              />
-            </div>
           </div>
           <SearchFilterComponent
             onClose={filterClose}
@@ -614,7 +611,10 @@ const SearchResult = () => {
             </div>
           </div>
           {unicard.map((item, index) => (
-            <div className="flex flex-col justify-between py-[24px] md:flex-row" key={index}>
+            <div
+              className="flex flex-col justify-between py-[24px] md:flex-row"
+              key={index}
+            >
               <div className="w-full rounded-t-[16px] overflow-hidden shrink-0 md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]">
                 <div className="relative bg-blue-400 md:w-[280px] md:h-[316px] lg:w-[500px] lg:h-[376px]">
                   {item.showImage ? (
@@ -835,40 +835,21 @@ const SearchResult = () => {
                           </div>
                         </ClickAndShow>
 
-                        <div className={`grid grid-cols-1 justify-items-stretch gap-[8px] grid-flow-row auto-cols-fr lg:grid-rows-1 lg:grid-flow-col ${
-                                chitem.buttonCount == 4
-                                  ? "md:grid-rows-2 md:grid-flow-col"
-                                  : "md:grid-cols-1 md:grid-flow-row"
-                              }`}>
-                          {item.showprospect ? (
-                            <button type="button" className="btn btn-orange">
-                              Get Prospectus
-                            </button>
-                          ) : null}
+                        <div
+                          className={`grid grid-cols-1 justify-items-stretch gap-[8px] grid-flow-row auto-cols-fr lg:grid-rows-1 lg:grid-flow-col ${
+                            chitem.buttonCount == 4
+                              ? "md:grid-rows-2 md:grid-flow-col"
+                              : "md:grid-cols-1 md:grid-flow-row"
+                          }`}
+                        >
+                          {item.showprospect ? <Getprospectus /> : null}
 
-                          {item.showvisit ? (
-                            <button type="button" className="btn btn-grey">
-                              Visit website
-                            </button>
-                          ) : null}
+                          {item.showvisit ? <Visitwebsite /> : null}
 
-                          {item.showBooking ? (
-                            <button type="button" className="btn btn-green">
-                              Book open day
-                            </button>
-                          ) : null}
+                          {item.showBooking ? <BookOpenDay /> : null}
 
                           {item.showRequest ? (
-                            <button
-                              type="button"
-                              className={`btn btn-blue ${
-                                chitem.buttonCount == 1
-                                  ? "justify-self-end w-full lg:w-[162px]"
-                                  : ""
-                              }`}
-                            >
-                              Request info
-                            </button>
+                            <RequestInfo showCount={chitem.buttonCount} />
                           ) : null}
                         </div>
                       </div>
