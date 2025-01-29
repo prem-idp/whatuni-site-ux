@@ -199,7 +199,7 @@ const page = () => {
       {/* University details  */}
       <section className="bg-white">
         <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-          <div className="flex flex-col-reverse gap-[5px] md:gap-[0] md:flex-row justify-between max-w-[100%] w-[1145px]  py-[16px]">
+          <div className="flex justify-between w-full py-[16px]">
             <div className="flex gap-[17px]">
               <span className="p-[4px] bg-white rounded-[8px] hidden md:block shadow-custom-1 min-w-[64px] h-[64px]">
                 <Image
@@ -242,11 +242,18 @@ const page = () => {
                     />
                     18.1 Miles from you
                   </li>
-                  <li className="text-nowrap uppercase underline text-blue-400 xs-small">
-                    <Link href="#">WUSCA ranking: 18th</Link>
+                  <li className="relative text-nowrap uppercase underline text-blue-400 xs-small">
+                    <span>WUSCA ranking: 18th
+
+                      <div className="hidden absolute top-0 shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] min-w-[320px] bg-white p-[12px] flex flex-col gap-4 after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border
+                    ">                        
+                          <span className="x-small text-grey900 font-semibold">Why should you trust our uni reviews?</span>
+                          <p className="x-small text-grey300">All our reviews are from real students, submitted using their verified university email address.</p>
+                        </div>
+                    </span>
                   </li>
                   <li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-green-100 text-positive-dark xs-small">
-                    Lecturers and Teaching{" "}
+                    Lecturers and Teaching
                   </li>
                   <li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-green-100 text-positive-dark xs-small">
                     + 2 more
@@ -254,7 +261,7 @@ const page = () => {
                 </ul>
               </div>
             </div>
-            <div className="heart group w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-primary-400 hover:cursor-pointer">
+            <div className="heart group min-w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-primary-400 hover:cursor-pointer">
           <svg className="group-hover:fill-primary-400"
             width="20"
             height="20"
@@ -517,7 +524,7 @@ const page = () => {
       {/* Provider Result card list  */}
       <section className="bg-grey-50">
         <div className="max-w-container px-[6px] md:px-[24px] xl:px-[0] mx-auto">
-          <div className="flex p-[0_10px_24px] md:p-[20px_10px_24px] flex-wrap gap-[20px]">
+          <div className="flex p-[20px_16px_24px] md:p-[40px_24px] lg:p-[20px_10px_24px] flex-wrap gap-[20px]">
             {providerCard}
           </div>
           <div className="pb-[64px]">
