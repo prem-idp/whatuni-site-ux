@@ -7,11 +7,7 @@ const Paginations = () => {
       <nav aria-label="navigation">
         <ul className="pagination flex justify-center items-center gap-[8px]">
           <li>
-            <span
-              className="cursor-pointer flex items-center justify-center px-[14px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
-            
-              aria-label="Previous"
-            >
+            <a className="cursor-pointer flex items-center justify-center px-[14px] py-[8px] rounded-[4px] w-[36px] h-[36px]">
               <svg
                 width="7"
                 height="12"
@@ -27,7 +23,7 @@ const Paginations = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </span>
+            </a>
           </li>
           <li className="">
             <Link
@@ -70,8 +66,7 @@ const Paginations = () => {
             </Link>
           </li>
           <li>
-            <span
-              className="select-none flex items-center justify-center small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400 " >
+            <span className="select-none flex items-center justify-center small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400 ">
               ...
             </span>
           </li>
@@ -84,10 +79,7 @@ const Paginations = () => {
             </Link>
           </li>
           <li>
-            <span
-              className="cursor-pointer flex items-center justify-center px-[14px] py-[8px] rounded-[4px] w-[36px] h-[36px]"             
-              aria-label="Next"
-            >
+            <a className="cursor-pointer flex items-center justify-center px-[14px] py-[8px] rounded-[4px] w-[36px] h-[36px]">
               <svg
                 width="7"
                 height="12"
@@ -103,7 +95,7 @@ const Paginations = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </span>
+            </a>
           </li>
         </ul>
       </nav>
