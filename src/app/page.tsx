@@ -22,7 +22,7 @@ export default function Home() {
       <Wuscascomponents />
       {/* <Wuscacomponentskeleton /> */}
       <Discovercomponents />
-      <Tagcloudcomponents />
+      <Tagcloudcomponents routerUrl={ false }/>
       {/* <Discovercardskeleton /> */}
       <Advicecomponents categoryTag={false} adviceBgWhite={false} />
       <Testimonialcomponents />
