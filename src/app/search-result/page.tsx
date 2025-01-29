@@ -331,120 +331,108 @@ const SearchResult = ({ title, content }: any) => {
           </div>
         </div>
       </section>
-      {/* <div className="overflow-x-auto snap-x snap-mandatory">
-        <div className="snap-center flex p-4">
-          <div className="bg-blue-500 w-64 p-4">Item 1</div>
-          <div className="bg-green-500 w-64 p-4">Item 2</div>
-          <div className="bg-yellow-500 w-64 p-4">Item 3</div>
-          <div className="bg-red-500 w-64 p-4">Item 4</div>
-          <div className="bg-red-500 w-64 p-4">Item 4</div>
-          <div className="bg-red-500 w-64 p-4">Item 4</div>
-          <div className="bg-red-500 w-64 p-4">Item 4</div>
-          <div className="bg-red-500 w-64 p-4">Item 4</div>
+
+      <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[10px] xl:px-0 lg:py-[8px]">
+        <div className="max-w-container mx-auto">
+          <ul className="flex items-start gap-[8px] uppercase">
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
+              2023
+            </li>
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
+              Undergraduate
+            </li>
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+              Sn3 TR7
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 12L12 4M4 4L12 12"
+                  stroke="#3460DC"
+                  strokeWidth="1.13"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </li>
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+              Full time
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 12L12 4M4 4L12 12"
+                  stroke="#3460DC"
+                  strokeWidth="1.13"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </li>
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+              Full time
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 12L12 4M4 4L12 12"
+                  stroke="#3460DC"
+                  strokeWidth="1.13"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </li>
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+              South East England
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 12L12 4M4 4L12 12"
+                  stroke="#3460DC"
+                  strokeWidth="1.13"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </li>
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+              <Link href="">
+                <svg
+                  width="7"
+                  height="20"
+                  viewBox="0 0 7 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.55756 10.508H4.31356V12.788H2.68156V10.508H0.437563V8.96H2.68156V6.668H4.31356V8.96H6.55756V10.508Z"
+                    fill="#3460DC"
+                  />
+                </svg>
+              </Link>
+            </li>
+          </ul>
         </div>
-      </div> */}
-      <div className="overflow-x-auto snap-x snap-mandatory">
-        <section className="bg-white px-[16px] py-[10px] xl:px-0 lg:py-[8px]">
-          <div className="max-w-container mx-auto">
-            <ul className="flex items-start gap-[8px] uppercase">
-              <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
-                2023
-              </li>
-              <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
-                Undergraduate
-              </li>
-              <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                Sn3 TR7
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12L12 4M4 4L12 12"
-                    stroke="#3460DC"
-                    strokeWidth="1.13"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </li>
-              <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                Full time
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12L12 4M4 4L12 12"
-                    stroke="#3460DC"
-                    strokeWidth="1.13"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </li>
-              <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                Full time
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12L12 4M4 4L12 12"
-                    stroke="#3460DC"
-                    strokeWidth="1.13"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </li>
-              <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                South East England
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12L12 4M4 4L12 12"
-                    stroke="#3460DC"
-                    strokeWidth="1.13"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </li>
-              <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                <Link href="">
-                  <svg
-                    width="7"
-                    height="20"
-                    viewBox="0 0 7 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.55756 10.508H4.31356V12.788H2.68156V10.508H0.437563V8.96H2.68156V6.668H4.31356V8.96H6.55756V10.508Z"
-                      fill="#3460DC"
-                    />
-                  </svg>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
+      </section>
+
       <section className="bg-white p-[16px] lg:pt-[16px] xl:p-0">
         <div className="max-w-container mx-auto">
           <div className="bg-blue-100 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
@@ -485,7 +473,7 @@ const SearchResult = ({ title, content }: any) => {
               Add my grades
             </div>
           </div>
-          <div className="bg-grey-50 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
+          {/* <div className="bg-grey-50 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
             <div className="flex gap-[16px]">
               <div className="bg-grey-200 text-grey900 rounded-tl-[24px] rounded-br-[24px] p-[8px] w-[48px] h-[48px] flex items-center justify-center shrink-0">
                 <Image
@@ -506,7 +494,7 @@ const SearchResult = ({ title, content }: any) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="ml-auto w-fit">
             <div className="flex items-center gap-[4px] px-[4px] py-[16px] small text-grey300 cursor-pointer">
               <svg
@@ -884,6 +872,7 @@ const SearchResult = ({ title, content }: any) => {
           </div>
         </div>
       </section>
+
       <section className="bg-white p-[16px] lg:py-[28px] xl:p-0">
         <div className="max-w-container mx-auto">
           <div className="h1 py-[40px]">Explore more about law</div>
