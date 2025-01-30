@@ -12,22 +12,9 @@ import Getprospectus from "../components/cards/interaction-button/getprospectus"
 import Visitwebsite from "../components/cards/interaction-button/visitwebsite";
 import BookOpenDay from "../components/cards/interaction-button/bookopenday";
 import RequestInfo from "../components/cards/interaction-button/requestinfo";
+import SearchFilterButtons from "../components/search-filter-buttons/search-filter-buttons";
 
 const SearchResult = ({ title, content }: any) => {
-  // search filter
-  const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(false);
-  const searchClick = () => {
-    setIsSearchFilterOpen(true);
-    const body = document.body;
-    body.classList.add("overflow-y-hidden");
-  };
-
-  const filterClose = () => {
-    const body = document.body;
-    setIsSearchFilterOpen(false);
-    body.classList.remove("overflow-y-hidden");
-  };
-
   const breadcrumbData = [
     {
       url: "#",
@@ -160,178 +147,31 @@ const SearchResult = ({ title, content }: any) => {
 
   return (
     <>
+      {/* start breadcrumb and subject*/}
       <section className="px-[16px] xl:px-0">
         <div className="max-w-container mx-auto">
           {/* breadcrumb  */}
-          <div className="px-[16px] xl:px-[0] md:p-[24px_0_8px]">
+          <div className="px-[16px] xl:px-[0] md:p-[24px_0_8px] hidden md:block">
             <Breadcrumblayoutcomponent data={breadcrumbData} />
           </div>
           {/* breadcrumb  */}
+          {/* start subject */}
           <div className="py-[16px]">
             <div className="h5 mb-[4px]">
               Top Law, Engineering & Architecture subjects for you
             </div>
             <p>000 universities offer 1563 courses</p>
           </div>
+          {/* end subject */}
         </div>
       </section>
+      {/* end breadcrumb and subject*/}
 
-      <section className="bg-grey-600 px-[12px] py-[16px]">
-        <div className="max-w-container mx-auto flex gap-[8px] small">
-          <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0 lg:shrink-0">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M10 1.875C10.641 1.875 11.1607 2.39467 11.1607 3.03571V8.83929H16.9643C17.6053 8.83929 18.125 9.35895 18.125 10C18.125 10.641 17.6053 11.1607 16.9643 11.1607H11.1607V16.9643C11.1607 17.6053 10.641 18.125 10 18.125C9.35895 18.125 8.83929 17.6053 8.83929 16.9643V11.1607H3.03571C2.39467 11.1607 1.875 10.641 1.875 10C1.875 9.35895 2.39467 8.83928 3.03571 8.83928L8.83929 8.83929V3.03571C8.83929 2.39467 9.35895 1.875 10 1.875Z"
-                fill="#F9FAFB"
-              />
-            </svg>
-            Add my grades
-          </div>
-          <div
-            onClick={searchClick}
-            className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-blue-100 text-grey300 lg:grow-0 lg:shrink-0"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 3.90625V1.875M10 3.90625C8.87817 3.90625 7.96875 4.81567 7.96875 5.9375C7.96875 7.05933 8.87817 7.96875 10 7.96875M10 3.90625C11.1218 3.90625 12.0312 4.81567 12.0312 5.9375C12.0312 7.05933 11.1218 7.96875 10 7.96875M3.90625 16.0938C5.02808 16.0938 5.9375 15.1843 5.9375 14.0625C5.9375 12.9407 5.02808 12.0312 3.90625 12.0312M3.90625 16.0938C2.78442 16.0938 1.875 15.1843 1.875 14.0625C1.875 12.9407 2.78442 12.0312 3.90625 12.0312M3.90625 16.0938V18.125M3.90625 12.0312V1.875M10 7.96875V18.125M16.0938 16.0938C17.2156 16.0938 18.125 15.1843 18.125 14.0625C18.125 12.9407 17.2156 12.0312 16.0938 12.0312M16.0938 16.0938C14.9719 16.0938 14.0625 15.1843 14.0625 14.0625C14.0625 12.9407 14.9719 12.0312 16.0938 12.0312M16.0938 16.0938V18.125M16.0938 12.0312V1.875"
-                stroke="#333333"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            Filter (2)
-          </div>
-          <SearchFilterComponent
-            onClose={filterClose}
-            isFilterOpen={isSearchFilterOpen}
-          />
-          <div className="hidden lg:flex items-center justify-center gap-[8px] lg:shrink-0">
-            <div className="flex items-center gap-[8px] btn w-fit bg-white text-grey300">
-              Study level
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-white text-grey300">
-              Subject (1)
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-white text-grey300">
-              Year
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-white text-grey300">
-              University
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-white text-grey300">
-              Location (1)
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className="flex items-center justify-center gap-[4px] cursor-pointer px-0 text-grey-50 xl:px-[16px] lg:shrink-0">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M1.8173 1.8173C2.24037 1.39423 2.9263 1.39423 3.34937 1.8173L8 6.46794L12.6506 1.8173C13.0737 1.39423 13.7596 1.39423 14.1827 1.8173C14.6058 2.24037 14.6058 2.9263 14.1827 3.34937L9.53206 8L14.1827 12.6506C14.6058 13.0737 14.6058 13.7596 14.1827 14.1827C13.7596 14.6058 13.0737 14.6058 12.6506 14.1827L8 9.53206L3.34937 14.1827C2.9263 14.6058 2.24037 14.6058 1.8173 14.1827C1.39423 13.7596 1.39423 13.0737 1.8173 12.6506L6.46794 8L1.8173 3.34937C1.39423 2.9263 1.39423 2.24037 1.8173 1.8173Z"
-                fill="white"
-              />
-            </svg>
-            Reset
-          </div>
-        </div>
-      </section>
+      {/* start search filter button */}
+      <SearchFilterButtons />
+      {/* start search filter button */}
 
+      {/* start serach lables */}
       <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[10px] xl:px-0 lg:py-[8px]">
         <div className="max-w-container mx-auto">
           <ul className="flex items-start gap-[8px] uppercase">
@@ -344,6 +184,7 @@ const SearchResult = ({ title, content }: any) => {
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
               Sn3 TR7
               <svg
+                className="cursor-pointer"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -362,6 +203,7 @@ const SearchResult = ({ title, content }: any) => {
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
               Full time
               <svg
+                className="cursor-pointer"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -380,6 +222,7 @@ const SearchResult = ({ title, content }: any) => {
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
               Full time
               <svg
+                className="cursor-pointer"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -398,6 +241,7 @@ const SearchResult = ({ title, content }: any) => {
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
               South East England
               <svg
+                className="cursor-pointer"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -416,6 +260,7 @@ const SearchResult = ({ title, content }: any) => {
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
               <Link href="">
                 <svg
+                  className="cursor-pointer"
                   width="7"
                   height="20"
                   viewBox="0 0 7 20"
@@ -432,9 +277,11 @@ const SearchResult = ({ title, content }: any) => {
           </ul>
         </div>
       </section>
+      {/* end serach lables */}
 
       <section className="bg-white p-[16px] lg:pt-[16px] xl:p-0">
         <div className="max-w-container mx-auto">
+          {/* start add your grades */}
           <div className="bg-blue-100 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
             <div className="flex gap-[16px]">
               <div className="bg-blue-200 text-grey900 rounded-tl-[24px] rounded-br-[24px] p-[8px] w-[48px] h-[48px] flex items-center justify-center shrink-0">
@@ -473,6 +320,8 @@ const SearchResult = ({ title, content }: any) => {
               Add my grades
             </div>
           </div>
+          {/* end add your grades */}
+          {/* start no search results */}
           {/* <div className="bg-grey-50 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
             <div className="flex gap-[16px]">
               <div className="bg-grey-200 text-grey900 rounded-tl-[24px] rounded-br-[24px] p-[8px] w-[48px] h-[48px] flex items-center justify-center shrink-0">
@@ -495,6 +344,8 @@ const SearchResult = ({ title, content }: any) => {
               </div>
             </div>
           </div> */}
+          {/* end no search results */}
+          {/* start sorting */}
           <div className="ml-auto w-fit">
             <div className="flex items-center gap-[4px] px-[4px] py-[16px] small text-grey300 cursor-pointer">
               <svg
@@ -516,7 +367,8 @@ const SearchResult = ({ title, content }: any) => {
               <span> Entry reqs - highest</span>
             </div>
           </div>
-
+          {/* end sorting */}
+          {/* start university and video section */}
           <div className="bg-grey-600 rounded-[8px] p-[24px] min-h-[268px] flex flex-col items-center gap-[24px] md:flex-row">
             <div className="flex flex-col gap-[8px] w-full order-2 lg:order-1">
               <div className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-white hidden lg:block">
@@ -582,7 +434,7 @@ const SearchResult = ({ title, content }: any) => {
               <video className="w-full hidden" src="" controls></video>
               <div className="w-full relative rounded-[8px] overflow-hidden flex justify-center">
                 <Image
-                  src="/assets/images/search/thumbnail.png"
+                  src="/assets/images/search-results/thumbnail.png"
                   alt="Thumbnail"
                   width={391}
                   height={200}
@@ -598,12 +450,17 @@ const SearchResult = ({ title, content }: any) => {
               </div>
             </div>
           </div>
+          {/* end university and video section */}
+          {/* start sponsored section */}
           {unicard.map((item, index) => (
             <div
               className="flex flex-col justify-between py-[24px] md:flex-row"
               key={index}
             >
-              <div className="w-full rounded-t-[16px] overflow-hidden shrink-0 md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]">
+              <Link
+                href="#"
+                className="w-full rounded-t-[16px] overflow-hidden shrink-0 md:w-[280px] md:h-[316px] lg:rounded-l-[16px] lg:rounded-tr-none lg:w-[500px] lg:h-[376px]"
+              >
                 <div className="relative bg-blue-400 md:w-[280px] md:h-[316px] lg:w-[500px] lg:h-[376px]">
                   {item.showImage ? (
                     <Image
@@ -728,7 +585,7 @@ const SearchResult = ({ title, content }: any) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
               <div className="flex flex-col">
                 <div className="bg-white p-[16px] border border-grey-200 rounded-b-[16px] shadow-custom-3 lg:rounded-tr-[16px] lg:rounded-b-[16px] lg:p-[20px]">
                   <div className="bg-grey-100 p-[12px] rounded-[8px] flex items-center gap-[4px]">
@@ -867,12 +724,15 @@ const SearchResult = ({ title, content }: any) => {
               </div>
             </div>
           ))}
+          {/* end sponsored section */}
+          {/* start pagination */}
           <div className="pt-[24px] pb-[40px] md:pb-[64px]">
             <Paginations />
           </div>
+          {/* end pagination */}
         </div>
       </section>
-
+      {/* start about subject section */}
       <section className="bg-white p-[16px] lg:py-[28px] xl:p-0">
         <div className="max-w-container mx-auto">
           <div className="h1 py-[40px]">Explore more about law</div>
@@ -969,7 +829,7 @@ const SearchResult = ({ title, content }: any) => {
           </div>
         </div>
       </section>
-      {/* <Faqcomponents data={faqData}/> */}
+      {/* end about subject section */}
       <Faqcomponents />
       <Subscribecomponents />
     </>
