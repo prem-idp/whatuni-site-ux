@@ -1085,7 +1085,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           </Accordion>
         </div>
 
-        <div className="flex justify-between gap-[8px] p-[16px_32px] fixed w-[375px] bottom-0 shadow-custom-10 bg-white sm:w-[768px]">
+        <div className="flex justify-between gap-[8px] p-[16px_32px] fixed w-full bottom-0 shadow-custom-10 bg-white md:w-[768px]">
           <Link
             href="#"
             aria-label="reset filters"
