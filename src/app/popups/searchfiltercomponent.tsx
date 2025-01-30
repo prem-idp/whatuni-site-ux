@@ -136,7 +136,12 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
     "City15",
   ];
   // university group
-  const universityGroup = ["Russel Group", "Medicine"];
+  const universityGroup = [
+    "Russel Group",
+    "Medicine",
+    "Small and specialist",
+    "Distance or online learning",
+  ];
   return (
     <>
       <div
@@ -146,7 +151,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
       ></div>
 
       <div
-        className={`bg-white fixed top-0 left-0 h-full w-[768px] z-10 transition-all duration-300 ease-in-out ${
+        className={`bg-white fixed top-0 left-0 w-full h-full z-10 transition-all duration-300 ease-in-out md:w-[768px] ${
           isFilterOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -442,7 +447,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                         <div className="flex flex-col gap-[12px] max-h-[255px] overflow-y-auto custom-scrollbar-2">
                           <div
                             onClick={subjectClicked}
-                            className="flex items-center gap-[4px] text-blue-400 font-semibold"
+                            className="flex items-center gap-[4px] text-blue-400 font-semibold cursor-pointer"
                           >
                             <svg
                               className="rotate-180"
@@ -618,7 +623,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 </div>
                 {isUniversityOpen && (
                   <div
-                    className={`bg-white absolute top-0 left-0 w-full h-full z-10 transition-all duration-300 ease-in-out ${
+                    className={`bg-white absolute top-0 left-0 w-full  z-10 transition-all duration-300 ease-in-out ${
                       isUniversityOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
                   >
@@ -628,10 +633,10 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                           University of Aberdeen
                         </li>
                       </ul>
-                      <div className="flex flex-col gap-[12px] max-h-[420px] overflow-y-auto custom-scrollbar-2">
+                      <div className="flex flex-col gap-[12px] h-[246px] overflow-y-auto custom-scrollbar-2">
                         <div
                           onClick={universityClicked}
-                          className="flex items-center gap-[4px] text-blue-400 font-semibold"
+                          className="flex items-center gap-[4px] text-blue-400 font-semibold cursor-pointer"
                         >
                           <svg
                             className="rotate-180"
@@ -700,6 +705,9 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                       </div>
                     </div>
                   </div>
+                )}
+                {isUniversityOpen && ( // Placeholder div
+                  <div className="h-[100px]"></div> // Height matches expected content height
                 )}
               </div>
             </div>
@@ -1077,7 +1085,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           </Accordion>
         </div>
 
-        <div className="flex justify-between gap-[8px] p-[16px_32px]">
+        <div className="flex justify-between gap-[8px] p-[16px_32px] fixed w-[375px] bottom-0 shadow-custom-10 bg-white sm:w-[768px]">
           <Link
             href="#"
             aria-label="reset filters"
@@ -1085,7 +1093,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           >
             Clear
           </Link>
-          <button className="bg-primary-400 w-full text-white rounded-[24px] py-[10px] px-[16px] font-semibold hover:bg-primary-500 md:w-[344px]">
+          <button className="bg-primary-400 w-fit text-white rounded-[24px] py-[10px] px-[16px] font-semibold hover:bg-primary-500 md:w-[344px]">
             Show all 0 results
           </button>
         </div>
