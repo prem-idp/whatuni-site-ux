@@ -159,7 +159,7 @@ const page = () => {
             </span>
           )}
           {/* PGS  */}
-          <p className="small text-grey500 line-clamp-3">Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary </p>
+          {/* <p className="small text-grey500 line-clamp-3">Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary </p> */}
           {/* PGS  END */}
           
           {items.modulesList && (
