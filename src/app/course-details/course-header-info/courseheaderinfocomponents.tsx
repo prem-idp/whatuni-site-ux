@@ -13,7 +13,7 @@ const Courseheaderinfocomponents = () => {
         <div className='max-w-container mx-auto'>
           <div className='cd-uniinfo-card-container flex flex-col gap-[24px] py-[24px] px-[16px] md:px-[20px] lg:px-[0]'>
                     {/* -- */}
-                    <div className='uniresults-inner flex flex-col md:flex-row gap-[24px]'>
+                    <div className='uniresults-inner flex flex-col md:flex-row md:gap-[24px]'>
                         <div className='uniresults-left'>
                           <div className="univ__logo bg-white p-[4px] w-[120px] rounded-[8px] shadow-custom-4 overflow-hidden hidden md:block">
                             <Image className='w-full' src="/assets/images/myhc_252670.jpg" alt="uni logo" width={112} height={112}  />

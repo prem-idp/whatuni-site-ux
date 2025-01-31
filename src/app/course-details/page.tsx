@@ -46,7 +46,7 @@ const page = () => {
 
   return (
     <>
-    <section className="px-[16px] md:px-[20px] xl:px-[0] pt-[22px]">
+    <section className="px-[16px] md:px-[20px] xl:px-[0] pt-[22px] hidden md:block">
         <div className="max-w-container mx-auto">
           <Breadcrumblayoutcomponent data={breadcrumbData} />
         </div>
