@@ -132,7 +132,7 @@ const page = () => {
         <div className="flex flex-col gap-[16px] md:min-h-[240px]">
           <div className="h6 font-farro text-blue-400">{items.title}</div>
           <ul className="flex flex-wrap gap-[4px]">
-            <li className="flex gap-[2px] bg-grey-100 text-grey-500 font-semibold x-small px-[8px] rounded-[4px]">
+            <li className="flex gap-[2px] bg-grey-100 text-grey-500 uppercase font-semibold xs-small px-[8px] rounded-[4px]">
               <Image
                 alt="calender icon"
                 width="16"
@@ -142,7 +142,7 @@ const page = () => {
 
               {items.points}
             </li>
-            <li className="flex gap-[2px] bg-grey-100 text-grey-500 font-semibold x-small px-[8px] rounded-[4px]">
+            <li className="flex gap-[2px] bg-grey-100 text-grey-500 font-semibold uppercase xs-small px-[8px] rounded-[4px]">
               <Image
                 alt="timer icon"
                 width="16"
@@ -158,6 +158,10 @@ const page = () => {
               {items.fullCourse}
             </span>
           )}
+          {/* PGS  */}
+          {/* <p className="small text-grey500 line-clamp-3">Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary </p> */}
+          {/* PGS  END */}
+          
           {items.modulesList && (
             <>
               <span onClick={visbleModule} className="text-blue-400 select-none font-semibold small cursor-pointer transition-all delay-0 duration-300 ease-linear pl-[20px] relative before:absolute before:content-[''] before:w-[11px] before:h-[2px] before:bg-blue-400 before:rounded-[2px] before:left-[2px] before:top-[10px] after:absolute after:content-[''] after:w-[11px] after:h-[2px] after:bg-blue-400 after:rounded-[2px] after:left-[2px] after:top-[10px] after:rotate-[90deg] after:transition-all after:delay-0 after:duration-300 after:ease-linear">
@@ -242,10 +246,10 @@ const page = () => {
                     />
                     18.1 Miles from you
                   </li>
-                  <li className="relative text-nowrap uppercase underline text-blue-400 xs-small">
+                  <li className="relative group text-nowrap uppercase underline text-blue-400 x-small">
                     <span>WUSCA ranking: 18th
 
-                      <div className="hidden absolute top-0 shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] min-w-[320px] bg-white p-[12px] flex flex-col gap-4 after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border
+                      <div className="absolute select-none hidden group-hover:flex border border-grey-200 top-[20px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] min-w-[320px] bg-white p-[12px] flex-col gap-4 after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0
                     ">                        
                           <span className="x-small text-grey900 font-semibold">Why should you trust our uni reviews?</span>
                           <p className="x-small text-grey300">All our reviews are from real students, submitted using their verified university email address.</p>
@@ -524,7 +528,7 @@ const page = () => {
       {/* Provider Result card list  */}
       <section className="bg-grey-50">
         <div className="max-w-container px-[6px] md:px-[24px] xl:px-[0] mx-auto">
-          <div className="flex p-[20px_16px_24px] md:p-[40px_24px] lg:p-[20px_10px_24px] flex-wrap gap-[20px]">
+          <div className="flex p-[20px_10px_24px] md:p-[40px_10px] lg:p-[20px_10px_24px] flex-wrap gap-[20px]">
             {providerCard}
           </div>
           <div className="pb-[64px]">
