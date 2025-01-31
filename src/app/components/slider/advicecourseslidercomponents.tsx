@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from 'react';
 import AdviceCourseCard from '../cards/advice-course/advicecoursecard';
-import AdviceCourseCardSkeleton from '../skeleton/advicecoursecardskeleton';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
