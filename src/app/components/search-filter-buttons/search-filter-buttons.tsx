@@ -1,12 +1,25 @@
-import SearchFilterComponent from '@/app/popups/searchfiltercomponent'
-import React from 'react'
+import SearchFilterComponent from "@/app/popups/searchfiltercomponent";
+import React, { useState } from "react";
 
-const SearchFilter = () => {
+const SearchFilterButtons = () => {
+  // search filter
+  const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(false);
+  const searchClick = () => {
+    setIsSearchFilterOpen(true);
+    const body = document.body;
+    body.classList.add("overflow-y-hidden");
+  };
+
+  const filterClose = () => {
+    const body = document.body;
+    setIsSearchFilterOpen(false);
+    body.classList.remove("overflow-y-hidden");
+  };
   return (
-      <>
-           <section className="bg-grey-600 px-[12px] py-[16px]">
-        <div className="max-w-container mx-auto flex flex-wrap gap-[8px]">
-          <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0">
+    <>
+      <section className="bg-grey-600 px-[12px] py-[16px]">
+        <div className="max-w-container mx-auto flex gap-[8px] small">
+          <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0 lg:shrink-0">
             <svg
               width="20"
               height="20"
@@ -24,8 +37,8 @@ const SearchFilter = () => {
             Add my grades
           </div>
           <div
-
-            className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-blue-100 text-grey300 lg:grow-0"
+            onClick={searchClick}
+            className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-blue-100 text-grey300 lg:grow-0 lg:shrink-0"
           >
             <svg
               width="20"
@@ -43,20 +56,12 @@ const SearchFilter = () => {
               />
             </svg>
             Filter (2)
-            <div>
-              <SearchFilterComponent
-                // onClose={filterClose}
-                // isFilterOpen={isSearchFilterOpen}
-              />
-            </div>
           </div>
-          <div>
-            <SearchFilterComponent
-              // onClose={filterClose}
-              // isFilterOpen={isSearchFilterOpen}
-            />
-          </div>
-          <div className="hidden lg:flex items-center justify-center gap-[8px]">
+          <SearchFilterComponent
+            onClose={filterClose}
+            isFilterOpen={isSearchFilterOpen}
+          />
+          <div className="hidden lg:flex items-center justify-center gap-[8px] lg:shrink-0">
             <div className="flex items-center gap-[8px] btn w-fit bg-white text-grey300">
               Study level
               <svg
@@ -148,7 +153,7 @@ const SearchFilter = () => {
               </svg>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-[8px] px-0 text-grey-50 lg:px-[16px]">
+          <div className="flex items-center justify-center gap-[4px] cursor-pointer px-0 text-grey-50 xl:px-[16px] lg:shrink-0">
             <svg
               width="16"
               height="16"
@@ -167,8 +172,8 @@ const SearchFilter = () => {
           </div>
         </div>
       </section>
-      </>
-  )
-}
+    </>
+  );
+};
 
-export default SearchFilter
+export default SearchFilterButtons;

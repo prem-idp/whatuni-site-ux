@@ -15,7 +15,7 @@ import TotalCostSkeleton from "../components/skeleton/totalcostskeleton";
 const Colc = () => {
   return (
     <>
-      <ColcBanner />
+      <ColcBanner />  
       <section className="bg-white px-[16px] py-[32px] md:py-[64px] xl:px-0">
         <div className="max-w-container mx-auto">
           <div className="flex flex-col gap-[16px] justify-between lg:flex-row">

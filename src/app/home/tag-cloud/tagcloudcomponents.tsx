@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Tagcloudcomponents = () => {
+const Tagcloudcomponents = ({ routerUrl}: {routerUrl:boolean} ) => {
   return (
     <div className='tag-cloud-container bg-white'>
       <div className='max-w-container mx-auto'>
         <div className='tag-cloud-card-container flex flex-col gap-[16px] px-[20px] lg:px-[0] pt-[8px] pb-[32px] md:pt-[16px] md:pb-[64px]'>
-            <div className='tag-cloud-header'>
-                <h6 className='font-bold'>Tag cloud heading</h6>
+            <div className='tag-cloud-header'>            
+            <div className={`text-grey300 ${routerUrl ? 'h2' : 'h6'}`} >
+              {routerUrl ? ('Scholarships at this uni') :( 'Tag cloud heading') }
+              </div>
             </div>
               <div className="tag-cloud-inner-wrap"> 
                 <ul className='flex flex-wrap gap-[8px]'>
