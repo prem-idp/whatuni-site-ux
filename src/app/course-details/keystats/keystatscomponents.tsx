@@ -2,14 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Keystatscomponents = () => {
+const Keystatscomponents = ({onOpenModal}:any) => {
   return (
     <>
     <div className='keystats-container bg-grey-600 p-[24px] md:p-[32px] flex flex-col gap-[32px] rounded-[8px]'>
       <div className='keystats-inner-row flex flex-col gap-[8px]'>
           <div className='keystats-inner-header flex flex-col md:flex-row items-start md:items-center justify-between  gap-[16px] md:gap-[8px]'>
             <div className='h4 text-white'>Key stats</div>
-            <div className='flex items-center gap-[8px] para font-semibold text-white underline cursor-pointer'>Art & design 
+            <div onClick={onOpenModal} className='flex items-center gap-[8px] para font-semibold text-white underline cursor-pointer'>Art & design 
               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1.38477L6 6.38477L1 1.38477" stroke="#fff" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -48,7 +48,7 @@ const Keystatscomponents = () => {
                   <div>
                     <span>Drop-out rate</span>
                   </div>
-                  <span>89%</span>
+                  <span className='underline cursor-pointer'>89%</span>
                 </div>
                 <div className=" progess-bar bg-primary-400 rounded-[8px] h-[8px] overflow-hidden">
                   <div className="progess-bar__line transition-all duration-[3s] bg-primary-200 h-[8px] w-[80%]"></div>
@@ -59,7 +59,7 @@ const Keystatscomponents = () => {
                   <div>
                     <span>Employment rate</span>
                   </div>
-                  <span>89%</span>
+                  <span className='underline cursor-pointer'>89%</span>
                 </div>
                 <div className=" progess-bar bg-primary-400 rounded-[8px] h-[8px] overflow-hidden">
                   <div className="progess-bar__line transition-all duration-[3s] bg-primary-200 h-[8px] w-[40%]"></div>
@@ -90,7 +90,8 @@ const Keystatscomponents = () => {
       <div className='keystats-inner-row'>
           <div className='flex items-center gap-[4px] *:text-x-small *:font-semibold *:tracking-[1px]'>
             <div className='text-white'>SOURCE:</div>
-            <Link href='#' className='uppercase text-white underline'>UNISTATS / UCAS / HESA</Link>
+            <Link href='#' className='uppercase text-white underline'>UNISTATS,</Link>
+            <Link href='#' className='uppercase text-white underline'>UCAS / HESA</Link>
           </div>
       </div>
     </div>

@@ -57,9 +57,9 @@ const Popularalevelsubjectcomponents = () => {
                       
                     </div>
                    {/* -- */}
-                   <div className='flex items-center gap-[4px] *:text-x-small *:font-semibold *:tracking-[1px]'>
+                   <div className='flex items-center gap-[4px] *:text-x-small'>
                         <div className='text-grey300'>DATA SOURCE:</div>
-                        <Link href='#' className='uppercase text-primary-400 underline'>HESA</Link>
+                        <Link href='#' className='uppercase text-primary-400 hover:underline'>HESA</Link>
                     </div>  
                   </div>
                   {/* -- */}
@@ -110,9 +110,9 @@ const Popularalevelsubjectcomponents = () => {
                       
                     </div>
                    {/* -- */}
-                    <div className='flex items-center gap-[4px] *:text-x-small *:font-semibold *:tracking-[1px]'>
+                    <div className='flex items-center gap-[4px] *:text-x-small'>
                         <div className='text-grey300'>DATA SOURCE:</div>
-                        <Link href='#' className='uppercase text-primary-400 underline'>HESA</Link>
+                        <Link href='#' className='uppercase text-primary-400 hover:underline'>HESA</Link>
                     </div>  
                   </div>
                 </div>

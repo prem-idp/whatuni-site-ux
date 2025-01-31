@@ -15,15 +15,15 @@ const Courseheaderinfocomponents = () => {
                     {/* -- */}
                     <div className='uniresults-inner flex flex-col md:flex-row gap-[24px]'>
                         <div className='uniresults-left'>
-                          <div className="univ__logo bg-white p-[4px] w-[120px] rounded-[4px] shadow-custom-4 overflow-hidden hidden md:block">
+                          <div className="univ__logo bg-white p-[4px] w-[120px] rounded-[8px] shadow-custom-4 overflow-hidden hidden md:block">
                             <Image className='w-full' src="/assets/images/myhc_252670.jpg" alt="uni logo" width={112} height={112}  />
                           </div>
                         </div>
                         <div className='uniresults-right flex flex-col flex-1 gap-[16px]'>
                             <div className='uni-info-card flex flex-col gap-[8px]'>
-                              <div className='flex justify-between items-start h5 text-grey300'>
+                              <div className='flex flex-col-reverse md:flex-row gap-[16px] md:gap-0  justify-between items-start h5 text-grey300'>
                                 <span>Animation BA (Hons)</span>
-                                <span className="favorite group items-center justify-center flex min-w-[48px] w-[48px] h-[48px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
+                                <span className="favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
                                     <svg
                                       className='group-hover:fill-primary-400'
                                       width="20"
@@ -43,36 +43,24 @@ const Courseheaderinfocomponents = () => {
                                     </svg>
                                   </span>
                               </div>
-                            <a href="#" className='block w-fit para-lg font-semibold text-primary-400 hover:text-primary-500 hover:underline line-clamp-1'>Norwich University of the Arts</a>
+                            <a href="#" className='block w-fit para-lg font-semibold text-primary-400 hover:text-primary-500 hover:underline'>Norwich University of the Arts</a>
                             <div className='flex'>
                               <div className='rating-pod flex items-center gap-[8px]'>
                                 <div className='rating-card flex items-center gap-[8px]'>
                                 <span className="reviewLink small text-grey300">Student rating</span>
                                   <div className='tooltip'>
-                                    <div className='flex gap-[2px] pb-[2px] border-b border-dashed border-grey-300'>
-                                      <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.3604 1.06101C4.56172 0.441415 5.43828 0.441415 5.6396 1.06101L6.3589 3.27479C6.44893 3.55188 6.70715 3.73948 6.9985 3.73948H9.3262C9.97768 3.73948 10.2485 4.57314 9.72149 4.95607L7.83834 6.32426C7.60263 6.49551 7.504 6.79906 7.59404 7.07615L8.31334 9.28993C8.51465 9.90952 7.8055 10.4247 7.27844 10.0418L5.39529 8.67363C5.15959 8.50238 4.84041 8.50238 4.60471 8.67363L2.72156 10.0418C2.1945 10.4247 1.48535 9.90952 1.68666 9.28993L2.40596 7.07615C2.496 6.79906 2.39737 6.49551 2.16166 6.32426L0.278509 4.95607C-0.248549 4.57314 0.0223231 3.73948 0.673802 3.73948H3.0015C3.29286 3.73948 3.55107 3.55188 3.6411 3.27479L4.3604 1.06101Z" fill="#BC0000"/>
-                                      </svg>
-                                      <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.3604 1.06101C4.56172 0.441415 5.43828 0.441415 5.6396 1.06101L6.3589 3.27479C6.44893 3.55188 6.70715 3.73948 6.9985 3.73948H9.3262C9.97768 3.73948 10.2485 4.57314 9.72149 4.95607L7.83834 6.32426C7.60263 6.49551 7.504 6.79906 7.59404 7.07615L8.31334 9.28993C8.51465 9.90952 7.8055 10.4247 7.27844 10.0418L5.39529 8.67363C5.15959 8.50238 4.84041 8.50238 4.60471 8.67363L2.72156 10.0418C2.1945 10.4247 1.48535 9.90952 1.68666 9.28993L2.40596 7.07615C2.496 6.79906 2.39737 6.49551 2.16166 6.32426L0.278509 4.95607C-0.248549 4.57314 0.0223231 3.73948 0.673802 3.73948H3.0015C3.29286 3.73948 3.55107 3.55188 3.6411 3.27479L4.3604 1.06101Z" fill="#BC0000"/>
-                                      </svg>
-                                      <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.3604 1.06101C4.56172 0.441415 5.43828 0.441415 5.6396 1.06101L6.3589 3.27479C6.44893 3.55188 6.70715 3.73948 6.9985 3.73948H9.3262C9.97768 3.73948 10.2485 4.57314 9.72149 4.95607L7.83834 6.32426C7.60263 6.49551 7.504 6.79906 7.59404 7.07615L8.31334 9.28993C8.51465 9.90952 7.8055 10.4247 7.27844 10.0418L5.39529 8.67363C5.15959 8.50238 4.84041 8.50238 4.60471 8.67363L2.72156 10.0418C2.1945 10.4247 1.48535 9.90952 1.68666 9.28993L2.40596 7.07615C2.496 6.79906 2.39737 6.49551 2.16166 6.32426L0.278509 4.95607C-0.248549 4.57314 0.0223231 3.73948 0.673802 3.73948H3.0015C3.29286 3.73948 3.55107 3.55188 3.6411 3.27479L4.3604 1.06101Z" fill="#BC0000"/>
-                                      </svg>
-                                      <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.3604 1.06101C4.56172 0.441415 5.43828 0.441415 5.6396 1.06101L6.3589 3.27479C6.44893 3.55188 6.70715 3.73948 6.9985 3.73948H9.3262C9.97768 3.73948 10.2485 4.57314 9.72149 4.95607L7.83834 6.32426C7.60263 6.49551 7.504 6.79906 7.59404 7.07615L8.31334 9.28993C8.51465 9.90952 7.8055 10.4247 7.27844 10.0418L5.39529 8.67363C5.15959 8.50238 4.84041 8.50238 4.60471 8.67363L2.72156 10.0418C2.1945 10.4247 1.48535 9.90952 1.68666 9.28993L2.40596 7.07615C2.496 6.79906 2.39737 6.49551 2.16166 6.32426L0.278509 4.95607C-0.248549 4.57314 0.0223231 3.73948 0.673802 3.73948H3.0015C3.29286 3.73948 3.55107 3.55188 3.6411 3.27479L4.3604 1.06101Z" fill="#BC0000"/>
-                                        </svg>
-                                      <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.3604 1.06101C4.56172 0.441415 5.43828 0.441415 5.6396 1.06101L6.3589 3.27479C6.44893 3.55188 6.70715 3.73948 6.9985 3.73948H9.3262C9.97768 3.73948 10.2485 4.57314 9.72149 4.95607L7.83834 6.32426C7.60263 6.49551 7.504 6.79906 7.59404 7.07615L8.31334 9.28993C8.51465 9.90952 7.8055 10.4247 7.27844 10.0418L5.39529 8.67363C5.15959 8.50238 4.84041 8.50238 4.60471 8.67363L2.72156 10.0418C2.1945 10.4247 1.48535 9.90952 1.68666 9.28993L2.40596 7.07615C2.496 6.79906 2.39737 6.49551 2.16166 6.32426L0.278509 4.95607C-0.248549 4.57314 0.0223231 3.73948 0.673802 3.73948H3.0015C3.29286 3.73948 3.55107 3.55188 3.6411 3.27479L4.3604 1.06101Z" fill="#ADB2B6"/>
+                                    <div className='flex gap-[2px]'>
+                                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.85874 1.14803C8.21796 0.0424542 9.78205 0.0424547 10.1413 1.14803L11.4248 5.09818C11.5854 5.59261 12.0462 5.92736 12.566 5.92736H16.7195C17.8819 5.92736 18.3653 7.4149 17.4248 8.09818L14.0646 10.5395C13.644 10.8451 13.468 11.3867 13.6287 11.8812L14.9122 15.8313C15.2714 16.9369 14.006 17.8562 13.0656 17.173L9.70535 14.7316C9.28477 14.426 8.71525 14.426 8.29466 14.7316L4.93446 17.173C3.994 17.8562 2.72863 16.9369 3.08785 15.8313L4.37133 11.8812C4.53198 11.3867 4.35599 10.8451 3.93541 10.5395L0.575205 8.09818C-0.365252 7.4149 0.118079 5.92736 1.28055 5.92736H5.43399C5.95386 5.92736 6.41461 5.59261 6.57525 5.09818L7.85874 1.14803Z" fill="#0FBEFD"/>
                                       </svg>
                                     </div>
                                   </div>
                                   <span className='small text-grey300'>(4.6)</span>
                                 </div>
-                                <a href="#" className='reviewLink block font-normal small text-primary-400 hover:text-primary-500 underline'>View reviews</a>
+                                <a href="#" className='reviewLink block small text-primary-400 hover:text-primary-500 hover:underline'>View reviews</a>
                               </div>
                             </div>  
-                            <p className='small text-grey300 line-clamp-3 md:line-clamp-2'>Want to know what it's like to study this course at uni? We've got all the key info, from entry requirements to the modules on offer. If that all sounds good, why not check out reviews from real students or even book onto an upcoming open day?</p>                        
+                            <p className='small text-grey300'>Want to know what it's like to study this course at uni? We've got all the key info, from entry requirements to the modules on offer. If that all sounds good, why not check out reviews from real students or even book onto an upcoming open day?</p>                        
                             </div>
                             <div className='uniresults-content-right flex items-end'>
                               <div className='btn-pod w-full grid grid-col-1 md:grid-cols-2 lg:flex lg:grid-cols-none gap-[8px]'>
