@@ -85,7 +85,7 @@ const Uniinfocomponents = () => {
                   <div className='course-card flex flex-col gap-[16px] w-full border border-grey-200 rounded-[8px] bg-white p-[16px] md:p-[24px]'>                  
                         <div className="course-highlight__option flex items-center gap-[24px]">
                             <div className='w-[120px] p-[10px]'>
-                                <Image className='w-full' src="/assets/images/course-details/wusca/WUSCA_badge.PNG" alt="academic-cap" width="120" height="93" />    
+                                <Image className='w-full' src="/assets/images/course-details/wusca/WUSCA_badge.png" alt="academic-cap" width="120" height="93" />    
                             </div>                          
                           <div className="flex flex-col gap-[4px] *:text-grey300">
                             <div className="h5 font-semibold">Whatuni Student Choice Awards</div>
@@ -96,7 +96,7 @@ const Uniinfocomponents = () => {
                   <div className='course-card flex flex-col gap-[16px] w-full border border-grey-200 rounded-[8px] bg-white p-[16px] md:p-[24px]'>                  
                         <div className="course-highlight__option flex items-center gap-[24px]">
                             <div className='w-[120px] p-[10px]'>
-                                <Image className='w-full' src="/assets/images/course-details/wusca/WUSCA_badge.PNG" alt="academic-cap" width="120" height="93" />    
+                                <Image className='w-full' src="/assets/images/course-details/wusca/WUSCA_badge.png" alt="academic-cap" width="120" height="93" />    
                             </div>                          
                           <div className="flex flex-col gap-[4px] *:text-grey300">
                             <div className="h5 font-semibold">Whatuni Student Choice Awards</div>
@@ -123,7 +123,7 @@ const Uniinfocomponents = () => {
                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                               <path d="M15 5V7M15 11V13M15 17V19M5 5C3.89543 5 3 5.89543 3 7V10C4.10457 10 5 10.8954 5 12C5 13.1046 4.10457 14 3 14V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V14C19.8954 14 19 13.1046 19 12C19 10.8954 19.8954 10 21 10V7C21 5.89543 20.1046 5 19 5H5Z" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                               </svg>
-                              <span className="flex flex-col md:flex-row items-start gap-[4px] small">Nearest train station:
+                              <span className="flex flex-col lg:flex-row items-start gap-[4px] small">Nearest train station:
                                 <span>Frizinghall&nbsp;1.2 miles away</span>
                               </span>
                             </div>
@@ -133,7 +133,7 @@ const Uniinfocomponents = () => {
                             <div className="flex flex-col">
                               <div className="para font-semibold text-black">Thinking of studying in Norwich?</div>
                               <p className="small text-black">Check out our</p>
-                              <Link href="" className='small text-primary-400 hover:text-primary-500 hover:underline' title=''>Norwich City guide</Link>
+                              <Link href="" className='small text-primary-500 hover:text-primary-500 hover:underline' title=''>Norwich City guide</Link>
                             </div>
                           </div>
                       </div>
