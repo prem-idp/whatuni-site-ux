@@ -21,7 +21,7 @@ const Scholarshipunislidercomponents = () => {
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 16,
+            spaceBetween: 10,
           },
           1200: {
             slidesPerView: 3,

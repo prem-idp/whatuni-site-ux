@@ -46,7 +46,7 @@ const Socialsignincomponent: React.FC<ChildComponentProps> = ({$showSignupComp})
             </div>
             <div className='regist-col w-full flex items-center relative'>
                 {/* <Socialsignincomponents /> */}
-                <div className='signin w-full flex flex-col px-[24px] py-[16px] md:py-[40px] gap-[16px]'>                       
+                <div className='signin w-full flex flex-col px-[24px] pt-[16px] pb-[112px] md:py-[40px] gap-[16px]'>                       
                     <h6 className='md:text-center'>Welcome to Whatuni</h6>
                     <div className='social_btn flex flex-col gap-[8px]'>
                         <button className='continue_apple w-full flex items-center justify-center gap-[8px] para font-semibold text-grey500 bg-white rounded-[10px] px-[20px] py-[10px] shadow-custom-11 hover:bg-grey-50'>
