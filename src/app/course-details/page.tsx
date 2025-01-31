@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Subscribecomponents from '../article-landing/subscribe-newsletter/subscribecomponents'
 import Breadcrumblayoutcomponent from '../components/breadcrumb-layout/breadcrumblayoutcomponent'
 import Courseoptionscomponents from './course-options/courseoptionscomponents';
@@ -14,8 +15,20 @@ import Findacoursecomponents from './findacourse/findacoursecomponents';
 import Similarcoursecomponents from './similar-course/similarcoursecomponents';
 import Courseheaderinfocomponents from './course-header-info/courseheaderinfocomponents';
 import Subjectmodalcomponents from './Modal/subjectmodalcomponents';
+import Examtypemodalcomponents from './Modal/examtypemodalcomponents';
+import Locationmodalcomponents from './Modal/locationmodalcomponents';
+import Courseinfomodalcomponents from './Modal/courseinfomodalcomponents';
 
 const page = () => {
+  const [openModal, setOpenModal] = useState(null);
+
+  const handleOpenModal = (modalName: any) => {
+    setOpenModal(modalName);
+  };
+  const handleCloseModal = () => {
+    setOpenModal(null);
+  };
+
   const breadcrumbData = [
     {
       url: "#",
@@ -31,7 +44,6 @@ const page = () => {
     },
   ];
 
-
   return (
     <>
     <section className="px-[16px] md:px-[20px] xl:px-[0] pt-[22px]">
@@ -39,7 +51,7 @@ const page = () => {
           <Breadcrumblayoutcomponent data={breadcrumbData} />
         </div>
     </section>
-    <Courseheaderinfocomponents></Courseheaderinfocomponents>
+    <Courseheaderinfocomponents />
     <section className='year-of-entry-container bg-grey300'>
       <div className='max-w-container mx-auto'>
       <div className='overflow-x-scroll scrollbar-hidden'>
@@ -63,20 +75,23 @@ const page = () => {
       </div>
       </div>  
     </section>
-    <Courseoptionscomponents />
+    <Courseoptionscomponents  onOpenModal={() => handleOpenModal("courseoption")}/>
     <Jumptocomponents />
-    <Courseinfocomponents />
+    <Courseinfocomponents  onOpenModal={() => handleOpenModal("subject")} />
     <Modulescomponents />
-    <Entryrequirements />
+    <Entryrequirements onOpenModal={() => handleOpenModal("examType")} />
     <Popularalevelsubjectcomponents />
-    <Tuitionfeescomponents />
-    <Latestreviewscomponents />
+    <Tuitionfeescomponents onOpenModal={() => handleOpenModal("location")} />
+    <Latestreviewscomponents onOpenModal={() => handleOpenModal("subject")}/>
     <Uniinfocomponents />
     <Similarcoursecomponents />
     <Findacoursecomponents />
     <Subscribecomponents />
-    {/* <Subjectmodalcomponents /> */}
-    </>
+    {openModal === "courseoption" && <Courseinfomodalcomponents onClose={handleCloseModal} />}
+    {openModal === "subject" && <Subjectmodalcomponents onClose={handleCloseModal} />}
+    {openModal === "examType" && <Examtypemodalcomponents onClose={handleCloseModal} />}
+    {openModal === "location" && <Locationmodalcomponents onClose={handleCloseModal} />}
+    </>     
   )
 }
 

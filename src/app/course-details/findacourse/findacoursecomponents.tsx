@@ -21,7 +21,7 @@ const Findacoursecomponents = () => {
                               <div className="flex flex-col gap-[24px] min-h-[60px]">
                                 <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
                                   <div className="flex flex-col items-stretch md:flex-row md:items-center">
-                                    <div className="relative mb-[24px] md:mb-[0] shrink-0">
+                                    <div className="relative mt-[4px] mb-[20px] md:mb-[0] shrink-0">
                                       <button
                                          className="flex items-center justify-between gap-[4px] mr-0 w-full small text-black md:w-[160px] md:mr-[16px]"
                                         type="button"
@@ -152,7 +152,7 @@ const Findacoursecomponents = () => {
                                           </ul>
                                       </div>
                                     </div>
-                                    <div className="pt-[2px] md:pt-[0]">
+                                    <div className="pt-[24px] md:pt-[0]">
                                       <button
                                         type="submit"
                                         className="btn btn-primary w-full flex items-center justify-center gap-[6px] px-[24px] py-[10px] para md:w-[138px] lg:para-lg"

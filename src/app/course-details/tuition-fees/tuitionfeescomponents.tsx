@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Tuitionfeescomponents = () => {
+const Tuitionfeescomponents = ({ onOpenModal }:any) => {
   return (
     <>
       <div className='tuition-fees-container'> 
@@ -14,7 +14,7 @@ const Tuitionfeescomponents = () => {
                     <div className='card-header'>
                       <div className='flex items-start md:items-center  gap-[16px] md:gap-[8px]'>
                         <div className='para font-semibold text-black'>Student living</div>
-                        <div className='flex items-center gap-[8px] para font-semibold text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>England 
+                        <div onClick={onOpenModal} className='flex items-center gap-[8px] para font-semibold text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>England 
                           <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M11 1.38477L6 6.38477L1 1.38477" stroke="#4664DC" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
@@ -32,9 +32,13 @@ const Tuitionfeescomponents = () => {
                       </div>
                       {/* -- */}
                       <div className='description'>
-                        <p className='para font-normal'>Although many of our students do come in with top grades and   high UCAS points, these aren’t necessarily essential for entry. We typically ask for a minimum of 104 UCAS points, but we   understand that talented artists, designers and makers can have a wide range of relevant strengths and skills beyond formal   qualifications. We’re just as interested in exploring your portfolio as we are in seeing your grades.
+                        <p className='para font-normal'>This is the fee you pay if you live in England. Please note, this fee has been confirmed.
                         </p>                        
-                    </div>  
+                    </div>
+                    <div className='flex items-center gap-[4px] *:text-x-small'>
+                        <div className='text-grey300'>DATA SOURCE:</div>
+                        <span className='text-grey300'>UCAS /</span><Link href='#' className='text-primary-400 hover:underline'>IDP Connect</Link>
+                    </div>   
                   </div>  
                 </div>
             </div>
