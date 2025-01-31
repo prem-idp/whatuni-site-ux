@@ -17,9 +17,9 @@ const Uniinfocomponents = () => {
                 <div className='flex flex-col gap-[16px] md:gap-[24px] w-full lg:w-[calc(100%_-_309px)]'>
                   <div className='course-card flex flex-col gap-[16px] w-full border border-grey-200 rounded-[8px] bg-white p-[16px] md:p-[24px]'>                  
                     {/* -- */}
-                    <div className='uniresults-inner flex flex-col md:flex-row gap-[24px]'>
+                    <div className='uniresults-inner flex flex-col md:flex-row gap-[8px] md:gap-[24px]'>
                         <div className='uniresults-left flex flex-col gap-[24px]'>
-                          <div className="univ__logo bg-white p-[4px] w-[120px] shadow-custom-4 overflow-hidden">
+                          <div className="univ__logo hidden md:block bg-white p-[4px] w-[120px] rounded-[8px] shadow-custom-4 overflow-hidden">
                             <Image className='w-full' src="/assets/images/myhc_252670.jpg" alt="uni logo" width={112} height={112}  />
                           </div>
                           <div className='favorite'>
@@ -62,7 +62,7 @@ const Uniinfocomponents = () => {
                                   </div>
                                   <span className='small text-grey300'>(4.6)</span>
                                 </div>
-                                <a href="#" className='reviewLink block font-normal small text-primary-400 hover:text-primary-500 underline'>View reviews</a>
+                                <a href="#" className='reviewLink block font-normal small text-primary-400 hover:text-primary-500 hover:underline'>View reviews</a>
                               </div>
                               <div className='flex items-center small text-neutral-900'>CUG ranking&nbsp;
                               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">

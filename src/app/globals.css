@@ -108,6 +108,7 @@
   .custom-scrollbar-2::-webkit-scrollbar-thumb{@apply bg-grey-300 rounded-[4px]}
   .custom-scrollbar-2::-webkit-scrollbar-thumb:hover{@apply bg-grey-400}
   .signup_form .form_container::-webkit-scrollbar{@apply w-[5px]}
+
 }
 html{font-size: 62.5%}
 body {@apply font-inter font-normal text-para text-grey300;}
@@ -383,6 +384,8 @@ p,.para {@apply text-para}
 .uni-info-card .favorite:hover svg,.uni-info-card .favorite.active svg path {@apply fill-primary-400;stroke: white}
 .uniresults-inner .favorite.active svg path{@apply fill-primary-400 stroke-primary-400}
 .uniresults-inner .favorite.active a span{@apply text-primary-400 underline}
+.modal-select .form-checkbox + label .select,.modal-select .form-checkbox:checked + label .selected{@apply flex}
+.modal-select .form-checkbox + label .selected,.modal-select .form-checkbox:checked + label .select{@apply hidden}
 /* Course Details */
 /* sr */
 /* .form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}

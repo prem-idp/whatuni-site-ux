@@ -207,7 +207,7 @@ const Header = () => {
           </div>
           <div className="order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
             <ul className="flex items-center justify-end gap-[10px] rightmenu py-[4px] lg:py-[8px]">
-              <li aria-label="Search">
+              <li>
                 <span
                   onClick={() => rightMenuAction("SEARCH")}
                   className="border border-gray-500 rounded-[34px] flex items-center justify-center w-[48px] h-[48px] cursor-pointer hover:border-primary-500 hover:bg-primary-500"
