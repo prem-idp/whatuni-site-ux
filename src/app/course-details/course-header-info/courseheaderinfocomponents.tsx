@@ -48,6 +48,7 @@ const Courseheaderinfocomponents = () => {
                               <div className='rating-pod flex items-center gap-[8px]'>
                                 <div className='rating-card flex items-center gap-[8px]'>
                                 <span className="reviewLink small text-grey300">Student rating</span>
+                                <div className='flex gap-[4px]'>
                                   <div className='tooltip'>
                                     <div className='flex gap-[2px]'>
                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,6 +57,7 @@ const Courseheaderinfocomponents = () => {
                                     </div>
                                   </div>
                                   <span className='small text-grey300'>(4.6)</span>
+                                </div>
                                 </div>
                                 <a href="#" className='reviewLink block small text-primary-400 hover:text-primary-500 hover:underline'>View reviews</a>
                               </div>
