@@ -42,7 +42,7 @@ const Reviewslidercomponents = () => {
                   <Reviewscard />
               </SwiperSlide>
               <SwiperSlide>
-                  <Reviewscardskeleton />
+                <Reviewscard />
               </SwiperSlide>
               <SwiperSlide>
                   <Reviewscard />
