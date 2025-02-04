@@ -83,7 +83,7 @@ const Uniinfocomponents = () => {
                     {/* -- */}
                   </div>
                   <div className='course-card flex flex-col gap-[16px] w-full border border-grey-200 rounded-[8px] bg-white p-[16px] md:p-[24px]'>                  
-                        <div className="course-highlight__option flex items-center gap-[24px]">
+                        <div className="course-highlight__option flex flex-col md:flex-row items-center gap-[24px]">
                             <div className='w-[120px] p-[10px]'>
                                 <Image className='w-full' src="/assets/images/course-details/wusca/WUSCA_badge.png" alt="academic-cap" width="120" height="93" />    
                             </div>                          
@@ -94,7 +94,7 @@ const Uniinfocomponents = () => {
                         </div>                    
                   </div>
                   <div className='course-card flex flex-col gap-[16px] w-full border border-grey-200 rounded-[8px] bg-white p-[16px] md:p-[24px]'>                  
-                        <div className="course-highlight__option flex items-center gap-[24px]">
+                        <div className="course-highlight__option flex flex-col md:flex-row items-center gap-[24px]">
                             <div className='w-[120px] p-[10px]'>
                                 <Image className='w-full' src="/assets/images/course-details/wusca/WUSCA_badge.png" alt="academic-cap" width="120" height="93" />    
                             </div>                          
@@ -109,7 +109,7 @@ const Uniinfocomponents = () => {
                     <div className='card-map w-full md:w-[453px]'>
                       <Image className='block w-full object-cover' layout='fixed' src="/assets/images/course-details/map_img.jpg" width={453} height={316} alt="Map"/>
                     </div>
-                    <div className='course-card flex flex-col gap-[16px] w-full bg-white p-[16px] md:p-[24px] w-full md:w-[calc(100%_-_452px)]'>                  
+                    <div className='course-card flex flex-col gap-[16px] bg-white p-[16px] md:p-[24px] w-full md:w-[calc(100%_-_452px)]'>                  
                       <div className='flex flex-col gap-[16px]'>
                         <div className='flex flex-col gap-[8px]'>
                           <div className='h5 text-grey300'>Norwich University of the Arts</div>
