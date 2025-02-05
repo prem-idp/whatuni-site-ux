@@ -1,5 +1,5 @@
-import SearchFilterComponent from "@/app/popups/searchfiltercomponent";
 import React, { useState } from "react";
+import SearchFilterComponent from "../popups/searchfiltercomponent";
 
 const SearchFilterButtons = () => {
   // search filter
