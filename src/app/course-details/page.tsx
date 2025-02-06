@@ -26,6 +26,7 @@ const page = () => {
 
   const handleOpenModal = (modalName: any) => {
     setOpenModal(modalName);
+
   };
   const handleCloseModal = () => {
     setOpenModal(null);
@@ -62,7 +63,7 @@ const page = () => {
     <Entryrequirements onOpenModal={() => handleOpenModal("examType")} />
     <Popularalevelsubjectcomponents />
     <Tuitionfeescomponents onOpenModal={() => handleOpenModal("location")} />
-    <Latestreviewscomponents onOpenModal={() => handleOpenModal("subject")}/>
+    <Latestreviewscomponents onOpenModal={() => handleOpenModal("subject") }/>
     <Uniinfocomponents />
     <Similarcoursecomponents />
     <Findacoursecomponents />
