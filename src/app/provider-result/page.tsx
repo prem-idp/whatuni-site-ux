@@ -12,7 +12,7 @@ import Getprospectus from "../components/cards/interaction-button/getprospectus"
 import Visitwebsite from "../components/cards/interaction-button/visitwebsite";
 import BookOpenDay from "../components/cards/interaction-button/bookopenday";
 import SearchFilterButtons from "../components/search-filter-buttons/search-filter-buttons";
-import NoExactMatches from "../components/noexact-matches/noexact-matches";
+// import NoExactMatches from "../components/noexact-matches/noexact-matches";
 
 const page = () => {
   const breadcrumbData = [
@@ -113,23 +113,25 @@ const page = () => {
       className="flex flex-col rounded-[16px] overflow-hidden bg-white shadow-custom-3 border border-grey-200"
     >
       <div className="flex justify-end p-[16px] bg-blue-100">
-        <div className="heart group w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-primary-400 hover:cursor-pointer">
-          <svg className="group-hover:fill-primary-400"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path className="group-hover:stroke-white"
-              d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
-              stroke="#4664DC"
-              strokeWidth="1.67"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+      <span className="favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
+                                  <div className="heart min-w-[40px] w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
+                                    <svg
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 20 20"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
+                                        stroke="#4664DC"
+                                        strokeWidth="1.67"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                      />
+                                    </svg>
+                                  </div>                                  
+                                </span>
       </div>
       <div className="flex p-[16px] flex-col gap-[16px] h-full justify-between">
         <div className="flex flex-col gap-[16px] md:min-h-[240px]">
@@ -201,6 +203,69 @@ const page = () => {
   ));
   return (
     <>
+      {/* skeleton loader  */}
+        {/* Skeleton loader  */}
+      <div className="bg-white hidden">
+        <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
+          {/* Skeleton Breadcrum  */}
+          <div className="pt-[16px] pb-[40px]">
+      <nav aria-label="breadcrumb">
+              <ul className="flex flex-wrap gap-[20px]">
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-[''] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+      </ul>
+    </nav>
+          </div>
+       
+          {/* Skeleton Breadcrum END */}
+          {/* listing card  */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-[24px] px-[10px] gap-[20px]">
+            {/* card  */}
+            {Array.from({ length: 6 }).map((_, index)=>(
+            <div key={ index } className="flex flex-col rounded-[16px] overflow-hidden bg-white shadow-custom-3 border border-grey-200">
+             <div className="flex justify-end h-[72px] p-[16px] bg-blue-100">
+             <span className="skeleton skeleton-text-animated flex max-w-[40px] min-h-[40px] rounded-[50px] !m-0"></span>
+             </div>
+               <div className="p-[16px]">
+                 <div className="min-h-[240px] gap-[16px] flex flex-col">
+                   <div className="flex flex-col">
+                   <span className="skeleton skeleton-text-animated flex w-full"></span>
+                 <span className="skeleton skeleton-text-animated flex max-w-[90%]"></span>
+                 <span className="skeleton skeleton-text-animated flex max-w-[60%]"></span>
+                   </div>
+                 
+                   <div className="flex flex-col">
+                   <span className="skeleton skeleton-text-animated flex w-full"></span>
+                 <span className="skeleton skeleton-text-animated flex max-w-[90%]"></span>
+                 <span className="skeleton skeleton-text-animated flex max-w-[60%]"></span>
+                   </div>
+                 
+                 </div>
+                 <div className="">
+                 <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                 <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                 <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                 <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                 </div>
+             </div>
+             </div>
+            ))}
+         
+          </div>
+          {/* listing card  END */}
+          </div>
+          </div>
+      {/* skeleton loader END */}
       {/* breadcrumb  */}
       <section className="bg-white hidden lg:block">
         <div className="max-w-container mx-auto pt-[24px] pb-[8px]">
@@ -273,23 +338,26 @@ const page = () => {
                 </ul>
               </div>
             </div>
-            <div className="heart mr-[0] lg:mr-[10px] group min-w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-primary-400 hover:cursor-pointer">
-          <svg className="group-hover:fill-primary-400"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path className="group-hover:stroke-white"
-              d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
-              stroke="#4664DC"
-              strokeWidth="1.67"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+            
+            <span className="favorite group mr-[0] lg:mr-[10px]  items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
+                                  <div className="heart min-w-[40px] w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
+                                    <svg
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 20 20"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
+                                        stroke="#4664DC"
+                                        strokeWidth="1.67"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                      />
+                                    </svg>
+                                  </div>                                  
+                                </span>
           </div>
         </div>
       </section>
