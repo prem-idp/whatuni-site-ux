@@ -27,7 +27,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                 <div className='select-subject-container flex flex-col gap-[16px]'>                    
                     <div className='select-subject-card pr-[16px] custom-scrollbar-2 overflow-y-auto h-[calc(100vh_-_82px)]'>
                     {/* -- */}
-                        <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[16px] mb-[16px]'>
+                        <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[24px] mb-[24px]'>
                             <div className='card-header flex flex-col gap-[4px]'>
                                 <div className='h5 text-grey300'>Course info</div>
                                 <p className='para-lg font-semibold text-grey300'>Select a course option</p>
@@ -72,7 +72,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                         </div>
                     {/* -- */}
                     {/* -- */}
-                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[16px] mb-[16px]'>
+                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[24px] mb-[24px]'>
                             <div className='card-header flex flex-col gap-[4px]'>
                                 <div className='h5 text-grey300'>Course info</div>
                                 <p className='para-lg font-semibold text-grey300'>Select a course option</p>
@@ -117,7 +117,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                         </div>
                     {/* -- */}
                     {/* -- */}
-                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[16px] mb-[16px]'>
+                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[24px] mb-[24px]'>
                             <div className='card-header flex flex-col gap-[4px]'>
                                 <div className='h5 text-grey300'>Course info</div>
                                 <p className='para-lg font-semibold text-grey300'>Select a course option</p>
@@ -162,7 +162,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                         </div>
                     {/* -- */}
                     {/* -- */}
-                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[16px] mb-[16px]'>
+                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[24px] mb-[24px]'>
                             <div className='card-header flex flex-col gap-[4px]'>
                                 <div className='h5 text-grey300'>Course info</div>
                                 <p className='para-lg font-semibold text-grey300'>Select a course option</p>
@@ -207,7 +207,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                         </div>
                     {/* -- */}
                     {/* -- */}
-                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[16px] mb-[16px]'>
+                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[24px] mb-[24px]'>
                             <div className='card-header flex flex-col gap-[4px]'>
                                 <div className='h5 text-grey300'>Course info</div>
                                 <p className='para-lg font-semibold text-grey300'>Select a course option</p>
@@ -252,7 +252,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                         </div>
                     {/* -- */}
                     {/* -- */}
-                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[16px] mb-[16px]'>
+                    <div className='flex flex-col gap-[16px] border-b border-b-grey400 pb-[24px] mb-[24px]'>
                             <div className='card-header flex flex-col gap-[4px]'>
                                 <div className='h5 text-grey300'>Course info</div>
                                 <p className='para-lg font-semibold text-grey300'>Select a course option</p>

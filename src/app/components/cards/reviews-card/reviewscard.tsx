@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Reviewscard = () => {
+const Reviewscard = ({onOpenReviewModal}:any) => {
   return (
-    <Link href="" className="reviews-card group flex flex-col justify-between bg-white p-[16px] rounded-[8px] border border-grey-200 hover:border-primary-400 shadow-custom-2 min-h-[267px]">
+    <div onClick={onOpenReviewModal} className="reviews-card group flex flex-col justify-between bg-white p-[16px] rounded-[8px] border border-grey-200 hover:border-primary-400 shadow-custom-2 min-h-[267px] cursor-pointer">
       <div className="review-card-header flex items-center gap-[8px] border-b border-neutrale-200 pb-[16px] min-h-[83px]">
           <h6 className="review-box__avatar flex justify-center items-center text-white w-[48px] h-[48px] bg-primary-400 rounded-[100px]">MW</h6>
           <div className="review-box__details flex flex-col justify-center w-[calc(100%_-_48px)]">
@@ -34,7 +34,7 @@ const Reviewscard = () => {
         <div className="reviewed__date small text-grey-500 line-clamp-3 min-h-[63px] break-words">it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less nor</div>
         <div className="reviewed__date font-semibold small text-primary-400 group-hover:underline">Read full review</div>
       </div>
-    </Link>
+    </div>
   )
 }
 export default Reviewscard
