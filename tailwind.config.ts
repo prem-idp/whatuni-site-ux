@@ -45,6 +45,7 @@ const config: Config = {
       colors: {
         "success-400": "#34D399",
         "success-700": "#047857",
+        "success-800": "#065F46",
         //"blue-50":"#EDFCFF",
         //"blue-100": "#C8F0F5",
         //"blue-200": "#0FBEFD",
@@ -62,6 +63,7 @@ const config: Config = {
         "neutral400": "#94A3B8",
         "neutral600": "#475569",
         "green200": "#B4E646",
+        "warning-800":"#92400E",
         // only for Contentful team 
         blue:{
           50:"#EDFCFF",
