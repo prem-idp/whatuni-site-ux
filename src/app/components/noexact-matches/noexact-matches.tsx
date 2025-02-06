@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const noExactMatches = () => {
+const NoExactMatches = () => {
   return (
       <>
        <div className="bg-grey-50 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
@@ -30,4 +30,4 @@ const noExactMatches = () => {
   )
 }
 
-export default noExactMatches
+export default NoExactMatches;

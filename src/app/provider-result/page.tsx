@@ -201,6 +201,69 @@ const page = () => {
   ));
   return (
     <>
+      {/* skeleton loader  */}
+        {/* Skeleton loader  */}
+      <div className="bg-white hidden">
+        <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
+          {/* Skeleton Breadcrum  */}
+          <div className="pt-[16px] pb-[40px]">
+      <nav aria-label="breadcrumb">
+              <ul className="flex flex-wrap gap-[20px]">
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-[''] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+      </ul>
+    </nav>
+          </div>
+       
+          {/* Skeleton Breadcrum END */}
+          {/* listing card  */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-[24px] px-[10px] gap-[20px]">
+            {/* card  */}
+            {Array.from({ length: 6 }).map((_, index)=>(
+            <div key={ index } className="flex flex-col rounded-[16px] overflow-hidden bg-white shadow-custom-3 border border-grey-200">
+             <div className="flex justify-end h-[72px] p-[16px] bg-blue-100">
+             <span className="skeleton skeleton-text-animated flex max-w-[40px] min-h-[40px] rounded-[50px] !m-0"></span>
+             </div>
+               <div className="p-[16px]">
+                 <div className="min-h-[240px] gap-[16px] flex flex-col">
+                   <div className="flex flex-col">
+                   <span className="skeleton skeleton-text-animated flex w-full"></span>
+                 <span className="skeleton skeleton-text-animated flex max-w-[90%]"></span>
+                 <span className="skeleton skeleton-text-animated flex max-w-[60%]"></span>
+                   </div>
+                 
+                   <div className="flex flex-col">
+                   <span className="skeleton skeleton-text-animated flex w-full"></span>
+                 <span className="skeleton skeleton-text-animated flex max-w-[90%]"></span>
+                 <span className="skeleton skeleton-text-animated flex max-w-[60%]"></span>
+                   </div>
+                 
+                 </div>
+                 <div className="">
+                 <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                 <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                 <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                 <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                 </div>
+             </div>
+             </div>
+            ))}
+         
+          </div>
+          {/* listing card  END */}
+          </div>
+          </div>
+      {/* skeleton loader END */}
       {/* breadcrumb  */}
       <section className="bg-white hidden lg:block">
         <div className="max-w-container mx-auto pt-[24px] pb-[8px]">
