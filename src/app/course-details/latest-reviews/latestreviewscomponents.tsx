@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Reviewscomponents from '@/app/home/reviews/reviewscomponents'
 import Reviewslidercomponents from '@/app/components/slider/reviewslidercomponents'
 
-const Latestreviewscomponents = ({ onOpenModal }:any) => {
+const Latestreviewscomponents = ({ onOpenModal}:any) => {
   return (
     <>
       <div className='latest-reviews-container'> 
@@ -17,10 +17,59 @@ const Latestreviewscomponents = ({ onOpenModal }:any) => {
                       <div className='card-header flex flex-col gap-[8px]'>
                         <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-[8px]'>
                           <div className='h5 text-black'>How animation students rated:</div>
-                          <div className='flex items-center gap-[8px] para font-semibold text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>University Rating 
+                          <div className='relative group flex items-center gap-[8px] para font-semibold text-primary-400 hover:text-primary-500 hover:underline cursor-pointer pb-[10px] mb-[-10px]'>University Rating 
                             <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11 1.38477L6 6.38477L1 1.38477" stroke="#4664DC" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+                            {/* -- */}
+                             <div className='hidden z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left:0 md:right-0 top-[32px] w-[326px] md:w-[342px] group-hover:block'>
+                              <div className='x-small text-neutral700 bg-neutral-50 font-bold p-[16px]'>RATING TYPE</div>
+                                <ul className='max-h-[280px] overflow-y-auto custom-scrollbar-2 overflow-hidden'>
+                                            <li>
+                                              <Link
+                                                href="#"
+                                                className="block small text-black font-normal px-[16px] py-[10px] underline hover:bg-blue-50 hover:underline"
+                                              >
+                                                University rating
+                                              </Link>
+                                            </li>
+                                            <li>
+                                              <Link
+                                                className="block small text-black  font-normal px-[16px] py-[10px] hover:bg-blue-50 hover:underline"
+                                                href="#"
+                                              >
+                                                X rating
+                                              </Link>
+                                            </li>
+                                            <li>
+                                              <Link
+                                                className="block small text-black font-normal px-[16px] py-[10px] hover:bg-blue-50 hover:underline"
+                                                href="#"
+                                              >
+                                                X rating
+                                              </Link>
+                                            </li> 
+                                            <li>
+                                              <Link
+                                                className="block small text-black font-normal px-[16px] py-[10px] hover:bg-blue-50 hover:underline"
+                                                href="#"
+                                              >
+                                                X rating
+                                              </Link>
+                                            </li> 
+                                            <li>
+                                              <Link
+                                                className="block small text-black font-normal px-[16px] py-[10px] hover:bg-blue-50 hover:underline"
+                                                href="#"
+                                              >
+                                                X rating
+                                              </Link>
+                                            </li> 
+                                          
+                                </ul>
+                              </div>
+                            
+                            {/* -- */}     
                           </div>
                         </div>
                         <div className='rating-pod flex items-center gap-[8px]'>
