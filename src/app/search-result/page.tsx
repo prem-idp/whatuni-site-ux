@@ -172,7 +172,7 @@ const SearchResult = ({ title, content }: any) => {
       {/* start search filter button */}
 
       {/* start serach lables */}
-      <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[10px] md:px-[20px] xl:px-0 lg:py-[8px]">
+      <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0">
         <div className="max-w-container mx-auto">
           <ul className="flex items-start gap-[8px] uppercase">
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
@@ -602,7 +602,7 @@ const SearchResult = ({ title, content }: any) => {
                           into teaching but then realised after visiting Kent’s
                           facilities this would be the right plac
                         </div>
-                        <div className="absolute bottom-0 right-[60px]">
+                        <div className="absolute bottom-0 bg-grey-100 right-0 lg:right-[56px]">
                           <span>... </span>
                           <Link
                             href=""
@@ -688,7 +688,7 @@ const SearchResult = ({ title, content }: any) => {
                             <Getprospectus showCount={chitem.buttonCount} />
                           ) : null}
 
-                          {item.showvisit ? <Visitwebsite /> : null}
+                          {item.showvisit ? <Visitwebsite showCount={chitem.buttonCount}/> : null}
 
                           {item.showBooking ? <BookOpenDay /> : null}
 
