@@ -91,7 +91,7 @@
   }
 
   .btn-orange {
-    @apply bg-orange-600 hover:bg-orange-700;
+    @apply bg-negative-default hover:bg-warning-800;
   }
 
   .btn-grey {
@@ -99,7 +99,7 @@
   }
 
   .btn-green {
-    @apply bg-positive-default hover:bg-positive-dark;
+    @apply bg-positive-dark hover:bg-success-800  ;
   }
 
   .btn-blue {

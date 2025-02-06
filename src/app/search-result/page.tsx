@@ -172,7 +172,7 @@ const SearchResult = ({ title, content }: any) => {
       {/* start search filter button */}
 
       {/* start serach lables */}
-      <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[10px] md:px-[20px] xl:px-0 lg:py-[8px]">
+      <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0">
         <div className="max-w-container mx-auto">
           <ul className="flex items-start gap-[8px] uppercase">
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
@@ -369,9 +369,9 @@ const SearchResult = ({ title, content }: any) => {
           </div>
           {/* end sorting */}
           {/* start university and video section */}
-          <div className="bg-grey-600 rounded-[8px] p-[24px] min-h-[268px] flex flex-col gap-[24px] md:flex-row md:p-[16px]">
+          <div className="bg-grey-600 rounded-[8px] p-[16px] flex flex-col gap-[24px] md:flex-row lg:p-[24px]">
             <div className="flex flex-col gap-[8px] w-full order-2  lg:order-1">
-              <div className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-white hidden lg:block">
+              <div className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-white shadow-custom-4 hidden lg:block">
                 <Image
                   src="/assets/icons/search-result/kent.png"
                   alt="University logo"
@@ -430,7 +430,7 @@ const SearchResult = ({ title, content }: any) => {
                 </svg>
               </Link>
             </div>
-            <div className="w-full md:w-[392px] shrink-0 flex items-center justify-center rounded-[8px] overflow-hidden relative order-1 lg:order-2">
+            <div className="w-full shrink-0 flex self-center  rounded-[8px] overflow-hidden relative order-1 md:w-[310px] md:h-[158px] lg:w-[391px] lg:h-[200px] lg:order-2">
               <video className="w-full hidden" src="" controls></video>
               <div className="w-full relative rounded-[8px] overflow-hidden flex justify-center">
                 <Image
@@ -438,6 +438,7 @@ const SearchResult = ({ title, content }: any) => {
                   alt="Thumbnail"
                   width={391}
                   height={200}
+                  className="w-full h-full"
                 />
               </div>
               <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer">
@@ -463,7 +464,7 @@ const SearchResult = ({ title, content }: any) => {
                     <div className="flex items-start gap-[8px]">
                       <Link
                         href=""
-                        className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-white"
+                        className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-white shadow-custom-4"
                       >
                         <Image
                           src="/assets/icons/search-result/kent.png"
@@ -525,7 +526,7 @@ const SearchResult = ({ title, content }: any) => {
                       <div className="bg-grey-100 text-grey-500 px-[8px] rounded-[4px]">
                         REGION
                       </div>
-                      <div className="flex items-center justify-center gap-[2px] bg-positive-light text-positive-default px-[8px] rounded-[4px]">
+                      <div className="flex items-center justify-center gap-[2px] bg-green-100 text-positive-dark px-[8px] rounded-[4px]">
                         <svg
                           width="16"
                           height="16"
@@ -555,7 +556,7 @@ const SearchResult = ({ title, content }: any) => {
                       WUSCA rank: 18th
                     </Link>
                     <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
-                      <div className="flex items-center gap-[2px] bg-positive-light text-positive-default px-[8px] rounded-[4px]">
+                      <div className="flex items-center gap-[2px] bg-green-100 text-positive-dark px-[8px] rounded-[4px]">
                         <Image
                           src="/assets/icons/search-result/lectures-green.svg"
                           alt="Lecturers and Teaching"
@@ -581,9 +582,11 @@ const SearchResult = ({ title, content }: any) => {
                 ) : null}
               </div>
               <div className="flex flex-col">
-                <div className="bg-white p-[16px] border border-grey-200 rounded-b-[16px] shadow-custom-3 lg:rounded-tr-[16px] lg:rounded-b-[16px] lg:p-[20px]">
-                  <div className="bg-grey-100 p-[12px] rounded-[8px] flex items-center gap-[4px]">
-                    <div className="text-heading1 relative top-[12px]">“</div>
+                <div className="bg-white p-[16px] border border-grey-200 rounded-b-[16px] shadow-custom-3 md:rounded-tr-[16px] lg:p-[20px]">
+                  <div className="bg-grey-100 p-[12px] rounded-[8px] flex gap-[4px]">
+                    <div className="text-heading1 relative top-[20px] font-farro font-normal">
+                      “
+                    </div>
                     <div className="flex flex-col gap-[4px]">
                       <Link
                         href=""
@@ -599,7 +602,7 @@ const SearchResult = ({ title, content }: any) => {
                           into teaching but then realised after visiting Kent’s
                           facilities this would be the right plac
                         </div>
-                        <div className="absolute bottom-0 right-[60px]">
+                        <div className="absolute bottom-0 bg-grey-100 right-0 lg:right-[56px]">
                           <span>... </span>
                           <Link
                             href=""
@@ -662,7 +665,6 @@ const SearchResult = ({ title, content }: any) => {
                           </div>
                         </div>
                         <ClickAndShow>
-                          {" "}
                           <div className="text-black x-small">
                             <div className="font-semibold">Year 1</div>
                             <ul className="list-disc pl-[20px] flex flex-col gap-[4px]">
@@ -682,9 +684,11 @@ const SearchResult = ({ title, content }: any) => {
                               : "md:grid-cols-1 md:grid-flow-row"
                           }`}
                         >
-                          {item.showprospect ? <Getprospectus /> : null}
+                          {item.showprospect ? (
+                            <Getprospectus showCount={chitem.buttonCount} />
+                          ) : null}
 
-                          {item.showvisit ? <Visitwebsite /> : null}
+                          {item.showvisit ? <Visitwebsite showCount={chitem.buttonCount}/> : null}
 
                           {item.showBooking ? <BookOpenDay /> : null}
 
