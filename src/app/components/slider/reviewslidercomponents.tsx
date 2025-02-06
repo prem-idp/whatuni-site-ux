@@ -12,7 +12,7 @@ import {FreeMode, Navigation, Pagination} from 'swiper/modules';
 import Reviewscard from '../cards/reviews-card/reviewscard';
 import Reviewscardskeleton from '../skeleton/reviewscardskeleton';
 
-const Reviewslidercomponents = () => {
+const Reviewslidercomponents = ({onOpenReviewModal}:any) => {
   return (
     <> 
     <div className='slider-container'>
@@ -36,22 +36,22 @@ const Reviewslidercomponents = () => {
         modules={[FreeMode, Pagination, Navigation]}
         className="MultiSwiper">
               <SwiperSlide>
-                  <Reviewscard />
+                  <Reviewscard onOpenReviewModal={onOpenReviewModal}/>
               </SwiperSlide>
               <SwiperSlide>
-                  <Reviewscard />
+                  <Reviewscard onOpenReviewModal={onOpenReviewModal} />
               </SwiperSlide>
               <SwiperSlide>
-                <Reviewscard />
+                <Reviewscard onOpenReviewModal={onOpenReviewModal} />
               </SwiperSlide>
               <SwiperSlide>
-                  <Reviewscard />
+                  <Reviewscard onOpenReviewModal={onOpenReviewModal} />
               </SwiperSlide>
               <SwiperSlide>
-                  <Reviewscard />
+                  <Reviewscard onOpenReviewModal={onOpenReviewModal} />
               </SwiperSlide>
               <SwiperSlide>
-                  <Reviewscard />
+                  <Reviewscard onOpenReviewModal={onOpenReviewModal} />
               </SwiperSlide>
             </Swiper>   
           </div>

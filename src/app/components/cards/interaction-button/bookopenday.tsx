@@ -1,6 +1,7 @@
 import React from 'react'
 
-const BookOpenDay = () => {
+const 
+BookOpenDay = () => {
   return (
     <button type='button' className='btn btn-green w-full'>Book open day</button>
   )

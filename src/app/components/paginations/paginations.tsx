@@ -7,7 +7,10 @@ const Paginations = () => {
       <nav aria-label="navigation">
         <ul className="pagination flex justify-center items-center gap-[8px]">
           <li>
-            <a className="cursor-pointer flex items-center justify-center px-[14px] py-[8px] rounded-[4px] w-[36px] h-[36px]">
+            <a
+              className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
+               
+            >
               <svg
                 width="7"
                 height="12"
@@ -25,9 +28,9 @@ const Paginations = () => {
               </svg>
             </a>
           </li>
-          <li className="">
+          <li>
             <Link
-              className="block small w-[36px] h-[36px] font-normal px-[14px] py-[8px] rounded-[4px] bg-primary-400 text-white"
+              className="block small w-[36px] h-[36px] font-normal text-center px-[2px] py-[8px] rounded-[4px] bg-primary-400 text-white"
               href="#"
             >
               1
@@ -35,7 +38,7 @@ const Paginations = () => {
           </li>
           <li>
             <Link
-              className="block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
+              className="block small w-[36px] h-[36px] font-normal text-grey300 text-center px-[2px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               2
@@ -43,7 +46,7 @@ const Paginations = () => {
           </li>
           <li>
             <Link
-              className="block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
+              className="block small w-[36px] h-[36px] font-normal text-grey300 text-center px-[2px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               3
@@ -51,7 +54,7 @@ const Paginations = () => {
           </li>
           <li>
             <Link
-              className="hidden md:block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
+              className="hidden md:block small w-[36px] h-[36px] font-normal text-grey300 text-center px-[2px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               4
@@ -59,27 +62,30 @@ const Paginations = () => {
           </li>
           <li>
             <Link
-              className="hidden md:block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
+              className="hidden md:block small w-[36px] h-[36px] font-normal text-grey300 text-center px-[2px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               5
             </Link>
           </li>
           <li>
-            <span className="select-none flex items-center justify-center small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400 ">
+            <span
+              className="select-none flex items-center justify-center small w-[36px] h-[36px] font-normal text-grey300 text-center px-[2px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400 " >
               ...
             </span>
           </li>
           <li>
             <Link
-              className="block small w-[36px] h-[36px] font-normal text-grey300 px-[14px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
+              className="block small w-[36px] h-[36px] font-normal text-grey300 text-center px-[2px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400"
               href="#"
             >
               25
             </Link>
           </li>
           <li>
-            <a className="cursor-pointer flex items-center justify-center px-[14px] py-[8px] rounded-[4px] w-[36px] h-[36px]">
+            <a
+              className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"             
+            >
               <svg
                 width="7"
                 height="12"

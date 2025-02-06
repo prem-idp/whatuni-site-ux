@@ -110,6 +110,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
     "Wales",
     "Northern Ireland",
   ];
+  const region1 = ["England", "Scotland", "Wales", "Northern Ireland"];
   // city
   const city = [
     "Birmingham",
@@ -155,7 +156,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           isFilterOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-[16px_32px_0]">
+        <div className="p-[16px] md:p-[16px_32px_0]">
           <svg
             onClick={filterHandleClose}
             className="ml-auto mr-[-10px] w-[44px] h-[44px] cursor-pointer"
@@ -186,7 +187,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
             preferred criteria 
           </p>
         </div>
-        <div className="h-[calc(100%-223px)] overflow-y-auto custom-scrollbar-2">
+        <div className="h-[calc(100%-265px)] overflow-y-auto custom-scrollbar-2 md:h-[calc(100%-230px)]">
           <Accordion title="Subject">
             {/* subject */}
             <div className="flex flex-col gap-[24px] pt-[24px]">
@@ -275,7 +276,6 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                   {studyLevel.map((item, index) => (
                     <div className="form-black flex relative" key={index}>
                       <input
-                        defaultValue={"Undergraduate"}
                         type="radio"
                         name="studylevel"
                         id={item}
@@ -299,7 +299,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 <div className="bg-white rounded-[22px] p-[11px_12px] border border-grey-300 hover:border-primary-500 md:p-[9px_12px]">
                   <div className="flex item-center gap-[12px]">
                     <Image
-                      src="/assets/icons/search/search-black.svg"
+                      src="/assets/icons/search-result/search-black.svg"
                       width="20"
                       height="20"
                       alt="Search icon"
@@ -425,7 +425,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                             </svg>
                           </li>
                           <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[4px]  font-semibold x-small flex items-center gap-[2px]">
-                            <Link href="">
+                            <Link href="" aria-label="Back Arrow">
                               <svg
                                 width="16"
                                 height="16"
@@ -535,7 +535,6 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 {intakeYear.map((item, index) => (
                   <div className="form-black flex relative" key={index}>
                     <input
-                      defaultValue={"2024"}
                       type="radio"
                       name="2024"
                       className="rounded-[4px] outline-none absolute opacity-0"
@@ -551,7 +550,6 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 {intakeMonth.map((item, index) => (
                   <div className="form-black flex relative" key={index}>
                     <input
-                      defaultValue={"All Months"}
                       type="radio"
                       name="All Months"
                       className="rounded-[4px] outline-none absolute opacity-0"
@@ -582,7 +580,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               <div className="bg-white rounded-[22px] p-[11px_12px] border border-grey-300 hover:border-primary-500 md:p-[9px_12px]">
                 <div className="flex item-center gap-[12px]">
                   <Image
-                    src="/assets/icons/search/search-black.svg"
+                    src="/assets/icons/search-result/search-black.svg"
                     width="20"
                     height="20"
                     alt="Search icon"
@@ -720,10 +718,10 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 <div className="font-semibold">Distance from home</div>
                 <div className="flex flex-col gap-[16px]">
                   <div className="bg-white rounded-[24px] w-full p-[16px] border border-grey-200 hover:border-primary-500 shadow-custom-1 md:rounded-[32px] md:pl-[24px] md:p-[4px] md:w-[508px]">
-                    <div className="flex flex-col small md:flex-row md:items-center">
+                    <div className="flex flex-col gap-[24px] small md:flex-row md:items-center md:gap-[10px]">
                       <div className="relative shrink-0">
                         <button
-                          className="w-full flex items-center justify-between gap-[4px] pr-0 pb-[24px] text-black md:w-[150px] md:pr-[20px] md:pb-0"
+                          className="w-full flex items-center justify-between gap-[4px] pr-0 text-black md:w-[146px] md:pr-[16  px]"
                           type="button"
                         >
                           Range: 50 Miles
@@ -734,30 +732,8 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                             alt="Search icon"
                           />
                         </button>
-                        {/* {searchFormHandle?.isCourseType && (
-              <div className="bg-white z-[1] shadow-custom-3 rounded-[4px] absolute left-[-16px] top-[45px] w-[calc(100%+32px)] md:w-[calc(100%+16px)]">
-                <ul>
-                  {studymodelist?.map((item: any, index: any) => (
-                    <li
-                      onClick={() => {
-                        setsearchFormHandle((prevData: SearchFormHandle) => ({
-                          ...prevData,
-                          courseType: item,
-                        }));
-                        courseActions("UG");
-                      }}
-                      className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline cursor-pointer"
-                      data-index-1={index + 1}
-                      key={index}
-                    >
-                      {item.qualDesc}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )} */}
                       </div>
-                      <div className="w-full relative grow border-y-[1px] border-grey-200 md:border-l md:border-y-0">
+                      <div className="w-full grow border-y-[1px] border-grey-200 md:border-l md:border-y-0">
                         <input
                           type="text"
                           className="w-full focus:outline-none text-black placeholder:text-gray-500 px-[0] py-[24px] md:px-[16px] md:py-[0px]"
@@ -794,16 +770,16 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                     <path
                       d="M12.3137 12.8137C11.5923 13.5351 10.1389 14.9886 9.04085 16.0866C8.2598 16.8676 6.99496 16.8675 6.21391 16.0865C5.13566 15.0082 3.70908 13.5817 2.94113 12.8137C0.352958 10.2255 0.352958 6.02929 2.94113 3.44113C5.52929 0.852958 9.72554 0.852958 12.3137 3.44113C14.9019 6.02929 14.9019 10.2255 12.3137 12.8137Z"
                       stroke="#4664DC"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M10.1127 8.12742C10.1127 9.5 9 10.6127 7.62742 10.6127C6.25484 10.6127 5.14214 9.5 5.14214 8.12742C5.14214 6.75483 6.25484 5.64214 7.62742 5.64214C9 5.64214 10.1127 6.75483 10.1127 8.12742Z"
                       stroke="#4664DC"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                   <Link href="" className="small text-blue-400 hover:underline">
@@ -813,7 +789,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
               <div className="flex flex-col gap-[4px]">
                 <div className="text-para-lg font-semibold">Region</div>
-                <div className="x-small font-semibold text-black uppercase">
+                <div className="x-small font-semibold text-black uppercase mb-[8px]">
                   Choose one or more
                 </div>
                 <ul>
@@ -861,96 +837,102 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                     </div>
                     <ul>
                       <li>
-                        <div className="form_check relative m-[0_0_12px_24px]">
-                          <div className="flex items-start gap-[8px]">
-                            <div className="checkbox_card">
-                              <input
-                                type="checkbox"
-                                className="form-checkbox hidden"
-                                id="England"
-                                name="England"
-                              />
-                              <label
-                                htmlFor="England"
-                                className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
-                              >
-                                <svg
-                                  width="10"
-                                  height="8"
-                                  viewBox="0 0 10 8"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
-                                    fill="white"
-                                    stroke="white"
-                                    strokeWidth="0.666667"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
+                        {region1.map((item, index) => (
+                          <div key={index}>
+                            <div className="form_check relative m-[0_0_12px_24px]">
+                              <div className="flex items-start gap-[8px]">
+                                <div className="checkbox_card">
+                                  <input
+                                    type="checkbox"
+                                    className="form-checkbox hidden"
+                                    id={item}
+                                    name={item}
                                   />
-                                </svg>
-                              </label>
-                            </div>
-                            <label
-                              htmlFor="England"
-                              className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
-                            >
-                              England
-                            </label>
-                          </div>
-                        </div>
-                        <ul>
-                          <li className="grid grid-rows-8 grid-flow-col">
-                            {region.map((item, index) => (
-                              <div
-                                className="form_check relative m-[0_0_12px_40px]"
-                                key={index}
-                              >
-                                <div className="flex items-start gap-[8px]">
-                                  <div className="checkbox_card">
-                                    <input
-                                      type="checkbox"
-                                      className="form-checkbox hidden"
-                                      id={item}
-                                    />
-                                    <label
-                                      htmlFor={item}
-                                      className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
-                                    >
-                                      <svg
-                                        width="10"
-                                        height="8"
-                                        viewBox="0 0 10 8"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          fillRule="evenodd"
-                                          clipRule="evenodd"
-                                          d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
-                                          fill="white"
-                                          stroke="white"
-                                          strokeWidth="0.666667"
-                                          strokeLinecap="round"
-                                          strokeLinejoin="round"
-                                        />
-                                      </svg>
-                                    </label>
-                                  </div>
                                   <label
                                     htmlFor={item}
-                                    className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
+                                    className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
                                   >
-                                    {item}
+                                    <svg
+                                      width="10"
+                                      height="8"
+                                      viewBox="0 0 10 8"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
+                                        d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
+                                        fill="white"
+                                        stroke="white"
+                                        strokeWidth="0.666667"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                      />
+                                    </svg>
                                   </label>
                                 </div>
+                                <label
+                                  htmlFor={item}
+                                  className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
+                                >
+                                  {item}
+                                </label>
                               </div>
-                            ))}
-                          </li>
-                        </ul>
+                            </div>
+                            <ul>
+                              {index == 0 && (
+                                <li className="grid grid-flow-row md:grid-rows-8 md:grid-flow-col">
+                                  {region.map((item, index) => (
+                                    <div
+                                      className="form_check relative m-[0_0_12px_40px]"
+                                      key={index}
+                                    >
+                                      <div className="flex items-start gap-[8px]">
+                                        <div className="checkbox_card">
+                                          <input
+                                            type="checkbox"
+                                            className="form-checkbox hidden"
+                                            id={item}
+                                          />
+                                          <label
+                                            htmlFor={item}
+                                            className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
+                                          >
+                                            <svg
+                                              width="10"
+                                              height="8"
+                                              viewBox="0 0 10 8"
+                                              fill="none"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                fillRule="evenodd"
+                                                clipRule="evenodd"
+                                                d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
+                                                fill="white"
+                                                stroke="white"
+                                                strokeWidth="0.666667"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                              />
+                                            </svg>
+                                          </label>
+                                        </div>
+                                        <label
+                                          htmlFor={item}
+                                          className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
+                                        >
+                                          {item}
+                                        </label>
+                                      </div>
+                                    </div>
+                                  ))}
+                                </li>
+                              )}
+                            </ul>
+                          </div>
+                        ))}
                       </li>
                     </ul>
                   </li>
@@ -958,10 +940,10 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
               <div className="flex flex-col gap-[4px]">
                 <div className="text-para-lg font-semibold">City</div>
-                <div className="x-small font-semibold text-black uppercase">
+                <div className="x-small font-semibold text-black uppercase mb-[8px]">
                   Choose one or more
                 </div>
-                <div className="grid grid-rows-11 gap-[12px] grid-flow-col">
+                <div className="grid grid-flow-row gap-[12px] md:grid-flow-col md:grid-rows-11 ">
                   {city.map((item, index) => (
                     <div className="form_check relative" key={index}>
                       <div className="flex items-start gap-[8px]">
@@ -1011,7 +993,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 <div className="x-small font-semibold text-black uppercase">
                   Choose one or more
                 </div>
-                <div className="flex items-center gap-[8px]">
+                <div className="flex items-center gap-[8px] flex-wrap ">
                   {locationType.map((item, index) => (
                     <div className="form-black flex relative" key={index}>
                       <input
@@ -1085,7 +1067,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           </Accordion>
         </div>
 
-        <div className="flex justify-between gap-[8px] p-[16px_32px] fixed w-full bottom-0 shadow-custom-10 bg-white md:w-[768px]">
+        <div className="flex justify-between gap-[8px] p-[16px] fixed w-full bottom-0 shadow-custom-10 bg-white md:p-[16px_32px] md:w-[768px]">
           <Link
             href="#"
             aria-label="reset filters"
