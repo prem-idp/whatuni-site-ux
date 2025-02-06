@@ -20,21 +20,60 @@ const Keystatscomponents = ({onOpenModal}:any) => {
               <Image src="assets/icons/course-details/wusca_ranking_stats_icon.svg" alt="academic-cap" width="32" height="32" />
               <div className="flex flex-col gap-[4px] *:text-white">
                 <div className="para-lg font-semibold">WUSCA ranking</div>
-                <p className="small underline">59/81</p>
+                <div className="tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]">
+                  59/81
+                  <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                      >
+                        <span className="font-semibold tooltip-head">
+                          Why do we need your dummy text?
+                        </span>
+                        <p className="x-small">
+                          We use this information to help assess the reach of
+                          our products. This is completely optional.
+                        </p>
+                      </div>
+                  </div>
               </div>
             </div>
             <div className="course-highlight__option flex items-start gap-[8px]">
               <Image src="assets/icons/course-details/cug_subject_stats_icon.svg" alt="academic-cap" width="32" height="32" />
               <div className="flex flex-col gap-[4px] *:text-white">
                 <div className="para-lg font-semibold">CUG Subject ranking</div>
-                <p className="small underline">59/81</p>
+                <div className="tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]">
+                  59/81
+                  <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] md:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] md:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                      >
+                        <span className="font-semibold tooltip-head">
+                          Why do we need your dummy text?
+                        </span>
+                        <p className="x-small">
+                          We use this information to help assess the reach of
+                          our products. This is completely optional.
+                        </p>
+                      </div>
+                  </div>
               </div>
             </div>
             <div className="course-highlight__option flex items-start gap-[8px]">
               <Image src="assets/icons/course-details/cug_ranking_stats_icon.svg" alt="academic-cap" width="32" height="32" />
               <div className="flex flex-col gap-[4px] *:text-white">
                 <div className="para-lg font-semibold">CUG ranking</div>
-                <p className="small underline">51th</p>
+                <div className="tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]">
+                  51th
+                  <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] md:left-[-120px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] md:after:left-[40%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                      >
+                        <span className="font-semibold tooltip-head">
+                          Why do we need your dummy text?
+                        </span>
+                        <p className="x-small">
+                          We use this information to help assess the reach of
+                          our products. This is completely optional.
+                        </p>
+                      </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -48,7 +87,20 @@ const Keystatscomponents = ({onOpenModal}:any) => {
                   <div>
                     <span>Drop-out rate</span>
                   </div>
-                  <span className='underline cursor-pointer'>89%</span>
+                  <span className='tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]'>
+                    89%
+                    <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-[-30px] md:left-auto lg:right-auto lg:left-[-152px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-auto after:right-[40px] lg:after:left-[50%] lg:after:right-auto after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                      >
+                        <span className="font-semibold tooltip-head">
+                          Why do we need your dummy text?
+                        </span>
+                        <p className="x-small">
+                          We use this information to help assess the reach of
+                          our products. This is completely optional.
+                        </p>
+                      </div>
+                    </span>
                 </div>
                 <div className=" progess-bar bg-primary-400 rounded-[8px] h-[8px] overflow-hidden">
                   <div className="progess-bar__line transition-all duration-[3s] bg-primary-200 h-[8px] w-[80%]"></div>
@@ -59,7 +111,19 @@ const Keystatscomponents = ({onOpenModal}:any) => {
                   <div>
                     <span>Employment rate</span>
                   </div>
-                  <span className='underline cursor-pointer'>89%</span>
+                  <span className='tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]'>89%
+                  <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-[-30px] md:left-auto lg:right-auto lg:left-[-152px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-auto after:right-[40px] lg:after:left-[50%] lg:after:right-auto after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                      >
+                        <span className="font-semibold tooltip-head">
+                          Why do we need your dummy text?
+                        </span>
+                        <p className="x-small">
+                          We use this information to help assess the reach of
+                          our products. This is completely optional.
+                        </p>
+                      </div>
+                  </span>
                 </div>
                 <div className=" progess-bar bg-primary-400 rounded-[8px] h-[8px] overflow-hidden">
                   <div className="progess-bar__line transition-all duration-[3s] bg-primary-200 h-[8px] w-[40%]"></div>
@@ -76,13 +140,37 @@ const Keystatscomponents = ({onOpenModal}:any) => {
             <div className="course-highlight__option flex items-start">
               <div className="flex flex-col gap-[4px] *:text-white">
                 <div className="para-lg font-semibold">Politics graduate salary at this uni</div>
-                <p className="small underline">£22,000</p>
+                <div className="tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]">£22,000
+                <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                      >
+                        <span className="font-semibold tooltip-head">
+                          Why do we need your dummy text?
+                        </span>
+                        <p className="x-small">
+                          We use this information to help assess the reach of
+                          our products. This is completely optional.
+                        </p>
+                      </div>
+                </div>
               </div>
             </div>
             <div className="course-highlight__option flex items-start">
               <div className="flex flex-col gap-[4px] *:text-white">
                 <div className="para-lg font-semibold">UK politics graduate salary</div>
-                <p className="small underline">£21,000</p>
+                <div className="tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]">£21,000
+                <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                      >
+                        <span className="font-semibold tooltip-head">
+                          Why do we need your dummy text?
+                        </span>
+                        <p className="x-small">
+                          We use this information to help assess the reach of
+                          our products. This is completely optional.
+                        </p>
+                      </div>
+                </div>
               </div>
             </div>
           </div>

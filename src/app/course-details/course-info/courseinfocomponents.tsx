@@ -2,7 +2,7 @@ import React from 'react'
 import Keystatscomponents from '../keystats/keystatscomponents'
 import Reviewslidercomponents from '@/app/components/slider/reviewslidercomponents'
 
-const Courseinfocomponents = ({ onOpenModal }:any) => {
+const Courseinfocomponents = ({ onOpenModal, onOpenReviewModal }:any) => {
   return (
     <>
       <div className='courseinfo-container'> 
@@ -27,7 +27,7 @@ const Courseinfocomponents = ({ onOpenModal }:any) => {
                           <div className='h5 text-black'>What students say</div>
                         </div>
                       </div>
-                      <Reviewslidercomponents />
+                      <Reviewslidercomponents onOpenReviewModal={onOpenReviewModal} />
                       <div className='flex justify-center mt-[4px]'>
                       <a href='#' className='flex items-center w-fit font-semibold small text-primary-400 hover:underline gap-[8px]'>
                         View more

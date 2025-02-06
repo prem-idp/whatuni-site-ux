@@ -19,6 +19,7 @@ import Examtypemodalcomponents from './Modal/examtypemodalcomponents';
 import Locationmodalcomponents from './Modal/locationmodalcomponents';
 import Courseinfomodalcomponents from './Modal/courseinfomodalcomponents';
 import Yearofentrycomponents from './year-of-entry/yearofentrycomponents';
+import Reviewfiltermodalcomponents from '../components/modal/review-lightbox/reviewfiltermodalcomponents';
 
 const page = () => {
   const [openModal, setOpenModal] = useState(null);
@@ -56,7 +57,7 @@ const page = () => {
     <Yearofentrycomponents />     
     <Courseoptionscomponents  onOpenModal={() => handleOpenModal("courseoption")}/> 
     <Jumptocomponents />
-    <Courseinfocomponents  onOpenModal={() => handleOpenModal("subject")} />
+    <Courseinfocomponents  onOpenModal={() => handleOpenModal("subject")} onOpenReviewModal={()=> handleOpenModal("reviewfilter")} />
     <Modulescomponents />
     <Entryrequirements onOpenModal={() => handleOpenModal("examType")} />
     <Popularalevelsubjectcomponents />
@@ -70,6 +71,7 @@ const page = () => {
     {openModal === "subject" && <Subjectmodalcomponents onClose={handleCloseModal} />}
     {openModal === "examType" && <Examtypemodalcomponents onClose={handleCloseModal} />}
     {openModal === "location" && <Locationmodalcomponents onClose={handleCloseModal} />}
+    {openModal === "reviewfilter" && <Reviewfiltermodalcomponents onClose={handleCloseModal} />}
     </>     
   )
 }

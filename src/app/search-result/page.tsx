@@ -186,7 +186,7 @@ const SearchResult = ({ title, content }: any) => {
               <svg
                 className="cursor-pointer"
                 width="16"
-                height="16"
+                height="17"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,7 @@ const SearchResult = ({ title, content }: any) => {
               <svg
                 className="cursor-pointer"
                 width="16"
-                height="16"
+                height="17"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +224,7 @@ const SearchResult = ({ title, content }: any) => {
               <svg
                 className="cursor-pointer"
                 width="16"
-                height="16"
+                height="17"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -243,7 +243,7 @@ const SearchResult = ({ title, content }: any) => {
               <svg
                 className="cursor-pointer"
                 width="16"
-                height="16"
+                height="17"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +257,7 @@ const SearchResult = ({ title, content }: any) => {
                 />
               </svg>
             </li>
-            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[2px] font-semibold x-small flex items-center gap-[2px]">
               <Link href="" aria-label="Plus Icon">
                 <svg
                   className="cursor-pointer"

@@ -11,7 +11,7 @@ const Latestreviewscomponents = ({ onOpenModal }:any) => {
         <div className="max-w-container mx-auto">
             <div className='latest-reviews-card-container flex flex-col lg:flex-row justify-between gap-[20px] py-[40px]'>
                 <div className='h5 w-full md:w-[289px] px-[16px] md:px-[20px] xl:px-[0]'>Latest reviews</div>
-                <div className='flex flex-col gap-[16px] md:gap-[24px] w-full lg:w-[calc(100%_-_309px)]'>
+                <div className='flex flex-col gap-[24px] w-full lg:w-[calc(100%_-_309px)]'>
                   <div className='px-[16px] md:px-[20px] xl:px-[0]'>
                     <div className='card flex flex-col gap-[16px] w-full border border-grey-200 rounded-[8px] bg-white p-[16px] md:p-[24px]'>                  
                       <div className='card-header flex flex-col gap-[8px]'>
