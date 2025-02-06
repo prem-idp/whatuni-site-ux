@@ -12,6 +12,7 @@ import Getprospectus from "../components/cards/interaction-button/getprospectus"
 import Visitwebsite from "../components/cards/interaction-button/visitwebsite";
 import BookOpenDay from "../components/cards/interaction-button/bookopenday";
 import SearchFilterButtons from "../components/search-filter-buttons/search-filter-buttons";
+import NoExactMatches from "../components/noexact-matches/noexact-matches";
 
 const page = () => {
   const breadcrumbData = [
@@ -108,7 +109,8 @@ const page = () => {
   const providerCard = providerList.map((items) => (
     <div
       key={items.title}
-      className="flex flex-col rounded-[16px] overflow-hidden bg-white shadow-custom-3 border border-grey-200 w-full md:max-w-[calc(50%_-_10px)] xl:max-w-[385px]"
+      // className="flex flex-col rounded-[16px] overflow-hidden bg-white shadow-custom-3 border border-grey-200 w-full md:max-w-[calc(50%_-_10px)] xl:max-w-[385px]"
+      className="flex flex-col rounded-[16px] overflow-hidden bg-white shadow-custom-3 border border-grey-200"
     >
       <div className="flex justify-end p-[16px] bg-blue-100">
         <div className="heart group w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-primary-400 hover:cursor-pointer">
@@ -131,14 +133,14 @@ const page = () => {
       </div>
       <div className="flex p-[16px] flex-col gap-[16px] h-full justify-between">
         <div className="flex flex-col gap-[16px] md:min-h-[240px]">
-          <div className="h6 font-farro text-blue-400">{items.title}</div>
+          <div className="h6 text-blue-400">{items.title}</div>
           <ul className="flex flex-wrap gap-[4px]">
             <li className="flex gap-[2px] bg-grey-100 text-grey-500 uppercase font-semibold xs-small px-[8px] rounded-[4px]">
               <Image
                 alt="calender icon"
                 width="16"
                 height="16"
-                src="/assets/icons/search/calender-grey.svg"
+                src="/assets/icons/search-result/calender-grey.svg"
               />
 
               {items.points}
@@ -148,16 +150,18 @@ const page = () => {
                 alt="timer icon"
                 width="16"
                 height="16"
-                src="/assets/icons/search/time-grey.svg"
+                src="/assets/icons/search-result/time-grey.svg"
               />
 
               {items.tagLocation}
             </li>
           </ul>
+               
           {items.fullCourse && (
             <span className="text-blue-400 font-semibold small">
               {items.fullCourse}
             </span>
+            
           )}
           {/* PGS  */}
           {/* <p className="small text-grey500 line-clamp-3">Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary </p> */}
@@ -173,13 +177,16 @@ const page = () => {
                   <>
                    {items.modulesList.map((list, index) => (
                   <li className="text-grey300 small font-semibold break-all" key={index}>{ list }</li>
+                  
                    ))}
                   </>
-                ) }
-               
-                
+                ) }                               
               </ul>
+             
             </>
+          )}
+          {isUniModule && (
+ <span className="text-blue-400 select-none font-semibold small cursor-pointer ">See all modules</span>
           )}
         </div>
 
@@ -208,7 +215,7 @@ const page = () => {
             <div className="flex gap-[17px]">
               <span className="p-[4px] bg-white rounded-[8px] hidden md:block shadow-custom-1 min-w-[64px] h-[64px]">
                 <Image
-                  src="/assets/icons/search/kent.png"
+                  src="/assets/icons/search-result/kent.png"
                   alt="University logo"
                   width={56}
                   height={56}
@@ -220,7 +227,7 @@ const page = () => {
                 </div>
                 <span className="para">1563 courses available </span>
                 <div className="flex items-center gap-[8px] text-blue-400 small">
-                  <span className="flex">
+                  <span className="flex items-center">
                     <Image
                       alt="blue star icon"
                       className="relative top-[-1px]"
@@ -240,7 +247,7 @@ const page = () => {
                   </li>
                   <li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-green-100 text-positive-dark xs-small">
                     <Image
-                      src="assets/icons/search/location-green.svg"
+                      src="/assets/icons/search-result/location-green.svg"
                       width="16"
                       height="16"
                       alt="location icon"
@@ -266,7 +273,7 @@ const page = () => {
                 </ul>
               </div>
             </div>
-            <div className="heart group min-w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-primary-400 hover:cursor-pointer">
+            <div className="heart mr-[0] lg:mr-[10px] group min-w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-primary-400 hover:cursor-pointer">
           <svg className="group-hover:fill-primary-400"
             width="20"
             height="20"
@@ -308,7 +315,7 @@ const page = () => {
               <svg
                 className="cursor-pointer"
                 width="16"
-                height="16"
+                height="17"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -327,7 +334,7 @@ const page = () => {
               <svg
                 className="cursor-pointer"
                 width="16"
-                height="16"
+                height="17"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -346,7 +353,7 @@ const page = () => {
               <svg
                 className="cursor-pointer"
                 width="16"
-                height="16"
+                height="17"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -365,7 +372,7 @@ const page = () => {
               <svg
                 className="cursor-pointer"
                 width="16"
-                height="16"
+                height="17"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -379,7 +386,7 @@ const page = () => {
                 />
               </svg>
             </li>
-            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
+            <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[2px] font-semibold x-small flex items-center gap-[2px]">
               <Link href="">
                 <svg
                   className="cursor-pointer"
@@ -400,13 +407,22 @@ const page = () => {
         </div>
       </section>
       {/* end serach lables */}
+      {/* no exact matches  */}
+      {/* <section className="bg-white">
+        <div className="max-w-container mx-auto">
+        <NoExactMatches />
+        </div>
+        </section> */}
+      {/* no exact matches END */}
+    
       {/* Provider Result card list  */}
       <section className="bg-grey-50">
         <div className="max-w-container px-[6px] md:px-[24px] xl:px-[0] mx-auto">
-          <div className="flex p-[20px_10px_24px] md:p-[40px_10px] lg:p-[20px_10px_24px] flex-wrap gap-[20px]">
+          {/* <div className="flex pt-[24px] px-[10px]  md:p-[40px_10px] lg:p-[20px_10px_24px] flex-wrap gap-[20px]"> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-[24px] px-[10px] gap-[20px]">
             {providerCard}
           </div>
-          <div className="pb-[64px]">
+          <div className="py-[40px]">
             <Paginations />
           </div>
         </div>

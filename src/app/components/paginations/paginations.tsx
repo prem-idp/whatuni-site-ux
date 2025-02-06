@@ -8,7 +8,7 @@ const Paginations = () => {
         <ul className="pagination flex justify-center items-center gap-[8px]">
           <li>
             <a
-              className="cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
+              className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
                
             >
               <svg
@@ -84,7 +84,7 @@ const Paginations = () => {
           </li>
           <li>
             <a
-              className="cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"             
+              className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"             
             >
               <svg
                 width="7"
