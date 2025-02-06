@@ -22,7 +22,7 @@ const Tuitionfeescomponents = ({ onOpenModal }:any) => {
                       </div>
                     </div>
                     {/* -- */}
-                    <div className="course-highlight__details w-full grid grid-cols-1 md:grid-cols-2 gap-[16px] bg-blue-100 rounded-[8px] p-[16px]">
+                    <div className="course-highlight__details w-full grid grid-cols-1 md:grid-cols-2 gap-[16px] bg-blue-50 rounded-[8px] p-[16px]">
                         <div className="course-highlight__option  flex flex-col items-start gap-[16px]">                      
                           <div className="flex flex-col gap-[4px] *:text-grey300">
                             <div className="para font-semibold text-black"><span className='underline cursor-pointer'>£9,250</span> per year</div>
