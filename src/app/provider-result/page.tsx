@@ -12,7 +12,7 @@ import Getprospectus from "../components/cards/interaction-button/getprospectus"
 import Visitwebsite from "../components/cards/interaction-button/visitwebsite";
 import BookOpenDay from "../components/cards/interaction-button/bookopenday";
 import SearchFilterButtons from "../components/search-filter-buttons/search-filter-buttons";
-import NoExactMatches from "../components/noexact-matches/noexact-matches";
+// import NoExactMatches from "../components/noexact-matches/noexact-matches";
 
 const page = () => {
   const breadcrumbData = [
