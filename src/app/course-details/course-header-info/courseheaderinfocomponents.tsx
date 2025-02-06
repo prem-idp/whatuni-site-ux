@@ -24,16 +24,7 @@ const Courseheaderinfocomponents = () => {
                               <div className='flex flex-col-reverse md:flex-row gap-[16px] md:gap-0  justify-between items-start h5 text-grey300'>
                                 <span>Animation BA (Hons)</span>
                                   <span className="favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
-                                  {/* <span className="favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
-                                    <svg 
-                                      className='group-hover:fill-primary-400'
-                                      width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path 
-                                      className='group-hover:stroke-white'
-                                      d="M2.02513 2.05003C0.658291 3.41686 0.658291 5.63294 2.02513 6.99978L8.00004 12.9747L13.9749 6.99978C15.3417 5.63294 15.3417 3.41686 13.9749 2.05003C12.608 0.683194 10.392 0.683194 9.02513 2.05003L8.00004 3.0752L6.97487 2.05003C5.60804 0.683194 3.39196 0.683194 2.02513 2.05003Z" stroke="#4664DC" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                  </span> */}
-                                  <div className="heart w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
+                                  <div className="heart min-w-[40px] w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
                                     <svg
                                       width="20"
                                       height="20"
