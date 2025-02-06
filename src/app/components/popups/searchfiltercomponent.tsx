@@ -789,10 +789,10 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
               <div className="flex flex-col gap-[4px]">
                 <div className="text-para-lg font-semibold">Region</div>
-                <div className="x-small font-semibold text-black uppercase">
+                <div className="x-small font-semibold text-black uppercase mb-[8px]">
                   Choose one or more
                 </div>
-                <ul className="pt-[12px]">
+                <ul>
                   <li>
                     <div className="form_check relative m-[0_0_12px]">
                       <div className="flex items-start gap-[8px]">
@@ -940,7 +940,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
               <div className="flex flex-col gap-[4px]">
                 <div className="text-para-lg font-semibold">City</div>
-                <div className="x-small font-semibold text-black uppercase">
+                <div className="x-small font-semibold text-black uppercase mb-[8px]">
                   Choose one or more
                 </div>
                 <div className="grid grid-flow-row gap-[12px] md:grid-flow-col md:grid-rows-11 ">
@@ -993,7 +993,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
                 <div className="x-small font-semibold text-black uppercase">
                   Choose one or more
                 </div>
-                <div className="flex items-center gap-[8px]">
+                <div className="flex items-center gap-[8px] flex-wrap ">
                   {locationType.map((item, index) => (
                     <div className="form-black flex relative" key={index}>
                       <input
