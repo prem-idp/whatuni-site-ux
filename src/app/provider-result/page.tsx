@@ -135,7 +135,7 @@ const page = () => {
       </div>
       <div className="flex p-[16px] flex-col gap-[16px] h-full justify-between">
         <div className="flex flex-col gap-[16px] md:min-h-[240px]">
-          <div className="h6 text-blue-400">{items.title}</div>
+          <a href="#" className="h6 hover:underline cursor-pointer text-blue-400">{items.title}</a>
           <ul className="flex flex-wrap gap-[4px]">
             <li className="flex gap-[2px] bg-grey-100 text-grey-500 uppercase font-semibold xs-small px-[8px] rounded-[4px]">
               <Image
@@ -188,7 +188,7 @@ const page = () => {
             </>
           )}
           {isUniModule && (
- <span className="text-blue-400 select-none font-semibold small cursor-pointer ">See all modules</span>
+ <span className="text-blue-400 hover:underline select-none font-semibold small cursor-pointer ">See all modules</span>
           )}
         </div>
 
@@ -306,7 +306,7 @@ const page = () => {
                     400 reviews
                   </Link>
                 </div>
-                <ul className="flex flex-wrap gap-[8px]">
+                <ul className="flex mt-[4px] flex-wrap gap-[8px]">
                   <li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-grey-100 text-grey-500 xs-small">
                     REGION
                   </li>
@@ -322,7 +322,7 @@ const page = () => {
                   <li className="relative group text-nowrap uppercase underline text-blue-400 x-small">
                     <span>WUSCA ranking: 18th
 
-                      <div className="absolute select-none hidden group-hover:flex border border-grey-200 top-[20px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] min-w-[320px] bg-white p-[12px] flex-col gap-4 after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0
+                      <div className="absolute select-none hidden group-hover:flex border border-grey-200 top-[20px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] md:min-w-[320px] min-w-[250px] left-[-16px] md:left-0  bg-white p-[12px] flex-col gap-4 after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0
                     ">                        
                           <span className="x-small text-grey900 font-semibold">Why should you trust our uni reviews?</span>
                           <p className="x-small text-grey300">All our reviews are from real students, submitted using their verified university email address.</p>
