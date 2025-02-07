@@ -79,7 +79,7 @@ const Signupcomponents = () => {
             </Link>{" "}
           </div>
           <form className="signup_form w-full h-full">
-            <div className="form_container flex flex-col gap-[16px] pb-[120px] md:pb-[70px] md:pr-[24px] md:pb-[14px] md:custom-scrollbar-2 md:max-h-[345px] md:overflow-y-auto">
+            <div className="form_container flex flex-col gap-[16px] pb-[160px] md:pb-[70px] md:pr-[24px] md:pb-[14px] md:custom-scrollbar-2 md:max-h-[345px] md:overflow-y-auto">
               <div className="form_group flex flex-col md:flex-row gap-[8px]">
                 <div className="col flex flex-col basis-full md:basis-6/12 gap-[4px]">
                   <label
