@@ -535,10 +535,9 @@ p, .para {
   @apply border border-negative-default
 }
 
-/* .err_msg {
+.err_msg {
   display: none
-} */
-
+}
 .error .err_msg {
   display: block
 }
