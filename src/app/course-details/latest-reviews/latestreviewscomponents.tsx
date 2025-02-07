@@ -23,52 +23,50 @@ const Latestreviewscomponents = ({ onOpenModal}:any) => {
                             </svg>
                             {/* -- */}
                              <div className='hidden z-[1] bg-white shadow-custom-3 rounded-[4px] absolute left:0 md:right-0 top-[32px] w-[326px] md:w-[342px] group-hover:block'>
-                              <div className='x-small text-neutral700 bg-neutral-50 font-bold p-[16px]'>RATING TYPE</div>
+                              <div className='w-fit px-[10px] py-[6px] x-small text-neutral700 bg-neutral-50 font-bold rounded-[4px] m-[16px]'>RATING TYPE</div>
                                 <ul className='max-h-[280px] overflow-y-auto custom-scrollbar-2 overflow-hidden'>
-                                            <li>
-                                              <Link
-                                                href="#"
-                                                className="block small text-black font-normal px-[16px] py-[10px] underline hover:bg-blue-50 hover:underline"
-                                              >
-                                                University rating
-                                              </Link>
-                                            </li>
-                                            <li>
-                                              <Link
-                                                className="block small text-black  font-normal px-[16px] py-[10px] hover:bg-blue-50 hover:underline"
-                                                href="#"
-                                              >
-                                                X rating
-                                              </Link>
-                                            </li>
-                                            <li>
-                                              <Link
-                                                className="block small text-black font-normal px-[16px] py-[10px] hover:bg-blue-50 hover:underline"
-                                                href="#"
-                                              >
-                                                X rating
-                                              </Link>
-                                            </li> 
-                                            <li>
-                                              <Link
-                                                className="block small text-black font-normal px-[16px] py-[10px] hover:bg-blue-50 hover:underline"
-                                                href="#"
-                                              >
-                                                X rating
-                                              </Link>
-                                            </li> 
-                                            <li>
-                                              <Link
-                                                className="block small text-black font-normal px-[16px] py-[10px] hover:bg-blue-50 hover:underline"
-                                                href="#"
-                                              >
-                                                X rating
-                                              </Link>
-                                            </li> 
-                                          
+                                    <li>
+                                      <Link
+                                        href="#"
+                                        className="block small text-black font-normal px-[16px] py-[10px] underline  hover:underline"
+                                      >
+                                        University rating
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link
+                                        className="block small text-black  font-normal px-[16px] py-[10px]  hover:underline"
+                                        href="#"
+                                      >
+                                        X rating
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link
+                                        className="block small text-black font-normal px-[16px] py-[10px]  hover:underline"
+                                        href="#"
+                                      >
+                                        X rating
+                                      </Link>
+                                    </li> 
+                                    <li>
+                                      <Link
+                                        className="block small text-black font-normal px-[16px] py-[10px]  hover:underline"
+                                        href="#"
+                                      >
+                                        X rating
+                                      </Link>
+                                    </li> 
+                                    <li>
+                                      <Link
+                                        className="block small text-black font-normal px-[16px] py-[10px]  hover:underline"
+                                        href="#"
+                                      >
+                                        X rating
+                                      </Link>
+                                    </li> 
                                 </ul>
-                              </div>
-                            
+                              </div>                            
                             {/* -- */}     
                           </div>
                         </div>
