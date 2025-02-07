@@ -25,8 +25,35 @@ const Tuitionfeescomponents = ({ onOpenModal }:any) => {
                     <div className="course-highlight__details w-full grid grid-cols-1 md:grid-cols-2 gap-[16px] bg-blue-50 rounded-[8px] p-[16px]">
                         <div className="course-highlight__option  flex flex-col items-start gap-[16px]">                      
                           <div className="flex flex-col gap-[4px] *:text-grey300">
-                            <div className="para font-semibold text-black"><span className='underline cursor-pointer'>£9,250</span> per year</div>
-                            <p className="small text-black">Students from <span className='underline cursor-pointer'> England</span></p>
+                            <div className="para font-semibold text-black">
+                              <span className='tooltip w-fit group/item para underline relative cursor-pointer pb-[6px] mb-[-6px]'>£9,250
+                              <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                                  >
+                                    <span className="small font-semibold tooltip-head">
+                                      Why do we need your dummy text?
+                                    </span>
+                                    <p className="x-small font-normal">
+                                      We use this information to help assess the reach of
+                                      our products. This is completely optional.
+                                    </p>
+                                  </div>
+                                </span> per year</div>
+                            <div className="small text-black">Students from 
+                                <span className='tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]'> England
+                                  <div className="tooltip-wrap flex-col w-[266px] md:w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                                  >
+                                    <span className="font-semibold tooltip-head">
+                                      Why do we need your dummy text?
+                                    </span>
+                                    <p className="x-small">
+                                      We use this information to help assess the reach of
+                                      our products. This is completely optional.
+                                    </p>
+                                  </div>
+                                </span>
+                              </div>
                           </div>
                         </div>
                       </div>

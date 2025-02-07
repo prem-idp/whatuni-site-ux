@@ -1067,16 +1067,18 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           </Accordion>
         </div>
 
-        <div className="flex justify-between gap-[8px] p-[16px] fixed w-full bottom-0 shadow-custom-10 bg-white md:p-[16px_32px] md:w-[768px]">
+        <div className="flex items-center justify-between p-[16px] fixed w-full bottom-0 shadow-custom-10 bg-white md:p-[16px_32px] md:w-[768px]">
+         <div className="min-w-[128px] text-center hover:underline md:text-left">
           <Link
             href="#"
             aria-label="reset filters"
-            className="text-primary-400 font-semibold py-[10px] px-[16px] text-center hover:underline"
+            className="text-primary-400 font-semibold"
           >
             Clear
           </Link>
-          <button className="bg-primary-400 w-fit text-white rounded-[24px] py-[10px] px-[16px] font-semibold hover:bg-primary-500 md:w-[344px]">
-            Show all 0 results
+          </div>
+          <button className="bg-primary-400 text-white rounded-[24px] py-[10px] px-[16px] font-semibold min-w-[200px] hover:bg-primary-500 md:w-[344px]">
+          Show all 2929 results
           </button>
         </div>
       </div>
