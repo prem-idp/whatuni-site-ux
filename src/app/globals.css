@@ -538,7 +538,6 @@ p, .para {
 .err_msg {
   display: none
 }
-
 .error .err_msg {
   display: block
 }
