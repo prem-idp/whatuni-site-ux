@@ -652,13 +652,14 @@ p, .para {
 /* skiplink hamburger menu END */
 @media only screen and (min-width: 992px) and (max-width: 1169px) {
   .article-details-aside {
-    width: calc(100% - 321px);
+    /* width: calc(100% - 321px); */
+    @apply w-[calc(100%_-_321px)];
   }
 }
 
 @media only screen and (min-width: 1170px) {
-  .article-details-aside {
-    width: 804px;
+  .article-details-aside {    
+    @apply w-[804px];
   }
 }
 
@@ -692,34 +693,18 @@ h6 {
   @apply text-blue-400 underline;
 }
 
-.rtf-innerstyle a.rtfcustom-link {
-  color: #fff;
-}
-
-.rtf-innerstyle a.rtfcustom-link:hover {
-  text-decoration: none;
+.rtf-innerstyle a.rtfcustom-link {  
+  @apply text-white hover:decoration-0;
 }
 
 .rtf-innerstyle figure {
-  border: 1px solid #d6d9da;
-  padding: 10px;
-  border-radius: 3px;
-  display: inline-block;
-  background-color: #f2f2f2;
-  margin-bottom: 15px;
+  @apply bg-grey-100 mb-[15px] inline-block rounded-[3px] p-[10px] border-grey-200 border;
 }
 
 .rtf-innerstyle ul,
 .rtf-innerstyle ol {
   list-style: unset;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  @apply flex flex-col gap-[8px] pl-[40px] 
 }
 
 .rtf-innerstyle iframe {
@@ -727,33 +712,26 @@ h6 {
 }
 
 .rtf-innerstyle table {
-  border: 1px solid #d6d9da !important;
-  border-bottom: 0;
-  border-left: 0;
-  border-collapse: collapse;
-  overflow: auto;
-  max-width: 100%;
-  display: block;
-  @apply w-full;
+  @apply border overflow-auto w-full block border-grey-200 border-collapse;
 }
 
 .rtf-innerstyle table th {
-  background: #f2f2f2;
-  @apply w-full;
+  @apply w-full bg-grey-100;
 }
 
 .rtf-innerstyle table td,
 .rtf-innerstyle table th {
-  padding: 10px;
-  border-left: 1px solid #d6d9da !important;
-  border-bottom: 1px solid #d6d9da !important;
-  vertical-align: top;
-  @apply w-full;
+  /* padding: 10px;
+  border-left: 1px solid #D9D9D9 !important;
+  border-bottom: 1px solid #D9D9D9 !important; */
+  /* vertical-align: top; */
+  @apply w-full p-[10px] border-l-[1px] border-b-[1px] border-grey-200 align-top;
 }
 
 .rtf-innerstyle table ul li {
-  list-style: inside disc;
-  font-size: 14px;
+  /* list-style: inside disc;
+  font-size: 14px; */
+  @apply small list-inside list-disc;
 }
 
 .rtf-innerstyle>div:has([id])>div:not([class])>ul,
