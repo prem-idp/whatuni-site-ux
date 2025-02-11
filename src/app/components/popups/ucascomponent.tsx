@@ -906,7 +906,7 @@ const UcasComponent = ({ onClose, isUcasOpen }: any) => {
           </div>
         </div>
       </div>
-      <UcasComponentSkeleton/>
+      {/* <UcasComponentSkeleton/> */}
     </>
   );
 };
