@@ -8,7 +8,7 @@ const ClickAndShow = ({ children }: any) => {
     setIsModuleOpen(!isModuleOpen);
   };
   return (
-    <div className="flex flex-col gap-[4px">
+    <div className="flex flex-col gap-[4px]">
       <div
         onClick={moduleToggle}
         className="flex items-center gap-[4px] text-primary-400 small font-semibold cursor-pointer"
