@@ -372,10 +372,10 @@ const SearchResult = () => {
           </div> */}
           {/* end no search results */}
           {/* start sorting */}
-          <div className="ml-auto w-fit">
+          <div className="ml-auto w-fit relative">
             <div
               onClick={sortClicked}
-              className="flex items-center gap-[4px] px-[4px] py-[16px] small text-grey300 cursor-pointer relative"
+              className="flex items-center gap-[4px] px-[4px] py-[16px] small text-grey300 cursor-pointer"
             >
               <svg
                 width="16"
@@ -394,53 +394,55 @@ const SearchResult = () => {
               </svg>
               <span className="font-semibold">Sort:</span>
               <span> Entry reqs - highest</span>
-              {isSortClicked && (
-                <div className="absolute top-[53px] right-0 w-[345px] bg-white p-[24px] rounded-[8px] shadow-custom-3 z-10 lg:w-[940px]">
-                  <div className="flex flex-col gap-[16px]">
-                    <div className="text-heading6 font-farro font-bold">
-                      Sort by
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
-                      {sortBy.map((item, index) => (
-                        <div
-                          className="custom-radio flex items-center"
-                          key={index}
-                        >
-                          <input
-                            className="rounded-md"
-                            type="radio"
-                            id={item}
-                            name="featured"
-                          />
-                          <label htmlFor={item} className="flex items-center">
-                            {item}
-                          </label>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="font-semibold">Wusca categories </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
-                      {wuscaCategories.map((item, index) => (
-                        <div
-                          className="custom-radio flex items-center"
-                          key={index}
-                        >
-                          <input
-                            className="rounded-md"
-                            type="radio"
-                            id={item}
-                            name="featured"
-                          />
-                          <label htmlFor={item} className="flex items-center">
-                            {item}
-                          </label>
-                        </div>
-                      ))}
-                    </div>
+            </div>
+            {isSortClicked && (
+              <div className="absolute top-[53px] right-[-1px] w-[345px] bg-white p-[24px] rounded-[8px] shadow-custom-3 z-10 md:w-[700px] lg:w-[940px]">
+                <div className="flex flex-col gap-[16px]">
+                  <div className="text-heading6 font-farro font-bold">
+                    Sort by
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
+                    {sortBy.map((item, index) => (
+                      <div
+                        className="custom-radio flex items-center"
+                        key={index}
+                      >
+                        <input
+                          className="rounded-md"
+                          type="radio"
+                          id={item}
+                          name="featured"
+                        />
+                        <label htmlFor={item} className="flex items-center">
+                          {item}
+                        </label>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="font-semibold text-heading6 md:text-small">
+                    Wusca categories{" "}
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
+                    {wuscaCategories.map((item, index) => (
+                      <div
+                        className="custom-radio flex items-center"
+                        key={index}
+                      >
+                        <input
+                          className="rounded-md"
+                          type="radio"
+                          id={item}
+                          name="featured"
+                        />
+                        <label htmlFor={item} className="flex items-center">
+                          {item}
+                        </label>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
           {/* end sorting */}
           {/* start university and video section */}
@@ -663,13 +665,15 @@ const SearchResult = () => {
                       “
                     </div>
                     <div className="flex flex-col gap-[4px]">
-                      <div className="text-primary-400 underline x-small font-semibold relative group">
-                        What students think
+                      <div className="relative group">
+                        <span className="text-primary-400 underline x-small font-semibold ">
+                          What students think
+                        </span>
                         {/* <div
-                        className="absolute select-none hidden group-hover:flex border border-grey-200 top-[20px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] md:min-w-[320px] min-w-[200px] left-[-16px] md:left-0  bg-white p-[12px] flex-col gap-4 after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0"
+                        className="absolute select-none block group-hover:flex border border-grey-200 top-[26px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] w-[320px] left-[-16px] md:left-0 bg-white p-[12px] flex-col gap-4 after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-[9] after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0"
                       >
                         <span className="x-small text-grey900 font-semibold">
-                          Why should you trust our uni reviews?
+                        Why should you trust our uni reviews?
                         </span>
                         <p className="x-small text-grey300">
                           All our reviews are from real students, submitted
