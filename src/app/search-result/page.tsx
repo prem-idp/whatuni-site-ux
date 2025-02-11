@@ -12,8 +12,9 @@ import BookOpenDay from "../components/cards/interaction-button/bookopenday";
 import RequestInfo from "../components/cards/interaction-button/requestinfo";
 import SearchFilterButtons from "../components/search-filter-buttons/search-filter-buttons";
 import ClickAndShow from "../components/click-show/click-show";
+import { isOpera } from "react-device-detect";
 
-const SearchResult = ({ title, content }: any) => {
+const SearchResult = () => {
   const breadcrumbData = [
     {
       url: "#",
@@ -66,6 +67,31 @@ const SearchResult = ({ title, content }: any) => {
     },
   ];
 
+  const [isSortClicked, setIsSortClicked] = useState(false);
+  const sortClicked = () => {
+    setIsSortClicked(!isSortClicked);
+  };
+  const sortBy = [
+    "Recommended",
+    "Distance from home",
+    "Employment rate",
+    "Entry reqs - Highest",
+    "Entry reqs - lowest",
+    "Student Ranking",
+  ];
+  const wuscaCategories = [
+    "University of the year",
+    "Career prospects",
+    "Employment rate",
+    "Facilities",
+    "International",
+    "Lecturers and teaching quality",
+    "Postgraduate",
+    "Student life",
+    "Student support",
+    "Students’s Union",
+    "University Halls",
+  ];
   const unicard = [
     {
       showprospect: true,
@@ -347,7 +373,10 @@ const SearchResult = ({ title, content }: any) => {
           {/* end no search results */}
           {/* start sorting */}
           <div className="ml-auto w-fit">
-            <div className="flex items-center gap-[4px] px-[4px] py-[16px] small text-grey300 cursor-pointer">
+            <div
+              onClick={sortClicked}
+              className="flex items-center gap-[4px] px-[4px] py-[16px] small text-grey300 cursor-pointer relative"
+            >
               <svg
                 width="16"
                 height="17"
@@ -365,6 +394,52 @@ const SearchResult = ({ title, content }: any) => {
               </svg>
               <span className="font-semibold">Sort:</span>
               <span> Entry reqs - highest</span>
+              {isSortClicked && (
+                <div className="absolute top-[53px] right-0 w-[345px] bg-white p-[24px] rounded-[8px] shadow-custom-3 z-10 lg:w-[940px]">
+                  <div className="flex flex-col gap-[16px]">
+                    <div className="text-heading6 font-farro font-bold">
+                      Sort by
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
+                      {sortBy.map((item, index) => (
+                        <div
+                          className="custom-radio flex items-center"
+                          key={index}
+                        >
+                          <input
+                            className="rounded-md"
+                            type="radio"
+                            id={item}
+                            name="featured"
+                          />
+                          <label htmlFor={item} className="flex items-center">
+                            {item}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="font-semibold">Wusca categories </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
+                      {wuscaCategories.map((item, index) => (
+                        <div
+                          className="custom-radio flex items-center"
+                          key={index}
+                        >
+                          <input
+                            className="rounded-md"
+                            type="radio"
+                            id={item}
+                            name="featured"
+                          />
+                          <label htmlFor={item} className="flex items-center">
+                            {item}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           {/* end sorting */}
@@ -411,7 +486,7 @@ const SearchResult = ({ title, content }: any) => {
               </div>
               <Link
                 href="#"
-                className="flex items-center gap-[4px] text-white font-semibold underline"
+                className="flex items-center gap-[4px] w-fit text-white font-semibold underline"
               >
                 Find out more
                 <svg
@@ -552,7 +627,7 @@ const SearchResult = ({ title, content }: any) => {
                         18.1 Miles from you
                       </div>
                     </div>
-                    <Link href="" className="x-small underline">
+                    <Link href="" className="x-small underline w-fit">
                       WUSCA rank: 18th
                     </Link>
                     <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
@@ -588,12 +663,20 @@ const SearchResult = ({ title, content }: any) => {
                       “
                     </div>
                     <div className="flex flex-col gap-[4px]">
-                      <Link
-                        href=""
-                        className="text-primary-400 underline x-small font-semibold"
-                      >
+                      <div className="text-primary-400 underline x-small font-semibold relative group">
                         What students think
-                      </Link>
+                        {/* <div
+                        className="absolute select-none hidden group-hover:flex border border-grey-200 top-[20px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] md:min-w-[320px] min-w-[200px] left-[-16px] md:left-0  bg-white p-[12px] flex-col gap-4 after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0"
+                      >
+                        <span className="x-small text-grey900 font-semibold">
+                          Why should you trust our uni reviews?
+                        </span>
+                        <p className="x-small text-grey300">
+                          All our reviews are from real students, submitted
+                          using their verified university email address.
+                        </p>
+                      </div> */}
+                      </div>
 
                       <div className="relative x-small">
                         <div className="text-grey300 line-clamp-2">
@@ -674,21 +757,43 @@ const SearchResult = ({ title, content }: any) => {
                               <li>Criminology in Late Modernity</li>
                               <li>Criminal Law</li>
                             </ul>
+                            <Link
+                              href=""
+                              className="flex items-center gap-[4px] w-fit text-primary-400 small font-semibold hover:underline"
+                            >
+                              View all modules
+                              <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M8.23441 2.63471C8.54683 2.32229 9.05336 2.32229 9.36578 2.63471L14.1658 7.43471C14.4782 7.74713 14.4782 8.25366 14.1658 8.56608L9.36578 13.3661C9.05336 13.6785 8.54683 13.6785 8.23441 13.3661C7.92199 13.0537 7.92199 12.5471 8.23441 12.2347L11.6687 8.80039L2.4001 8.80039C1.95827 8.80039 1.6001 8.44222 1.6001 8.00039C1.6001 7.55856 1.95827 7.20039 2.4001 7.20039H11.6687L8.23441 3.76608C7.92199 3.45366 7.92199 2.94712 8.23441 2.63471Z"
+                                  fill="#3460DC"
+                                />
+                              </svg>
+                            </Link>
                           </div>
                         </ClickAndShow>
 
                         <div
-                          className={`grid grid-cols-1 justify-items-stretch gap-[8px] grid-flow-row auto-cols-fr lg:grid-rows-1 lg:grid-flow-col ${
+                          className={`grid grid-cols-1 justify-items-stretch gap-[8px] auto-cols-fr xl:grid-rows-1 xl:grid-flow-col ${
                             chitem.buttonCount == 4
-                              ? "md:grid-rows-2 md:grid-flow-col"
-                              : "md:grid-cols-1 md:grid-flow-row"
-                          }`}
+                              ? "lg:grid-rows-2 lg:grid-flow-col"
+                              : "lg:grid-cols-1"
+                          } ${chitem.buttonCount == 0 ? "hidden" : ""}`}
                         >
                           {item.showprospect ? (
                             <Getprospectus showCount={chitem.buttonCount} />
                           ) : null}
 
-                          {item.showvisit ? <Visitwebsite showCount={chitem.buttonCount}/> : null}
+                          {item.showvisit ? (
+                            <Visitwebsite showCount={chitem.buttonCount} />
+                          ) : null}
 
                           {item.showBooking ? <BookOpenDay /> : null}
 
@@ -702,7 +807,7 @@ const SearchResult = ({ title, content }: any) => {
                 </div>
                 <Link
                   href=""
-                  className="flex items-center justify-center gap-[4px] text-primary-400 small font-semibold mt-[16px] hover:underline"
+                  className="flex items-center mx-auto gap-[4px] text-primary-400 small font-semibold mt-[16px] hover:underline"
                 >
                   View 99 related courses
                   <svg
@@ -760,7 +865,7 @@ const SearchResult = ({ title, content }: any) => {
                 </div>
                 <Link
                   href=""
-                  className="flex items-center gap-[4px] text-primary-400 small font-semibold hover:underline"
+                  className="flex items-center gap-[4px] w-fit text-primary-400 small font-semibold hover:underline"
                 >
                   View full guide
                   <svg
@@ -805,7 +910,7 @@ const SearchResult = ({ title, content }: any) => {
                 </div>
                 <Link
                   href=""
-                  className="flex items-center gap-[4px] text-primary-400 small font-semibold hover:underline"
+                  className="flex items-center gap-[4px] w-fit text-primary-400 small font-semibold hover:underline"
                 >
                   View full guide
                   <svg

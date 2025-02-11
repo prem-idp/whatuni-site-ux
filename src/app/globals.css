@@ -806,14 +806,48 @@ h6 {
 }
 
 .decrease svg path {
-  stroke: #4664dc;
+  @apply stroke-blue-400; 
 }
 
 .increment svg path {
-  stroke: #adb2b6;
+  @apply stroke-gray-300; 
 }
 
 .sort-active path {
-  stroke: #333;
+  @apply stroke-grey300; 
 }
+
+
+.custom-radio input[type="radio"]{
+  @apply appearance-none
+}
+.custom-radio input[type="radio"] + label{
+  @apply relative inline-block pl-[28px] cursor-pointer transition-all duration-300 ease-in-out
+}
+
+.custom-radio input[type="radio"] + label:before
+{
+  
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+ 
+}
+.custom-radio input[type="radio"] + label:before {
+  @apply border-2 border-grey500 
+}
+
+.custom-radio input[type="radio"]:checked + label:before {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  box-shadow: inset 0 0 0 0.2em white, inset 0 0 0 1em #4664dc;
+  border: 2px solid #4664dc;
+} 
 /* sr */
