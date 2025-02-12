@@ -433,10 +433,10 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                         </div>
                                         <div className='review-gallery'>
                                             <ul className='flex gap-[8px]'>
-                                            <li className='rounded-[4px] overflow-hidden last:relative last:cursor-pointer'><Image src="/assets/images/course-details/Frame 9338.jpg" alt="" width={175} height={112} /></li>
-                                            <li className='rounded-[4px] overflow-hidden last:relative last:cursor-pointer'><Image src="/assets/images/course-details/Frame 9338.jpg" alt="" width={175} height={112} /></li>
+                                            <li className='rounded-[4px] overflow-hidden last:relative last:cursor-pointer'><Image src="/assets/images/course-details/Frame_9338.jpg" alt="" width={175} height={112} /></li>
+                                            <li className='rounded-[4px] overflow-hidden last:relative last:cursor-pointer'><Image src="/assets/images/course-details/Frame_9355.jpg" alt="" width={175} height={112} /></li>
                                             <li onClick={onOpenReviewGalleryModal} className='rounded-[4px] overflow-hidden last:relative last:cursor-pointer'>
-                                                <Image src="/assets/images/course-details/Frame 9338.jpg" alt="" width={175} height={112} />
+                                                <Image src="/assets/images/course-details/Frame_9356.jpg" alt="" width={175} height={112} />
                                                 <div className='more-gallery flex items-center justify-center small md:para font-semibold text-white underline absolute top-0 right-0 bottom-0 left-0 bg-grey-900/75'>14+ Photos</div>
                                             </li>
                                             </ul>
