@@ -40,7 +40,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                             </div>
                             <p className='para font-semibold text-grey300'>University of Portsmouth</p>
                             <Link href="" className='small text-primary-400 underline hover:text-primary-400 md:hidden'>Write a review</Link>
-                            <p className='small font-semibold text-grey300 underline'>Real student experiences</p>
+                            <p className='small text-grey300 underline'>Real student experiences</p>
                         </div>
                         <div className='review-card flex flex-col pb-[24px] border-b border-b-grey-300'>
                             <div className='review-search flex flex-col gap-[16px] md:gap-[24px]'>
