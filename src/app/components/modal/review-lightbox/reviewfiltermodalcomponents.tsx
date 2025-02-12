@@ -46,7 +46,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                             <div className='review-search flex flex-col gap-[16px] md:gap-[24px]'>
                                 <div className="bg-white rounded-[26px] p-[10px_12px] border border-grey-300 hover:border-primary-500">
                                     <div className="flex item-center gap-[12px]">
-                                        <Image alt="Search icon" loading="lazy" width="20" height="20" src="/assets/icons/search-result/search-black.svg" />
+                                        <Image alt="Search icon" loading="lazy" width="20" height="20" src="/assets/icons/search/search-black.svg" />
                                         <input type="text" className="w-full focus:outline-none small text-black placeholder:text-grey300" aria-label="Find reviews about..." placeholder="Find reviews about..." />
                                     </div>
                                 </div>

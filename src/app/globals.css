@@ -396,11 +396,11 @@ p, .para {
 .reviewMainSwiper .swiper-button-prev, .reviewMainSwiper .swiper-button-next{@apply !w-[40px] !h-[40px] !top-[50%] translate-y-[-50%]}
 .reviewMainSwiper .swiper-button-prev, .reviewMainSwiper .swiper-button-next{@apply md:!block}
 .MultiSwiper .swiper-button-prev {
-  @apply !left-[16px]
+  @apply !left-[0]
 }
 
 .MultiSwiper .swiper-button-next {
-  @apply !right-[16px]
+  @apply !right-[0]
 }
 .thumbSwiper{@apply !px-[16px] md:!px-[0]}
 .thumbSwiper .swiper-wrapper{@apply lg:grid lg:grid-cols-3 lg:gap-[8px] lg:!translate-x-0}
