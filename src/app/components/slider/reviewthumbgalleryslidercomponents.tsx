@@ -12,12 +12,12 @@ const Reviewthumbgalleryslidercomponents = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   
     const images = [
-        "/assets/images/course-details/Frame 9350.jpg",
-        "/assets/images/course-details/Frame 9351.jpg",
-        "/assets/images/course-details/Frame 9352.jpg",
-        "/assets/images/course-details/Frame 9353.jpg",
-        "/assets/images/course-details/Frame 9354.jpg",
-        "/assets/images/course-details/Frame 9355.jpg",
+        "/assets/images/course-details/Frame_9350.jpg",
+        "/assets/images/course-details/Frame_9351.jpg",
+        "/assets/images/course-details/Frame_9352.jpg",
+        "/assets/images/course-details/Frame_9353.jpg",
+        "/assets/images/course-details/Frame_9354.jpg",
+        "/assets/images/course-details/Frame_9355.jpg",
     ];
     
       useEffect(() => {
@@ -30,7 +30,7 @@ const Reviewthumbgalleryslidercomponents = () => {
     <>
      <div className="max-w-lg mx-auto">
       {/* Main Swiper */}
-            <Swiper
+        <Swiper
                 spaceBetween={8}
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
@@ -41,31 +41,31 @@ const Reviewthumbgalleryslidercomponents = () => {
                     <img src={src} alt={`Slide ${index}`} className="w-full rounded-lg" />
                 </SwiperSlide>
                 ))}
-            </Swiper>
+        </Swiper>
       {/* Thumbnail Swiper */}
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={8}
-        freeMode={true}
-        watchSlidesProgress={true}
-        breakpoints={{
-            320: {
-              slidesPerView: 2,
-              spaceBetween: 8,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 10,          },
-          }}
-        modules={[Thumbs]}
-        className="thumbSwiper"
-      >
-        {images.map((src, index) => (
-          <SwiperSlide key={index} className="cursor-pointer">
-            <img src={src} alt={`Thumbnail ${index}`} className="w-full h-auto object-cover rounded-[4px]" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          spaceBetween={8}
+          freeMode={true}
+          watchSlidesProgress={true}
+          breakpoints={{
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 10,          },
+            }}
+          modules={[Thumbs]}
+          className="thumbSwiper"
+        >
+          {images.map((src, index) => (
+            <SwiperSlide key={index} className="cursor-pointer">
+              <img src={src} alt={`Thumbnail ${index}`} className="w-full h-auto object-cover rounded-[4px]" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
     </div>
 </>
   )
