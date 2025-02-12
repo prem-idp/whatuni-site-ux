@@ -9,7 +9,7 @@ import "swiper/css/thumbs";
 
 const Reviewthumbgalleryslidercomponents = () => {
     const [isMobileView, setIsMobile] = useState(false);
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   
     const images = [
         "/assets/images/course-details/Frame 9350.jpg",
@@ -35,8 +35,7 @@ const Reviewthumbgalleryslidercomponents = () => {
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[Navigation, Thumbs]}
-                className="reviewMainSwiper MultiSwiper"
-            >
+                className="reviewMainSwiper MultiSwiper">
                 {images.map((src, index) => (
                 <SwiperSlide key={index}>
                     <img src={src} alt={`Slide ${index}`} className="w-full rounded-lg" />
