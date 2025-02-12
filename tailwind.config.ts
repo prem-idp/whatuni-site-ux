@@ -65,6 +65,7 @@ const config: Config = {
         "neutral700": "#334155",
         "green200": "#B4E646",
         "warning-800":"#92400E",
+        "medium-yellow":"#FCD34D",
         // only for Contentful team 
         blue:{
           50:"#EDFCFF",
