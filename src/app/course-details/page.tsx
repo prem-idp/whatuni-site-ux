@@ -21,6 +21,11 @@ import Courseinfomodalcomponents from './Modal/courseinfomodalcomponents';
 import Yearofentrycomponents from './year-of-entry/yearofentrycomponents';
 import Reviewfiltermodalcomponents from '../components/modal/review-lightbox/reviewfiltermodalcomponents';
 import Reviewgallerymodalcomponents from '../components/modal/review-lightbox/reviewgallerymodalcomponents';
+import Courseheaderinfoskeleton from '../components/skeleton/courseheaderinfoskeleton';
+import Courseoptionsskeleton from '../components/skeleton/courseoptionsskeleton';
+import Yearofentryskeleton from '../components/skeleton/yearofentryskeleton';
+import Jumptoskeleton from '../components/skeleton/jumptoskeleton';
+import { log } from 'console';
 
 const page = () => {
   const [openModal, setOpenModal] = useState(null);
@@ -29,8 +34,12 @@ const page = () => {
     setOpenModal(modalName);
 
   };
-  const handleCloseModal = () => {
-    setOpenModal(null);
+  const handleCloseModal = (modalName: any) => {
+    console.log(modalName);
+    
+    if(modalName === "subject" || "examType" || "location" || "courseoption" || "reviewfilter" || "reviewgallery"){
+      setOpenModal(null)
+    }
   };
 
   const breadcrumbData = [
@@ -55,9 +64,13 @@ const page = () => {
           <Breadcrumblayoutcomponent data={breadcrumbData} />
         </div>
     </section>
+    {/* <Courseheaderinfoskeleton /> */}
     <Courseheaderinfocomponents />
-    <Yearofentrycomponents />     
+    {/* <Yearofentryskeleton /> */}
+    <Yearofentrycomponents />
+    {/* <Courseoptionsskeleton />  */}
     <Courseoptionscomponents  onOpenModal={() => handleOpenModal("courseoption")}/> 
+    {/* <Jumptoskeleton /> */}
     <Jumptocomponents />
     <Courseinfocomponents  onOpenModal={() => handleOpenModal("subject")} onOpenReviewModal={()=> handleOpenModal("reviewfilter")} />
     <Modulescomponents />
@@ -73,8 +86,8 @@ const page = () => {
     {openModal === "subject" && <Subjectmodalcomponents onOpenModal={true}  onClose={handleCloseModal} />}
     {openModal === "examType" && <Examtypemodalcomponents onClose={handleCloseModal} />}
     {openModal === "location" && <Locationmodalcomponents onClose={handleCloseModal} />}
-    {openModal === "reviewfilter" && <Reviewfiltermodalcomponents onOpenReviewGalleryModal={()=> handleOpenModal("reviewgallery")} onClose={handleCloseModal} />}
-    {openModal === "reviewgallery" && <Reviewgallerymodalcomponents onClose={handleCloseModal} />}
+    {(openModal === "reviewfilter" || openModal === "reviewgallery") && <Reviewfiltermodalcomponents onOpenReviewGalleryModal={()=> handleOpenModal("reviewgallery")} onClose={handleCloseModal} />}
+    {openModal === "reviewgallery" && <Reviewgallerymodalcomponents onClose={()=> handleCloseModal("reviewgallery")} />}
     </>     
   )
 }

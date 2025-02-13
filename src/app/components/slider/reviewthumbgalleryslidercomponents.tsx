@@ -18,6 +18,14 @@ const Reviewthumbgalleryslidercomponents = () => {
         "/assets/images/course-details/Frame_9353.jpg",
         "/assets/images/course-details/Frame_9354.jpg",
         "/assets/images/course-details/Frame_9355.jpg",
+        "/assets/images/course-details/Frame_9350.jpg",
+        "/assets/images/course-details/Frame_9351.jpg",
+        "/assets/images/course-details/Frame_9352.jpg",
+        "/assets/images/course-details/Frame_9353.jpg",
+        "/assets/images/course-details/Frame_9354.jpg",
+        "/assets/images/course-details/Frame_9355.jpg",
+        "/assets/images/course-details/Frame_9355.jpg",
+        "/assets/images/course-details/Frame_9350.jpg",        
     ];
     
       useEffect(() => {
