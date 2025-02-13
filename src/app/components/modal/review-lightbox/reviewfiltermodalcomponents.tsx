@@ -291,7 +291,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                     </div>
                                     <div className='rating-pod flex flex-col gap-[10px]'>
                                         <div className='category-rank flex items-center gap-[8px]'>
-                                            <span className="reviewLink x-small text-grey300">Student rating</span>
+                                            <span className="reviewLink x-small text-grey300">Overall rating</span>
                                             <div className='flex gap-[4px] items-center'>
                                                     <div className='flex gap-[4px]'>
                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -446,7 +446,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                                 {/* -- loop */}
                                                 <div className='flex flex-col gap-[8px]'>
                                                     <div className='category-rank flex items-center gap-[8px]'>
-                                                            <span className="reviewLink x-small font-semibold text-grey300">University rating</span>
+                                                            <span className="reviewLink small font-semibold text-grey300">University rating</span>
                                                             <div className='flex gap-[4px] items-center'>
                                                                 <div className='flex gap-[4px]'>
                                                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -480,7 +480,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                                     </ul>
                                                 </div>    
                                                 {/* -- loop */}
-                                                <div className='w-fit cursor-pointer'>+ Read more</div>    
+                                                <div className='w-fit underline cursor-pointer'>+ Read more</div>
                                             </div>        
                                             <div className='flex gap-[8px] items-center w-fit small text-grey300  cursor-pointer'>
                                                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -521,7 +521,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                                 {/* -- loop */}
                                                     <div className='flex flex-col gap-[8px]'>
                                                         <div className='category-rank flex items-center gap-[8px]'>
-                                                                <span className="reviewLink x-small font-semibold text-grey300">University rating</span>
+                                                                <span className="reviewLink small font-semibold text-grey300">University rating</span>
                                                                 <div className='flex gap-[4px] items-center'>
                                                                     <div className='flex gap-[4px]'>
                                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -559,7 +559,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                                 {/* -- loop */}
                                                     <div className='flex flex-col gap-[8px]'>
                                                         <div className='category-rank flex items-center gap-[8px]'>
-                                                                <span className="reviewLink x-small font-semibold text-grey300">University rating</span>
+                                                                <span className="reviewLink small font-semibold text-grey300">University rating</span>
                                                                 <div className='flex gap-[4px] items-center'>
                                                                     <div className='flex gap-[4px]'>
                                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -597,7 +597,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                                 {/* -- loop */}
                                                     <div className='flex flex-col gap-[8px]'>
                                                         <div className='category-rank flex items-center gap-[8px]'>
-                                                                <span className="reviewLink x-small font-semibold text-grey300">University rating</span>
+                                                                <span className="reviewLink small font-semibold text-grey300">University rating</span>
                                                                 <div className='flex gap-[4px] items-center'>
                                                                     <div className='flex gap-[4px]'>
                                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -635,7 +635,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                                 {/* -- loop */}
                                                     <div className='flex flex-col gap-[8px]'>
                                                         <div className='category-rank flex items-center gap-[8px]'>
-                                                                <span className="reviewLink x-small font-semibold text-grey300">University rating</span>
+                                                                <span className="reviewLink small font-semibold text-grey300">University rating</span>
                                                                 <div className='flex gap-[4px] items-center'>
                                                                     <div className='flex gap-[4px]'>
                                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
