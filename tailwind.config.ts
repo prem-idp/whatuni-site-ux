@@ -44,6 +44,7 @@ const config: Config = {
     extend: {
       colors: {
         "success-400": "#34D399",
+        "success-500": "#10B981",
         "success-700": "#047857",
         "success-800": "#065F46",
         //"blue-50":"#EDFCFF",

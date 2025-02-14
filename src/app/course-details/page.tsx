@@ -70,7 +70,7 @@ const page = () => {
     {/* <Yearofentryskeleton /> */}
     <Yearofentrycomponents />
     {/* <Courseoptionsskeleton />  */}
-    <Courseoptionscomponents  onOpenModal={() => handleOpenModal("courseoption")}/> 
+    <Courseoptionscomponents  onOpenModal={() => handleOpenModal("courseoption")} /> 
     {/* <Jumptoskeleton /> */}
     <Jumptocomponents />
     <Courseinfocomponents  onOpenModal={() => handleOpenModal("subject")} onOpenReviewModal={()=> handleOpenModal("reviewfilter")} />
@@ -78,7 +78,7 @@ const page = () => {
     <Entryrequirements onOpenModal={() => handleOpenModal("examType")} />
     <Popularalevelsubjectcomponents />
     <Tuitionfeescomponents onOpenModal={() => handleOpenModal("location")} />
-    <Latestreviewscomponents onOpenModal={() => handleOpenModal("subject") }/>
+    <Latestreviewscomponents onOpenModal={() => handleOpenModal("subject") } />
     <Uniinfocomponents />
     <Similarcoursecomponents />
     <Findacoursecomponents />

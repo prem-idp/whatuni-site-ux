@@ -5,6 +5,8 @@ import Link from 'next/link'
 import Visitwebsite from '@/app/components/cards/interaction-button/visitwebsite'
 import RequestInfo from '@/app/components/cards/interaction-button/requestinfo'
 import BookEvent from '@/app/components/cards/interaction-button/bookevent'
+import Callnowbutton from '@/app/components/cards/interaction-button/callnow'
+import Clearingvisitewebsite from '@/app/components/cards/interaction-button/clearingvisitewebsite'
 
 const Courseheaderinfocomponents = () => {
   return (
@@ -21,6 +23,7 @@ const Courseheaderinfocomponents = () => {
                         </div>
                         <div className='uniresults-right flex flex-col flex-1 gap-[16px]'>
                             <div className='uni-info-card flex flex-col gap-[8px] md:gap-0'>
+                              <div className='clearing-tag x-small font-bold text-positive-default uppercase'>In Clearing</div>
                               <div className='flex flex-col-reverse md:flex-row gap-[16px] md:gap-0  justify-between items-start h5 text-grey300'>
                                 <span>Animation BA (Hons)</span>
                                   <span className="favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
@@ -62,16 +65,34 @@ const Courseheaderinfocomponents = () => {
                                   </div>
                                   <a href="#" className='reviewLink block small text-primary-400 hover:text-primary-500 hover:underline'>View reviews</a>
                                 </div>
+                              </div>
+                              <div className='chance-acceptance flex gap-[8px]'>
+                                <div className='x-small font-semibold text-grey300 uppercase'>chance of acceptance:</div>
+                                <div className='flex gap-[2px]'>
+                                  <div className='x-small font-semibold text-success-700 uppercase'>VERY LIKELY</div>                                
+                                  <div className='flex gap-[2px] items-center *:w-[10px] *:h-[8px] *:bg-success-500'>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                  </div>
+                                </div>
+                                <div></div>  
                               </div>  
                               <p className='small text-grey300'>Want to know what it's like to study this course at uni? We've got all the key info, from entry requirements to the modules on offer. If that all sounds good, why not check out reviews from real students or even book onto an upcoming open day?</p>                        
                             </div>
                             </div>
                             <div className='uniresults-content-right flex items-end'>
-                              <div className='btn-pod w-full grid grid-col-1 md:grid-cols-2 lg:flex lg:grid-cols-none gap-[8px]'>
+                              {/* <div className='btn-pod w-full grid grid-col-1 md:grid-cols-2 lg:flex lg:grid-cols-none gap-[8px]'>
                                 <Getprospectus pageName={"courseDetails"} />
                                 <Visitwebsite />
                                 <BookEvent />
                                 <RequestInfo />
+                              </div> */}
+                              <div className='flex flex-col md:flex-row gap-[8px] w-full lg:w-fit lg:ml-[auto]'>
+                                <Clearingvisitewebsite />
+                                <Callnowbutton />
                               </div>
                           </div> 
                         </div>    
