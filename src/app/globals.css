@@ -393,8 +393,7 @@ p, .para {
   @apply !bg-blue-300
 }
 .reviewMainSwiper{@apply md:!p-[0_0_8px_0] !hidden md:!flex }
-.reviewMainSwiper .swiper-button-prev, .reviewMainSwiper .swiper-button-next{@apply !w-[40px] !h-[40px] !top-[50%] translate-y-[-50%]}
-.reviewMainSwiper .swiper-button-prev, .reviewMainSwiper .swiper-button-next{@apply md:!block}
+.reviewMainSwiper .swiper-button-prev, .reviewMainSwiper .swiper-button-next{@apply md:!block !w-[40px] !h-[40px] !top-[50%] translate-y-[-50%]}
 .MultiSwiper .swiper-button-prev {
   @apply !left-[0]
 }
@@ -403,9 +402,9 @@ p, .para {
   @apply !right-[0]
 }
 .thumbSwiper{@apply !px-[16px] md:!px-[0]}
-.thumbSwiper .swiper-wrapper{@apply lg:grid lg:grid-cols-3 lg:gap-[8px] lg:!translate-x-0}
-.thumbSwiper .swiper-wrapper .swiper-slide{@apply lg:!w-full rounded-[4px] lg:!mr-[0]}
-.thumbSwiper .swiper-wrapper .swiper-slide img{@apply lg:w-full max-w-[100%]}
+/* .thumbSwiper .swiper-wrapper{@apply lg:grid lg:grid-cols-3 lg:gap-[8px] lg:!translate-x-0} */
+.thumbSwiper .swiper-wrapper .swiper-slide{@apply /* lg:!w-full lg:!mr-[0] */ rounded-[4px] } 
+/* .thumbSwiper .swiper-wrapper .swiper-slide img{@apply lg:w-full max-w-[100%]} */
 .thumbSwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active{@apply md:border-medium-yellow md:border-[3px]}
 /* Swiper Styles */
 /* Backgrop shadow */
