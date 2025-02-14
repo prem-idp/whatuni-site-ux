@@ -11,7 +11,7 @@ const ClickAndShow = ({ children }: any) => {
     <div className="flex flex-col gap-[4px]">
       <div
         onClick={moduleToggle}
-        className="flex items-center gap-[4px] text-primary-400 small font-semibold cursor-pointer"
+        className="flex items-center gap-[4px] text-primary-400 small font-semibold cursor-pointer hover:underline"
       >
         {isModuleOpen ? (
           <svg

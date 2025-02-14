@@ -10,7 +10,7 @@ const Accordion = ({ title, children }: any) => {
         className="flex items-center justify-between w-full font-semibold small"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="h5 text-blue-400">{title}</span>
+        <span className="h5 text-blue-400 hover:underline">{title}</span>
         {isOpen ? (
           <svg
             className="transition-all duration-300"
