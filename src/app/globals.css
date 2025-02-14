@@ -91,7 +91,7 @@
   }
 
   .btn-orange {
-    @apply bg-negative-default hover:bg-warning-800;
+    @apply bg-negative-default hover:bg-negative-dark;;
   }
 
   .btn-grey {
@@ -766,7 +766,6 @@ h6 {
 
 /* RTF END */
 
-
 .form_radio .form-check-input:checked+label,
 .form_radio .form-check-input:hover+label {
   @apply text-white bg-primary-500 border-primary-500 cursor-pointer
@@ -800,22 +799,12 @@ h6 {
 /* Course Details */
 
 /* sr */
-/* .form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
-.form_check .form-checkbox:checked + label, .form_radio .form-radio:checked + label{@apply text-white bg-primary-400 border-primary-400 cursor-pointer}
-.year-of-entry .form-check-input:checked + label,.year-of-entry .form-check-input:hover + label{@apply text-grey300 bg-white border-white}
-
-.form_radio_black .form-check-input:checked + label,.form_radio_black .form-check-input:hover + label{@apply text-white bg-grey300 border-grey300 cursor-pointer}
-.form_check_black .form-checkbox:checked + label, .form_radio_black .form_radio_black:checked + label{@apply text-white bg-grey300 border-grey300 cursor-pointer} */
-.heart:hover svg{ fill:#0FBEFD}
-/* sr */
-
 .heart:hover svg,.heart.active svg {
 @apply fill-primary-200
 }
 .heart.active{
 @apply bg-primary-100
 }
-
 
 .form-black input[type="radio"]:checked+label,
 .form-black input[type="checkbox"]:checked+label {
@@ -834,37 +823,20 @@ h6 {
   @apply stroke-grey300; 
 }
 
-
 .custom-radio input[type="radio"]{
   @apply appearance-none
 }
 .custom-radio input[type="radio"] + label{
-  @apply relative inline-block pl-[28px] cursor-pointer transition-all duration-300 ease-in-out
+  @apply relative inline-block pl-[28px] cursor-pointer 
 }
 
 .custom-radio input[type="radio"] + label:before
 {
-  
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 0;
-  width: 17px;
-  height: 17px;
-  text-align: center;
-  border-radius: 50%;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
- 
-}
-.custom-radio input[type="radio"] + label:before {
-  @apply border-2 border-grey500 
+  @apply absolute top-[3px] left-0 w-[17px] h-[17px] text-center rounded-full content-[''] border-2 border-grey500 
 }
 
 .custom-radio input[type="radio"]:checked + label:before {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  box-shadow: inset 0 0 0 0.2em white, inset 0 0 0 1em #4664dc;
-  border: 2px solid #4664dc;
+  @apply transition-all duration-300 ease-in-out shadow-[inset_0_0_0_0.2em_white,inset_0_0_0_1em_#4664dc] 
+  border-2 border-primary-400
 } 
 /* sr */

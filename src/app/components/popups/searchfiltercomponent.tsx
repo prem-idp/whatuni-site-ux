@@ -156,10 +156,12 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           isFilterOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-[16px] md:p-[16px_32px_0]">
+        <div className="p-[16px] md:p-[32px] md:pb-0">
+          <div className="flex justify-between">
+          <h6 className="h2">Filter</h6>
           <svg
             onClick={filterHandleClose}
-            className="ml-auto mr-[-10px] w-[44px] h-[44px] cursor-pointer"
+            className="mt-[-6px] mr-[-6px] md:mt-[-22px] md:mr-[-22px] cursor-pointer"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -181,13 +183,13 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               strokeLinejoin="round"
             />
           </svg>
-          <h6 className="h2 mt-[-8px]">Filter</h6>
+          </div>
           <p className="m-[8px_0_24px]">
             Use these filters to narrow down your search options based on your
             preferred criteria 
           </p>
         </div>
-        <div className="h-[calc(100%-265px)] overflow-y-auto custom-scrollbar-2 md:h-[calc(100%-230px)]">
+        <div className="h-[calc(100%-232px)] overflow-y-auto custom-scrollbar-2 md:h-[calc(100%-240px)]">
           <Accordion title="Subject">
             {/* subject */}
             <div className="flex flex-col gap-[24px] pt-[24px]">
