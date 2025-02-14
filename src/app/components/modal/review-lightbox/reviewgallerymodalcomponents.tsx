@@ -7,7 +7,7 @@ import Paginations from '../../paginations/paginations';
 import Reviewthumbgalleryslidercomponents from '../../slider/reviewthumbgalleryslidercomponents';
 import Reviewdetailcommentscomponents from '../../reviewdetail-comments/reviewdetailcommentscomponents';
 
-const Reviewgallerymodalcomponents = ({ onClose }:any) => {
+const Reviewgallerymodalcomponents = ({ onClose,onOpenReviewGalleryModal }:any) => {
   return (
     <>
     <AnimatePresence>
