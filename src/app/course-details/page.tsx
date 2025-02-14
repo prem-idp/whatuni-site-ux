@@ -32,13 +32,14 @@ const page = () => {
 
   const handleOpenModal = (modalName: any) => {
     setOpenModal(modalName);
-
+     document.body.classList.add("overflow-y-hidden");
   };
   const handleCloseModal = (modalName: any) => {
     console.log(modalName);
     
     if(modalName === "subject" || "examType" || "location" || "courseoption" || "reviewfilter" || "reviewgallery"){
       setOpenModal(null)
+      document.body.classList.remove("overflow-y-hidden");
     }
   };
 
