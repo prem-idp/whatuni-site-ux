@@ -19,14 +19,13 @@ const Courseheaderinfoskeleton = () => {
                           <div className="univ__logo w-[112px] bg-white rounded-[8px] overflow-hidden hidden md:block">
                             <div className='skeleton skeleton-thumb-img skeleton-text-animated w-[112px] !h-[112px]'></div>
                           </div>
-                        </div>
+                         </div>
                         <div className='uniresults-right flex flex-col flex-1 gap-[16px]'>
                             <div className='uni-info-card flex flex-col gap-[8px] md:gap-0'>
                               <div className='flex flex-col-reverse md:flex-row gap-[16px] md:gap-0  justify-between items-start h5 text-grey300'>
                                     <div className="skeleton skeleton-text skeleton-text-animated large_heading !w-[30%]"></div>
-                                    <span className="favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
-                                  {/* --  */}
-                                </span>
+                                    <div className='skeleton skeleton-circle-img skeleton-text-animated !w-[40px] !h-[40px]'></div>
+                                  {/* -- */}                                
                               </div>
                             <div className='flex flex-col gap-[8px]'>
                             <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[40%]"></div>

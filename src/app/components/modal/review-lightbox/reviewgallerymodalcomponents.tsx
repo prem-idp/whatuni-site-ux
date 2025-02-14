@@ -32,14 +32,14 @@ const Reviewgallerymodalcomponents = ({ onClose,onOpenReviewGalleryModal }:any) 
                     </svg>
                 </div>
                 <div className='review-modal-container flex flex-col gap-[16px]'>                    
-                    <div className='review-modal-card flex flex-col lg:flex-row gap-[16px] md:gap-[20px] max-md:pr-[0] max-md:h-[calc(100vh-24px)] max-lg:pr-[20px] max-lg:custom-scrollbar-2 max-lg:overflow-y-auto max-lg:h-[calc(100vh-168px)] lg:custom-scrollbar-2 lg:overflow-y-auto lg:h-[calc(100vh-168px)] lg:pr-[16px]'>                      
+                    <div className='review-modal-card flex flex-col lg:flex-row gap-[16px] md:gap-[20px] max-md:pr-[0] max-md:h-[calc(100vh-24px)] max-lg:pr-[20px] max-lg:custom-scrollbar-2 max-lg:overflow-y-auto max-lg:h-[calc(100vh-168px)]'>                      
                         <div className='w-full lg:min-w-[540px] lg:w-[540px]'>
                             <div className='review-gallery pt-[60px] md:pt-[0]'>
                                 <Reviewthumbgalleryslidercomponents />
                             </div>
                         </div>
                         {/* -- */}
-                        <div className='review-gallery-scroll flex flex-1 px-[16px] md:px-[0] max-md:mr-[16px] max-md:custom-scrollbar-2 max-md:overflow-y-auto max-md:h-[calc(100vh-212px)]'>
+                        <div className='review-gallery-scroll flex flex-1 px-[16px] md:px-[0] max-md:mr-[16px] max-md:custom-scrollbar-2 max-md:overflow-y-auto max-md:h-[calc(100vh-212px)] lg:custom-scrollbar-2 lg:overflow-y-auto lg:h-[calc(100vh-168px)] lg:pr-[16px]'>
                             <Reviewdetailcommentscomponents />
                         </div>    
                         {/* -- */}
