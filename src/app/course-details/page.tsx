@@ -26,6 +26,7 @@ import Courseoptionsskeleton from '../components/skeleton/courseoptionsskeleton'
 import Yearofentryskeleton from '../components/skeleton/yearofentryskeleton';
 import Jumptoskeleton from '../components/skeleton/jumptoskeleton';
 import { log } from 'console';
+import Othercoursesmaylikecomponents from './other-courses-you-may-like/othercoursesmaylikecomponents';
 
 const page = () => {
   const [openModal, setOpenModal] = useState(null);
@@ -80,6 +81,7 @@ const page = () => {
     <Tuitionfeescomponents onOpenModal={() => handleOpenModal("location")} />
     <Latestreviewscomponents onOpenModal={() => handleOpenModal("subject") } />
     <Uniinfocomponents />
+    <Othercoursesmaylikecomponents />
     <Similarcoursecomponents />
     <Findacoursecomponents />
     <Subscribecomponents />
