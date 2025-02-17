@@ -11,7 +11,7 @@ const Reviewgallerymodalcomponents = ({ onClose,onOpenReviewGalleryModal }:any) 
   return (
     <>
     <AnimatePresence>
-        <div className='modal modal-container relative top-0 right-0 bottom-0'>  
+        <div className='modal modal-container fixed top-0 right-0 bottom-0 z-[8]'>  
         <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

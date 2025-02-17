@@ -112,7 +112,7 @@ const Courseheaderinfocomponents = () => {
                             </div>
                             </div>
                             {/* Sticky Section */}
-                            <div className={`uniresults-content-right flex items-end ${isSticky ? "fixed top-0 left-0 w-full bg-white shadow-custom-4 z-[10] transition-all p-[16px]" : ""
+                            <div className={`uniresults-content-right flex items-end ${isSticky ? "fixed top-0 left-0 w-full bg-white shadow-custom-4 z-[4] transition-all p-[16px]" : ""
       }`}
     >
                               <div className='flex flex-col md:flex-row gap-[8px] w-full lg:w-fit lg:ml-[auto]'>
