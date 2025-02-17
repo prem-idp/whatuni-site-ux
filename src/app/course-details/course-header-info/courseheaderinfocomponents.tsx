@@ -15,7 +15,7 @@ const Courseheaderinfocomponents = () => {
   useEffect(() => {
       const handleScroll = () => {
       const scrollTop = window.scrollY;     
-      const stickyThreshold = 350;
+      const stickyThreshold = 330;
       setIsSticky(scrollTop > stickyThreshold);
     };
 
