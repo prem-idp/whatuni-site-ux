@@ -82,11 +82,11 @@ const Uniinfocomponents = () => {
                                     88th</div>
                                 </div>                          
                             </div>
-                            <div className='uniresults-content-right flex items-end'>
-                            <div className='btn-pod w-full flex gap-[8px]'>
-                              <Getprospectus pageName={"courseDetails"} />
-                            </div>
-                          </div> 
+                            {/* <div className='uniresults-content-right flex items-end'>
+                              <div className='btn-pod w-full flex gap-[8px]'>
+                                <Getprospectus pageName={"courseDetails"} />
+                              </div>
+                            </div>  */}
                         </div>                    
                     </div>
                     {/* -- */}
