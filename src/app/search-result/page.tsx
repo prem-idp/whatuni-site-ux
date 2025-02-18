@@ -199,10 +199,10 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
             <p>000 universities offer 1563 courses</p>
           </div>
           {/* skeleton */}
-          <div className="py-[16px]">
+          {/* <div className="py-[16px]">
             <div className="skeleton skeleton-text-animated descrip !w-[50%]"></div>
             <div className="skeleton skeleton-text-animated descrip !w-[30%]"></div>
-          </div>
+          </div> */}
           {/* skeleton */}
           {/* end subject */}
         </div>
@@ -365,7 +365,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
           {/* end add your grades */}
 
           {/* start add your grades skeleton*/}
-          <div className="bg-neutral-100 h-[81px] p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
+          {/* <div className="bg-neutral-100 h-[81px] p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
             <div className="flex gap-[16px] grow">
               <div className="skeleton-text-animated text-grey900 rounded-tl-[24px] rounded-br-[24px] p-[8px] w-[48px] h-[48px] flex items-center justify-center shrink-0">
                 <div className="skeleton skeleton-square-img skeleton-text-animated !w-[22px] !h-[22px] !rounded-none"></div>
@@ -379,7 +379,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
               <div className="skeleton skeleton-square-img skeleton-text-animated !w-[20px] !h-[20px] !rounded-none"></div>
               <div className="skeleton skeleton-text-animated descrip"></div>
             </div>
-          </div>
+          </div> */}
           {/* end add your grades skeleton*/}
 
           {/* start no search results */}
@@ -566,7 +566,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
             </div>
           </div>
           {/* skeleton */}
-          <div className="bg-neutral-100 rounded-[8px] p-[16px] flex flex-col gap-[24px] md:flex-row lg:p-[24px]">
+          {/* <div className="bg-neutral-100 rounded-[8px] p-[16px] flex flex-col gap-[24px] md:flex-row lg:p-[24px]">
             <div className="flex flex-col gap-[8px] w-full order-2 lg:order-1">
               <div className="skeleton skeleton-square-img skeleton-text-animated !w-[64px] !h-[64px] p-[4px] !rounded-[4px] bg-white shadow-custom-4 hidden lg:block"></div>
               <div className="skeleton skeleton-text-animated heading !w-[10%]"></div>
@@ -615,7 +615,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
 
               </div>
             </div>
-          </div>
+          </div> */}
           {/* skeleton */}
           {/* end university and video section */}
 
@@ -908,8 +908,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex flex-col gap-[8px]">
-                          <div className="text-primary-400 font-semibold cursor-pointer hover:underline"
-                          >
+                          <div className="text-primary-400 font-semibold cursor-pointer hover:underline">
                             Course name
                           </div>
                           <div className="flex gap-[4px] text-grey-500">
