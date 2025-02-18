@@ -156,7 +156,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           isFilterOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-[16px] md:p-[32px] md:pb-0">
+        <div className="p-[16px] md:p-[32px] !pb-0">
           <div className="flex justify-between">
           <h6 className="h2">Filter</h6>
           <svg
@@ -189,7 +189,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
             preferred criteria 
           </p>
         </div>
-        <div className="h-[calc(100%-232px)] overflow-y-auto custom-scrollbar-2 md:h-[calc(100%-240px)]">
+        <div className="h-[calc(100%-215px)] overflow-y-auto custom-scrollbar-2 md:h-[calc(100%-213px)]">
           <Accordion title="Subject">
             {/* subject */}
             <div className="flex flex-col gap-[24px] pt-[24px]">

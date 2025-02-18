@@ -198,6 +198,12 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
             </div>
             <p>000 universities offer 1563 courses</p>
           </div>
+          {/* skeleton */}
+          <div className="py-[16px]">
+            <div className="skeleton skeleton-text-animated descrip !w-[50%]"></div>
+            <div className="skeleton skeleton-text-animated descrip !w-[30%]"></div>
+          </div>
+          {/* skeleton */}
           {/* end subject */}
         </div>
       </section>
@@ -358,6 +364,24 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
           </div>
           {/* end add your grades */}
 
+          {/* start add your grades skeleton*/}
+          <div className="bg-neutral-100 h-[81px] p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
+            <div className="flex gap-[16px] grow">
+              <div className="skeleton-text-animated text-grey900 rounded-tl-[24px] rounded-br-[24px] p-[8px] w-[48px] h-[48px] flex items-center justify-center shrink-0">
+                <div className="skeleton skeleton-square-img skeleton-text-animated !w-[22px] !h-[22px] !rounded-none"></div>
+              </div>
+              <div className="flex flex-col gap-[4px] grow">
+                <div className="skeleton skeleton-text-animated large_heading !w-[20%]"></div>
+                <div className="skeleton skeleton-text-animated !w-[70%]"></div>
+              </div>
+            </div>
+            <div className="skeleton skeleton_btn flex items-center justify-center self-center gap-[8px] btn   px-[20px] py-[10px] w-full lg:w-fit">
+              <div className="skeleton skeleton-square-img skeleton-text-animated !w-[20px] !h-[20px] !rounded-none"></div>
+              <div className="skeleton skeleton-text-animated descrip"></div>
+            </div>
+          </div>
+          {/* end add your grades skeleton*/}
+
           {/* start no search results */}
           {/* <div className="bg-grey-50 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
             <div className="flex gap-[16px]">
@@ -460,7 +484,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
 
           {/* start university and video section */}
           <div className="bg-grey-600 rounded-[8px] p-[16px] flex flex-col gap-[24px] md:flex-row lg:p-[24px]">
-            <div className="flex flex-col gap-[8px] w-full order-2  lg:order-1">
+            <div className="flex flex-col gap-[8px] w-full order-2 lg:order-1">
               <div className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-white shadow-custom-4 hidden lg:block">
                 <Image
                   src="/assets/icons/search-result/kent.png"
@@ -480,7 +504,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                 your creative Degree at Arts University Plymouth Plymouth
               </div>
               <div className="flex items-center gap-[8px] text-grey-50 small">
-                <div className="flex items-center gap-[4px]">
+                <div className="flex items-end gap-[2px]">
                   <svg
                     width="24"
                     height="24"
@@ -541,8 +565,60 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
               </div>
             </div>
           </div>
+          {/* skeleton */}
+          <div className="bg-neutral-100 rounded-[8px] p-[16px] flex flex-col gap-[24px] md:flex-row lg:p-[24px]">
+            <div className="flex flex-col gap-[8px] w-full order-2 lg:order-1">
+              <div className="skeleton skeleton-square-img skeleton-text-animated !w-[64px] !h-[64px] p-[4px] !rounded-[4px] bg-white shadow-custom-4 hidden lg:block"></div>
+              <div className="skeleton skeleton-text-animated heading !w-[10%]"></div>
+              <div className="skeleton skeleton-text-animated large_heading !w-[60%]"></div>
+              <div className="skeleton skeleton-text-animated descrip"></div>
+              <div className="flex items-center gap-[8px] text-grey-50 small">
+                <div className="flex items-center gap-[4px]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z"
+                      fill="#d4d4d4"
+                    />
+                  </svg>
+                </div>
+                <div className="skeleton skeleton-text-animated descrip !w-[20%]"></div>
+              </div>
+              <div className="flex items-center gap-[4px] text-white font-semibold underline">
+                <div className="skeleton skeleton-text-animated heading !w-[15%]"></div>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8.23798 2.55048C8.55528 2.23317 9.06972 2.23317 9.38702 2.55048L14.262 7.42548C14.5793 7.74278 14.5793 8.25722 14.262 8.57452L9.38702 13.4495C9.06972 13.7668 8.55528 13.7668 8.23798 13.4495C7.92067 13.1322 7.92067 12.6178 8.23798 12.3005L11.726 8.8125L2.3125 8.8125C1.86377 8.8125 1.5 8.44873 1.5 8C1.5 7.55127 1.86377 7.1875 2.3125 7.1875H11.726L8.23798 3.69952C7.92067 3.38222 7.92067 2.86778 8.23798 2.55048Z"
+                    fill="#d4d4d4"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="w-full shrink-0 flex self-center  rounded-[8px] overflow-hidden relative order-1 md:w-[310px] md:h-[158px] lg:w-[391px] lg:h-[200px] lg:order-2">
+              <div className="bg-neutral-100 w-full relative rounded-[8px] overflow-hidden flex justify-center">
+              </div>
+              <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer">
+              <div className="skeleton skeleton-circle-img skeleton-text-animated !w-[52px] !h-[52px] !rounded-none"></div>
+
+              </div>
+            </div>
+          </div>
+          {/* skeleton */}
           {/* end university and video section */}
-          
+
           {/* start sponsored section */}
           {unicard.map((item, index) => (
             <div
@@ -570,7 +646,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                         </div>
                       ) : null}
                     </div>
-                    <div className="heart w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
+                    <div className="heart w-[40px] h-[40px] bg-white x-small border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100 relative group">
                       <svg
                         width="20"
                         height="20"
@@ -586,6 +662,56 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                           strokeLinejoin="round"
                         />
                       </svg>
+                      <div className="absolute z-[1] select-none hidden group-hover:flex border border-grey-200 top-[43px] shadow-custom-1 whitespace-normal rounded-[8px] w-[320px] right-[24px] md:right-0 bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:right-[18px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0">
+                        <div className="flex items-center justify-between">
+                          <span className="text-grey900 font-semibold">
+                            We have added this to your comparison
+                          </span>
+                          <svg
+                            className="cursor-pointer"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M18 6L6 18"
+                              stroke="#333333"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M6 6L18 18"
+                              stroke="#333333"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <Link
+                          href=""
+                          className="flex items-center gap-[4px] w-fit text-primary-400 hover:underline"
+                        >
+                          View all modules
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8.23441 2.63471C8.54683 2.32229 9.05336 2.32229 9.36578 2.63471L14.1658 7.43471C14.4782 7.74713 14.4782 8.25366 14.1658 8.56608L9.36578 13.3661C9.05336 13.6785 8.54683 13.6785 8.23441 13.3661C7.92199 13.0537 7.92199 12.5471 8.23441 12.2347L11.6687 8.80039L2.4001 8.80039C1.95827 8.80039 1.6001 8.44222 1.6001 8.00039C1.6001 7.55856 1.95827 7.20039 2.4001 7.20039H11.6687L8.23441 3.76608C7.92199 3.45366 7.92199 2.94712 8.23441 2.63471Z"
+                              fill="#3460DC"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                   <div className="flex flex-col gap-[4px] text-white">
@@ -683,7 +809,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                       </div>
                     </div>
                     <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
-                      <div className="flex items-center gap-[2px] bg-green-100 text-positive-dark px-[8px] rounded-[4px]">
+                      <div className="flex items-center gap-[2px] bg-positive-light text-positive-default px-[8px] rounded-[4px]">
                         <Image
                           src="/assets/icons/search-result/lectures-green.svg"
                           alt="Lecturers and Teaching"
@@ -782,7 +908,8 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex flex-col gap-[8px]">
-                          <div className="text-primary-400 font-semibold cursor-pointer hover:underline">
+                          <div className="text-primary-400 font-semibold cursor-pointer hover:underline"
+                          >
                             Course name
                           </div>
                           <div className="flex gap-[4px] text-grey-500">
@@ -808,7 +935,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                             </div>
                           </div>
                         </div>
-                        <div className="heart w-[40px] h-[40px] bg-white border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer">
+                        <div className="heart w-[40px] h-[40px] bg-white x-small border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer relative group">
                           <svg
                             width="20"
                             height="20"
@@ -824,6 +951,56 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                               strokeLinejoin="round"
                             />
                           </svg>
+                          <div className="absolute z-[1] select-none hidden group-hover:flex border border-grey-200 top-[44px] shadow-custom-1 whitespace-normal rounded-[8px] w-[320px] right-[24px] md:right-0 bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:right-[18px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0">
+                            <div className="flex items-center justify-between">
+                              <span className="text-grey900 font-semibold">
+                                We have added this to your comparison
+                              </span>
+                              <svg
+                                className="cursor-pointer"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M18 6L6 18"
+                                  stroke="#333333"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                                <path
+                                  d="M6 6L18 18"
+                                  stroke="#333333"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </div>
+                            <Link
+                              href=""
+                              className="flex items-center gap-[4px] w-fit text-primary-400 hover:underline"
+                            >
+                              View all modules
+                              <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M8.23441 2.63471C8.54683 2.32229 9.05336 2.32229 9.36578 2.63471L14.1658 7.43471C14.4782 7.74713 14.4782 8.25366 14.1658 8.56608L9.36578 13.3661C9.05336 13.6785 8.54683 13.6785 8.23441 13.3661C7.92199 13.0537 7.92199 12.5471 8.23441 12.2347L11.6687 8.80039L2.4001 8.80039C1.95827 8.80039 1.6001 8.44222 1.6001 8.00039C1.6001 7.55856 1.95827 7.20039 2.4001 7.20039H11.6687L8.23441 3.76608C7.92199 3.45366 7.92199 2.94712 8.23441 2.63471Z"
+                                  fill="#3460DC"
+                                />
+                              </svg>
+                            </Link>
+                          </div>
                         </div>
                       </div>
                       <ClickAndShow>
@@ -858,7 +1035,6 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                           </Link>
                         </div>
                       </ClickAndShow>
-
                       <div
                         className={`grid grid-cols-1 justify-items-stretch gap-[8px] auto-cols-fr xl:grid-rows-1 xl:grid-flow-col ${
                           chitem.buttonCount == 4
@@ -921,8 +1097,8 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
       {/* start about subject section */}
       <section className="bg-white px-[16px] md:px-[20px] xl:px-0">
         <div className="max-w-container mx-auto">
-          <div className="h1 py-[40px]">Explore more about law</div>
-          <div className="flex flex-col gap-[40px] md:gap-[80px] lg:pb-[16px]">
+          <div className="h1 pt-[40px]">Explore more about law</div>
+          <div className="flex flex-col gap-[40px] md:gap-[80px] py-[40px]">
             <div className="flex flex-col item-center border-[1px] border-grey-200 rounded-[8px] lg:flex-row">
               <div className="w-full md:h-[193px] lg:h-[221px] lg:w-[392px] shrink-0">
                 <Image

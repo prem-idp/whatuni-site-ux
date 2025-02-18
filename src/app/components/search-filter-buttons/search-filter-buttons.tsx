@@ -130,7 +130,7 @@ const SearchFilterButtons = () => {
                 />
               </svg>
             </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200  text-grey300">
+            <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
               Location (1)
               <svg
                 width="20"
