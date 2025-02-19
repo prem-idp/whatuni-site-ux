@@ -45,7 +45,7 @@ const Uniinfocomponents = () => {
                                     </svg>
                                 </div>                                                      
                               </div>
-                                <p className='small text-grey300 line-clamp-3 md:line-clamp-2'>Norwich University of the Arts was founded more than 175 years ago, and today provides students with excellent teaching that...</p>
+                                <p className='small text-grey300 line-clamp-3 md:line-clamp-2 w-full md:w-[calc(100%_-_58px)]'>Norwich University of the Arts was founded more than 175 years ago, and today provides students with excellent teaching that...</p>
                                 <div className='flex flex flex-col md:flex-row gap-[8px] md:gap-[32px]'>
                                   <div className='rating-pod flex items-center gap-[8px]'>
                                     <div className='rating-card flex items-center gap-[8px]'>
@@ -135,7 +135,7 @@ const Uniinfocomponents = () => {
                               <span className="flex flex-col lg:flex-row items-start gap-[4px] small">Nearest train station:
                                 <span>Frizinghall&nbsp;1.2 miles away</span>
                               </span>
-                            </div>
+                          </div>
                         </div>
                         <div className="course-highlight__details w-full flex bg-blue-50 rounded-[4px] p-[16px]">
                           <div className="course-highlight__option  flex flex-col items-start gap-[16px]">                      

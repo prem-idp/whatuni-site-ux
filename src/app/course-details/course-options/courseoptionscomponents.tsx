@@ -10,11 +10,11 @@ const Courseoptionscomponents = ({ onOpenModal }:any) => {
         <div className='card-header flex flex-col lg:flex-row gap-[24px] md:gap-[16px] items-start justify-between'>
           <div className='flex flex-col md:flex-row items-start md:items-center  gap-[16px] md:gap-[8px]'>
             <div className='h5 text-black'>Different course options</div>
-            <div onClick={onOpenModal} className='flex items-center gap-[8px] para font-semibold text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>2 options available 
+            <button type='button' onClick={onOpenModal} className='flex items-center gap-[8px] para font-semibold text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>2 options available 
               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1.38477L6 6.38477L1 1.38477" stroke="#4664DC" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </div>
+            </button>
           </div>
           <div className='flex items-center gap-[4px] *:text-x-small *:font-normal'>
             <div className='text-grey300'>DATA SOURCE:</div>
