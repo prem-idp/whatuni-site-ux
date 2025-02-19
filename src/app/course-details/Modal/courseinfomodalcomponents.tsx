@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "motion/react"
 const Courseinfomodalcomponents = ({ onClose }:any) => {
   return (
     <AnimatePresence>
-        <div className='modal modal-container fixed top-0 right-0 left-0 bottom-0'>  
+        <div className='modal modal-container fixed top-0 right-0 left-0 bottom-0 z-[8]'>  
         <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -62,7 +62,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                                 <div className='modal-select'>
                                     <div className='form_check'>
                                         <div className="col flex relative">
-                                            <input type="checkbox" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select2" />
+                                            <input type="radio" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select2" />
                                             <label htmlFor="select2" className="check-label flex justify-center items-center w-full Group small font-semibold text-primary-400 bg-white border border-primary-400 rounded-[18px] hover:bg-primary-400 hover:text-white transition-all cursor-pointer px-[16px] py-[7px]">      <span className='selected'>Selected</span><span className='select'>Select</span>               
                                             </label>             
                                         </div>
@@ -107,7 +107,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                                 <div className='modal-select'>
                                     <div className='form_check'>
                                         <div className="col flex relative">
-                                            <input type="checkbox" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select3" />
+                                            <input type="radio" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select3" />
                                             <label htmlFor="select3" className="check-label flex justify-center items-center w-full Group small font-semibold text-primary-400 bg-white border border-primary-400 rounded-[18px] hover:bg-primary-400 hover:text-white transition-all cursor-pointer px-[16px] py-[7px]">      <span className='selected'>Selected</span><span className='select'>Select</span>               
                                             </label>             
                                         </div>
@@ -152,7 +152,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                                 <div className='modal-select'>
                                     <div className='form_check'>
                                         <div className="col flex relative">
-                                            <input type="checkbox" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select4" />
+                                            <input type="radio" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select4" />
                                             <label htmlFor="select4" className="check-label flex justify-center items-center w-full Group small font-semibold text-primary-400 bg-white border border-primary-400 rounded-[18px] hover:bg-primary-400 hover:text-white transition-all cursor-pointer px-[16px] py-[7px]">      <span className='selected'>Selected</span><span className='select'>Select</span>               
                                             </label>             
                                         </div>
@@ -197,7 +197,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                                 <div className='modal-select'>
                                     <div className='form_check'>
                                         <div className="col flex relative">
-                                            <input type="checkbox" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select5" />
+                                            <input type="radio" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select5" />
                                             <label htmlFor="select5" className="check-label flex justify-center items-center w-full Group small font-semibold text-primary-400 bg-white border border-primary-400 rounded-[18px] hover:bg-primary-400 hover:text-white transition-all cursor-pointer px-[16px] py-[7px]">      <span className='selected'>Selected</span><span className='select'>Select</span>               
                                             </label>             
                                         </div>
@@ -242,7 +242,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                                 <div className='modal-select'>
                                     <div className='form_check'>
                                         <div className="col flex relative">
-                                            <input type="checkbox" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select6" />
+                                            <input type="radio" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select6" />
                                             <label htmlFor="select6" className="check-label flex justify-center items-center w-full Group small font-semibold text-primary-400 bg-white border border-primary-400 rounded-[18px] hover:bg-primary-400 hover:text-white transition-all cursor-pointer px-[16px] py-[7px]">      <span className='selected'>Selected</span><span className='select'>Select</span>               
                                             </label>             
                                         </div>
@@ -287,7 +287,7 @@ const Courseinfomodalcomponents = ({ onClose }:any) => {
                                 <div className='modal-select'>
                                     <div className='form_check'>
                                         <div className="col flex relative">
-                                            <input type="checkbox" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select7" />
+                                            <input type="radio" name="yoe" className="form-checkbox rounded-[4px] outline-none absolute opacity-0 pointer-events-none" id="select7" />
                                             <label htmlFor="select7" className="check-label flex justify-center items-center w-full Group small font-semibold text-primary-400 bg-white border border-primary-400 rounded-[18px] hover:bg-primary-400 hover:text-white transition-all cursor-pointer px-[16px] py-[7px]">      <span className='selected'>Selected</span><span className='select'>Select</span>               
                                             </label>             
                                         </div>

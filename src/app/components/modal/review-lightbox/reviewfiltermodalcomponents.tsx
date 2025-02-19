@@ -29,7 +29,6 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='stroke-grey-600 md:stroke-white' d="M1 13L13 1M1 1L13 13"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-
                 </div>
                 <div className='review-modal-container flex flex-col gap-[16px]'>                    
                     <div className='review-modal-card flex flex-col gap-[16px] md:gap-[24px] pr-[16px] custom-scrollbar-2 overflow-y-auto h-[calc(100vh-64px)] md:h-[calc(100vh-108px)] lg:h-[calc(100vh-64px)]'>
@@ -40,7 +39,18 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                             </div>
                             <p className='para font-semibold text-grey300'>University of Portsmouth</p>
                             <Link href="" className='small text-primary-400 underline hover:text-primary-400 md:hidden'>Write a review</Link>
-                            <p className='small text-grey300 underline'>Real student experiences</p>
+                            <div className="tooltip w-fit group/item text-grey300 small underline relative cursor-pointer pb-[6px] mb-[-6px]">
+                            Real student experiences
+                            <div className="tooltip-wrap flex-col w-[324px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] shadow-custom-12 mt-[8px] absolute top-[17px]  left-0 z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[25%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']">
+                            <span className="font-semibold tooltip-head">
+                            Why do we need your dummy text?
+                            </span>
+                            <p className="x-small">
+                            We collect reviews from students online and at uni campuses to upload later. Come say hi if you see us!
+                            </p>
+                        </div>
+                    </div>
+                            
                         </div>
                         <div className='review-card flex flex-col pb-[24px] border-b border-b-grey-300'>
                             <div className='review-search flex flex-col gap-[16px] md:gap-[24px]'>
@@ -51,7 +61,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                     </div>
                                 </div>
                                 <div className='flex gap-[8px] w-[full] md:w-[408px]'>
-                                        <div className='flex  flex-1 group items-center justify-between gap-[8px] x-small font-semibold text-grey300 cursor-pointer border border-grey300 rounded-[20px] p-[8px_16px] relative'>Business 
+                                        <button type='button' className='flex  flex-1 group items-center justify-between gap-[8px] x-small font-semibold text-grey300 cursor-pointer border border-grey300 rounded-[20px] p-[8px_16px] relative'>Business 
                                             <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11 1.38477L6 6.38477L1 1.38477" stroke="#333333" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
@@ -89,8 +99,8 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                                     </ul>
                                             </div>                            
                                             {/* -- */}  
-                                        </div>
-                                        <div className='flex flex-1 group items-center justify-between gap-[8px] x-small font-semibold text-grey300 cursor-pointer border border-grey300 rounded-[20px] p-[8px_16px] relative'>More Recent 
+                                        </button>
+                                        <button type="button" className='flex flex-1 group items-center justify-between gap-[8px] x-small font-semibold text-grey300 cursor-pointer border border-grey300 rounded-[20px] p-[8px_16px] relative'>More Recent 
                                             <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11 1.38477L6 6.38477L1 1.38477" stroke="#333333" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
@@ -128,7 +138,7 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                                     </ul>
                                             </div>                            
                                             {/* -- */}  
-                                        </div>
+                                        </button>
                                 </div>
                             </div>
                         </div>    
@@ -432,10 +442,10 @@ const Reviewfiltermodalcomponents = ({ onClose, onOpenReviewGalleryModal }:any) 
                                             </div>
                                         </div>
                                         <div className='review-gallery'>
-                                            <ul className='flex gap-[8px]'>
-                                            <li className='rounded-[4px] overflow-hidden last:relative last:cursor-pointer'><Image src="/assets/images/course-details/Frame_9338.jpg" alt="" width={175} height={112} /></li>
-                                            <li className='rounded-[4px] overflow-hidden last:relative last:cursor-pointer'><Image src="/assets/images/course-details/Frame_9355.jpg" alt="" width={175} height={112} /></li>
-                                            <li onClick={onOpenReviewGalleryModal} className='rounded-[4px] overflow-hidden last:relative last:cursor-pointer'>
+                                            <ul className='flex gap-[8px]' onClick={onOpenReviewGalleryModal}>
+                                            <li className='rounded-[4px] overflow-hidden last:relative cursor-pointer'><Image src="/assets/images/course-details/Frame_9338.jpg" alt="" width={175} height={112} /></li>
+                                            <li className='rounded-[4px] overflow-hidden last:relative cursor-pointer'><Image src="/assets/images/course-details/Frame_9355.jpg" alt="" width={175} height={112} /></li>
+                                            <li className='rounded-[4px] overflow-hidden last:relative cursor-pointer'>
                                                 <Image src="/assets/images/course-details/Frame_9356.jpg" alt="" width={175} height={112} />
                                                 <div className='more-gallery flex items-center justify-center small md:para font-semibold text-white underline absolute top-0 right-0 bottom-0 left-0 bg-grey-900/75'>14+ Photos</div>
                                             </li>
