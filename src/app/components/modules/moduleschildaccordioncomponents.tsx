@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "motion/react"
-
 
 const Moduleschildaccordioncomponents = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -48,32 +46,21 @@ const Moduleschildaccordioncomponents = () => {
                             <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 1.38477H1" stroke="#4664DC" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </span>
-                        
-                        <motion.span animate={{rotate: openIndex === index ? 180: 90}}
-                        className="absolute rotate-90">
+                        </span>                        
+                        <span className={`absolute transition-all duration-300 ${openIndex === index ? 'rotate-180':'rotate-90' }`}>
                             <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 1.38477H1" stroke="#4664DC" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </motion.span>
+                        </span>
                   </div>
               </div>
-              <AnimatePresence>
-              {openIndex === index && (
-                <motion.div 
-                initial = {{height: 0, opacity: 0}}
-                animate = {{height: 'auto', opacity: 1}}
-                exit = {{height: 0, opacity: 0, transition: {duration: 0.25, ease: "easeInOut"}}}
-                
-                className={`accordion-body `}>
+              <div className={`accordion-body transition-all ease-in-out ${openIndex === index ? 'max-h-[2000px] duration-700 opacity-[1]':'max-h-0 opacity-0 duration-300 overflow-hidden' }`}>
                     <div className="m-[6px_0]">
                       <p>Criminal Litigation (20 credits) - Core</p>
                       <p>Public Law (20 credits) - Core</p>
                       <p>Study Skills (Law) (20 credits) - Core</p>
                     </div>                              
-                </motion.div>
-              )}
-              </AnimatePresence>                       
+                </div>                     
           </div>
       ))}
       </div>

@@ -26,11 +26,10 @@ const Keystatscomponents = ({onOpenModal}:any) => {
                                             shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
                       >
                         <span className="font-semibold tooltip-head">
-                          Why do we need your dummy text?
+                        WUSCA student ranking?
                         </span>
-                        <p className="x-small">
-                          We use this information to help assess the reach of
-                          our products. This is completely optional.
+                        <p className="x-small">                          
+                          These are the 2024 rankings, based on ratings given by past and current students.
                         </p>
                       </div>
                   </div>
@@ -46,11 +45,10 @@ const Keystatscomponents = ({onOpenModal}:any) => {
                                             shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] md:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] md:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
                       >
                         <span className="font-semibold tooltip-head">
-                          Why do we need your dummy text?
+                        CUG Subject Ranking?
                         </span>
-                        <p className="x-small">
-                          We use this information to help assess the reach of
-                          our products. This is completely optional.
+                        <p className="x-small">                          
+                        Source: Complete University Guide 2025.
                         </p>
                       </div>
                   </div>
@@ -66,11 +64,10 @@ const Keystatscomponents = ({onOpenModal}:any) => {
                                             shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] md:left-[-120px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] md:after:left-[40%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
                       >
                         <span className="font-semibold tooltip-head">
-                          Why do we need your dummy text?
+                          CUG Ranking?
                         </span>
-                        <p className="x-small">
-                          We use this information to help assess the reach of
-                          our products. This is completely optional.
+                        <p className="x-small">                          
+                          Source: Complete University Guide 2025
                         </p>
                       </div>
                   </div>
@@ -116,7 +113,7 @@ const Keystatscomponents = ({onOpenModal}:any) => {
                                             shadow-custom-12 mt-[8px] absolute top-[17px] right-[-30px] md:left-auto lg:right-auto lg:left-[-152px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-auto after:right-[40px] lg:after:left-[50%] lg:after:right-auto after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
                       >
                         <span className="font-semibold tooltip-head">
-                          Why do we need your dummy text?
+                        WUSCA student ranking?
                         </span>
                         <p className="x-small">
                           We use this information to help assess the reach of
@@ -145,11 +142,10 @@ const Keystatscomponents = ({onOpenModal}:any) => {
                                             shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
                       >
                         <span className="font-semibold tooltip-head">
-                          Why do we need your dummy text?
+                        CUG Subject ranking?
                         </span>
                         <p className="x-small">
-                          We use this information to help assess the reach of
-                          our products. This is completely optional.
+                        Source: Complete University Guide 2025
                         </p>
                       </div>
                 </div>
@@ -159,17 +155,16 @@ const Keystatscomponents = ({onOpenModal}:any) => {
               <div className="flex flex-col gap-[4px] *:text-white">
                 <div className="para-lg font-semibold">UK politics graduate salary</div>
                 <div className="tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]">£21,000
-                <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                  <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
                                             shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
                       >
                         <span className="font-semibold tooltip-head">
-                          Why do we need your dummy text?
+                        CUG Subject ranking
                         </span>
-                        <p className="x-small">
-                          We use this information to help assess the reach of
-                          our products. This is completely optional.
+                        <p className="x-small">                                                    
+                          Source: Complete University Guide 2025
                         </p>
-                      </div>
+                  </div>
                 </div>
               </div>
             </div>

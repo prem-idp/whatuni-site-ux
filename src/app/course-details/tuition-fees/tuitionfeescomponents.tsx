@@ -30,12 +30,13 @@ const Tuitionfeescomponents = ({ onOpenModal }:any) => {
                               <div className="tooltip-wrap flex-col w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
                                             shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
                                   >
-                                    <span className="small font-semibold tooltip-head">
+                                    {/* <span className="small font-semibold tooltip-head">
                                       Why do we need your dummy text?
-                                    </span>
-                                    <p className="x-small font-normal">
-                                      We use this information to help assess the reach of
-                                      our products. This is completely optional.
+                                    </span> */}
+                                    <p className="x-small font-normal">                                      
+                                      This information comes from UCAS, or in some cases the institution directly.
+                                      <br/>                                      
+                                      Please note: fees do vary so please make sure you contact the institution for up to date information.
                                     </p>
                                   </div>
                                 </span> per year</div>
@@ -44,12 +45,12 @@ const Tuitionfeescomponents = ({ onOpenModal }:any) => {
                                   <div className="tooltip-wrap flex-col w-[266px] md:w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
                                             shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
                                   >
-                                    <span className="font-semibold tooltip-head">
+                                    {/* <span className="font-semibold tooltip-head">
                                       Why do we need your dummy text?
-                                    </span>
-                                    <p className="x-small">
-                                      We use this information to help assess the reach of
-                                      our products. This is completely optional.
+                                    </span> */}
+                                    <p className="x-small">                                      
+                                      This is the fee you pay if you live within England.
+                                      Please note, this fee has been confirmed.
                                     </p>
                                   </div>
                                 </span>

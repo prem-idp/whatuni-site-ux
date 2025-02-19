@@ -54,16 +54,21 @@ const Reviewthumbgalleryslidercomponents = () => {
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={8}
+          slidesPerGroupSkip={3}
           freeMode={true}
           watchSlidesProgress={true}
+          
           breakpoints={{
               320: {
                 slidesPerView: 2,
                 spaceBetween: 8,
+                slidesPerGroup: 3
               },
               768: {
                 slidesPerView: 3,
-                spaceBetween: 10,          },
+                spaceBetween: 10,
+                slidesPerGroup: 3
+              },
             }}
           modules={[Thumbs]}
           className="thumbSwiper"
