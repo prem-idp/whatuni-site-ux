@@ -25,22 +25,24 @@ import Courseheaderinfoskeleton from '../components/skeleton/courseheaderinfoske
 import Courseoptionsskeleton from '../components/skeleton/courseoptionsskeleton';
 import Yearofentryskeleton from '../components/skeleton/yearofentryskeleton';
 import Jumptoskeleton from '../components/skeleton/jumptoskeleton';
-import { log } from 'console';
 import Othercoursesmaylikecomponents from './other-courses-you-may-like/othercoursesmaylikecomponents';
 
 const page = () => {
   const [openModal, setOpenModal] = useState(null);
+  const [isOpen, setIsOpen] = useState<any>(null);
 
   const handleOpenModal = (modalName: any) => {
     setOpenModal(modalName);
-     document.body.classList.add("overflow-y-hidden");
+    setIsOpen(true);
+    document.body.classList.add("overflow-y-hidden");
   };
   const handleCloseModal = (modalName: any) => {
-    console.log(modalName);
+    setIsOpen(null);
+    document.body.classList.remove("overflow-y-hidden");
+    const validModals = ["subject", "examType", "location", "courseoption", "reviewfilter", "reviewgallery"];   
     
-    if(modalName === "subject" || "examType" || "location" || "courseoption" || "reviewfilter" || "reviewgallery"){
-      setOpenModal(null)
-      document.body.classList.remove("overflow-y-hidden");
+    if (validModals.includes(modalName)) {
+      setOpenModal(null);
     }
   };
 
@@ -85,12 +87,12 @@ const page = () => {
     <Similarcoursecomponents />
     <Findacoursecomponents />
     <Subscribecomponents />
-    {openModal === "courseoption" && <Courseinfomodalcomponents onClose={handleCloseModal} />}
-    {openModal === "subject" && <Subjectmodalcomponents onOpenModal={true}  onClose={handleCloseModal} />}
-    {openModal === "examType" && <Examtypemodalcomponents onClose={handleCloseModal} />}
-    {openModal === "location" && <Locationmodalcomponents onClose={handleCloseModal} />}
-    {(openModal === "reviewfilter" || openModal === "reviewgallery") && <Reviewfiltermodalcomponents onOpenReviewGalleryModal={()=> handleOpenModal("reviewgallery")} onClose={handleCloseModal} />}
-    {openModal === "reviewgallery" && <Reviewgallerymodalcomponents onClose={()=> handleCloseModal("reviewgallery")} />}
+    {openModal === "courseoption" && <Courseinfomodalcomponents isOpen={isOpen} onClose={handleCloseModal} />}
+    {openModal === "subject" && <Subjectmodalcomponents isOpen={isOpen}  onClose={handleCloseModal} />}
+    {openModal === "examType" && <Examtypemodalcomponents isOpen={isOpen} onClose={handleCloseModal} />}
+    {openModal === "location" && <Locationmodalcomponents isOpen={isOpen} onClose={handleCloseModal} />}
+    {(openModal === "reviewfilter" || openModal === "reviewgallery") && <Reviewfiltermodalcomponents isOpen={isOpen} onOpenReviewGalleryModal={()=> handleOpenModal("reviewgallery")} onClose={handleCloseModal} />}
+    {openModal === "reviewgallery" && <Reviewgallerymodalcomponents isOpen={isOpen} onClose={()=> handleCloseModal("reviewgallery")} />}
     </>     
   )
 }

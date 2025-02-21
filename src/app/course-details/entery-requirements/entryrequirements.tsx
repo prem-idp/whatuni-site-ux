@@ -12,8 +12,8 @@ const Entryrequirements = ({ onOpenModal }:any) => {
             <div className='entryreq-card-container flex flex-col lg:flex-row justify-between gap-[20px] px-[16px] md:px-[20px] xl:px-[0] py-[40px]'>
                 <div className='h5 w-full md:w-[289px]'>Entry requirements</div>
                 <div className='flex w-full lg:w-[calc(100%_-_309px)]'>
-                  {/* <Entryrequirementcard onOpenModal={onOpenModal} /> */}
-                  <Clearingentryrequirementcard onOpenModal={onOpenModal} />
+                  <Entryrequirementcard onOpenModal={onOpenModal} />
+                  {/* <Clearingentryrequirementcard onOpenModal={onOpenModal} /> */}
                 </div>
             </div>
         </div>
