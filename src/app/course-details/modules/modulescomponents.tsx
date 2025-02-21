@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const Modulescomponents = () => {
   return (
     <>
-    <div className='modules-container'> 
+    <div className='modules-container' id="skiplink2"> 
         <div className="max-w-container mx-auto">
             <div className='modules-card-container flex flex-col lg:flex-row justify-between gap-[20px] px-[16px] md:px-[20px] xl:px-[0] py-[40px]'>
                 <div className='h5 w-full md:w-[289px]'>Modules</div>

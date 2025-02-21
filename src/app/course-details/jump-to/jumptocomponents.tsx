@@ -11,31 +11,31 @@ const Jumptocomponents = () => {
                          <ul className='flex flex-col gap-[4px]'>
                          <li className='flex items-center gap-[4px]'>
                             <span className='text-grey para'>-</span>
-                            <span className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Course info</span>
+                            <a href='#skiplink1' className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Course info</a>
                           </li>
                           <li className='flex items-center gap-[4px]'>
                             <span className='text-grey para'>-</span>
-                            <span className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Modules</span>
+                            <a href='#skiplink2' className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Modules</a>
                           </li>
                           <li className='flex items-center gap-[4px]'>
                             <span className='text-grey para'>-</span>
-                            <span className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Entry requirements</span>
+                            <a href='#skiplink3' className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Entry requirements</a>
                           </li>
                           <li className='flex items-center gap-[4px]'>
                             <span className='text-grey para'>-</span>
-                            <span className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Tuition fees</span>
+                            <a href='#skiplink4' className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Tuition fees</a>
                           </li>
                           <li className='flex items-center gap-[4px]'>
                             <span className='text-grey para'>-</span>
-                            <span className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Latest reviews</span>
+                            <a href='#skiplink5' className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Latest reviews</a>
                           </li>
                           <li className='flex items-center gap-[4px]'>
                             <span className='text-grey para'>-</span>
-                            <span className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Popular A-level subjects</span>
+                            <a href='#skiplink6' className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Popular A-level subjects</a>
                           </li>
                           <li className='flex items-center gap-[4px]'>
                             <span className='text-grey para'>-</span>
-                            <span className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Uni info</span>
+                            <a href='#skiplink7' className='small text-primary-400 hover:text-primary-500 hover:underline cursor-pointer'>Uni info</a>
                           </li>
                          </ul>
                     </div>
