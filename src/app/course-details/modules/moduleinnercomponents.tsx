@@ -4,7 +4,7 @@ import React from 'react'
 const Moduleinnercomponents = () => {
   return (
     <>
-        <Moduleschildaccordioncomponents />
+      <Moduleschildaccordioncomponents />
     </>
   )
 }

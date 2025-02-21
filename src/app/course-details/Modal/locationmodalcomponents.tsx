@@ -1,26 +1,14 @@
 "use client";
 import React from 'react'
 import Image from 'next/image'
-import { AnimatePresence, motion } from "motion/react"
 
-const Locationmodalcomponents = ({ onClose }:any) => {
+const Locationmodalcomponents = ({isOpen, onClose }:any) => {
   return (
-    <AnimatePresence>
-        <div className='modal modal-container fixed top-0 right-0 left-0 bottom-0 z-[8]'>  
-        <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            onClick={onClose}
-            className='backdrop-shadow fixed top-0 right-0 left-0 bottom-0 bg-white'>
-            </motion.div>            
-            <motion.div 
-            initial={{ x: "-100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
-            transition={{ stiffness: 70, duration: 0.3 }}
-            className='modal-box shadow-custom-6 w-full md:w-[375px] p-[16px_0_16px_16px] bg-white overflow-hidden relative z-0 left-0 h-[100vh]'>
+    <>
+        <div onClick={onClose} className={`${isOpen ? "animate-fadeIn block" : "hidden"} backdrop-shadow fixed top-0 right-0 left-0 bottom-0 bg-white z-[7]`}>
+        </div>
+        <div className={`${isOpen ? "translate-x-0 opacity-[1]" : "-translate-x-full opacity-0"} transition-all duration-300 modal modal-container shadow-custom-6 w-full md:w-[375px] fixed top-0 left-0 z-[8]`}>             
+           <div className={`modal-box p-[16px_0_16px_16px] bg-white overflow-hidden h-[100vh]`}>
                 <div onClick={onClose} className='modal_close absolute top-[16px] right-[16px] z-[1] cursor-pointer'>
                     <Image className='block' src="/assets/icons/modal_close.svg" width="12" height="12"  alt='modal close'/>
                 </div>
@@ -104,9 +92,9 @@ const Locationmodalcomponents = ({ onClose }:any) => {
                         </ul>
                     </div>
                 </div>
-       </motion.div>
+            </div>
        </div>
-    </AnimatePresence>  
+    </>  
   )
 }
 
