@@ -5,7 +5,7 @@ import Reviewslidercomponents from '@/app/components/slider/reviewslidercomponen
 const Courseinfocomponents = ({ onOpenModal, onOpenReviewModal }:any) => {
   return (
     <>
-      <div className='courseinfo-container'> 
+      <div className='courseinfo-container' id="skiplink1"> 
         <div className="max-w-container mx-auto">
             <div className='courseinfo-card-container flex flex-col lg:flex-row justify-between gap-[20px] pb-[40px]'>
                 <div className='h5 w-full md:w-[289px] px-[16px] md:px-[20px] xl:px-[0]'>Course info</div>
