@@ -13,6 +13,7 @@ import RequestInfo from "../components/cards/interaction-button/requestinfo";
 import SearchFilterButtons from "../components/search-filter-buttons/search-filter-buttons";
 import ClickAndShow from "../components/click-show/click-show";
 import SearchResultReviewLightBox from "../components/popups/sr-reviewlightbox";
+import { AnimatePresence, motion } from "motion/react";
 
 const SearchResult = ({ openSearchResultLightbox }: any) => {
   const breadcrumbData = [
@@ -34,38 +35,14 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
     },
   ];
 
-  const faqData = [
-    {
-      title: "1",
-      content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
-    },
-    {
-      title: "2",
-      content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
-    },
-    {
-      title: "What type of support does Designership provide?",
-      content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
-    },
-    {
-      title: "How can I see my existing clients through Designership?",
-      content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
-    },
-    {
-      title: "How does Designership attract clients?",
-      content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
-    },
-    {
-      title: "What type of support does Designership provide?",
-      content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
-    },
-  ];
+  const [isfavouritesClicked, setIsfavouritesClicked] = useState(false);
+  const favouritesClicked = () => {
+    setIsfavouritesClicked(!isfavouritesClicked);
+  };
+
+  const onClose = () => {
+    setIsfavouritesClicked(!isfavouritesClicked);
+  };
 
   const [isSortClicked, setIsSortClicked] = useState(false);
   const sortClicked = () => {
@@ -191,6 +168,12 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
             <Breadcrumblayoutcomponent data={breadcrumbData} />
           </div>
           {/* breadcrumb  */}
+          {/* <div className="grid grid-cols-4 gap-[10px] bg-gray-400">
+            <div className="bg-green-300 p-[20px] m-[10px] border border-yellow-300">Test 1</div>
+            <div className="bg-violet-400 px-[20px] py-[30px]">Test 2</div>
+            <div className="bg-blue-300 pt-[30px] pl-[40px]">Test 3</div>
+            <div className="bg-orange-300 p-[20px_30px_40px_50px]">Test 4</div>
+          </div> */}
           {/* start subject */}
           <div className="py-[16px]">
             <div className="h5 mb-[4px]">
@@ -364,8 +347,8 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
           </div>
           {/* end add your grades */}
 
-          {/* start add your grades skeleton*/}
-          {/* <div className="bg-neutral-100 h-[81px] p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
+          {/* skeleton*/}
+          {/* <div className="bg-neutral-100 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
             <div className="flex gap-[16px] grow">
               <div className="skeleton-text-animated text-grey900 rounded-tl-[24px] rounded-br-[24px] p-[8px] w-[48px] h-[48px] flex items-center justify-center shrink-0">
                 <div className="skeleton skeleton-square-img skeleton-text-animated !w-[22px] !h-[22px] !rounded-none"></div>
@@ -380,7 +363,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
               <div className="skeleton skeleton-text-animated descrip"></div>
             </div>
           </div> */}
-          {/* end add your grades skeleton*/}
+          {/* skeleton*/}
 
           {/* start no search results */}
           {/* <div className="bg-grey-50 p-[16px] rounded-[8px] flex flex-col gap-[16px] lg:flex-row lg:justify-between">
@@ -608,11 +591,9 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
               </div>
             </div>
             <div className="w-full shrink-0 flex self-center  rounded-[8px] overflow-hidden relative order-1 md:w-[310px] md:h-[158px] lg:w-[391px] lg:h-[200px] lg:order-2">
-              <div className="bg-neutral-100 w-full relative rounded-[8px] overflow-hidden flex justify-center">
-              </div>
+              <div className="bg-neutral-300 w-full relative !rounded-[8px] overflow-hidden flex justify-center"></div>
               <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer">
-              <div className="skeleton skeleton-circle-img skeleton-text-animated !w-[52px] !h-[52px] !rounded-none"></div>
-
+                <div className="skeleton skeleton-circle-img skeleton-text-animated !w-[52px] !h-[52px]"></div>
               </div>
             </div>
           </div> */}
@@ -622,10 +603,10 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
           {/* start sponsored section */}
           {unicard.map((item, index) => (
             <div
-              className="flex flex-col mt-[8px] md:mt-[24px] md:flex-row cursor-pointer"
+              className="flex flex-col mt-[8px] md:mt-[24px] md:flex-row"
               key={index}
             >
-              <div className="w-full h-[292px] relative bg-blue-400 bg-gradient11 shrink-0 rounded-t-[16px] md:rounded-l-[16px] md:rounded-tr-none md:w-[280px] md:h-[316px] lg:w-[500px] lg:h-[376px]">
+              <div className="w-full h-[292px] relative bg-blue-400 bg-gradient11 shrink-0 rounded-t-[16px] md:rounded-l-[16px] md:rounded-tr-none md:w-[310px] md:h-[316px] lg:w-[500px] lg:h-[376px] cursor-pointer">
                 <div className="absolute top-0 left-0 p-[16px] bg-gradient11 w-full h-full lg:p-[24px] flex flex-col justify-between rounded-t-[16px] md:rounded-l-[16px] md:rounded-tr-none">
                   <div className="flex justify-between">
                     <div className="flex items-start gap-[8px]">
@@ -646,7 +627,10 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                         </div>
                       ) : null}
                     </div>
-                    <div className="heart w-[40px] h-[40px] bg-white x-small border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100 relative group">
+                    <div
+                      onClick={favouritesClicked}
+                      className="heart w-[40px] h-[40px] bg-white x-small border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100 relative group"
+                    >
                       <svg
                         width="20"
                         height="20"
@@ -704,8 +688,8 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
+                              fillRule="evenodd"
+                              clipRule="evenodd"
                               d="M8.23441 2.63471C8.54683 2.32229 9.05336 2.32229 9.36578 2.63471L14.1658 7.43471C14.4782 7.74713 14.4782 8.25366 14.1658 8.56608L9.36578 13.3661C9.05336 13.6785 8.54683 13.6785 8.23441 13.3661C7.92199 13.0537 7.92199 12.5471 8.23441 12.2347L11.6687 8.80039L2.4001 8.80039C1.95827 8.80039 1.6001 8.44222 1.6001 8.00039C1.6001 7.55856 1.95827 7.20039 2.4001 7.20039H11.6687L8.23441 3.76608C7.92199 3.45366 7.92199 2.94712 8.23441 2.63471Z"
                               fill="#3460DC"
                             />
@@ -714,10 +698,9 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                       </div>
                     </div>
                   </div>
+
                   <div className="flex flex-col gap-[4px] text-white">
-                    <div className="h5  hover:underline">
-                      University of Kent
-                    </div>
+                    <div className="h5 hover:underline">University of Kent</div>
                     <div className="x-small font-semibold">
                       12 engineering courses
                     </div>
@@ -771,9 +754,9 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                         18.1 Miles from you
                       </div>
                     </div>
-                    <div className="x-small underline w-fit relative group">
+                    <div className="x-small underline relative group">
                       WUSCA rank: 18th
-                      <div className="absolute z-0 select-none hidden group-hover:flex border border-grey-200 top-[22px] shadow-custom-1 whitespace-normal rounded-[8px] w-[320px] left-[-16px] md:left-0 bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0">
+                      <div className="absolute z-[1] select-none hidden group-hover:flex border border-grey-200 top-[22px] shadow-custom-1 whitespace-normal rounded-[8px] w-[320px] left-[-16px] md:left-0 bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0">
                         <div className="flex items-center justify-between">
                           <span className="text-grey900 font-semibold">
                             WUSCA Student Ranking
@@ -886,9 +869,11 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                             I never thought I’f find myself in a position where
                             I would feel empowered to be a lawyer, I wanted to
                             go into teaching but then realised after visiting
-                            Kent’s facilities this would be the right plac
+                            Kent’s facilities this would be the right place for
+                            me to nurture my passion for justice and advocate
+                            for others.
                           </div>
-                          <div className="absolute bottom-0 bg-grey-100 right-0 lg:right-[56px]">
+                          <div className="absolute bottom-0 right-0 text-right w-[126px] bg-gradient12">
                             <span>... </span>
                             <span
                               onClick={handleOpenModal}
@@ -950,7 +935,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                               strokeLinejoin="round"
                             />
                           </svg>
-                          <div className="absolute z-[1] select-none hidden group-hover:flex border border-grey-200 top-[44px] shadow-custom-1 whitespace-normal rounded-[8px] w-[320px] right-[24px] md:right-0 bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:right-[18px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0">
+                          <div className="absolute z-[1] select-none hidden group-hover:flex border border-grey-200 top-[44px] shadow-custom-1 whitespace-normal rounded-[8px] w-[320px] right-0 bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:right-[18px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0">
                             <div className="flex items-center justify-between">
                               <span className="text-grey900 font-semibold">
                                 We have added this to your comparison
@@ -992,8 +977,8 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  fill-rule="evenodd"
-                                  clip-rule="evenodd"
+                                  fillRule="evenodd"
+                                  clipRule="evenodd"
                                   d="M8.23441 2.63471C8.54683 2.32229 9.05336 2.32229 9.36578 2.63471L14.1658 7.43471C14.4782 7.74713 14.4782 8.25366 14.1658 8.56608L9.36578 13.3661C9.05336 13.6785 8.54683 13.6785 8.23441 13.3661C7.92199 13.0537 7.92199 12.5471 8.23441 12.2347L11.6687 8.80039L2.4001 8.80039C1.95827 8.80039 1.6001 8.44222 1.6001 8.00039C1.6001 7.55856 1.95827 7.20039 2.4001 7.20039H11.6687L8.23441 3.76608C7.92199 3.45366 7.92199 2.94712 8.23441 2.63471Z"
                                   fill="#3460DC"
                                 />
@@ -1025,8 +1010,8 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
+                                fillRule="evenodd"
+                                clipRule="evenodd"
                                 d="M8.23441 2.63471C8.54683 2.32229 9.05336 2.32229 9.36578 2.63471L14.1658 7.43471C14.4782 7.74713 14.4782 8.25366 14.1658 8.56608L9.36578 13.3661C9.05336 13.6785 8.54683 13.6785 8.23441 13.3661C7.92199 13.0537 7.92199 12.5471 8.23441 12.2347L11.6687 8.80039L2.4001 8.80039C1.95827 8.80039 1.6001 8.44222 1.6001 8.00039C1.6001 7.55856 1.95827 7.20039 2.4001 7.20039H11.6687L8.23441 3.76608C7.92199 3.45366 7.92199 2.94712 8.23441 2.63471Z"
                                 fill="#3460DC"
                               />
@@ -1081,6 +1066,272 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
               </div>
             </div>
           ))}
+          {isfavouritesClicked && (
+            <div className="modal modal-container relative top-0 right-0 bottom-0 z-[5]">
+              <div
+                onClick={onClose}
+                className="backdrop-shadow fixed top-0 right-0 left-0 bottom-0 bg-white"
+              ></div>
+              <div className="modal-box shadow-custom-6 w-[343px] md:w-[512px] p-[24px] bg-white rounded-[8px] fixed top-[30%] translate-y-[30%] left-0 right-0 mx-auto">
+                <div
+                  onClick={onClose}
+                  className="modal_close flex items-center justify-center absolute top-[16px] right-[16px] z-[1] cursor-pointer"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      className="stroke-grey-400"
+                      d="M1 13L13 1M1 1L13 13"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="review-modal-container flex flex-col gap-[16px]]">
+                  <div className="mb-[4px] para-lg font-semibold">
+                    Maximum number of favourites
+                  </div>
+                  <p className="small text-grey-500">
+                    You can only favourite a max of 30 unis and courses. Remove
+                    a selection to add another
+                  </p>
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="btn btn-primary w-fit mt-[24px] ml-auto"
+                  >
+                    Ok, got it
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+          {/* skeleton */}
+          {/* {unicard.map((item, index) => (
+            <div
+              className="flex flex-col mt-[8px] md:mt-[24px] md:flex-row"
+              key={index}
+            >
+              <div className="w-full h-[292px] relative bg-neutral-100 shrink-0 rounded-t-[16px] md:rounded-l-[16px] md:rounded-tr-none md:w-[280px] md:h-[316px] lg:w-[500px] lg:h-[376px]">
+                <div className="absolute top-0 left-0 p-[16px] w-full h-full lg:p-[24px] flex flex-col justify-between rounded-t-[16px] md:rounded-l-[16px] md:rounded-tr-none">
+                  <div className="flex justify-between">
+                    <div className="flex items-start gap-[8px] grow">
+                      <div className="w-[64px] h-[64px] p-[4px] rounded-[4px] bg-neutral-300 shadow-custom-4"></div>
+                      {item.sponsored ? (
+                        <div className="skeleton skeleton-text-animated !rounded-[4px] min-h-[20px] !w-[20%]"></div>
+                      ) : null}
+                    </div>
+                    <div className="bg-neutral-200 w-[40px] h-[40px]  x-small border border-neutral-300  rounded-[24px] flex items-center justify-center">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
+                          stroke="#d4d4d4"
+                          strokeWidth="1.67"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-[4px] text-white">
+                    <div className="h5  hover:underline">
+                      <div className="skeleton skeleton-text-animated large_heading !w-[50%]"></div>
+                    </div>
+                    <div className="x-small font-semibold">
+                      <div className="skeleton skeleton-text-animated descrip !w-[30%]"></div>
+                    </div>
+                    <div className="flex items-center gap-[8px] text-grey-50 small">
+                      <div className="flex items-end gap-[2px] w-[10%]">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z"
+                            fill="#d4d4d4"
+                          />
+                        </svg>
+                        <div className="skeleton skeleton-text-animated descrip !w-[50%]"></div>
+                      </div>
+                      <div className="skeleton skeleton-text-animated descrip !w-[30%]"></div>
+                    </div>
+                    <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
+                      <div className="skeleton skeleton-text-animated !rounded-[4px] min-h-[20px] !w-[15%] px-[8px]"></div>
+                      <div className="skeleton skeleton-text-animated !rounded-[4px] min-h-[20px] !w-[40%] flex items-center justify-center gap-[2px] px-[8px]">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.929 10.0711C10.5878 10.4122 9.98482 11.0152 9.41426 11.5858C8.63321 12.3668 7.36696 12.3669 6.58591 11.5859C6.02667 11.0266 5.43232 10.4323 5.07111 10.0711C3.45351 8.45346 3.45351 5.83081 5.07111 4.2132C6.68872 2.5956 9.31137 2.5956 10.929 4.2132C12.5466 5.83081 12.5466 8.45346 10.929 10.0711Z"
+                            stroke="#d4d4d4"
+                            strokeWidth="1.13"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M9.55335 7.14214C9.55335 8 8.85791 8.69544 8.00005 8.69544C7.14218 8.69544 6.44675 8 6.44675 7.14214C6.44675 6.28427 7.14218 5.58884 8.00005 5.58884C8.85791 5.58884 9.55335 6.28427 9.55335 7.14214Z"
+                            stroke="#d4d4d4"
+                            strokeWidth="1.13"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        <div className="skeleton skeleton-text-animated descrip"></div>
+                      </div>
+                    </div>
+                    <div className="skeleton skeleton-text-animated descrip !w-[20%] x-small underline"></div>
+                    <div className="flex items-center gap-[4px] font-bold uppercase xs-small">
+                      <div className="skeleton skeleton-text-animated !rounded-[4px] min-h-[20px] !w-[40%] flex items-center gap-[2px] px-[8px]"></div>
+                      <div className="skeleton skeleton-text-animated !rounded-[4px] min-h-[20px] !w-[20%] px-[8px]"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col grow">
+                <div className="bg-white border border-grey-100 rounded-b-[16px] shadow-custom-3 md:rounded-tr-[16px]">
+                  <div className="border-b-[1px] border-grey-200 p-[16px] lg:p-[20px]">
+                    <div className="bg-grey-100 p-[12px] rounded-[8px] flex gap-[4px]">
+                      <div className="text-grey-300 text-heading1 relative top-[20px] font-farro font-normal">
+                        “
+                      </div>
+                      <div className="flex flex-col gap-[4px]  w-full">
+                        <div className="relative group x-small">
+                          <div className="skeleton skeleton-text-animated descrip !w-[20%] !mt-0"></div>
+                        </div>
+                        <div className="relative x-small">
+                          <div className="text-grey300 line-clamp-2">
+                            <div className="skeleton skeleton-text-animated descrip"></div>
+                            <div className="skeleton skeleton-text-animated descrip"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {item.course.map((chitem, index) => (
+                    <div
+                      className="flex flex-col gap-[16px] border-b-[1px] border-grey-200 p-[16px] lg:p-[20px] last:border-none"
+                      key={index}
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex flex-col gap-[8px]">
+                          <div className="skeleton skeleton-text-animated descrip"></div>
+                          <div className="flex gap-[4px] text-grey-500">
+                            <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold min-h-[22px]">
+                              <Image
+                                className="hidden md:block"
+                                src="/assets/icons/search-result/calender-grey.svg"
+                                alt="Lecturers and Teaching"
+                                width={16}
+                                height={16}
+                              />
+                              <div className="skeleton skeleton-text-animated descrip !w-[100px]"></div>
+                            </div>
+                            <div className="flex items-center justify-center uppercase gap-[2px] bg-grey-100 rounded-[4px] px-[8px] xs-small font-semibold min-h-[22px]">
+                              <Image
+                                className="hidden md:block"
+                                src="/assets/icons/search-result/time-grey.svg"
+                                alt="Lecturers and Teaching"
+                                width={16}
+                                height={16}
+                              />
+                              <div className="skeleton skeleton-text-animated descrip !w-[100px]"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-neutral-200 w-[40px] h-[40px]  x-small border border-neutral-300  rounded-[24px] flex items-center justify-center">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.02513 5.05027C2.65829 6.41711 2.65829 8.63318 4.02513 10L10 15.9749L15.9749 10C17.3417 8.63318 17.3417 6.41711 15.9749 5.05027C14.608 3.68344 12.392 3.68344 11.0251 5.05027L10 6.07544L8.97487 5.05027C7.60804 3.68344 5.39196 3.68344 4.02513 5.05027Z"
+                              stroke="#d4d4d4"
+                              strokeWidth="1.67"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-[4px]">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M10 1.875C10.641 1.875 11.1607 2.39467 11.1607 3.03571V8.83929H16.9643C17.6053 8.83929 18.125 9.35895 18.125 10C18.125 10.641 17.6053 11.1607 16.9643 11.1607H11.1607V16.9643C11.1607 17.6053 10.641 18.125 10 18.125C9.35895 18.125 8.83929 17.6053 8.83929 16.9643V11.1607H3.03571C2.39467 11.1607 1.875 10.641 1.875 10C1.875 9.35895 2.39467 8.83928 3.03571 8.83928L8.83929 8.83929V3.03571C8.83929 2.39467 9.35895 1.875 10 1.875Z"
+                            fill="#d4d4d4"
+                          />
+                        </svg>
+                        <div className="skeleton skeleton-text-animated descrip mt-0 !w-[100px]"></div>
+                      </div>
+                      <div
+                        className={`grid grid-cols-1 justify-items-stretch gap-[8px] auto-cols-fr xl:grid-rows-1 xl:grid-flow-col         
+                        `}
+                      >
+                        <div className="skeleton skeleton_btn skeleton-text-animated"></div>
+
+                        <div className="skeleton skeleton_btn skeleton-text-animated"></div>
+
+                        <div className="skeleton skeleton_btn skeleton-text-animated"></div>
+
+                        <div className="skeleton skeleton_btn skeleton-text-animated"></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href=""
+                  className="flex items-center mx-auto gap-[4px] text-primary-400 small font-semibold mt-[16px] hover:underline"
+                >
+                  <div className="skeleton skeleton-text-animated descrip !w-[200px]"></div>
+
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M8.23798 2.55048C8.55528 2.23317 9.06972 2.23317 9.38702 2.55048L14.262 7.42548C14.5793 7.74278 14.5793 8.25722 14.262 8.57452L9.38702 13.4495C9.06972 13.7668 8.55528 13.7668 8.23798 13.4495C7.92067 13.1322 7.92067 12.6178 8.23798 12.3005L11.726 8.8125L2.3125 8.8125C1.86377 8.8125 1.5 8.44873 1.5 8C1.5 7.55127 1.86377 7.1875 2.3125 7.1875H11.726L8.23798 3.69952C7.92067 3.38222 7.92067 2.86778 8.23798 2.55048Z"
+                      fill="#d4d4d4"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          ))} */}
+          {/* skeleton */}
           {openModal && (
             <SearchResultReviewLightBox onClose={handleCloseModal} />
           )}
