@@ -146,6 +146,7 @@ const config: Config = {
       backgroundImage: {
         gradientBlack:"linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
         gradientBlack1:"linear-gradient(180deg, rgba(0,0,0,0) 50.5%, rgba(0,0,0,1) 100%)",
+        gradientBlack2:"linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 60%)",
         gradient1: "linear-gradient(98.41deg, #6EE7B7 0%, #F59E0B 100%)",
         gradient2: "linear-gradient(98.41deg, #00BBFD 0%, #3460DC 100%)",
         gradient3: "linear-gradient(98.41deg, #10B981 0%, #00BBFD 100%)",
