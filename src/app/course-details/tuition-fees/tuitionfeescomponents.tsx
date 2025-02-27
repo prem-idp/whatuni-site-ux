@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Tuitionfeescomponents = ({ onOpenModal }:any) => {
   return (
     <>
-      <div className='tuition-fees-container'> 
+      <div className='tuition-fees-container' id="skiplink4"> 
         <div className="max-w-container mx-auto">
             <div className='tuition-fees-card-container flex flex-col lg:flex-row justify-between gap-[20px] px-[16px] md:px-[20px] xl:px-[0] py-[40px]'>
                 <div className='h5 w-full md:w-[289px]'>Tuition fees</div>
@@ -40,21 +40,21 @@ const Tuitionfeescomponents = ({ onOpenModal }:any) => {
                                     </p>
                                   </div>
                                 </span> per year</div>
-                            <div className="small text-black">Students from 
-                                <span className='tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]'> England
-                                  <div className="tooltip-wrap flex-col w-[266px] md:w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
-                                            shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
-                                  >
-                                    {/* <span className="font-semibold tooltip-head">
-                                      Why do we need your dummy text?
-                                    </span> */}
-                                    <p className="x-small">                                      
-                                      This is the fee you pay if you live within England.
-                                      Please note, this fee has been confirmed.
-                                    </p>
+                                <div className="small text-black">Students from 
+                                    <span className='tooltip w-fit group/item small underline relative cursor-pointer pb-[6px] mb-[-6px]'> England
+                                      <div className="tooltip-wrap flex-col w-[266px] md:w-[320px] px-[12px] py-[12px] bg-white text-grey300 border border-grey-200 rounded-[8px] 
+                                                shadow-custom-12 mt-[8px] absolute top-[17px] right-auto left-[-40px] lg:left-[-146px] z-[1] gap-[4px] after:w-[10px] after:h-[10px] after:absolute after:top-[-6px] after:left-[16%] lg:after:left-[50%] after:bg-white after:z-[0] after:border after:border-grey-200 after:border-b-0 after:border-r-0 after:translate-[-50%] after:rotate-45 hidden group-hover/item:flex after:content-['']"
+                                      >
+                                        {/* <span className="font-semibold tooltip-head">
+                                          Why do we need your dummy text?
+                                        </span> */}
+                                        <p className="x-small">                                    
+                                          This is the fee you pay if you live within England.
+                                          Please note, this fee has been confirmed.
+                                        </p>
+                                      </div>
+                                    </span>
                                   </div>
-                                </span>
-                              </div>
                           </div>
                         </div>
                       </div>
