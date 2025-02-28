@@ -15,7 +15,7 @@ const Oneclickmodalcomponents = ({isOpen, onClose}: any) => {
                   <path className='stroke-grey-600' d="M1 13L13 1M1 1L13 13"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
               </div>
-              <div className='oneclick-container flex flex-col-reverse md:flex-row gap-[20px] p-[16px] md:p-[0] max-md:pb-[80px] max-md:pr-[10px] max-md:mr-[10px] max-md:h-[100vh]  max-md:custom-scrollbar-2 max-md:overflow-y-auto'>
+              <div className='oneclick-container flex flex-col-reverse md:flex-row gap-[16px] md:gap-[20px] p-[16px] md:p-[0] max-md:pb-[80px] max-md:pr-[10px] max-md:mr-[10px] max-md:h-[100vh]  max-md:custom-scrollbar-2 max-md:overflow-y-auto'>
                 <div className='oneclick-left flex flex-col gap-[16px] w-full md:w-[304px] lg:w-[392px]'>
                   <Link href="" className='card flex flex-col bg-white rounded-[8px] shadow-custom-2 overflow-hidden'>
                     <div className='card-header relative min-h-[160px] bg-grey-200'>
@@ -55,18 +55,17 @@ const Oneclickmodalcomponents = ({isOpen, onClose}: any) => {
                   <div className='h5 text-grey300'>What students say</div>
                   <Reviewscard />
                 </div>
-                <div className='oneclick-right flex flex-col flex-1 bg-white border border-grey-200 rounded-[8px] p-[16px] lg:p-[32px] gap-[24px]'>
-                  <div className='flex flex-col gap-[8px] border-b border-grey-200 pb-[24px]'>
+                <div className='oneclick-right flex flex-col flex-1 bg-white border border-grey-200 rounded-[8px] p-[16px] lg:p-[32px] gap-[16px] md:gap-[24px]'>
+                  <div className='flex flex-col gap-[8px] border-b border-grey-200 pb-[16px] md:pb-[24px] h-fit'>
                     <div className='h5 font-bold text-grey300'>Get prospectus from</div>
-                    <p className='para-lg font-semibold text-grey300'>University of Bradford</p>
+                    <p className='para md:para-lg font-semibold text-grey300'>University of Bradford</p>
                   </div>
                   <div className='address flex flex-col gap-[8px] border border-grey-200 bg-grey-50 p-[16px] rounded-[8px]'>
                     <div className='small font-semibold'>Send prospectus to</div>
                     <div className='address flex flex-col'>
                       <div className='small font-semibold text-grey300'>Name:</div>
                       <div className='flex items-start lg:items-center gap-[4px]'>
-                        <span className='small font-semibold text-grey300'>Address:</span>
-                        <span className='small text-grey300'>69, Zoo Lane, Coventry, England, GA1 2LD</span>
+                        <div className='small font-semibold text-grey300'>Address: <span className='font-normal'>69, Zoo Lane, Coventry, England, GA1 2LD</span></div>                        
                       </div>
                       <Link href="#" className="small text-primary-400 hover:text-primary-500 hover:underline">Edit</Link>
                     </div>
