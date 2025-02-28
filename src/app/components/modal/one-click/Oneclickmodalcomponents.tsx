@@ -10,12 +10,12 @@ const Oneclickmodalcomponents = ({isOpen, onClose}: any) => {
       </div>
       <div className='modal modal-container flex justify-center items-center fixed top-0 right-0 bottom-0 z-[11]'>            
           <div className={`${isOpen ? "translate-y-0 opacity-[1] " : "translate-y-[100px] opacity-0"} transition-all duration-300 modal-box shadow-custom-6 w-full md:w-[720px] lg:w-[1092px] p-[0] md:p-[24px] lg:p-[40px] bg-grey-50 md:rounded-[8px] fixed top-auto left-0 right-0 mx-auto h-[100vh] md:h-auto`}>
-              <div onClick={onClose} className='modal_close flex items-center justify-center absolute top-[24px] right-[32px] md:top-[10px] md:right-[10px] lg:top-[12px] lg:right-[12px] z-[1] cursor-pointer'>
+              <div onClick={onClose} className='modal_close flex items-center justify-center absolute top-[8px] right-[8px] md:top-[10px] md:right-[10px] lg:top-[12px] lg:right-[12px] z-[1] cursor-pointer'>
                   <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path className='stroke-grey-600' d="M1 13L13 1M1 1L13 13"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
               </div>
-              <div className='oneclick-container flex flex-col-reverse md:flex-row gap-[20px] p-[16px] md:p-[0] max-md:pb-[80px] max-md:pr-[16px] max-md:h-[100vh]  max-md:custom-scrollbar-2 max-md:overflow-y-auto'>
+              <div className='oneclick-container flex flex-col-reverse md:flex-row gap-[20px] p-[16px] md:p-[0] max-md:pb-[80px] max-md:pr-[10px] max-md:mr-[10px] max-md:h-[100vh]  max-md:custom-scrollbar-2 max-md:overflow-y-auto'>
                 <div className='oneclick-left flex flex-col gap-[16px] w-full md:w-[304px] lg:w-[392px]'>
                   <Link href="" className='card flex flex-col bg-white rounded-[8px] shadow-custom-2 overflow-hidden'>
                     <div className='card-header relative min-h-[160px] bg-grey-200'>
