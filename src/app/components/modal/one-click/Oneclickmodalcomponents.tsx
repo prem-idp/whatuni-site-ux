@@ -10,7 +10,7 @@ const Oneclickmodalcomponents = ({isOpen, onClose}: any) => {
       </div>
       <div className='modal modal-container flex justify-center items-center fixed top-0 right-0 bottom-0 z-[11]'>            
           <div className={`${isOpen ? "translate-y-0 opacity-[1] " : "translate-y-[100px] opacity-0"} transition-all duration-300 modal-box shadow-custom-6 w-full md:w-[720px] lg:w-[1092px] p-[0] md:p-[24px] lg:p-[40px] bg-grey-50 md:rounded-[8px] fixed top-auto left-0 right-0 mx-auto h-[100vh] md:h-auto`}>
-              <div onClick={onClose} className='modal_close flex items-center justify-center absolute top-[24px] right-[30px] md:top-[10px] md:right-[10px] lg:top-[12px] lg:right-[12px] z-[1] cursor-pointer'>
+              <div onClick={onClose} className='modal_close flex items-center justify-center absolute top-[24px] right-[32px] md:top-[10px] md:right-[10px] lg:top-[12px] lg:right-[12px] z-[1] cursor-pointer'>
                   <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path className='stroke-grey-600' d="M1 13L13 1M1 1L13 13"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -47,7 +47,7 @@ const Oneclickmodalcomponents = ({isOpen, onClose}: any) => {
                                   <Image src="/assets/icons/blue-star-icon.svg" width="24" height="24" alt="Rating icon" />
                                   <span className='font-normal small text-white'>4.6</span>
                               </div>
-                              <span className='reviewLink block small text-white hover:underline'>400 reviews</span>
+                              <span className='reviewLink block small text-white underline'>400 reviews</span>
                           </div>
                         </div>
                     </div>   
@@ -58,7 +58,7 @@ const Oneclickmodalcomponents = ({isOpen, onClose}: any) => {
                 <div className='oneclick-right flex flex-col flex-1 bg-white border border-grey-200 rounded-[8px] p-[16px] lg:p-[32px] gap-[24px]'>
                   <div className='flex flex-col gap-[8px] border-b border-grey-200 pb-[24px]'>
                     <div className='h5 font-bold text-grey300'>Get prospectus from</div>
-                    <p className='para font-semibold text-grey300'>University of Bradford</p>
+                    <p className='para-lg font-semibold text-grey300'>University of Bradford</p>
                   </div>
                   <div className='address flex flex-col gap-[8px] border border-grey-200 bg-grey-50 p-[16px] rounded-[8px]'>
                     <div className='small font-semibold'>Send prospectus to</div>
@@ -157,7 +157,7 @@ const Oneclickmodalcomponents = ({isOpen, onClose}: any) => {
                               </span>
                               <p className="x-small font-normal text-grey-600">
                               Receive newsletters direct from the uni. Contact the university directly to update your email preferences, 
-                              <Link href="" className='text-primary-400 hover:text-primary-500 hover:underline'>Privacy Policy</Link>
+                              <Link href="" className='text-primary-400 hover:text-primary-500 hover:underline pl-[4px]'>Privacy Policy</Link>
                               </p>
                         </label>
                       </div>
