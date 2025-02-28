@@ -55,8 +55,8 @@ const Oneclickmodalcomponents = ({isOpen, onClose}: any) => {
                   <div className='h5 text-grey300'>What students say</div>
                   <Reviewscard />
                 </div>
-                <div className='oneclick-right flex flex-col flex-1 bg-white border border-grey-200 rounded-[8px] p-[16px] lg:p-[32px] gap-[16px] md:gap-[24px]'>
-                  <div className='flex flex-col gap-[8px] border-b border-grey-200 pb-[16px] md:pb-[24px] h-fit'>
+                <div className='oneclick-right flex flex-col flex-1 h-fit bg-white border border-grey-200 rounded-[8px] p-[16px] lg:p-[32px] gap-[16px] md:gap-[24px]'>
+                  <div className='flex flex-col gap-[8px] border-b border-grey-200 pb-[16px] md:pb-[24px]'>
                     <div className='h5 font-bold text-grey300'>Get prospectus from</div>
                     <p className='text-para md:text-para-lg font-semibold text-grey300'>University of Bradford</p>
                   </div>
