@@ -379,7 +379,7 @@ p, .para {
 
 .MultiSwiper .swiper-button-prev,
 .MultiSwiper .swiper-button-next {
-  @apply flex !w-[48px] !h-[48px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-grey-500 !bg-white hover:!bg-primary-500 hover:!border-primary-500 !bg-no-repeat !bg-center z-[2] !top-[32%] !m-[0] translate-y-[-32%] !hidden lg:!block
+  @apply !w-[48px] !h-[48px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-grey-500 !bg-white hover:!bg-primary-500 hover:!border-primary-500 !bg-no-repeat !bg-center z-[2] !top-[32%] !m-[0] translate-y-[-32%] !hidden lg:!block
 }
 
 .MultiSwiper .swiper-pagination {
@@ -414,11 +414,9 @@ p, .para {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
-
-.backdrop-shadow {
+/* .backdrop-shadow {
   @apply backdrop-blur-sm bg-grey-600/80;
-}
-
+} */
 .backdrop-shadow-white {
   @apply backdrop-blur-sm bg-white/50
 }
