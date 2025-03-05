@@ -47,7 +47,7 @@ const page = () => {
       <ColcBannerSkeleton />
       <Articlesnippetcomponents />
       <Articlelinkcomponents />
-      <Scholarshipunicomponents />
+      <Scholarshipunicomponents scholarshipURL={ false} />
       <Eligibilitycriteriacomponents />
       <Faqcomponents />
       <Faqskeleton />

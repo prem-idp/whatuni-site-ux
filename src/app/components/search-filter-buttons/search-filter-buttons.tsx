@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchFilterComponent from "../popups/searchfiltercomponent";
 
-const SearchFilterButtons = () => {
+const SearchFilterButtons = ({scholarshipURL }: {scholarshipURL:boolean}) => {
   // search filter
   const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(false);
   const searchClick = () => {
@@ -19,7 +19,8 @@ const SearchFilterButtons = () => {
     <>
       <section className="bg-grey-600 px-[12px] py-[16px] sticky top-0 z-[4]">
         <div className="max-w-container mx-auto flex gap-[8px] small">
-          <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0 lg:shrink-0">
+          {!scholarshipURL && (
+            <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0 lg:shrink-0">
             <svg
               width="20"
               height="20"
@@ -36,6 +37,8 @@ const SearchFilterButtons = () => {
             </svg>
             Add my grades
           </div>
+          ) }
+          
           <div
             onClick={searchClick}
             className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-primary-100 hover:bg-primary-200 text-grey300 lg:grow-0 lg:shrink-0"
@@ -57,98 +60,101 @@ const SearchFilterButtons = () => {
             </svg>
             Filter (2)
           </div>
+          {!scholarshipURL && (
           <div className="hidden lg:flex items-center justify-center gap-[8px] lg:shrink-0">
-            <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
-              Study level
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
-              Subject (1)
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
-              Year
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
-              University
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
-              Location (1)
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 8L10 13L5 8"
-                  stroke="#333F48"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
+          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+            Study level
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8L10 13L5 8"
+                stroke="#333F48"
+                strokeWidth="1.67"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
+          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+            Subject (1)
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8L10 13L5 8"
+                stroke="#333F48"
+                strokeWidth="1.67"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+            Year
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8L10 13L5 8"
+                stroke="#333F48"
+                strokeWidth="1.67"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+            University
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8L10 13L5 8"
+                stroke="#333F48"
+                strokeWidth="1.67"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+            Location (1)
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8L10 13L5 8"
+                stroke="#333F48"
+                strokeWidth="1.67"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+          )}
+          
           <div className="flex items-center justify-center gap-[4px] cursor-pointer px-0 text-grey-50 hover:underline xl:px-[16px] lg:shrink-0">
             <svg
               width="16"

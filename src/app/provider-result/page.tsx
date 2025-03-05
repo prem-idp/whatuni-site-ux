@@ -37,7 +37,7 @@ const page = () => {
     <>
       
       {/* Skeleton loader  */}
-      <section className="block">
+      <section className="hidden">
       <div className="bg-white ">
         <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
           {/* Skeleton Breadcrum  */}
