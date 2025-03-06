@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import UcasComponent from '@/app/popups/ucascomponent'
 
 const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click, searchTab2Click, searchTab3Click, activeTab, ucasClick, ucasClose, isUcasPopupOpen,
     isUndergratuateClicked,
