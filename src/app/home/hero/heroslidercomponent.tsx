@@ -15,7 +15,7 @@ import "swiper/css/effect-fade";
 // import required modules
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import HeroComponent from "@/app/components/cards/hero-card/herocomponent";
-import UcasComponent from "@/app/popups/ucascomponent";
+// import UcasComponent from "@/app/popups/ucascomponent";
 import Homesearchcomponents from "@/app/components/home-search/Homesearchcomponents";
 
 const HeroSliderComponent = () => {
