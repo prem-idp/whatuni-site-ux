@@ -163,7 +163,7 @@ const page = () => {
       {/* end search lables */}
          
       {/* Scholarship card  */}   
-      <Scholarshipunicomponents scholarshipURL={ true } />
+      <Scholarshipunicomponents scholarshipSR={ false } scholarshipURL={ true } />
       {/* Scholarship card  END */}
       {/* pagination  */}
       <section className='py-[40px]'>

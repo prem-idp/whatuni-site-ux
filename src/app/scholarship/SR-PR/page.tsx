@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Link from 'next/link';
 
@@ -7,6 +8,7 @@ import Scholarshipunicomponents from '@/app/article-landing/scholarship-universi
 import Subscribecomponents from '@/app/article-landing/subscribe-newsletter/subscribecomponents';
 import Faqcomponents from '@/app/components/faq/faqcomponents';
 import Advicecomponents from '@/app/home/advice/advicecomponents';
+import Paginations from '@/app/components/paginations/paginations';
 
 const page = () => {
   const breadcrumbData = [
@@ -160,8 +162,14 @@ const page = () => {
       {/* end search lables */}
          
       {/* Scholarship card  */}   
-      <Scholarshipunicomponents scholarshipURL={ true } />
+      <Scholarshipunicomponents scholarshipURL={true} scholarshipSR={ true } />
       {/* Scholarship card  END */}
+        {/* pagination  */}
+        <section className='py-[40px]'>
+      <Paginations />
+      </section>
+      
+      {/* pagination ENd */}
       <section className='bg-white'>
         <div className="max-w-container mx-auto">
         <Advicecomponents categoryTag={true} adviceBgWhite={true} />

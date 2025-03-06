@@ -174,7 +174,7 @@ const SearchFilterButtons = ({scholarshipURL }: {scholarshipURL:boolean}) => {
           </div>
         </div>
       </section>
-      <SearchFilterComponent
+      <SearchFilterComponent scholarshipURL={ scholarshipURL }
         onClose={filterClose}
         isFilterOpen={isSearchFilterOpen}
       />
