@@ -27,6 +27,7 @@ import Yearofentryskeleton from '../components/skeleton/yearofentryskeleton';
 import Jumptoskeleton from '../components/skeleton/jumptoskeleton';
 import Othercoursesmaylikecomponents from './other-courses-you-may-like/othercoursesmaylikecomponents';
 import Oneclickmodalcomponents from '../components/modal/one-click/Oneclickmodalcomponents';
+import Clearingcourseheaderinfo from './course-header-info/Clearingcourseheaderinfo';
 
 const page = () => {
   const [openModal, setOpenModal] = useState(null);
@@ -71,7 +72,8 @@ const page = () => {
         </div>
     </section>
     {/* <Courseheaderinfoskeleton /> */}
-    <Courseheaderinfocomponents onOpenModal={() => handleOpenModal("oneclick")} />
+    {/* <Courseheaderinfocomponents onOpenModal={() => handleOpenModal("oneclick")} /> */}
+    <Clearingcourseheaderinfo />
     {/* <Yearofentryskeleton /> */}
     <Yearofentrycomponents />
     {/* <Courseoptionsskeleton />  */}
