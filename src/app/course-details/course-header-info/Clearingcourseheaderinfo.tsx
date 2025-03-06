@@ -14,7 +14,7 @@ const Clearingcourseheaderinfo = () => {
         };
     
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll); 
       }, []);
   return (
     <>
@@ -30,7 +30,7 @@ const Clearingcourseheaderinfo = () => {
                       </div>
                       <div className='uniresults-right flex flex-col flex-1 gap-[16px]'>
                           <div className='uni-info-card flex flex-col gap-[8px] md:gap-0'>
-                            <div className='clearing-tag x-small font-bold text-positive-default uppercase'>In Clearing</div>
+                            <div className='clearing-tag xs-small font-bold text-positive-dark bg-green-200 uppercase w-fit rounded-[4px] p-[0_8px] mb-[8px]'>Clearing</div>
                             <div className='flex flex-col-reverse md:flex-row gap-[16px] md:gap-0  justify-between items-start h5 text-grey300'>
                               <span>Animation BA (Hons)</span>
                                 {/* <span className="favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">

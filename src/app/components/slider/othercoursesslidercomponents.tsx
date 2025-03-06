@@ -6,9 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { FreeMode, Navigation, Pagination} from 'swiper/modules';
-import Scholarshipunicard from '../cards/scholarshipuniversities/scholarshipunicard';
 import Othercoursesmaylikecard from '../cards/other-courses-you-may-like/othercoursesmaylikecard';
-const Othercoursesslidercomponents = () => {
+const Othercoursesslidercomponents = ({seasonWusca}:any) => {
   return (
     <>
         <div className="slider-container">
@@ -32,22 +31,22 @@ const Othercoursesslidercomponents = () => {
         modules={[FreeMode, Pagination, Navigation]} 
         className="MultiSwiper">
             <SwiperSlide>
-                <Othercoursesmaylikecard />
+                <Othercoursesmaylikecard seasonWusca={true} />
             </SwiperSlide>
             <SwiperSlide>
-                <Othercoursesmaylikecard />
+                <Othercoursesmaylikecard seasonWusca={true} />
             </SwiperSlide>
             <SwiperSlide>
-                <Othercoursesmaylikecard />
+                <Othercoursesmaylikecard seasonWusca={true} />
             </SwiperSlide>
             <SwiperSlide>
-                <Othercoursesmaylikecard />
+                <Othercoursesmaylikecard seasonWusca={true} />
             </SwiperSlide>
             <SwiperSlide>
-                <Othercoursesmaylikecard />
+                <Othercoursesmaylikecard seasonWusca={true} />
             </SwiperSlide>
             <SwiperSlide>
-                <Othercoursesmaylikecard />
+                <Othercoursesmaylikecard seasonWusca={true}/>
             </SwiperSlide>            
           </Swiper>
         </div>
