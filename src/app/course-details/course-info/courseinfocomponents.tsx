@@ -1,10 +1,12 @@
 import React from 'react'
 import Keystatscomponents from '../keystats/keystatscomponents'
 import Reviewslidercomponents from '@/app/components/slider/reviewslidercomponents'
+import Courseinfoskeleton from '@/app/components/skeleton/courseinfoskeleton'
 
 const Courseinfocomponents = ({ onOpenModal, onOpenReviewModal }:any) => {
   return (
     <>
+    <Courseinfoskeleton />
       <div className='courseinfo-container' id="skiplink1"> 
         <div className="max-w-container mx-auto">
             <div className='courseinfo-card-container flex flex-col lg:flex-row justify-between gap-[20px] pb-[40px]'>

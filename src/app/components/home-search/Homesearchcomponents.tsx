@@ -23,41 +23,41 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
             <div className="grid grid-cols-1 md:grid-cols-2">
               <ul className="flex gap-[8px] justify-start overflow-x-auto px-[16px] md:overflow-x-visible md:px-0 scrollbar-hidden">
               <li
-                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-neutral-900 hover:bg-neutral-900 hover:text-white cursor-pointer 
+                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-grey-900 hover:bg-grey-900 hover:text-white cursor-pointer 
                     ${
                     activeTab === "tab0"
-                      ? "bg-neutral-900 text-white"
-                      : "bg-white text-neutral-900"
+                      ? "bg-grey-900 text-white"
+                      : "bg-white text-grey-900"
                   }`}
                   onClick={searchTab0Click}
                 >
                   Clearing
                 </li>
                 <li
-                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-neutral-900 hover:bg-neutral-900 hover:text-white cursor-pointer ${
+                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-grey-900 hover:bg-grey-900 hover:text-white cursor-pointer ${
                     activeTab === "tab1"
-                      ? "bg-neutral-900 text-white"
-                      : "bg-white text-neutral-900"
+                      ? "bg-grey-900 text-white"
+                      : "bg-white text-grey-900"
                   }`}
                   onClick={searchTab1Click}
                 >
                   Courses
                 </li>
                 <li
-                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-neutral-900 hover:bg-neutral-900 hover:text-white cursor-pointer ${
+                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-grey-900 hover:bg-grey-900 hover:text-white cursor-pointer ${
                     activeTab === "tab2"
-                      ? "bg-neutral-900 text-white"
-                      : "bg-white text-neutral-900 border border-neutral-900"
+                      ? "bg-grey-900 text-white"
+                      : "bg-white text-grey-900 border border-grey-900"
                   }`}
                   onClick={searchTab2Click}
                 >
                   Universities
                 </li>
                 <li
-                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-neutral-900 hover:bg-neutral-900 hover:text-white cursor-pointer ${
+                  className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-grey-900 hover:bg-grey-900 hover:text-white cursor-pointer ${
                     activeTab === "tab3"
-                      ? "bg-neutral-900 text-white"
-                      : "bg-white text-neutral-900 border border-neutral-900"
+                      ? "bg-grey-900 text-white"
+                      : "bg-white text-grey-900 border border-grey-900"
                   }`}
                   onClick={searchTab3Click}
                 >
@@ -157,13 +157,13 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
               <div className="row-start-2 md:col-span-2 mt-[16px] px-[16px] md:px-0">
                 {activeTab === "tab0" && (
                   <div className="flex flex-col gap-[24px] min-h-[60px]">
-                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[8px]">
                       <div className="flex flex-col items-stretch md:flex-row md:items-center">
                        <div
                           className="w-full relative border-grey-200 grow md:border-l-0"
                           onClick={courseActions2}
                         >
-                          <div className="flex items-center my-[12px] md:my-[0]">
+                          <div className="flex items-center mt-[-4px] mb-[12px] md:my-[0]">
                             <input
                               type="text"
                               className="form-control w-full focus:outline-none small text-black placeholder:text-gray-500 px-[0] py-[11px] md:px-[16px] md:pl-[0]"
@@ -326,7 +326,7 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                 )}
                 {activeTab === "tab1" && (
                   <div className="flex flex-col gap-[24px] min-h-[60px]">
-                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[8px]">
                       <div className="flex flex-col items-stretch md:flex-row md:items-center">
                         <div className="relative mb-[24px] md:mb-[0] shrink-0">
                           <button
@@ -543,7 +543,7 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                 )}
                 {activeTab === "tab2" && (
                   <div className="flex flex-col gap-[24px] min-h-[60px]">
-                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[8px]">
                       <div className="flex flex-col gap-x-[10px] justify-between md:flex-row">
                         <div className="relative grow">
                           <input
@@ -666,7 +666,7 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                 )}
                 {activeTab === "tab3" && (
                   <div className="flex flex-col gap-[24px] min-h-[60px]">
-                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[8px]">
                       <div className="flex flex-col gap-x-[10px] justify-between md:flex-row">
                         <div className="relative grow">
                           <input
