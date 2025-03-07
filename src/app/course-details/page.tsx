@@ -72,8 +72,8 @@ const page = () => {
         </div>
     </section>
     {/* <Courseheaderinfoskeleton /> */}
-    {/* <Courseheaderinfocomponents onOpenModal={() => handleOpenModal("oneclick")} /> */}
-    <Clearingcourseheaderinfo />
+    <Courseheaderinfocomponents onOpenModal={() => handleOpenModal("oneclick")} />
+    {/* <Clearingcourseheaderinfo /> */}
     {/* <Yearofentryskeleton /> */}
     <Yearofentrycomponents />
     {/* <Courseoptionsskeleton />  */}

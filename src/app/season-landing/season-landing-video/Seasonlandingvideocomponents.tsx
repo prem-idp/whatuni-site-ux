@@ -150,7 +150,7 @@ const Seasonlandingcomponents = () => {
                             )}                     
                         </div>
                         <div className='video-inner-right flex flex-col flex-1 justify-center px-[16px] md:px-[0]'>
-                            <div className='text-heading-xl font-farro font-bold'>Heading</div>
+                            <div className='text-heading-lg md"text-heading-xl font-farro font-bold'>Heading</div>
                             <p className='para-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a risus dolor sit amet, consectetur adipiscing elit. Praesent a risus </p>
                         </div>
                     </div>
