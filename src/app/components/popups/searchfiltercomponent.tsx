@@ -1050,312 +1050,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
           </Accordion>
             </>
           )}
-          {!scholarshipURL && (
-            <>
-               <Accordion title="Location">
-            {/* location */}
-            <div className="flex flex-col gap-[24px]">
-              <div className="flex flex-col gap-[8px] pt-[24px]">
-                <div className="font-semibold">Distance from home</div>
-                <div className="flex flex-col gap-[16px]">
-                  <div className="bg-white rounded-[24px] w-full p-[16px] border border-grey-200 hover:border-primary-500 shadow-custom-1 md:rounded-[32px] md:pl-[24px] md:p-[4px] md:w-[508px]">
-                    <div className="flex flex-col gap-[24px] small md:flex-row md:items-center md:gap-[10px]">
-                      <div className="relative shrink-0">
-                        <button
-                          className="w-full flex items-center justify-between gap-[4px] pr-0 text-black md:w-[146px] md:pr-[16  px]"
-                          type="button"
-                        >
-                          Range: 50 Miles
-                          <Image
-                            src="/assets/icons/arrow_down_black.svg"
-                            width="20"
-                            height="20"
-                            alt="Search icon"
-                          />
-                        </button>
-                      </div>
-                      <div className="w-full grow border-y-[1px] border-grey-200 md:border-l md:border-y-0">
-                        <input
-                          type="text"
-                          className="w-full focus:outline-none text-black placeholder:text-gray-500 px-[0] py-[24px] md:px-[16px] md:py-[0px]"
-                          aria-label="submenu"
-                          placeholder="Enter Postcode"
-                        />
-                      </div>
-                      <button
-                        type="submit"
-                        className="btn btn-primary flex items-center justify-center gap-[6px] px-[24px] py-[7px] md:min-w-[114px] md:w-[130px]"
-                      >
-                        <Image
-                          src="/assets/icons/search_icon.svg"
-                          width="18"
-                          height="18"
-                          alt="Search icon"
-                        />
-                        Search
-                      </button>
-                    </div>
-                  </div>
-                  {/* <p className="small text-negative-default">
-                    Please enter subject
-                  </p> */}
-                </div>
-                <div className="flex items-center gap-[4px]">
-                  <svg
-                    width="16"
-                    height="18"
-                    viewBox="0 0 16 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.3137 12.8137C11.5923 13.5351 10.1389 14.9886 9.04085 16.0866C8.2598 16.8676 6.99496 16.8675 6.21391 16.0865C5.13566 15.0082 3.70908 13.5817 2.94113 12.8137C0.352958 10.2255 0.352958 6.02929 2.94113 3.44113C5.52929 0.852958 9.72554 0.852958 12.3137 3.44113C14.9019 6.02929 14.9019 10.2255 12.3137 12.8137Z"
-                      stroke="#4664DC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10.1127 8.12742C10.1127 9.5 9 10.6127 7.62742 10.6127C6.25484 10.6127 5.14214 9.5 5.14214 8.12742C5.14214 6.75483 6.25484 5.64214 7.62742 5.64214C9 5.64214 10.1127 6.75483 10.1127 8.12742Z"
-                      stroke="#4664DC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <Link href="" className="small text-blue-400 hover:underline">
-                    Use current location
-                  </Link>
-                </div>
-              </div>
-              <div className="flex flex-col gap-[4px]">
-                <div className="text-para-lg font-semibold">Region</div>
-                <div className="x-small font-semibold text-black uppercase mb-[8px]">
-                  Choose one or more
-                </div>
-                <ul>
-                  <li>
-                    <div className="form_check relative m-[0_0_12px]">
-                      <div className="flex items-start gap-[8px]">
-                        <div className="checkbox_card">
-                          <input
-                            type="checkbox"
-                            className="form-checkbox hidden"
-                            id="All Uk"
-                            name="All Uk"
-                          />
-                          <label
-                            htmlFor="All Uk"
-                            className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
-                          >
-                            <svg
-                              width="10"
-                              height="8"
-                              viewBox="0 0 10 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
-                                fill="white"
-                                stroke="white"
-                                strokeWidth="0.666667"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </label>
-                        </div>
-                        <label
-                          htmlFor="All Uk"
-                          className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
-                        >
-                          All Uk
-                        </label>
-                      </div>
-                    </div>
-                    <ul>
-                      <li>
-                        {region1.map((item, index) => (
-                          <div key={index}>
-                            <div className="form_check relative m-[0_0_12px_24px]">
-                              <div className="flex items-start gap-[8px]">
-                                <div className="checkbox_card">
-                                  <input
-                                    type="checkbox"
-                                    className="form-checkbox hidden"
-                                    id={item}
-                                    name={item}
-                                  />
-                                  <label
-                                    htmlFor={item}
-                                    className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
-                                  >
-                                    <svg
-                                      width="10"
-                                      height="8"
-                                      viewBox="0 0 10 8"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        fillRule="evenodd"
-                                        clipRule="evenodd"
-                                        d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
-                                        fill="white"
-                                        stroke="white"
-                                        strokeWidth="0.666667"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                      />
-                                    </svg>
-                                  </label>
-                                </div>
-                                <label
-                                  htmlFor={item}
-                                  className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
-                                >
-                                  {item}
-                                </label>
-                              </div>
-                            </div>
-                            <ul>
-                              {index == 0 && (
-                                <li className="grid grid-flow-row md:grid-rows-8 md:grid-flow-col">
-                                  {region.map((item, index) => (
-                                    <div
-                                      className="form_check relative m-[0_0_12px_40px]"
-                                      key={index}
-                                    >
-                                      <div className="flex items-start gap-[8px]">
-                                        <div className="checkbox_card">
-                                          <input
-                                            type="checkbox"
-                                            className="form-checkbox hidden"
-                                            id={item}
-                                          />
-                                          <label
-                                            htmlFor={item}
-                                            className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
-                                          >
-                                            <svg
-                                              width="10"
-                                              height="8"
-                                              viewBox="0 0 10 8"
-                                              fill="none"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                fillRule="evenodd"
-                                                clipRule="evenodd"
-                                                d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
-                                                fill="white"
-                                                stroke="white"
-                                                strokeWidth="0.666667"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                              />
-                                            </svg>
-                                          </label>
-                                        </div>
-                                        <label
-                                          htmlFor={item}
-                                          className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
-                                        >
-                                          {item}
-                                        </label>
-                                      </div>
-                                    </div>
-                                  ))}
-                                </li>
-                              )}
-                            </ul>
-                          </div>
-                        ))}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div className="flex flex-col gap-[4px]">
-                <div className="text-para-lg font-semibold">City</div>
-                <div className="x-small font-semibold text-black uppercase mb-[8px]">
-                  Choose one or more
-                </div>
-                <div className="grid grid-flow-row gap-[12px] md:grid-flow-col md:grid-rows-11 ">
-                  {city.map((item, index) => (
-                    <div className="form_check relative" key={index}>
-                      <div className="flex items-start gap-[8px]">
-                        <div className="checkbox_card">
-                          <input
-                            type="checkbox"
-                            className="form-checkbox hidden"
-                            id={item}
-                          />
-                          <label
-                            htmlFor={item}
-                            className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
-                          >
-                            <svg
-                              width="10"
-                              height="8"
-                              viewBox="0 0 10 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
-                                fill="white"
-                                stroke="white"
-                                strokeWidth="0.666667"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </label>
-                        </div>
-                        <label
-                          htmlFor={item}
-                          className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
-                        >
-                          {item}
-                        </label>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-col gap-[4px]">
-                <div className="text-para-lg font-semibold">Location type</div>
-                <div className="x-small font-semibold text-black uppercase">
-                  Choose one or more
-                </div>
-                <div className="flex items-center gap-[8px] flex-wrap ">
-                  {locationType.map((item, index) => (
-                    <div className="form-black flex relative" key={index}>
-                      <input
-                        defaultValue={"Countryside"}
-                        type="checkbox"
-                        name="Countryside"
-                        className="rounded-[4px] outline-none absolute opacity-0"
-                        id={item}
-                        value={item}
-                      />
-                      <label htmlFor={item} className="btn btn-black-outline">
-                        {item}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </Accordion>
-            </>
-          )}
+         
           {!scholarshipURL && (
             <>
                <Accordion title="University group">
@@ -1422,232 +1117,73 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                   <div className="x-small font-semibold text-black uppercase">
                     choose one subject area
                   </div>
-                </div>
-                <div className="bg-white rounded-[22px] p-[11px_12px] border border-grey-300 hover:border-primary-500 md:p-[9px_12px]">
-                  <div className="flex item-center gap-[12px]">
-                    <Image
-                      src="/assets/icons/search-result/search-black.svg"
-                      width="20"
-                      height="20"
-                      alt="Search icon"
-                    />
-                    <input
-                      type="text"
-                      className="w-full focus:outline-none small text-black placeholder:text-gray-500"
-                      aria-label="enter keyword"
-                      placeholder="Search subjects"
-                    />
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="flex flex-col gap-[12px]">
-                    {subjectArea.map((item, index) => (
-                      <div
-                        key={index}
-                        onClick={subjectClicked}
-                        className="flex items-center gap-[4px] text-blue-400 small font-semibold cursor-pointer hover:underline"
-                      >
-                        {item}
-                        <svg
-                          width="16"
-                          height="17"
-                          viewBox="0 0 16 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M4.48037 14.6192C3.97269 14.1116 3.97269 13.2884 4.48037 12.7808L8.76113 8.5L4.48037 4.21924C3.97269 3.71156 3.97269 2.88844 4.48037 2.38076C4.98805 1.87308 5.81117 1.87308 6.31885 2.38076L11.5188 7.58076C12.0265 8.08844 12.0265 8.91156 11.5188 9.41924L6.31885 14.6192C5.81117 15.1269 4.98805 15.1269 4.48037 14.6192Z"
-                            fill="#4664DC"
-                          />
-                        </svg>
-                      </div>
-                    ))}
-                  </div>
-                  {isSubjectOpen && (
-                    <div
-                      className={`bg-white absolute top-0 left-0 w-full h-full z-10 transition-all duration-300 ease-in-out ${
-                        isSubjectOpen ? "translate-x-0" : "-translate-x-full"
-                      }`}
-                    >
-                      <div className="flex flex-col gap-[16px]">
-                        <ul className="flex flex-wrap gap-[8px] uppercase">
-                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
-                            Business LAw
-                          </li>
-                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
-                            Child Law
-                          </li>
-                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                            Educational Law
-                            <svg
-                              width="16"
-                              height="16"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M4 12L12 4M4 4L12 12"
-                                stroke="#3460DC"
-                                strokeWidth="1.13"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </li>
-                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                            Full time
-                            <svg
-                              width="16"
-                              height="16"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M4 12L12 4M4 4L12 12"
-                                stroke="#3460DC"
-                                strokeWidth="1.13"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </li>
-                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                            Full time
-                            <svg
-                              width="16"
-                              height="16"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M4 12L12 4M4 4L12 12"
-                                stroke="#3460DC"
-                                strokeWidth="1.13"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </li>
-                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small flex items-center gap-[2px]">
-                            South East England
-                            <svg
-                              width="16"
-                              height="16"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M4 12L12 4M4 4L12 12"
-                                stroke="#3460DC"
-                                strokeWidth="1.13"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </li>
-                          <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[4px]  font-semibold x-small flex items-center gap-[2px]">
-                            <Link href="" aria-label="Back Arrow">
-                              <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 16 16"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M9 11L6 8L9 5"
-                                  stroke="#3460DC"
-                                  strokeWidth="1.13"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                />
-                              </svg>
-                            </Link>
-                          </li>
-                        </ul>
-                        <div className="flex flex-col gap-[12px] max-h-[255px] overflow-y-auto custom-scrollbar-2">
-                          <div
-                            onClick={subjectClicked}
-                            className="flex items-center gap-[4px] text-blue-400 font-semibold cursor-pointer"
-                          >
-                            <svg
-                              className="rotate-180"
-                              width="16"
-                              height="17"
-                              viewBox="0 0 16 17"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M4.48037 14.6192C3.97269 14.1116 3.97269 13.2884 4.48037 12.7808L8.76113 8.5L4.48037 4.21924C3.97269 3.71156 3.97269 2.88844 4.48037 2.38076C4.98805 1.87308 5.81117 1.87308 6.31885 2.38076L11.5188 7.58076C12.0265 8.08844 12.0265 8.91156 11.5188 9.41924L6.31885 14.6192C5.81117 15.1269 4.98805 15.1269 4.48037 14.6192Z"
-                                fill="#4664DC"
-                              />
-                            </svg>
-                            Choose a different subject
-                          </div>
-                          <div className="flex flex-col gap-[12px]">
-                            <div className="small font-bold">Law</div>
-                            <div className="flex flex-col gap-[12px]">
-                              {law.map((item, index) => (
-                                <div
-                                  className="form_check relative"
-                                  key={index}
-                                >
-                                  <div className="flex items-start gap-[8px]">
-                                    <div className="checkbox_card">
-                                      <input
-                                        type="checkbox"
-                                        className="form-checkbox hidden"
-                                        id={item}
-                                      />
-                                      <label
-                                        htmlFor={item}
-                                        className="flex justify-center items-center w-[16px] h-[16px] rounded-[3px] border-2 border-grey-600 my-[2px] group-checked:bg-primary-400"
-                                      >
-                                        <svg
-                                          width="10"
-                                          height="8"
-                                          viewBox="0 0 10 8"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M9.2534 0.723569C9.40607 0.863517 9.41638 1.10073 9.27643 1.2534L3.77643 7.2534C3.70732 7.3288 3.6104 7.37269 3.50815 7.37491C3.40589 7.37714 3.30716 7.33749 3.23483 7.26517L0.734835 4.76517C0.588388 4.61872 0.588388 4.38128 0.734835 4.23484C0.881282 4.08839 1.11872 4.08839 1.26517 4.23484L3.48822 6.45789L8.72357 0.746605C8.86351 0.593936 9.10073 0.583622 9.2534 0.723569Z"
-                                            fill="white"
-                                            stroke="white"
-                                            strokeWidth="0.666667"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                          />
-                                        </svg>
-                                      </label>
-                                    </div>
-                                    <label
-                                      htmlFor={item}
-                                      className="check-label small font-normal text-grey300 w-[calc(100%_-_28px)]"
-                                    >
-                                      {item}
-                                    </label>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  )}
-                </div>
+                    <div className="flex flex-col gap-[24px] min-h-[60px]">
+                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                      <div className="flex flex-col items-stretch md:flex-row md:items-center">
+                <div className="relative w-full mb-[24px] md:mb-[0] shrink-0">
+                          <button
+                           
+                            className="flex items-center justify-between gap-[4px] mr-0 w-full small text-black  md:mr-[16px]"
+                            type="button"
+                          >
+                            Access & foundation
+                            <Image
+                              src="/assets/icons/arrow_down_black.svg"
+                              width="20"
+                              height="20"
+                              alt="Search icon"
+                            />
+                          </button>
+                          
+                            <div className="w-full bg-white shadow-custom-3 rounded-[4px] absolute left-[-16px] top-[43px]">
+                              <ul>
+                                <li>
+                                  <Link
+                                    href="#"
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                  >
+                                    Undergraduate
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    HND / HNC
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Foundation degree
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Access & foundation
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Postgraduate
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                          
+                          </div>
+                          </div></div></div>
+                    {/* c  */}
               </div>
             </div>
           </Accordion>
