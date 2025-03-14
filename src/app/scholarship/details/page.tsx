@@ -1,4 +1,4 @@
-import Courseoverview from '@/app/components/course-overview/courseoverview';
+// import Courseoverview from '@/app/components/course-overview/courseoverview';
 import React from 'react'
 
 
