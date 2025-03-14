@@ -1,9 +1,51 @@
-import React, { useState } from "react";
+"use client"
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
 import SearchFilterComponent from "../popups/searchfiltercomponent";
 
-const SearchFilterButtons = ({scholarshipURL }: {scholarshipURL:boolean}) => {
+const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) => {
+  // search list 
+  const universityList = [
+    { id: '1', keywords: 'University of Kent', courseNumber: '1124' },
+    { id: '2', keywords: 'University of Aberdeen', courseNumber: '1124' },
+    { id: '3', keywords: 'University of Birmingham', courseNumber: '1124' },
+    { id: '4', keywords: 'Teeside University', courseNumber: '1124' },
+    { id: '5', keywords: 'University of Plymouth', courseNumber: '1124' },
+    { id: '6', keywords: 'University of Kent', courseNumber: '1124' },
+    { id: '7', keywords: 'University of Aberdeen', courseNumber: '1124' },
+    { id: '8', keywords: 'Teeside University', courseNumber: '1124' },
+    { id: '9', keywords: 'University of Plymouth', courseNumber: '1124' },
+    { id: '10', keywords: 'Teeside University', courseNumber: '1124' },
+  ];
+  // Scroll fixed bottom 
+  const [scrolled, setScroll] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 330) {
+        setScroll(true);
+      }
+      else {
+        setScroll(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    };
+    
+    
+  }, []);
+
   // search filter
+    const [isUniversityClicked, setIsUniversityClicked] = useState(false);
   const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(false);
+  
+  const courseActions = () => { 
+    setIsUniversityClicked(!isUniversityClicked);     
+  }
+  
   const searchClick = () => {
     setIsSearchFilterOpen(true);
     const body = document.body;
@@ -17,8 +59,52 @@ const SearchFilterButtons = ({scholarshipURL }: {scholarshipURL:boolean}) => {
   };
   return (
     <>
-      <section className="bg-grey-600 px-[12px] py-[16px] sticky top-0 z-[4]">
-        <div className="max-w-container mx-auto flex gap-[8px] small">
+      <section className={`${scholarshipURL ? "py-[12px] items-center" : "py-[16px] sticky top-0"} ${scrolled ? "fixed w-full bottom-[0]" : ""} bg-grey-600 px-[12px] z-[5]`}>
+        <div className="max-w-container mx-auto items-center flex gap-[8px] small">
+          {scholarshipURL && !scrolled && (
+             
+              
+                <div className="flex h-[44px] w-[200px] px-[4px] items-center bg-white rounded-[32px] border border-neutral300 hover:border-primary-500 shadow-custom-1 gap-x-[10px]">
+                  <div className="flex relative">
+                    <input
+                      onClick={courseActions}
+                      type="text"
+                      className="form-control w-full focus:outline-none pl-[24px] bg-transparent small text-black placeholder:text-gray-500 border-none"
+                      aria-label="submenu"
+                      placeholder="University name"
+                    />
+                    {isUniversityClicked && (
+                      <div className={`${scholarshipURL ? "w-[343px] z-[5]" : "w-full z-[1]"} flex flex-col absolute  bg-white shadow-custom-3 rounded-[8px] left-[0] top-[40px] w-[343px] overflow-hidden`}>
+                    <div className="px-[16px] py-[12px] cursor-pointer">
+                      <p className="text-small font-semibold text-black tracking-[1px] leading-[18px] uppercase">KEYWORD SEARCH FOR</p>
+                      <p className="small text-primary-400">'University'</p>
+                    </div>   
+                    <div className="flex px-[16px] py-[8px]">
+                      <ul className="flex flex-wrap gap-[8px]">
+                        <li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-grey-100 text-grey-500 xs-small">University</li>
+                      </ul>
+                   </div>
+                    <ul className="custom-scrollbar-2 max-h-[205px] overflow-y-scroll mr-[4px]">
+                      {universityList.map((items: any) => (
+                        <li className="flex gap-[4px] hover:bg-blue-50 px-[16px] py-[10px] small "><Link className="hover:underline text-black" key={items.id} href="#">{items.keywords}</Link> <span className="text-grey500">{ items.courseNumber} courses</span> </li>
+                      ))
+                      }
+                          
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                 
+                    <button
+                      type="submit"
+                      className="btn btn-primary h-[36px] min-w-[36px] p-[8px]">
+                      <Image src="/assets/icons/search_icon.svg" width="18" height="18" alt="Search icon" />                    
+                    </button>
+                 
+                </div>
+              
+           
+          )}
           {!scholarshipURL && (
             <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0 lg:shrink-0">
             <svg
@@ -41,7 +127,7 @@ const SearchFilterButtons = ({scholarshipURL }: {scholarshipURL:boolean}) => {
           
           <div
             onClick={searchClick}
-            className="flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-primary-100 hover:bg-primary-200 text-grey300 lg:grow-0 lg:shrink-0"
+            className={`${scrolled ? "w-full": "lg:shrink-0"} flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-primary-100 hover:bg-primary-200 text-grey300 lg:grow-0` }
           >
             <svg
               width="20"

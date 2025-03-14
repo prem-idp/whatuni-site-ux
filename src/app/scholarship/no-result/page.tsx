@@ -12,6 +12,7 @@ import { Pagination } from 'swiper/modules';
 import Paginations from '@/app/components/paginations/paginations';
 
 const page = () => {
+  const scholarshipLable = true
   const breadcrumbData = [
     {
       url: "#",
@@ -55,7 +56,7 @@ const page = () => {
       {/* start search filter button */}
 
       {/* start search lables */}
-      <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0 md:sticky top-[69px] z-[4]">
+      <section className={`${scholarshipLable ? "" : "md:sticky top-[69px]"}overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0 z-[4]`}>
         <div className="max-w-container mx-auto">
           <ul className="flex items-start gap-[8px] uppercase">
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">

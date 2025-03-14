@@ -1108,26 +1108,21 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
           )}
           {scholarshipURL && (
             <>
-              <Accordion title="Nationality">
+              <Accordion classNmae="test" title="Nationality">
             {/* subject */}
             <div className="flex flex-col gap-[24px] pt-[24px]">           
-              <div className="flex flex-col gap-[16px]">
-                <div className="flex flex-col gap-[4px]">
-                  <div className="text-para-lg font-semibold">Subject area</div>
-                  <div className="x-small font-semibold text-black uppercase">
-                    choose one subject area
-                  </div>
-                    </div>
-                    <div className="flex flex-col gap-[24px] min-h-[60px]">
-                    <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+              <div className="flex flex-col gap-[8px]">
+              <div className="small text-grey300">Select or search by nationality to see scholarships you’re eligible for </div>
+                    <div className="flex flex-col gap-[24px] min-h-[44px]">
+                    <div className="bg-white rounded-[32px] py-[10px] px-[12px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
                       <div className="flex flex-col items-stretch md:flex-row md:items-center">
-                <div className="relative w-full mb-[24px] md:mb-[0] shrink-0">
+                <div className="relative w-full shrink-0">
                           <button
                            
                             className="flex items-center justify-between gap-[4px] mr-0 w-full small text-black  md:mr-[16px]"
                             type="button"
                           >
-                            Access & foundation
+                            Location
                             <Image
                               src="/assets/icons/arrow_down_black.svg"
                               width="20"
@@ -1136,7 +1131,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                             />
                           </button>
                           
-                            <div className="w-full bg-white shadow-custom-3 rounded-[4px] absolute left-[-16px] top-[43px]">
+                            <div className="w-full bg-white shadow-custom-3 hidden rounded-[4px] absolute left-[-16px] top-[43px]">
                               <ul>
                                 <li>
                                   <Link
@@ -1162,22 +1157,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                                     Foundation degree
                                   </Link>
                                 </li>
-                                <li>
-                                  <Link
-                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
-                                    href="#"
-                                  >
-                                    Access & foundation
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
-                                    href="#"
-                                  >
-                                    Postgraduate
-                                  </Link>
-                                </li>
+                          
                               </ul>
                             </div>
                           
