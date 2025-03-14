@@ -107,7 +107,6 @@ const Seasonlandingcomponents = () => {
           const videoRef = useRef<HTMLVideoElement | null>(null);
           const [isPlaying, setIsPlaying] = useState(false);
           
-          
           const onClickPlay = () => {
             setIsPlaying(true);
           };
@@ -150,8 +149,8 @@ const Seasonlandingcomponents = () => {
                             )}                     
                         </div>
                         <div className='video-inner-right flex flex-col flex-1 justify-center px-[16px] md:px-[0]'>
-                            <div className='text-heading-lg md"text-heading-xl font-farro font-bold'>Heading</div>
-                            <p className='para-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a risus dolor sit amet, consectetur adipiscing elit. Praesent a risus </p>
+                            <div className='text-heading-lg md"text-heading-xl font-farro font-bold' aria-labelledby='header' aria-label='heading'>Heading</div>
+                            <p className='para-lg' aria-label='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a risus dolor sit amet, consectetur adipiscing elit. Praesent a risus </p>
                         </div>
                     </div>
                     <Homesearchcomponents
