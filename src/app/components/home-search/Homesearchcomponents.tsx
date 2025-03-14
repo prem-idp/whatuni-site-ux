@@ -22,7 +22,9 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
           <div className={`bg-white w-full rounded-none max-w-container mx-auto py-[16px]  mt-0 min-h-[160px] relative z-3 md:shadow-custom-5 md:rounded-[32px] md:p-[24px] ${season?"m-[0]":"md:mt-[-82px]"} `}>
             <div className="grid grid-cols-1 md:grid-cols-2">
               <ul className="flex gap-[8px] justify-start overflow-x-auto px-[16px] md:overflow-x-visible md:px-0 scrollbar-hidden">
-              <li
+              <li>
+                <button
+                  type="button"
                   className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-grey-900 hover:bg-grey-900 hover:text-white cursor-pointer 
                     ${
                     activeTab === "tab0"
@@ -32,8 +34,11 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                   onClick={searchTab0Click}
                 >
                   Clearing
+                  </button>
                 </li>
-                <li
+                <li>
+                  <button
+                  type="button"
                   className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-grey-900 hover:bg-grey-900 hover:text-white cursor-pointer ${
                     activeTab === "tab1"
                       ? "bg-grey-900 text-white"
@@ -42,8 +47,11 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                   onClick={searchTab1Click}
                 >
                   Courses
+                  </button>
                 </li>
-                <li
+                <li>
+                  <button
+                  type="button"
                   className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-grey-900 hover:bg-grey-900 hover:text-white cursor-pointer ${
                     activeTab === "tab2"
                       ? "bg-grey-900 text-white"
@@ -52,8 +60,11 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                   onClick={searchTab2Click}
                 >
                   Universities
+                  </button>
                 </li>
-                <li
+                <li>
+                <button
+                  type="button"
                   className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block border border-grey-900 hover:bg-grey-900 hover:text-white cursor-pointer ${
                     activeTab === "tab3"
                       ? "bg-grey-900 text-white"
@@ -62,11 +73,13 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                   onClick={searchTab3Click}
                 >
                   Advice
+                  </button>
                 </li>
               </ul>
               {activeTab == "tab0" && (
                 <div className="flex justify-center md:justify-end my-[24px] md:my-0">
-                  <div
+                  <button
+                    type='button'
                     onClick={ucasClick}
                     className="flex items-center gap-[6px] text-primary-400 font-semibold small cursor-pointer hover:underline"
                   >
@@ -86,7 +99,7 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                       />
                     </svg>
                     Calculate your UCAS points
-                  </div>
+                  </button>
                   {/* <UcasComponent
                     onClose={ucasClose}
                     isUcasOpen={isUcasPopupOpen}
@@ -158,7 +171,7 @@ const Homesearchcomponents = ({season,className,searchTab0Click,searchTab1Click,
                 {activeTab === "tab0" && (
                   <div className="flex flex-col gap-[24px] min-h-[60px]">
                     <div className="bg-white rounded-[32px] p-[16px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[8px]">
-                      <div className="flex flex-col items-stretch md:flex-row md:items-center">
+                      <div className="flex flex-col items-stretch md:flex-row md:items-center lg:gap-[4px]">
                        <div
                           className="w-full relative border-grey-200 grow md:border-l-0"
                           onClick={courseActions2}
