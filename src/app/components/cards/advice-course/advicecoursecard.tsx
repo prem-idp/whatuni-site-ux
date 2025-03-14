@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const AdviceCourseCard = ({categoryTag} : { categoryTag: boolean }) => {
+const AdviceCourseCard = ({categoryTag} : { categoryTag: boolean }, {seasonAdvice}: any) => {
   return (
     <Link href="" className='card flex flex-col bg-white border border-grey-200 lg:hover:border-primary-400 rounded-[8px] shadow-custom-2 overflow-hidden'>
         <div className='card-header'>
@@ -15,11 +15,11 @@ const AdviceCourseCard = ({categoryTag} : { categoryTag: boolean }) => {
         {!categoryTag && ( 
           <>
              <p className='card-description font-normal small text-grey-700 line-clamp-2'>You’ve probably heard from your teachers, friends or parents about university open days and campus tours. But what exactly are they, and what can you get out of them? Let’s go through everything about uni open days step by step.</p>
-             <p className='card-date font-normal x-small text-grey300'>11 oct 2023</p>
+             {seasonAdvice && (
+             <p className={`card-date font-normal x-small text-grey300`}>11 oct 2023</p>
+            )}
           </>
-
-        )}
-           
+        )}           
         </div>
     </Link>
   )

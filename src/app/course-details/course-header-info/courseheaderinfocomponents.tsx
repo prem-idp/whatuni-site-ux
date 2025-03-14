@@ -6,7 +6,7 @@ import Visitwebsite from '@/app/components/cards/interaction-button/visitwebsite
 import RequestInfo from '@/app/components/cards/interaction-button/requestinfo'
 import BookEvent from '@/app/components/cards/interaction-button/bookevent'
 
-const Courseheaderinfocomponents = () => {
+const Courseheaderinfocomponents = ({onOpenModal}:any) => {
   return (
         <>
         <div className='cd-uni-info-container'>
@@ -68,10 +68,12 @@ const Courseheaderinfocomponents = () => {
                               </div>
                               <div className='uniresults-content-right flex items-end'>
                                 <div className='btn-pod w-full grid grid-col-1 md:grid-cols-2 lg:flex lg:grid-cols-none gap-[8px]'>
-                                  <Getprospectus pageName={"courseDetails"} />
+                                <button onClick={onOpenModal} type='button' className={'btn btn-negative-default w-full'}>Get Prospectus</button>
+                                  {/* <Getprospectus pageName={"courseDetails"} /> */}
                                   <Visitwebsite />
                                   <BookEvent />
                                   <RequestInfo />
+                                  {/* <span onClick={onOpenModal}>One click</span> */}
                                 </div>
                             </div> 
                           </div>    

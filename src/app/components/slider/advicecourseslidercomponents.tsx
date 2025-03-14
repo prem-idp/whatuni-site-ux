@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { FreeMode, Navigation, Pagination} from 'swiper/modules';
-const Advicecourseslidercomponents = ({categoryTag} : { categoryTag: boolean }) => {
+const Advicecourseslidercomponents = ({categoryTag} : { categoryTag: boolean }, {seasonAdvice}: any) => {
   return (
     <>
         <div className="slider-container">

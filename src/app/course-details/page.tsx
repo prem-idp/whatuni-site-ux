@@ -26,6 +26,8 @@ import Courseoptionsskeleton from '../components/skeleton/courseoptionsskeleton'
 import Yearofentryskeleton from '../components/skeleton/yearofentryskeleton';
 import Jumptoskeleton from '../components/skeleton/jumptoskeleton';
 import Othercoursesmaylikecomponents from './other-courses-you-may-like/othercoursesmaylikecomponents';
+import Oneclickmodalcomponents from '../components/modal/one-click/Oneclickmodalcomponents';
+import Clearingcourseheaderinfo from './course-header-info/Clearingcourseheaderinfo';
 
 const page = () => {
   const [openModal, setOpenModal] = useState(null);
@@ -38,6 +40,7 @@ const page = () => {
   };
   const handleCloseModal = (modalName: any) => {
     setIsOpen(null);
+    setOpenModal(null);
     document.body.classList.remove("overflow-y-hidden");
     const validModals = ["subject", "examType", "location", "courseoption", "reviewfilter", "reviewgallery"];   
     
@@ -69,11 +72,12 @@ const page = () => {
         </div>
     </section>
     {/* <Courseheaderinfoskeleton /> */}
-    <Courseheaderinfocomponents />
+    <Courseheaderinfocomponents onOpenModal={() => handleOpenModal("oneclick")} />
+    {/* <Clearingcourseheaderinfo /> */}
     {/* <Yearofentryskeleton /> */}
     <Yearofentrycomponents />
     {/* <Courseoptionsskeleton />  */}
-    <Courseoptionscomponents  onOpenModal={() => handleOpenModal("courseoption")} /> 
+    <Courseoptionscomponents onOpenModal={() => handleOpenModal("courseoption")} /> 
     {/* <Jumptoskeleton /> */}
     <Jumptocomponents />
     <Courseinfocomponents  onOpenModal={() => handleOpenModal("subject")} onOpenReviewModal={()=> handleOpenModal("reviewfilter")} />
@@ -93,6 +97,7 @@ const page = () => {
     {openModal === "location" && <Locationmodalcomponents isOpen={isOpen} onClose={handleCloseModal} />}
     {(openModal === "reviewfilter" || openModal === "reviewgallery") && <Reviewfiltermodalcomponents isOpen={isOpen} onOpenReviewGalleryModal={()=> handleOpenModal("reviewgallery")} onClose={handleCloseModal} />}
     {openModal === "reviewgallery" && <Reviewgallerymodalcomponents isOpen={isOpen} onClose={()=> handleCloseModal("reviewgallery")} />}
+    {openModal === "oneclick" && <Oneclickmodalcomponents isOpen={isOpen} onClose={handleCloseModal} />}
     </>     
   )
 }
