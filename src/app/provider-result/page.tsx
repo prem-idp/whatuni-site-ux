@@ -234,7 +234,7 @@ const page = () => {
       {/* University details END */}
 
       {/* start search filter button */}
-      <SearchFilterButtons />
+      <SearchFilterButtons scholarshipURL={ false } />
       {/* start search filter button */}
 
       {/* start serach lables */}
