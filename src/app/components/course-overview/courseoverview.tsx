@@ -1,18 +1,24 @@
 // import React from 'react'
 // import Image from 'next/image';
 
-// const Courseoverview = ({ data } : { data: any}) => {
+// interface courseData  {
+//   title: string;
+//   description: string;
+//   details: string;
+//   cardTitle: string;
+//   cardDetails: string;
+// }
+
+// const Courseoverview = ({ data } : { data: courseData }) => {
 //   return (
-//       <div key={data.title} className="">
+//       <div className="">
 //           <div>
 //           <div className="h5">{data.title}</div>
 //           <span>{data.description}</span>
 //           </div>          
-//           <p>{data.details}</p>
+//           <p>{data.details}</p> test
 //           <div className="">
-//               <div className="">
-                  
-                
+//               <div className="">                                  
 //                   <div className="">{data.cardTitle}</div>
 //                   <span className="">{data.cardDetails}</span>
 //               </div>
@@ -21,4 +27,4 @@
 //   )
 // }
 
-// export default Courseoverview;
+// export default Courseoverview;  
