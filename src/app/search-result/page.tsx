@@ -210,7 +210,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
       {/* end breadcrumb and subject*/}
 
       {/* start search filter button */}
-      <SearchFilterButtons />
+      <SearchFilterButtons scholarshipURL={ false } />
       {/* start search filter button */}
 
       {/* start search lables */}
