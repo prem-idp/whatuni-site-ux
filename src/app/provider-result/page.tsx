@@ -37,7 +37,7 @@ const page = () => {
     <>
       
       {/* Skeleton loader  */}
-      <section className="block">
+      <section className="hidden">
       <div className="bg-white ">
         <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
           {/* Skeleton Breadcrum  */}
@@ -234,7 +234,7 @@ const page = () => {
       {/* University details END */}
 
       {/* start search filter button */}
-      <SearchFilterButtons />
+      <SearchFilterButtons scholarshipURL={ false } />
       {/* start search filter button */}
 
       {/* start serach lables */}

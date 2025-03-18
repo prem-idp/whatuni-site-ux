@@ -168,7 +168,8 @@ const Header = () => {
                   }`}
                 >
                   <div className="relative z-[6] w-fit">
-                    <div
+                    <button
+                      type="button"
                       onClick={mobileToggleOpen}
                       className={`menu-close-card lg:hidden absolute right-[-40px]`}
                     >
@@ -196,7 +197,7 @@ const Header = () => {
                           />
                         </svg>
                       </div>
-                    </div>
+                    </button>
                     <Megamenucomponents />
                   </div>
                 </div>
@@ -208,7 +209,8 @@ const Header = () => {
           <div className="order-3 basis-[100%] md:grow lg:grow-0 lg:basis-0">
             <ul className="flex items-center justify-end gap-[10px] rightmenu py-[4px] lg:py-[8px]">
               <li>
-                <span
+                <button
+                  type="button"
                   onClick={() => rightMenuAction("SEARCH")}
                   className="border border-gray-500 rounded-[34px] flex items-center justify-center w-[48px] h-[48px] cursor-pointer hover:border-primary-500 hover:bg-primary-500"
                 >
@@ -227,7 +229,7 @@ const Header = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </span>
+                </button>
                 {/* course tab section */}
                 <AnimatePresence>
                 {isSearchClicked && (
@@ -241,39 +243,29 @@ const Header = () => {
                       transition= {{duration: 0.25, ease: "easeInOut"}}
                     className="bg-white absolute top-0 left-0 right-0 z-10 lg:min-h-[222px]">
                       <div className="max-w-container w-full mx-auto flex flex-col px-[16px] pt-[8px] pb-[56px] md:pt-[16px] md:pb-[32px]">
-                        <div className="flex justify-end">
-                          <svg
-                            className="cursor-pointer"
-                            onClick={() => rightMenuAction("SEARCH")}
-                            width="32"
-                            height="32"
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M3 29L29 3M3 3L29 29"
-                              stroke="#333F48"
-                              strokeWidth="2.67"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
+                        <button className="modal_search_close flex self-end relative cursor-pointer">
+                        <svg className="cursor-pointer" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 29L29 3M3 3L29 29" stroke="#333F48" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        </button>
                         <div className="flex flex-col items-center justify-center gap-y-[16px] mt-[16px] md:mt-[-16px]">
                           <ul className="flex items-center gap-[4px] cursor-pointer">
-                            <li
+                            <li>
+                              <button type="button"
+                              aria-label="Courses"
                               className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500 ${
                                 activeTab === "tab1"
                                   ? "bg-black text-white"
                                   : "bg-white text-black"
                               }`}
                               onClick={() => searchTabClick("tab1")}
-                            >
-                              Courses
+                            
+                              >Courses</button>
                             </li>
-                            <li
-                              className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500 ${
+                            <li>
+                             <button 
+                             type="button"
+                             className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500 ${
                                 activeTab === "tab2"
                                   ? "bg-black text-white"
                                   : "bg-white text-black"
@@ -281,8 +273,11 @@ const Header = () => {
                               onClick={() => searchTabClick("tab2")}
                             >
                               Universities
+                              </button>
                             </li>
-                            <li
+                            <li>
+                              <button
+                              type="button"
                               className={`rounded-[20px] px-[12px] py-[8px] small font-semibold inline-block hover:bg-black hover:text-white border border-grey-500 ${
                                 activeTab === "tab3"
                                   ? "bg-black text-white"
@@ -291,6 +286,7 @@ const Header = () => {
                               onClick={() => searchTabClick("tab3")}
                             >
                               Advice
+                              </button>
                             </li>
                           </ul>
                           <div className="w-full lg:max-w-[800px]">
@@ -842,7 +838,8 @@ const Header = () => {
                 </AnimatePresence>
               </li>
               <li aria-label="User" className="relative">
-                <span
+                <button
+                  type="button"
                   onClick={() => rightMenuAction("USER")}
                   className="relative border border-gray-500 rounded-[34px] flex items-center justify-center w-[48px] h-[48px] cursor-pointer hover:border-primary-500 hover:bg-primary-500"
                 >
@@ -868,7 +865,7 @@ const Header = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </span>
+                </button>
                 {/* user section */}
                 {isUserClicked && (
                   <>
@@ -901,15 +898,17 @@ const Header = () => {
                 )}
               </li>
               <li aria-label="User" className="relative">
-                <span
+                <button
+                  type="button"
                   className="relative para font-semibold text-white rounded-[34px] flex items-center justify-center w-[48px] h-[48px] cursor-pointer bg-primary-400 hover:bg-primary-500"
                 >
                 MP
-                </span>
+                </button>
 
               </li>
               <li aria-label="Shortlist" className="relative">
-                <div
+                <button
+                  type="button"
                   className="cursor-pointer"
                   onClick={() => rightMenuAction("SHORTLIST")}
                 >
@@ -934,7 +933,7 @@ const Header = () => {
                   <div className="absolute flex items-center justify-center min-w-[16px] h-[16px] rounded-[8px] top-[22px] left-[13px] bg-success-400 text-black font-inter font-semibold xs-small px-[5px] py-[2px]">
                     2
                   </div>
-                </div>
+                </button>
                 {/* shortlist section */}
                 {isShortlistClicked && (
                   <>

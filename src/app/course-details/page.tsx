@@ -77,7 +77,7 @@ const page = () => {
     {/* <Yearofentryskeleton /> */}
     <Yearofentrycomponents />
     {/* <Courseoptionsskeleton />  */}
-    <Courseoptionscomponents /> 
+    <Courseoptionscomponents onOpenModal={() => handleOpenModal("courseoption")} /> 
     {/* <Jumptoskeleton /> */}
     <Jumptocomponents />
     <Courseinfocomponents  onOpenModal={() => handleOpenModal("subject")} onOpenReviewModal={()=> handleOpenModal("reviewfilter")} />

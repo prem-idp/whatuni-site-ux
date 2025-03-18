@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Accordion from "../accordion/accordion";
 
-const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
+const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) => {
   const [isSearchFilterOpen, setIsSearchFilterOpen] = useState(false);
   const filterHandleClose = () => {
     onClose();
@@ -143,6 +143,31 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
     "Small and specialist",
     "Distance or online learning",
   ];
+  const awardCriteria = [
+    { label: 'All awards types', name: 'awardstypes' },
+    { label: 'Other', name: 'Other' },
+    { label: 'Automatic', name: 'Automatic' },
+    { label: 'Academic excellence', name: 'Academic-excellence' },
+    { label: 'Income related', name: 'Income-related' },
+    { label: 'Mature students', name: 'Mature-students' },
+    { label: 'Music', name: 'Music' },
+    { label: 'Part time students', name: 'Part-time-students' },
+    { label: 'Sport', name: 'Sport' },
+    { label: 'Widening participation', name: 'Widening-participation' },
+  ];
+  const awardCoverage = [
+    { label: 'All award coverage', name: 'All-award-coverage' },
+    { label: 'Accommodation', name: 'Accommodation' },
+    { label: 'Books', name: 'Books' },
+    { label: 'Cost of living', name: 'Cost-of-living' },
+    { label: 'Exam fees', name: 'Exam-fees' },
+    { label: 'Health insurance', name: 'Health-insurance' },
+    { label: 'Research costs', name: 'Research-costs' },
+    { label: 'Stipend', name: 'Stipend' },
+    { label: 'Travel tuition', name: 'Travel-tuition' },
+    { label: 'Tuition fees', name: 'Tuition-fees' },
+    { label: 'Varies', name: 'Varies' },
+  ];
   return (
     <>
       <div
@@ -158,7 +183,9 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
       >
         <div className="p-[16px] md:p-[32px] !pb-0">
           <div className="flex justify-between">
-          <h6 className="h2">Filter</h6>
+            { scholarshipURL ? ( <h6 className="h2">Refine your scholarship search</h6>) : (<h6 className="h2">Filter</h6>) }
+         
+          
           <svg
             onClick={filterHandleClose}
             className="mt-[-6px] ml-auto mr-[-6px] md:mt-[-22px] md:mr-[-22px] cursor-pointer"
@@ -190,6 +217,7 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
           </p>
         </div>
         <div className="h-[calc(100%-215px)] overflow-y-auto custom-scrollbar-2 md:h-[calc(100%-213px)]">
+          
           <Accordion title="Subject">
             {/* subject */}
             <div className="flex flex-col gap-[24px] pt-[24px]">
@@ -526,8 +554,9 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
             </div>
           </Accordion>
-
-          <Accordion title="Intake year">
+          {!scholarshipURL && (
+            <>
+               <Accordion title="Intake year">
             {/* intake */}
             <div className="flex flex-col gap-[8px] p-[8px_0_0]">
               <div className="x-small font-semibold text-black uppercase">
@@ -568,6 +597,9 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
             </div>
           </Accordion>
+            </>
+          )}
+         
 
           <Accordion title="University">
             <div className="flex flex-col gap-[16px] pt-[24px]">
@@ -712,8 +744,9 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
             </div>
           </Accordion>
-
-          <Accordion title="Location">
+          {!scholarshipURL && (
+            <>
+            <Accordion title="Location">
             {/* location */}
             <div className="flex flex-col gap-[24px]">
               <div className="flex flex-col gap-[8px] pt-[24px]">
@@ -1015,8 +1048,12 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
             </div>
           </Accordion>
-
-          <Accordion title="University group">
+            </>
+          )}
+         
+          {!scholarshipURL && (
+            <>
+               <Accordion title="University group">
             <div className="flex flex-col gap-[8px] pt-[24px]">
               <div className="x-small font-semibold text-black uppercase">
                 Choose one or more
@@ -1067,6 +1104,137 @@ const SearchFilterComponent = ({ onClose, isFilterOpen }: any) => {
               </div>
             </div>
           </Accordion>
+            </>
+          )}
+          {scholarshipURL && (
+            <>
+              <Accordion classNmae="test" title="Nationality">
+            {/* subject */}
+            <div className="flex flex-col gap-[24px] pt-[24px]">           
+              <div className="flex flex-col gap-[8px]">
+              <div className="small text-grey300">Select or search by nationality to see scholarships you’re eligible for </div>
+                    <div className="flex flex-col gap-[24px] min-h-[44px]">
+                    <div className="bg-white rounded-[32px] py-[10px] px-[12px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                      <div className="flex flex-col items-stretch md:flex-row md:items-center">
+                <div className="relative w-full shrink-0">
+                          <button
+                           
+                            className="flex items-center justify-between gap-[4px] mr-0 w-full small text-black  md:mr-[16px]"
+                            type="button"
+                          >
+                            Location
+                            <Image
+                              src="/assets/icons/arrow_down_black.svg"
+                              width="20"
+                              height="20"
+                              alt="Search icon"
+                            />
+                          </button>
+                          
+                            <div className="w-full bg-white shadow-custom-3 hidden rounded-[4px] absolute left-[-16px] top-[43px]">
+                              <ul>
+                                <li>
+                                  <Link
+                                    href="#"
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                  >
+                                    Undergraduate
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    HND / HNC
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    className="block small px-[16px] py-[12px] hover:bg-blue-50 hover:underline"
+                                    href="#"
+                                  >
+                                    Foundation degree
+                                  </Link>
+                                </li>
+                          
+                              </ul>
+                            </div>
+                          
+                          </div>
+                          </div></div></div>
+                    {/* c  */}
+              </div>
+            </div>
+          </Accordion>
+            </>
+          )}
+          {scholarshipURL && (
+            <>
+              <Accordion title="Award criteria">
+            {/* subject */}
+            <div className="flex flex-col gap-[24px] pt-[24px]">
+              <div className="flex flex-col gap-[8px]">
+                <div className="text-small">What type of scholarship are you interested in?</div>
+                <div className="x-small font-semibold text-black uppercase">
+                  Choose one or more
+                </div>
+                    <div className="flex flex-wrap gap-[8px]">
+                      {awardCriteria.map((items: any, index: number) => (
+                        <div key={ index } className="form-black flex relative">
+                          <input
+                            defaultValue={items.name}
+                            type="checkbox"
+                            id={items.name}
+                            name={items.name}
+                            className="rounded-[4px] outline-none absolute opacity-0"
+                          />
+                          <label htmlFor={ items.name } className="btn btn-black-outline">
+                            {items.label}
+                          </label>
+                        </div>
+                      ))}
+                              
+                </div>
+              </div>         
+            </div>
+          </Accordion>
+            </>
+          )}
+          {scholarshipURL && (
+            <>
+              <Accordion title="Award coverage">
+            {/* subject */}
+            <div className="flex flex-col gap-[24px] pt-[24px]">
+              <div className="flex flex-col gap-[8px]">
+                <div className="text-small">What will the scholarship cover? </div>
+                <div className="x-small font-semibold text-black uppercase">
+                  Choose one or more
+                </div>
+                    <div className="flex flex-wrap gap-[8px]">
+                      {awardCoverage.map((items: any, index: number) => (
+                        <div key={ index } className="form-black flex relative">
+                          <input
+                            defaultValue={items.name}
+                            type="checkbox"
+                            id={items.name}
+                            name={items.name}
+                            className="rounded-[4px] outline-none absolute opacity-0"
+                          />
+                          <label htmlFor={ items.name } className="btn btn-black-outline">
+                            {items.label}
+                          </label>
+                        </div>
+                      ))}
+                              
+                </div>
+              </div>         
+            </div>
+          </Accordion>
+            </>
+          )}
+
+         
         </div>
 
         <div className="flex items-center justify-between p-[16px] fixed w-full bottom-0 shadow-custom-10 bg-white md:p-[16px_32px] md:w-[768px]">

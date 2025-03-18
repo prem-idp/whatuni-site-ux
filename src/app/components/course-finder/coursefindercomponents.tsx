@@ -17,7 +17,7 @@ const CourseFinder = () => {
                                 <button className="btn btn-outline-secondary w-full font-normal small text-neutral-900 flex items-center justify-between gap-[8px] text-left pl-[0px] md:pl-[20px]" type="button">Undergraduate 
                                     <Image src="/assets/icons/arrow_down_black.svg" width="12" height="7" alt="Search icon" />
                                     </button>
-                                <div className='dropdown-menu w-full md:w-[185px] absolute z-[1] bg-white shadow-[0px_1px_2px_-1px_rgba(16,24,40,0.1),0px_1px_3px_0px_rgba(16,24,40,0.1)] rounded-[8px] absolute left-[-8px] top-[49px] overflow-hidden hidden'>
+                                <div className='dropdown-menu w-full md:w-[185px] absolute z-[1] bg-white shadow-[0px_1px_2px_-1px_rgba(16,24,40,0.1),0px_1px_3px_0px_rgba(16,24,40,0.1)] rounded-[8px] left-[-8px] top-[49px] overflow-hidden hidden'>
                                     <ul>
                                         <li><Link href="" className="dropdown-item block small font-normal px-[16px] py-[10px] hover:bg-secondary-50">Undergraduate</Link></li>
                                         <li><a className="dropdown-item block small font-normal px-[16px] py-[10px] hover:bg-secondary-50" href="#">HND / HNC</a></li>
