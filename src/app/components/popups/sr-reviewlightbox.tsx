@@ -3,7 +3,6 @@ import React from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Reviewdetailcommentscomponents from "../reviewdetail-comments/reviewdetailcommentscomponents";
 
-
 const SearchResultReviewLightBox = ({ onClose }: any) => {
   return (
     <>
@@ -22,7 +21,7 @@ const SearchResultReviewLightBox = ({ onClose }: any) => {
             animate={{ y: 0 }}
             exit={{ y: "-100px" }}
             transition={{ stiffness: 70, duration: 0.3 }}
-            className="modal-box shadow-custom-6 w-full md:w-[720px] lg:w-[790 px] p-[0] md:p-[20px] lg:p-[24px] bg-white md:rounded-[8px] fixed top-0 md:top-[60px] left-0 right-0 mx-auto h-[100vh] md:h-[calc(100vh-120px)]"
+            className="modal-box shadow-custom-6 w-full md:w-[720px] lg:w-[790px] p-[0] md:p-[20px] lg:p-[24px] bg-white md:rounded-[8px] fixed top-0 md:top-[60px] left-0 right-0 mx-auto h-[100vh] md:h-[calc(100vh-120px)]"
           >
             <div
               onClick={onClose}
@@ -38,9 +37,9 @@ const SearchResultReviewLightBox = ({ onClose }: any) => {
                 <path
                   className="stroke-grey-600"
                   d="M1 13L13 1M1 1L13 13"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>

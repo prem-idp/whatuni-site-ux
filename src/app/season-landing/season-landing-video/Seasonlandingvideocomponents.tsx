@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Homesearchcomponents from '../../components/home-search/Homesearchcomponents';
+import Video from '@/app/components/videos/video';
 
 const Seasonlandingcomponents = () => {
          // course tab
@@ -104,23 +105,6 @@ const Seasonlandingcomponents = () => {
               course: "1124 courses",
             },
           ];
-          const videoRef = useRef<HTMLVideoElement | null>(null);
-          const [isPlaying, setIsPlaying] = useState(false);
-          
-          const onClickPlay = () => {
-            setIsPlaying(true);
-          };
-        
-          const onClickPause = () => {
-            setIsPlaying(false);
-          };
-        
-          const playVideo = () => {
-            if (videoRef.current) {
-              videoRef.current.play();
-              setIsPlaying(true);
-            }
-          };
   return (
     <>
         <section className='season-landing-container bg-primary-100'>
@@ -128,25 +112,7 @@ const Seasonlandingcomponents = () => {
                 <div className='season-landing-card flex flex-col gap-[32px] lg:gap-[24px] md:px-[20px]  md:py-[24px] xl:px-[0]'>
                     <div className='video-container flex flex-col lg:flex-row gap-[20px] md:gap-[32px] lg:gap-[40px]'>
                         <div className='video-inner-left relative w-full lg:w-[598px] min-h-[210px] md:min-h-[300x] bg-grey-400 md:rounded-[8px] md:overflow-hidden'>
-                          <video ref={videoRef} className="w-full" controls preload="none"                          
-                          onPlay={onClickPlay}
-                          onPause={onClickPause}
-                          poster="/assets/images/season-video-thumbnail.jpg">
-                            <source src="https://player.vimeo.com/progressive_redirect/playback/899704911/rendition/720p/file.mp4?loc=external&oauth2_token_id=1255563299&signature=8eec76c77c81d1bf9ee9a1a7de4b147d341691ec131b46e043ad6371a7014284" type="video/mp4" 
-                            />
-                          </video>                          
-                          {!isPlaying && (
-                              <button onClick={playVideo} 
-                              className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer">
-                                <Image
-                                  alt="video_play_icon"
-                                  loading="lazy"
-                                  width="52"
-                                  height="52"
-                                    src="/assets/icons/video_play_icon.svg"
-                                />
-                              </button>
-                            )}                     
+                         <Video/>                  
                         </div>
                         <div className='video-inner-right flex flex-col flex-1 justify-center px-[16px] md:px-[0]'>
                             <div className='text-heading-lg md"text-heading-xl font-farro font-bold' aria-labelledby='header' aria-label='heading'>Heading</div>
