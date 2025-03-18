@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Accordion from "../accordion/accordion";
@@ -183,33 +183,33 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
       >
         <div className="p-[16px] md:p-[32px] !pb-0">
           <div className="flex justify-between">
-            { scholarshipURL ? ( <h6 className="h2">Refine your scholarship search</h6>) : (<h6 className="h2">Filter</h6>) }
+              { scholarshipURL ? ( <h6 className="h2">Refine your scholarship search</h6>) : (<h6 className="h2">Filter</h6>) }
          
           
-          <svg
-            onClick={filterHandleClose}
-            className="mt-[-6px] ml-auto mr-[-6px] md:mt-[-22px] md:mr-[-22px] cursor-pointer"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M18 6L6 18"
-              stroke="#333333"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M6 6L18 18"
-              stroke="#333333"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+            <svg
+              onClick={filterHandleClose}
+              className="mt-[-6px] ml-auto mr-[-6px] md:mt-[-22px] md:mr-[-22px] cursor-pointer"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18"
+                stroke="#333333"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M6 6L18 18"
+                stroke="#333333"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
           <p className="m-[8px_0_24px]">
             Use these filters to narrow down your search options based on your
@@ -342,8 +342,14 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                     />
                   </div>
                 </div>
-                <div className="relative">
-                  <div className="flex flex-col gap-[12px]">
+                <div className="max-h-[250px] overflow-y-auto custom-scrollbar-2">
+                  <div
+                    className={`flex flex-col gap-[12px] transition-all duration-300 ease-in-out ${
+                      isSubjectOpen
+                        ? "-translate-x-full h-0"
+                        : "translate-x-0 h-auto"
+                    }`}
+                  >
                     {subjectArea.map((item, index) => (
                       <div
                         key={index}
@@ -370,7 +376,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                   </div>
                   {isSubjectOpen && (
                     <div
-                      className={`bg-white absolute top-0 left-0 w-full h-full z-10 transition-all duration-300 ease-in-out ${
+                      className={`bg-white transition-all duration-300 ease-in-out ${
                         isSubjectOpen ? "translate-x-0" : "-translate-x-full"
                       }`}
                     >
@@ -627,8 +633,14 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                   />
                 </div>
               </div>
-              <div className="relative">
-                <div className="flex flex-col gap-[12px]">
+              <div className="max-h-[250px] overflow-y-auto custom-scrollbar-2">
+                <div
+                  className={`flex flex-col gap-[12px] transition-all duration-300 ease-in-out ${
+                    isUniversityOpen
+                      ? "-translate-x-full h-0"
+                      : "translate-x-0 h-auto"
+                  }`}
+                >
                   {universities.map((item, index) => (
                     <div
                       key={index}
@@ -655,7 +667,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                 </div>
                 {isUniversityOpen && (
                   <div
-                    className={`bg-white absolute top-0 left-0 w-full  z-10 transition-all duration-300 ease-in-out ${
+                    className={`bg-white transition-all duration-300 ease-in-out ${
                       isUniversityOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
                   >
@@ -665,7 +677,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                           University of Aberdeen
                         </li>
                       </ul>
-                      <div className="flex flex-col gap-[12px] h-[246px] overflow-y-auto custom-scrollbar-2">
+                      <div className="flex flex-col gap-[12px]">
                         <div
                           onClick={universityClicked}
                           className="flex items-center gap-[4px] text-blue-400 font-semibold cursor-pointer"
@@ -737,9 +749,6 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                       </div>
                     </div>
                   </div>
-                )}
-                {isUniversityOpen && ( // Placeholder div
-                  <div className="h-[100px]"></div> // Height matches expected content height
                 )}
               </div>
             </div>
@@ -978,7 +987,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                 <div className="x-small font-semibold text-black uppercase mb-[8px]">
                   Choose one or more
                 </div>
-                <div className="grid grid-flow-row gap-[12px] md:grid-flow-col md:grid-rows-11 ">
+                <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2">
                   {city.map((item, index) => (
                     <div className="form_check relative" key={index}>
                       <div className="flex items-start gap-[8px]">
@@ -1022,6 +1031,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                     </div>
                   ))}
                 </div>
+                
               </div>
               <div className="flex flex-col gap-[4px]">
                 <div className="text-para-lg font-semibold">Location type</div>
@@ -1238,17 +1248,17 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
         </div>
 
         <div className="flex items-center justify-between p-[16px] fixed w-full bottom-0 shadow-custom-10 bg-white md:p-[16px_32px] md:w-[768px]">
-         <div className="min-w-[128px] text-center hover:underline md:text-left">
-          <Link
-            href="#"
-            aria-label="reset filters"
-            className="text-primary-400 font-semibold"
-          >
-            Clear
-          </Link>
+          <div className="min-w-[128px] text-center hover:underline md:text-left">
+            <Link
+              href="#"
+              aria-label="reset filters"
+              className="text-primary-400 font-semibold"
+            >
+              Clear
+            </Link>
           </div>
           <button className="bg-primary-400 text-white rounded-[24px] py-[10px] px-[16px] font-semibold min-w-[200px] hover:bg-primary-500 md:w-[344px]">
-          Show all 2929 results
+            Show all 2929 results
           </button>
         </div>
       </div>

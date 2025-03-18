@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Paginations from "../components/paginations/paginations";
@@ -13,7 +13,7 @@ import RequestInfo from "../components/cards/interaction-button/requestinfo";
 import SearchFilterButtons from "../components/search-filter-buttons/search-filter-buttons";
 import ClickAndShow from "../components/click-show/click-show";
 import SearchResultReviewLightBox from "../components/popups/sr-reviewlightbox";
-import { AnimatePresence, motion } from "motion/react";
+import Video from "../components/videos/video";
 
 const SearchResult = ({ openSearchResultLightbox }: any) => {
   const breadcrumbData = [
@@ -158,6 +158,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
     },
   ];
 
+  
   return (
     <>
       {/* start breadcrumb and subject*/}
@@ -197,7 +198,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
       {/* start search filter button */}
 
       {/* start search lables */}
-      <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0 md:sticky top-[69px] z-[4]">
+      <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0 z-[4]">
         <div className="max-w-container mx-auto">
           <ul className="flex items-start gap-[8px] uppercase">
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
@@ -327,7 +328,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center self-center gap-[8px] btn btn-primary px-[20px] py-[10px] w-full lg:w-fit">
+            <button type="button" className="flex items-center justify-center self-center gap-[8px] btn btn-primary px-[20px] py-[10px] w-full lg:w-fit">
               <svg
                 width="20"
                 height="20"
@@ -343,7 +344,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                 />
               </svg>
               Add my grades
-            </div>
+            </button>
           </div>
           {/* end add your grades */}
 
@@ -423,14 +424,13 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
                     {sortBy.map((item, index) => (
                       <div
-                        className="custom-radio flex items-center"
+                        className="custom-radio"
                         key={index}
                       >
                         <input
-                          className="rounded-md"
                           type="radio"
                           id={item}
-                          name="featured"
+                          name="sort by"
                         />
                         <label htmlFor={item} className="flex items-center">
                           {item}
@@ -439,19 +439,18 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                     ))}
                   </div>
                   <div className="font-semibold text-heading6 md:text-small">
-                    Wusca categories{" "}
+                    Wusca categories
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
                     {wuscaCategories.map((item, index) => (
                       <div
-                        className="custom-radio flex items-center"
+                        className="custom-radio"
                         key={index}
                       >
                         <input
-                          className="rounded-md"
                           type="radio"
                           id={item}
-                          name="featured"
+                          name="Wusca categories"
                         />
                         <label htmlFor={item} className="flex items-center">
                           {item}
@@ -527,25 +526,8 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                 </svg>
               </Link>
             </div>
-            <div className="w-full shrink-0 flex self-center  rounded-[8px] overflow-hidden relative order-1 md:w-[310px] md:h-[158px] lg:w-[391px] lg:h-[200px] lg:order-2">
-              <video className="w-full hidden" src="" controls></video>
-              <div className="w-full relative rounded-[8px] overflow-hidden flex justify-center">
-                <Image
-                  src="/assets/images/search-results/thumbnail.png"
-                  alt="Thumbnail"
-                  width={391}
-                  height={200}
-                  className="w-full h-full"
-                />
-              </div>
-              <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer">
-                <Image
-                  alt="video_play_icon"
-                  width="52"
-                  height="52"
-                  src="/assets/icons/video_play_icon.svg"
-                />
-              </div>
+            <div className="w-full shrink-0 flex self-center rounded-[8px] overflow-hidden relative order-1 md:w-[310px] md:min-h-[158px] lg:w-[391px] lg:min-h-[200px] lg:order-2">
+     <Video/>
             </div>
           </div>
           {/* skeleton */}
@@ -919,7 +901,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
                             </div>
                           </div>
                         </div>
-                        <div className="heart w-[40px] h-[40px] bg-white x-small border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer relative group">
+                        <div className="heart shrink-0 w-[40px] h-[40px] bg-white x-small border border-primary-400 rounded-[24px] flex items-center justify-center hover:bg-blue-100 hover:cursor-pointer relative group">
                           <svg
                             width="20"
                             height="20"
@@ -1069,8 +1051,7 @@ const SearchResult = ({ openSearchResultLightbox }: any) => {
           {isfavouritesClicked && (
             <div className="modal modal-container relative top-0 right-0 bottom-0 z-[5]">
               <div
-                onClick={onClose}
-                className="backdrop-shadow fixed top-0 right-0 left-0 bottom-0 bg-white"
+                          className="backdrop-shadow fixed top-0 right-0 left-0 bottom-0 bg-white"
               ></div>
               <div className="modal-box shadow-custom-6 w-[343px] md:w-[512px] p-[24px] bg-white rounded-[8px] fixed top-[30%] translate-y-[30%] left-0 right-0 mx-auto">
                 <div
