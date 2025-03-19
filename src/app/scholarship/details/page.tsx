@@ -60,7 +60,7 @@ const page = () => {
         {
           cardTitle: "Number of awards available",
           cardDetails: "2",
-          cardIcon: "/assets/icons/scholarship/nationality-world.svg",
+          cardIcon: "/assets/icons/scholarship/awards-star.svg",
           cardImgname: "Award icon",
         },
       ],
@@ -226,11 +226,11 @@ const page = () => {
     <>
       <div className="bg-white">
         {/* breadcrumb  */}
-        <section className="pt-[24px] pb-[8px]">
-          <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-            <Breadcrumblayoutcomponent data={breadcrumbData} />
-          </div>
-        </section>
+        <section className="bg-white hidden lg:block">
+        <div className="max-w-container mx-auto pt-[24px] pb-[8px]">
+          <Breadcrumblayoutcomponent data={breadcrumbData} />
+        </div>
+      </section>      
         {/* breadcrumb  */}
         {/* University details  */}
         <section className="shadow-custom-1 pb-[4px] mb-[30px ]">
@@ -282,7 +282,7 @@ const page = () => {
                       <span>
                         WUSCA ranking: 18th
                         <div
-                          className="absolute select-none hidden group-hover:flex border border-grey-200 top-[20px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] md:min-w-[320px] min-w-[200px] left-[-16px] md:left-0  bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0
+                          className="z-[5] absolute select-none hidden group-hover:flex border border-grey-200 top-[20px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] md:min-w-[320px] min-w-[200px] left-[-16px] md:left-0  bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0
                     "
                         >
                           <span className="x-small text-grey900 font-semibold">

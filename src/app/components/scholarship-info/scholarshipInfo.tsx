@@ -5,13 +5,12 @@ import RequestInfo from '../cards/interaction-button/requestinfo'
 
 const ScholarshipInfo = ({ moreDetails }: {moreDetails:boolean}) => {
   return (
-    <div className={`${moreDetails ? "" : "hidden xl:block"} relative` }>
+    <>
+       <div className={`${moreDetails ? "" : "hidden xl:block"} relative` }>
           <div className={`${moreDetails ? "w-full" : "sticky top-[20px] mb-[20px] w-[289px] max-w-[100%]"}shadow-custom-1 border border-grey-200 rounded-[8px] p-[16px] gap-[16px] flex flex-col` }>
               <div className="flex flex-col gap-[4px]">
-          <div className={ `${moreDetails ? "grid-cols-[1fr_64px] grid-rows-[repeat(auto)] gap-x-[16px] gap-y-[8px]": "grid-cols-[1fr_48px] grid-rows-[repeat(2,1fr)] gap-x-[16px] gap-y-[4px]"} grid`}>
-          <div className="h6">
-            Need more information? Visit the [Institution name]
-                      </div>
+          <div className={ `${moreDetails ? "grid-cols-[repeat(auto)] md:grid-cols-[1fr_64px] grid-rows-[repeat(auto)] gap-x-[16px] gap-y-[8px]": "grid-cols-[1fr_48px] grid-rows-[repeat(2,1fr)] gap-x-[16px] gap-y-[4px]"} grid`}>
+          <div className="h6">Need more information? Visit the [Institution name]</div>
                       {moreDetails ? (<span className='p-[4px] row-start-1 row-end-3 col-start-2 col-end-3 bg-white rounded-[8px] hidden md:block shadow-custom-1 min-w-[64px] h-[64px]'>
                         <Image
             alt="info"
@@ -59,7 +58,13 @@ const ScholarshipInfo = ({ moreDetails }: {moreDetails:boolean}) => {
         <RequestInfo />
       </div>
     </div>
-  </div>
+    </div>
+     <div className="bg-white shadow-custom-3 z-[5] flex gap-[8px] p-[8px] fixed w-full left-[0] bottom-[0] lg:hidden">
+     <Visitwebsite />
+     <RequestInfo />
+   </div>
+    </>
+   
   )
 }
 
