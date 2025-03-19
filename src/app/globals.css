@@ -91,7 +91,7 @@
   }
 
   .btn-orange {
-    @apply bg-negative-default hover:bg-warning-800;
+    @apply bg-negative-default hover:bg-negative-dark;
   }
 
   .btn-grey {
@@ -159,7 +159,6 @@
     @apply bg-grey-200 rounded-[4px]
   }
 
-  .review-modal-card.custom-scrollbar-2::-webkit-scrollbar-track,.review-gallery-scroll.custom-scrollbar-2::-webkit-scrollbar-track,.oneclick-container.custom-scrollbar-2::-webkit-scrollbar-track {
   .review-modal-card.custom-scrollbar-2::-webkit-scrollbar-track,.review-gallery-scroll.custom-scrollbar-2::-webkit-scrollbar-track,.oneclick-container.custom-scrollbar-2::-webkit-scrollbar-track {
     @apply mt-[30px]
   }
@@ -401,7 +400,7 @@ p, .para {
 }
 .thumbSwiper{@apply !px-[16px] md:!px-[0]}
 /* .thumbSwiper .swiper-wrapper{@apply lg:grid lg:grid-cols-3 lg:gap-[8px] lg:!translate-x-0} */
-.thumbSwiper .swiper-wrapper .swiper-slide{@apply /* lg:!w-full lg:!mr-[0] */ rounded-[4px] } 
+.thumbSwiper .swiper-wrapper .swiper-slide{@apply rounded-[4px] } 
 /* .thumbSwiper .swiper-wrapper .swiper-slide img{@apply lg:w-full max-w-[100%]} */
 .thumbSwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active{@apply md:border-medium-yellow md:border-[3px]}
 /* Swiper Styles */
@@ -672,7 +671,7 @@ p, .para {
 
 @media only screen and (min-width: 1170px) {
   .article-details-aside {
-    width: 804px;
+    @apply w-[804px];
   }
 }
 
@@ -707,33 +706,17 @@ h6 {
 }
 
 .rtf-innerstyle a.rtfcustom-link {
-  color: #fff;
-}
-
-.rtf-innerstyle a.rtfcustom-link:hover {
-  text-decoration: none;
+  @apply text-white hover:decoration-0;
 }
 
 .rtf-innerstyle figure {
-  border: 1px solid #d6d9da;
-  padding: 10px;
-  border-radius: 3px;
-  display: inline-block;
-  background-color: #f2f2f2;
-  margin-bottom: 15px;
+  @apply bg-grey-100 mb-[15px] inline-block rounded-[3px] p-[10px] border-grey-200 border;
 }
 
 .rtf-innerstyle ul,
 .rtf-innerstyle ol {
   list-style: unset;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  @apply flex flex-col gap-[8px] pl-[40px]
 }
 
 .rtf-innerstyle iframe {
@@ -741,19 +724,11 @@ h6 {
 }
 
 .rtf-innerstyle table {
-  border: 1px solid #d6d9da !important;
-  border-bottom: 0;
-  border-left: 0;
-  border-collapse: collapse;
-  overflow: auto;
-  max-width: 100%;
-  display: block;
-  @apply w-full;
+  @apply border overflow-auto w-full block border-grey-200 border-collapse;
 }
 
 .rtf-innerstyle table th {
-  background: #f2f2f2;
-  @apply w-full;
+  @apply w-full bg-grey-100;
 }
 
 .rtf-innerstyle table td,
