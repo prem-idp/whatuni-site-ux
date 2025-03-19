@@ -36,8 +36,8 @@ const CourseOverview = ({ data, noBorder } : {data:any, noBorder:boolean }) => {
               </>
             ) : null }
         <div className="grid grid-cols-2 gap-[16px]">
-          {data.cardGrid.map((cardList: any) => (
-            <div className="flex gap-[4px] flex-col">
+          {data.cardGrid.map((cardList: any, index:number) => (
+            <div key={index} className="flex gap-[4px] flex-col">
               <Image src={cardList.cardIcon} alt={cardList.cardImgname } width="32" height="32" />
               <div className="para-lg font-semibold">{cardList.cardTitle}</div>
               <p className='para'>{cardList.cardDetails}</p>
@@ -57,8 +57,8 @@ const CourseOverview = ({ data, noBorder } : {data:any, noBorder:boolean }) => {
                 <div className="para-lg font-semibold">Eligible Degrees</div>
                 <ul className='list-disc pl-[40px] flex flex-col gap-[12px]'>
                   
-                    {data.degress.map((items:any) => (
-                      <li className='para'>{ items }</li>
+                    {data.degress.map((items:any, index:number) => (
+                      <li key={index} className='para'>{ items }</li>
                     ))}
                   
                   </ul>
