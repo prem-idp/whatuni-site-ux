@@ -7,9 +7,9 @@ const Paginations = () => {
       <nav aria-label="navigation">
         <ul className="pagination flex justify-center items-center gap-[8px]">
           <li>
-            <a
+            <Link
+              href=""
               className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
-               
             >
               <svg
                 width="7"
@@ -26,7 +26,7 @@ const Paginations = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </Link>
           </li>
           <li>
             <Link
@@ -69,8 +69,7 @@ const Paginations = () => {
             </Link>
           </li>
           <li>
-            <span
-              className="select-none flex items-center justify-center small w-[36px] h-[36px] font-normal text-grey300 text-center px-[2px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400 " >
+            <span className="select-none flex items-center justify-center small w-[36px] h-[36px] font-normal text-grey300 text-center px-[2px] py-[8px] rounded-[4px] hover:bg-blue-100 hover:text-primary-400 ">
               ...
             </span>
           </li>
@@ -83,8 +82,9 @@ const Paginations = () => {
             </Link>
           </li>
           <li>
-            <a
-              className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"             
+            <Link
+              href=""
+              className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
             >
               <svg
                 width="7"
@@ -101,7 +101,7 @@ const Paginations = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

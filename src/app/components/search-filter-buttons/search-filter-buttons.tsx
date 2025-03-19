@@ -62,8 +62,6 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
       <section className={`${scholarshipURL ? "py-[12px] items-center" : "py-[16px] sticky top-0"} ${scrolled ? "fixed w-full bottom-[0]" : ""} bg-grey-600 px-[12px] z-[5]`}>
         <div className="max-w-container mx-auto items-center flex gap-[8px] small">
           {scholarshipURL && !scrolled && (
-             
-              
                 <div className="flex h-[44px] w-[200px] px-[4px] items-center bg-white rounded-[32px] border border-neutral300 hover:border-primary-500 shadow-custom-1 gap-x-[10px]">
                   <div className="flex relative">
                     <input
@@ -102,11 +100,9 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
                     </button>
                  
                 </div>
-              
-           
           )}
           {!scholarshipURL && (
-            <div className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0 lg:shrink-0">
+            <button type="button" className="flex items-center justify-center gap-[8px] btn btn-primary grow w-fit px-[12px] lg:grow-0 lg:shrink-0">
             <svg
               width="20"
               height="20"
@@ -122,10 +118,10 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
               />
             </svg>
             Add my grades
-          </div>
+          </button>
           ) }
           
-          <div
+          <button type="button"
             onClick={searchClick}
             className={`${scrolled && scholarshipURL ? "w-full": "lg:shrink-0"} flex items-center justify-center gap-[8px] btn grow w-fit px-[12px] bg-primary-100 hover:bg-primary-200 text-grey300 lg:grow-0` }
           >
@@ -145,10 +141,10 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
               />
             </svg>
             Filter (2)
-          </div>
+          </button>
           {!scholarshipURL && (
           <div className="hidden lg:flex items-center justify-center gap-[8px] lg:shrink-0">
-          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+          <button type="button" className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
             Study level
             <svg
               width="20"
@@ -165,8 +161,8 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
-          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+          </button>
+          <button type="button" className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
             Subject (1)
             <svg
               width="20"
@@ -183,8 +179,8 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
-          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+          </button>
+          <button type="button" className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
             Year
             <svg
               width="20"
@@ -201,8 +197,8 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
-          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+          </button>
+          <button type="button" className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
             University
             <svg
               width="20"
@@ -219,8 +215,8 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
-          <div className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
+          </button>
+          <button type="button" className="flex items-center gap-[8px] btn w-fit bg-grey-100 hover:bg-grey-200 text-grey300">
             Location (1)
             <svg
               width="20"
@@ -237,11 +233,11 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </button>
         </div>
           )}
           
-          <div className="flex items-center justify-center gap-[4px] cursor-pointer px-0 text-grey-50 hover:underline xl:px-[16px] lg:shrink-0">
+          <button type="button" className="flex items-center justify-center gap-[4px] cursor-pointer px-0 text-grey-50 hover:underline xl:px-[16px] lg:shrink-0">
             <svg
               width="16"
               height="16"
@@ -257,7 +253,7 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
               />
             </svg>
             Reset
-          </div>
+          </button>
         </div>
       </section>
       <SearchFilterComponent scholarshipURL={ scholarshipURL }
