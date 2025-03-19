@@ -91,7 +91,7 @@
   }
 
   .btn-orange {
-    @apply bg-negative-default hover:bg-negative-dark;;
+    @apply bg-negative-default hover:bg-negative-dark;
   }
 
   .btn-grey {
@@ -99,7 +99,7 @@
   }
 
   .btn-green {
-    @apply bg-positive-dark hover:bg-success-800  ;
+    @apply bg-positive-dark hover:bg-success-800;
   }
 
   .btn-blue {
@@ -159,7 +159,7 @@
     @apply bg-grey-200 rounded-[4px]
   }
 
-  .review-modal-card.custom-scrollbar-2::-webkit-scrollbar-track,.review-gallery-scroll.custom-scrollbar-2::-webkit-scrollbar-track,.oneclick-container.custom-scrollbar-2::-webkit-scrollbar-track {
+  .review-modal-card.custom-scrollbar-2::-webkit-scrollbar-track, .review-gallery-scroll.custom-scrollbar-2::-webkit-scrollbar-track, .oneclick-container.custom-scrollbar-2::-webkit-scrollbar-track {
     @apply mt-[30px]
   }
 
@@ -181,7 +181,11 @@ html {
 body {
   @apply font-inter font-normal text-para text-grey300;
 }
-a:focus,button:focus{@apply outline-[3px] outline-gray-900 outline-offset-0}
+
+a:focus,
+button:focus {
+  @apply outline-[3px] outline-gray-900 outline-offset-0
+}
 
 /* typograpy */
 h1,
@@ -394,8 +398,15 @@ p, .para {
 .MultiSwiper .swiper-pagination-bullet-active {
   @apply !bg-blue-300
 }
-.reviewMainSwiper{@apply md:!p-[0_0_8px_0] !hidden md:!flex }
-.reviewMainSwiper .swiper-button-prev, .reviewMainSwiper .swiper-button-next{@apply md:!block !w-[40px] !h-[40px] !top-[50%] translate-y-[-50%]}
+
+.reviewMainSwiper {
+  @apply md:!p-[0_0_8px_0] !hidden md:!flex
+}
+
+.reviewMainSwiper .swiper-button-prev, .reviewMainSwiper .swiper-button-next {
+  @apply md:!block !w-[40px] !h-[40px] !top-[50%] translate-y-[-50%]
+}
+
 .MultiSwiper .swiper-button-prev {
   @apply !left-[0]
 }
@@ -403,11 +414,23 @@ p, .para {
 .MultiSwiper .swiper-button-next {
   @apply !right-[0]
 }
-.thumbSwiper{@apply !px-[16px] md:!px-[0]}
+
+.thumbSwiper {
+  @apply !px-[16px] md:!px-[0]
+}
+
 /* .thumbSwiper .swiper-wrapper{@apply lg:grid lg:grid-cols-3 lg:gap-[8px] lg:!translate-x-0} */
-.thumbSwiper .swiper-wrapper .swiper-slide{@apply /* lg:!w-full lg:!mr-[0] */ rounded-[4px] } 
+.thumbSwiper .swiper-wrapper .swiper-slide {
+  @apply
+  /* lg:!w-full lg:!mr-[0] */
+  rounded-[4px]
+}
+
 /* .thumbSwiper .swiper-wrapper .swiper-slide img{@apply lg:w-full max-w-[100%]} */
-.thumbSwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active{@apply md:border-medium-yellow md:border-[3px]}
+.thumbSwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
+  @apply md:border-medium-yellow md:border-[3px]
+}
+
 /* Swiper Styles */
 /* Backgrop shadow */
 .backdrop-shadow {
@@ -415,6 +438,7 @@ p, .para {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
+
 /* .backdrop-shadow {
   @apply backdrop-blur-sm bg-grey-600/80;
 } */
@@ -523,6 +547,7 @@ p, .para {
 .partner .swiper-pagination {
   @apply lg:!hidden
 }
+
 /* partner slider styles */
 
 .rightmenu li:not(:last-child) span:hover>svg path, .continue_email:hover svg path {
@@ -555,9 +580,11 @@ p, .para {
 .err_msg {
   display: none
 }
+
 .error .err_msg {
   display: block
 }
+
 /* Registeration */
 
 /* COLC */
@@ -648,7 +675,7 @@ p, .para {
 
 .skiplinkoption.active ul {
   height: 100%;
-  }
+}
 
 .skiplinkoption .burger-menu span {
   transition: all 0.3s linear 0s;
@@ -675,7 +702,7 @@ p, .para {
 }
 
 @media only screen and (min-width: 1170px) {
-  .article-details-aside {    
+  .article-details-aside {
     @apply w-[804px];
   }
 }
@@ -710,7 +737,7 @@ h6 {
   @apply text-blue-400 underline;
 }
 
-.rtf-innerstyle a.rtfcustom-link {  
+.rtf-innerstyle a.rtfcustom-link {
   @apply text-white hover:decoration-0;
 }
 
@@ -721,7 +748,7 @@ h6 {
 .rtf-innerstyle ul,
 .rtf-innerstyle ol {
   list-style: unset;
-  @apply flex flex-col gap-[8px] pl-[40px] 
+  @apply flex flex-col gap-[8px] pl-[40px]
 }
 
 .rtf-innerstyle iframe {
@@ -799,11 +826,12 @@ h6 {
 /* Course Details */
 
 /* sr */
-.heart:hover svg,.heart.active svg {
-@apply fill-primary-200
+.heart:hover svg, .heart.active svg {
+  @apply fill-primary-200
 }
-.heart.active{
-@apply bg-primary-100
+
+.heart.active {
+  @apply bg-primary-100
 }
 
 .form-black input[type="radio"]:checked+label,
@@ -812,27 +840,27 @@ h6 {
 }
 
 .decrease svg path {
-  @apply stroke-blue-400; 
+  @apply stroke-blue-400;
 }
 
 .increment svg path {
-  @apply stroke-gray-300; 
+  @apply stroke-gray-300;
 }
 
 .sort-active path {
-  @apply stroke-grey300; 
+  @apply stroke-grey300;
 }
 
-.custom-radio input[type="radio"]{
+.custom-radio input[type="radio"] {
   @apply appearance-none
 }
-.custom-radio input[type="radio"] + label{
-  @apply relative inline-block pl-[28px] cursor-pointer 
+
+.custom-radio input[type="radio"] + label {
+  @apply relative inline-block pl-[28px] cursor-pointer
 }
 
-.custom-radio input[type="radio"] + label:before
-{
-  @apply absolute top-[3px] left-0 w-[17px] h-[17px] text-center rounded-full content-[''] border-2 border-grey500 
+.custom-radio input[type="radio"] + label:before {
+  @apply absolute top-[3px] left-0 w-[17px] h-[17px] text-center rounded-full content-[''] border-2 border-grey500
 }
 
 .custom-radio input[type="radio"]:checked + label:before {
