@@ -111,7 +111,7 @@
   }
 
   .btn-neutral-outline {
-    @apply bg-transparent border-primary-400 text-neutral-900 border rounded-[24px] px-[12px] py-[7px] hover:bg-primary-500 hover:text-white font-semibold select-none;
+    @apply bg-transparent border-primary-400 text-neutral-900 border rounded-[20px] px-[12px] py-[7px] hover:bg-primary-500 hover:text-white font-semibold select-none;
   }
 
   .btn-black-outline {
@@ -119,7 +119,7 @@
   }
 
   .btn-primary-outline {
-    @apply bg-transparent border-primary-400 text-primary-400 border rounded-[24px] px-[20px] py-[10px] hover:border-primary-500 hover:bg-primary-500 hover:text-white font-semibold cursor-pointer
+    @apply bg-transparent border-primary-400 text-primary-400 border rounded-[20px] px-[20px] py-[10px] hover:border-primary-500 hover:bg-primary-500 hover:text-white font-semibold cursor-pointer
   }
 
   .btn-secondary-outline {
@@ -160,6 +160,7 @@
   }
 
   .review-modal-card.custom-scrollbar-2::-webkit-scrollbar-track,.review-gallery-scroll.custom-scrollbar-2::-webkit-scrollbar-track,.oneclick-container.custom-scrollbar-2::-webkit-scrollbar-track {
+  .review-modal-card.custom-scrollbar-2::-webkit-scrollbar-track,.review-gallery-scroll.custom-scrollbar-2::-webkit-scrollbar-track,.oneclick-container.custom-scrollbar-2::-webkit-scrollbar-track {
     @apply mt-[30px]
   }
 
@@ -170,7 +171,6 @@
   .custom-scrollbar-2::-webkit-scrollbar-thumb:hover {
     @apply bg-grey-400
   }
-
 }
 
 html {
@@ -319,7 +319,6 @@ p, .para {
 .descrip {
   @apply h-[10px]
 }
-
 .skeleton-text-animated {
   background: linear-gradient(to right, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.065) 8%, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.135) 18%, rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.065) 33%);
   @apply relative bg-[length:800px_104px];
@@ -355,7 +354,6 @@ p, .para {
 .discover-card-container .swiper {
   @apply !pt-[2px]
 }
-
 .MultiSwiper {
   @apply !px-[16px] md:!px-[20px] xl2:!px-[0] !pb-[30px]
 }
@@ -378,7 +376,7 @@ p, .para {
 
 .MultiSwiper .swiper-button-prev,
 .MultiSwiper .swiper-button-next {
-  @apply !w-[48px] !h-[48px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-grey-500 !bg-white hover:!bg-primary-500 hover:!border-primary-500 !bg-no-repeat !bg-center z-[2] !top-[32%] !m-[0] translate-y-[-32%] !hidden lg:!block
+  @apply flex !w-[48px] !h-[48px] !rounded-[24px] !p-[10px] !border-[1px] !border-solid !border-grey-500 !bg-white hover:!bg-primary-500 hover:!border-primary-500 !bg-no-repeat !bg-center z-[2] !top-[32%] !m-[0] translate-y-[-32%] !hidden lg:!block
 }
 
 .MultiSwiper .swiper-pagination {
@@ -505,8 +503,12 @@ p, .para {
   @apply !bg-primary-500 !w-[16px] !h-[8px] rounded-[4px] !opacity-90
 }
 
-.hero .swiper-slide-prev {
+.hero .swiper-slide {
   @apply !opacity-0
+}
+
+.hero .swiper-slide-active {
+  @apply !opacity-100
 }
 
 /* partner slider styles */
@@ -515,12 +517,9 @@ p, .para {
 }
 
 .partner .swiper-pagination {
-  @apply !bottom-0
+  @apply !bottom-0 lg:!hidden
 }
 
-.partner .swiper-pagination {
-  @apply lg:!hidden
-}
 /* partner slider styles */
 
 .rightmenu li:not(:last-child) span:hover>svg path, .continue_email:hover svg path {
@@ -667,7 +666,7 @@ p, .para {
 /* skiplink hamburger menu END */
 @media only screen and (min-width: 992px) and (max-width: 1169px) {
   .article-details-aside {
-    width: calc(100% - 321px);
+    @apply w-[calc(100%_-_321px)];
   }
 }
 
@@ -759,16 +758,12 @@ h6 {
 
 .rtf-innerstyle table td,
 .rtf-innerstyle table th {
-  padding: 10px;
-  border-left: 1px solid #d6d9da !important;
-  border-bottom: 1px solid #d6d9da !important;
-  vertical-align: top;
-  @apply w-full;
+  @apply w-full p-[10px] border-l-[1px] border-b-[1px] border-grey-200 align-top;
 }
 
 .rtf-innerstyle table ul li {
-  list-style: inside disc;
-  font-size: 14px;
+
+  @apply small list-inside list-disc;
 }
 
 .rtf-innerstyle>div:has([id])>div:not([class])>ul,
@@ -820,39 +815,45 @@ h6 {
 /* Course Details */
 
 /* sr */
-/* .form_radio .form-check-input:checked + label,.form_radio .form-check-input:hover + label{@apply text-white bg-primary-500 border-primary-500 cursor-pointer}
-.form_check .form-checkbox:checked + label, .form_radio .form-radio:checked + label{@apply text-white bg-primary-400 border-primary-400 cursor-pointer}
-.year-of-entry .form-check-input:checked + label,.year-of-entry .form-check-input:hover + label{@apply text-grey300 bg-white border-white}
-
-.form_radio_black .form-check-input:checked + label,.form_radio_black .form-check-input:hover + label{@apply text-white bg-grey300 border-grey300 cursor-pointer}
-.form_check_black .form-checkbox:checked + label, .form_radio_black .form_radio_black:checked + label{@apply text-white bg-grey300 border-grey300 cursor-pointer} */
-.heart:hover svg{ fill:#0FBEFD}
-/* sr */
-
-.heart:hover svg,.heart.active svg {
-@apply fill-primary-200
+.heart:hover svg, .heart.active svg {
+  @apply fill-primary-200
+  }
+  .heart.active{
+  @apply bg-primary-100
+  }
+  
+  .form-black input[type="radio"]:checked+label,
+  .form-black input[type="checkbox"]:checked+label {
+    @apply text-white bg-grey300 border-grey300 cursor-pointer
+  }
+  
+  .decrease svg path {
+    @apply stroke-blue-400; 
+  }
+  
+  .increment svg path {
+    @apply stroke-gray-300; 
+  }
+  
+  .sort-active path {
+    @apply stroke-grey300; 
+  }
+  
+  .custom-radio input[type="radio"]{
+    @apply appearance-none
+  }
+  .custom-radio input[type="radio"] + label{
+    @apply relative inline-block pl-[28px] cursor-pointer 
+  }
+  
+.custom-radio input[type="radio"] + label:before {
+  @apply absolute top-[3px] left-0 w-[17px] h-[17px] text-center rounded-full content-[''] border-2 border-grey500
 }
-.heart.active{
-@apply bg-primary-100
-}
 
-
-.form-black input[type="radio"]:checked+label,
-.form-black input[type="checkbox"]:checked+label {
-  @apply text-white bg-grey300 border-grey300 cursor-pointer
-}
-
-.decrease svg path {
-  stroke: #4664dc;
-}
-
-.increment svg path {
-  stroke: #adb2b6;
-}
-
-.sort-active path {
-  stroke: #333;
-}
+.custom-radio input[type="radio"]:checked + label:before {
+  @apply transition-all duration-300 ease-in-out shadow-[inset_0_0_0_0.2em_white,inset_0_0_0_1em_#4664dc] 
+  border-2 border-primary-400
+} 
 /* sr */
 .ripple-circle:active{
   animation-name: ripple-circle;
