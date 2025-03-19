@@ -136,8 +136,9 @@ const Seasonlandingcomponents = () => {
                             />
                           </video>                          
                           {!isPlaying && (
-                              <button onClick={playVideo} 
-                              className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer">
+                              <button 
+                              onClick={playVideo} 
+                              className="ripple-circle absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] rounded-[60px] cursor-pointer">
                                 <Image
                                   alt="video_play_icon"
                                   loading="lazy"
