@@ -23,7 +23,7 @@ const Courseheaderinfocomponents = ({onOpenModal}:any) => {
                               <div className='uni-info-card flex flex-col gap-[8px] md:gap-0'>
                                 <div className='flex flex-col-reverse md:flex-row gap-[16px] md:gap-0  justify-between items-start h5 text-grey300'>
                                   <span>Animation BA (Hons)</span>
-                                    <span className="favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
+                                    <button className="ripple-circle-blue favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
                                     <div className="heart min-w-[40px] w-[40px] h-[40px] bg-white border border-blue-500 rounded-[24px] flex items-center justify-center cursor-pointer hover:bg-blue-100">
                                       <svg
                                         width="20"
@@ -41,7 +41,7 @@ const Courseheaderinfocomponents = ({onOpenModal}:any) => {
                                         />
                                       </svg>
                                     </div>                                  
-                                  </span>
+                                  </button>
                                 </div>
                               <div className='flex flex-col gap-[8px]'>
                                  <a href="#" className='block w-fit para-lg font-semibold text-primary-400 hover:text-primary-500 hover:underline'>Norwich University of the Arts</a>

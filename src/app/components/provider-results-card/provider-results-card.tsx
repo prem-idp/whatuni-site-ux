@@ -144,7 +144,11 @@ const ProviderResultsCard = () => {
                 </span>
               )}
               {/* PGS  */}
-              {/* <p className="small text-grey500 line-clamp-3">Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary </p> */}
+              <div className="flex">
+              <p className="small text-grey500 line-clamp-3">Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary Are you seeking to enter the criminal justice or community justice sectors Want to work with drug action teams or in the voluntary</p>
+              <span className="cursor-pointer select-none small text-blue-500">Read more</span>
+              </div>
+              
               {/* PGS  END */}
     
               {items.modulesList && (
