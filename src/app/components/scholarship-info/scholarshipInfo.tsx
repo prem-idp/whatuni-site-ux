@@ -58,11 +58,16 @@ const ScholarshipInfo = ({ moreDetails }: {moreDetails:boolean}) => {
         <RequestInfo />
       </div>
     </div>
-    </div>
-     <div className="bg-white shadow-custom-3 z-[5] flex gap-[8px] p-[8px] fixed w-full left-[0] bottom-[0] lg:hidden">
+      </div>
+      {!moreDetails ? (
+        <>
+           <div className="bg-white shadow-custom-13 z-[5] flex gap-[8px] p-[8px] fixed w-full left-[0] bottom-[0] lg:hidden">
      <Visitwebsite />
      <RequestInfo />
    </div>
+        </>
+      ) : null}
+    
     </>
    
   )

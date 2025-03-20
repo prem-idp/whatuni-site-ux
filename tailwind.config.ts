@@ -184,6 +184,7 @@ const config: Config = {
         'custom-11':
           '0px 2px 3px 0px rgba(0, 0, 0, 0.168), 0px 0px 3px 0px rgba(0, 0, 0, 0.084)',
         'custom-12': '0 10px 15px -3px rgba(16, 24, 40, 0.102',
+        'custom-13': '0px 1px 2px -1px rgb(16 24 40 / 10%), 0px -3px 3px 0px rgb(16 24 40 / 10%)',
       },
       backdropBlur: {
         'custom-1': '261px',
