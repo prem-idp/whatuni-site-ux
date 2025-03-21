@@ -129,7 +129,7 @@ const Scholarshipunicomponents = ({
             ) }
            
             {/* No results END */}
-            <div className="px-[0] py-[24px]">
+            <div className={`${scholarshipURL ? "pt-[24px]" : "py-[24px]"} px-[0]`}>
               {scholarshipSR ? (
                  <div className="flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]">
                  <div className="text-small font-semibold text-black">Explore your scholarship options</div>
@@ -139,7 +139,7 @@ const Scholarshipunicomponents = ({
                </div>
               ) : (
                 <div className="flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]">
-                <div className="h2">Popular scholarships</div>
+                <div className="h6">Popular scholarships</div>
                 <p className="font-normal small">
                   Here are some popular scholarships you may be interested in
                 </p>

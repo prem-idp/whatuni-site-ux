@@ -43,7 +43,7 @@ const page = () => {
       </section>
       {/* breadcrumb  */}
       {/* course title  */}
-      <section className="bg-white">
+      <section className="bg-white border-b border-grey-200 lg:border-[0]">
         <div className="max-w-container mx-auto px-[16px] md:px-[20px] xl:px-[0] py-[16px]">        
             <div className="h5 mb-[4px]">Top Law, Engineering & Architecture subjects for you</div>
             <p>000 universities offer 1563 courses</p>          
