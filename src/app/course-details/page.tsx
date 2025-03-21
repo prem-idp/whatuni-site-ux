@@ -28,6 +28,8 @@ import Jumptoskeleton from '../components/skeleton/jumptoskeleton';
 import Othercoursesmaylikecomponents from './other-courses-you-may-like/othercoursesmaylikecomponents';
 import Oneclickmodalcomponents from '../components/modal/one-click/Oneclickmodalcomponents';
 import Clearingcourseheaderinfo from './course-header-info/Clearingcourseheaderinfo';
+import Entryrequirementsskeleton from '../components/skeleton/entryrequirementsskeleton';
+import Popularalevelsubjectskeleton from '../components/skeleton/popularalevelsubjectskeleton';
 
 const page = () => {
   const [openModal, setOpenModal] = useState(null);
@@ -76,13 +78,15 @@ const page = () => {
     {/* <Clearingcourseheaderinfo /> */}
     {/* <Yearofentryskeleton /> */}
     <Yearofentrycomponents />
-    {/* <Courseoptionsskeleton />  */}
+    <Courseoptionsskeleton /> 
     <Courseoptionscomponents onOpenModal={() => handleOpenModal("courseoption")} /> 
     {/* <Jumptoskeleton /> */}
     <Jumptocomponents />
     <Courseinfocomponents  onOpenModal={() => handleOpenModal("subject")} onOpenReviewModal={()=> handleOpenModal("reviewfilter")} />
     <Modulescomponents />
     <Entryrequirements onOpenModal={() => handleOpenModal("examType")} />
+    <Entryrequirementsskeleton />
+    <Popularalevelsubjectskeleton />
     <Popularalevelsubjectcomponents />
     <Tuitionfeescomponents onOpenModal={() => handleOpenModal("location")} />
     <Latestreviewscomponents onOpenModal={() => handleOpenModal("subject") } />

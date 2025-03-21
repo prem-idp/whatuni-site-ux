@@ -543,12 +543,12 @@ p, .para {
   stroke: white
 }
 
-.decrease svg path {
-  stroke: #4664DC
+.enable svg path {
+  @apply stroke-blue-400;
 }
-
-.increment svg path {
-  stroke: #adb2b6;
+ 
+.disable svg path {
+  @apply stroke-grey-200;
 }
 
 /* Registeration */
@@ -819,14 +819,6 @@ h6 {
   .form-black input[type="radio"]:checked+label,
   .form-black input[type="checkbox"]:checked+label {
     @apply text-white bg-grey300 border-grey300 cursor-pointer
-  }
-  
-  .decrease svg path {
-    @apply stroke-blue-400; 
-  }
-  
-  .increment svg path {
-    @apply stroke-gray-300; 
   }
   
   .sort-active path {
