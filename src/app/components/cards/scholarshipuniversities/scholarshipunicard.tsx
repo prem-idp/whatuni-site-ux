@@ -22,7 +22,7 @@ const Scholarshipunicard = ({
                 className="block w-full h-auto min-h-[185px]"
                 alt="Article_image"
               />
-              <div className="absolute z-0 top-[8px] left-[8px] rounded-[8px] overflow-hidden">
+              <div className="absolute z-0 top-[16px] shadow-custom-1 left-[16px] rounded-[8px] overflow-hidden">
                 <Image
                   src="/assets/images/uni_logo_tile1.jpg"
                   width="64"
@@ -71,7 +71,7 @@ const Scholarshipunicard = ({
                 className="block w-full h-auto min-h-[185px]"
                 alt="Article_image"
               />
-              <div className="absolute z-0 top-[8px] left-[8px] rounded-[8px] overflow-hidden">
+              <div className="absolute z-0 top-[16px] left-[16px] rounded-[8px] overflow-hidden">
                 <Image
                   src="/assets/images/uni_logo_tile1.jpg"
                   width="64"
