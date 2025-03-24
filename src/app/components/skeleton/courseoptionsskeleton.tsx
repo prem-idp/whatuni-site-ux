@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Courseoptionsskeleton = ({ onOpenModal }:any) => {
   return (
-    <section className='bg-primary-50 border-b border-primary-100'>
+    <section className='bg-grey border-b border-primary-100'>
     <div className="max-w-container mx-auto">
       <div className='card-container flex flex-col gap-[24px] py-[24px] px-[16px] md:px-[20px] lg:px-[0]'>
         <div className='card-header flex flex-col lg:flex-row gap-[24px] md:gap-[16px] items-start justify-between'>
@@ -31,8 +31,8 @@ const Courseoptionsskeleton = ({ onOpenModal }:any) => {
                 <path d="M9.5 29.8847C10.3975 29.8847 11.125 29.1572 11.125 28.2597V24.9043C10.1035 24.3966 9.0144 24.005 7.875 23.7466V28.2597C7.875 29.1572 8.60254 29.8847 9.5 29.8847Z" fill="#d4d4d4"/>
             </svg>
             <div className="flex flex-col flex-1 gap-[4px]">
-                <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[180px]"></div>
-                <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[200px]"></div>
+                <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[90px] md:!w-[180px]"></div>
+                <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[120px] md:!w-[200px]"></div>
             <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[100px]"></div>
             </div>
           </div>
@@ -41,8 +41,8 @@ const Courseoptionsskeleton = ({ onOpenModal }:any) => {
             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.3848 7.03909C12.5906 2.83332 19.4095 2.83332 23.6152 7.03909C27.821 11.2449 27.821 18.0638 23.6152 22.2695L16 29.8848L8.3848 22.2695C4.17903 18.0638 4.17903 11.2449 8.3848 7.03909ZM16 17.7313C17.6994 17.7313 19.077 16.3537 19.077 14.6543C19.077 12.9549 17.6994 11.5773 16 11.5773C14.3006 11.5773 12.923 12.9549 12.923 14.6543C12.923 16.3537 14.3006 17.7313 16 17.7313Z" fill="#d4d4d4"/>
             </svg>
             <div className="flex flex-col gap-[4px]">
-                <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[120px]"></div>
-                <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[200px]"></div>
+                <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[90px] md:!w-[120px]"></div>
+                <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[120px] md:!w-[200px]"></div>
                 <div className="skeleton skeleton-text skeleton-text-animated page_heading !w-[100px]"></div>
             </div>
           </div>
