@@ -9,8 +9,9 @@ const CourseOverview = ({ data, noBorder } : {data:any, noBorder:boolean }) => {
         {data.map((data:any) => (
           <>
            <div className="flex flex-col gap-[4px]">
-          <div className="h5 heading5">{data.title}</div>
-              <p className='para'>{ data.description }</p>
+              <div className="h5 heading5">{data.title}</div>
+              {data.description ? <p className='para'>{ data.description }</p> : null }
+              
             </div>
             {data.details ? <p className='para'>{data.details}</p> : null}       
             {data.otherLabel ? (

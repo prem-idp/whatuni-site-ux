@@ -9,7 +9,7 @@ const ScholarshipInfo = ({ moreDetails }: {moreDetails:boolean}) => {
        <div className={`${moreDetails ? "" : "hidden xl:block"} relative` }>
           <div className={`${moreDetails ? "w-full" : "sticky top-[20px] mb-[20px] w-[289px] max-w-[100%]"}shadow-custom-1 border border-grey-200 rounded-[8px] p-[16px] gap-[16px] flex flex-col` }>
               <div className="flex flex-col gap-[4px]">
-          <div className={ `${moreDetails ? "grid-cols-[repeat(auto)] md:grid-cols-[1fr_64px] grid-rows-[repeat(auto)] gap-x-[16px] gap-y-[8px]": "grid-cols-[1fr_48px] grid-rows-[repeat(2,1fr)] gap-x-[16px] gap-y-[4px]"} grid`}>
+          <div className={ `${moreDetails ? "grid-auto-cols md:grid-cols-[1fr_64px] grid-auto-rows gap-x-[16px] gap-y-[8px]": "grid-cols-[1fr_48px] grid-auto-rows gap-x-[16px] gap-y-[4px]"} grid`}>
           <div className="h6">Need more information? Visit the [Institution name]</div>
                       {moreDetails ? (<span className='p-[4px] row-start-1 row-end-3 col-start-2 col-end-3 bg-white rounded-[8px] hidden md:block shadow-custom-1 min-w-[64px] h-[64px]'>
                         <Image
@@ -25,7 +25,7 @@ const ScholarshipInfo = ({ moreDetails }: {moreDetails:boolean}) => {
                         height="48"
                                   />)}
          
-            <p className={`${moreDetails ? "" : "row-start-2 row-end-3 col-start-1 col-end-3"}`}>
+            <p className={`${moreDetails ? "" : "row-start-2 row-end-3 col-start-1 col-end-3"} small text-grey500`}>
           Head over to the [Institution name] for more details on
           the scholarship and application guidelines
         </p> 
