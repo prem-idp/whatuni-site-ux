@@ -7,7 +7,7 @@ const Paginations = () => {
       <nav aria-label="navigation">
         <ul className="pagination flex justify-center items-center gap-[8px]">
           <li>
-            <Link
+            <Link aria-label="Left arrow"
               href=""
               className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
             >
@@ -29,7 +29,7 @@ const Paginations = () => {
             </Link>
           </li>
           <li>
-            <Link
+            <Link 
               className="block small w-[36px] h-[36px] font-normal text-center px-[2px] py-[8px] rounded-[4px] bg-primary-400 text-white"
               href="#"
             >
@@ -82,7 +82,7 @@ const Paginations = () => {
             </Link>
           </li>
           <li>
-            <Link
+            <Link aria-label="Right arrow"
               href=""
               className=" hover:bg-blue-100 cursor-pointer flex items-center justify-center text-center px-[2px] py-[8px] rounded-[4px] w-[36px] h-[36px]"
             >
