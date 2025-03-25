@@ -59,7 +59,7 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
   };
   return (
     <>
-      <section className={`${scholarshipURL ? "py-[12px] items-center fixed bottom-[0] w-full lg:relative lg:[unset]" : "py-[16px] sticky top-0"} ${scrolled ? "!block fixed w-full bottom-[0]" : ""} bg-grey-600 px-[12px] z-[5]`}>
+      <section className={`${scholarshipURL ? "py-[12px] items-center fixed bottom-[0] w-full lg:relative lg:[unset]" : "py-[16px] sticky top-0"} ${scrolled ? "!block fixed w-full bottom-[0]" : ""} bg-grey-600 px-[12px] z-[4]`}>
         <div className="max-w-container mx-auto items-center flex gap-[8px] small">
           {scholarshipURL && !scrolled && (
                 <div className="hidden lg:flex h-[44px] w-[200px] px-[4px] items-center bg-white rounded-[32px] border border-neutral300 hover:border-primary-500 shadow-custom-1 gap-x-[10px]">
