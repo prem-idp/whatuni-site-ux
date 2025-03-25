@@ -1,7 +1,7 @@
-"use client";
-import React, { useState } from "react";
-import Link from "next/link";
-import { AnimatePresence, motion } from "motion/react";
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { AnimatePresence, motion } from 'motion/react';
 
 const Faqcomponents = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -12,34 +12,34 @@ const Faqcomponents = () => {
 
   const faq_items = [
     {
-      title: "How can I see my existing clients through Designership?",
+      title: 'How can I see my existing clients through Designership?',
       content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+        'It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.',
     },
     {
-      title: "How does Designership attract clients?",
+      title: 'How does Designership attract clients?',
       content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+        'It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.',
     },
     {
-      title: "What type of support does Designership provide?",
+      title: 'What type of support does Designership provide?',
       content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+        'It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.',
     },
     {
-      title: "How can I see my existing clients through Designership?",
+      title: 'How can I see my existing clients through Designership?',
       content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+        'It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.',
     },
     {
-      title: "How does Designership attract clients?",
+      title: 'How does Designership attract clients?',
       content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+        'It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.',
     },
     {
-      title: "What type of support does Designership provide?",
+      title: 'What type of support does Designership provide?',
       content:
-        "It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.",
+        'It’s incredibly important to us that you’re supported. Designership has a dedicated team to provide answers, advice, and context throughout your experience with Designership. Your feedback and input is a huge part of your growth.',
     },
   ];
   return (
@@ -61,42 +61,30 @@ const Faqcomponents = () => {
                   onClick={() => toggleAccordion(index)}
                 >
                   {item.title}
-                  <motion.span
-                    animate={{ rotate: openIndex === index ? 180 : 0 }}
+
+                  <svg
+                    className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
+                    width="12"
+                    height="7"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      width="12"
-                      height="7"
-                      viewBox="0 0 12 7"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11 1L6 6L1 1"
-                        stroke="#82898F"
-                        strokeWidth="1.67"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </motion.span>
+                    <path
+                      d="M11 1L6 6L1 1"
+                      stroke="#82898F"
+                      strokeWidth="1.67"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{
-                        height: 0,
-                        opacity: 0,
-                        transition: { duration: 0.25, ease: "easeInOut" },
-                      }}
-                      className={`accordion-body `}
-                    >
-                      <div className="mt-[16px]">{item.content}</div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <div
+                  className={`transition-all duration-300 overflow-hidden 
+              ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
+                >
+                  <div className="mt-[16px]">{item.content}</div>
+                </div>
               </div>
             ))}
           </div>
