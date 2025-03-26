@@ -1139,8 +1139,9 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                             />
                           </button>
                           
-                            <div className="w-full bg-white shadow-custom-3 hidden rounded-[4px] absolute left-[-16px] top-[43px]">
-                              <ul>
+                            <div className="w-full bg-white shadow-custom-3 hidden rounded-[4px] absolute left-[-16px] py-[12px] top-[32px]">
+                            <div className="flex px-[16px] py-[8px]"><ul className="flex flex-wrap gap-[8px]"><li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-grey-100 text-grey-500 xs-small">Location</li></ul></div>
+                              <ul className="custom-scrollbar-2 max-h-[311px] overflow-y-scroll mr-[4px]">
                                 <li>
                                   <Link
                                     href="#"
