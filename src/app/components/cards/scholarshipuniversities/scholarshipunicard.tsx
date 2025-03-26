@@ -50,7 +50,7 @@ const Scholarshipunicard = ({
                   </li>
                 </ul>
               </div>
-              <div className="flex gap-[16px]">
+              <div className="flex gap-[8px]">
                 <RequestInfo />
                 <Visitwebsite />
               </div>

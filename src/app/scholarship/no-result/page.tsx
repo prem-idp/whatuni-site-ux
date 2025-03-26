@@ -1,18 +1,18 @@
-"use client"
-import React from 'react'
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Link from "next/link";
 
-import Breadcrumblayoutcomponent from '@/app/components/breadcrumb-layout/breadcrumblayoutcomponent';
-import SearchFilterButtons from '@/app/components/search-filter-buttons/search-filter-buttons';
-import Scholarshipunicomponents from '@/app/article-landing/scholarship-universities/scholarshipunicomponents';
-import Subscribecomponents from '@/app/article-landing/subscribe-newsletter/subscribecomponents';
-import Faqcomponents from '@/app/components/faq/faqcomponents';
-import Advicecomponents from '@/app/home/advice/advicecomponents';
-import { Pagination } from 'swiper/modules';
-import Paginations from '@/app/components/paginations/paginations';
+import Breadcrumblayoutcomponent from "@/app/components/breadcrumb-layout/breadcrumblayoutcomponent";
+import SearchFilterButtons from "@/app/components/search-filter-buttons/search-filter-buttons";
+import Scholarshipunicomponents from "@/app/article-landing/scholarship-universities/scholarshipunicomponents";
+import Subscribecomponents from "@/app/article-landing/subscribe-newsletter/subscribecomponents";
+import Faqcomponents from "@/app/components/faq/faqcomponents";
+import Advicecomponents from "@/app/home/advice/advicecomponents";
+import { Pagination } from "swiper/modules";
+import Paginations from "@/app/components/paginations/paginations";
 
 const page = () => {
-  const scholarshipLable = true
+  const scholarshipLable = true;
   const breadcrumbData = [
     {
       url: "#",
@@ -35,8 +35,108 @@ const page = () => {
 
   return (
     <>
-          {/* breadcrumb  */}
-          <section className="bg-white">
+      {/* Skeleton loader  */}
+      <section className="hidden">
+        <div className="bg-white ">
+          <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
+            {/* Skeleton Breadcrum  */}
+            <div className="pt-[16px] pb-[40px]">
+              <nav aria-label="breadcrumb">
+                <ul className="flex flex-wrap gap-[20px]">
+                  <li className="flex relative">
+                    <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                  </li>
+                  <li className="flex relative">
+                    <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                  </li>
+                  <li className="flex relative">
+                    <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                  </li>
+                  <li className="flex relative">
+                    <span className="skeleton after:absolute after:flex after:justify-center after:content-[''] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        {/* Skeleton Breadcrum END */}
+        {/* filter  */}
+        <section className="bg-grey-100 px-[12px] py-[16px]">
+          <div className="max-w-container mx-auto flex gap-[8px] small">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <div className="flex gap-[8px]">
+                <span className="skeleton skeleton-text-animated min-w-[140px] min-h-[40px] flex"></span>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* filter ENd */}
+        {/* filter tag  */}
+        <section className="overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[10px] xl:px-0 lg:py-[8px]">
+          <div className="max-w-container mx-auto">
+            <ul className="flex items-start gap-[8px]">
+              {Array.from({ length: 6 }).map((_, index) => (
+                <li key={index} className="min-w-[100px]">
+                  <span className="skeleton skeleton-text-animated !rounded-[4px] min-h-[30px] flex"></span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+        {/* filter tag END */}
+        {/* listing card  */}
+        <section className="bg-white ">
+          <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-[24px] px-[10px] gap-[20px]">
+              {/* card  */}
+              {Array.from({ length: 6 }).map((_, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col rounded-[16px] overflow-hidden bg-white shadow-custom-3 border border-grey-200"
+                >
+                  <div className="skeleton skeleton-text-animated !rounded-[0] !m-[0] flex w-full relative min-h-[220px]">
+                    <span className="skeleton !m-[0] skeleton-text-animated max-w-[64px] absolute top-[16px] left-[16px] min-h-[64px] !rounded-[8px]"></span>
+                  </div>
+                  <div className="p-[16px] flex flex-col gap-[16px]">
+                    <div className="flex flex-col gap-[8px]">
+                      <div className="skeleton skeleton-text-animated">                       </div>
+                      <p className="skeleton skeleton-text-animated"></p>
+                      <ul className="grid grid-cols-2 gap-x-[16px] gap-y-[16px] text-grey500">
+                        <li className="flex flex-col gap-[4px]">
+                        <span className="skeleton skeleton-text-animated !m-[0]"></span>
+                          <p className="skeleton skeleton-text-animated !m-[0]"></p>
+                        </li>
+                        <li className="flex flex-col gap-[4px]">
+                        <span className="skeleton skeleton-text-animated !m-[0]"></span>
+                        <p className="skeleton skeleton-text-animated !m-[0]"></p>
+                        </li>
+                        <li className="flex flex-col gap-[4px]">
+                        <span className="skeleton skeleton-text-animated !m-[0]"></span>
+                        <p className="skeleton skeleton-text-animated !m-[0]"></p>
+                        </li>
+                        <li className="flex flex-col gap-[4px]">
+                        <span className="skeleton skeleton-text-animated !m-[0]"></span>
+                        <p className="skeleton skeleton-text-animated !m-[0]"></p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="flex gap-[16px] ">
+                      <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                      <span className="skeleton skeleton-text-animated flex w-full min-h-[37px]"></span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* listing card  END */}
+      </section>
+      {/* skeleton loader END */}
+      {/* breadcrumb  */}
+      <section className="bg-white">
         <div className="max-w-container mx-auto px-[16px] md:px-[20px] xl:px-[0] pt-[24px] pb-[8px]">
           <Breadcrumblayoutcomponent data={breadcrumbData} />
         </div>
@@ -44,19 +144,25 @@ const page = () => {
       {/* breadcrumb  */}
       {/* course title  */}
       <section className="bg-white border-b border-grey-200 lg:border-[0]">
-        <div className="max-w-container mx-auto px-[16px] md:px-[20px] xl:px-[0] py-[16px]">        
-            <div className="h5 mb-[4px]">Top Law, Engineering & Architecture subjects for you</div>
-            <p>000 universities offer 1563 courses</p>          
+        <div className="max-w-container mx-auto px-[16px] md:px-[20px] xl:px-[0] py-[16px]">
+          <div className="h4 mb-[4px]">
+            Top Law, Engineering & Architecture subjects for you
+          </div>
+          <p>000 universities offer 1563 courses</p>
         </div>
-        </section>
-     
+      </section>
+
       {/* course title  */}
-       {/* start search filter button */}
-      <SearchFilterButtons scholarshipURL={ true }  />
+      {/* start search filter button */}
+      <SearchFilterButtons scholarshipURL={true} />
       {/* start search filter button */}
 
       {/* start search lables */}
-      <section className={`${scholarshipLable ? "" : "md:sticky top-[69px]"}overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0 z-[4]`}>
+      <section
+        className={`${
+          scholarshipLable ? "" : "md:sticky top-[69px]"
+        }overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0 z-[4]`}
+      >
         <div className="max-w-container mx-auto">
           <ul className="flex items-start gap-[8px] uppercase">
             <li className="bg-secondary-50 text-blue-500 whitespace-nowrap rounded-[4px] px-[10px] py-[3px] font-semibold x-small">
@@ -162,25 +268,25 @@ const page = () => {
         </div>
       </section>
       {/* end search lables */}
-         
-      {/* Scholarship card  */}   
-      <Scholarshipunicomponents scholarshipSR={ false } scholarshipURL={ true } />
+
+      {/* Scholarship card  */}
+      <Scholarshipunicomponents scholarshipSR={false} scholarshipURL={true} />
       {/* Scholarship card  END */}
       {/* pagination  */}
-      <section className='py-[40px]'>
-      <Paginations />
+      <section className="py-[40px]">
+        <Paginations />
       </section>
-      
+
       {/* pagination ENd */}
-      <section className='bg-white'>
+      <section className="bg-white">
         <div className="max-w-container mx-auto">
-        <Advicecomponents categoryTag={true} adviceBgWhite={true} />
-          </div>
-        </section>
+          <Advicecomponents categoryTag={true} adviceBgWhite={true} />
+        </div>
+      </section>
       <Faqcomponents />
       <Subscribecomponents />
-</>
-  )
-}
+    </>
+  );
+};
 
-export default page
+export default page;

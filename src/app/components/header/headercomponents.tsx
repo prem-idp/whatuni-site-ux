@@ -234,7 +234,7 @@ const Header = () => {
                 <AnimatePresence>
                 {isSearchClicked && (
                   <div
-                    className={`backdrop-shadow fixed top-0 left-0 right-0 bottom-0 z-[5]`}
+                    className={`backdrop-shadow fixed top-0 left-0 right-0 bottom-0 z-[7]`}
                   >
                     <motion.div
                       initial={{y: -40,opacity:0}}
@@ -870,7 +870,7 @@ const Header = () => {
                 {isUserClicked && (
                   <>
                     <div
-                      className={`backdrop-shadow fixed top-[64px] left-0 right-0 bottom-0 z-[5] md:top-[84px] lg:top-[76px]`}
+                      className={`backdrop-shadow fixed top-[64px] left-0 right-0 bottom-0 z-[7] md:top-[84px] lg:top-[76px]`}
                     ></div>
                     <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-39px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] md:top-[65px] lg:top-[62px] lg:right-0">
                       <ul className="small">
@@ -938,7 +938,7 @@ const Header = () => {
                 {isShortlistClicked && (
                   <>
                     <div
-                      className={`backdrop-shadow fixed top-[64px] left-0 right-0 bottom-0 z-[5] md:top-[84px] lg:top-[76px]`}
+                      className={`backdrop-shadow fixed top-[64px] left-0 right-0 bottom-0 z-[7] md:top-[84px] lg:top-[76px]`}
                     ></div>
                     <div className="flex justify-between p-[16px] absolute z-10 top-[56px] right-[-5px] shadow-custom-5 bg-white min-w-[339px] rounded-[4px] md:top-[65px] lg:top-[62px]">
                       <ul className="small">
