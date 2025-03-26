@@ -340,7 +340,7 @@ const page = () => {
         {/* breadcrumb  */}
 
         {/* University details  */}
-        <section className="shadow-custom-1 pb-[4px] lg:mb-[30px]">
+        <section className="shadow-custom-1 pb-[4px]">
           <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
             <div className="flex justify-between w-full py-[16px]">
               <div className="flex gap-[17px]">
@@ -440,9 +440,9 @@ const page = () => {
         {/* University details END */}
         <section>
           <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-            <div className="flex gap-[98px] pt-[22px] md:pt-[54px] justify-between relative">
+            <div className="flex gap-[98px] pt-[32px] md:pt-[40px] justify-between relative">
               <div className="w-full">
-                <div className="flex flex-col pt-[10px] mb-[32px] gap-[4px]">
+                <div className="flex flex-col mb-[32px] gap-[4px]">
                   <div className="para-lg font-semibold">Overview</div>
                   <p className="para">
                     The [Scholarship name from DB] is designed to support
