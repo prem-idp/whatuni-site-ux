@@ -123,8 +123,7 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
           
           <button type="button"
             onClick={searchClick}
-            className="lg:shrink-0 w-fit flex items-center justify-center gap-[8px] btn grow px-[12px] bg-primary-100 hover:bg-primary-200 text-grey300 lg:grow-0"
-          >
+            className={`${scholarshipURL ? "w-full lg:w-fit": "w-fit"} lg:shrink-0 flex items-center justify-center gap-[8px] btn grow px-[12px] bg-primary-100 hover:bg-primary-200 text-grey300 lg:grow-0` }>
             <svg
               width="20"
               height="20"

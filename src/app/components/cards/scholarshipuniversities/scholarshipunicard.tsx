@@ -34,18 +34,18 @@ const Scholarshipunicard = ({
             <div className="p-[16px] flex flex-col gap-[16px]">
               <div className="flex flex-col gap-[8px]">
                 <div className="text-para-lg font-farro font-bold">Scholarship name</div>
-                <p>University of Kent</p>
+                <p className="text-small font-semibold">University of Kent</p>
                 <ul className="grid grid-cols-2 gap-x-[16px] gap-y-[8px] text-grey500">
                   <li>
-                    <label className="text-x-smal font-semibold">Award criteria: </label>
+                    <label className="text-x-small font-semibold">Award criteria: </label>
                     <p className="text-x-small">Academic excellence</p>
                   </li>
                   <li>
-                    <label className="x-smal font-semibold">Funding amount: </label>
+                    <label className="x-small font-semibold">Funding amount: </label>
                     <p className="text-x-small">Tuition fees</p>
                   </li>
                   <li>
-                    <label className="x-smal font-semibold">Deadline:</label>
+                    <label className="x-small font-semibold">Deadline:</label>
                     <p className="text-x-small">??????</p>
                   </li>
                 </ul>

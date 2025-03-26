@@ -72,7 +72,7 @@ const CourseOverview = ({ data, noBorder } : {data:any, noBorder:boolean }) => {
               <div className="para-lg font-semibold">Discover other courses eligible for this [scholarship name]/scholarship</div>
                 <div className="flex flex-col gap-[8px]">
                   {data.discover.map((cardItems: any) => (
-                      <div className="border shadow-custom-1 border-grey-200 rounded-[8px] p-[16px]">
+                      <div className="border hover:shadow-custom-3 hover:cursor-pointer border-grey-200 rounded-[8px] p-[16px]">
                       <div className="flex gap-[4px]">
                         <span className='para font-semibold whitespace-nowrap'>Subject area(s)*</span>
                         <p className='para truncate'>{ cardItems.area }</p>                     
@@ -81,8 +81,8 @@ const CourseOverview = ({ data, noBorder } : {data:any, noBorder:boolean }) => {
                         <span className='para font-semibold whitespace-nowrap'>Study level:</span>
                         <p className='para truncate'>{ cardItems.level }</p>                     
                       </div>
-                      <Link href="#" className='flex gap-[4px] small font-semibold text-blue-400'>View related courses
-                      <Image src="/assets/icons/scholarship/arrow-right-blue.svg" className='mt-[2px]' alt='right arrow' width="18" height="18" />
+                      <Link href="#" className='flex gap-[4px] small font-semibold hover:underline text-blue-400'>View related courses
+                      <Image src="/assets/icons/scholarship/arrow-right-blue.svg" className='mt-[4px]' alt='right arrow' width="18" height="18" />
                       </Link>
                     </div>
                   )) }

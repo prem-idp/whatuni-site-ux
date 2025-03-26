@@ -161,7 +161,7 @@ const page = () => {
       <section
         className={`${
           scholarshipLable ? "" : "md:sticky top-[69px]"
-        }overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0 z-[4]`}
+        }overflow-x-auto snap-x snap-mandatory bg-white px-[16px] py-[8px] md:px-[20px] xl:px-0 z-[4] scrollbar-hidden`}
       >
         <div className="max-w-container mx-auto">
           <ul className="flex items-start gap-[8px] uppercase">

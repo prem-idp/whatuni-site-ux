@@ -181,11 +181,9 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
           isFilterOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-[16px] md:p-[32px] !pb-0">
-          <div className="flex justify-between">
-              { scholarshipURL ? ( <h6 className="h2">Refine your scholarship search</h6>) : (<h6 className="h2">Filter</h6>) }
-         
-          
+        <div className="flex flex-col gap-[8px] p-[16px] md:p-[32px] !pb-0">
+          <div className="flex justify-between">            
+            <div className="h4">{ scholarshipURL ? ("Refine your scholarship search") : ("Filter")}</div>          
             <svg
               onClick={filterHandleClose}
               className="mt-[-6px] ml-auto mr-[-6px] md:mt-[-22px] md:mr-[-22px] cursor-pointer"
@@ -1124,7 +1122,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
               <div className="flex flex-col gap-[8px]">
               <div className="small text-grey300">Select or search by nationality to see scholarships you’re eligible for </div>
                     <div className="flex flex-col gap-[24px] min-h-[44px]">
-                    <div className="bg-white rounded-[32px] py-[10px] px-[12px] border border-neutral300 hover:border-primary-500 shadow-custom-1 md:pl-[24px] md:p-[10px]">
+                    <div className="bg-grey-50 rounded-[32px] py-[10px] px-[12px] border border-grey-300 md:pl-[24px] md:p-[10px]">
                       <div className="flex flex-col items-stretch md:flex-row md:items-center">
                 <div className="relative w-full shrink-0">
                           <button

@@ -537,10 +537,10 @@ const page = () => {
             </div>
           </div>
         </section>
-        <section className="py-[40px] md:py-[64px] bg-grey-50">
-          <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-            <div className="scholarship-header  flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]">
-              <div className="h2 font-bold">
+        <section className="py-[40px] bg-grey-50">
+          <div className="max-w-container mx-auto">
+          <div className="scholarship-header flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[16px]">
+              <div className="h4">
                 Popular scholarships at this university
               </div>
             </div>
@@ -588,10 +588,10 @@ const page = () => {
             </div>
           </div>
         </section>
-        <section className="py-[40px] md:py-[64px]">
-          <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-            <div className="scholarship-header  flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]">
-              <div className="h2 font-bold">
+        <section className="py-[40px]">
+          <div className="max-w-container mx-auto">
+            <div className="scholarship-header flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[16px]">
+              <div className="h4">
                 Similar scholarships at other universities
               </div>
             </div>
