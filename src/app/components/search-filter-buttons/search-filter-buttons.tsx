@@ -59,7 +59,7 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
   };
   return (
     <>
-      <section className={`${scholarshipURL ? "py-[12px] items-center fixed bottom-[0] w-full lg:relative lg:[unset]" : "py-[16px] sticky top-0"} ${scrolled ? "!block fixed w-full bottom-[0]" : ""} bg-grey-600 px-[12px] z-[5]`}>
+      <section className={`${scholarshipURL ? "py-[12px] items-center fixed bottom-[0] w-full" : "py-[16px] sticky top-0"} ${scholarshipURL && scrolled ? " !block fixed w-full bottom-[0]" : " lg:relative lg:[unset]"} bg-grey-600 px-[12px] z-[5]`}>
         <div className="max-w-container mx-auto items-center flex gap-[8px] small">
           {scholarshipURL && !scrolled && (
                 <div className="hidden lg:flex h-[44px] w-[200px] px-[4px] items-center bg-white rounded-[32px] border border-neutral300 hover:border-primary-500 shadow-custom-1 gap-x-[10px]">
@@ -123,8 +123,7 @@ const SearchFilterButtons = ({ scholarshipURL }: { scholarshipURL: boolean }) =>
           
           <button type="button"
             onClick={searchClick}
-            className={`${scrolled && scholarshipURL ? "w-full": "lg:shrink-0 w-fit"} flex items-center justify-center gap-[8px] btn grow px-[12px] bg-primary-100 hover:bg-primary-200 text-grey300 lg:grow-0` }
-          >
+            className={`${scholarshipURL ? "w-full lg:w-fit": "w-fit"} lg:shrink-0 flex items-center justify-center gap-[8px] btn grow px-[12px] bg-primary-100 hover:bg-primary-200 text-grey300 lg:grow-0` }>
             <svg
               width="20"
               height="20"

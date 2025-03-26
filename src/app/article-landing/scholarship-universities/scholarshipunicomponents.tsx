@@ -39,13 +39,21 @@ const Scholarshipunicomponents = ({
   return (
     <div className={`scholarship-container  ${scholarshipURL ? "" : "bg-white"}`}>
       <div className="max-w-container mx-auto">
+       
+        <div className="flex flex-col py-[16px]">
+                 <div className="text-para font-semibold">Explore your scholarship options</div>
+                 <p className="small">
+                 Here are some scholarships that match your criteria. Scroll through to find the funding options that are right for you. Click on a scholarship to find out more. 
+                 </p>
+               </div>
+
         {scholarshipURL && (
           <>
             {/* start sorting */}
             <div className="ml-auto px-[16px] md:px-[20px] xl:px-[0] w-fit relative">
               <div
                 onClick={sortClicked}
-                className="flex items-center gap-[4px] px-[4px] py-[16px] small text-grey300 cursor-pointer hover:underline"
+                className="flex items-center gap-[4px] px-[4px] py-[8px] small text-grey300 cursor-pointer hover:underline"
               >
                 <svg
                   width="16"
@@ -122,29 +130,20 @@ const Scholarshipunicomponents = ({
           <>
             {/* No results  */}
             {!scholarshipSR && (
-               <div className="flex px-[16px] md:px-[20px] xl:px-[0] flex-col pt-[24px] pb-[10px] text-black">
-               <div className="h6">Sorry, we couldn’t find any scholarships that match your search criteria </div>
-               <span className="font-semibold para">Try adjusting your filters or check out our popular scholarships below.</span>
+               <div className="flex px-[16px] md:px-[20px] xl:px-[0] flex-col pt-[4px] pb-[16px]">
+               <div className="para font-bold">Sorry, we couldn’t find any scholarships that match your search criteria </div>
+               <span className="para">Try adjusting your filters or check out our popular scholarships below.</span>
              </div>
             ) }
            
             {/* No results END */}
-            <div className={`${scholarshipURL ? "pt-[24px]" : "py-[24px]"} px-[0]`}>
-              {scholarshipSR ? (
-                 <div className="flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]">
-                 <div className="text-small font-semibold text-black">Explore your scholarship options</div>
-                 <p className="font-normal small">
-                 Here are some scholarships that match your criteria. Scroll through to find the funding options that are right for you. Click on a scholarship to find out more. 
-                 </p>
-               </div>
-              ) : (
-                <div className="flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]">
-                <div className="h6">Popular scholarships</div>
-                <p className="font-normal small">
+            <div className="pt-[24px] py-[24px] px-[0]">
+                <div className="flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[8px] md:mb-[16px]">
+                <div className="h5">Popular scholarships</div>
+                <p className="para ">
                   Here are some popular scholarships you may be interested in
                 </p>
               </div>
-              )}
            
              
               <div className="px-[16px] md:px-[20px] xl:px-[0] grid md:grid-cols-2 lg:grid-cols-3 gap-[20px]">

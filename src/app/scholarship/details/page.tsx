@@ -1,14 +1,14 @@
-"use client"; 
+"use client";
 
 import CourseOverview from "@/app/components/course-overview/courseoverview";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { FreeMode, Navigation, Pagination} from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { FreeMode, Navigation, Pagination } from "swiper/modules";
 import Breadcrumblayoutcomponent from "@/app/components/breadcrumb-layout/breadcrumblayoutcomponent";
 import ScholarshipInfo from "@/app/components/scholarship-info/scholarshipInfo";
 import Scholarshipunicard from "@/app/components/cards/scholarshipuniversities/scholarshipunicard";
@@ -224,16 +224,123 @@ const page = () => {
   ];
   return (
     <>
+      {/* Skeleton loader  */}
+      <div className="hidden">
+      <section className="bg-white w-full inline-block">
+        <div className="max-w-container mx-auto px-[16px] xl:px-[0]">
+          {/* Skeleton Breadcrum  */}
+          <div className="pt-[16px] pb-[4px]">
+            <nav aria-label="breadcrumb">
+              <ul className="flex flex-wrap gap-[20px]">
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-['/'] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+                <li className="flex relative">
+                  <span className="skeleton after:absolute after:flex after:justify-center after:content-[''] after:w-[20px] after:h-[20px] after:right-[-20px] rounded-none after:text-grey-300 min-w-[65px] h-[17px] flex skeleton-text-animated"></span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        {/* Skeleton Breadcrum END */}
+        {/* University details  */}
+        <section className="bg-white shadow-custom-1 pb-[4px] lg:mb-[30px]">
+          <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
+            <div className="flex justify-between w-full py-[16px]">
+              <div className="flex gap-[17px] w-full">
+                <span className="skeleton !m-[0] skeleton-text-animated max-w-[64px] min-h-[64px] !rounded-[8px]"></span>
+                <div className="flex flex-col gap-[4px]">
+                  <div className="skeleton skeleton-text-animated !m-[0] w-full"></div>
+                  <span className="skeleton skeleton-text-animated !m-[0] max-w-[85%]"></span>
+                  <span className="skeleton skeleton-text-animated !m-[0] max-w-[70%]"></span>
+                  <span className="skeleton skeleton-text-animated !m-[0] max-w-[60%]"></span>
+                  <ul className="flex mt-[4px] flex-wrap gap-[8px]">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <li key={index} className="flex !rounded-[4px]">
+                        <span className="skeleton min-w-[100px] min-h-[20px] !rounded-[4px] skeleton-text-animated !m-[0]"></span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* University details END */}
+        <section className="bg-white pb-[4px] lg:mb-[30px]">
+          <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
+            <div className="w-full items-start flex gap-[50px]">
+              <div className="w-full">
+                <div className="flex flex-col gap-[4px] pt-[32px] pb-[40px] border-b-[1px] border-neutral300">
+                  <div className="skeleton skeleton-text-animated !m-[0]"></div>
+                  <div className="skeleton skeleton-text-animated max-w-[80%]  !m-[0]"></div>
+                  <div className="skeleton skeleton-text-animated max-w-[70%]  !m-[0]"></div>
+                  <div className="skeleton skeleton-text-animated max-w-[50%]  !m-[0]"></div>
+                </div>
+               
+                {Array.from({ length: 2 }).map((_, index) => (
+                  <div className="border-b-[1px] border-neutral300 py-[40px] flex flex-col gap-[16px]">
+                    <div className="flex flex-col gap-[4px]">
+                      <div className="skeleton skeleton-text-animated !m-[0]"></div>
+                      <p className="skeleton skeleton-text-animated max-w-[70%] !m-[0]"></p>
+                      <p className="skeleton skeleton-text-animated max-w-[50%] !m-[0]"></p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-[16px]">
+                      {Array.from({ length: 4 }).map((_, index) => (
+                        <div key={index} className="flex gap-[4px] flex-col">
+                          <span className="min-h-[40px] max-w-[40px] !rounded-[4px] skeleton skeleton-text-animated !m-[0]"></span>
+                          <div className="skeleton skeleton-text-animated !m-[0]"></div>
+                          <div className="skeleton skeleton-text-animated max-w-[70%] !m-[0]"></div>
+                          <p className="skeleton skeleton-text-animated !m-[0]"></p>
+                          <p className="skeleton skeleton-text-animated max-w-[70%] !m-[0]"></p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="min-w-[289px] max-w-[100%] shadow-custom-1 border border-grey-200 rounded-[8px] p-[16px] gap-[16px] flex flex-col">
+                <div className="flex flex-col gap-[4px]">
+                  <span className="skeleton skeleton-text-animated w-full !m-[0]"></span>
+                  <span className="skeleton skeleton-text-animated max-w-[90%] !m-[0]"></span>
+                  <span className="skeleton skeleton-text-animated max-w-[80%] !m-[0]"></span>
+                  <span className="skeleton skeleton-text-animated !mb-[16px] max-w-[70%] !m-[0]"></span>
+                  <span className="skeleton skeleton-text-animated w-full !m-[0]"></span>
+                  <span className="skeleton skeleton-text-animated max-w-[90%] !m-[0]"></span>
+                  <span className="skeleton skeleton-text-animated max-w-[80%] !m-[0]"></span>
+                  <span className="skeleton skeleton-text-animated max-w-[70%] !m-[0]"></span>
+                </div>
+
+                <div className="flex flex-col gap-[16px] ">
+                  <span className="skeleton skeleton-text-animated !m-[0] flex w-full min-h-[37px]"></span>
+                  <span className="skeleton skeleton-text-animated !m-[0] flex w-full min-h-[37px]"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      </div>
+      {/* skeleton loader END */}
+
       <div className="bg-white">
         {/* breadcrumb  */}
         <section className="bg-white hidden lg:block">
-        <div className="max-w-container mx-auto pt-[24px] pb-[8px]">
-          <Breadcrumblayoutcomponent data={breadcrumbData} />
-        </div>
-      </section>      
+          <div className="max-w-container mx-auto pt-[24px] pb-[8px]">
+            <Breadcrumblayoutcomponent data={breadcrumbData} />
+          </div>
+        </section>
         {/* breadcrumb  */}
+
         {/* University details  */}
-        <section className="shadow-custom-1 pb-[4px] lg:mb-[30px]">
+        <section className="shadow-custom-1 pb-[4px]">
           <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
             <div className="flex justify-between w-full py-[16px]">
               <div className="flex gap-[17px]">
@@ -247,9 +354,12 @@ const page = () => {
                 </span>
                 <div className="flex flex-col gap-[4px]">
                   <div className="h5 heading5 font-farro text-black">
-                  Scholarship name from DB scholarship at [University/Institution/Provider from DB] 
+                    Scholarship name from DB scholarship at
+                    [University/Institution/Provider from DB] 
                   </div>
-                  <span className="text-para-lg font-semibold text-blue-400">Norwich University of the Arts </span>
+                  <Link href="#" className="hover:underline text-para-lg font-semibold text-blue-400">
+                    Norwich University of the Arts{" "}
+                  </Link>
                   <div className="flex items-center gap-[8px] text-blue-400 small">
                     <span className="flex items-center">
                       <Image
@@ -267,7 +377,7 @@ const page = () => {
                   </div>
                   <ul className="flex mt-[4px] flex-wrap gap-[8px]">
                     <li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-grey-100 text-grey-500 xs-small">
-                    South East England
+                      South East England
                     </li>
                     <li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-green-100 text-positive-dark xs-small">
                       <Image
@@ -279,7 +389,7 @@ const page = () => {
                       18.1 Miles from you
                     </li>
                     <li className="relative group text-nowrap uppercase underline text-blue-400 x-small">
-                      <span>
+                      <Link href="#">
                         WUSCA ranking: 18th
                         <div
                           className="z-[5] absolute select-none hidden group-hover:flex border border-grey-200 top-[20px] shadow-custom-1 whitespace-normal normal-case rounded-[8px] max-w-[100%] md:min-w-[320px] min-w-[200px] left-[-16px] md:left-0  bg-white p-[12px] flex-col gap-[4px] after:content-[''] after:absolute after:w-[8px] after:h-[8px] after:bg-white after:left-[30px] after:z-0 after:top-[-5px] after:border after:translate-x-2/4 after:translate-y-0 after:rotate-45 after:border-b-0 after:border-r-0
@@ -293,7 +403,7 @@ const page = () => {
                             using their verified university email address.
                           </p>
                         </div>
-                      </span>
+                      </Link>
                     </li>
                     <li className="flex text-nowrap select-none rounded-[4px] font-bold uppercase px-[8px] bg-green-100 text-positive-dark xs-small">
                       Lecturers and Teaching
@@ -330,30 +440,52 @@ const page = () => {
         {/* University details END */}
         <section>
           <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-            <div className="flex gap-[98px] pt-[22px] md:pt-[54px] justify-between relative">
+            <div className="flex gap-[98px] pt-[32px] md:pt-[40px] justify-between relative">
               <div className="w-full">
-                <div className="flex flex-col pt-[10px] mb-[32px] gap-[4px]">
+                <div className="flex flex-col mb-[32px] gap-[4px]">
                   <div className="para-lg font-semibold">Overview</div>
-                  <p className="para">The [Scholarship name from DB] is designed to support students pursuing [Subject areas from DB] at [University Name from DB]. It offers financial support of upto [ Value from DB]  for [Award coverage from DB – tuition, accommodation etc] and is open to eligible [LEVEL OF STUDY from DB] students.  </p>
+                  <p className="para">
+                    The [Scholarship name from DB] is designed to support
+                    students pursuing [Subject areas from DB] at [University
+                    Name from DB]. It offers financial support of upto [ Value
+                    from DB]  for [Award coverage from DB – tuition,
+                    accommodation etc] and is open to eligible [LEVEL OF STUDY
+                    from DB] students.  
+                  </p>
                 </div>
                 <div className="flex flex-col gap-[4px] pb-[40px] border-b-[1px] border-neutral300">
-                  <div className="text-x-small font-semibold uppercase letter tracking-[1px]">jump to:</div>
+                  <div className="text-x-small font-semibold uppercase letter tracking-[1px]">
+                    jump to:
+                  </div>
                   <ul className="flex flex-col gap-[4px]">
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#overview">Overview</Link>
-                    </li> 
+                      <Link className="small text-blue-400" href="#overview">
+                        Overview
+                      </Link>
+                    </li>
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#eligibility">Eligibility</Link>
-                    </li> 
+                      <Link className="small text-blue-400" href="#eligibility">
+                        Eligibility
+                      </Link>
+                    </li>
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#funding">Funding</Link>
-                    </li> 
+                      <Link className="small text-blue-400" href="#funding">
+                        Funding
+                      </Link>
+                    </li>
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#selectionprocess">Selection process</Link>
-                    </li> 
+                      <Link
+                        className="small text-blue-400"
+                        href="#selectionprocess"
+                      >
+                        Selection process
+                      </Link>
+                    </li>
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#howtoapply">How to apply</Link>
-                    </li>                    
+                      <Link className="small text-blue-400" href="#howtoapply">
+                        How to apply
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <section id="overview">
@@ -372,10 +504,10 @@ const page = () => {
                   <CourseOverview noBorder={true} data={howToApply} />
                 </section>
                 <section className="pb-[46px]">
-                <ScholarshipInfo moreDetails={ true }/>
+                  <ScholarshipInfo moreDetails={true} />
                 </section>
               </div>
-              <ScholarshipInfo moreDetails={ false }/>
+              <ScholarshipInfo moreDetails={false} />
               {/* <div className="relative">
                 <div className="sticky top-[20px] mb-[20px] shadow-custom-1 border border-grey-200 rounded-[8px] w-[289px] max-w-[100%] p-[16px] gap-[16px] flex flex-col">
                   <div className="flex flex-col gap-[4px]">
@@ -405,101 +537,107 @@ const page = () => {
             </div>
           </div>
         </section>
-        <section className="py-[40px] md:py-[64px] bg-grey-50">
-        <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-              <div className="scholarship-header  flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]">
-                <div className="h2 font-bold">Popular scholarships at this university</div>             
+        <section className="py-[40px] bg-grey-50">
+          <div className="max-w-container mx-auto">
+          <div className="scholarship-header flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[16px]">
+              <div className="h4">
+                Popular scholarships at this university
               </div>
-              <div className="scholarship-course-container ">
-                <div className="scholarship-inner-wrap">
+            </div>
+            <div className="scholarship-course-container ">
+              <div className="scholarship-inner-wrap">
                 <div className="slider-container">
-         <Swiper
-         pagination={true}
-         navigation={true}
-         breakpoints={{
-           320: {
-             slidesPerView: 1,
-             spaceBetween: 8,
-           },
-           768: {
-             slidesPerView: 2,
-             spaceBetween: 10,
-           },
-           1200: {
-             slidesPerView: 3,
-             spaceBetween: 20,            
-           },
-         }}
-         modules={[FreeMode, Pagination, Navigation]} 
-         className="MultiSwiper">
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-           </Swiper>
-         </div>
+                  <Swiper
+                    pagination={true}
+                    navigation={true}
+                    breakpoints={{
+                      320: {
+                        slidesPerView: 1,
+                        spaceBetween: 8,
+                      },
+                      768: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                      },
+                      1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                      },
+                    }}
+                    modules={[FreeMode, Pagination, Navigation]}
+                    className="MultiSwiper"
+                  >
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                  </Swiper>
                 </div>
               </div>
             </div>
+          </div>
         </section>
-        <section className="py-[40px] md:py-[64px]">
-        <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
-              <div className="scholarship-header  flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[26px] md:mb-[32px]">
-                <div className="h2 font-bold">Similar scholarships at other universities</div>             
+        <section className="py-[40px]">
+          <div className="max-w-container mx-auto">
+            <div className="scholarship-header flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[16px]">
+              <div className="h4">
+                Similar scholarships at other universities
               </div>
-              <div className="scholarship-course-container ">
-                <div className="scholarship-inner-wrap">
+            </div>
+            <div className="scholarship-course-container ">
+              <div className="scholarship-inner-wrap">
                 <div className="slider-container">
-         <Swiper
-         pagination={true}
-         navigation={true}
-         breakpoints={{
-           320: {
-             slidesPerView: 1,
-             spaceBetween: 8,
-           },
-           768: {
-             slidesPerView: 2,
-             spaceBetween: 10,
-           },
-           1200: {
-             slidesPerView: 3,
-             spaceBetween: 20,            
-           },
-         }}
-         modules={[FreeMode, Pagination, Navigation]} 
-         className="MultiSwiper">
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-              <SwiperSlide>
-                 <Scholarshipunicard scholarshipURL={true} />
-             </SwiperSlide>          
-           </Swiper>
-         </div>
+                  <Swiper
+                    pagination={true}
+                    navigation={true}
+                    breakpoints={{
+                      320: {
+                        slidesPerView: 1,
+                        spaceBetween: 8,
+                      },
+                      768: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                      },
+                      1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                      },
+                    }}
+                    modules={[FreeMode, Pagination, Navigation]}
+                    className="MultiSwiper"
+                  >
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Scholarshipunicard scholarshipURL={true} />
+                    </SwiperSlide>
+                  </Swiper>
                 </div>
               </div>
             </div>
+          </div>
         </section>
       </div>
     </>
