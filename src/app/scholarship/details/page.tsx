@@ -459,30 +459,30 @@ const page = () => {
                   </div>
                   <ul className="flex flex-col gap-[4px]">
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#overview">
+                      <Link className="small hover:underline text-blue-400" href="#overview">
                         Overview
                       </Link>
                     </li>
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#eligibility">
+                      <Link className="small hover:underline text-blue-400" href="#eligibility">
                         Eligibility
                       </Link>
                     </li>
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#funding">
+                      <Link className="small hover:underline text-blue-400" href="#funding">
                         Funding
                       </Link>
                     </li>
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
                       <Link
-                        className="small text-blue-400"
+                        className="small hover:underline text-blue-400"
                         href="#selectionprocess"
                       >
                         Selection process
                       </Link>
                     </li>
                     <li className="relative before:left-[0] before:text-neutral600 before:content-['-'] before:absolute pl-[14px]">
-                      <Link className="small text-blue-400" href="#howtoapply">
+                      <Link className="small hover:underline text-blue-400" href="#howtoapply">
                         How to apply
                       </Link>
                     </li>

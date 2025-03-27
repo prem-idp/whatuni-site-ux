@@ -676,9 +676,9 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                         </li>
                       </ul>
                       <div className="flex flex-col gap-[12px]">
-                        <div
+                        <Link href="#"
                           onClick={universityClicked}
-                          className="flex items-center gap-[4px] text-blue-400 font-semibold cursor-pointer"
+                          className="flex items-center gap-[4px] hover:underline text-blue-400 font-semibold cursor-pointer"
                         >
                           <svg
                             className="rotate-180"
@@ -696,7 +696,7 @@ const SearchFilterComponent = ({ scholarshipURL, onClose, isFilterOpen }: any) =
                             />
                           </svg>
                           Choose a different uni
-                        </div>
+                        </Link>
                         <div className="flex flex-col gap-[12px]">
                           <div className="small font-bold">A - C</div>
                           <div className="flex flex-col gap-[12px]">
