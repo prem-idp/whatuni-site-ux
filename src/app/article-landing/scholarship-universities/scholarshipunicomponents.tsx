@@ -137,7 +137,7 @@ const Scholarshipunicomponents = ({
             ) }
            
             {/* No results END */}
-            <div className="pt-[24px] py-[24px] px-[0]">
+            <div className="flex flex-col">
                 <div className="flex flex-col gap-[4px] px-[16px] md:px-[20px] xl:px-[0] mb-[8px] md:mb-[16px]">
                 <div className="h5">Popular scholarships</div>
                 <p className="para ">
