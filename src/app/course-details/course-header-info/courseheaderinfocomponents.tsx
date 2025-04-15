@@ -9,6 +9,7 @@ import BookEvent from '@/app/components/cards/interaction-button/bookevent';
 const Courseheaderinfocomponents = ({ onOpenModal }: any) => {
   const [btnHandler, setBtnHandler] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   // Get a value on scroll
   const handleScroll = useCallback(() => {
@@ -17,7 +18,21 @@ const Courseheaderinfocomponents = ({ onOpenModal }: any) => {
 
     if (width <= 767) {
       // Mobile
-      setScrolled(y > 520);
+      setScrolled(y > 480);
+    } else if (width > 767 && width < 992) {
+      // Tablet
+      setScrolled(y > 430);
+      setIsTablet(true);
+      setIsMobile(false);
+      if (y > 500) {
+        document.body.classList.add('mb-[65px]');
+      } else {
+        document.body.classList.remove('mb-[65px]');
+      }
+    } else {
+      setIsTablet(false);
+      setIsMobile(false);
+      setScrolled(y > 400);
     }
   }, []);
 
@@ -74,7 +89,9 @@ const Courseheaderinfocomponents = ({ onOpenModal }: any) => {
                 </div>
               </div>
               <div className="uniresults-right flex flex-col flex-1 gap-[16px]">
-                <div className="uni-info-card flex flex-col gap-[8px] md:gap-0">
+                <div
+                  className={`uni-info-card flex flex-col gap-[8px] md:gap-0 ${scrolled && 'pb-[98px] lg:pb-[0]'}`}
+                >
                   <div className="flex flex-col-reverse md:flex-row gap-[16px] md:gap-0  justify-between items-start h5 text-grey300">
                     <span>Animation BA (Hons)</span>
                     <button className="ripple-circle-blue favorite group items-center justify-center flex min-w-[40px] w-[40px] h-[40px]  border border-primary-400 hover:bg-primary-400 rounded-[48px] cursor-pointer">
@@ -148,54 +165,58 @@ const Courseheaderinfocomponents = ({ onOpenModal }: any) => {
                   </div>
                 </div>
                 <div
-                  className={`${isMobile && scrolled ? 'z-[5] p-[16px] fixed bottom-[0px] left-[0px] bg-grey300 w-full' : ''} uniresults-content-right flex items-end`}
+                  className={`uniresults-content-right flex items-end ${isMobile && scrolled && 'z-[5] p-[16px] fixed bottom-[0px] left-[0px] bg-grey300 w-full'} ${!isMobile && scrolled && 'z-[5] p-[16px] fixed bottom-[0px] left-[0px] bg-grey300 w-full lg:fixed lg:top-0 lg:left-0 lg:bottom-[unset] lg:w-full lg:bg-white lg:shadow-custom-4 lg:z-[4] lg:transition-all lg:p-[16px]'}`}
                 >
                   <div
-                    className={`${!btnHandler && 'grid-cols-2'} btn-pod w-full grid grid-col-1 md:grid-cols-2 lg:flex lg:grid-cols-none gap-[8px]`}
+                    className={`w-full ${!isMobile && scrolled && 'lg:max-w-container lg:mx-auto'}`}
                   >
-                    {scrolled && isMobile && (
-                      <div className="absolute flex justify-center top-[-27px] left-[0] w-full md:hidden">
-                        {btnHandler ? (
-                          <span
-                            onClick={() => setBtnHandler(false)}
-                            className="bg-grey300 text-white rounded-l-[16px] rounded-r-[16px] x-small flex px-[12px] py-[8px]"
-                          >
-                            <Image
-                              alt="close icon"
-                              width={20}
-                              className="p-[4px] mt-[-2px]"
-                              height={20}
-                              src="\static\assets\icons\search-result\close-white.svg"
-                            />
-                            Close
-                          </span>
-                        ) : (
-                          <span
-                            onClick={() => setBtnHandler(true)}
-                            className="bg-grey300 text-white rounded-l-[16px] rounded-r-[16px] x-small px-[12px] py-[8px]"
-                          >
-                            More
-                          </span>
-                        )}
-                      </div>
-                    )}
-                    <button
-                      onClick={onOpenModal}
-                      type="button"
-                      className={'btn btn-negative-default w-full'}
+                    <div
+                      className={`btn-pod w-full grid grid-col-1 lg:flex md:auto-cols-auto lg:grid-cols-none gap-[8px] ${!btnHandler && 'grid-cols-2'} ${scrolled && 'md:!flex lg:grid lg:w-[1072px] ml-auto'}`}
                     >
-                      Get Prospectus
-                    </button>
-                    {/* <Getprospectus pageName={"courseDetails"} /> */}
-                    <Visitwebsite />
-                    {(!isMobile || !scrolled || btnHandler) && (
-                      <>
-                        <BookEvent />
-                        <RequestInfo />
-                      </>
-                    )}
+                      {scrolled && isMobile && (
+                        <div className="absolute flex justify-center top-[-27px] left-[0] w-full md:hidden">
+                          {btnHandler ? (
+                            <span
+                              onClick={() => setBtnHandler(false)}
+                              className="bg-grey300 text-white rounded-l-[16px] rounded-r-[16px] x-small flex px-[12px] py-[8px]"
+                            >
+                              <Image
+                                alt="close icon"
+                                width={20}
+                                className="p-[4px] mt-[-2px]"
+                                height={20}
+                                src="\assets\icons\search-result\close-white.svg"
+                              />
+                              Close
+                            </span>
+                          ) : (
+                            <span
+                              onClick={() => setBtnHandler(true)}
+                              className="bg-grey300 text-white rounded-l-[16px] rounded-r-[16px] x-small px-[12px] py-[8px]"
+                            >
+                              More
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      <button
+                        onClick={onOpenModal}
+                        type="button"
+                        className={'btn btn-negative-default w-full'}
+                      >
+                        Get Prospectus
+                      </button>
+                      {/* <Getprospectus pageName={"courseDetails"} /> */}
+                      <Visitwebsite />
+                      {(!isMobile || !scrolled || btnHandler) && (
+                        <>
+                          <BookEvent />
+                          <RequestInfo />
+                        </>
+                      )}
 
-                    {/* <span onClick={onOpenModal}>One click</span> */}
+                      {/* <span onClick={onOpenModal}>One click</span> */}
+                    </div>
                   </div>
                 </div>
               </div>
