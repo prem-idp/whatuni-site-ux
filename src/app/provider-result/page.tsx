@@ -140,7 +140,7 @@ const page = () => {
       <section className="bg-white">
         <div className="max-w-container mx-auto px-[16px] md:px-[24px] xl:px-[0]">
           <div className="flex justify-between w-full py-[16px]">
-            <div className="flex gap-[17px]">
+            <div className="flex gap-[16px]">
               <span className="p-[4px] bg-white rounded-[8px] hidden md:block shadow-custom-1 min-w-[64px] h-[64px]">
                 <Image
                   src="/assets/icons/search-result/kent.png"

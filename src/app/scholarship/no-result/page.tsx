@@ -138,7 +138,7 @@ const page = () => {
       {/* breadcrumb  */}
       <section className="bg-white">
         <div className="max-w-container mx-auto px-[16px] md:px-[20px] xl:px-[0] pt-[24px] pb-[8px]">
-          <Breadcrumblayoutcomponent data={breadcrumbData} />
+          {/* <Breadcrumblayoutcomponent data={breadcrumbData} /> */}
         </div>
       </section>
       {/* breadcrumb  */}
